@@ -1,0 +1,112 @@
+<footer class="site-footer">
+
+  <div class="wrapper">
+
+    <div class="footer-col-wrapper">
+      <div class="footer-col footer-col-1">
+        <ul class="link-list">
+          <li class="site-title">
+            {{ site.title | escape }}
+          </li>
+          <li><a class="page-link" href="{{ site.console_url }}/login">Login</a></li>
+          <li><a class="page-link" href="https://twitter.com/Anomaly_Inv" target="_blank">Twitter</a></li>
+          <li><a class="email-link" href="mailto:{{ site.email }}">Contact us</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col footer-col-2">
+        <ul class="contact-list">
+          <li class="site-description">A continuous integration service for your Serverless projects</li>
+          <li class="site-author">&copy; 2017 <a href="http://anoma.ly">Anomaly Innovations</a></li>
+        </ul>
+      </div>
+
+    </div>
+
+  </div>
+
+</footer>
+
+<script type="text/javascript">
+var videos = document.getElementsByTagName("video"),
+  didScroll = false,
+  timer = null,
+  fraction = 0.3;
+
+function checkScroll() {
+  didScroll = true;
+  if (timer === null) {
+    timer = window.setInterval(function() {
+      if (!didScroll) {
+        window.clearInterval(timer);
+        timer = null;
+        return;
+      }
+      checkVideos();
+      didScroll = false;
+    }, 100);
+  }
+}
+
+function checkVideos() {
+  for (var i = 0; i < videos.length; i++) {
+    var video = videos[i];
+
+    var x = video.offsetLeft,
+      y = video.offsetTop,
+      w = video.offsetWidth,
+      h = video.offsetHeight,
+      r = x + w, //right
+      b = y + h, //bottom
+      visibleX,
+      visibleY,
+      visible;
+
+    visibleX = Math.max(
+      0,
+      Math.min(
+        w,
+        window.pageXOffset + window.innerWidth - x,
+        r - window.pageXOffset
+      )
+    );
+    visibleY = Math.max(
+      0,
+      Math.min(
+        h,
+        window.pageYOffset + window.innerHeight - y,
+        b - window.pageYOffset
+      )
+    );
+
+    visible = visibleX * visibleY / (w * h);
+
+    if (visible > fraction) {
+      video.play();
+    } else {
+      video.pause();
+    }
+  }
+}
+
+checkVideos();
+
+window.addEventListener("scroll", checkScroll, false);
+window.addEventListener("resize", checkScroll, false);
+</script>
+
+{% if jekyll.environment == 'production' %}
+<!--
+<script type="text/javascript">
+var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
+(function(){
+var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
+s1.async=true;
+s1.src='https://embed.tawk.to/58b60cd55b8fe5150ee934ea/default';
+s1.charset='UTF-8';
+s1.setAttribute('crossorigin','*');
+s0.parentNode.insertBefore(s1,s0);
+})();
+</script>
+-->
+{% endif %}

@@ -24,7 +24,7 @@ logo: /assets/og-image.png
 console_url: "https://console.seed.run"
 beta_signup: "/beta"
 
-# google_analytics: "UA-3536629-11"
+google_analytics: "UA-3536629-12"
 
 # Build settings
 markdown: kramdown

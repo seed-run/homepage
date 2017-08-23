@@ -1,6 +1,6 @@
 # SEED Lander
 
-### Usage
+### Local Usage
 
 To use this repo locally, start by running.
 
@@ -14,4 +14,12 @@ And then start the dev server.
 $ bundle exec jekyll serve
 ```
 
-To deploy `git push` and use the Netlify dashboard.
+### Deploy
+
+To deploy `git push` to `master` branch.
+
+Deploy status can be viewed on the Netlify dashboard.
+
+https://app.netlify.com/sites/seed
+
+To use `jekyll.environment` in template, set `JEKYLL_ENV` to `production` as environment varialbe in the Netlify dashboard.

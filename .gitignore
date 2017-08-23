@@ -1,6 +1,6 @@
 Session.vim
 _site
-.swp
+*.swp
 .sass-cache
 .jekyll-metadata
 .DS_Store

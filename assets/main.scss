@@ -47,13 +47,23 @@ $on-laptop:                 800px;
  * Links
  */
 a {
-  color: #74649A;
+  color: lighten($brand-color, 15%);
+}
+a:visited {
+  color: lighten($brand-color, 15%);
 }
 a:hover {
-  color: #3C2969;
+  color: lighten($brand-color, 35%);
 }
 a:active {
-  color: #9E92BA;
+  color: lighten($brand-color, 5%);
+}
+
+@mixin logo-font {
+  font-family: $base-font-family;
+  text-transform: uppercase;
+  font-style: italic;
+  font-weight: 700;
 }
 
 @mixin action-button {
@@ -77,6 +87,11 @@ a:active {
     border-color: darken($border, 15%);
     background-color: darken($bkg, 15%);
   }
+
+  @include media-query($on-palm) {
+    font-size: 22px;
+    padding: 10px 22px;
+  }
 }
 
 .header {
@@ -88,14 +103,15 @@ a:active {
     margin-bottom: 0;
 
     a {
-      font-family: $base-font-family;
+      @include logo-font;
       line-height: 1.2;
-      text-transform: uppercase;
-      font-style: italic;
-      font-weight: 700;
       font-size: 48px;
       letter-spacing: -2px;
       color: $brand-color;
+
+      @include media-query($on-palm) {
+        font-size: 40px;
+      }
     }
   }
 
@@ -104,6 +120,10 @@ a:active {
     font-family: $base-font-family;
     font-size: 22px;
     color: $secondary-text-color;
+
+    @include media-query($on-palm) {
+      font-size: 18px;
+    }
   }
 
   a.action {
@@ -114,9 +134,13 @@ a:active {
 .hero {
   padding-bottom: $spacing-unit;
   background-color: $hero-bkg-color;
-  video {
+  div {
     margin: 0 auto;
-    display: block;
+    max-width: 800px;
+    video {
+      width: 100%;
+      display: block;
+    }
   }
 }
 
@@ -127,12 +151,24 @@ a:active {
 
   h4 {
     font-size: 24px;
+
+    @include media-query($on-palm) {
+      font-size: 22px;
+      width: 300px;
+      margin-left: auto;
+      margin-right: auto;
+    }
   }
   p {
     margin-left: auto;
     margin-right: auto;
     font-size: 18px;
     max-width: 600px;
+    padding: 0 $spacing-unit / 2;
+
+    @include media-query($on-palm) {
+      font-size: 16px;
+    }
 
     &:last-child {
       margin-bottom: 0;
@@ -147,6 +183,10 @@ a:active {
   flex-direction: column;
   align-items: center;
 
+  @include media-query($on-palm) {
+    align-items: flex-end;
+  }
+
   .line {
     $width: 6px;
     z-index: 2;
@@ -157,6 +197,12 @@ a:active {
     width: $width;
     height: 100%;
     background-color: darken($background-color, 5%);
+
+    @include media-query($on-palm) {
+      left: auto;
+      margin-left: auto;
+      right: 80px - $width / 2;
+    }
   }
 
   .section {
@@ -166,6 +212,10 @@ a:active {
     align-items: center;
     z-index: 3;
     padding-right: 200px + $spacing-unit / 2;
+
+    @include media-query($on-palm) {
+      padding-right: 50px;
+    }
 
     .disc {
       $size: 60px;
@@ -189,6 +239,10 @@ a:active {
       margin-right: $spacing-unit / 2;
       text-align: right;
       color: $secondary-text-color;
+
+      @include media-query($on-palm) {
+        width: 120px;
+      }
     }
 
     &.github {
@@ -227,13 +281,20 @@ a:active {
     position: relative;
     z-index: 1;
 
+    @include media-query($on-palm) {
+      width: 100%;
+    }
+
     div {
       font-size: 12px;
       color: $tertiary-text-color;
 
+      @include media-query($on-palm) {
+        padding-left: 4px;
+      }
+
       &.logo {
-        font-weight: 700;
-        font-style: italic;
+        @include logo-font;
       }
     }
   }
@@ -273,6 +334,14 @@ a:active {
       margin: 0 auto;
       max-width: 420px;
       color: $secondary-text-color;
+      padding: 0 $spacing-unit / 2;
+    }
+    .video {
+      margin: 0 auto;
+      max-width: 640px;
+      video {
+        width: 100%;
+      }
     }
   }
 
@@ -301,6 +370,12 @@ a:active {
     width: 348px;
     height: 304px;
     background: transparent url('/assets/pricing-table.png') no-repeat;
+    background-size: cover;
+
+    @include media-query($on-palm) {
+      width: 300px;
+      height: 262px;
+    }
 
     span {
       background-color: #908C99;
@@ -320,10 +395,15 @@ a:active {
     margin-bottom: $spacing-unit;
     text-align: center;
     font-size: 24px;
+    padding: 0 $spacing-unit / 2;
   }
   ul {
     margin: 0 auto;
     max-width: 600px;
+    padding: 0 $spacing-unit / 2;
+    li {
+      margin-left: $spacing-unit / 2;
+    }
   }
 }
 
@@ -337,17 +417,22 @@ a:active {
     margin-bottom: $spacing-unit;
     font-size: 20px;
     font-family: $heading-font-family;
+    padding: 0 $spacing-unit / 2;
     a {
       font-weight: bold;
     }
     span {
-      font-family: $base-font-family;
-      font-style: italic;
-      font-weight: 700;
+      @include logo-font;
     }
   }
 
   .action {
     @include action-button;
   }
+}
+
+.notfound {
+  text-align: center;
+  padding: 100px $spacing-unit / 2 100px;
+  font-size: 18px;
 }

@@ -5,7 +5,7 @@ layout: lander
 <div class="header">
   <h1><a href="/">Seed</a></h1>
   <h4>Zero configuration code<br /> pipeline for Serverless projects</h4>
-  <a class="action" href="{{ site.console_url }}">Sign up for the beta</a>
+  <a class="action" href="{{ site.console_url }}{{ site.beta_signup }}">Sign up for the beta</a>
 </div>
 
 <div class="hero">
@@ -14,7 +14,6 @@ layout: lander
       loop
       muted
       preload
-      width="800"
       playsinline
       webkit-playsinline
       poster="assets/hero-screen.png"
@@ -88,7 +87,7 @@ layout: lander
 </div>
 
 <div class="features-intro">
-  <a class="action" href="{{ site.console_url }}">Sign up for the beta</a>
+  <a class="action" href="{{ site.console_url }}{{ site.beta_signup }}">Sign up for the beta</a>
   <p>A few other things you get out of the box.</p>
   <div class="caret">&#9663;</div>
 </div>
@@ -99,15 +98,14 @@ layout: lander
     <h2>Unlimited Stages</h2>
     <p>Simply create a new stage by pushing a new branch to master. Stages automatically get their own endpoint.</p>
     <div class="video">
-    <video
-      loop
-      muted
-      preload
-      width="640"
-      playsinline
-      webkit-playsinline
-      poster="assets/stages-screen.png"
-    >
+      <video
+        loop
+        muted
+        preload
+        playsinline
+        webkit-playsinline
+        poster="assets/stages-screen.png"
+      >
         <source src="assets/stages.mp4" type="video/mp4">
       </video>
     </div>
@@ -209,6 +207,6 @@ layout: lander
 </div>
 
 <div class="closing">
-  <p><span class="logo">SEED</span> is created by the trusted folks behind <a target="_blank" href="http://serverless-stack.com">Serverless-Stack.com</a>,<br /> the best resource for building serverless apps on AWS.</p>
-  <a class="action" href="{{ site.console_url }}">Sign up for the beta</a>
+  <p><span class="logo">Seed</span> is created by the trusted folks behind <a target="_blank" href="http://serverless-stack.com">Serverless-Stack.com</a>,<br /> the best resource for building serverless apps on AWS.</p>
+  <a class="action" href="{{ site.console_url }}{{ site.beta_signup }}">Sign up for the beta</a>
 </div>

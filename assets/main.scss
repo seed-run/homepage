@@ -18,7 +18,7 @@ $text-color:                #2E2D33;
 $secondary-text-color:      #5D5966;
 $tertiary-text-color:  	    #908C99;
 $background-color:          #F9F9FA;
-$hero-bkg-color:            #D2D1D7;
+$hero-bkg-color:            lighten(#C7C6CC, 10%);
 $brand-color:               #53437D;
 $accent-color:              #FD9527;
 
@@ -95,7 +95,7 @@ a:active {
 }
 
 .header {
-  background: linear-gradient(to bottom, $background-color 0%, $hero-bkg-color 85%, $hero-bkg-color 100%);
+  background: linear-gradient(to bottom, $background-color 0%, $hero-bkg-color 90%, $hero-bkg-color 100%);
   padding-bottom: 2 * $spacing-unit;
   text-align: center;
 
@@ -132,14 +132,47 @@ a:active {
 }
 
 .hero {
-  padding-bottom: $spacing-unit;
+  padding: 0 $spacing-unit / 2 $spacing-unit * 2 $spacing-unit / 2;
   background-color: $hero-bkg-color;
-  div {
+  & > div {
     margin: 0 auto;
-    max-width: 800px;
+    max-width: 540px;
+    box-shadow: 0px 10px 33px 9px rgba(0, 0, 0, 0.27);
+    border-radius: 4px;
+    overflow: hidden;
+    & > div {
+      width: 100%;
+      background: linear-gradient(0deg, #F6F6F6 0%, #F6F6F6 100%);
+      height: 30px;
+      border-top: 1px solid #ECEBEC;
+      border-bottom: 1px solid #ECEBEC;
+      border-radius: 4px 4px 0 0;
+      display: flex;
+      justify-content: flex-start;
+      align-items: center;
+
+      span {
+        $size: 12px;
+        width: $size;
+        height: $size;
+        border-radius: $size / 2;
+        $color: #FDBD41;
+        $color: #DDD;
+        background-color: $color;
+        border: 1px solid darken($color, 5%);
+        margin-right: 8px;
+        display: block;
+        box-sizing: border-box;
+
+        &:first-child {
+          margin-left: 10px;
+        }
+      }
+    }
     video {
       width: 100%;
       display: block;
+      border-radius: 0 0 4px 4px;
     }
   }
 }
@@ -162,8 +195,9 @@ a:active {
   p {
     margin-left: auto;
     margin-right: auto;
+    margin-bottom: $spacing-unit / 2 + 10px;
     font-size: 18px;
-    max-width: 600px;
+    max-width: 642px;
     padding: 0 $spacing-unit / 2;
 
     @include media-query($on-palm) {
@@ -321,7 +355,7 @@ a:active {
 }
 
 .features {
-  padding: $spacing-unit * 2 0;
+  padding: $spacing-unit * 2 0 $spacing-unit * 2 + 10px;
   border-top: 2px solid darken($hero-bkg-color, 5%);
   background-color: $hero-bkg-color;
 
@@ -332,22 +366,28 @@ a:active {
     }
     p {
       margin: 0 auto;
-      max-width: 420px;
+      max-width: 480px;
       color: $secondary-text-color;
       padding: 0 $spacing-unit / 2;
     }
     .video {
-      margin: 0 auto;
-      max-width: 640px;
+      $color: #F6F6F6;
+      margin: $spacing-unit / 2 auto 0;
+      max-width: 500px;
+      border: 8px solid $color;
+      box-shadow: 0px 1px 2px 0px rgba(0, 0, 0, 0.21);
+      border-radius: 4px;
+      background-color: $color;
       video {
+        display: block;
         width: 100%;
       }
     }
   }
 
   hr {
-    margin: 0 auto $spacing-unit + 10px;
-    max-width: 540px;
+    margin: $spacing-unit * 2 + 3px auto $spacing-unit + 10px;
+    max-width: 400px;
     border-color: darken($hero-bkg-color, 10%);
   }
 }
@@ -404,6 +444,10 @@ a:active {
     li {
       margin-left: $spacing-unit / 2;
     }
+  }
+  & > p {
+    margin-top: $spacing-unit;
+    text-align: center;
   }
 }
 

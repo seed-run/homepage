@@ -132,7 +132,7 @@ a:active {
 }
 
 .hero {
-  padding: 0 $spacing-unit / 2 $spacing-unit * 2 $spacing-unit / 2;
+  padding: 0 $spacing-unit / 2 $spacing-unit * 2;
   background-color: $hero-bkg-color;
   & > div {
     margin: 0 auto;
@@ -151,18 +151,29 @@ a:active {
       justify-content: flex-start;
       align-items: center;
 
+      @include media-query($on-palm) {
+        height: 20px;
+      }
+
       span {
         $size: 12px;
         width: $size;
         height: $size;
         border-radius: $size / 2;
-        $color: #FDBD41;
         $color: #DDD;
         background-color: $color;
         border: 1px solid darken($color, 5%);
         margin-right: 8px;
         display: block;
         box-sizing: border-box;
+
+        @include media-query($on-palm) {
+          $size: 8px;
+          width: $size;
+          height: $size;
+          border-radius: $size / 2;
+          margin-right: 6px;
+        }
 
         &:first-child {
           margin-left: 10px;
@@ -355,7 +366,7 @@ a:active {
 }
 
 .features {
-  padding: $spacing-unit * 2 0 $spacing-unit * 2 + 10px;
+  padding: $spacing-unit * 2 $spacing-unit / 2 $spacing-unit * 2 + 10px;
   border-top: 2px solid darken($hero-bkg-color, 5%);
   background-color: $hero-bkg-color;
 
@@ -447,6 +458,7 @@ a:active {
   }
   & > p {
     margin-top: $spacing-unit;
+    padding: 0 $spacing-unit / 2;
     text-align: center;
   }
 }

@@ -10,8 +10,8 @@ description: Simplest way for teams to build and deploy Serverless apps
 </div>
 
 <div class="hero">
-  <div>
-    <div>
+  <div class="video">
+    <div class="bar">
       <span></span>
       <span></span>
       <span></span>
@@ -23,6 +23,7 @@ description: Simplest way for teams to build and deploy Serverless apps
       playsinline
       webkit-playsinline
       poster="assets/hero.png"
+      onclick="videoClick(this)"
     >
       <source src="assets/hero.mp4" type="video/mp4">
     </video>
@@ -111,6 +112,7 @@ description: Simplest way for teams to build and deploy Serverless apps
         playsinline
         webkit-playsinline
         poster="assets/stages.png"
+        onclick="videoClick(this)"
       >
         <source src="assets/stages.mp4" type="video/mp4">
       </video>
@@ -130,6 +132,7 @@ description: Simplest way for teams to build and deploy Serverless apps
         width="640"
         playsinline
         webkit-playsinline
+        onclick="videoClick(this)"
         poster="assets/secrets.png"
       >
         <source src="assets/secrets.mp4" type="video/mp4">
@@ -151,6 +154,7 @@ description: Simplest way for teams to build and deploy Serverless apps
         playsinline
         webkit-playsinline
         poster="assets/envs.png"
+        onclick="videoClick(this)"
       >
         <source src="assets/envs.mp4" type="video/mp4">
       </video>
@@ -170,6 +174,7 @@ description: Simplest way for teams to build and deploy Serverless apps
         width="640"
         playsinline
         webkit-playsinline
+        onclick="videoClick(this)"
         poster="assets/rollback.png"
       >
         <source src="assets/rollback.mp4" type="video/mp4">

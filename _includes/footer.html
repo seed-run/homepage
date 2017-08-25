@@ -89,6 +89,14 @@ function checkVideos() {
   }
 }
 
+function videoClick(el) {
+  if (el.paused) {
+    el.play();
+  } else {
+    el.pause();
+  }
+}
+
 window.onload = function() {
   checkVideos();
 

@@ -27,6 +27,7 @@ description: Simplest way for teams to build and deploy Serverless apps
       onclick="videoClick(this)"
     >
       <source src="assets/hero.mp4" type="video/mp4">
+      <img src="assets/hero.gif" />
     </video>
   </div>
 </div>
@@ -116,6 +117,7 @@ description: Simplest way for teams to build and deploy Serverless apps
         onclick="videoClick(this)"
       >
         <source src="assets/stages.mp4" type="video/mp4">
+        <img src="assets/stages.gif" />
       </video>
     </div>
   </div>
@@ -137,6 +139,7 @@ description: Simplest way for teams to build and deploy Serverless apps
         poster="assets/secrets.png"
       >
         <source src="assets/secrets.mp4" type="video/mp4">
+        <img src="assets/secrets.gif" />
       </video>
     </div>
   </div>
@@ -158,6 +161,7 @@ description: Simplest way for teams to build and deploy Serverless apps
         onclick="videoClick(this)"
       >
         <source src="assets/envs.mp4" type="video/mp4">
+        <img src="assets/envs.gif" />
       </video>
     </div>
   </div>
@@ -179,6 +183,7 @@ description: Simplest way for teams to build and deploy Serverless apps
         poster="assets/rollback.png"
       >
         <source src="assets/rollback.mp4" type="video/mp4">
+        <img src="assets/rollback.gif" />
       </video>
     </div>
   </div>

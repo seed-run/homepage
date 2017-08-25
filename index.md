@@ -204,7 +204,6 @@ description: Simplest way for teams to build and deploy Serverless apps
       </p>
     </li>
 
-
     <li>
       <p>
         What is a verified build?
@@ -222,6 +221,7 @@ description: Simplest way for teams to build and deploy Serverless apps
         The build process is run on our side, while the Serverless project is deployed to your AWS account using your credentials. This ensures that even in the unlikely event of an outage on our side, you’ll still be able to access your API endpoints. We also use your AWS KMS key to encrypt your secrets.
       </p>
     </li>
+
     <li>
       <p>
         How many concurrent builds can I run?
@@ -230,6 +230,16 @@ description: Simplest way for teams to build and deploy Serverless apps
         You can create unlimited stages with unlimited concurrent builds using Seed. And you’ll only be charged for the time it takes your builds to run.
       </p>
     </li>
+
+    <li>
+      <p>
+        Can I configure upstream and downstream stages?
+      </p>
+      <p>
+        Currently the "production" stage is the only downstream stage with all other stages promoting directly to it via the <a href="{{ site.console_url }}" target="_blank">Seed Console</a>.
+      </p>
+    </li>
+
     <li>
       <p>
         Which environments do you support?

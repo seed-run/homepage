@@ -20,6 +20,7 @@ description: Simplest way for teams to build and deploy Serverless apps
       loop
       muted
       preload
+      autoplay
       playsinline
       webkit-playsinline
       poster="assets/hero.png"

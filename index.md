@@ -30,7 +30,7 @@ description: Simplest way for teams to build and deploy Serverless apps
       <source src="assets/hero.mp4" type="video/mp4">
       <img src="assets/hero.gif" />
     </video>
-    <div class="overlay spinner">
+    <div class="overlay spinner" onclick="playClick(this)">
       <i class="fa fa-circle-o-notch fa-spin"></i>
     </div>
     <div class="overlay play" onclick="playClick(this)">
@@ -128,7 +128,7 @@ description: Simplest way for teams to build and deploy Serverless apps
         <source src="assets/stages.mp4" type="video/mp4">
         <img src="assets/stages.gif" />
       </video>
-      <div class="overlay spinner">
+      <div class="overlay spinner" onclick="playClick(this)">
         <i class="fa fa-circle-o-notch fa-spin"></i>
       </div>
       <div class="overlay play" onclick="playClick(this)">
@@ -147,7 +147,6 @@ description: Simplest way for teams to build and deploy Serverless apps
         loop
         muted
         preload
-        width="640"
         playsinline
         webkit-playsinline
         poster="assets/secrets.png"
@@ -158,7 +157,7 @@ description: Simplest way for teams to build and deploy Serverless apps
         <source src="assets/secrets.mp4" type="video/mp4">
         <img src="assets/secrets.gif" />
       </video>
-      <div class="overlay spinner">
+      <div class="overlay spinner" onclick="playClick(this)">
         <i class="fa fa-circle-o-notch fa-spin"></i>
       </div>
       <div class="overlay play" onclick="playClick(this)">
@@ -177,7 +176,6 @@ description: Simplest way for teams to build and deploy Serverless apps
         loop
         muted
         preload
-        width="640"
         playsinline
         webkit-playsinline
         poster="assets/envs.png"
@@ -188,7 +186,7 @@ description: Simplest way for teams to build and deploy Serverless apps
         <source src="assets/envs.mp4" type="video/mp4">
         <img src="assets/envs.gif" />
       </video>
-      <div class="overlay spinner">
+      <div class="overlay spinner" onclick="playClick(this)">
         <i class="fa fa-circle-o-notch fa-spin"></i>
       </div>
       <div class="overlay play" onclick="playClick(this)">
@@ -207,7 +205,6 @@ description: Simplest way for teams to build and deploy Serverless apps
         loop
         muted
         preload
-        width="640"
         playsinline
         webkit-playsinline
         poster="assets/rollback.png"
@@ -218,7 +215,7 @@ description: Simplest way for teams to build and deploy Serverless apps
         <source src="assets/rollback.mp4" type="video/mp4">
         <img src="assets/rollback.gif" />
       </video>
-      <div class="overlay spinner">
+      <div class="overlay spinner" onclick="playClick(this)">
         <i class="fa fa-circle-o-notch fa-spin"></i>
       </div>
       <div class="overlay play" onclick="playClick(this)">

@@ -222,7 +222,7 @@ a:active {
       display: none;
 
       @include media-query($on-palm) {
-        margin-top: - $height / 2 + $bar-height-m;
+        margin-top: - $height / 2 + $bar-height-m / 2;
       }
 
       &.play {

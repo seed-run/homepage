@@ -10,7 +10,7 @@ description: Simplest way for teams to build and deploy Serverless apps
 </div>
 
 <div class="hero">
-  <div class="video loading">
+  <div class="video">
     <div class="bar">
       <span></span>
       <span></span>

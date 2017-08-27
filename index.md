@@ -25,7 +25,7 @@ description: Simplest way for teams to build and deploy Serverless apps
       poster="assets/hero.png"
       onloadstart="videoLoadStart(this)"
       onclick="videoClick(this)"
-      onload="videoCanPlayThrough(this)"
+      onloadeddata="loadeddata(this)"
       oncanplaythrough="videoCanPlayThrough(this)"
     >
       <source src="assets/hero.mp4" type="video/mp4">

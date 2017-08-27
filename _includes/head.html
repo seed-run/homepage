@@ -138,6 +138,10 @@
     addLoadingClass(el.parentNode);
   }
 
+  function loadeddata(el) {
+    alert('loadeddata');
+  }
+
   function videoCanPlayThrough(el) {
     alert('oncanplaythrough');
     removeLoadingClass(el.parentNode);

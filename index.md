@@ -20,10 +20,10 @@ description: Simplest way for teams to build and deploy Serverless apps
       loop
       muted
       preload
-      controls
       playsinline
       webkit-playsinline
       poster="assets/hero.png"
+      onloadstart="videoLoadStart(this)"
       onclick="videoClick(this)"
       oncanplaythrough="videoCanPlayThrough(this)"
     >

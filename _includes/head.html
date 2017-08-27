@@ -31,4 +31,144 @@
   {% if jekyll.environment == 'production' and site.google_analytics %}
   {% include google-analytics.html %}
   {% endif %}
+
+  <script type="text/javascript">
+  var canAutoPlay = null;
+  var videos = null,
+    didScroll = false,
+    timer = null,
+    fraction = 0.5;
+
+  function removeLoadingClass(el) {
+    el.className = el.className.replace(/\bloading\b/,'');
+  }
+
+  function addLoadingClass(el) {
+    el.className = el.className + ' loading';
+  }
+
+  function addButtonClass(el) {
+    el.className = el.className + ' button';
+  }
+
+  function checkScroll() {
+    didScroll = true;
+    if (timer === null) {
+      timer = window.setInterval(function() {
+        if (!didScroll) {
+          window.clearInterval(timer);
+          timer = null;
+          return;
+        }
+        checkVideos();
+        didScroll = false;
+      }, 100);
+    }
+  }
+
+  function checkVideos() {
+    var windowHeight  = window.innerHeight;
+    var windowWidth   = window.innerWidth;
+
+    videos.map(function(video) {
+      var offset = video.getBoundingClientRect();
+
+      var top    = offset.top;
+      var left   = offset.left;
+      var right  = offset.right;
+      var width  = offset.width;
+      var height = offset.height;
+      var bottom = offset.bottom;
+
+      var visibleX = right <= 0
+        ? 0
+        : left >= windowWidth
+          ? 0
+          : left <= 0
+            ? Math.min(right, windowWidth)
+            : Math.min(width, windowWidth - left);
+      var visibleY = bottom <= 0
+        ? 0
+        : top >= windowHeight
+          ? 0
+          : top <= 0
+            ? Math.min(bottom, windowHeight)
+            : Math.min(height, windowHeight - top);
+
+      var visible = visibleX * visibleY / (width * height);
+
+      if (visible > fraction) {
+        video.play();
+
+        checkAutoPlay(video);
+      } else {
+        video.pause();
+      }
+    });
+  }
+
+  function checkAutoPlay(video) {
+    // Script based on
+    // https://gist.github.com/nathansearles/271870d4100f0f045c5c
+    if (canAutoPlay === null) {
+      canAutoPlay = 'checking';
+      video.onplay = videoPlay(video);
+      video.oncanplay = videoCanPlay(video);
+    }
+  }
+
+  function videoPlay(el) {
+    canAutoPlay = 'playing';
+  }
+
+  function videoCanPlay(el) {
+    if (canAutoPlay === 'playing') {
+      canAutoPlay = true;
+    } else {
+      videos.map(function(video) {
+        var el = video.parentNode;
+
+        removeLoadingClass(el);
+        addButtonClass(el);
+      });
+    }
+  }
+
+  function videoLoadStart(el) {
+    addLoadingClass(el.parentNode);
+  }
+
+  function videoCanPlayThrough(el) {
+    removeLoadingClass(el.parentNode);
+  }
+
+  function videoClick(el) {
+    if (el.paused) {
+      el.play();
+    } else {
+      el.pause();
+    }
+  }
+
+  function playClick(el) {
+    var parent = el.parentNode;
+    var els = parent.getElementsByTagName('video');
+
+    if (els.length === 0) {
+      return;
+    } else {
+      videoClick(els[0]);
+      el.style.display = 'none';
+    }
+  }
+
+  window.onload = function() {
+    videos = Array.prototype.slice.call(document.getElementsByTagName("video")),
+
+    checkVideos();
+
+    window.addEventListener("scroll", checkScroll, false);
+    window.addEventListener("resize", checkScroll, false);
+  };
+  </script>
 </head>

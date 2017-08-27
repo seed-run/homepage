@@ -70,13 +70,14 @@
     video.style.display = 'none';
     video.playing = false;
     video.play();
-    console.log(src);
+      alert(src);
     // Check if video plays
     video.onplay = function() {
       this.playing = true;
     };
     // Video has loaded, check autoplay support
     video.oncanplay = video.oncanplaythrough = function() {
+      alert('here');
       if (video.playing) {
         callback(true);
       } else {

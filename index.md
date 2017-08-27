@@ -23,8 +23,8 @@ description: Simplest way for teams to build and deploy Serverless apps
       playsinline
       webkit-playsinline
       poster="assets/hero.png"
-      onloadstart="videoLoadStart(this)"
       onclick="videoClick(this)"
+      onloadstart="videoLoadStart(this)"
       oncanplaythrough="videoCanPlayThrough(this)"
     >
       <source src="assets/hero.mp4" type="video/mp4">
@@ -113,7 +113,7 @@ description: Simplest way for teams to build and deploy Serverless apps
   <div class="feature">
     <h2>Unlimited Stages</h2>
     <p>Create a new stage by pointing to a branch in your repository. Each stage automatically gets it’s own endpoint and you can create as many as you like.</p>
-    <div class="video loading">
+    <div class="video">
       <video
         loop
         muted
@@ -122,6 +122,8 @@ description: Simplest way for teams to build and deploy Serverless apps
         webkit-playsinline
         poster="assets/stages.png"
         onclick="videoClick(this)"
+        onloadstart="videoLoadStart(this)"
+        oncanplaythrough="videoCanPlayThrough(this)"
       >
         <source src="assets/stages.mp4" type="video/mp4">
         <img src="assets/stages.gif" />
@@ -140,7 +142,7 @@ description: Simplest way for teams to build and deploy Serverless apps
   <div class="feature">
     <h2>Encrypted Secrets</h2>
     <p>Secrets can be securely stored via the <a href="{{ site.console_url }}" target="_blank">Seed Console</a> without having to add them to the `serverless.yml`. They are encrypted using your <a href="https://aws.amazon.com/kms/" target="_blank">AWS KMS</a> keys.</p>
-    <div class="video loading">
+    <div class="video">
       <video
         loop
         muted
@@ -150,6 +152,8 @@ description: Simplest way for teams to build and deploy Serverless apps
         webkit-playsinline
         poster="assets/secrets.png"
         onclick="videoClick(this)"
+        onloadstart="videoLoadStart(this)"
+        oncanplaythrough="videoCanPlayThrough(this)"
       >
         <source src="assets/secrets.mp4" type="video/mp4">
         <img src="assets/secrets.gif" />
@@ -168,7 +172,7 @@ description: Simplest way for teams to build and deploy Serverless apps
   <div class="feature">
     <h2>Stage Variables</h2>
     <p>Stage variables are automatically supported and don’t need any configuration. Just reference them by the stage name in your `serverless.yml`.</p>
-    <div class="video loading">
+    <div class="video">
       <video
         loop
         muted
@@ -178,6 +182,8 @@ description: Simplest way for teams to build and deploy Serverless apps
         webkit-playsinline
         poster="assets/envs.png"
         onclick="videoClick(this)"
+        onloadstart="videoLoadStart(this)"
+        oncanplaythrough="videoCanPlayThrough(this)"
       >
         <source src="assets/envs.mp4" type="video/mp4">
         <img src="assets/envs.gif" />
@@ -196,7 +202,7 @@ description: Simplest way for teams to build and deploy Serverless apps
   <div class="feature">
     <h2>1-Click Rollback</h2>
     <p>Rollback to any of your previously verified production builds through the <a href="{{ site.console_url }}" target="_blank">Seed Console</a> with just one click</p>
-    <div class="video loading">
+    <div class="video">
       <video
         loop
         muted
@@ -206,6 +212,8 @@ description: Simplest way for teams to build and deploy Serverless apps
         webkit-playsinline
         poster="assets/rollback.png"
         onclick="videoClick(this)"
+        onloadstart="videoLoadStart(this)"
+        oncanplaythrough="videoCanPlayThrough(this)"
       >
         <source src="assets/rollback.mp4" type="video/mp4">
         <img src="assets/rollback.gif" />

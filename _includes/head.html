@@ -54,11 +54,6 @@
   // Adapted from
   // https://gist.github.com/nathansearles/271870d4100f0f045c5c
   function isAutoplaySupported(src, callback) {
-    // Is the callback a function?
-    if (typeof callback !== 'function') {
-      console.log('isAutoplaySupported: Callback must be a function!');
-      return false;
-    }
     // Create video element to test autoplay
     var video = document.createElement('video');
     video.autoplay = true;
@@ -133,40 +128,11 @@
 
       if (visible > fraction) {
         video.play();
-//
-//        checkAutoPlay(video);
       } else {
         video.pause();
       }
     });
   }
-
-//  function checkAutoPlay(video) {
-//    // Script based on
-//    // https://gist.github.com/nathansearles/271870d4100f0f045c5c
-//    if (canAutoPlay === null) {
-//      canAutoPlay = 'checking';
-//      video.onplay = videoPlay(video);
-//      video.oncanplay = videoCanPlay(video);
-//    }
-//  }
-//
-//  function videoPlay(el) {
-//    canAutoPlay = 'playing';
-//  }
-//
-//  function videoCanPlay(el) {
-//    if (canAutoPlay === 'playing') {
-//      canAutoPlay = true;
-//    } else {
-//      videos.map(function(video) {
-//        var el = video.parentNode;
-//
-//        removeLoadingClass(el);
-//        addButtonClass(el);
-//      });
-//    }
-//  }
 
   function videoLoadStart(el) {
     addLoadingClass(el.parentNode);
@@ -188,9 +154,7 @@
     var parent = el.parentNode;
     var els = parent.getElementsByTagName('video');
 
-    if (els.length === 0) {
-      return;
-    } else {
+    if (els.length !== 0) {
       videoClick(els[0]);
       el.style.display = 'none';
     }
@@ -201,16 +165,19 @@
 
     checkVideos();
 
-    isAutoplaySupported(videos[0].getElementsByTagName('source')[0].src, function(supported) {
-      if ( ! supported) {
-        videos.map(function(video) {
-          var el = video.parentNode;
+    isAutoplaySupported(
+      videos[0].getElementsByTagName('source')[0].src,
+      function(supported) {
+        if ( ! supported) {
+          videos.map(function(video) {
+            var el = video.parentNode;
 
-          removeLoadingClass(el);
-          addButtonClass(el);
-        });
+            removeLoadingClass(el);
+            addButtonClass(el);
+          });
+        }
       }
-    });
+    );
 
     window.addEventListener("scroll", checkScroll, false);
     window.addEventListener("resize", checkScroll, false);

@@ -80,7 +80,7 @@
       this.playing = true;
     };
     // Video has loaded, check autoplay support
-    video.oncanplay = function() {
+    video.oncanplay = video.oncanplaythrough = function() {
       if (video.playing) {
         callback(true);
       } else {

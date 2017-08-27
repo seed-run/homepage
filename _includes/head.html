@@ -33,6 +33,11 @@
   {% endif %}
 
   <script type="text/javascript">
+  // isAutoplaySupported(callback);
+  // Test if HTML5 video autoplay is supported
+  </script>
+
+  <script type="text/javascript">
   var canAutoPlay = null;
   var videos = null,
     didScroll = false,
@@ -49,6 +54,39 @@
 
   function addButtonClass(el) {
     el.className = el.className + ' button';
+  }
+
+  // Adapted from
+  // https://gist.github.com/nathansearles/271870d4100f0f045c5c
+  function isAutoplaySupported(realVideo, callback) {
+    // Is the callback a function?
+    if (typeof callback !== 'function') {
+      console.log('isAutoplaySupported: Callback must be a function!');
+      return false;
+    }
+    // Create video element to test autoplay
+    var video = document.createElement('video');
+    video.autoplay = true;
+    video.muted = true;
+    video.setAttribute('webkit-playsinline', 'webkit-playsinline');
+    video.setAttribute('playsinline', 'playsinline');
+    video.src = realVideo.src
+    video.load();
+    video.style.display = 'none';
+    video.playing = false;
+    video.play();
+    // Check if video plays
+    video.onplay = function() {
+      this.playing = true;
+    };
+    // Video has loaded, check autoplay support
+    video.oncanplay = function() {
+      if (video.playing) {
+        callback(true);
+      } else {
+        callback(false);
+      }
+    };
   }
 
   function checkScroll() {
@@ -98,51 +136,47 @@
       var visible = visibleX * visibleY / (width * height);
 
       if (visible > fraction) {
-        video.load();
         video.play();
-
-        checkAutoPlay(video);
+//
+//        checkAutoPlay(video);
       } else {
         video.pause();
       }
     });
   }
 
-  function checkAutoPlay(video) {
-    // Script based on
-    // https://gist.github.com/nathansearles/271870d4100f0f045c5c
-    if (canAutoPlay === null) {
-      canAutoPlay = 'checking';
-      video.onplay = videoPlay(video);
-      video.oncanplay = videoCanPlay(video);
-    }
-  }
-
-  function videoPlay(el) {
-    canAutoPlay = 'playing';
-  }
-
-  function videoCanPlay(el) {
-    if (canAutoPlay === 'playing') {
-      canAutoPlay = true;
-    } else {
-      videos.map(function(video) {
-    alert('oncanplay');
-        var el = video.parentNode;
-
-        removeLoadingClass(el);
-        addButtonClass(el);
-      });
-    }
-  }
+//  function checkAutoPlay(video) {
+//    // Script based on
+//    // https://gist.github.com/nathansearles/271870d4100f0f045c5c
+//    if (canAutoPlay === null) {
+//      canAutoPlay = 'checking';
+//      video.onplay = videoPlay(video);
+//      video.oncanplay = videoCanPlay(video);
+//    }
+//  }
+//
+//  function videoPlay(el) {
+//    canAutoPlay = 'playing';
+//  }
+//
+//  function videoCanPlay(el) {
+//    if (canAutoPlay === 'playing') {
+//      canAutoPlay = true;
+//    } else {
+//      videos.map(function(video) {
+//        var el = video.parentNode;
+//
+//        removeLoadingClass(el);
+//        addButtonClass(el);
+//      });
+//    }
+//  }
 
   function videoLoadStart(el) {
-    alert('onloadstart');
     addLoadingClass(el.parentNode);
   }
 
   function videoCanPlayThrough(el) {
-    alert('oncanplaythrough');
     removeLoadingClass(el.parentNode);
   }
 
@@ -170,6 +204,17 @@
     videos = Array.prototype.slice.call(document.getElementsByTagName("video")),
 
     checkVideos();
+
+    isAutoplaySupported(videos[0], function(supported) {
+      if ( ! supported) {
+        videos.map(function(video) {
+          var el = video.parentNode;
+
+          removeLoadingClass(el);
+          addButtonClass(el);
+        });
+      }
+    });
 
     window.addEventListener("scroll", checkScroll, false);
     window.addEventListener("resize", checkScroll, false);

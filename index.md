@@ -122,7 +122,6 @@ description: Simplest way for teams to build and deploy Serverless apps
         webkit-playsinline
         poster="assets/stages.png"
         onclick="videoClick(this)"
-        oncanplaythrough="videoCanPlayThrough(this)"
       >
         <source src="assets/stages.mp4" type="video/mp4">
         <img src="assets/stages.gif" />
@@ -151,7 +150,6 @@ description: Simplest way for teams to build and deploy Serverless apps
         webkit-playsinline
         poster="assets/secrets.png"
         onclick="videoClick(this)"
-        oncanplaythrough="videoCanPlayThrough(this)"
       >
         <source src="assets/secrets.mp4" type="video/mp4">
         <img src="assets/secrets.gif" />
@@ -180,7 +178,6 @@ description: Simplest way for teams to build and deploy Serverless apps
         webkit-playsinline
         poster="assets/envs.png"
         onclick="videoClick(this)"
-        oncanplaythrough="videoCanPlayThrough(this)"
       >
         <source src="assets/envs.mp4" type="video/mp4">
         <img src="assets/envs.gif" />
@@ -209,7 +206,6 @@ description: Simplest way for teams to build and deploy Serverless apps
         webkit-playsinline
         poster="assets/rollback.png"
         onclick="videoClick(this)"
-        oncanplaythrough="videoCanPlayThrough(this)"
       >
         <source src="assets/rollback.mp4" type="video/mp4">
         <img src="assets/rollback.gif" />

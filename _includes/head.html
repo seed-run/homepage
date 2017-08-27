@@ -33,11 +33,6 @@
   {% endif %}
 
   <script type="text/javascript">
-  // isAutoplaySupported(callback);
-  // Test if HTML5 video autoplay is supported
-  </script>
-
-  <script type="text/javascript">
   var canAutoPlay = null;
   var videos = null,
     didScroll = false,
@@ -58,7 +53,7 @@
 
   // Adapted from
   // https://gist.github.com/nathansearles/271870d4100f0f045c5c
-  function isAutoplaySupported(realVideo, callback) {
+  function isAutoplaySupported(src, callback) {
     // Is the callback a function?
     if (typeof callback !== 'function') {
       console.log('isAutoplaySupported: Callback must be a function!');
@@ -70,11 +65,12 @@
     video.muted = true;
     video.setAttribute('webkit-playsinline', 'webkit-playsinline');
     video.setAttribute('playsinline', 'playsinline');
-    video.src = realVideo.src
+    video.src = src
     video.load();
     video.style.display = 'none';
     video.playing = false;
     video.play();
+    console.log(src);
     // Check if video plays
     video.onplay = function() {
       this.playing = true;
@@ -205,7 +201,7 @@
 
     checkVideos();
 
-    isAutoplaySupported(videos[0], function(supported) {
+    isAutoplaySupported(videos[0].getElementsByTagName('source')[0].src, function(supported) {
       if ( ! supported) {
         videos.map(function(video) {
           var el = video.parentNode;

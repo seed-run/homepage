@@ -127,6 +127,7 @@
       canAutoPlay = true;
     } else {
       videos.map(function(video) {
+    alert('oncanplay');
         var el = video.parentNode;
 
         removeLoadingClass(el);
@@ -137,10 +138,6 @@
 
   function videoLoadStart(el) {
     addLoadingClass(el.parentNode);
-  }
-
-  function loadeddata(el) {
-    alert('loadeddata');
   }
 
   function videoCanPlayThrough(el) {

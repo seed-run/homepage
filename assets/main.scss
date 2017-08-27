@@ -135,10 +135,14 @@ a:active {
   padding: 0 $spacing-unit / 2 $spacing-unit * 2;
   background-color: $hero-bkg-color;
   .video {
+    $bar-height: 30px;
+    $bar-height-m: 20px;
+
     margin: 0 auto;
     max-width: 540px;
     box-shadow: 0px 10px 33px 9px rgba(0, 0, 0, 0.27);
     border-radius: 4px;
+    position: relative;
     overflow: hidden;
 
     @include media-query($on-palm) {
@@ -148,7 +152,7 @@ a:active {
     .bar {
       width: 100%;
       background: linear-gradient(0deg, #F6F6F6 0%, #F6F6F6 100%);
-      height: 30px;
+      height: $bar-height;
       border-top: 1px solid #ECEBEC;
       border-bottom: 1px solid #ECEBEC;
       border-radius: 4px 4px 0 0;
@@ -157,7 +161,7 @@ a:active {
       align-items: center;
 
       @include media-query($on-palm) {
-        height: 20px;
+        height: $bar-height-m;
       }
 
       span {
@@ -185,6 +189,7 @@ a:active {
         }
       }
     }
+
     video {
       width: 100%;
       height: 54.9%;
@@ -197,6 +202,42 @@ a:active {
         left: -1px;
         border-radius: 0;
       }
+    }
+
+    .overlay {
+      $width: 60px;
+      $height: 48px;
+      position: absolute;
+      width: $width;
+      height: $height;
+      top: 50%;
+      margin-left: - $width / 2;
+      left: 50%;
+      margin-top: - $height / 2 + $bar-height / 2;
+      background-color: rgba(0, 0, 0, 0.2);
+      align-items: center;
+      justify-content: center;
+      border-radius: 3px;
+      box-sizing: border-box;
+      display: none;
+
+      @include media-query($on-palm) {
+        margin-top: - $height / 2 + $bar-height-m;
+      }
+
+      &.play {
+        padding-left: 3px;
+      }
+
+      i {
+        font-size: 18px;
+        color: white;
+      }
+    }
+
+    &.button .play,
+    &.loading .spinner {
+      display: flex;
     }
   }
 }
@@ -402,7 +443,9 @@ a:active {
       box-shadow: 0px 1px 2px 0px rgba(0, 0, 0, 0.21);
       border-radius: 4px;
       background-color: $color;
+      position: relative;
       overflow: hidden;
+
       video {
         display: block;
         width: 100%;
@@ -412,6 +455,38 @@ a:active {
           position: relative;
           left: -1px;
         }
+      }
+
+      .overlay {
+        $width: 60px;
+        $height: 48px;
+        position: absolute;
+        width: $width;
+        height: $height;
+        top: 50%;
+        margin-left: - $width / 2;
+        left: 50%;
+        margin-top: - $height / 2;
+        background-color: rgba(0, 0, 0, 0.2);
+        align-items: center;
+        justify-content: center;
+        border-radius: 3px;
+        box-sizing: border-box;
+        display: none;
+
+        &.play {
+          padding-left: 3px;
+        }
+
+        i {
+          font-size: 18px;
+          color: white;
+        }
+      }
+
+      &.button .play,
+      &.loading .spinner {
+        display: flex;
       }
     }
   }

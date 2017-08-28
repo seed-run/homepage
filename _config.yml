@@ -14,7 +14,7 @@
 # You can create any custom variable you would like, and they will be accessible
 # in the templates via {{ site.myvariable }}.
 title: SEED
-email: contact@anoma.ly
+email: contact@seed.run
 description: > # this means to ignore newlines until "baseurl:"
   Team based workflow
   for Serverless apps
@@ -24,6 +24,9 @@ logo: /assets/og-image.png
 
 console_url: "https://console.seed.run"
 beta_signup: "/beta"
+
+newsletter_signup_form: "http://eepurl.com/c1gHff"
+twitter: "https://twitter.com/SEED_run"
 
 google_analytics: "UA-3536629-12"
 

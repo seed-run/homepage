@@ -283,10 +283,19 @@ description: Simplest way for teams to build and deploy Serverless apps
 
     <li>
       <p>
+        Is it only for Serverless APIs?
+      </p>
+      <p>
+        Your Serverless project does not need to be an API but we are focusing primarily on APIs.
+      </p>
+    </li>
+
+    <li>
+      <p>
         Which environments do you support?
       </p>
       <p>
-        We currently support <a href="https://serverless.com/framework/" target="_blank">Severless Framework</a> Node.js projects on AWS with GitHub as a source repository. If there are any other environments you’d like us to support, feel free to let us know!
+        We support <a href="https://serverless.com/framework/" target="_blank">Severless Framework</a> Node.js projects on AWS with GitHub as a source repository. Let us know if there are any other environments you’d like us to support.
       </p>
     </li>
   </ul>
@@ -294,6 +303,20 @@ description: Simplest way for teams to build and deploy Serverless apps
 </div>
 
 <div class="closing">
-  <p><span class="logo">Seed</span> is created by the trusted folks behind <a target="_blank" href="http://serverless-stack.com">Serverless-Stack.com</a>,<br /> the best resource for building serverless apps on AWS.</p>
+  <p class="about"><span class="logo">Seed</span> is created by the trusted folks behind <a target="_blank" href="http://serverless-stack.com">Serverless-Stack.com</a>,<br /> the best resource for building serverless apps on AWS.</p>
   <a class="action" href="{{ site.console_url }}{{ site.beta_signup }}">Sign up for the beta</a>
+  <div class="divider">
+    <div>
+      <hr />
+      <span>&amp;</span>
+    </div>
+  </div>
+  <p class="updates">Stay up to date with product updates from Seed</p>
+  <a class="button" href="{{ site.newsletter_signup_form }}" target="_blank">
+    Subscribe to our newsletter
+  </a>
+  <br />
+  <a class="button" href="{{ site.twitter }}" target="_blank">
+    Follow us on Twitter
+  </a>
 </div>

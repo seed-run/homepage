@@ -328,6 +328,7 @@ description: Simplest way for teams to build and deploy Serverless apps
     <p>
       Additional build minutes @ $0.05/min &amp; build storage @ $0.05/GB.
     </p>
+    <a class="action" href="{{ site.console_url }}{{ site.beta_signup }}">Sign up for the beta</a>
   </div>
 </div>
 

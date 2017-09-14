@@ -623,13 +623,14 @@ main > .pricing {
 
   .extra {
     margin: $spacing-unit auto 0;
-    padding: $spacing-unit / 2 $spacing-unit / 2 0;
+    padding-top: $spacing-unit / 2;
     max-width: 560px;
     text-align: center;
     border-top: 1px solid darken($hero-bkg-color, 5%);
 
     p {
       margin-bottom: 0;
+      padding: 0 $spacing-unit / 2;
       color: $tertiary-text-color;
       font-size: 14px;
     }

@@ -229,7 +229,106 @@ description: Simplest way for teams to build and deploy Serverless apps
 <div class="pricing">
   <h4>Pricing</h4>
   <div class="table">
-    <span>Coming soon</span>
+    <div class="personal">
+      <div class="cost">
+        <p class="header">
+          Individual
+        </p>
+        <div class="numbers">
+          <p>$0</p>
+          <p>per user per month</p>
+        </div>
+      </div>
+      <ul class="features fa-ul">
+        <li>
+          <i class="fa-li fa fa-circle-thin"></i>
+          Single user
+        </li>
+        <li>
+          <i class="fa-li fa fa-check"></i>
+          Unlimited stages
+        </li>
+        <li>
+          <i class="fa-li fa fa-check"></i>
+          Unlimited projects
+        </li>
+        <li>
+          <i class="fa-li fa fa-check"></i>
+          Unlimited concurrent builds
+        </li>
+        <li>
+          <i class="fa-li fa fa-long-arrow-right"></i>
+          50 build mins
+        </li>
+        <li>
+          <i class="fa-li fa fa-long-arrow-right"></i>
+          0.5GB build storage
+        </li>
+      </ul>
+    </div>
+    <div class="premium">
+      <div class="cost">
+        <p class="header">
+          Team
+        </p>
+        <div class="numbers">
+          <p>$15</p>
+          <p>per user per month</p>
+          <p>Starts at $30/month</p>
+        </div>
+      </div>
+      <ul class="features fa-ul">
+        <li>
+          <i class="fa-li fa fa-check"></i>
+          Unlimited users
+        </li>
+        <li>
+          <i class="fa-li fa fa-check"></i>
+          Unlimited stages
+        </li>
+        <li>
+          <i class="fa-li fa fa-check"></i>
+          Unlimited projects
+        </li>
+        <li>
+          <i class="fa-li fa fa-check"></i>
+          Unlimited concurrent builds
+        </li>
+        <li>
+          <i class="fa-li fa fa-long-arrow-right"></i>
+          200 build mins per user
+        </li>
+        <li>
+          <i class="fa-li fa fa-long-arrow-right"></i>
+          2GB build storage per user
+        </li>
+      </ul>
+    </div>
+    <div class="enterprise">
+      <div class="cost">
+        <p class="header">
+          Enterprise
+        </p>
+        <div class="contact">
+          <a href="mailto:{{ site.email }}">Contact us</a>
+        </div>
+      </div>
+      <ul class="features fa-ul">
+        <li>
+          <i class="fa-li fa fa-ellipsis-h"></i>
+          Details coming soon
+        </li>
+      </ul>
+    </div>
+  </div>
+  <div class="extra">
+    <p>
+      Build minutes and build storage are listed per month.
+    </p>
+    <p>
+      Additional build minutes @ $0.05/min &amp; build storage @ $0.05/GB.
+    </p>
+    <a class="action" href="{{ site.console_url }}{{ site.beta_signup }}">Sign up for the beta</a>
   </div>
 </div>
 

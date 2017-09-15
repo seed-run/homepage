@@ -261,8 +261,8 @@ description: Simplest way for teams to build and deploy Serverless apps
           50 build mins
         </li>
         <li>
-          <i class="fa-li fa fa-long-arrow-right"></i>
-          0.5GB build storage
+          <i class="fa-li fa fa-plus"></i>
+          Add 200 build mins for $10
         </li>
       </ul>
     </div>
@@ -299,8 +299,8 @@ description: Simplest way for teams to build and deploy Serverless apps
           200 build mins per user
         </li>
         <li>
-          <i class="fa-li fa fa-long-arrow-right"></i>
-          2GB build storage per user
+          <i class="fa-li fa fa-plus"></i>
+          Add 200 build mins for $10
         </li>
       </ul>
     </div>
@@ -323,10 +323,10 @@ description: Simplest way for teams to build and deploy Serverless apps
   </div>
   <div class="extra">
     <p>
-      Build minutes and build storage are listed per month.
+      There are soft limits on build storage. <a href="mailto:{{ site.email }}">Contact us</a> for details.
     </p>
     <p>
-      Additional build minutes @ $0.05/min &amp; build storage @ $0.05/GB.
+      Build minutes is listed per user per month.
     </p>
     <a class="action" href="{{ site.console_url }}{{ site.beta_signup }}">Sign up for the beta</a>
   </div>

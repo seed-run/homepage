@@ -22,7 +22,7 @@ baseurl: "" # the subpath of your site, e.g. /blog
 url: "https://seed.run" # the base hostname & protocol for your site, e.g. http://example.com
 logo: /assets/og-image.png
 
-console_url: "https://console.seed.run"
+console_url: "http://console.seed.run"
 beta_signup: "/beta"
 
 newsletter_signup_form: "http://eepurl.com/c1gHff"

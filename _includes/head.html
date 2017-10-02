@@ -32,6 +32,7 @@
   {% include google-analytics.html %}
   {% endif %}
 
+  {% if include.add_video_script == true %}
   <script type="text/javascript">
   var videos = null,
     didScroll = false,
@@ -182,4 +183,6 @@
     window.addEventListener("resize", checkScroll, false);
   };
   </script>
+  {% endif %}
+
 </head>

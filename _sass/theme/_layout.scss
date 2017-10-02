@@ -1,5 +1,5 @@
 /**
- * Site header
+ * Site header for the lander
  */
 .site-header {
   @extend %clearfix;
@@ -12,7 +12,7 @@
       font-family: $base-font-family;
       font-style: italic;
       font-weight: 700;
-      line-height: 36px;
+      line-height: 38px;
       color: $secondary-text-color;
     }
   }
@@ -28,7 +28,7 @@
       border: 2px solid $border;
       background-color: $bkg;
       border-radius: 3px;
-      padding: 9px 17px;
+      padding: 10px 17px;
       display: inline-block;
       font-size: 14px;
       line-height: 1;
@@ -41,6 +41,90 @@
         border-color: darken($border, 5%);
         background-color: darken($bkg, 5%);
       }
+    }
+  }
+}
+
+/**
+ * Site header for pages
+ */
+.site-header.page {
+  @extend %clearfix;
+  padding: $spacing-unit / 2 0 $spacing-unit / 2;
+  margin-bottom: $spacing-unit / 2;
+  border-bottom: 1px solid $grey-color-light;
+
+  .site-header-col-1 {
+    float: left;
+
+    a {
+      font-family: $base-font-family;
+      font-style: italic;
+      font-weight: 700;
+      line-height: 38px;
+      color: $secondary-text-color;
+    }
+  }
+
+  .site-header-col-2 {
+    float: right;
+
+    a:first-child {
+      $bkg: $accent-color;
+      $border: darken($bkg, 10%);
+
+      color: white;
+      margin: 0 $spacing-unit / 2 0 0;
+      border: 2px solid $border;
+      background-color: $bkg;
+      border-radius: 3px;
+      padding: 10px 17px;
+      display: inline-block;
+      font-size: 14px;
+      line-height: 1;
+
+      &:hover {
+        background-color: darken($bkg, 5%);
+      }
+
+      &:active {
+        border-color: darken($border, 15%);
+        background-color: darken($bkg, 15%);
+      }
+    }
+
+    a:last-child {
+      $bkg: lighten($grey-color-light, 15%);
+      $border: darken($bkg, 10%);
+
+      color: $secondary-text-color;
+      border: 2px solid $border;
+      background-color: $bkg;
+      border-radius: 3px;
+      padding: 10px 17px;
+      display: inline-block;
+      font-size: 14px;
+      line-height: 1;
+
+      &:hover {
+        background-color: darken($bkg, 3%);
+      }
+
+      &:active {
+        border-color: darken($border, 5%);
+        background-color: darken($bkg, 5%);
+      }
+    }
+  }
+
+  @include media-query($on-palm) {
+    .site-header-col-1,
+    .site-header-col-2 {
+      float: none;
+      text-align: center;
+    }
+    .site-header-col-1 {
+      margin-bottom: $spacing-unit / 2;
     }
   }
 }

@@ -30,6 +30,10 @@ twitter: "https://twitter.com/SEED_run"
 
 google_analytics: "UA-3536629-12"
 
+collections:
+  docs:
+    output: true
+
 # Build settings
 markdown: kramdown
 #theme: minima

@@ -2,56 +2,47 @@
  * Site header
  */
 .site-header {
-	text-align: center;
+  @extend %clearfix;
+  padding: $spacing-unit / 2 0 $spacing-unit;
 
-  .site-title {
-    line-height: 80px;
-    margin-bottom: 0;
+  .site-header-col-1 {
+    float: left;
 
-    img {
-      margin-right: 5px;
+    a {
+      font-family: $base-font-family;
+      font-style: italic;
+      font-weight: 700;
+      line-height: 36px;
+      color: $secondary-text-color;
+    }
+  }
+
+  .site-header-col-2 {
+    float: right;
+
+    a:first-child {
+      $bkg: lighten($grey-color-light, 15%);
+      $border: darken($bkg, 10%);
+
+      color: $secondary-text-color;
+      border: 2px solid $border;
+      background-color: $bkg;
+      border-radius: 3px;
+      padding: 9px 17px;
       display: inline-block;
-      vertical-align: middle; 
-    }
+      font-size: 14px;
+      line-height: 1;
 
-    span {
-      letter-spacing: -1px;
-      font-size: 28px;
-      display: inline-block;
-      vertical-align: middle; 
-    }
+      &:hover {
+        background-color: darken($bkg, 3%);
+      }
 
-    &,
-    &:visited {
-      color: $brand-color;
+      &:active {
+        border-color: darken($border, 5%);
+        background-color: darken($bkg, 5%);
+      }
     }
   }
-
-  .site-description {
-    padding: 15px 10px;
-    margin: 0 auto;
-    max-width: 380px;
-    font-size: 13px;
-    font-weight: 300;
-    color: $secondary-text-color;
-    border-width: 1px 0;
-    border-style: solid;
-    border-color: darken($background-color, 10%);
-  }
-
-  .site-announcement {
-    margin-top: 25px;
-    display: inline-block;
-    border-radius: 4px;
-    background-color: $announcement-color;
-    color: white;
-    padding: 8px 14px;
-
-    i {
-      margin-right: 4px;
-    }
-  }
-
 }
 
 /*

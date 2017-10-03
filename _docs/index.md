@@ -1,6 +1,6 @@
 ---
 layout: page
-title: Docs
+title: Documentation
 description: Documentation for using Seed to build and deploy Serverless apps
 ---
 

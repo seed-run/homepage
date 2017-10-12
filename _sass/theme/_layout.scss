@@ -20,6 +20,15 @@
   .site-header-col-2 {
     float: right;
 
+    a {
+      font-family: $label-font-family;
+      border-radius: 3px;
+      padding: 10px 17px;
+      display: inline-block;
+      font-size: 14px;
+      line-height: 1;
+    }
+
     a:first-child {
       $bkg: lighten($grey-color-light, 15%);
       $border: darken($bkg, 10%);
@@ -27,11 +36,6 @@
       color: $secondary-text-color;
       border: 2px solid $border;
       background-color: $bkg;
-      border-radius: 3px;
-      padding: 10px 17px;
-      display: inline-block;
-      font-size: 14px;
-      line-height: 1;
 
       &:hover {
         background-color: darken($bkg, 3%);
@@ -62,12 +66,22 @@
       font-style: italic;
       font-weight: 700;
       line-height: 38px;
+      font-size: 28px;
       color: $secondary-text-color;
     }
   }
 
   .site-header-col-2 {
     float: right;
+
+    a {
+      font-family: $label-font-family;
+      border-radius: 3px;
+      padding: 10px 17px;
+      display: inline-block;
+      font-size: 14px;
+      line-height: 1;
+    }
 
     a:first-child {
       $bkg: $accent-color;
@@ -77,11 +91,6 @@
       margin: 0 $spacing-unit / 2 0 0;
       border: 2px solid $border;
       background-color: $bkg;
-      border-radius: 3px;
-      padding: 10px 17px;
-      display: inline-block;
-      font-size: 14px;
-      line-height: 1;
 
       &:hover {
         background-color: darken($bkg, 5%);
@@ -100,11 +109,6 @@
       color: $secondary-text-color;
       border: 2px solid $border;
       background-color: $bkg;
-      border-radius: 3px;
-      padding: 10px 17px;
-      display: inline-block;
-      font-size: 14px;
-      line-height: 1;
 
       &:hover {
         background-color: darken($bkg, 3%);

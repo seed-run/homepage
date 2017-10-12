@@ -140,35 +140,6 @@ description: Simplest way for teams to build and deploy Serverless apps
   <hr />
 
   <div class="feature">
-    <h2>Encrypted Secrets</h2>
-    <p>Secrets can be securely stored via the <a href="{{ site.console_url }}" target="_blank">Seed Console</a> without having to add them to the `serverless.yml`. They are encrypted using your <a href="https://aws.amazon.com/kms/" target="_blank">AWS KMS</a> keys.</p>
-    <div class="video">
-      <video
-        loop
-        muted
-        preload
-        playsinline
-        webkit-playsinline
-        poster="assets/secrets.png"
-        onclick="videoClick(this)"
-        onloadstart="videoLoadStart(this)"
-        oncanplaythrough="videoCanPlayThrough(this)"
-      >
-        <source src="assets/secrets.mp4" type="video/mp4">
-        <img src="assets/secrets.gif" />
-      </video>
-      <div class="overlay spinner" onclick="playClick(this)">
-        <i class="fa fa-circle-o-notch fa-spin"></i>
-      </div>
-      <div class="overlay play" onclick="playClick(this)">
-        <i class="fa fa-play"></i>
-      </div>
-    </div>
-  </div>
-
-  <hr />
-
-  <div class="feature">
     <h2>Stage Variables</h2>
     <p>Stage variables are automatically supported and don’t need any configuration. Just reference them by the stage name in your `serverless.yml`.</p>
     <div class="video">
@@ -185,6 +156,64 @@ description: Simplest way for teams to build and deploy Serverless apps
       >
         <source src="assets/envs.mp4" type="video/mp4">
         <img src="assets/envs.gif" />
+      </video>
+      <div class="overlay spinner" onclick="playClick(this)">
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+      </div>
+      <div class="overlay play" onclick="playClick(this)">
+        <i class="fa fa-play"></i>
+      </div>
+    </div>
+  </div>
+
+  <hr />
+
+  <div class="feature">
+    <h2>Preview Pull Requests<span>New</span></h2>
+    <p>Pull requests are automatically built in Seed. They get their own unique endpoint and use the variables of the stage they are going to be merged into.</p>
+    <div class="video">
+      <video
+        loop
+        muted
+        preload
+        playsinline
+        webkit-playsinline
+        poster="assets/pull-request.png"
+        onclick="videoClick(this)"
+        onloadstart="videoLoadStart(this)"
+        oncanplaythrough="videoCanPlayThrough(this)"
+      >
+        <source src="assets/pull-request.mp4" type="video/mp4">
+        <img src="assets/pull-request.gif" />
+      </video>
+      <div class="overlay spinner" onclick="playClick(this)">
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+      </div>
+      <div class="overlay play" onclick="playClick(this)">
+        <i class="fa fa-play"></i>
+      </div>
+    </div>
+  </div>
+
+  <hr />
+
+  <div class="feature">
+    <h2>Encrypted Secrets</h2>
+    <p>Secrets can be securely stored via the <a href="{{ site.console_url }}" target="_blank">Seed Console</a> without having to add them to the `serverless.yml`. They are encrypted using your <a href="https://aws.amazon.com/kms/" target="_blank">AWS KMS</a> keys.</p>
+    <div class="video">
+      <video
+        loop
+        muted
+        preload
+        playsinline
+        webkit-playsinline
+        poster="assets/secrets.png"
+        onclick="videoClick(this)"
+        onloadstart="videoLoadStart(this)"
+        oncanplaythrough="videoCanPlayThrough(this)"
+      >
+        <source src="assets/secrets.mp4" type="video/mp4">
+        <img src="assets/secrets.gif" />
       </video>
       <div class="overlay spinner" onclick="playClick(this)">
         <i class="fa fa-circle-o-notch fa-spin"></i>

@@ -6,6 +6,7 @@
 // Our variables
 $base-font-family:          Rubik, sans-serif;
 $heading-font-family:       'Libre Baskerville', sans-serif;
+$label-font-family:         'Exo 2', sans-serif;
 $code-font-family:          'Source Pro', monospace;
 $base-font-size:            16px;
 $base-font-weight:          400;
@@ -428,6 +429,19 @@ main > .features {
     text-align: center;
     h2 {
       font-size: 32px;
+
+      span {
+        margin-left: 10px;
+        vertical-align: 5px;
+        padding: 3px 6px;
+        border-radius: 3px;
+        background-color: $accent-color;
+        color: white;
+        text-transform: uppercase;
+        font-size: 10px;
+        font-family: $label-font-family;
+        line-height: 1;
+      }
     }
     p {
       margin: 0 auto;

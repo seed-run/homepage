@@ -228,7 +228,7 @@ description: Simplest way for teams to build and deploy Serverless apps
 
   <div class="feature">
     <h2 id="review-changeset">Review Stack Changes<span>New</span></h2>
-    <p>Review your infrastructure changes to ensure that your Serverless project does not mistakingly deploy any irreversible changes to production. <a class="more" href="/docs/promoting-to-production.html">Read more on promoting to production</a>.</p>
+    <p>Review your infrastructure changes to double-check any irreversible updates that your Serverless project is about to deploy. <a class="more" href="/docs/promoting-to-production.html">Read more on promoting to production</a>.</p>
     <div class="video">
       <video
         loop

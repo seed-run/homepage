@@ -1,12 +1,17 @@
-<header class="site-header" role="banner">
+<header class="site-header lander" role="banner">
 
   <div class="wrapper">
 
+    <!--
     <div class="site-header-col site-header-col-1">
       <a href="/">{{ site.title | escape }}</a>
     </div>
+    -->
 
     <div class="site-header-col site-header-col-2">
+      <a href="/#pricing">Pricing</a>
+      <a href="{% link _docs/index.md %}">Docs</a>
+      <a href="mailto:{{ site.email }}">Contact us</a>
       <a href="{{ site.console_url }}/login">Login</a>
     </div>
 

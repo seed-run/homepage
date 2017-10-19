@@ -111,8 +111,8 @@ description: Simplest way for teams to build and deploy Serverless apps
 <div class="features">
 
   <div class="feature">
-    <h2>Unlimited Stages</h2>
-    <p>Create a new stage by pointing to a branch in your repository. Each stage automatically gets it’s own endpoint and you can create as many as you like.</p>
+    <h2 id="unlimited-stages">Unlimited Stages</h2>
+    <p>Create a new stage by pointing to a branch in your repository. Each stage automatically gets it’s own endpoint and you can create as many as you like. <a class="more" href="/docs/adding-a-stage.html">Read more on working with stages</a>.</p>
     <div class="video">
       <video
         loop
@@ -140,8 +140,8 @@ description: Simplest way for teams to build and deploy Serverless apps
   <hr />
 
   <div class="feature">
-    <h2>Stage Variables</h2>
-    <p>Stage variables are automatically supported and don’t need any configuration. Just reference them by the stage name in your `serverless.yml`.</p>
+    <h2 id="stage-variables">Stage Variables</h2>
+    <p>Stage variables are automatically supported and don’t need any configuration. Just reference them by the stage name in your `serverless.yml`. <a class="more" href="/docs/configuring-stage-variables.html">Learn more about stage variables</a>.</p>
     <div class="video">
       <video
         loop
@@ -169,8 +169,8 @@ description: Simplest way for teams to build and deploy Serverless apps
   <hr />
 
   <div class="feature">
-    <h2>Preview Pull Requests<span>New</span></h2>
-    <p>Pull requests are automatically built in Seed. They get their own unique endpoint and use the variables of the stage they are going to be merged into.</p>
+    <h2 id="preview-pull-requests">Preview Pull Requests<span>New</span></h2>
+    <p>Pull requests are automatically built in Seed. They get their own unique endpoint and use the variables of the stage they are going to be merged into. <a class="more" href="/docs/working-with-pull-requests.html">More on working with pull requests</a>.</p>
     <div class="video">
       <video
         loop
@@ -198,8 +198,8 @@ description: Simplest way for teams to build and deploy Serverless apps
   <hr />
 
   <div class="feature">
-    <h2>Encrypted Secrets</h2>
-    <p>Secrets can be securely stored via the <a href="{{ site.console_url }}" target="_blank">Seed Console</a> without having to add them to the `serverless.yml`. They are encrypted using your <a href="https://aws.amazon.com/kms/" target="_blank">AWS KMS</a> keys.</p>
+    <h2 id="encrypted-secrets">Encrypted Secrets</h2>
+    <p>Secrets can be securely stored via the <a href="{{ site.console_url }}" target="_blank">Seed Console</a> without having to add them to the `serverless.yml`. They are encrypted using your <a href="https://aws.amazon.com/kms/" target="_blank">AWS KMS</a> keys. <a class="more" href="/docs/storing-secrets.html">Learn about how secrets are stored</a>.</p>
     <div class="video">
       <video
         loop
@@ -227,7 +227,36 @@ description: Simplest way for teams to build and deploy Serverless apps
   <hr />
 
   <div class="feature">
-    <h2>1-Click Rollback</h2>
+    <h2 id="review-changeset">Review Stack Changes<span>New</span></h2>
+    <p>Review your infrastructure changes to ensure that your Serverless project does not mistakingly deploy any irreversible changes to production. <a class="more" href="/docs/promoting-to-production.html">Read more on promoting to production</a>.</p>
+    <div class="video">
+      <video
+        loop
+        muted
+        preload
+        playsinline
+        webkit-playsinline
+        poster="assets/changeset.png"
+        onclick="videoClick(this)"
+        onloadstart="videoLoadStart(this)"
+        oncanplaythrough="videoCanPlayThrough(this)"
+      >
+        <source src="assets/changeset.mp4" type="video/mp4">
+        <img src="assets/changeset.gif" />
+      </video>
+      <div class="overlay spinner" onclick="playClick(this)">
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+      </div>
+      <div class="overlay play" onclick="playClick(this)">
+        <i class="fa fa-play"></i>
+      </div>
+    </div>
+  </div>
+
+  <hr />
+
+  <div class="feature">
+    <h2 id="1-click-rollback">1-Click Rollback</h2>
     <p>Rollback to any of your previously verified production builds through the <a href="{{ site.console_url }}" target="_blank">Seed Console</a> with just one click</p>
     <div class="video">
       <video
@@ -256,7 +285,7 @@ description: Simplest way for teams to build and deploy Serverless apps
 </div>
 
 <div class="pricing">
-  <h4>Pricing</h4>
+  <h4 id="pricing">Pricing</h4>
   <div class="table">
     <div class="personal">
       <div class="cost">
@@ -362,7 +391,7 @@ description: Simplest way for teams to build and deploy Serverless apps
 </div>
 
 <div class="faq">
-  <h4>Frequently Asked Questions</h4>
+  <h4 id="faq">Frequently Asked Questions</h4>
   <ul>
     <li>
       <p>

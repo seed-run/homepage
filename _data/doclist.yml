@@ -1,0 +1,28 @@
+toc:
+  - title: Getting started with Seed
+    url: /docs/index.html
+  - title: Adding your project
+    subfolderitems:
+      - page: Creating a GitHub Personal Access Token
+        url: /docs/creating-a-github-personal-access-token.html
+      - page: Adding your IAM credentials
+        url: /docs/adding-your-iam-credentials.html
+      - page: Customizing your IAM Policy
+        url: /docs/customizing-your-iam-policy.html
+  - title: Configuring your project
+    subfolderitems:
+      - page: Adding a stage
+        url: /docs/adding-a-stage.html
+      - page: Configuring stage variables
+        url: /docs/configuring-stage-variables.html
+      - page: Storing secrets
+        url: /docs/storing-secrets.html
+  - title: Working with your project
+    subfolderitems:
+      - page: Running tests
+        url: /docs/running-tests.html
+      - page: Working with pull requests
+        url: /docs/working-with-pull-requests.html
+      - page: Promoting to production
+        url: /docs/promoting-to-production.html
+

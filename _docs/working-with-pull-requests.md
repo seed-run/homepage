@@ -28,7 +28,7 @@ And in the Seed console you should see a new pull request stage created and buil
 
 ![Pull Request Stage Building](/assets/docs/working-with-pull-requests/pull-request-stage-building.png)
 
-Once the stage is built and deployed, you can access it's endpoint.
+Once the stage is built and deployed, you can access its endpoint.
 
 ![Pull Request Stage Built](/assets/docs/working-with-pull-requests/pull-request-stage-built.png)
 

@@ -9,7 +9,7 @@ Seed creates two default stages when a project is added. A **dev** stage that bu
 
 The main reason for this is because code and infrastructure are closely coupled in Serverless. And every single deploy can include some infrastructure changes. This coupling is incredibly convenient and powerful. Internally, CloudFormation figures out which parts of your infrastructure are being added, modified, or removed.
 
-To ensure that you have a clear idea of the infrastructure changes that are being deployed, Seed generates a changeset for each build. Promoting to production requires you to manually review the stack changes that are going to be applied.
+To ensure that you have a clear idea of the infrastructure changes that are being deployed, Seed generates a change set for each build. Promoting to production requires you to manually review the stack changes that are going to be applied.
 
 > You need to review the infrastructure changes before promoting to production
 
@@ -27,13 +27,13 @@ You can only promote the current working build. Select **Promote**.
 
 When a project is deployed, Serverless Framework generates a new CloudFormation template file based on the resources defined in **serverless.yml**, and submits the template to CloudFormation. CloudFormation will then apply the resource changes. A mistake in the resource definition can lead to permanent data loss and/or a security breach, which can be very costly in the **production** environment.
 
-Seed allows you to review the changes that are about to be applied in the **production** stage prior to promoting a development build. This is achieved by generating a CloudFormation changeset with the new stack template.
+Seed allows you to review the changes that are about to be applied in the **production** stage prior to promoting a development build. This is achieved by generating a CloudFormation Change Set with the new stack template.
 
-![Review Changeset](/assets/docs/promoting-to-production/review-changeset.png)
+![Review Change Set](/assets/docs/promoting-to-production/review-change-set.png)
 
-The changeset shows all the AWS resources about to be added, removed, and modified. Be sure to review these carefully. After you review and **confirm** the changeset, the build will be promoted and the **production** stage will be updated.
+The change set shows all the AWS resources about to be added, removed, and modified. Be sure to review these carefully. After you review and **confirm** the change set, the build will be promoted and the **production** stage will be updated.
 
-![Confirm Changeset](/assets/docs/promoting-to-production/confirm-changeset.png)
+![Confirm Change Set](/assets/docs/promoting-to-production/confirm-change-set.png)
 
 After the update is complete, the build is marked as **Promoted**.
 

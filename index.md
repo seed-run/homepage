@@ -452,7 +452,7 @@ description: Simplest way for teams to build and deploy Serverless apps
         Which environments do you support?
       </p>
       <p>
-        We support <a href="https://serverless.com/framework/" target="_blank">Severless Framework</a> Node.js projects on AWS with GitHub as a source repository. Let us know if there are any other environments you’d like us to support.
+        We support <a href="https://serverless.com/framework/" target="_blank">Severless Framework</a> Node.js and Python projects on AWS with GitHub as a source repository. Let us know if there are any other environments you’d like us to support.
       </p>
     </li>
   </ul>

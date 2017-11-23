@@ -516,6 +516,168 @@ main > .features {
   }
 }
 
+main > .comparison {
+  $width: 640px;
+
+  border-top: 2px solid darken($hero-bkg-color, 5%);
+  padding: $spacing-unit * 2 + 10px $spacing-unit / 2 $spacing-unit + 10px;
+
+  h4 {
+    margin-bottom: 2 * $spacing-unit;
+    text-align: center;
+    font-size: 24px;
+  }
+
+  & > div {
+    padding-bottom: $spacing-unit;
+
+    @include media-query($on-palm) {
+      box-sizing: border-box;
+      padding-right: $spacing-unit;
+      width: 100%;
+      overflow: scroll;
+    }
+  }
+
+  & > div > div:first-child {
+    margin: 0 auto;
+    box-sizing: border-box;
+    display: flex;
+    padding-left: 160px;
+    padding-bottom: $spacing-unit / 2;
+    width: $width;
+    left: -80px;
+    position: relative;
+
+    div {
+      margin: 0;
+      text-align: center;
+      font-size: 20px;
+      box-sizing: border-box;
+    }
+
+    div:first-child {
+      width: 220px;
+      padding-left: 20px;
+    }
+    div:nth-child(2) {
+      padding-top: 4px;
+      width: 40px;
+      color: $tertiary-text-color;
+      font-size: 16px;
+      font-style: italic;
+    }
+    div:last-child {
+      @include logo-font;
+      color: $brand-color;
+      width: 220px;
+      padding-right: 20px;
+      font-size: 22px;
+    }
+
+    @include media-query($on-palm) {
+      left: auto;
+    }
+  }
+
+  & > div > table {
+    margin: 0 auto;
+    width: $width;
+    table-layout: fixed;
+    left: -80px;
+    position: relative;
+
+    tr:nth-child(even) {
+      background: none;
+    }
+
+    tr td {
+      height: 100px;
+      width: 240px;
+      text-align: center;
+      box-sizing: border-box;
+      border-color: lighten($grey-color-light, 5%);
+    }
+
+    tr td:nth-child(2) {
+      color: $secondary-text-color;
+    }
+
+    tr td:first-child {
+      padding-left: 0;
+      padding-right: 20px;
+      border: 0 none;
+      width: 160px;
+      font-size: 13px;
+      color: $secondary-text-color;
+      text-align: right;
+      font-weight: 500;
+    }
+
+    tr td:last-child {
+      color: $accent-color;
+      font-weight: 500;
+    }
+
+    @include media-query($on-palm) {
+      left: auto;
+    }
+  }
+}
+
+main > .testimonials {
+  padding: $spacing-unit * 2 + 10px $spacing-unit / 2 10px;
+  border-top: 2px solid darken($hero-bkg-color, 5%);
+
+  h4 {
+    margin-bottom: $spacing-unit * 1.5;
+    text-align: center;
+    font-size: 24px;
+  }
+
+  div.list {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+
+  div.testimonial {
+    width: 280px;
+    margin: 0 $spacing-unit $spacing-unit * 2;
+    flex-shrink: 0;
+
+    h6 {
+      font-size: 16px;
+      text-align: center;
+      margin-bottom: 8px;
+    }
+
+    & > p {
+      margin-bottom: $spacing-unit / 2 + 5px;
+      text-align: center;
+      font-style: italic;
+      color: $tertiary-text-color;
+    }
+
+    & > div:last-child {
+      text-align: center;
+
+      img {
+        border-radius: 28px;
+      }
+      p:nth-child(2) {
+        margin-top: 8px;
+        margin-bottom: 0;
+      }
+      p:last-child {
+        margin-bottom: 0;
+        font-weight: 500;
+        font-size: 14px;
+      }
+    }
+  }
+}
+
 main > .pricing {
   padding: $spacing-unit * 2 + 10px $spacing-unit / 2 $spacing-unit * 2 + 10px;
   border-top: 2px solid darken($hero-bkg-color, 5%);
@@ -769,6 +931,35 @@ main > .closing {
 
     &:last-child {
       margin-bottom: 0;
+    }
+  }
+
+  div.platforms {
+    padding-top: $spacing-unit / 2;
+    text-align: center;
+
+    p {
+      margin-top: 6px;
+      color: $tertiary-text-color;
+      font-size: 12px;
+      text-transform: uppercase;
+    }
+
+    div:last-child {
+      margin-top: 7px;
+    }
+
+    div i {
+      margin: 0 7px;
+      opacity: 0.4;
+      font-size: 32px;
+      vertical-align: middle;
+    }
+
+    div img {
+      margin: 0 6px;
+      opacity: 0.4;
+      vertical-align: middle;
     }
   }
 }

@@ -284,6 +284,74 @@ description: Simplest way for teams to build and deploy Serverless apps
 
 </div>
 
+<div class="comparison">
+  <h4 id="comparison">How Do We Compare?</h4>
+  <div>
+    <div>
+      <div>Circle/Travis CI</div>
+      <div>vs</div>
+      <div>Seed</div>
+    </div>
+    <table>
+      <tbody>
+        <tr>
+          <td>Branch<br /> Endpoints</td>
+          <td>Needs configurtation</td>
+          <td>Included</td>
+        </tr>
+        <tr>
+          <td>Pull Request<br /> Endpoints</td>
+          <td>Needs configurtation<br /> and custom code</td>
+          <td>Included</td>
+        </tr>
+        <tr>
+          <td>Review<br /> Change Sets</td>
+          <td>Custom code with a<br /> manual approval step</td>
+          <td>Included</td>
+        </tr>
+        <tr>
+          <td>Rollbacks</td>
+          <td>Git revert and re-build</td>
+          <td>Rollback to previous production builds</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
+
+<div class="testimonials">
+  <h4 id="testimonials">From Our Customers</h4>
+  <div class="list">
+    <div class="testimonial">
+      <h6>Amazing support</h6>
+      <p>&ldquo;I just completed your tutorial on the Serverless stack, and it was fantastic. It was carefully thought out, well-written, and incredibly thorough. You guys rock!&rdquo;</p>
+      <div>
+        <img width="56" src="assets/spongebob.png" />
+        <p>Daniel Chen</p>
+        <p>CTO, <a href="https://myshyft.com">Shyft</a></p>
+      </div>
+    </div>
+    <div class="testimonial">
+      <h6>Saves a lot of time</h6>
+      <p>&ldquo;This is the best and most comprehensive fullstack serverless tutorial available. Take the time to go through every step, you will learn a ton!&rdquo;</p>
+      <div>
+        <img width="56" src="assets/patrick.png" />
+        <p>Patrick Star</p>
+        <p>CEO, <a href="https://myshyft.com">Krabby Inc.</a></p>
+      </div>
+    </div>
+    <div class="testimonial">
+      <h6>Less things to worry about</h6>
+      <p>&ldquo;Rarely do tutorials neatly break things down into bite-sized steps. Even rarer do they clearly explain what each step is for and why it is necessary. The Serverless-Stack is the Holy Grail that does all three.&rdquo;</p>
+      <div>
+        <img width="56" src="assets/sandy.png" />
+        <p>Sandy Cheeks</p>
+        <p>CEO, <a href="https://myshyft.com">Chum Bucket</a></p>
+      </div>
+    </div>
+  </div>
+</div>
+
 <div class="pricing">
   <h4 id="pricing">Pricing</h4>
   <div class="table">
@@ -476,4 +544,17 @@ description: Simplest way for teams to build and deploy Serverless apps
   <a class="button" href="{{ site.twitter }}" target="_blank">
     Follow us on Twitter
   </a>
+  <div class="platforms">
+    <div>
+      <img title="Node.js" width="31" src="assets/node-logo.png" />
+      <i title="GitHub" class="fa fa-github" aria-hidden="true"></i>
+      <img title="Python" width="31" src="assets/python-logo.png" />
+      <p>Supported Platforms</p>
+    </div>
+    <div>
+      <i title="Bitbucket" class="fa fa-bitbucket" aria-hidden="true"></i>
+      <i title="GitLab" class="fa fa-gitlab" aria-hidden="true"></i>
+      <p>Coming Soon</p>
+    </div>
+  </div>
 </div>

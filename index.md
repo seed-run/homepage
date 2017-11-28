@@ -413,7 +413,7 @@ description: Simplest way for teams to build and deploy Serverless apps
         </li>
         <li>
           <i class="fa-li fa fa-circle-thin"></i>
-          Pay as you go
+          Add 60 deployments for $7
         </li>
       </ul>
     </div>

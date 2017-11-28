@@ -6,7 +6,7 @@ description: Simplest way for teams to build and deploy Serverless apps
 <div class="header">
   <h1><a href="/">Seed</a></h1>
   <h4>Simplest way for teams to<br /> build and deploy Serverless apps</h4>
-  <a class="action" href="{{ site.console_url }}{{ site.beta_signup }}">Sign up for the beta</a>
+  <a class="action" href="{{ site.console_url }}{{ site.signup }}">Create a Free Account</a>
 </div>
 
 <div class="hero">
@@ -103,7 +103,7 @@ description: Simplest way for teams to build and deploy Serverless apps
 </div>
 
 <div class="features-intro">
-  <a class="action" href="{{ site.console_url }}{{ site.beta_signup }}">Sign up for the beta</a>
+  <a class="action" href="{{ site.console_url }}{{ site.signup }}">Create a Free Account</a>
   <p>A few other things you get out of the box.</p>
   <div class="caret">&#9663;</div>
 </div>
@@ -310,6 +310,11 @@ description: Simplest way for teams to build and deploy Serverless apps
           <td>Included</td>
         </tr>
         <tr>
+          <td>Concurrent<br /> Builds</td>
+          <td>Pay extra for concurrency</td>
+          <td>Included</td>
+        </tr>
+        <tr>
           <td>Rollbacks</td>
           <td>Git revert and re-build</td>
           <td>Rollback to previous production builds</td>
@@ -319,6 +324,7 @@ description: Simplest way for teams to build and deploy Serverless apps
   </div>
 </div>
 
+<!--
 <div class="testimonials">
   <h4 id="testimonials">From Our Customers</h4>
   <div class="list">
@@ -351,56 +357,41 @@ description: Simplest way for teams to build and deploy Serverless apps
     </div>
   </div>
 </div>
+-->
 
 <div class="pricing">
   <h4 id="pricing">Pricing</h4>
+  <div class="free-callout">
+    <p>Get started for free</p>
+    <ul class="features fa-ul">
+      <li>
+        <i class="fa-li fa fa-check"></i>
+        15 deployments
+      </li>
+      <li>
+        <i class="fa-li fa fa-check"></i>
+        Unlimited users
+      </li>
+      <li>
+        <i class="fa-li fa fa-check"></i>
+        Unlimited projects
+      </li>
+      <li>
+        <i class="fa-li fa fa-check"></i>
+        Unlimited concurrent builds
+      </li>
+    </ul>
+    <a class="action" href="{{ site.console_url }}{{ site.signup }}">Create a Free Account</a>
+  </div>
   <div class="table">
-    <div class="personal">
+    <div class="startup">
       <div class="cost">
         <p class="header">
-          Individual
+          Startup
         </p>
         <div class="numbers">
-          <p>$0</p>
-          <p>per user per month</p>
-        </div>
-      </div>
-      <ul class="features fa-ul">
-        <li>
-          <i class="fa-li fa fa-circle-thin"></i>
-          Single user
-        </li>
-        <li>
-          <i class="fa-li fa fa-check"></i>
-          Unlimited stages
-        </li>
-        <li>
-          <i class="fa-li fa fa-check"></i>
-          Unlimited projects
-        </li>
-        <li>
-          <i class="fa-li fa fa-check"></i>
-          Unlimited concurrent builds
-        </li>
-        <li>
-          <i class="fa-li fa fa-long-arrow-right"></i>
-          50 build mins
-        </li>
-        <li>
-          <i class="fa-li fa fa-plus"></i>
-          Add 200 build mins for $10
-        </li>
-      </ul>
-    </div>
-    <div class="premium">
-      <div class="cost">
-        <p class="header">
-          Team
-        </p>
-        <div class="numbers">
-          <p>$15</p>
-          <p>per user per month</p>
-          <p>Starts at $30/month</p>
+          <p>$7</p>
+          <p>per month</p>
         </div>
       </div>
       <ul class="features fa-ul">
@@ -410,7 +401,36 @@ description: Simplest way for teams to build and deploy Serverless apps
         </li>
         <li>
           <i class="fa-li fa fa-check"></i>
-          Unlimited stages
+          Unlimited projects
+        </li>
+        <li>
+          <i class="fa-li fa fa-check"></i>
+          Unlimited concurrent builds
+        </li>
+        <li>
+          <i class="fa-li fa fa-long-arrow-right"></i>
+          60 deployments
+        </li>
+        <li>
+          <i class="fa-li fa fa-circle-thin"></i>
+          Pay as you go
+        </li>
+      </ul>
+    </div>
+    <div class="standard">
+      <div class="cost">
+        <p class="header">
+          Standard
+        </p>
+        <div class="numbers">
+          <p>$47</p>
+          <p>per month</p>
+        </div>
+      </div>
+      <ul class="features fa-ul">
+        <li>
+          <i class="fa-li fa fa-check"></i>
+          Unlimited users
         </li>
         <li>
           <i class="fa-li fa fa-check"></i>
@@ -422,39 +442,100 @@ description: Simplest way for teams to build and deploy Serverless apps
         </li>
         <li>
           <i class="fa-li fa fa-long-arrow-right"></i>
-          200 build mins per user
+          600 deployments
         </li>
         <li>
           <i class="fa-li fa fa-plus"></i>
-          Add 200 build mins for $10
+          Email support
         </li>
       </ul>
     </div>
-    <div class="enterprise">
+    <div class="premium">
       <div class="cost">
         <p class="header">
-          Enterprise
+          Premium
         </p>
-        <div class="contact">
-          <a href="mailto:{{ site.email }}">Contact us</a>
+        <div class="numbers">
+          <p>$197</p>
+          <p>per month</p>
         </div>
       </div>
       <ul class="features fa-ul">
         <li>
-          <i class="fa-li fa fa-ellipsis-h"></i>
-          Details coming soon
+          <i class="fa-li fa fa-check"></i>
+          Unlimited users
+        </li>
+        <li>
+          <i class="fa-li fa fa-check"></i>
+          Unlimited projects
+        </li>
+        <li>
+          <i class="fa-li fa fa-check"></i>
+          Unlimited concurrent builds
+        </li>
+        <li>
+          <i class="fa-li fa fa-long-arrow-right"></i>
+          3000 deployments
+        </li>
+        <li>
+          <i class="fa-li fa fa-plus"></i>
+          Priority email support
+        </li>
+      </ul>
+    </div>
+    <div class="pro">
+      <div class="cost">
+        <p class="header">
+          Pro
+        </p>
+        <div class="numbers">
+          <p>$997</p>
+          <p>per month</p>
+        </div>
+      </div>
+      <ul class="features fa-ul">
+        <li>
+          <i class="fa-li fa fa-check"></i>
+          Unlimited users
+        </li>
+        <li>
+          <i class="fa-li fa fa-check"></i>
+          Unlimited projects
+        </li>
+        <li>
+          <i class="fa-li fa fa-check"></i>
+          Unlimited concurrent builds
+        </li>
+        <li>
+          <i class="fa-li fa fa-long-arrow-right"></i>
+          18000 deployments
+        </li>
+        <li>
+          <i class="fa-li fa fa-plus"></i>
+          Priority email support
+        </li>
+        <li>
+          <i class="fa-li fa fa-plus"></i>
+          Video call support
+        </li>
+        <li>
+          <i class="fa-li fa fa-plus"></i>
+          Required two-factor auth<br /><span>Coming soon</span>
+        </li>
+        <li>
+          <i class="fa-li fa fa-plus"></i>
+          Multi-level user roles<br /><span>Coming soon</span>
         </li>
       </ul>
     </div>
   </div>
   <div class="extra">
     <p>
-      There are soft limits on build storage. <a href="mailto:{{ site.email }}">Contact us</a> for details.
+      There are soft limits on build storage and total build minutes. <a href="mailto:{{ site.email }}">Contact us</a> if you have any questions or have custom requirements.
     </p>
     <p>
-      Build minutes is listed per user per month.
+      All deployments are listed per month.
     </p>
-    <a class="action" href="{{ site.console_url }}{{ site.beta_signup }}">Sign up for the beta</a>
   </div>
 </div>
 
@@ -529,7 +610,7 @@ description: Simplest way for teams to build and deploy Serverless apps
 
 <div class="closing">
   <p class="about"><span class="logo">Seed</span> is created by the trusted folks behind <a target="_blank" href="http://serverless-stack.com">Serverless-Stack.com</a>,<br /> the best resource for building serverless apps on AWS.</p>
-  <a class="action" href="{{ site.console_url }}{{ site.beta_signup }}">Sign up for the beta</a>
+  <a class="action" href="{{ site.console_url }}{{ site.signup }}">Create a Free Account</a>
   <div class="divider">
     <div>
       <hr />

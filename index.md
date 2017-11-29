@@ -516,7 +516,7 @@ description: Simplest way for teams to build and deploy Serverless apps
         </li>
         <li>
           <i class="fa-li fa fa-plus"></i>
-          Video call support
+          Video call consultations
         </li>
         <li>
           <i class="fa-li fa fa-plus"></i>

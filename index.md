@@ -5,7 +5,7 @@ description: Simplest way for teams to build and deploy Serverless apps
 
 <div class="header">
   <h1><a href="/">Seed</a></h1>
-  <h4>Simplest way for teams to<br /> build and deploy Serverless apps</h4>
+  <h4>A fully-configured CI/CD<br /> pipeline for Serverless Framework</h4>
   <a class="action" href="{{ site.console_url }}{{ site.signup }}">Create a Free Account</a>
 </div>
 

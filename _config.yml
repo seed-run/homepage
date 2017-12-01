@@ -16,8 +16,8 @@
 title: SEED
 email: contact@seed.run
 description: > # this means to ignore newlines until "baseurl:"
-  Team based workflow
-  for Serverless apps
+  A fully-configured CI/CD
+  pipeline for Serverless Framework
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "https://seed.run" # the base hostname & protocol for your site, e.g. http://example.com
 logo: /assets/og-image.png

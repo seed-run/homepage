@@ -1,0 +1,36 @@
+---
+layout: default
+---
+<div class="sidebar">
+
+  {% for item in site.data.doclist.toc %}
+    {% if item.url %}
+      <p class="{% if item.url == page.url %}active{% endif %}"><a href="{{ item.url }}">{{ item.title }}</a></li>
+    {% else %}
+      <p class="title">{{ item.title }}</p>
+      <ul>
+        {% for entry in item.subfolderitems %}
+          <li class="{% if entry.url == page.url %}active{% endif %}"><a href="{{ entry.url }}">{{ entry.page }}</a></li>
+        {% endfor %}
+      </ul>
+    {% endif %}
+  {% endfor %}
+
+</div>
+
+<article class="post">
+
+  <header class="post-header">
+    <h1 class="post-title">{{ page.title | escape }}</h1>
+  </header>
+
+  <div class="post-content">
+    {{ content }}
+  </div>
+
+  <div class="post-closing">
+    <hr />
+    <p>If you have any questions or feedback feel free to <a href="mailto:{{ site.email }}">contact us via email</a>.</p>
+  </div>
+
+</article>

@@ -1,5 +1,5 @@
 ---
-layout: page
+layout: docs
 title: Working with Pull Requests
 ---
 

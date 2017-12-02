@@ -1,5 +1,5 @@
 ---
-layout: page
+layout: docs
 title: Creating a GitHub Personal Access Token
 ---
 

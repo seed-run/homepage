@@ -296,12 +296,12 @@ description: Simplest way for teams to build and deploy Serverless apps
       <tbody>
         <tr>
           <td>Branch<br /> Endpoints</td>
-          <td>Needs configurtation</td>
+          <td>Needs configuration</td>
           <td>Included</td>
         </tr>
         <tr>
           <td>Pull Request<br /> Endpoints</td>
-          <td>Needs configurtation<br /> and custom code</td>
+          <td>Needs configuration<br /> and custom code</td>
           <td>Included</td>
         </tr>
         <tr>

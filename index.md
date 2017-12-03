@@ -1,6 +1,5 @@
 ---
 layout: lander
-description: Simplest way for teams to build and deploy Serverless apps
 ---
 
 <div class="header">

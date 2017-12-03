@@ -306,7 +306,7 @@
   }
 }
 
-.page-content > .wrapper {
+.page-content .docs-wrapper {
   display: flex;
   flex-direction: row;
   justify-content: flex-start;
@@ -318,7 +318,7 @@
   }
 }
 
-.page-content > .wrapper > .sidebar {
+.page-content .docs-wrapper > .sidebar {
   margin-right: $spacing-unit;
   padding-top: $spacing-unit / 2;
   flex: 0 0 220px;

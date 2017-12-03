@@ -1,6 +1,5 @@
 ---
 layout: lander
-description: Simplest way for teams to build and deploy Serverless apps
 ---
 
 <div class="header">
@@ -528,6 +527,12 @@ description: Simplest way for teams to build and deploy Serverless apps
         </li>
       </ul>
     </div>
+  </div>
+  <div class="contact">
+    <p>{{ site.tel }}</p>
+    <a class="button" href="mailto:{{ site.email }}">
+      Enquire About Pricing
+    </a>
   </div>
   <div class="extra">
     <p>

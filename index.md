@@ -529,6 +529,12 @@ description: Simplest way for teams to build and deploy Serverless apps
       </ul>
     </div>
   </div>
+  <div class="contact">
+    <p>{{ site.tel }}</p>
+    <a class="button" href="mailto:{{ site.email }}">
+      Enquire About Pricing
+    </a>
+  </div>
   <div class="extra">
     <p>
       There are soft limits on build storage and total build minutes. <a href="mailto:{{ site.email }}">Contact us</a> if you have any questions or have custom requirements.

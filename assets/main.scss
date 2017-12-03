@@ -95,6 +95,26 @@ a:active {
   }
 }
 
+@mixin action-button-dark {
+  $bkg: #A29FAA;
+
+  display: inline-block;
+  background-color: $bkg;
+  border: 1px solid darken($bkg, 10%);
+  border-radius: 3px;
+  padding: 4px 11px;
+  color: white;
+
+  &:hover {
+    background-color: darken($bkg, 5%);
+  }
+
+  &:active {
+    border-color: darken($bkg, 30%);
+    background-color: darken($bkg, 15%);
+  }
+}
+
 main > .header {
   background: linear-gradient(to bottom, $background-color 0%, $hero-bkg-color 90%, $hero-bkg-color 100%);
   padding-bottom: 2 * $spacing-unit;
@@ -814,10 +834,25 @@ main > .pricing {
         margin-right: 0;
         width: 250px;
       }
+    }
+  }
 
-      & > div:last-child {
-        margin-bottom: 0;
+  .contact {
+    text-align: center;
+
+    a.button {
+      @include action-button-dark;
+      font-size: 26px;
+      padding: 14px 26px;
+
+      @include media-query($on-palm) {
+        font-size: 22px;
+        padding: 10px 22px;
       }
+    }
+    p {
+      font-size: 22px;
+      color: $tertiary-text-color;
     }
   }
 
@@ -931,23 +966,8 @@ main > .closing {
   }
 
   .button {
-    $bkg: #A29FAA;
     margin-bottom: $spacing-unit / 2 - 4px;
-    display: inline-block;
-    background-color: $bkg;
-    border: 1px solid darken($bkg, 10%);
-    border-radius: 3px;
-    padding: 4px 11px;
-    color: white;
-
-    &:hover {
-      background-color: darken($bkg, 5%);
-    }
-
-    &:active {
-      border-color: darken($bkg, 30%);
-      background-color: darken($bkg, 15%);
-    }
+    @include action-button-dark;
 
     &:last-child {
       margin-bottom: 0;
@@ -988,4 +1008,134 @@ main > .closing {
   text-align: center;
   padding: 100px $spacing-unit / 2 100px;
   font-size: 18px;
+}
+
+main > .wrapper > .about {
+
+  .header {
+    margin: 0 auto;
+    max-width: 570px;
+    text-align: center;
+
+    h1 {
+      padding-top: $spacing-unit;
+      font-size: 40px;
+    }
+    p {
+      font-size: 20px;
+      color: $secondary-text-color;
+    }
+
+    @include media-query($on-palm) {
+      h1 {
+        padding-top: $spacing-unit / 2;
+        font-size: 34px;
+      }
+    }
+  }
+
+  hr {
+    margin: $spacing-unit * 3 auto;
+    max-width: 400px;
+    border-color: darken($hero-bkg-color, 10%);
+
+    @include media-query($on-palm) {
+      margin: $spacing-unit * 1.5 auto;
+    }
+  }
+
+  .team {
+    margin: 0 auto;
+    max-width: 720px;
+    text-align: center;
+
+    h3 {
+      font-size: 24px;
+    }
+
+    p {
+      color: $secondary-text-color;
+      font-size: 17px;
+      a {
+        font-weight: 500;
+      }
+    }
+  }
+
+  .investors {
+    margin: 0 auto;
+    text-align: center;
+    max-width: 720px;
+
+    h3 {
+      font-size: 24px;
+    }
+
+    p {
+      margin-bottom: $spacing-unit + 5px;
+      color: $secondary-text-color;
+      font-size: 17px;
+      a {
+        font-weight: 500;
+      }
+    }
+
+    .logos {
+      a {
+        display: inline-block;
+      }
+      a:first-child {
+        margin-right: $spacing-unit;
+        img {
+          margin-top: 35px;
+        }
+      }
+
+      @include media-query($on-palm) {
+        a {
+          display: block;
+        }
+        a:first-child {
+          margin-right: 0;
+          margin-bottom: $spacing-unit / 2;
+          img {
+            margin-top: 0;
+          }
+        }
+      }
+    }
+  }
+
+  .press {
+    margin: 0 auto;
+    text-align: center;
+    max-width: 500px;
+
+    h3 {
+      font-size: 24px;
+    }
+    img {
+      margin-bottom: $spacing-unit / 2;
+    }
+    p {
+      font-size: 17px;
+    }
+  }
+
+  .info {
+    margin-bottom: $spacing-unit * 3;
+    text-align: center;
+    p {
+      margin-bottom: 10px;
+      color: $tertiary-text-color;
+      font-size: 22px;
+      a {
+        color: $tertiary-text-color;
+      }
+    }
+    @include media-query($on-palm) {
+      margin-bottom: $spacing-unit * 2;
+    }
+  }
+
 }

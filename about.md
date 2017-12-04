@@ -14,7 +14,7 @@ title: About Us
 
   <div class="team">
     <h3>The Team</h3>
-    <p>Seed is created by <a href="http://anoma.ly">Anomaly Innovations</a>. We've been on AWS for nearly a decade. We have built web apps, iPhone and Android apps, in a variety of different environments and languages. We use our knowledge and experience with the AWS to ensure that you team won't have to worry about the deployment of your serverless applications.</p>
+    <p>Seed is created by <a href="http://anoma.ly">Anomaly Innovations</a>. We've been on AWS for nearly a decade. We have built web apps, iPhone and Android apps, in a variety of different environments and languages. We use our knowledge and experience with the AWS to ensure that your team would not have to worry about the deployment of your serverless applications.</p>
   </div>
 
   <hr />

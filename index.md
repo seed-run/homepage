@@ -542,6 +542,15 @@ layout: lander
       All deployments are listed per month.
     </p>
   </div>
+  <div class="platforms">
+    <div>
+      <img title="Node.js" width="31" src="assets/node-logo.png" />
+      <i title="Bitbucket" class="fa fa-bitbucket" aria-hidden="true"></i>
+      <i title="GitHub" class="fa fa-github" aria-hidden="true"></i>
+      <i title="GitLab" class="fa fa-gitlab" aria-hidden="true"></i>
+      <img title="Python" width="31" src="assets/python-logo.png" />
+    </div>
+  </div>
 </div>
 
 <div class="faq">
@@ -603,10 +612,10 @@ layout: lander
 
     <li>
       <p>
-        Which environments do you support?
+        Which environments does Seed support?
       </p>
       <p>
-        We support <a href="https://serverless.com/framework/" target="_blank">Severless Framework</a> Node.js and Python projects on AWS with GitHub as a source repository. Let us know if there are any other environments you’d like us to support.
+        We support <a href="https://serverless.com/framework/" target="_blank">Severless Framework</a>, Node.js and Python projects on AWS with GitHub, GitLab, or Bitbucket source repositories. Let us know if there are any other environments you’d like us to support.
       </p>
     </li>
   </ul>
@@ -630,17 +639,4 @@ layout: lander
   <a class="button" href="{{ site.twitter }}" target="_blank">
     Follow us on Twitter
   </a>
-  <div class="platforms">
-    <div>
-      <img title="Node.js" width="31" src="assets/node-logo.png" />
-      <i title="GitHub" class="fa fa-github" aria-hidden="true"></i>
-      <img title="Python" width="31" src="assets/python-logo.png" />
-      <p>Supported Platforms</p>
-    </div>
-    <div>
-      <i title="Bitbucket" class="fa fa-bitbucket" aria-hidden="true"></i>
-      <i title="GitLab" class="fa fa-gitlab" aria-hidden="true"></i>
-      <p>Coming Soon</p>
-    </div>
-  </div>
 </div>

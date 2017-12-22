@@ -875,6 +875,28 @@ main > .pricing {
       margin: $spacing-unit 0 0;
     }
   }
+
+  div.platforms {
+    padding-top: $spacing-unit / 2;
+    text-align: center;
+
+    div {
+      margin-top: 7px;
+    }
+
+    div i {
+      margin: 0 8px;
+      opacity: 0.4;
+      font-size: 32px;
+      vertical-align: middle;
+    }
+
+    div img {
+      margin: 0 7px;
+      opacity: 0.35;
+      vertical-align: middle;
+    }
+  }
 }
 
 main > .faq {
@@ -971,35 +993,6 @@ main > .closing {
 
     &:last-child {
       margin-bottom: 0;
-    }
-  }
-
-  div.platforms {
-    padding-top: $spacing-unit / 2;
-    text-align: center;
-
-    p {
-      margin-top: 6px;
-      color: $tertiary-text-color;
-      font-size: 12px;
-      text-transform: uppercase;
-    }
-
-    div:last-child {
-      margin-top: 7px;
-    }
-
-    div i {
-      margin: 0 7px;
-      opacity: 0.4;
-      font-size: 32px;
-      vertical-align: middle;
-    }
-
-    div img {
-      margin: 0 6px;
-      opacity: 0.4;
-      vertical-align: middle;
     }
   }
 }

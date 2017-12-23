@@ -3,8 +3,6 @@ toc:
     url: /docs/index.html
   - title: Adding your project
     subfolderitems:
-      - page: Creating a GitHub Personal Access Token
-        url: /docs/creating-a-github-personal-access-token.html
       - page: Adding your IAM credentials
         url: /docs/adding-your-iam-credentials.html
       - page: Customizing your IAM Policy

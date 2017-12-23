@@ -40,7 +40,7 @@ layout: lander
 
 <div class="pitch">
   <h4>Nothing to configure. Nothing to install.</h4>
-  <p>Seed is a fully-configured code pipeline for building and deploying Serverless apps on AWS. Simply add your GitHub repository and IAM credentials and your entire team can `git push` to deploy updates to your Serverless app.</p>
+  <p>Seed is a fully-configured code pipeline for building and deploying Serverless apps on AWS. Simply add your Git repository and IAM credentials and your entire team can `git push` to deploy updates to your Serverless app.</p>
   <p>Here is how it works.</p>
 </div>
 
@@ -49,10 +49,10 @@ layout: lander
 
   <div class="section github">
     <div class="action">
-      Push your code to GitHub
+      Push your code to Git
     </div>
     <div class="disc">
-      <i class="fa fa-github"></i>
+      <i class="fa fa-git-square"></i>
     </div>
   </div>
 

@@ -17,6 +17,8 @@ toc:
         url: /docs/storing-secrets.html
       - page: Running tests
         url: /docs/running-tests.html
+      - page: Adding project members
+        url: /docs/adding-project-members.html
   - title: Deploying your project
     subfolderitems:
       - page: Working with pull requests

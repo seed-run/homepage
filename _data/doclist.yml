@@ -29,5 +29,5 @@ toc:
     subfolderitems:
       - page: Configuring custom domains
         url: /docs/configuring-custom-domains.html
-      - page: Viewing your logs
+      - page: Viewing logs
         url: /docs/viewing-logs.html

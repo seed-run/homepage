@@ -3,7 +3,7 @@ layout: docs
 title: Adding a Stage
 ---
 
-Seed supports both branch based workflow and [pull request based workflow]({% link _docs/working-with-pull-requests.md %}). With branch based workflow, Seed allows you to deploy individual GitHub branches to different stages.
+Seed supports both branch based workflow and [pull request based workflow]({% link _docs/working-with-pull-requests.md %}). With branch based workflow, Seed allows you to deploy individual Git branches to different stages.
 
 Create a new branch.
 

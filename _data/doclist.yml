@@ -15,14 +15,17 @@ toc:
         url: /docs/configuring-stage-variables.html
       - page: Storing secrets
         url: /docs/storing-secrets.html
-      - page: Configuring custom domains
-        url: /docs/configuring-custom-domains.html
-  - title: Working with your project
-    subfolderitems:
       - page: Running tests
         url: /docs/running-tests.html
+  - title: Deploying your project
+    subfolderitems:
       - page: Working with pull requests
         url: /docs/working-with-pull-requests.html
       - page: Promoting to production
         url: /docs/promoting-to-production.html
-
+  - title: Managing deployments
+    subfolderitems:
+      - page: Configuring custom domains
+        url: /docs/configuring-custom-domains.html
+      - page: Viewing your logs
+        url: /docs/viewing-logs.html

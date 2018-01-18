@@ -59,6 +59,8 @@ Any pull requests submitted to **master** (or the stage **dev**), will have the 
 
 Once the pull request is merged a build is automatically triggered in the upstream stage and an updated build with the merged code is created. Alternatively, you can directly promote a build from the pull request stage without merging the pull request. This is useful when you are deploying a hotfix.
 
+### Disable Auto-Deploy Pull Requests
+
 Finally, you can disable auto-deploying pull requests by heading to the project settings and clicking on **Edit Project Info**.
 
 ![Project settings project info](/assets/docs/working-with-pull-requests/project-settings-project-info.png)

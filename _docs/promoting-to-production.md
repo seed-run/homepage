@@ -3,7 +3,7 @@ layout: docs
 title: Promoting to Production
 ---
 
-Seed creates two default stages when a project is added. A **dev** stage that builds project's default Git repository branch (usually the **master** branch) and a **production** stage that can only be deployed by promoting a working build from a development stage. A Seed project will always have exactly one production stage, and it cannot be removed. However, you can add more development stages that track a specific [branch]({% link _docs/adding-a-stage.md %}) or a [pull request]({% link _docs/working-with-pull-requests.md %}).
+Seed creates two default stages when a project is added. A **dev** stage that builds project's default Git repository branch (usually the **master** branch) and a **production** or **prod** stage that can only be deployed by promoting a working build from a development stage. A Seed project will always have exactly one production stage, and it cannot be removed. However, you can add more development stages that track a specific [branch]({% link _docs/adding-a-stage.md %}) or a [pull request]({% link _docs/working-with-pull-requests.md %}).
 
 > The production stage in Seed does not track a branch and cannot be removed
 
@@ -13,7 +13,7 @@ To ensure that you have a clear idea of the infrastructure changes that are bein
 
 > You need to review the infrastructure changes before promoting to production
 
-We think this extra step can help prevent any irreversible infrastructure changes from being deployed to your production environment mistakingly.
+We think this extra step can help prevent any irreversible infrastructure changes from being deployed to your production environment mistakingly. However, we understand that you might run into cases where you'd like to auto-deploy to production. For this you can follow the steps in the [Updating the stage source]({% link _docs/updating-the-stage-source.md %}#auto-deploy-production) chapter to enable it.
 
 Let's look at this in a bit more detail.
 

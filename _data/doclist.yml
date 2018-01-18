@@ -9,6 +9,8 @@ toc:
         url: /docs/customizing-your-iam-policy.html
       - page: Adding Python projects
         url: /docs/adding-python-projects.html
+      - page: Adding project members
+        url: /docs/adding-project-members.html
   - title: Configuring your project
     subfolderitems:
       - page: Adding a stage
@@ -17,10 +19,10 @@ toc:
         url: /docs/configuring-stage-variables.html
       - page: Storing secrets
         url: /docs/storing-secrets.html
+      - page: Updating the stage source
+        url: /docs/updating-the-stage-source.html
       - page: Running tests
         url: /docs/running-tests.html
-      - page: Adding project members
-        url: /docs/adding-project-members.html
   - title: Deploying your project
     subfolderitems:
       - page: Working with pull requests

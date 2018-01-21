@@ -25,6 +25,8 @@ A basic Serverless project in Seed needs permissions to the following AWS servic
 - **EC2** to execute Lambda in VPC
 - **CloudWatch Events** to manage CloudWatch event triggers
 - **KMS** for Seed to create and manage the encryption key used to protect your project [secret variables]({% link _docs/storing-secrets.md %})
+- **Route53** and **ACM** for Seed to manage your custom domains
+- **Logs** for Seed to manage your Lambda and Access logs
 
 ### A simple IAM Policy template
 
@@ -47,7 +49,11 @@ These can be defined and granted using a simple IAM policy.
         "ec2:DescribeSubnets",
         "ec2:DescribeVpcs",
         "events:*",
-        "kms:*"
+        "kms:*",
+        "route53:*",
+        "acm:*",
+        "apig:*",
+        "logs:*"
       ],
       "Resource": [
         "*"
@@ -216,6 +222,49 @@ Below is a more nuanced policy template that restricts access to the Serverless 
         "kms:*"
       ],
       "Resource": "arn:aws:kms::<account_no>:key/*"
+    },
+    {
+        "Effect": "Allow",
+        "Action": [
+            "route53:ChangeResourceRecordSets",
+            "route53:ListHostedZones",
+            "route53:ListResourceRecordSets"
+        ],
+        "Resource": "*"
+    },
+    {
+        "Effect": "Allow",
+        "Action": [
+            "acm:AddTagsToCertificate",
+            "acm:RequestCertificate",
+            "acm:DescribeCertificate",
+            "acm:DeleteCertificate"
+        ],
+        "Resource": "*"
+    },
+    {
+        "Effect": "Allow",
+        "Action": [
+            "apig:GetAccount",
+            "apig:UpdateAccount",
+            "apig:GetResources",
+            "apig:GetStage",
+            "apig:UpdateStage",
+            "apig:CreateDomainName",
+            "apig:CreateBasePathMapping",
+            "apig:GetDomainNames",
+            "apig:GetBasePathMapping",
+            "apig:DeleteBasePathMapping"
+        ],
+        "Resource": "*"
+    },
+    {
+        "Effect": "Allow",
+        "Action": [
+            "logs:CreateLogGroup",
+            "logs:describeLogGroups"
+        ],
+        "Resource": "arn:aws:logs:<region>:<account_no>:log-group:API-Gateway-Access-Logs_*:log-stream:*"
     }
   ]
 }

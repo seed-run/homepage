@@ -23,6 +23,10 @@ toc:
         url: /docs/updating-the-stage-source.html
       - page: Running tests
         url: /docs/running-tests.html
+      - page: Adding a build spec
+        url: /docs/adding-a-build-spec.html
+      - page: Private npm modules
+        url: /docs/private-npm-modules.html
   - title: Deploying your project
     subfolderitems:
       - page: Working with pull requests

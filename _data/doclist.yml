@@ -21,6 +21,10 @@ toc:
         url: /docs/storing-secrets.html
       - page: Updating the stage source
         url: /docs/updating-the-stage-source.html
+      - page: Renaming a project
+        url: /docs/renaming-a-project.html
+      - page: Adding build notifications
+        url: /docs/adding-build-notifications.html
       - page: Running tests
         url: /docs/running-tests.html
       - page: Adding a build spec

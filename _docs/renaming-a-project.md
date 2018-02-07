@@ -13,7 +13,7 @@ Seed projects have a couple of identifiers that can help you organize and share 
 
   This is a globally unique id that Seed uses to identify your project. This is also used in the URL to make them easy to read. And when you add project members they'll see this as a part of the project URL as well. Any changes made to the project slug are visible to all the project members.
 
-For example, your project name might be "My Serverless Project" and your project slug could be "my-serverless-project". The slug needs to be globally unique but the name can be set to anything you like.
+For example, your project name might be "My Serverless Project" and your project slug could be "my-serverless-project". The project URL in this case would be `https://console.seed.run/projects/my-serverless-project`. The slug needs to be globally unique but the name can be set to anything you like.
 
 > Project names are just for you, whereas project slugs are visible to your team
 

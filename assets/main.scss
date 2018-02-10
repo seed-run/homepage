@@ -22,6 +22,7 @@ $background-color:          #F9F9FA;
 $hero-bkg-color:            lighten(#C7C6CC, 10%);
 $brand-color:               #53437D;
 $accent-color:              #FD9527;
+$link-color:                lighten($brand-color, 15%);
 
 $grey-color-light:          #C7C6CC;
 
@@ -48,7 +49,7 @@ $on-laptop:                 800px;
  * Links
  */
 a {
-  color: lighten($brand-color, 15%);
+  color: $link-color;
 }
 a:visited {
   color: lighten($brand-color, 15%);
@@ -79,6 +80,11 @@ a:active {
   font-size: 26px;
   padding: 14px 26px;
   display: inline-block;
+  font-weight: 500;
+  text-transform: uppercase;
+  font-family: $label-font-family;
+  letter-spacing: 1px;
+  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2);
 
   &:hover {
     background-color: darken($bkg, 5%);
@@ -104,6 +110,11 @@ a:active {
   border-radius: 3px;
   padding: 4px 11px;
   color: white;
+  font-weight: 500;
+  text-transform: uppercase;
+  font-family: $label-font-family;
+  letter-spacing: 1px;
+  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2);
 
   &:hover {
     background-color: darken($bkg, 5%);
@@ -116,156 +127,111 @@ a:active {
 }
 
 main > .header {
-  background: linear-gradient(to bottom, $background-color 0%, $hero-bkg-color 90%, $hero-bkg-color 100%);
-  padding-bottom: 2 * $spacing-unit;
+  padding: 0 $spacing-unit / 2 3.5 * $spacing-unit;
+  background-color: $hero-bkg-color;
+  background-image:
+    linear-gradient(to bottom, $background-color 0%, rgba(255, 255, 255, 0) 90%, rgba(255, 255, 255, 0) 100%),
+    url("data:image/svg+xml,%3Csvg width='12' height='24' viewBox='0 0 12 24' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%239C92AC' fill-opacity='0.07'%3E%3Cpath d='M2 0h2v12H2V0zm1 20c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM9 8c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zm-1 4h2v12H8V12z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
   text-align: center;
 
   h1 {
-    margin-bottom: 0;
-
-    a {
-      @include logo-font;
-      line-height: 1.2;
-      font-size: 48px;
-      letter-spacing: -2px;
-      color: $brand-color;
-
-      @include media-query($on-palm) {
-        font-size: 40px;
-      }
-    }
-  }
-
-  h4 {
-    margin-bottom: $spacing-unit;
+    margin: 0 auto 5px;
+    padding-top: 3 * $spacing-unit;
+    max-width: 620px;
     font-family: $base-font-family;
-    font-size: 22px;
-    color: $secondary-text-color;
+    font-size: 36px;
+    line-height: 1.4;
+    color: $text-color;
 
     @include media-query($on-palm) {
-      font-size: 18px;
+      padding-top: $spacing-unit;
+      font-size: 26px;
     }
   }
 
-  a.action {
-    @include action-button;
+  h3 {
+    margin: 0 auto $spacing-unit;
+    font-family: $base-font-family;
+    color: $tertiary-text-color;
+    font-size: 22px;
+    max-width: 640px;
+
+    @include media-query($on-palm) {
+      font-size: 20px;
+    }
+  }
+
+  div.controls {
+    a.action {
+      @include action-button;
+    }
+    a.demo {
+      @include action-button-dark;
+      padding: 14px 26px;
+
+      @include media-query($on-palm) {
+        font-size: 22px;
+        padding: 10px 22px;
+      }
+    }
+    a.action, a.demo {
+      font-size: 18px;
+    }
+
+    @include media-query($on-palm) {
+      a.demo {
+        margin-bottom: $spacing-unit / 2;
+      }
+    }
   }
 }
 
 main > .hero {
-  padding: 0 $spacing-unit / 2 $spacing-unit * 2;
-  background-color: $hero-bkg-color;
-  .video {
-    $bar-height: 30px;
-    $bar-height-m: 20px;
+  position: relative;
+  padding-bottom: 2 * $spacing-unit;
 
+  .background {
+    top: 0;
+    left: 0;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+
+    div {
+      left: 0;
+      position: absolute;
+      width: 100%;
+      height: 60%;
+    }
+    div:first-child {
+      top: 0;
+      background-color: $hero-bkg-color;
+      background-image: url("data:image/svg+xml,%3Csvg width='12' height='24' viewBox='0 0 12 24' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%239C92AC' fill-opacity='0.07'%3E%3Cpath d='M2 0h2v12H2V0zm1 20c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM9 8c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zm-1 4h2v12H8V12z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+    }
+    div:last-child {
+      top: 60%;
+      border-top: 2px solid darken($hero-bkg-color, 5%);
+    }
+  }
+
+  .video {
     margin: 0 auto;
-    max-width: 540px;
+    width: 640px;
+    height: 360px;
     box-shadow: 0px 10px 33px 9px rgba(0, 0, 0, 0.27);
     border-radius: 4px;
     position: relative;
     overflow: hidden;
 
     @include media-query($on-palm) {
-      border-radius: 4px 4px 0 0;
-    }
-
-    .bar {
-      width: 100%;
-      background: linear-gradient(0deg, #F6F6F6 0%, #F6F6F6 100%);
-      height: $bar-height;
-      border-top: 1px solid #ECEBEC;
-      border-bottom: 1px solid #ECEBEC;
-      border-radius: 4px 4px 0 0;
-      display: flex;
-      justify-content: flex-start;
-      align-items: center;
-
-      @include media-query($on-palm) {
-        height: $bar-height-m;
-      }
-
-      span {
-        $size: 12px;
-        width: $size;
-        height: $size;
-        border-radius: $size / 2;
-        $color: #DDD;
-        background-color: $color;
-        border: 1px solid darken($color, 5%);
-        margin-right: 8px;
-        display: block;
-        box-sizing: border-box;
-
-        @include media-query($on-palm) {
-          $size: 8px;
-          width: $size;
-          height: $size;
-          border-radius: $size / 2;
-          margin-right: 6px;
-        }
-
-        &:first-child {
-          margin-left: 10px;
-        }
-      }
-    }
-
-    video {
-      width: 100%;
-      height: 54.9%;
-      display: block;
-      border-radius: 0 0 4px 4px;
-
-      @include media-query($on-palm) {
-        width: 102%;
-        position: relative;
-        left: -1px;
-        border-radius: 0;
-      }
-    }
-
-    .overlay {
-      $width: 60px;
-      $height: 48px;
-      position: absolute;
-      width: $width;
-      height: $height;
-      top: 50%;
-      margin-left: - $width / 2;
-      left: 50%;
-      margin-top: - $height / 2 + $bar-height / 2;
-      background-color: rgba(0, 0, 0, 0.2);
-      align-items: center;
-      justify-content: center;
-      border-radius: 3px;
-      box-sizing: border-box;
-      display: none;
-
-      @include media-query($on-palm) {
-        margin-top: - $height / 2 + $bar-height-m / 2;
-      }
-
-      &.play {
-        padding-left: 3px;
-      }
-
-      i {
-        font-size: 18px;
-        color: white;
-      }
-    }
-
-    &.button .play,
-    &.loading .spinner {
-      display: flex;
+      width: 300px;
+      height: 169px;
     }
   }
 }
 
 main > .pitch {
-  border-top: 2px solid darken($hero-bkg-color, 5%);
-  padding: $spacing-unit * 2 0;
+  padding-bottom: 2 * $spacing-unit;
   text-align: center;
 
   h4 {
@@ -273,18 +239,17 @@ main > .pitch {
 
     @include media-query($on-palm) {
       font-size: 22px;
-      width: 300px;
+      max-width: 300px;
       margin-left: auto;
       margin-right: auto;
     }
   }
   p {
-    margin-left: auto;
-    margin-right: auto;
-    margin-bottom: $spacing-unit / 2 + 10px;
+    margin: 0 auto $spacing-unit / 2 + 10px;
     font-size: 18px;
     max-width: 642px;
     padding: 0 $spacing-unit / 2;
+    color: $secondary-text-color;
 
     @include media-query($on-palm) {
       font-size: 16px;
@@ -294,360 +259,202 @@ main > .pitch {
       margin-bottom: 0;
     }
   }
-}
 
-main > .flow {
-  border-top: 2px solid darken($hero-bkg-color, 5%);
-  position: relative;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-
-  @include media-query($on-palm) {
-    align-items: flex-end;
-  }
-
-  .line {
-    $width: 6px;
-    z-index: 2;
-    top: 0;
-    left: 50%;
-    margin-left: - $width / 2;
-    position: absolute;
-    width: $width;
-    height: 100%;
-    background-color: darken($background-color, 5%);
-
-    @include media-query($on-palm) {
-      left: auto;
-      margin-left: auto;
-      right: 120px - $width / 2;
-    }
-  }
-
-  .section {
-    position: relative;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    z-index: 3;
-    padding-right: 200px + $spacing-unit / 2;
-
-    @include media-query($on-palm) {
-      padding-right: 90px;
-    }
-
-    .disc {
-      $size: 60px;
-      box-size: border-box;
-      width: $size;
-      height: $size;
-      border-radius: $size / 2;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      background-color: $background-color;
-
-      i {
-        font-size: 40px;
-        color: $tertiary-text-color;
-      }
-    }
-
-    .action {
-      width: 200px;
-      margin-right: $spacing-unit / 2;
-      text-align: right;
-      color: $secondary-text-color;
-
-      @include media-query($on-palm) {
-        width: 120px;
-      }
-    }
-
-    &.github {
-      margin-top: 2 * $spacing-unit;
-    }
-
-    &.tests {
-      margin-top: 2 * $spacing-unit;
-      i {
-        color: $brand-color;
-      }
-    }
-
-    &.package {
-      margin-top: 1 * $spacing-unit;
-      i {
-        color: $brand-color;
-      }
-    }
-
-    &.dev {
-      margin-top: 2 * $spacing-unit;
-    }
-
-    &.production {
-      margin-top: 1 * $spacing-unit;
-      margin-bottom: 2 * $spacing-unit;
-    }
-  }
-
-  .divider {
-    margin: 2 * $spacing-unit auto 0;
-    border-top: 2px dotted darken($background-color, 10%);
-    width: 600px;
-    height: 2px;
-    position: relative;
-    z-index: 1;
-
-    @include media-query($on-palm) {
-      width: 100%;
-    }
+  div.platforms {
+    padding-top: $spacing-unit / 2;
+    text-align: center;
 
     div {
-      font-size: 12px;
-      color: $tertiary-text-color;
-
-      @include media-query($on-palm) {
-        padding-left: 4px;
-      }
-
-      &.logo {
-        @include logo-font;
-      }
+      margin-top: 7px;
     }
-  }
-}
 
-main > .features-intro {
-  padding: $spacing-unit * 2 0;
-  border-top: 2px solid darken($hero-bkg-color, 5%);
-  text-align: center;
+    div i {
+      margin: 0 8px;
+      opacity: 0.4;
+      font-size: 32px;
+      vertical-align: middle;
+    }
 
-  .action {
-    @include action-button;
-  }
-
-  p {
-    color: $tertiary-text-color;
-    margin-top: $spacing-unit;
-    font-size: 14px;
-  }
-  .caret {
-    color: $tertiary-text-color;
-    margin-bottom: 0;
+    div img {
+      margin: 0 7px;
+      opacity: 0.35;
+      vertical-align: middle;
+    }
   }
 }
 
 main > .features {
-  padding: $spacing-unit * 2 $spacing-unit / 2 $spacing-unit * 2 + 10px;
+  padding: $spacing-unit * 2.5 $spacing-unit / 2 $spacing-unit * 3;
   border-top: 2px solid darken($hero-bkg-color, 5%);
-  background-color: $hero-bkg-color;
 
   .feature {
-    text-align: center;
-    h2 {
-      font-size: 32px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
 
-      span {
-        margin-left: 10px;
-        vertical-align: 5px;
-        padding: 3px 6px;
-        border-radius: 3px;
-        background-color: $accent-color;
-        color: white;
-        text-transform: uppercase;
-        font-size: 10px;
-        font-family: $label-font-family;
-        line-height: 1;
+    div.description {
+      $size: 64px;
+      margin-right: 4 * $spacing-unit;
+
+      div.icon {
+        margin-bottom: $spacing-unit - 10px;
+        width: $size;
+        height: $size;
+        border-radius: 50%;
+        background-color: lighten($brand-color, 20%);
+        text-align: center;
+
+        i {
+          color: white;
+          font-size: 28px;
+          line-height: $size;
+
+          &.fa-code-fork {
+            margin-left: 4px;
+          }
+
+          &.fa-tachometer {
+            margin-top: -3px;
+          }
+        }
+      }
+      h2 {
+        margin-bottom: 10px;
+        font-size: 32px;
+      }
+      p {
+        max-width: 480px;
+        color: $secondary-text-color;
+        line-height: 1.8;
+      }
+
+      ul {
+        margin-left: 25px;
+
+        li {
+          padding-bottom: 5px;
+
+          i {
+            line-height: 1.3;
+            color: $tertiary-text-color;
+          }
+
+          &:last-child {
+            padding-bottom: 0;
+          }
+        }
+      }
+
+      @include media-query($on-palm) {
+        margin-right: 0;
       }
     }
-    p {
-      margin: 0 auto;
-      max-width: 480px;
-      color: $secondary-text-color;
-      padding: 0 $spacing-unit / 2;
 
-      a.more {
-        font-weight: 500;
-      }
-    }
-    .video {
+    .image {
       $color: #F6F6F6;
-      margin: $spacing-unit / 2 auto 0;
-      max-width: 500px;
-      border: 8px solid $color;
-      box-shadow: 0px 1px 2px 0px rgba(0, 0, 0, 0.21);
       border-radius: 4px;
+      border: 6px solid #FDFDFE;
       background-color: $color;
       position: relative;
       overflow: hidden;
+      box-shadow: 0 7px 14px rgba(50, 50, 93, .1), 0 3px 6px rgba(0, 0, 0, .08);
 
-      video {
-        display: block;
-        width: 100%;
+      @include media-query($on-palm) {
+        margin-top: $spacing-unit;
+      }
+    }
+  }
 
-        @include media-query($on-palm) {
-          width: 102%;
-          position: relative;
-          left: -1px;
+  .beta {
+    $size: 120px;
+    margin: $spacing-unit * 3 auto 0;
+    max-width: 540px;
+    background-color: #FDFDFE;
+    border-radius: 4px;
+    box-shadow: 0 15px 35px rgba(0, 0, 0, .1), 0 5px 15px rgba(0, 0, 0, .07);
+    position: relative;
+    overflow: hidden;
+
+    div.icon {
+      width: $size;
+      height: $size;
+      border-radius: 50%;
+      background-color: lighten($accent-color, 20%);
+      text-align: center;
+      position: absolute;
+      top: 50%;
+      margin-top: - $size / 2;
+      left: -30px;
+
+      i {
+        color: white;
+        font-size: 70px;
+        line-height: $size;
+
+        &.fa-code-fork {
+          margin-left: 4px;
+        }
+
+        &.fa-tachometer {
+          margin-top: -3px;
         }
       }
+    }
 
-      .overlay {
-        $width: 60px;
-        $height: 48px;
-        position: absolute;
-        width: $width;
-        height: $height;
-        top: 50%;
-        margin-left: - $width / 2;
-        left: 50%;
-        margin-top: - $height / 2;
-        background-color: rgba(0, 0, 0, 0.2);
-        align-items: center;
-        justify-content: center;
-        border-radius: 3px;
-        box-sizing: border-box;
-        display: none;
+    div.description {
+      margin: 20px 10px 20px $size - 10px;
+      position: relative;
 
-        &.play {
-          padding-left: 3px;
-        }
-
-        i {
-          font-size: 18px;
-          color: white;
-        }
+      h4 {
+        font-size: 18px;
+        margin-bottom: 5px;
+        font-family: $label-font-family;
+        text-transform: uppercase;
+        letter-spacing: 1px;
       }
 
-      &.button .play,
-      &.loading .spinner {
-        display: flex;
+      p {
+        color: $secondary-text-color;
       }
+
+      a {
+        font-weight: 500;
+      }
+    }
+
+    @include media-query($on-palm) {
+      margin-top: 2 * $spacing-unit;
     }
   }
 
   hr {
-    margin: $spacing-unit * 2 + 3px auto $spacing-unit + 10px;
-    max-width: 400px;
+    margin: $spacing-unit * 2.5 auto;
+    max-width: 800px;
     border-color: darken($hero-bkg-color, 10%);
-  }
-}
-
-main > .comparison {
-  $width: 640px;
-
-  border-top: 2px solid darken($hero-bkg-color, 5%);
-  padding: $spacing-unit * 2 + 10px $spacing-unit / 2 $spacing-unit + 10px;
-
-  h4 {
-    margin-bottom: 2 * $spacing-unit;
-    text-align: center;
-    font-size: 24px;
-  }
-
-  & > div {
-    padding-bottom: $spacing-unit;
 
     @include media-query($on-palm) {
-      box-sizing: border-box;
-      padding-right: $spacing-unit;
-      width: 100%;
-      overflow: scroll;
+      margin: $spacing-unit * 2 auto;
     }
   }
 
-  & > div > div:first-child {
-    margin: 0 auto;
-    box-sizing: border-box;
-    display: flex;
-    padding-left: 160px;
-    padding-bottom: $spacing-unit / 2;
-    width: $width;
-    left: -80px;
-    position: relative;
-
-    div {
-      margin: 0;
-      text-align: center;
-      font-size: 20px;
-      box-sizing: border-box;
-    }
-
-    div:first-child {
-      width: 220px;
-      padding-left: 20px;
-    }
-    div:nth-child(2) {
-      padding-top: 4px;
-      width: 40px;
-      color: $tertiary-text-color;
-      font-size: 16px;
-      font-style: italic;
-    }
-    div:last-child {
-      @include logo-font;
-      color: $brand-color;
-      width: 220px;
-      padding-right: 20px;
-      font-size: 22px;
-    }
-
-    @include media-query($on-palm) {
-      left: auto;
-    }
-  }
-
-  & > div > table {
-    margin: 0 auto;
-    width: $width;
-    table-layout: fixed;
-    left: -80px;
-    position: relative;
-
-    tr:nth-child(even) {
-      background: none;
-    }
-
-    tr td {
-      height: 100px;
-      width: 240px;
-      text-align: center;
-      box-sizing: border-box;
-      border-color: lighten($grey-color-light, 5%);
-    }
-
-    tr td:nth-child(2) {
-      color: $secondary-text-color;
-    }
-
-    tr td:first-child {
-      padding-left: 0;
-      padding-right: 20px;
-      border: 0 none;
-      width: 160px;
-      font-size: 13px;
-      color: $secondary-text-color;
-      text-align: right;
-      font-weight: 500;
-    }
-
-    tr td:last-child {
-      color: $accent-color;
-      font-weight: 500;
-    }
-
-    @include media-query($on-palm) {
-      left: auto;
-    }
+  @include media-query($on-palm) {
+    padding-top: 2 * $spacing-unit;
+    padding-bottom: 2 * $spacing-unit;
   }
 }
 
 main > .testimonials {
-  padding: $spacing-unit * 2 + 10px $spacing-unit / 2 10px;
+  padding: $spacing-unit * 2 + 10px $spacing-unit / 2;
   border-top: 2px solid darken($hero-bkg-color, 5%);
+  color: $background-color;
+  background-color: darken($brand-color, 5%);
+  background-image: url("data:image/svg+xml,%3Csvg width='180' height='180' viewBox='0 0 180 180' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M81.28 88H68.413l19.298 19.298L81.28 88zm2.107 0h13.226L90 107.838 83.387 88zm15.334 0h12.866l-19.298 19.298L98.72 88zm-32.927-2.207L73.586 78h32.827l.5.5 7.294 7.293L115.414 87l-24.707 24.707-.707.707L64.586 87l1.207-1.207zm2.62.207L74 80.414 79.586 86H68.414zm16 0L90 80.414 95.586 86H84.414zm16 0L106 80.414 111.586 86h-11.172zm-8-6h11.173L98 85.586 92.414 80zM82 85.586L87.586 80H76.414L82 85.586zM17.414 0L.707 16.707 0 17.414V0h17.414zM4.28 0L0 12.838V0h4.28zm10.306 0L2.288 12.298 6.388 0h8.198zM180 17.414L162.586 0H180v17.414zM165.414 0l12.298 12.298L173.612 0h-8.198zM180 12.838L175.72 0H180v12.838zM0 163h16.413l.5.5 7.294 7.293L25.414 172l-8 8H0v-17zm0 10h6.613l-2.334 7H0v-7zm14.586 7l7-7H8.72l-2.333 7h8.2zM0 165.414L5.586 171H0v-5.586zM10.414 171L16 165.414 21.586 171H10.414zm-8-6h11.172L8 170.586 2.414 165zM180 163h-16.413l-7.794 7.793-1.207 1.207 8 8H180v-17zm-14.586 17l-7-7h12.865l2.333 7h-8.2zM180 173h-6.613l2.334 7H180v-7zm-21.586-2l5.586-5.586 5.586 5.586h-11.172zM180 165.414L174.414 171H180v-5.586zm-8 5.172l5.586-5.586h-11.172l5.586 5.586zM152.933 25.653l1.414 1.414-33.94 33.942-1.416-1.416 33.943-33.94zm1.414 127.28l-1.414 1.414-33.942-33.94 1.416-1.416 33.94 33.943zm-127.28 1.414l-1.414-1.414 33.94-33.942 1.416 1.416-33.943 33.94zm-1.414-127.28l1.414-1.414 33.942 33.94-1.416 1.416-33.94-33.943zM0 85c2.21 0 4 1.79 4 4s-1.79 4-4 4v-8zm180 0c-2.21 0-4 1.79-4 4s1.79 4 4 4v-8zM94 0c0 2.21-1.79 4-4 4s-4-1.79-4-4h8zm0 180c0-2.21-1.79-4-4-4s-4 1.79-4 4h8z' fill='%23f9f9fa' fill-opacity='0.07' fill-rule='evenodd'/%3E%3C/svg%3E");
+
+  @include media-query($on-palm) {
+    padding-top: $spacing-unit * 2;
+    padding-bottom: $spacing-unit * 2;
+  }
 
   h4 {
     margin-bottom: $spacing-unit * 1.5;
@@ -662,45 +469,67 @@ main > .testimonials {
   }
 
   div.testimonial {
-    width: 280px;
-    margin: 0 $spacing-unit $spacing-unit * 2;
-    flex-shrink: 0;
+    max-width: 450px;
+    margin: 0 $spacing-unit;
+
+    @include media-query($on-palm) {
+      margin: 0 0 1.5 * $spacing-unit;
+
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
 
     h6 {
       font-size: 16px;
       text-align: center;
       margin-bottom: 8px;
+      font-family: $label-font-family;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      color: darken($background-color, 15%);
     }
 
     & > p {
-      margin-bottom: $spacing-unit / 2 + 5px;
+      margin-bottom: $spacing-unit / 2;
+      line-height: 1.6;
+      font-size: 24px;
       text-align: center;
-      font-style: italic;
-      color: $tertiary-text-color;
+      color: $background-color;
+
+      @include media-query($on-palm) {
+        margin-bottom: 5px;
+        font-size: 20px;
+      }
     }
 
     & > div:last-child {
       text-align: center;
 
-      img {
-        border-radius: 28px;
-      }
-      p:nth-child(2) {
-        margin-top: 8px;
-        margin-bottom: 0;
+      p:first-child {
+        margin-bottom: 2px;
+        font-weight: 500;
+        font-size: 16px;
       }
       p:last-child {
         margin-bottom: 0;
-        font-weight: 500;
         font-size: 14px;
+        a {
+          color: $background-color;
+        }
       }
     }
   }
 }
 
 main > .pricing {
-  padding: $spacing-unit * 2 + 10px $spacing-unit / 2 $spacing-unit * 2 + 10px;
+  padding: $spacing-unit * 2 + 10px 0;
   border-top: 2px solid darken($hero-bkg-color, 5%);
+
+  @include media-query($on-palm) {
+    padding-top: $spacing-unit * 2;
+    padding-bottom: $spacing-unit * 2;
+  }
 
   h4 {
     margin-bottom: $spacing-unit * 1.5;
@@ -746,9 +575,8 @@ main > .pricing {
     flex-wrap: wrap;
 
     & > div {
-      margin: 0 $spacing-unit / 2;
+      margin: 0 $spacing-unit / 2 1.5 * $spacing-unit;
       max-width: 250px;
-      margin-bottom: $spacing-unit;
 
       &.premium .cost {
         border-color: $accent-color;
@@ -835,19 +663,37 @@ main > .pricing {
         width: 250px;
       }
     }
+
+    @include media-query($on-macbook) {
+      margin: 0 auto;
+      max-width: 800px;
+    }
   }
 
   .contact {
     text-align: center;
 
-    a.button {
-      @include action-button-dark;
-      font-size: 26px;
-      padding: 14px 26px;
+    div.controls {
+      a.action {
+        @include action-button;
+      }
+      a.demo {
+        @include action-button-dark;
+        padding: 14px 26px;
+
+        @include media-query($on-palm) {
+          font-size: 22px;
+          padding: 10px 22px;
+        }
+      }
+      a.action, a.demo {
+        font-size: 18px;
+      }
 
       @include media-query($on-palm) {
-        font-size: 22px;
-        padding: 10px 22px;
+        a.demo {
+          margin-bottom: $spacing-unit / 2;
+        }
       }
     }
     p {
@@ -875,68 +721,20 @@ main > .pricing {
       margin: $spacing-unit 0 0;
     }
   }
-
-  div.platforms {
-    padding-top: $spacing-unit / 2;
-    text-align: center;
-
-    div {
-      margin-top: 7px;
-    }
-
-    div i {
-      margin: 0 8px;
-      opacity: 0.4;
-      font-size: 32px;
-      vertical-align: middle;
-    }
-
-    div img {
-      margin: 0 7px;
-      opacity: 0.35;
-      vertical-align: middle;
-    }
-  }
-}
-
-main > .faq {
-  padding-top: $spacing-unit * 2 + 10px;
-  border-top: 2px solid darken($hero-bkg-color, 5%);
-
-  h4 {
-    margin-bottom: $spacing-unit;
-    text-align: center;
-    font-size: 24px;
-    padding: 0 $spacing-unit / 2;
-  }
-  ul {
-    margin: 0 auto;
-    max-width: 600px;
-    padding: 0 $spacing-unit / 2;
-    li {
-      margin-left: $spacing-unit / 2;
-    }
-  }
-  & > p {
-    margin-top: $spacing-unit;
-    padding: 0 $spacing-unit / 2;
-    text-align: center;
-  }
 }
 
 main > .closing {
   border-top: 2px solid darken($hero-bkg-color, 5%);
-  padding-top: $spacing-unit * 2 + 10px;
-  padding-bottom: 10px;
-  margin: $spacing-unit * 3 0 0;
+  padding: $spacing-unit * 2 + 10px 0 $spacing-unit * 3;
   text-align: center;
 
   @include media-query($on-palm) {
-    padding-bottom: $spacing-unit * 1.5;
+    padding-top: $spacing-unit * 2;
+    padding-bottom: $spacing-unit * 2;
   }
 
   .about {
-    margin-bottom: $spacing-unit;
+    margin-bottom: 0;
     font-size: 20px;
     font-family: $heading-font-family;
     padding: 0 $spacing-unit / 2;
@@ -953,7 +751,7 @@ main > .closing {
   }
 
   .divider {
-    margin-top: $spacing-unit;
+    margin-top: $spacing-unit - 10px;
     margin-bottom: $spacing-unit - 10px;
     margin-left: auto;
     margin-right: auto;
@@ -990,6 +788,10 @@ main > .closing {
   .button {
     margin-bottom: $spacing-unit / 2 - 4px;
     @include action-button-dark;
+    font-family: $base-font-family;
+    text-transform: none;
+    font-weight: 400;
+    letter-spacing: 0;
 
     &:last-child {
       margin-bottom: 0;

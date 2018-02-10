@@ -134,6 +134,10 @@ main > .header {
     url("data:image/svg+xml,%3Csvg width='12' height='24' viewBox='0 0 12 24' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%239C92AC' fill-opacity='0.07'%3E%3Cpath d='M2 0h2v12H2V0zm1 20c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM9 8c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zm-1 4h2v12H8V12z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
   text-align: center;
 
+  @include media-query($on-palm) {
+    padding-bottom: 2 * $spacing-unit;
+  }
+
   h1 {
     margin: 0 auto 5px;
     padding-top: 3 * $spacing-unit;
@@ -201,7 +205,7 @@ main > .hero {
       left: 0;
       position: absolute;
       width: 100%;
-      height: 60%;
+      height: 50%;
     }
     div:first-child {
       top: 0;
@@ -209,7 +213,8 @@ main > .hero {
       background-image: url("data:image/svg+xml,%3Csvg width='12' height='24' viewBox='0 0 12 24' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%239C92AC' fill-opacity='0.07'%3E%3Cpath d='M2 0h2v12H2V0zm1 20c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM9 8c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zm-1 4h2v12H8V12z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
     }
     div:last-child {
-      top: 60%;
+      top: 50%;
+      height: 50%;
       border-top: 2px solid darken($hero-bkg-color, 5%);
     }
   }

@@ -61,6 +61,10 @@ a:active {
   color: lighten($brand-color, 5%);
 }
 
+::selection {
+  background: lighten($accent-color, 20%);
+}
+
 @mixin logo-font {
   font-family: $base-font-family;
   text-transform: uppercase;
@@ -325,12 +329,12 @@ main > .features {
         }
       }
       h2 {
-        margin-bottom: 10px;
+        margin-bottom: 0;
         font-size: 32px;
       }
       p {
         max-width: 480px;
-        color: $secondary-text-color;
+        color: $tertiary-text-color;
         line-height: 1.8;
       }
 
@@ -338,11 +342,23 @@ main > .features {
         margin-left: 25px;
 
         li {
-          padding-bottom: 5px;
+          padding-bottom: 13px;
 
           i {
             line-height: 1.3;
             color: $tertiary-text-color;
+          }
+
+          a {
+            b {
+              font-weight: 500;
+              color: darken($link-color, 10%);
+            }
+            &:hover {
+              b {
+                color: lighten($link-color, 20%);
+              }
+            }
           }
 
           &:last-child {
@@ -363,7 +379,7 @@ main > .features {
       background-color: $color;
       position: relative;
       overflow: hidden;
-      box-shadow: 0 7px 14px rgba(50, 50, 93, .1), 0 3px 6px rgba(0, 0, 0, .08);
+      box-shadow: 0 7px 14px rgba(50, 50, 93, .05), 0 3px 6px rgba(0, 0, 0, .08);
 
       @include media-query($on-palm) {
         margin-top: $spacing-unit;
@@ -468,14 +484,12 @@ main > .testimonials {
   }
 
   div.list {
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
   }
 
   div.testimonial {
-    max-width: 450px;
-    margin: 0 $spacing-unit;
+    margin: 0 auto;
+    max-width: 900px;
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
 
     @include media-query($on-palm) {
       margin: 0 0 1.5 * $spacing-unit;
@@ -496,7 +510,7 @@ main > .testimonials {
     }
 
     & > p {
-      margin-bottom: $spacing-unit / 2;
+      margin-bottom: 5px;
       line-height: 1.6;
       font-size: 24px;
       text-align: center;
@@ -523,6 +537,10 @@ main > .testimonials {
           color: $background-color;
         }
       }
+    }
+
+    &:last-child {
+      margin-top: $spacing-unit * 2;
     }
   }
 }
@@ -739,7 +757,7 @@ main > .closing {
   }
 
   .about {
-    margin-bottom: 0;
+    margin-bottom: 5px;
     font-size: 20px;
     font-family: $heading-font-family;
     padding: 0 $spacing-unit / 2;
@@ -749,6 +767,11 @@ main > .closing {
     span {
       @include logo-font;
     }
+  }
+
+  .more {
+    margin-bottom: 0;
+    font-size: 18px;
   }
 
   .action {

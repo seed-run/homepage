@@ -30,8 +30,6 @@ And in the Seed console you should see a new pull request stage created and buil
 
 Once the stage is built and deployed, you can access its endpoint.
 
-![Pull Request Stage Built](/assets/docs/working-with-pull-requests/pull-request-stage-built.png)
-
 Seed also takes care of the environment variables and secrets for your pull requests. The variables defined in the `serverless.yml` for the upstream stage are made available to the pull request stage. [Secret variables]({% link _docs/storing-secrets.md %}) are also inherited from the upstream stage.
 
 > Environment variables and secrets of the upstream stage are automatically available to the pull request build

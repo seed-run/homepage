@@ -17,14 +17,15 @@ title: SEED
 email: contact@seed.run
 tel: +1 415 343-5350
 description: > # this means to ignore newlines until "baseurl:"
-  A fully-configured CI/CD
-  pipeline for Serverless Framework
+  Deploy, manage, and monitor
+  Serverless applications on AWS
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "https://seed.run" # the base hostname & protocol for your site, e.g. http://example.com
 logo: /assets/og-image.png
 
 console_url: "https://console.seed.run"
 signup: "/signup-account"
+request_demo: "/request-demo"
 
 newsletter_signup_form: "http://eepurl.com/c1gHff"
 twitter: "https://twitter.com/SEED_run"

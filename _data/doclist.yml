@@ -37,9 +37,13 @@ toc:
         url: /docs/working-with-pull-requests.html
       - page: Promoting to production
         url: /docs/promoting-to-production.html
+      - page: Rolling back
+        url: /docs/rolling-back.html
   - title: Managing deployments
     subfolderitems:
       - page: Configuring custom domains
         url: /docs/configuring-custom-domains.html
+      - page: Viewing metrics
+        url: /docs/viewing-metrics.html
       - page: Viewing logs
         url: /docs/viewing-logs.html

@@ -31,7 +31,7 @@ When a new stage is created, Seed triggers a build automatically.
 
 ![Build Stage](/assets/docs/adding-a-stage/build-stage.png)
 
-If the build is successful and tests pass, the stage gets deployed and receives a unique API Gateway stage endpoint. At the same time, a verified build is packaged for production. You can read more about this in the [Promoting to production]({% link _docs/promoting-to-production.md %}) chapter.
+If the build is successful and tests pass, the stage gets deployed. At the same time, a verified build is packaged for production. You can read more about this in the [Promoting to production]({% link _docs/promoting-to-production.md %}) chapter.
 
 ![Build Stage Successful](/assets/docs/adding-a-stage/build-stage-success.png)
 

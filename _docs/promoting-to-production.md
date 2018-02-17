@@ -38,9 +38,3 @@ The change set shows all the AWS resources about to be added, removed, and modif
 After the update is complete, the build is marked as **Promoted**.
 
 ![Stage Promoted](/assets/docs/promoting-to-production/stage-promoted.png)
-
-If the promoted build is faulty, you can go into the **Production** stage and hit **Rollback** to revert to a previous build.
-
-![Rollback Production](/assets/docs/promoting-to-production/rollback-production.png)
-
-Conceptually, rolling back is like applying a previous update on the current project. This means that any data removed in an update will not be restored upon rollback.

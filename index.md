@@ -6,7 +6,7 @@ layout: lander
   <h1>Deploy, Manage, and Monitor Serverless Applications on AWS</h1>
   <h3>Seed manages pipelines, configures environments, and monitors deployments for Serverless Framework projects.</h3>
   <div class="controls">
-    <a class="demo" href="{{ site.console_url }}{{ site.signup }}">
+    <a class="demo" href="{{ site.console_url }}{{ site.request_demo }}">
       Request a demo
     </a>
     <a class="action" href="{{ site.console_url }}{{ site.signup }}">
@@ -33,7 +33,7 @@ layout: lander
 
 <div class="pitch">
   <h4>Nothing to configure. Nothing to install.</h4>
-  <p>Simply link your Git repository and IAM credentials and you can `git push` to deploy updates to your Serverless app. Create multiple environments for your team, configure custom domains, view Lambda/API Gateway logs right from the Seed console.</p>
+  <p>Simply link your Git repository and IAM credentials and you can `git push` to deploy updates to your Serverless app. Create multiple environments for your team, configure custom domains, and view logs and metrics right from the Seed console.</p>
   <div class="platforms">
     <div>
       <img title="Node.js" width="31" src="assets/node-logo.png" />
@@ -58,25 +58,31 @@ layout: lander
         <li>
           <i class="fa-li fa fa-check-circle-o" aria-hidden="true"></i>
           <a href="/docs/running-tests.html">
-            Automatically runs your tests
+            Automatically run tests
           </a>
         </li>
         <li>
           <i class="fa-li fa fa-check-circle-o" aria-hidden="true"></i>
           <a href="/docs/adding-build-notifications.html">
-            Slack &amp; email build notifications
+            <b>Slack</b> &amp; email <b>notifications</b>
+          </a>
+        <li>
+          <i class="fa-li fa fa-check-circle-o" aria-hidden="true"></i>
+          <a href="/docs/adding-python-projects.html">
+            Deploy Python without Docker
+          </a>
+        </li>
+        </li>
+        <li>
+          <i class="fa-li fa fa-check-circle-o" aria-hidden="true"></i>
+          <a href="/docs/rolling-back.html">
+            <b>1 click rollback</b> without rebuilding
           </a>
         </li>
         <li>
           <i class="fa-li fa fa-check-circle-o" aria-hidden="true"></i>
           <a href="/docs/promoting-to-production.html">
-            Review before promoting to production
-          </a>
-        </li>
-        <li>
-          <i class="fa-li fa fa-check-circle-o" aria-hidden="true"></i>
-          <a href="/docs/promoting-to-production.html">
-            Rollback deploys without rebuilding them
+            <b>Review CloudFormation</b> Change Sets
           </a>
         </li>
       </ul>
@@ -105,7 +111,7 @@ layout: lander
         <li>
           <i class="fa-li fa fa-check-circle-o" aria-hidden="true"></i>
           <a href="/docs/storing-secrets.html">
-            Store secrets through the console
+            <b>Store secrets</b> through the console
           </a>
         </li>
         <li>
@@ -117,13 +123,13 @@ layout: lander
         <li>
           <i class="fa-li fa fa-check-circle-o" aria-hidden="true"></i>
           <a href="/docs/working-with-pull-requests.html">
-            Automatically preview pull requests
+            Automatically <b>preview pull requests</b>
           </a>
         </li>
         <li>
           <i class="fa-li fa fa-check-circle-o" aria-hidden="true"></i>
           <a href="/docs/configuring-custom-domains.html">
-            Custom domains for stage endpoints
+            <b>Custom domains</b> for stage endpoints
           </a>
         </li>
       </ul>
@@ -140,25 +146,25 @@ layout: lander
       <div class="icon">
         <i class="fa fa-tachometer" aria-hidden="true"></i>
       </div>
-      <h2>Monitoring Deployments</h2>
+      <h2>Monitor Deployments</h2>
       <p>Once your deployments are live, Seed can pull up detailed information on the deployed stack. And give you a live look at what is going on.</p>
       <ul class="fa-ul">
         <li>
           <i class="fa-li fa fa-check-circle-o" aria-hidden="true"></i>
           <a href="/docs/viewing-logs.html">
-            Access &amp; Lambda logs
+            <b>Live</b> Access &amp; Lambda <b>logs</b>
           </a>
         </li>
         <li>
           <i class="fa-li fa fa-check-circle-o" aria-hidden="true"></i>
           <a href="/docs/storing-secrets.html">
-            Lambda &amp; API CloudWatch Metrics
+            <b>Live</b> Lambda &amp; API Gateway <b>metrics</b>
           </a>
         </li>
       </ul>
     </div>
     <div class="image">
-      <img src="assets/lander/logs.png" width="380" />
+      <img src="assets/lander/metrics.png" width="380" />
     </div>
   </div>
 
@@ -173,7 +179,7 @@ layout: lander
       <p>
         Working on a mono-repo or multi-repo Serverless project and would like to use Seed? We are currently adding support for larger projects. Contact us for early access.
       </p>
-      <a href="mailto:{{ site.email }}">
+      <a href="mailto:{{ site.email }}?subject=I%20would%20like%20support%20for%20larger%20projects%20in%20Seed">
         Request early access
       </a>
     </div>
@@ -182,21 +188,20 @@ layout: lander
 </div>
 
 <div class="testimonials">
+  <h4 id="testimonials">From Our Lovely Customers</h4>
   <div class="list">
     <div class="testimonial">
-      <h6>Amazing support</h6>
-      <p>&ldquo;I just completed your tutorial on the Serverless stack, and it was fantastic. It was carefully thought out, well-written, and incredibly thorough. You guys rock!&rdquo;</p>
+      <p>&ldquo;Seed has made deploying and managing our Serverless apps super slick. Prior to Seed, we’d looked at using services like Circle to handle our CI/CD, but so much configuration was needed for them to work well with Serverless. Plus the team at Seed are really helpful and responsive, which is vital when you’re working with new technology.&rdquo;</p>
       <div>
-        <p>Daniel Chen</p>
-        <p>CTO, <a href="https://myshyft.com">Shyft</a></p>
+        <p>Lewis Blackwood</p>
+        <p>CTO, <a target="_blank" href="https://personably.co">Personably</a></p>
       </div>
     </div>
     <div class="testimonial">
-      <h6>Saves a lot of time</h6>
-      <p>&ldquo;This is the best and most comprehensive fullstack serverless tutorial available. Take the time to go through every step, you will learn a ton!&rdquo;</p>
+      <p>&ldquo;Seed has made it possible for us to use Serverless at Shyft. We don’t need to spend time configuring environments and managing our workflows. It also gives us great control over our deployments and it has reduced our DevOps spend significantly.&rdquo;</p>
       <div>
-        <p>Patrick Star</p>
-        <p>CEO, <a href="https://myshyft.com">Krabby Inc.</a></p>
+        <p>Daniel Chen</p>
+        <p>CTO, <a target="_blank" href="https://myshyft.com">Shyft</a></p>
       </div>
     </div>
   </div>
@@ -382,7 +387,7 @@ layout: lander
   <div class="contact">
     <p>{{ site.tel }}</p>
     <div class="controls">
-      <a class="demo" href="{{ site.console_url }}{{ site.signup }}">
+      <a class="demo" href="{{ site.console_url }}{{ site.request_demo }}">
         Request a demo
       </a>
       <a class="action" href="{{ site.console_url }}{{ site.signup }}">
@@ -399,6 +404,7 @@ layout: lander
 
 <div class="closing">
   <p class="about"><span class="logo">Seed</span> is created by the trusted folks behind <a target="_blank" href="http://serverless-stack.com">Serverless-Stack.com</a>,<br /> the best resource for building serverless apps on AWS.</p>
+  <p class="more"><a href="/about.html">Learn more about us.</a></p>
   <div class="divider">
     <div>
       <hr />

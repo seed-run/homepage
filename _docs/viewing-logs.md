@@ -23,13 +23,17 @@ This pulls up the logs for a set amount of time. In this case it displays the lo
 
 ![Lambda Logs Live](/assets/docs/viewing-logs/lambda-logs-live.png)
 
+Seed also detects any errors in your Lambdas and formats them appropriately.
+
+![Lambda Logs Error](/assets/docs/viewing-logs/lambda-logs-error.png)
+
 ### Access Logs
 
 If you have an API Gateway endpoint in your deployment, you can view the access logs for this as well.
 
 API Gateway Access Logs are disabled by default and need to be enabled on AWS. You'd need to create an IAM Role, configure CloudWatch, etc. to do so. We simplify this on Seed.
 
-You can enable it by heading over to the Stage settings and hitting **Enable Access Logs**.
+You can enable it by heading over to the **Deployment Settings** and hitting **Enable Access Logs**.
 
 ![Enable Access Logs](/assets/docs/viewing-logs/enable-access-logs.png)
 

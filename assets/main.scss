@@ -329,7 +329,7 @@ main > .features {
         }
       }
       h2 {
-        margin-bottom: 0;
+        margin-bottom: 4px;
         font-size: 32px;
       }
       p {
@@ -726,11 +726,16 @@ main > .pricing {
   }
 
   .extra {
-    margin: $spacing-unit auto 0;
-    padding-top: $spacing-unit / 2;
+    margin: 0 auto;
+    padding: 0 $spacing-unit / 2;
     max-width: 560px;
     text-align: center;
-    border-top: 1px solid darken($hero-bkg-color, 5%);
+
+    hr {
+      margin: $spacing-unit auto $spacing-unit / 2;
+      max-width: 560px;
+      border-color: darken($hero-bkg-color, 5%);
+    }
 
     p {
       margin-bottom: 0;
@@ -741,7 +746,6 @@ main > .pricing {
 
     .action {
       @include action-button;
-      margin: $spacing-unit 0 0;
     }
   }
 }
@@ -757,7 +761,7 @@ main > .closing {
   }
 
   .about {
-    margin-bottom: 5px;
+    margin-bottom: 6px;
     font-size: 20px;
     font-family: $heading-font-family;
     padding: 0 $spacing-unit / 2;
@@ -771,7 +775,7 @@ main > .closing {
 
   .more {
     margin-bottom: 0;
-    font-size: 18px;
+    font-weight: 500;
   }
 
   .action {

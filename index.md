@@ -396,6 +396,7 @@ layout: lander
     </div>
   </div>
   <div class="extra">
+    <hr />
     <p>
       There are soft limits on build storage and total build minutes. <a href="mailto:{{ site.email }}">Contact us</a> if you have any questions or have custom requirements.
     </p>
@@ -404,7 +405,7 @@ layout: lander
 
 <div class="closing">
   <p class="about"><span class="logo">Seed</span> is created by the trusted folks behind <a target="_blank" href="http://serverless-stack.com">Serverless-Stack.com</a>,<br /> the best resource for building serverless apps on AWS.</p>
-  <p class="more"><a href="/about.html">Learn more about us.</a></p>
+  <p class="more"><a href="/about.html">Learn more about us</a></p>
   <div class="divider">
     <div>
       <hr />

@@ -274,26 +274,28 @@ main > .pitch {
     text-align: center;
 
     div {
-      &:last-child {
-        margin-top: $spacing-unit + 5px;
+
+      img {
+        opacity: 0.33;
+        vertical-align: middle;
+      }
+
+      &:first-child {
+        i {
+          margin: 0 10px;
+          opacity: 0.4;
+          font-size: 32px;
+          vertical-align: middle;
+        }
 
         img {
-          margin: 0;
+          margin: 0 9px;
         }
       }
-    }
 
-    div i {
-      margin: 0 8px;
-      opacity: 0.4;
-      font-size: 32px;
-      vertical-align: middle;
-    }
-
-    div img {
-      margin: 0 7px;
-      opacity: 0.35;
-      vertical-align: middle;
+      &:nth-child(2) {
+        margin: $spacing-unit - 4px 0 $spacing-unit;
+      }
     }
   }
 }

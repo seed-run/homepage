@@ -37,6 +37,9 @@ layout: lander
       <img title="Python" width="31" src="assets/python-logo.png" />
     </div>
     <div>
+      <img title="Serverless Framework" width="34" src="assets/serverless-logo.png" />
+    </div>
+    <div>
       <img title="AWS" width="134" src="assets/aws-logo.png" />
     </div>
   </div>

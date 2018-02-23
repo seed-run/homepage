@@ -15,13 +15,41 @@ layout: lander
   </div>
 </div>
 
+<script type='text/javascript' src='http://www.youtube.com/iframe_api'></script>
+<script type='text/javascript'>
+
+  function onYouTubeIframeAPIReady() {
+    ytplayer=new YT.Player('ytPlayer', {events:{
+      onReady:onPlayerReady,
+      onStateChange:onPlayerStateChange,
+    }})
+  }
+
+  function onPlayerReady(a) {
+console.log('onPlayerReady');
+//    ytplayer.playVideo();
+//    document.getElementById('button').onclick = function() {
+//      (ytplayer.getPlayerState() == YT.PlayerState.PLAYING)
+//        ? ytplayer.pauseVideo()
+//        : ytplayer.playVideo();
+//    }
+  }
+
+  function onPlayerStateChange(a) {
+    if (ytplayer.getPlayerState() == YT.PlayerState.PLAYING) {
+console.log('onPlayerPlaying');
+    }
+  }
+
+</script>
+
 <div class="hero">
   <div class="background">
     <div></div>
     <div></div>
   </div>
   <div class="video">
-    <iframe width="100%" height="100%" src="https://www.youtube.com/embed/n8N8zRVM5tE?rel=0&amp;controls=1&amp;showinfo=0&amp;autoplay=0&amp;loop=1" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+    <iframe id='ytPlayer' width="100%" height="100%" src="https://www.youtube.com/embed/n8N8zRVM5tE?rel=0&amp;controls=1&amp;showinfo=0&amp;autoplay=0&amp;loop=1&amp;enablejsapi=1" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
   </div>
 </div>
 

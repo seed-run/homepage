@@ -21,13 +21,7 @@ layout: lander
     <div></div>
   </div>
   <div class="video">
-    <iframe
-      src="https://player.vimeo.com/video/253137697?badge=0"
-      width="100%"
-      height="100%"
-      frameborder="0"
-      allowfullscreen>
-    </iframe>
+    <iframe width="100%" height="100%" src="https://www.youtube.com/embed/n8N8zRVM5tE?rel=0&amp;controls=1&amp;showinfo=0&amp;autoplay=0&amp;loop=1" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
   </div>
 </div>
 
@@ -41,6 +35,9 @@ layout: lander
       <i title="GitHub" class="fa fa-github" aria-hidden="true"></i>
       <i title="GitLab" class="fa fa-gitlab" aria-hidden="true"></i>
       <img title="Python" width="31" src="assets/python-logo.png" />
+    </div>
+    <div>
+      <img title="AWS" width="134" src="assets/aws-logo.png" />
     </div>
   </div>
 </div>

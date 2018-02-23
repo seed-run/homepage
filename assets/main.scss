@@ -254,9 +254,9 @@ main > .pitch {
     }
   }
   p {
-    margin: 0 auto $spacing-unit / 2 + 10px;
+    margin: 0 auto;
     font-size: 18px;
-    max-width: 642px;
+    max-width: 580px;
     padding: 0 $spacing-unit / 2;
     color: $secondary-text-color;
 
@@ -270,11 +270,17 @@ main > .pitch {
   }
 
   div.platforms {
-    padding-top: $spacing-unit / 2;
+    margin-top: $spacing-unit + 10px;
     text-align: center;
 
     div {
-      margin-top: 7px;
+      &:last-child {
+        margin-top: $spacing-unit + 5px;
+
+        img {
+          margin: 0;
+        }
+      }
     }
 
     div i {

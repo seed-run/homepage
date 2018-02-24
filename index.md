@@ -22,7 +22,7 @@ layout: lander
   </div>
   <div class="video">
     <iframe id='ytPlayer' width="100%" height="100%" src="https://www.youtube.com/embed/n8N8zRVM5tE?rel=0&amp;controls=1&amp;showinfo=0&amp;autoplay=0&amp;loop=1&amp;enablejsapi=1" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
-    <div id="overlay" class="overlay loading">
+    <div id="overlay" class="overlay">
       <a id="button" class="control play">
         <i class="fa fa-play"></i>
       </a>

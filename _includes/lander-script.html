@@ -27,6 +27,7 @@
   }
 
   function onPlayerReady(a) {
+    console.log('onPlayerReady');
     if (playClicked && player.getPlayerState() !== YT.PlayerState.PLAYING) {
       player.playVideo();
     }
@@ -34,6 +35,7 @@
 
   function onPlayerStateChange(a) {
     if (player.getPlayerState() === YT.PlayerState.PLAYING) {
+    console.log('onPlayerStateChange');
       removeLoadingClass(container);
       addDoneClass(container);
     }

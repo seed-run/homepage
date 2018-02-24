@@ -169,7 +169,7 @@ layout: lander
         </li>
         <li>
           <i class="fa-li fa fa-check-circle-o" aria-hidden="true"></i>
-          <a href="/docs/storing-secrets.html">
+          <a href="/docs/viewing-metrics.html">
             <b>Live</b> Lambda &amp; API Gateway <b>metrics</b>
           </a>
         </li>

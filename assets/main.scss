@@ -236,6 +236,94 @@ main > .hero {
       width: 300px;
       height: 169px;
     }
+
+    .overlay {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: $brand-color;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      .control {
+        $width: 60px;
+        $height: 48px;
+        width: $width;
+        height: $height;
+        background-color: rgba(0, 0, 0, 0.3);
+        border-radius: 3px;
+        box-sizing: border-box;
+        display: none;
+        align-items: center;
+        justify-content: center;
+
+        i {
+          font-size: 18px;
+          color: rgba(255, 255, 255, 0.97);
+        }
+      }
+
+      .play {
+        padding-left: 3px;
+        cursor: pointer;
+
+        &:hover {
+          background-color: rgba(0, 0, 0, 0.75);
+        }
+      }
+
+      .loading {
+      }
+
+      div.text {
+        margin-left: $spacing-unit / 2;
+
+        p.logo {
+          margin-bottom: 0;
+          text-align: center;
+          @include logo-font;
+          color: rgba(255, 255, 255, 0.97);
+          font-size: 38px;
+          line-height: 1;
+
+          @include media-query($on-palm) {
+            font-size: 32px;
+          }
+        }
+        p.copy {
+          margin-bottom: 0;
+          text-align: center;
+          color: rgba(255, 255, 255, 0.65);
+          font-size: 12px;
+
+          @include media-query($on-palm) {
+            font-size: 10px;
+          }
+        }
+      }
+
+      &.loading {
+        .play {
+          display: none;
+        }
+        .loading {
+          display: flex;
+        }
+      }
+
+      &.done {
+        display: none;
+        .play {
+          display: none;
+        }
+        .loading {
+          display: none;
+        }
+      }
+    }
   }
 }
 

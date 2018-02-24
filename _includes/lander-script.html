@@ -1,0 +1,47 @@
+<script type='text/javascript' src='http://www.youtube.com/iframe_api'></script>
+<script type='text/javascript'>
+
+  var player = null;
+  var container = null;
+
+  function removeLoadingClass(el) {
+    el.className = el.className.replace(/\bloading\b/g,'');
+  }
+
+  function addLoadingClass(el) {
+    el.className = el.className + ' loading';
+  }
+
+  function addDoneClass(el) {
+    el.className = el.className + ' done';
+  }
+
+  function onYouTubeIframeAPIReady() {
+    container = document.getElementById('overlay');
+    removeLoadingClass(container);
+
+    player = new YT.Player('ytPlayer', {
+      events: {
+        onReady       : onPlayerReady,
+        onStateChange : onPlayerStateChange,
+      }
+    });
+  }
+
+  function onPlayerReady(a) {
+    document.getElementById('button').onclick = function() {
+      if (player.getPlayerState() !== YT.PlayerState.PLAYING) {
+        addLoadingClass(container);
+        player.playVideo();
+      }
+    };
+  }
+
+  function onPlayerStateChange(a) {
+    if (player.getPlayerState() === YT.PlayerState.PLAYING) {
+      removeLoadingClass(container);
+      addDoneClass(container);
+    }
+  }
+
+</script>

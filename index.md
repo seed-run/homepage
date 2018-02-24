@@ -15,34 +15,6 @@ layout: lander
   </div>
 </div>
 
-<script type='text/javascript' src='http://www.youtube.com/iframe_api'></script>
-<script type='text/javascript'>
-
-  function onYouTubeIframeAPIReady() {
-    ytplayer=new YT.Player('ytPlayer', {events:{
-      onReady:onPlayerReady,
-      onStateChange:onPlayerStateChange,
-    }})
-  }
-
-  function onPlayerReady(a) {
-console.log('onPlayerReady');
-//    ytplayer.playVideo();
-//    document.getElementById('button').onclick = function() {
-//      (ytplayer.getPlayerState() == YT.PlayerState.PLAYING)
-//        ? ytplayer.pauseVideo()
-//        : ytplayer.playVideo();
-//    }
-  }
-
-  function onPlayerStateChange(a) {
-    if (ytplayer.getPlayerState() == YT.PlayerState.PLAYING) {
-console.log('onPlayerPlaying');
-    }
-  }
-
-</script>
-
 <div class="hero">
   <div class="background">
     <div></div>
@@ -50,6 +22,18 @@ console.log('onPlayerPlaying');
   </div>
   <div class="video">
     <iframe id='ytPlayer' width="100%" height="100%" src="https://www.youtube.com/embed/n8N8zRVM5tE?rel=0&amp;controls=1&amp;showinfo=0&amp;autoplay=0&amp;loop=1&amp;enablejsapi=1" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+    <div id="overlay" class="overlay loading">
+      <a id="button" class="control play">
+        <i class="fa fa-play"></i>
+      </a>
+      <a class="control loading">
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+      </a>
+      <div class="text">
+        <p class="logo">Seed</p>
+        <p class="copy">Watch it in action!</p>
+      </div>
+    </div>
   </div>
 </div>
 

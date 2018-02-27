@@ -59,12 +59,8 @@ Once the pull request is merged a build is automatically triggered in the upstre
 
 ### Disable Auto-Deploy Pull Requests
 
-Finally, you can disable auto-deploying pull requests by heading to the project settings and clicking on **Edit Project Info**.
+Finally, you can disable auto-deploying pull requests by heading to the **Project Settings** and hitting **Disable Auto-Deploy PR**.
 
-![Project settings project info](/assets/docs/working-with-pull-requests/project-settings-project-info.png)
-
-And deselecting the **Automatically deploy pull requests** checkbox and hitting **Save**.
-
-![Deselect auto deploy pull requests](/assets/docs/working-with-pull-requests/deselect-auto-deploy-pull-requests.png)
+![Disable auto deploy pull requests](/assets/docs/working-with-pull-requests/disable-auto-deploy-pr.png)
 
 This is useful if you are using tools that automatically generate pull requests.

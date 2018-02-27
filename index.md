@@ -38,8 +38,8 @@ layout: lander
 </div>
 
 <div class="pitch">
-  <h4>Nothing to configure. Nothing to install.</h4>
-  <p>Simply link your Git repository and IAM credentials and you can `git push` to deploy updates to your Serverless app. Create multiple environments for your team, configure custom domains, and view logs and metrics right from the Seed console.</p>
+  <h4>Nothing to setup. Nothing to configure.</h4>
+  <p>Don’t spend time setting up a deployment pipeline that needs to be constantly updated and maintained. Simply link your Git repository and IAM credentials and Seed will take care of the rest.</p>
   <div class="platforms">
     <div>
       <img title="Node.js" width="31" src="assets/node-logo.png" />
@@ -64,7 +64,7 @@ layout: lander
       <div class="icon">
         <i class="fa fa-code-fork" aria-hidden="true"></i>
       </div>
-      <h2>Automated Deployments</h2>
+      <h2>Automate Deployments</h2>
       <p>Seed is a fully-configured code pipeline for Serverless Framework projects on AWS. Here are a few ways Seed can help you with deployments:</p>
       <ul class="fa-ul">
         <li>

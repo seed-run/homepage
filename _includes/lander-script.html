@@ -27,6 +27,8 @@
   }
 
   function onPlayerReady(a) {
+    player.mute();
+
     if (playClicked && player.getPlayerState() !== YT.PlayerState.PLAYING) {
       player.playVideo();
     }

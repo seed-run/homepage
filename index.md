@@ -6,11 +6,11 @@ layout: lander
   <h1>Deploy, Manage, and Monitor Serverless Applications on AWS</h1>
   <h3>Seed manages pipelines, configures environments, and monitors deployments for Serverless Framework projects.</h3>
   <div class="controls">
+    <a class="signup" href="{{ site.console_url }}{{ site.signup }}">
+      Sign up for free
+    </a>
     <a class="demo" href="{{ site.console_url }}{{ site.request_demo }}">
       Request a demo
-    </a>
-    <a class="action" href="{{ site.console_url }}{{ site.signup }}">
-      Sign up for free
     </a>
   </div>
 </div>
@@ -382,28 +382,22 @@ layout: lander
           Priority email support
         </li>
         <li>
-          <i class="fa-li fa fa-plus"></i>
-          Video call consultations
+          <i class="fa-li fa fa-star"></i>
+          Concierge onboarding
         </li>
         <li>
-          <i class="fa-li fa fa-plus"></i>
-          Required two-factor auth<br /><span>Coming soon</span>
-        </li>
-        <li>
-          <i class="fa-li fa fa-plus"></i>
+          <i class="fa-li fa fa-star"></i>
           Multi-level user roles<br /><span>Coming soon</span>
         </li>
       </ul>
     </div>
   </div>
   <div class="contact">
-    <p>{{ site.tel }}</p>
+    <p>Have an existing setup? Need help transitioning?</p>
+    <p>Our engineers can help with that.</p>
     <div class="controls">
-      <a class="demo" href="{{ site.console_url }}{{ site.request_demo }}">
-        Request a demo
-      </a>
-      <a class="action" href="{{ site.console_url }}{{ site.signup }}">
-        Sign up for free
+      <a class="action" href="/concierge-onboarding.html">
+        Learn about Concierge Onboarding
       </a>
     </div>
   </div>
@@ -416,8 +410,15 @@ layout: lander
 </div>
 
 <div class="closing">
-  <p class="about"><span class="logo">Seed</span> is created by the trusted folks behind <a target="_blank" href="http://serverless-stack.com">Serverless-Stack.com</a>,<br /> the best resource for building serverless apps on AWS.</p>
-  <p class="more"><a href="/about.html">Learn more about us</a></p>
+  <p class="about"><span class="logo">Seed</span> is <a href="/about.html">created by the trusted folks</a> behind <a target="_blank" href="http://serverless-stack.com">Serverless-Stack.com</a>,<br /> the best resource for building serverless apps on AWS.</p>
+  <div class="controls">
+    <a class="signup" href="{{ site.console_url }}{{ site.signup }}">
+      Sign up for free
+    </a>
+    <a class="demo" href="{{ site.console_url }}{{ site.request_demo }}">
+      Request a demo
+    </a>
+  </div>
   <div class="divider">
     <div>
       <hr />

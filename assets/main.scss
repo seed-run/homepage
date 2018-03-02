@@ -77,18 +77,18 @@ a:active {
   $border: darken($bkg, 10%);
 
   color: white;
-  margin: 0 $spacing-unit / 2;
   border: 2px solid $border;
   background-color: $bkg;
   border-radius: 3px;
   font-size: 26px;
   padding: 14px 26px;
   display: inline-block;
-  font-weight: 500;
+  font-weight: 600;
   text-transform: uppercase;
   font-family: $label-font-family;
   letter-spacing: 1px;
   box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2);
+  box-sizing: border-box;
 
   &:hover {
     background-color: darken($bkg, 5%);
@@ -114,11 +114,12 @@ a:active {
   border-radius: 3px;
   padding: 4px 11px;
   color: white;
-  font-weight: 500;
+  font-weight: 600;
   text-transform: uppercase;
   font-family: $label-font-family;
   letter-spacing: 1px;
   box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2);
+  box-sizing: border-box;
 
   &:hover {
     background-color: darken($bkg, 5%);
@@ -170,24 +171,29 @@ main > .header {
   }
 
   div.controls {
-    a.action {
-      @include action-button;
-    }
-    a.demo {
+    a.signup {
+      margin-right: $spacing-unit / 2 + 1px;
       @include action-button-dark;
       padding: 14px 26px;
+      width: 222px;
+    }
+    a.demo {
+      @include action-button;
+      padding: 14px 26px;
+      width: 222px;
 
       @include media-query($on-palm) {
         font-size: 22px;
         padding: 10px 22px;
       }
     }
-    a.action, a.demo {
+    a.signup, a.demo {
       font-size: 18px;
     }
 
     @include media-query($on-palm) {
-      a.demo {
+      a.signup {
+        margin-right: 0;
         margin-bottom: $spacing-unit / 2;
       }
     }
@@ -660,37 +666,6 @@ main > .pricing {
     font-size: 24px;
   }
 
-  .free-callout {
-    margin: 0 auto 2 * $spacing-unit;
-    max-width: 440px;
-    text-align: center;
-
-    p:first-child {
-      font-size: 20px;
-      color: $secondary-text-color;
-    }
-
-    ul {
-      margin: 0;
-      padding-bottom: $spacing-unit;
-      display: flex;
-      justify-content: center;
-      align-items: flex-start;
-      flex-wrap: wrap;
-      border-bottom: 1px solid darken($hero-bkg-color, 5%);
-
-      li {
-        margin-left: $spacing-unit;
-        color: $tertiary-text-color;
-      }
-    }
-
-    a.action {
-      @include action-button;
-      margin: $spacing-unit auto 0;
-    }
-  }
-
   .table {
     display: flex;
     justify-content: center;
@@ -794,34 +769,33 @@ main > .pricing {
   }
 
   .contact {
+    padding: 0 $spacing-unit / 2;
     text-align: center;
 
-    div.controls {
-      a.action {
-        @include action-button;
-      }
-      a.demo {
-        @include action-button-dark;
-        padding: 14px 26px;
+    p {
+      margin-bottom: 0;
+      font-size: 22px;
+      color: $tertiary-text-color;
 
-        @include media-query($on-palm) {
-          font-size: 22px;
-          padding: 10px 22px;
-        }
+      &:first-child {
+        margin-bottom: 3px;
       }
-      a.action, a.demo {
-        font-size: 18px;
+    }
+
+    div.controls {
+      margin-top: $spacing-unit / 2 + 5px;
+      a.action {
+        @include action-button-dark;
+        padding: 8px 16px;
+        font-size: 16px;
+        line-height: 1.8;
       }
 
       @include media-query($on-palm) {
-        a.demo {
-          margin-bottom: $spacing-unit / 2;
+        a.action {
+          font-size: 14px;
         }
       }
-    }
-    p {
-      font-size: 22px;
-      color: $tertiary-text-color;
     }
   }
 
@@ -843,10 +817,6 @@ main > .pricing {
       color: $tertiary-text-color;
       font-size: 14px;
     }
-
-    .action {
-      @include action-button;
-    }
   }
 }
 
@@ -861,7 +831,7 @@ main > .closing {
   }
 
   .about {
-    margin-bottom: 6px;
+    margin-bottom: $spacing-unit / 2 + 4px;
     font-size: 20px;
     font-family: $heading-font-family;
     padding: 0 $spacing-unit / 2;
@@ -873,13 +843,34 @@ main > .closing {
     }
   }
 
-  .more {
-    margin-bottom: 0;
-    font-weight: 500;
-  }
+  div.controls {
+    margin-bottom: $spacing-unit - 5px;
+    a.signup {
+      margin-right: $spacing-unit / 2 + 1px;
+      @include action-button-dark;
+      padding: 14px 26px;
+      width: 222px;
+    }
+    a.demo {
+      @include action-button;
+      padding: 14px 26px;
+      width: 222px;
 
-  .action {
-    @include action-button;
+      @include media-query($on-palm) {
+        font-size: 22px;
+        padding: 10px 22px;
+      }
+    }
+    a.signup, a.demo {
+      font-size: 18px;
+    }
+
+    @include media-query($on-palm) {
+      a.signup {
+        margin-right: 0;
+        margin-bottom: $spacing-unit / 2;
+      }
+    }
   }
 
   .divider {

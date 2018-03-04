@@ -45,7 +45,7 @@ title: SEED Concierge Onboarding
         </li>
         <li>
           <i class="fa-li fa fa-circle-thin"></i>
-          Skim over the docs to check it’s all doable
+          Read through the documentation
         </li>
         <li>
           <i class="fa-li fa fa-circle-thin"></i>

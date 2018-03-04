@@ -191,7 +191,7 @@ layout: lander
       <p>
         Working on a mono-repo or multi-repo Serverless project and would like to use Seed? We are currently adding support for larger projects. Contact us for early access.
       </p>
-      <a href="mailto:{{ site.email }}?subject=I%20would%20like%20support%20for%20larger%20projects%20in%20Seed">
+      <a href="mailto:{{ site.email }}?subject=Large%20Serverless%20Projects">
         Request early access
       </a>
     </div>
@@ -396,7 +396,7 @@ layout: lander
     <p>Have an existing setup? Need help transitioning?</p>
     <p>Our engineers can help with that.</p>
     <div class="controls">
-      <a class="action" href="/concierge-onboarding.html">
+      <a class="action" href="{% link concierge-onboarding.md %}">
         Learn about Concierge Onboarding
       </a>
     </div>
@@ -404,13 +404,13 @@ layout: lander
   <div class="extra">
     <hr />
     <p>
-      There are soft limits on build storage and total build minutes. <a href="mailto:{{ site.email }}">Contact us</a> if you have any questions or have custom requirements.
+      There are soft limits on build minutes. <a href="{% link concierge-onboarding.md %}">Concierge Onboarding</a> is included free in the Pro plan. <a href="mailto:{{ site.email }}">Contact us</a> if you have any questions or have custom requirements.
     </p>
   </div>
 </div>
 
 <div class="closing">
-  <p class="about"><span class="logo">Seed</span> is <a href="/about.html">created by the trusted folks</a> behind <a target="_blank" href="http://serverless-stack.com">Serverless-Stack.com</a>,<br /> the best resource for building serverless apps on AWS.</p>
+  <p class="about"><span class="logo">Seed</span> is <a href="{% link about.md %}">created by the trusted folks</a> behind <a target="_blank" href="http://serverless-stack.com">Serverless-Stack.com</a>,<br /> the best resource for building serverless apps on AWS.</p>
   <div class="controls">
     <a class="signup" href="{{ site.console_url }}{{ site.signup }}">
       Sign up for free

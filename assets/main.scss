@@ -573,7 +573,7 @@ main > .features {
 main > .testimonials {
   @include diamond-pattern;
   padding: $spacing-unit * 2 + 10px $spacing-unit / 2;
-  border-top: 2px solid darken($hero-bkg-color, 5%);
+  border-top: 2px solid $accent-color;
   color: $background-color;
 
   @include media-query($on-palm) {
@@ -582,40 +582,56 @@ main > .testimonials {
   }
 
   h4 {
-    margin-bottom: $spacing-unit * 1.5;
+    margin-bottom: $spacing-unit * 2;
     text-align: center;
-    font-size: 24px;
+    font-family: $base-font-family;
+    font-size: 32px;
   }
 
   div.list {
   }
 
   div.testimonial {
-    margin: 0 auto;
+    margin: 0 auto $spacing-unit * 2 + 5px;
     max-width: 900px;
     text-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
 
     @include media-query($on-palm) {
-      margin: 0 0 1.5 * $spacing-unit;
+      margin: 0 0 2 * $spacing-unit;
 
       &:last-child {
         margin-bottom: 0;
       }
     }
 
-    h6 {
-      font-size: 16px;
-      text-align: center;
-      margin-bottom: 8px;
-      font-family: $label-font-family;
-      text-transform: uppercase;
-      letter-spacing: 1px;
-      color: darken($background-color, 15%);
+    div.context {
+      h6 {
+        font-size: 18px;
+        text-align: center;
+        margin-bottom: 8px;
+        font-family: $label-font-family;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+      }
+      p {
+        text-align: center;
+        color: darken($background-color, 15%);
+      }
+      hr {
+        margin: $spacing-unit / 2 $spacing-unit * 4 $spacing-unit / 2 - 2px;
+        border-color: rgba(255, 255, 255, 0.2);
+
+        @include media-query($on-palm) {
+          margin-right: $spacing-unit;
+          margin-left: $spacing-unit;
+        }
+      }
     }
 
     & > p {
-      margin-bottom: 5px;
-      line-height: 1.6;
+      margin-bottom: 8px;
+      line-height: 1.7;
+      font-family: $heading-font-family;
       font-size: 24px;
       text-align: center;
       color: $background-color;
@@ -630,28 +646,32 @@ main > .testimonials {
       text-align: center;
 
       p:first-child {
-        margin-bottom: 2px;
-        font-weight: 500;
-        font-size: 16px;
-      }
-      p:last-child {
+        $color: darken($background-color, 10%);
+
         margin-bottom: 0;
         font-size: 14px;
+        color: $color;
+
+        span {
+          font-weight: 500;
+          font-size: 16px;
+        }
+
         a {
-          color: $background-color;
+          color: $color;
         }
       }
     }
 
     &:last-child {
-      margin-top: $spacing-unit * 2;
+      margin-bottom: 0;
     }
   }
 }
 
 main > .pricing {
   padding: $spacing-unit * 2 + 10px 0;
-  border-top: 2px solid darken($hero-bkg-color, 5%);
+  border-top: 2px solid $accent-color;
 
   @include media-query($on-palm) {
     padding-top: $spacing-unit * 2;
@@ -1117,8 +1137,8 @@ main > .concierge {
     @include diagonal-pattern;
     margin: $spacing-unit * 3 0;
     padding: $spacing-unit * 2 $spacing-unit / 2;
-    border-top: 2px solid darken($hero-bkg-color, 5%);
-    border-bottom: 2px solid darken($hero-bkg-color, 5%);
+    border-top: 2px solid lighten($brand-color, 30%);
+    border-bottom: 2px solid lighten($brand-color, 30%);
     display: flex;
     justify-content: center;
     align-items: center;
@@ -1229,7 +1249,7 @@ main > .concierge {
   }
 
   .closing {
-    padding: 0 $spacing-unit / 2 $spacing-unit * 4;
+    padding: 0 $spacing-unit / 2 $spacing-unit * 3;
     text-align: center;
 
     @include media-query($on-palm) {
@@ -1274,6 +1294,36 @@ main > .concierge {
         a.contact {
           margin-right: 0;
           margin-bottom: $spacing-unit / 2;
+        }
+      }
+    }
+
+    div.platforms {
+      margin-top: $spacing-unit + 10px;
+      text-align: center;
+
+      div {
+
+        img {
+          opacity: 0.33;
+          vertical-align: middle;
+        }
+
+        &:first-child {
+          i {
+            margin: 0 10px;
+            opacity: 0.4;
+            font-size: 32px;
+            vertical-align: middle;
+          }
+
+          img {
+            margin: 0 9px;
+          }
+        }
+
+        &:last-child {
+          margin: $spacing-unit 0 0;
         }
       }
     }

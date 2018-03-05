@@ -97,6 +97,18 @@ title: SEED Concierge Onboarding
         Request a demo
       </a>
     </div>
+    <div class="platforms">
+      <div>
+        <img title="Node.js" width="31" src="assets/node-logo.png" />
+        <i title="Bitbucket" class="fa fa-bitbucket" aria-hidden="true"></i>
+        <i title="GitHub" class="fa fa-github" aria-hidden="true"></i>
+        <i title="GitLab" class="fa fa-gitlab" aria-hidden="true"></i>
+        <img title="Python" width="31" src="assets/python-logo.png" />
+      </div>
+      <div>
+        <img title="AWS" width="134" src="assets/aws-logo.png" />
+      </div>
+    </div>
   </div>
 
 </div>

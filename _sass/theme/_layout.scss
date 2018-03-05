@@ -232,8 +232,13 @@
  * Site footer
  */
 .site-footer {
-  border-top: 1px solid $grey-color-light;
-  padding: $spacing-unit 0;
+
+  & > hr {
+    margin-top: 0;
+    height: 4px;
+    border: 0;
+    background: linear-gradient(to right, #975890, #EE8E2F);
+  }
 
   @include media-query($on-palm) {
     padding-bottom: 5px;

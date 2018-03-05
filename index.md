@@ -200,20 +200,39 @@ layout: lander
 </div>
 
 <div class="testimonials">
-  <h4 id="testimonials">From Our Lovely Customers</h4>
+  <h4 id="testimonials">Seed is perfect for&hellip;</h4>
   <div class="list">
     <div class="testimonial">
+      <div class="context">
+        <h6>Small Teams</h6>
+        <p>Let your CTO or technical lead focus on product and not on DevOps.</p>
+        <hr />
+      </div>
       <p>&ldquo;Seed has made deploying and managing our Serverless apps super slick. Prior to Seed, we’d looked at using services like Circle to handle our CI/CD, but so much configuration was needed for them to work well with Serverless. Plus the team at Seed are really helpful and responsive, which is vital when you’re working with new technology.&rdquo;</p>
       <div>
-        <p>Lewis Blackwood</p>
-        <p>CTO, <a target="_blank" href="https://personably.co">Personably</a></p>
+        <p>- <span>Lewis Blackwood</span>, CTO @ <a target="_blank" href="https://personably.co">Personably</a></p>
       </div>
     </div>
     <div class="testimonial">
+      <div class="context">
+        <h6>Agencies</h6>
+        <p>Deliver more value by rolling out projects quickly and efficiently.</p>
+        <hr />
+      </div>
+      <p>&ldquo;At Empirical we strive to provide quality solutions in a very short period of time to every project we take on. With Seed we can speed up the development process for new Serverless projects. We are now rolling out and managing multiple projects, and multiple environments pretty efficiently without having to deal with AWS setup.&rdquo;</p>
+      <div>
+        <p>- <span>Sebastian Pereyro</span>, Founder @ <a target="_blank" href="https://www.goempirical.com">Empirical</a></p>
+      </div>
+    </div>
+    <div class="testimonial">
+      <div class="context">
+        <h6>Large Teams</h6>
+        <p>Help your developers be more productive and reduce your DevOps cost.</p>
+        <hr />
+      </div>
       <p>&ldquo;Seed has made it possible for us to use Serverless at Shyft. We don’t need to spend time configuring environments and managing our workflows. It also gives us great control over our deployments and it has reduced our DevOps spend significantly.&rdquo;</p>
       <div>
-        <p>Daniel Chen</p>
-        <p>CTO, <a target="_blank" href="https://myshyft.com">Shyft</a></p>
+        <p>- <span>Daniel Chen</span>, CTO @ <a target="_blank" href="https://myshyft.com">Shyft</a></p>
       </div>
     </div>
   </div>

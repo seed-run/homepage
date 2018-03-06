@@ -49,9 +49,9 @@ Select **Attach existing policies directly**.
 
 ![Add IAM User Policy Screenshot](/assets/docs/iam/add-iam-user-policy.png)
 
-Search for **AdministratorAccess** and select the policy, then select **Next: Review**.
+Here you can hit **Create policy** to provide a custom IAM policy based on the permissions your project needs. You can do this by following the instructions in the [Customizing your IAM Policy]({% link _docs/customizing-your-iam-policy.md %}) chapter.
 
-You can provide a more finely grained policy by following the instructions in the [Customizing your IAM Policy]({% link _docs/customizing-your-iam-policy.md %}) chapter.
+But if you are just looking for a quick way to test your project on Seed you can search for **AdministratorAccess** and select the policy, then select **Next: Review**.
 
 ![Added Admin Policy Screenshot](/assets/docs/iam/added-admin-policy.png)
 

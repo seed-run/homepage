@@ -248,11 +248,12 @@ main > .hero {
       left: 0;
       width: 100%;
       height: 100%;
-      background-color: $brand-color;
       display: flex;
       justify-content: center;
       align-items: center;
       border-radius: 3px;
+      background: linear-gradient(297.5deg, darken($brand-color, 20%), #855083);
+      cursor: pointer;
 
       .control {
         $width: 60px;
@@ -269,44 +270,42 @@ main > .hero {
         i {
           font-size: 18px;
           color: rgba(255, 255, 255, 0.97);
+          text-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
         }
       }
 
       .play {
         display: flex;
         padding-left: 3px;
-        cursor: pointer;
-
-        &:hover {
-          background-color: rgba(0, 0, 0, 0.75);
-        }
       }
 
       .loading {
       }
 
-      div.text {
+      span.text {
         margin-left: $spacing-unit / 2;
 
-        p.logo {
+        .logo {
           margin-bottom: 0;
           text-align: center;
           @include logo-font;
           color: rgba(255, 255, 255, 0.97);
+          text-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
           font-size: 38px;
           line-height: 1;
-          cursor: default;
+          display: block;
 
           @include media-query($on-palm) {
             font-size: 32px;
           }
         }
-        p.copy {
+        .copy {
           margin-bottom: 0;
           text-align: center;
           color: rgba(255, 255, 255, 0.65);
+          text-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
           font-size: 12px;
-          cursor: default;
+          display: block;
 
           @include media-query($on-palm) {
             font-size: 10px;
@@ -330,6 +329,12 @@ main > .hero {
         }
         .loading {
           display: none;
+        }
+      }
+
+      &:hover {
+        .control {
+          background-color: rgba(0, 0, 0, 0.75);
         }
       }
     }

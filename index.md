@@ -22,18 +22,18 @@ layout: lander
   </div>
   <div class="video">
     <iframe id='ytPlayer' width="100%" height="100%" src="https://www.youtube.com/embed/n8N8zRVM5tE?rel=0&amp;controls=1&amp;showinfo=0&amp;autoplay=0&amp;loop=1&amp;enablejsapi=1" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
-    <div id="overlay" class="overlay">
-      <a id="button" class="control play">
+    <a id="overlay" class="overlay">
+      <span class="button" class="control play">
         <i class="fa fa-play"></i>
-      </a>
-      <a class="control loading">
+      </span>
+      <span class="control loading">
         <i class="fa fa-circle-o-notch fa-spin"></i>
-      </a>
-      <div class="text">
-        <p class="logo">Seed</p>
-        <p class="copy">Watch it in action!</p>
-      </div>
-    </div>
+      </span>
+      <span class="text">
+        <span class="logo">Seed</span>
+        <span class="copy">Watch it in action!</span>
+      </span>
+    </a>
   </div>
 </div>
 

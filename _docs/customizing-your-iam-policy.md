@@ -94,6 +94,7 @@ Let's look at the least amount of permissions that needs to be granted for your 
         "apigateway:*",
       ],
       "Resource": [
+        "arn:aws:apigateway:<region>::/restapis",
         "arn:aws:apigateway:<region>::/restapis/<api_id>/*"
       ]
     },
@@ -133,14 +134,22 @@ Let's look at the least amount of permissions that needs to be granted for your 
     {
       "Effect": "Allow",
       "Action": [
-        "kms:Decrypt",
-        "kms:Encrypt",
         "kms:CreateKey",
         "kms:CreateAlias",
         "kms:ListAliases"
       ],
       "Resource": [
-        "arn:aws:kms::<account_no>:key/*"
+        "*"
+      ]
+    },
+    {
+      "Effect": "Allow",
+      "Action": [
+        "kms:Decrypt",
+        "kms:Encrypt"
+      ],
+      "Resource": [
+        "arn:aws:kms:*:<account_no>:key/*"
       ]
     }
   ]

@@ -91,7 +91,7 @@ Let's look at the least amount of permissions that needs to be granted for your 
     {
       "Effect": "Allow",
       "Action": [
-        "apigateway:*",
+        "apigateway:*"
       ],
       "Resource": [
         "arn:aws:apigateway:<region>::/restapis",

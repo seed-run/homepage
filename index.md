@@ -128,12 +128,6 @@ layout: lander
         </li>
         <li>
           <i class="fa-li fa fa-check-circle-o" aria-hidden="true"></i>
-          <a href="/docs/updating-the-stage-source.html">
-            Update the branch that is deployed
-          </a>
-        </li>
-        <li>
-          <i class="fa-li fa fa-check-circle-o" aria-hidden="true"></i>
           <a href="/docs/working-with-pull-requests.html">
             Automatically <b>preview pull requests</b>
           </a>
@@ -142,6 +136,12 @@ layout: lander
           <i class="fa-li fa fa-check-circle-o" aria-hidden="true"></i>
           <a href="/docs/configuring-custom-domains.html">
             <b>Custom domains</b> for stage endpoints
+          </a>
+        </li>
+        <li>
+          <i class="fa-li fa fa-check-circle-o" aria-hidden="true"></i>
+          <a href="/docs/iam-credentials-per-stage.html">
+            <b>Separate AWS accounts</b> per environment
           </a>
         </li>
       </ul>

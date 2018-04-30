@@ -350,6 +350,11 @@
   }
 }
 
+.page-content .docs-wrapper > .post {
+  flex: 1;
+  min-width: 0;
+}
+
 .page-content .docs-wrapper > .sidebar {
   margin-right: $spacing-unit;
   padding-top: $spacing-unit / 2;

@@ -14,6 +14,20 @@ And then start the dev server.
 $ bundle exec jekyll serve
 ```
 
+You can now view the page at http://localhost:4000
+
+To run it on a different port run:
+
+``` bash
+$ bundle exec jekyll serve --port 4001
+```
+
+You can also turn on live reloading and incremental builds while editing.
+
+``` bash
+$ bundle exec jekyll serve --incremental --livereload
+```
+
 ### Deploy
 
 To deploy `git push` to `master` branch.

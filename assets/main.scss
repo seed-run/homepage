@@ -44,6 +44,7 @@ $on-laptop:                 800px;
 
 // Import partials from the `minima` theme.
 @import "theme";
+@import "svg";
 
 /**
  * Links
@@ -131,12 +132,36 @@ a:active {
   }
 }
 
+@mixin action-button-brand {
+  $bkg: lighten($brand-color, 10%);
+
+  display: inline-block;
+  background-color: $bkg;
+  border: 2px solid darken($bkg, 10%);
+  border-radius: 3px;
+  padding: 4px 11px;
+  color: white;
+  font-weight: 600;
+  text-transform: uppercase;
+  font-family: $label-font-family;
+  letter-spacing: 1px;
+  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2);
+  box-sizing: border-box;
+
+  &:hover {
+    background-color: darken($bkg, 5%);
+  }
+
+  &:active {
+    border-color: darken($bkg, 30%);
+    background-color: darken($bkg, 15%);
+  }
+}
+
 main > .header {
-  padding: 0 $spacing-unit / 2 3.5 * $spacing-unit;
+  padding: 0 $spacing-unit / 2 $spacing-unit;
   background-color: $hero-bkg-color;
-  background-image:
-    linear-gradient(to bottom, $background-color 0%, rgba(255, 255, 255, 0) 90%, rgba(255, 255, 255, 0) 100%),
-    url("data:image/svg+xml,%3Csvg width='12' height='24' viewBox='0 0 12 24' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%239C92AC' fill-opacity='0.07'%3E%3Cpath d='M2 0h2v12H2V0zm1 20c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM9 8c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zm-1 4h2v12H8V12z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+  background-image: linear-gradient(to bottom, $background-color 0%, rgba(255, 255, 255, 0) 90%, rgba(255, 255, 255, 0) 100%), $rain-pattern;
   text-align: center;
 
   @include media-query($on-palm) {
@@ -145,7 +170,7 @@ main > .header {
 
   h1 {
     margin: 0 auto 5px;
-    padding-top: 3 * $spacing-unit;
+    padding-top: 1.5 * $spacing-unit;
     max-width: 620px;
     font-family: $base-font-family;
     font-size: 36px;
@@ -169,11 +194,60 @@ main > .header {
       font-size: 20px;
     }
   }
+}
 
-  div.controls {
+main > .action {
+  position: relative;
+
+  .background {
+    top: 0;
+    left: 0;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+
+    div {
+      left: 0;
+      position: absolute;
+      width: 100%;
+      height: 50%;
+    }
+    div:first-child {
+      background-color: $hero-bkg-color;
+      background-image: $rain-pattern;
+      top: 0;
+    }
+    div:last-child {
+      top: 50%;
+      height: 50%;
+      border-top: 2px solid darken($hero-bkg-color, 5%);
+    }
+  }
+
+  .controls {
+    margin: 0 auto;
+    padding: $spacing-unit + 10px 2 * $spacing-unit $spacing-unit + 20px;
+    position: relative;
+    border-radius: 3px;
+    background-color: lighten($background-color, 1%);
+    box-shadow: 0 15px 35px rgba(0, 0, 0, .1), 0 5px 15px rgba(0, 0, 0, .07);
+    width: 640px;
+    box-sizing: border-box;
+    text-align: center;
+
+    p {
+      padding-bottom: $spacing-unit / 2;
+      color: $tertiary-text-color;
+      font-size: 20px;
+      b {
+        color: $secondary-text-color;
+        font-weight: 500;
+      }
+    }
+
     a.signup {
       margin-right: $spacing-unit / 2 + 1px;
-      @include action-button-dark;
+      @include action-button-brand;
       padding: 14px 26px;
       width: 222px;
 
@@ -198,226 +272,152 @@ main > .header {
       }
     }
   }
+
+//  .video {
+//    margin: 0 auto;
+//    width: 640px;
+//    height: 360px;
+//    box-shadow: 0px 10px 33px 9px rgba(0, 0, 0, 0.27);
+//    border-radius: 3px;
+//    position: relative;
+//    overflow: hidden;
+//
+//    @include media-query($on-palm) {
+//      width: 300px;
+//      height: 169px;
+//    }
+//
+//    .overlay {
+//      position: absolute;
+//      top: 0;
+//      left: 0;
+//      width: 100%;
+//      height: 100%;
+//      display: flex;
+//      justify-content: center;
+//      align-items: center;
+//      border-radius: 3px;
+//      background: linear-gradient(297.5deg, darken($brand-color, 20%), #855083);
+//      cursor: pointer;
+//
+//      .control {
+//        $width: 60px;
+//        $height: 48px;
+//        width: $width;
+//        height: $height;
+//        background-color: rgba(0, 0, 0, 0.3);
+//        border-radius: 3px;
+//        box-sizing: border-box;
+//        display: none;
+//        align-items: center;
+//        justify-content: center;
+//
+//        i {
+//          font-size: 18px;
+//          color: rgba(255, 255, 255, 0.97);
+//          text-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
+//        }
+//      }
+//
+//      .play {
+//        display: flex;
+//        padding-left: 3px;
+//      }
+//
+//      .loading {
+//      }
+//
+//      span.text {
+//        margin-left: $spacing-unit / 2;
+//
+//        .logo {
+//          margin-bottom: 0;
+//          text-align: center;
+//          @include logo-font;
+//          color: rgba(255, 255, 255, 0.97);
+//          text-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
+//          font-size: 38px;
+//          line-height: 1;
+//          display: block;
+//
+//          @include media-query($on-palm) {
+//            font-size: 32px;
+//          }
+//        }
+//        .copy {
+//          margin-bottom: 0;
+//          text-align: center;
+//          color: rgba(255, 255, 255, 0.65);
+//          text-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
+//          font-size: 12px;
+//          display: block;
+//
+//          @include media-query($on-palm) {
+//            font-size: 10px;
+//          }
+//        }
+//      }
+//
+//      &.loading {
+//        .play {
+//          display: none;
+//        }
+//        .loading {
+//          display: flex;
+//        }
+//      }
+//
+//      &.done {
+//        display: none;
+//        .play {
+//          display: none;
+//        }
+//        .loading {
+//          display: none;
+//        }
+//      }
+//
+//      &:hover {
+//        .control {
+//          background-color: rgba(0, 0, 0, 0.75);
+//        }
+//      }
+//    }
+//  }
 }
 
-main > .hero {
-  position: relative;
-  padding-bottom: 2 * $spacing-unit;
-
-  .background {
-    top: 0;
-    left: 0;
-    position: absolute;
-    width: 100%;
-    height: 100%;
-
-    div {
-      left: 0;
-      position: absolute;
-      width: 100%;
-      height: 50%;
-    }
-    div:first-child {
-      @include rain-pattern;
-      top: 0;
-    }
-    div:last-child {
-      top: 50%;
-      height: 50%;
-      border-top: 2px solid darken($hero-bkg-color, 5%);
-    }
-  }
-
-  .video {
-    margin: 0 auto;
-    width: 640px;
-    height: 360px;
-    box-shadow: 0px 10px 33px 9px rgba(0, 0, 0, 0.27);
-    border-radius: 3px;
-    position: relative;
-    overflow: hidden;
-
-    @include media-query($on-palm) {
-      width: 300px;
-      height: 169px;
-    }
-
-    .overlay {
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      border-radius: 3px;
-      background: linear-gradient(297.5deg, darken($brand-color, 20%), #855083);
-      cursor: pointer;
-
-      .control {
-        $width: 60px;
-        $height: 48px;
-        width: $width;
-        height: $height;
-        background-color: rgba(0, 0, 0, 0.3);
-        border-radius: 3px;
-        box-sizing: border-box;
-        display: none;
-        align-items: center;
-        justify-content: center;
-
-        i {
-          font-size: 18px;
-          color: rgba(255, 255, 255, 0.97);
-          text-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
-        }
-      }
-
-      .play {
-        display: flex;
-        padding-left: 3px;
-      }
-
-      .loading {
-      }
-
-      span.text {
-        margin-left: $spacing-unit / 2;
-
-        .logo {
-          margin-bottom: 0;
-          text-align: center;
-          @include logo-font;
-          color: rgba(255, 255, 255, 0.97);
-          text-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
-          font-size: 38px;
-          line-height: 1;
-          display: block;
-
-          @include media-query($on-palm) {
-            font-size: 32px;
-          }
-        }
-        .copy {
-          margin-bottom: 0;
-          text-align: center;
-          color: rgba(255, 255, 255, 0.65);
-          text-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
-          font-size: 12px;
-          display: block;
-
-          @include media-query($on-palm) {
-            font-size: 10px;
-          }
-        }
-      }
-
-      &.loading {
-        .play {
-          display: none;
-        }
-        .loading {
-          display: flex;
-        }
-      }
-
-      &.done {
-        display: none;
-        .play {
-          display: none;
-        }
-        .loading {
-          display: none;
-        }
-      }
-
-      &:hover {
-        .control {
-          background-color: rgba(0, 0, 0, 0.75);
-        }
-      }
-    }
-  }
-}
-
-main > .pitch {
-  padding-bottom: 2 * $spacing-unit;
+main > .platforms {
+  margin-top: $spacing-unit;
+  padding-bottom: 3 * $spacing-unit;
   text-align: center;
 
-  h4 {
-    font-size: 24px;
-
-    @include media-query($on-palm) {
-      font-size: 22px;
-      max-width: 300px;
-      margin-left: auto;
-      margin-right: auto;
-    }
-  }
-  p {
-    margin: 0 auto;
-    font-size: 18px;
-    max-width: 580px;
-    padding: 0 $spacing-unit / 2;
-    color: $secondary-text-color;
-
-    @include media-query($on-palm) {
-      font-size: 16px;
+  div {
+    img {
+      opacity: 0.33;
+      vertical-align: middle;
+      margin: 0 9px;
     }
 
-    &:last-child {
-      margin-bottom: 0;
-    }
-  }
-
-  div.platforms {
-    margin-top: $spacing-unit + 10px;
-    text-align: center;
-
-    div {
-
-      img {
-        opacity: 0.33;
-        vertical-align: middle;
-      }
-
-      &:first-child {
-        i {
-          margin: 0 10px;
-          opacity: 0.4;
-          font-size: 32px;
-          vertical-align: middle;
-        }
-
-        img {
-          margin: 0 9px;
-        }
-      }
-
-      &:nth-child(2) {
-        margin: $spacing-unit - 4px 0 $spacing-unit;
-      }
+    i {
+      margin: 0 10px;
+      opacity: 0.4;
+      font-size: 32px;
+      vertical-align: middle;
     }
   }
 }
 
 main > .features {
-  padding: $spacing-unit * 2.5 $spacing-unit / 2 $spacing-unit * 3;
-  border-top: 2px solid darken($hero-bkg-color, 5%);
+  padding: 0 $spacing-unit / 2 $spacing-unit * 3;
 
   .feature {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-wrap: wrap;
 
-    div.description {
+    div.header {
       $size: 64px;
-      margin-right: 4 * $spacing-unit;
+      text-align: center;
 
       div.icon {
-        margin-bottom: $spacing-unit - 10px;
+        margin: 0 auto $spacing-unit - 10px;
         width: $size;
         height: $size;
         border-radius: 50%;
@@ -443,56 +443,318 @@ main > .features {
         font-size: 32px;
       }
       p {
-        max-width: 480px;
+        margin: 0 auto;
+        max-width: 600px;
         color: $tertiary-text-color;
         line-height: 1.8;
       }
 
-      ul {
-        margin-left: 25px;
+//      ul {
+//        margin-left: 25px;
+//
+//        li {
+//          padding-bottom: 13px;
+//
+//          i {
+//            line-height: 1.3;
+//            color: $tertiary-text-color;
+//          }
+//
+//          a {
+//            b {
+//              font-weight: 500;
+//              color: darken($link-color, 10%);
+//            }
+//            &:hover {
+//              b {
+//                color: lighten($link-color, 20%);
+//              }
+//            }
+//          }
+//
+//          &:last-child {
+//            padding-bottom: 0;
+//          }
+//        }
+//      }
+//
+//      @include media-query($on-palm) {
+//        margin-right: 0;
+//      }
+//    }
+//
+//    .image {
+//      $color: #F6F6F6;
+//      border-radius: 4px;
+//      border: 6px solid #FDFDFE;
+//      background-color: $color;
+//      position: relative;
+//      overflow: hidden;
+//      box-shadow: 0 7px 14px rgba(50, 50, 93, .05), 0 3px 6px rgba(0, 0, 0, .08);
+//
+//      @include media-query($on-palm) {
+//        margin-top: $spacing-unit;
+//      }
+    }
 
-        li {
-          padding-bottom: 13px;
+    div.ci-graphic {
+      margin-top: 2 * $spacing-unit + 10px;
+      display: flex;
+      justify-content: center;
 
-          i {
-            line-height: 1.3;
-            color: $tertiary-text-color;
-          }
-
-          a {
-            b {
-              font-weight: 500;
-              color: darken($link-color, 10%);
-            }
-            &:hover {
-              b {
-                color: lighten($link-color, 20%);
-              }
-            }
-          }
-
-          &:last-child {
-            padding-bottom: 0;
-          }
+      div.stage {
+        padding: 0 1.5 * $spacing-unit;
+        text-align: center;
+        i {
+          color: $tertiary-text-color;
+          font-size: 72px;
+        }
+        p {
+          margin-top: 7px;
+          font-size: 14px;
+          font-family: $label-font-family;
+          text-transform: uppercase;
+          letter-spacing: 1px;
+          color: $secondary-text-color;
         }
       }
-
-      @include media-query($on-palm) {
-        margin-right: 0;
+      i.angle {
+        display: inline-block;
+        padding: 24px 0;
+        opacity: 0.5;
+        width: 24px;
+        height: 24px;
+        background: {
+          position: center;
+          repeat: no-repeat;
+          image: $angle-icon;
+        }
       }
     }
 
-    .image {
-      $color: #F6F6F6;
-      border-radius: 4px;
-      border: 6px solid #FDFDFE;
-      background-color: $color;
-      position: relative;
-      overflow: hidden;
-      box-shadow: 0 7px 14px rgba(50, 50, 93, .05), 0 3px 6px rgba(0, 0, 0, .08);
+    div.pipeline-table {
+      $border-width: 2px;
 
-      @include media-query($on-palm) {
-        margin-top: $spacing-unit;
+      margin: 2 * $spacing-unit auto 0;
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      width: 750px;
+
+      div {
+        display: flex;
+        align-items: center;
+        height: 60px;
+        box-sizing: border-box;
+        border: {
+          width: 0;
+          style: dashed;
+          color: lighten($grey-color-light, 10%);
+        }
+
+        // Status cells
+        &.info {
+          justify-content: center;
+          padding: 10px;
+
+          i {
+            margin-right: 9px;
+            font-size: 24px;
+
+            &.fa-check-circle {
+              color: darken($brand-color, 5%);
+            }
+            &.fa-times-circle {
+              color: darken($accent-color, 25%);
+            }
+            &.fa-minus-circle {
+              color: lighten($tertiary-text-color, 20%);
+            }
+          }
+
+          span {
+            color: lighten($tertiary-text-color, 15%);
+            font-size: 12px;
+          }
+
+          &.promote {
+            font-size: 13px;
+            font-family: $label-font-family;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            color: $brand-color;
+          }
+        }
+
+        // First row
+        &:nth-child(n + 1):nth-child(-n + 7) {
+          justify-content: center;
+          font-size: 14px;
+          color: $secondary-text-color;
+          font-weight: 500;
+        }
+        // First column
+        &:nth-child(8),
+        &:nth-child(15),
+        &:nth-child(22) {
+          font-size: 14px;
+          color: $secondary-text-color;
+          font-weight: 500;
+          padding-left: 10px;
+        }
+        // Bottom row
+        &:nth-child(30),
+        &:nth-child(32),
+        &:nth-child(34) {
+          height: 72px;
+          flex-direction: column;
+          justify-content: center;
+          font-size: 14px;
+          color: $tertiary-text-color;
+          img {
+            margin-top: 4px;
+            margin-bottom: 5px;
+            display: block;
+            opacity: 0.7;
+          }
+        }
+
+        // Row dividers
+        &:nth-child(n + 1):nth-child(-n + 7),
+        &:nth-child(n + 8):nth-child(-n + 14),
+        &:nth-child(n + 15):nth-child(-n + 21),
+        &:nth-child(n + 22):nth-child(-n + 28) {
+          border-bottom: 1px solid lighten($grey-color-light, 10%);
+        }
+
+        // Horizontal dashed borders
+        &:nth-child(9),
+        &:nth-child(16),
+        &:nth-child(23),
+        &:nth-child(14),
+        &:nth-child(21),
+        &:nth-child(28) {
+          border: {
+            width: 0 $border-width;
+          }
+        }
+
+        // Dev & prod top borders
+        &:nth-child(2),
+        &:nth-child(7) {
+          border: {
+            radius: 6px 6px 0 0;
+            width: $border-width $border-width 0 $border-width;
+          }
+        }
+        // Dev & prod bottom borders
+        &:nth-child(30),
+        &:nth-child(34) {
+          border: {
+            radius: 0 0 6px 6px;
+            width: 0 $border-width $border-width $border-width;
+          }
+        }
+
+        // QA top border
+        &:nth-child(4) {
+          border: {
+            radius: 6px 0 0 0;
+            width: $border-width 0 0 $border-width;
+          }
+        }
+        // Staging top border
+        &:nth-child(5) {
+          border: {
+            radius: 0 6px 0 0;
+            width: $border-width $border-width 0 0;
+          }
+        }
+        // QA horizontal border
+        &:nth-child(11),
+        &:nth-child(18),
+        &:nth-child(25) {
+          border: {
+            width: 0 0 0 $border-width;
+          }
+        }
+        // Staging horizontal border
+        &:nth-child(12),
+        &:nth-child(19),
+        &:nth-child(26) {
+          border: {
+            width: 0 $border-width 0 0;
+          }
+        }
+        // QA & staging bottom border
+        &:nth-child(32) {
+          border: {
+            radius: 0 0 6px 6px;
+            width: 0 $border-width $border-width $border-width;
+          }
+        }
+
+        // Cell widths
+        $cell-width: 130px;
+        $cell-padding: 10px;
+
+        &:nth-child(7n + 3),
+        &:nth-child(7n + 6) {
+          width: $cell-padding;
+        }
+        &:nth-child(7n + 1),
+        &:nth-child(7n + 2),
+        &:nth-child(7n + 4),
+        &:nth-child(7n + 5),
+        &:nth-child(7n + 7),
+        &:nth-child(34) {
+          width: $cell-width;
+        }
+        &:nth-child(31),
+        &:nth-child(33) {
+          width: $cell-padding;
+        }
+        &:nth-child(32) {
+          width: 2 * $cell-width;
+        }
+      }
+    }
+
+    div.points {
+      margin-top: $spacing-unit;
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+
+      div.point {
+        margin: $spacing-unit 0.8 * $spacing-unit 0;
+        flex: 0 0 264px;
+        h6 {
+          margin-bottom: 5px;
+          font-size: 20px;
+          font-family: $base-font-family;
+          font-weight: 500;
+
+          span {
+            margin-left: 2px;
+            padding: 3px 6px;
+            border-radius: 3px;
+            background-color: $tertiary-text-color;
+            color: white;
+            text-transform: uppercase;
+            font-size: 10px;
+            font-family: $label-font-family;
+            vertical-align: 3px;
+          }
+        }
+        p {
+          margin-bottom: 0;
+          color: $secondary-text-color;
+        }
+        a {
+          margin-top: 10px;
+          display: inline-block;
+        }
       }
     }
   }
@@ -564,6 +826,11 @@ main > .features {
     max-width: 800px;
     border-color: darken($hero-bkg-color, 10%);
 
+    &:first-child {
+      margin-top: 0;
+      margin-bottom: $spacing-unit * 2.5;
+    }
+
     @include media-query($on-palm) {
       margin: $spacing-unit * 2 auto;
     }
@@ -576,7 +843,8 @@ main > .features {
 }
 
 main > .testimonials {
-  @include diamond-pattern;
+  background-color: darken($brand-color, 5%);
+  background-image: $diamond-pattern;
   padding: $spacing-unit * 2 + 10px $spacing-unit / 2;
   border-top: 2px solid $accent-color;
   color: $background-color;
@@ -1140,7 +1408,8 @@ main > .concierge {
   }
 
   .comparison {
-    @include diagonal-pattern;
+    background-color: $background-color;
+    background-image: $diagonal-pattern;
     margin: $spacing-unit * 3 0;
     padding: $spacing-unit * 2 $spacing-unit / 2;
     border-top: 2px solid lighten($brand-color, 30%);
@@ -1159,7 +1428,8 @@ main > .concierge {
       $size: 32px;
       $margin: 12px;
 
-      @include graph-pattern;
+      background-color: $background-color;
+      background-image: $graph-pattern;
       border-radius: 4px;
       box-shadow: 0 15px 35px rgba(0, 0, 0, .1), 0 5px 15px rgba(0, 0, 0, .07);
       border: 6px solid #FDFDFE;

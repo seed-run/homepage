@@ -5,105 +5,247 @@ layout: lander
 <div class="header">
   <h1>Deploy, Manage, and Monitor Serverless Applications on AWS</h1>
   <h3>Seed manages pipelines, configures environments, and monitors deployments for Serverless Framework projects.</h3>
-  <div class="controls">
-    <a class="signup" href="{{ site.console_url }}{{ site.signup }}">
-      Sign up for free
-    </a>
-    <a class="demo" href="{{ site.console_url }}{{ site.request_demo }}">
-      Request a demo
-    </a>
-  </div>
 </div>
 
-<div class="hero">
+<div class="action">
   <div class="background">
     <div></div>
     <div></div>
   </div>
-  <div class="video">
-    <iframe id='ytPlayer' width="100%" height="100%" src="https://www.youtube.com/embed/n8N8zRVM5tE?rel=0&amp;controls=1&amp;showinfo=0&amp;autoplay=0&amp;loop=1&amp;enablejsapi=1" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
-    <a id="overlay" class="overlay">
-      <span class="button" class="control play">
-        <i class="fa fa-play"></i>
-      </span>
-      <span class="control loading">
-        <i class="fa fa-circle-o-notch fa-spin"></i>
-      </span>
-      <span class="text">
-        <span class="logo">Seed</span>
-        <span class="copy">Watch it in action!</span>
-      </span>
-    </a>
+  <div class="controls">
+    <p>Add your <b>Serverless Framework project</b> to get started or request a <b>personalized demo</b>.</p>
+    <div class="buttons">
+      <a class="signup" href="{{ site.console_url }}{{ site.signup }}">
+        Sign up for free
+      </a>
+      <a class="demo" href="{{ site.console_url }}{{ site.request_demo }}">
+        Request a demo
+      </a>
+    </div>
   </div>
 </div>
 
-<div class="pitch">
-  <h4>Nothing to setup. Nothing to configure.</h4>
-  <p>Don’t spend time setting up a deployment pipeline that needs to be constantly updated and maintained. Simply link your Git repository and IAM credentials and Seed will take care of the rest.</p>
-  <div class="platforms">
-    <div>
-      <img title="Node.js" width="31" src="assets/node-logo.png" />
-      <i title="Bitbucket" class="fa fa-bitbucket" aria-hidden="true"></i>
-      <i title="GitHub" class="fa fa-github" aria-hidden="true"></i>
-      <i title="GitLab" class="fa fa-gitlab" aria-hidden="true"></i>
-      <img title="Python" width="31" src="assets/python-logo.png" />
-    </div>
-    <div>
-      <img title="Serverless Framework" width="34" src="assets/serverless-logo.png" />
-    </div>
-    <div>
-      <img title="AWS" width="134" src="assets/aws-logo.png" />
-    </div>
+<div class="platforms">
+  <div>
+    <img title="Node.js" width="31" src="assets/node-logo.png" />
+    <i title="Bitbucket" class="fa fa-bitbucket" aria-hidden="true"></i>
+    <i title="GitHub" class="fa fa-github" aria-hidden="true"></i>
+    <i title="GitLab" class="fa fa-gitlab" aria-hidden="true"></i>
+    <img title="Python" width="31" src="assets/python-logo.png" />
   </div>
 </div>
 
 <div class="features">
 
+  <hr />
+
   <div class="feature">
-    <div class="description">
+    <div class="header">
       <div class="icon">
         <i class="fa fa-code-fork" aria-hidden="true"></i>
       </div>
-      <h2>Automate Deployments</h2>
-      <p>Seed is a fully-configured code pipeline for Serverless Framework projects on AWS. Here are a few ways Seed can help you with deployments:</p>
-      <ul class="fa-ul">
-        <li>
-          <i class="fa-li fa fa-check-circle-o" aria-hidden="true"></i>
-          <a href="/docs/running-tests.html">
-            Automatically run tests
-          </a>
-        </li>
-        <li>
-          <i class="fa-li fa fa-check-circle-o" aria-hidden="true"></i>
-          <a href="/docs/adding-build-notifications.html">
-            <b>Slack</b> &amp; email <b>notifications</b>
-          </a>
-        <li>
-          <i class="fa-li fa fa-check-circle-o" aria-hidden="true"></i>
-          <a href="/docs/adding-python-projects.html">
-            Deploy Python without Docker
-          </a>
-        </li>
-        </li>
-        <li>
-          <i class="fa-li fa fa-check-circle-o" aria-hidden="true"></i>
-          <a href="/docs/rolling-back.html">
-            <b>1 click rollback</b> without rebuilding
-          </a>
-        </li>
-        <li>
-          <i class="fa-li fa fa-check-circle-o" aria-hidden="true"></i>
-          <a href="/docs/promoting-to-production.html">
-            <b>Review CloudFormation</b> Change Sets
-          </a>
-        </li>
-      </ul>
+      <h2>Continuous Integration</h2>
+      <p>Seed is a fully-configured code pipeline for Serverless Framework projects on AWS. Here are a few ways Seed can help you with deployments.</p>
     </div>
-    <div class="image">
-      <img src="assets/lander/builds.png" width="380" />
+    <div class="ci-graphic">
+      <div class="stage">
+        <i class="fa fa-git-square" aria-hidden="true"></i>
+        <p>Commit</p>
+      </div>
+      <i class="angle"></i>
+      <div class="stage">
+        <i class="fa fa-cogs" aria-hidden="true"></i>
+        <p>Build</p>
+      </div>
+      <i class="angle"></i>
+      <div class="stage">
+        <i class="fa fa-check-square-o" aria-hidden="true"></i>
+        <p>Test</p>
+      </div>
+      <i class="angle"></i>
+      <div class="stage">
+        <i class="fa fa-archive" aria-hidden="true"></i>
+        <p>Package</p>
+      </div>
+      <i class="angle"></i>
+      <div class="stage">
+        <i class="fa fa-rocket" aria-hidden="true"></i>
+        <p>Deploy</p>
+      </div>
+    </div>
+    <div class="points">
+      <div class="point">
+        <h6>Flexible Git workflow</h6>
+        <p>Easily create new Serverless stages from git branches. Each developing branch gets its own independent stage.</p>
+        <a href="/docs/adding-a-stage.html">
+          Learn more &gt;
+        </a>
+      </div>
+      <div class="point">
+        <h6>Immutable artifacts</h6>
+        <p>Each successful commit will generate an immutable artifact that will be used to promote to all downstream stages.</p>
+        <a href="/docs/promoting-to-production.html">
+          Learn more &gt;
+        </a>
+      </div>
+      <div class="point">
+        <h6>Artifact repository <span>Beta</span></h6>
+        <p>Each immutable artifact is stored securely in your AWS S3 bucket. Each artifact can be fetched at anytime and used to deploy to any downstream stage.</p>
+        <a>
+          Learn more &gt;
+        </a>
+      </div>
+      <div class="point">
+        <h6>Environment variables <span>Beta</span></h6>
+        <p>All environment variables are securely stored in your AWS SSM (Systems Manager).</p>
+        <a href="/docs/configuring-stage-variables.html">
+          Learn more &gt;
+        </a>
+      </div>
+      <div class="point">
+        <h6>Sensitive data</h6>
+        <p>Sensitive environments are encrypted with your AWS KMS keys, and stored encrypted in your AWS SSM.</p>
+        <a href="/docs/storing-secrets.html">
+          Learn more &gt;
+        </a>
+      </div>
+      <div class="point">
+        <h6>Build notifications</h6>
+        <p>Get notified when a build starts, succeeds, and fails via the channel you prefer, whether it is Slack, email or custom webhook.</p>
+        <a href="/docs/adding-build-notifications.html">
+          Learn more &gt;
+        </a>
+      </div>
     </div>
   </div>
 
+  <hr />
+
+  <div class="feature">
+    <div class="header">
+      <div class="icon">
+        <i class="fa fa-refresh" aria-hidden="true"></i>
+      </div>
+      <h2>Continuous Delivery</h2>
+      <p>Create and configure multiple environments for your team. Environments in Seed are based on the stages in Serverless Framework with all the perks.</p>
+    </div>
+    <div class="pipeline-table">
+      <div></div>
+      <div>Dev</div>
+      <div></div>
+      <div>QA</div>
+      <div>Staging</div>
+      <div></div>
+      <div>Prod</div>
+      <div>Build 1318</div>
+      <div class="info">
+        <i class="fa fa-check-circle" aria-hidden="true"></i>
+        <span>Mar 14, 2018</span>
+      </div>
+      <div></div>
+      <div class="info promote">Promote</div>
+      <div class="info promote">Promote</div>
+      <div></div>
+      <div class="info promote">Promote</div>
+      <div>Build 1317</div>
+      <div class="info">
+        <i class="fa fa-check-circle" aria-hidden="true"></i>
+        <span>Mar 13, 2018</span>
+      </div>
+      <div></div>
+      <div class="info">
+        <i class="fa fa-check-circle" aria-hidden="true"></i>
+        <span>Mar 13, 2018</span>
+      </div>
+      <div class="info">
+        <i class="fa fa-check-circle" aria-hidden="true"></i>
+        <span>Mar 13, 2018</span>
+      </div>
+      <div></div>
+      <div class="info">
+        <i class="fa fa-check-circle" aria-hidden="true"></i>
+        <span>Mar 13, 2018</span>
+      </div>
+      <div>Build 1316</div>
+      <div class="info">
+        <i class="fa fa-check-circle" aria-hidden="true"></i>
+        <span>Mar 13, 2018</span>
+      </div>
+      <div></div>
+      <div class="info">
+        <i class="fa fa-times-circle" aria-hidden="true"></i>
+        <span>Mar 13, 2018</span>
+      </div>
+      <div class="info">
+        <i class="fa fa-minus-circle" aria-hidden="true"></i>
+      </div>
+      <div></div>
+      <div class="info">
+        <i class="fa fa-minus-circle" aria-hidden="true"></i>
+      </div>
+      <div></div>
+      <div>
+        <img width="28" src="assets/aws-logo.png" />
+        Dev account
+      </div>
+      <div></div>
+      <div>
+        <img width="28" src="assets/aws-logo.png" />
+        Pre-prod account
+      </div>
+      <div></div>
+      <div>
+        <img width="28" src="assets/aws-logo.png" />
+        Prod account
+      </div>
+    </div>
+    <div class="points">
+      <div class="point">
+        <h6>Pipeline visualization</h6>
+        <p>One stop visualization of entire pipeline. Always know which build is running in which stage.</p>
+        <a>
+          Learn more &gt;
+        </a>
+      </div>
+      <div class="point">
+        <h6>Multi-AWS account</h6>
+        <p>Turnkey solution for managing stages across multiple AWS accounts. From deploying one stage per account, to multiple stages sharing the same account.</p>
+        <a href="/docs/iam-credentials-per-stage.html">
+          Learn more &gt;
+        </a>
+      </div>
+      <div class="point">
+        <h6>Trusted build</h6>
+        <p>The same immutable artifact used to promote across all downstream environments.</p>
+        <a>
+          Learn more &gt;
+        </a>
+      </div>
+      <div class="point">
+        <h6>Manual gating</h6>
+        <p>Manually review and approve promotions. Rejected builds are prohibited from being promoted.</p>
+        <a href="/docs/promoting-to-production.html">
+          Learn more &gt;
+        </a>
+      </div>
+      <div class="point">
+        <h6>Rollback any version</h6>
+        <p>Any past immutable artifact can be re-deployed at any time. No re-packaging.</p>
+        <a href="/docs/rolling-back.html">
+          Learn more &gt;
+        </a>
+      </div>
+      <div class="point">
+        <h6>Bring your own CI <span>Beta</span></h6>
+        <p>Seamlessly integrate with your existing CI system. Seed CD will listen to new builds in your artifact repository, and automatically trigger the pipeline.</p>
+        <a>
+          Learn more &gt;
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <!--
   <hr />
 
   <div class="feature">
@@ -196,6 +338,8 @@ layout: lander
       </a>
     </div>
   </div>
+
+  -->
 
 </div>
 

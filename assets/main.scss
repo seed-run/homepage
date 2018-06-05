@@ -448,53 +448,6 @@ main > .features {
         color: $tertiary-text-color;
         line-height: 1.8;
       }
-
-//      ul {
-//        margin-left: 25px;
-//
-//        li {
-//          padding-bottom: 13px;
-//
-//          i {
-//            line-height: 1.3;
-//            color: $tertiary-text-color;
-//          }
-//
-//          a {
-//            b {
-//              font-weight: 500;
-//              color: darken($link-color, 10%);
-//            }
-//            &:hover {
-//              b {
-//                color: lighten($link-color, 20%);
-//              }
-//            }
-//          }
-//
-//          &:last-child {
-//            padding-bottom: 0;
-//          }
-//        }
-//      }
-//
-//      @include media-query($on-palm) {
-//        margin-right: 0;
-//      }
-//    }
-//
-//    .image {
-//      $color: #F6F6F6;
-//      border-radius: 4px;
-//      border: 6px solid #FDFDFE;
-//      background-color: $color;
-//      position: relative;
-//      overflow: hidden;
-//      box-shadow: 0 7px 14px rgba(50, 50, 93, .05), 0 3px 6px rgba(0, 0, 0, .08);
-//
-//      @include media-query($on-palm) {
-//        margin-top: $spacing-unit;
-//      }
     }
 
     div.ci-graphic {
@@ -575,6 +528,10 @@ main > .features {
           span {
             color: lighten($tertiary-text-color, 15%);
             font-size: 12px;
+
+            &.hide {
+              visibility: hidden;
+            }
           }
 
           &.promote {
@@ -720,6 +677,79 @@ main > .features {
       }
     }
 
+    div.mono-repo-graphic {
+      margin-top: $spacing-unit * 2 - 15px;
+      display: flex;
+      justify-content: center;
+
+      div.folder {
+        box-sizing: border-box;
+
+        & > span {
+          margin-left: 7px;
+          font-size: 20px;
+          color: $tertiary-text-color;
+          font-family: $code-font-family;
+
+          i {
+            margin-right: 7px;
+            vertical-align: -1px;
+            color: lighten($tertiary-text-color, 3%);
+          }
+        }
+
+        div.content {
+          border: 3px solid lighten($brand-color, 45%);
+          border-radius: 6px;
+          margin-top: 5px;
+        }
+      }
+
+      div.root {
+        display: inline-flex;
+        flex-direction: column;
+
+        & > div.content {
+          padding: $spacing-unit $spacing-unit * 1.5 $spacing-unit * 1.5;
+          display: flex;
+          justify-content: center;
+        }
+      }
+
+      div.content > div.folder {
+        width: 200px;
+        margin-right: $spacing-unit;
+
+        div.service {
+          $padding: 12px;
+
+          padding: $padding 0 0 $padding + 3px;
+          color: $secondary-text-color;
+          font-size: 16px;
+          font-family: $code-font-family;
+
+          img {
+            margin-right: 6px;
+            vertical-align: -3px;
+          }
+
+          &:last-child {
+            padding-bottom: $padding;
+          }
+        }
+
+        &:last-child {
+          margin-right: 0;
+        }
+      }
+    }
+
+    div.metrics-graphic {
+      margin: $spacing-unit * 2 auto 0;
+      width: 760px;
+      height: 135px;
+    }
+
     div.points {
       margin-top: $spacing-unit;
       display: flex;
@@ -756,68 +786,6 @@ main > .features {
           display: inline-block;
         }
       }
-    }
-  }
-
-  .beta {
-    $size: 120px;
-    margin: $spacing-unit * 3 auto 0;
-    max-width: 540px;
-    background-color: #FDFDFE;
-    border-radius: 4px;
-    box-shadow: 0 15px 35px rgba(0, 0, 0, .1), 0 5px 15px rgba(0, 0, 0, .07);
-    position: relative;
-    overflow: hidden;
-
-    div.icon {
-      width: $size;
-      height: $size;
-      border-radius: 50%;
-      background-color: lighten($accent-color, 20%);
-      text-align: center;
-      position: absolute;
-      top: 50%;
-      margin-top: - $size / 2;
-      left: -30px;
-
-      i {
-        color: white;
-        font-size: 70px;
-        line-height: $size;
-
-        &.fa-code-fork {
-          margin-left: 4px;
-        }
-
-        &.fa-tachometer {
-          margin-top: -3px;
-        }
-      }
-    }
-
-    div.description {
-      margin: 20px 10px 20px $size - 10px;
-      position: relative;
-
-      h4 {
-        font-size: 18px;
-        margin-bottom: 5px;
-        font-family: $label-font-family;
-        text-transform: uppercase;
-        letter-spacing: 1px;
-      }
-
-      p {
-        color: $secondary-text-color;
-      }
-
-      a {
-        font-weight: 500;
-      }
-    }
-
-    @include media-query($on-palm) {
-      margin-top: 2 * $spacing-unit;
     }
   }
 
@@ -966,19 +934,7 @@ main > .pricing {
 
     & > div {
       margin: 0 $spacing-unit / 2 1.5 * $spacing-unit;
-      max-width: 250px;
-
-      &.premium .cost {
-        border-color: $accent-color;
-        box-shadow: 0px 1px 2px 0px rgba(0, 0, 0, 0.21);
-
-        .header {
-          border-color: $accent-color;
-        }
-        .numbers p:first-child {
-          font-weight: 500;
-        }
-      }
+      width: 232px;
 
       .cost {
         border: 2px solid $grey-color-light;
@@ -1012,8 +968,31 @@ main > .pricing {
         }
       }
 
+      &.premium .cost {
+        border-color: $accent-color;
+        box-shadow: 0px 1px 2px 0px rgba(0, 0, 0, 0.21);
+
+        .header {
+          border-color: $accent-color;
+        }
+        .numbers p:first-child {
+          font-weight: 500;
+        }
+      }
+
+      &.enterprise .cost .numbers {
+        padding-top: 88px;
+
+        p:first-child {
+          margin-bottom: 5px;
+          font-size: 24px;
+          font-weight: 500;
+        }
+      }
+
       ul {
         padding-top: $spacing-unit;
+        padding-right: 5px;
         font-size: 15px;
         color: $secondary-text-color;
 

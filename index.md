@@ -178,10 +178,12 @@ layout: lander
       </div>
       <div class="info">
         <i class="fa fa-minus-circle" aria-hidden="true"></i>
+        <span class="hide">Mar 13, 2018</span>
       </div>
       <div></div>
       <div class="info">
         <i class="fa fa-minus-circle" aria-hidden="true"></i>
+        <span class="hide">Mar 13, 2018</span>
       </div>
       <div></div>
       <div>
@@ -245,106 +247,168 @@ layout: lander
     </div>
   </div>
 
-  <!--
   <hr />
 
   <div class="feature">
-    <div class="description">
+    <div class="header">
       <div class="icon">
-        <i class="fa fa-cogs" aria-hidden="true"></i>
+        <i class="fa fa-sitemap" aria-hidden="true"></i>
       </div>
-      <h2>Manage Environments</h2>
-      <p>Create and configure multiple environments for your team. Environments in Seed are based on the stages in Serverless Framework with all the perks:</p>
-      <ul class="fa-ul">
-        <li>
-          <i class="fa-li fa fa-check-circle-o" aria-hidden="true"></i>
-          <a href="/docs/configuring-stage-variables.html">
-            Add environment variables
-          </a>
-        </li>
-        <li>
-          <i class="fa-li fa fa-check-circle-o" aria-hidden="true"></i>
-          <a href="/docs/storing-secrets.html">
-            <b>Store secrets</b> through the console
-          </a>
-        </li>
-        <li>
-          <i class="fa-li fa fa-check-circle-o" aria-hidden="true"></i>
-          <a href="/docs/working-with-pull-requests.html">
-            Automatically <b>preview pull requests</b>
-          </a>
-        </li>
-        <li>
-          <i class="fa-li fa fa-check-circle-o" aria-hidden="true"></i>
-          <a href="/docs/configuring-custom-domains.html">
-            <b>Custom domains</b> for stage endpoints
-          </a>
-        </li>
-        <li>
-          <i class="fa-li fa fa-check-circle-o" aria-hidden="true"></i>
-          <a href="/docs/iam-credentials-per-stage.html">
-            <b>Separate AWS accounts</b> per environment
-          </a>
-        </li>
-      </ul>
+      <h2>Mono-Repo Workflow</h2>
+      <p>Seed supports mono-repo serverless applications with very little configuration. Simply add your repo and specifiy the services within the repo.</p>
     </div>
-    <div class="image">
-      <img src="assets/lander/stages.png" width="380" />
+    <div class="mono-repo-graphic">
+      <div class="root folder">
+        <span>
+          <i class="fa fa-folder-open" aria-hidden="true"></i><span>/</span>
+        </span>
+        <div class="content">
+          <div class="folder">
+            <span>
+              <i class="fa fa-folder-open" aria-hidden="true"></i><span>apis/</span>
+            </span>
+            <div class="content">
+              <div class="service">
+                <img width="24" src="assets/serverless-folder.png" /><span>users/</span>
+              </div>
+              <div class="service">
+                <img width="24" src="assets/serverless-folder.png" /><span>groups/</span>
+              </div>
+              <div class="service">
+                <img width="24" src="assets/serverless-folder.png" /><span>posts/</span>
+              </div>
+            </div>
+          </div>
+          <div class="folder">
+            <span>
+              <i class="fa fa-folder-open" aria-hidden="true"></i><span>jobs/</span>
+            </span>
+            <div class="content">
+              <div class="service">
+                <img width="24" src="assets/serverless-folder.png" /><span>etl/</span>
+              </div>
+              <div class="service">
+                <img width="24" src="assets/serverless-folder.png" /><span>resizer/</span>
+              </div>
+            </div>
+          </div>
+          <div class="folder">
+            <span>
+              <i class="fa fa-folder-open" aria-hidden="true"></i><span>alerts/</span>
+            </span>
+            <div class="content">
+              <div class="service">
+                <img width="24" src="assets/serverless-folder.png" /><span>db-trigger/</span>
+              </div>
+              <div class="service">
+                <img width="24" src="assets/serverless-folder.png" /><span>notifier/</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="points">
+      <div class="point">
+        <h6>Service management</h6>
+        <p>Seamlessly add all Serverless services by specifying the path. Seed let's you manage all the services as a whole.</p>
+        <a href="">
+          Learn more &gt;
+        </a>
+      </div>
+      <div class="point">
+        <h6>Service dependencies  <span>Beta</span></h6>
+        <p>Coordinate the deployment process between multiple services. Ability to define complex deployment structure with parallel and sequential deployments.</p>
+        <a href="">
+          Learn more &gt;
+        </a>
+      </div>
+      <div class="point">
+        <h6>Git workflow</h6>
+        <p>Each commit triggers all services to be deployed at the same time.</p>
+        <a href="">
+          Learn more &gt;
+        </a>
+      </div>
+      <div class="point">
+        <h6>Environment</h6>
+        <p>Simple environment context inheritance model. Configure and manage environments across all services.</p>
+        <a href="">
+          Learn more &gt;
+        </a>
+      </div>
+      <div class="point">
+        <h6>Pipelines</h6>
+        <p>Ability to configure and manage stage environments across all services. Deploy and rollback across all services as a whole.</p>
+        <a href="">
+          Learn more &gt;
+        </a>
+      </div>
+      <div class="point">
+        <h6>Trusted build</h6>
+        <p>Artifacts are generated and securely stored for all services on every commit.</p>
+        <a href="">
+          Learn more &gt;
+        </a>
+      </div>
     </div>
   </div>
 
   <hr />
 
   <div class="feature">
-    <div class="description">
+    <div class="header">
       <div class="icon">
         <i class="fa fa-tachometer" aria-hidden="true"></i>
       </div>
-      <h2>Monitor Deployments</h2>
+      <h2>Manage &amp; Monitor</h2>
       <p>Once your deployments are live, Seed can pull up detailed information on the deployed stack. And give you a live look at what is going on.</p>
-      <ul class="fa-ul">
-        <li>
-          <i class="fa-li fa fa-check-circle-o" aria-hidden="true"></i>
-          <a href="/docs/viewing-logs.html">
-            <b>Live</b> Access &amp; Lambda <b>logs</b>
-          </a>
-        </li>
-        <li>
-          <i class="fa-li fa fa-check-circle-o" aria-hidden="true"></i>
-          <a href="/docs/viewing-metrics.html">
-            <b>Live</b> Lambda &amp; API Gateway <b>metrics</b>
-          </a>
-        </li>
-      </ul>
     </div>
-    <div class="image">
-      <img src="assets/lander/metrics.png" width="380" />
+    <div class="metrics-graphic">
+      <svg width="100%" height="100%" version="1.1">
+        <defs>
+          <linearGradient id="colorRed" x1="0" y1="0" x2="0" y2="1">
+            <stop offset="5%" stop-color="#BE2F2B" stop-opacity="0.9"></stop>
+            <stop offset="95%" stop-color="#BE2F2B" stop-opacity="0.0"></stop>
+          </linearGradient>
+        </defs>
+        <g>
+          <g>
+            <path stroke="none" fill="url(#colorRed)" fill-opacity="0.6" width="100%" height="100%" d="M5,83.75L48.5,72.5L92,27.5L135.5,16.25L179,55.625L222.5,89.375L266,50L309.5,66.875L353,78.125L396.5,72.5L440,33.125L483.5,10.625L527,21.875L570.5,38.75L614,78.125L657.5,61.25L701,33.125L744.5,21.875L788,16.25L831.5,38.75L875,21.875L875,140L831.5,140L788,140L744.5,140L701,140L657.5,140L614,140L570.5,140L527,140L483.5,140L440,140L396.5,140L353,140L309.5,140L266,140L222.5,140L179,140L135.5,140L92,140L48.5,140L5,140Z"></path>
+            <path stroke="#BE2F2B" fill="none" fill-opacity="0.6" width="100%" height="100%" d="M5,83.75L48.5,72.5L92,27.5L135.5,16.25L179,55.625L222.5,89.375L266,50L309.5,66.875L353,78.125L396.5,72.5L440,33.125L483.5,10.625L527,21.875L570.5,38.75L614,78.125L657.5,61.25L701,33.125L744.5,21.875L788,16.25L831.5,38.75L875,21.875"></path>
+          </g>
+        </g>
+      </svg>
+    </div>
+    <div class="points">
+      <div class="point">
+        <h6>Live logs &amp; metrics</h6>
+        <p>Seed collects and displays live metrics from CloudWatch for both Lambdas and API Gateway.</p>
+        <a href="/docs/viewing-metrics.html">
+          Learn more &gt;
+        </a>
+      </div>
+      <div class="point">
+        <h6>Resource management</h6>
+        <p>Have a overview of all Lambda resources deployed in the project.</p>
+        <a href="">
+          Learn more &gt;
+        </a>
+      </div>
+      <div class="point">
+        <h6>API management</h6>
+        <p>Turnkey solution for manage API domain and access logs across environments.</p>
+        <a href="/docs/configuring-custom-domains.html">
+          Learn more &gt;
+        </a>
+      </div>
     </div>
   </div>
-
-  <hr />
-
-  <div class="beta">
-    <div class="icon">
-      <i class="fa fa-list-alt" aria-hidden="true"></i>
-    </div>
-    <div class="description">
-      <h4>Large Serverless Projects?</h4>
-      <p>
-        Working on a mono-repo or multi-repo Serverless project and would like to use Seed? We are currently adding support for larger projects. Contact us for early access.
-      </p>
-      <a href="mailto:{{ site.email }}?subject=Large%20Serverless%20Projects">
-        Request early access
-      </a>
-    </div>
-  </div>
-
-  -->
 
 </div>
 
 <div class="testimonials">
-  <h4 id="testimonials">Seed is perfect for&hellip;</h4>
+  <h4 id="testimonials">Used by teams of different sizes around the globe</h4>
   <div class="list">
     <div class="testimonial">
       <div class="context">
@@ -401,14 +465,6 @@ layout: lander
           Unlimited users
         </li>
         <li>
-          <i class="fa-li fa fa-check"></i>
-          Unlimited projects
-        </li>
-        <li>
-          <i class="fa-li fa fa-check"></i>
-          Unlimited concurrent builds
-        </li>
-        <li>
           <i class="fa-li fa fa-long-arrow-right"></i>
           15 deploys per month
         </li>
@@ -430,14 +486,6 @@ layout: lander
           Unlimited users
         </li>
         <li>
-          <i class="fa-li fa fa-check"></i>
-          Unlimited projects
-        </li>
-        <li>
-          <i class="fa-li fa fa-check"></i>
-          Unlimited concurrent builds
-        </li>
-        <li>
           <i class="fa-li fa fa-long-arrow-right"></i>
           60 deploys per month
         </li>
@@ -453,7 +501,7 @@ layout: lander
           Standard
         </p>
         <div class="numbers">
-          <p>$47</p>
+          <p>$97</p>
           <p>per month</p>
         </div>
       </div>
@@ -463,20 +511,16 @@ layout: lander
           Unlimited users
         </li>
         <li>
-          <i class="fa-li fa fa-check"></i>
-          Unlimited projects
-        </li>
-        <li>
-          <i class="fa-li fa fa-check"></i>
-          Unlimited concurrent builds
-        </li>
-        <li>
           <i class="fa-li fa fa-long-arrow-right"></i>
-          600 deploys per month
+          1200 deploys per month
         </li>
         <li>
           <i class="fa-li fa fa-plus"></i>
-          Email support
+          Team management
+        </li>
+        <li>
+          <i class="fa-li fa fa-plus"></i>
+          Standard email support
         </li>
       </ul>
     </div>
@@ -486,7 +530,7 @@ layout: lander
           Premium
         </p>
         <div class="numbers">
-          <p>$197</p>
+          <p>$397</p>
           <p>per month</p>
         </div>
       </div>
@@ -496,61 +540,81 @@ layout: lander
           Unlimited users
         </li>
         <li>
-          <i class="fa-li fa fa-check"></i>
-          Unlimited projects
-        </li>
-        <li>
-          <i class="fa-li fa fa-check"></i>
-          Unlimited concurrent builds
-        </li>
-        <li>
           <i class="fa-li fa fa-long-arrow-right"></i>
-          3000 deploys per month
+          6000 deploys per month
         </li>
         <li>
           <i class="fa-li fa fa-plus"></i>
-          Priority email support
+          API access
+        </li>
+        <li>
+          <i class="fa-li fa fa-plus"></i>
+          Two-factor auth
+        </li>
+        <li>
+          <i class="fa-li fa fa-plus"></i>
+          Role based access control
+        </li>
+        <li>
+          <i class="fa-li fa fa-plus"></i>
+          Multiple downstream environments
+        </li>
+        <li>
+          <i class="fa-li fa fa-plus"></i>
+          4 business hour email support
         </li>
       </ul>
     </div>
-    <div class="pro">
+    <div class="enterprise">
       <div class="cost">
         <p class="header">
-          Pro
+          Enterprise
         </p>
         <div class="numbers">
-          <p>$997</p>
-          <p>per month</p>
+          <p>
+            <a href="mailto:{{ site.sales_email }}?subject=Enterprise%20plan">
+              Contact us
+            </a>
+          </p>
+          <p>for a custom plan</p>
         </div>
       </div>
       <ul class="features fa-ul">
         <li>
           <i class="fa-li fa fa-check"></i>
-          Unlimited users
+          Phone support
         </li>
         <li>
           <i class="fa-li fa fa-check"></i>
-          Unlimited projects
+          Audit logs
         </li>
         <li>
           <i class="fa-li fa fa-check"></i>
-          Unlimited concurrent builds
+          Uptime SLAs
         </li>
         <li>
-          <i class="fa-li fa fa-long-arrow-right"></i>
-          18000 deploys per month
+          <i class="fa-li fa fa-check"></i>
+          Single sign-on
         </li>
         <li>
-          <i class="fa-li fa fa-plus"></i>
-          Priority email support
+          <i class="fa-li fa fa-check"></i>
+          On premise hosting
         </li>
         <li>
-          <i class="fa-li fa fa-star"></i>
+          <i class="fa-li fa fa-check"></i>
+          GitHub Enterprise support
+        </li>
+        <li>
+          <i class="fa-li fa fa-check"></i>
+          Dedicated customer success manager
+        </li>
+        <li>
+          <i class="fa-li fa fa-check"></i>
+          Fine tuned role based acess control
+        </li>
+        <li>
+          <i class="fa-li fa fa-check"></i>
           Concierge onboarding
-        </li>
-        <li>
-          <i class="fa-li fa fa-star"></i>
-          Multi-level user roles<br /><span>Coming soon</span>
         </li>
       </ul>
     </div>

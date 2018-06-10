@@ -52,22 +52,22 @@ layout: lander
         <i class="fa fa-git-square" aria-hidden="true"></i>
         <p>Commit</p>
       </div>
-      <i class="angle"></i>
+      <div class="angle"></div>
       <div class="stage">
         <i class="fa fa-cogs" aria-hidden="true"></i>
         <p>Build</p>
       </div>
-      <i class="angle"></i>
+      <div class="angle"></div>
       <div class="stage">
         <i class="fa fa-check-square-o" aria-hidden="true"></i>
         <p>Test</p>
       </div>
-      <i class="angle"></i>
+      <div class="angle"></div>
       <div class="stage">
         <i class="fa fa-archive" aria-hidden="true"></i>
         <p>Package</p>
       </div>
-      <i class="angle"></i>
+      <div class="angle"></div>
       <div class="stage">
         <i class="fa fa-rocket" aria-hidden="true"></i>
         <p>Deploy</p>
@@ -78,42 +78,48 @@ layout: lander
         <h6>Flexible Git workflow</h6>
         <p>Easily create new Serverless stages from git branches. Each developing branch gets its own independent stage.</p>
         <a href="/docs/adding-a-stage.html">
-          Learn more &gt;
+          Learn more
+          <i class="fa fa-angle-right" aria-hidden="true"></i>
         </a>
       </div>
       <div class="point">
         <h6>Immutable artifacts</h6>
         <p>Each successful commit will generate an immutable artifact that will be used to promote to all downstream stages.</p>
         <a href="/docs/promoting-to-production.html">
-          Learn more &gt;
+          Learn more
+          <i class="fa fa-angle-right" aria-hidden="true"></i>
         </a>
       </div>
       <div class="point">
         <h6>Artifact repository <span>Beta</span></h6>
         <p>Each immutable artifact is stored securely in your AWS S3 bucket. Each artifact can be fetched at anytime and used to deploy to any downstream stage.</p>
         <a>
-          Learn more &gt;
+          Learn more
+          <i class="fa fa-angle-right" aria-hidden="true"></i>
         </a>
       </div>
       <div class="point">
         <h6>Environment variables <span>Beta</span></h6>
         <p>All environment variables are securely stored in your AWS SSM (Systems Manager).</p>
         <a href="/docs/configuring-stage-variables.html">
-          Learn more &gt;
+          Learn more
+          <i class="fa fa-angle-right" aria-hidden="true"></i>
         </a>
       </div>
       <div class="point">
         <h6>Sensitive data</h6>
         <p>Sensitive environments are encrypted with your AWS KMS keys, and stored encrypted in your AWS SSM.</p>
         <a href="/docs/storing-secrets.html">
-          Learn more &gt;
+          Learn more
+          <i class="fa fa-angle-right" aria-hidden="true"></i>
         </a>
       </div>
       <div class="point">
         <h6>Build notifications</h6>
         <p>Get notified when a build starts, succeeds, and fails via the channel you prefer, whether it is Slack, email or custom webhook.</p>
         <a href="/docs/adding-build-notifications.html">
-          Learn more &gt;
+          Learn more
+          <i class="fa fa-angle-right" aria-hidden="true"></i>
         </a>
       </div>
     </div>
@@ -130,75 +136,77 @@ layout: lander
       <p>Create and configure multiple environments for your team. Environments in Seed are based on the stages in Serverless Framework with all the perks.</p>
     </div>
     <div class="pipeline-table">
-      <div></div>
-      <div>Dev</div>
-      <div></div>
-      <div>QA</div>
-      <div>Staging</div>
-      <div></div>
-      <div>Prod</div>
-      <div>Build 1318</div>
-      <div class="info">
-        <i class="fa fa-check-circle" aria-hidden="true"></i>
-        <span>Mar 14, 2018</span>
-      </div>
-      <div></div>
-      <div class="info promote">Promote</div>
-      <div class="info promote">Promote</div>
-      <div></div>
-      <div class="info promote">Promote</div>
-      <div>Build 1317</div>
-      <div class="info">
-        <i class="fa fa-check-circle" aria-hidden="true"></i>
-        <span>Mar 13, 2018</span>
-      </div>
-      <div></div>
-      <div class="info">
-        <i class="fa fa-check-circle" aria-hidden="true"></i>
-        <span>Mar 13, 2018</span>
-      </div>
-      <div class="info">
-        <i class="fa fa-check-circle" aria-hidden="true"></i>
-        <span>Mar 13, 2018</span>
-      </div>
-      <div></div>
-      <div class="info">
-        <i class="fa fa-check-circle" aria-hidden="true"></i>
-        <span>Mar 13, 2018</span>
-      </div>
-      <div>Build 1316</div>
-      <div class="info">
-        <i class="fa fa-check-circle" aria-hidden="true"></i>
-        <span>Mar 13, 2018</span>
-      </div>
-      <div></div>
-      <div class="info">
-        <i class="fa fa-times-circle" aria-hidden="true"></i>
-        <span>Mar 13, 2018</span>
-      </div>
-      <div class="info">
-        <i class="fa fa-minus-circle" aria-hidden="true"></i>
-        <span class="hide">Mar 13, 2018</span>
-      </div>
-      <div></div>
-      <div class="info">
-        <i class="fa fa-minus-circle" aria-hidden="true"></i>
-        <span class="hide">Mar 13, 2018</span>
-      </div>
-      <div></div>
-      <div>
-        <img width="28" src="assets/aws-logo.png" />
-        Dev account
-      </div>
-      <div></div>
-      <div>
-        <img width="28" src="assets/aws-logo.png" />
-        Pre-prod account
-      </div>
-      <div></div>
-      <div>
-        <img width="28" src="assets/aws-logo.png" />
-        Prod account
+      <div class="table">
+        <div></div>
+        <div>Dev</div>
+        <div></div>
+        <div>QA</div>
+        <div>Staging</div>
+        <div></div>
+        <div>Prod</div>
+        <div>Build 1318</div>
+        <div class="info">
+          <i class="fa fa-check-circle" aria-hidden="true"></i>
+          <span>Mar 14, 2018</span>
+        </div>
+        <div></div>
+        <div class="info promote">Promote</div>
+        <div class="info promote">Promote</div>
+        <div></div>
+        <div class="info promote">Promote</div>
+        <div>Build 1317</div>
+        <div class="info">
+          <i class="fa fa-check-circle" aria-hidden="true"></i>
+          <span>Mar 13, 2018</span>
+        </div>
+        <div></div>
+        <div class="info">
+          <i class="fa fa-check-circle" aria-hidden="true"></i>
+          <span>Mar 13, 2018</span>
+        </div>
+        <div class="info">
+          <i class="fa fa-check-circle" aria-hidden="true"></i>
+          <span>Mar 13, 2018</span>
+        </div>
+        <div></div>
+        <div class="info">
+          <i class="fa fa-check-circle" aria-hidden="true"></i>
+          <span>Mar 13, 2018</span>
+        </div>
+        <div>Build 1316</div>
+        <div class="info">
+          <i class="fa fa-check-circle" aria-hidden="true"></i>
+          <span>Mar 13, 2018</span>
+        </div>
+        <div></div>
+        <div class="info">
+          <i class="fa fa-times-circle" aria-hidden="true"></i>
+          <span>Mar 13, 2018</span>
+        </div>
+        <div class="info">
+          <i class="fa fa-minus-circle" aria-hidden="true"></i>
+          <span class="hide">Mar 13, 2018</span>
+        </div>
+        <div></div>
+        <div class="info">
+          <i class="fa fa-minus-circle" aria-hidden="true"></i>
+          <span class="hide">Mar 13, 2018</span>
+        </div>
+        <div></div>
+        <div>
+          <img width="28" src="assets/aws-logo.png" />
+          Dev account
+        </div>
+        <div></div>
+        <div>
+          <img width="28" src="assets/aws-logo.png" />
+          Pre-prod account
+        </div>
+        <div></div>
+        <div>
+          <img width="28" src="assets/aws-logo.png" />
+          Prod account
+        </div>
       </div>
     </div>
     <div class="points">
@@ -206,42 +214,48 @@ layout: lander
         <h6>Pipeline visualization</h6>
         <p>One stop visualization of entire pipeline. Always know which build is running in which stage.</p>
         <a>
-          Learn more &gt;
+          Learn more
+          <i class="fa fa-angle-right" aria-hidden="true"></i>
         </a>
       </div>
       <div class="point">
         <h6>Multi-AWS account</h6>
         <p>Turnkey solution for managing stages across multiple AWS accounts. From deploying one stage per account, to multiple stages sharing the same account.</p>
         <a href="/docs/iam-credentials-per-stage.html">
-          Learn more &gt;
+          Learn more
+          <i class="fa fa-angle-right" aria-hidden="true"></i>
         </a>
       </div>
       <div class="point">
         <h6>Trusted build</h6>
         <p>The same immutable artifact used to promote across all downstream environments.</p>
         <a>
-          Learn more &gt;
+          Learn more
+          <i class="fa fa-angle-right" aria-hidden="true"></i>
         </a>
       </div>
       <div class="point">
         <h6>Manual gating</h6>
         <p>Manually review and approve promotions. Rejected builds are prohibited from being promoted.</p>
         <a href="/docs/promoting-to-production.html">
-          Learn more &gt;
+          Learn more
+          <i class="fa fa-angle-right" aria-hidden="true"></i>
         </a>
       </div>
       <div class="point">
         <h6>Rollback any version</h6>
         <p>Any past immutable artifact can be re-deployed at any time. No re-packaging.</p>
         <a href="/docs/rolling-back.html">
-          Learn more &gt;
+          Learn more
+          <i class="fa fa-angle-right" aria-hidden="true"></i>
         </a>
       </div>
       <div class="point">
         <h6>Bring your own CI <span>Beta</span></h6>
         <p>Seamlessly integrate with your existing CI system. Seed CD will listen to new builds in your artifact repository, and automatically trigger the pipeline.</p>
         <a>
-          Learn more &gt;
+          Learn more
+          <i class="fa fa-angle-right" aria-hidden="true"></i>
         </a>
       </div>
     </div>
@@ -313,42 +327,48 @@ layout: lander
         <h6>Service management</h6>
         <p>Seamlessly add all Serverless services by specifying the path. Seed let's you manage all the services as a whole.</p>
         <a href="">
-          Learn more &gt;
+          Learn more
+          <i class="fa fa-angle-right" aria-hidden="true"></i>
         </a>
       </div>
       <div class="point">
         <h6>Service dependencies  <span>Beta</span></h6>
         <p>Coordinate the deployment process between multiple services. Ability to define complex deployment structure with parallel and sequential deployments.</p>
         <a href="">
-          Learn more &gt;
+          Learn more
+          <i class="fa fa-angle-right" aria-hidden="true"></i>
         </a>
       </div>
       <div class="point">
         <h6>Git workflow</h6>
         <p>Each commit triggers all services to be deployed at the same time.</p>
         <a href="">
-          Learn more &gt;
+          Learn more
+          <i class="fa fa-angle-right" aria-hidden="true"></i>
         </a>
       </div>
       <div class="point">
         <h6>Environment</h6>
         <p>Simple environment context inheritance model. Configure and manage environments across all services.</p>
         <a href="">
-          Learn more &gt;
+          Learn more
+          <i class="fa fa-angle-right" aria-hidden="true"></i>
         </a>
       </div>
       <div class="point">
         <h6>Pipelines</h6>
         <p>Ability to configure and manage stage environments across all services. Deploy and rollback across all services as a whole.</p>
         <a href="">
-          Learn more &gt;
+          Learn more
+          <i class="fa fa-angle-right" aria-hidden="true"></i>
         </a>
       </div>
       <div class="point">
         <h6>Trusted build</h6>
         <p>Artifacts are generated and securely stored for all services on every commit.</p>
         <a href="">
-          Learn more &gt;
+          Learn more
+          <i class="fa fa-angle-right" aria-hidden="true"></i>
         </a>
       </div>
     </div>
@@ -379,7 +399,7 @@ layout: lander
               <path stroke="#BE2F2B" fill="none" fill-opacity="0.6" width="870" height="135" d="M5,95L56.1764705882353,72.5L107.3529411764706,78.125L158.52941176470588,50L209.7058823529412,21.875L260.88235294117646,5L312.05882352941177,33.125L363.2352941176471,21.875L414.4117647058824,61.25L465.5882352941177,72.5L516.7647058823529,55.625L567.9411764705883,38.75L619.1176470588235,33.125L670.2941176470589,21.875L721.4705882352941,38.75L772.6470588235295,44.375L823.8235294117648,61.25L875,72.5"></path>
             </g>
             <g>
-              <circle r="4" stroke="white" fill="#BE2F2B" fill-opacity="1" width="870" height="135" cx="516.7647058823529" cy="55.625" stroke-width="2"></circle>
+              <circle r="4" stroke="white" fill="#BE2F2B" fill-opacity="1" width="870" height="135" cx="146.5" cy="55.625" stroke-width="2"></circle>
             </g>
           </g>
         </svg>
@@ -395,21 +415,24 @@ layout: lander
         <h6>Live logs &amp; metrics</h6>
         <p>Seed collects and displays live metrics from CloudWatch for both Lambdas and API Gateway.</p>
         <a href="/docs/viewing-metrics.html">
-          Learn more &gt;
+          Learn more
+          <i class="fa fa-angle-right" aria-hidden="true"></i>
         </a>
       </div>
       <div class="point">
         <h6>Resource management</h6>
         <p>Have a overview of all Lambda resources deployed in the project.</p>
         <a href="">
-          Learn more &gt;
+          Learn more
+          <i class="fa fa-angle-right" aria-hidden="true"></i>
         </a>
       </div>
       <div class="point">
         <h6>API management</h6>
         <p>Turnkey solution for manage API domain and access logs across environments.</p>
         <a href="/docs/configuring-custom-domains.html">
-          Learn more &gt;
+          Learn more
+          <i class="fa fa-angle-right" aria-hidden="true"></i>
         </a>
       </div>
     </div>
@@ -517,8 +540,8 @@ layout: lander
       </div>
       <ul class="features fa-ul">
         <li>
-          <i class="fa-li fa fa-check"></i>
-          Unlimited users
+          <i class="fa-li fa fa-ellipsis-h"></i>
+          Everything in Startup
         </li>
         <li>
           <i class="fa-li fa fa-long-arrow-right"></i>
@@ -546,8 +569,8 @@ layout: lander
       </div>
       <ul class="features fa-ul">
         <li>
-          <i class="fa-li fa fa-check"></i>
-          Unlimited users
+          <i class="fa-li fa fa-ellipsis-h"></i>
+          Everything in Standard
         </li>
         <li>
           <i class="fa-li fa fa-long-arrow-right"></i>
@@ -591,8 +614,8 @@ layout: lander
       </div>
       <ul class="features fa-ul">
         <li>
-          <i class="fa-li fa fa-check-circle"></i>
-          Phone support
+          <i class="fa-li fa fa-ellipsis-h"></i>
+          Everything in Premium
         </li>
         <li>
           <i class="fa-li fa fa-check-circle"></i>
@@ -604,6 +627,10 @@ layout: lander
         </li>
         <li>
           <i class="fa-li fa fa-check-circle"></i>
+          Phone support
+        </li>
+        <li>
+          <i class="fa-li fa fa-check-circle"></i>
           Single sign-on
         </li>
         <li>
@@ -612,19 +639,19 @@ layout: lander
         </li>
         <li>
           <i class="fa-li fa fa-check-circle"></i>
-          GitHub Enterprise support
-        </li>
-        <li>
-          <i class="fa-li fa fa-check-circle"></i>
           Dedicated customer success manager
         </li>
         <li>
           <i class="fa-li fa fa-check-circle"></i>
-          Fine tuned role based acess control
+          Concierge onboarding
         </li>
         <li>
           <i class="fa-li fa fa-check-circle"></i>
-          Concierge onboarding
+          GitHub Enterprise support
+        </li>
+        <li>
+          <i class="fa-li fa fa-check-circle"></i>
+          Fine tuned role based acess control
         </li>
       </ul>
     </div>
@@ -641,7 +668,7 @@ layout: lander
   <div class="extra">
     <hr />
     <p>
-      There are soft limits on build minutes. <a href="{% link concierge-onboarding.md %}">Concierge Onboarding</a> is included free in the Pro plan. <a href="mailto:{{ site.email }}">Contact us</a> if you have any questions or have custom requirements.
+      There are soft limits on build minutes. <a href="{% link concierge-onboarding.md %}">Concierge Onboarding</a> is included free in the Enterprise plan. <a href="mailto:{{ site.email }}">Contact us</a> if you have any questions or have custom requirements.
     </p>
   </div>
 </div>

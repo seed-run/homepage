@@ -748,6 +748,30 @@ main > .features {
       margin: $spacing-unit * 2 auto 0;
       width: 760px;
       height: 135px;
+      position: relative;
+
+      div.tooltip-wrapper {
+        pointer-events: none;
+        visibility: visible;
+        position: absolute;
+        top: 0px;
+        transform: translate(526px, 64px);
+
+        div.custom-tooltip {
+          padding: 6px 7px;
+          background-color: white;
+          border-radius: 3px;
+          box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+
+          p {
+            margin-bottom: 0;
+            color: #5D5966;
+            font-size: 13px;
+            font-weight: 500;
+            line-height: 1;
+          }
+        }
+      }
     }
 
     div.points {

@@ -365,20 +365,30 @@ layout: lander
       <p>Once your deployments are live, Seed can pull up detailed information on the deployed stack. And give you a live look at what is going on.</p>
     </div>
     <div class="metrics-graphic">
-      <svg width="100%" height="100%" version="1.1">
-        <defs>
-          <linearGradient id="colorRed" x1="0" y1="0" x2="0" y2="1">
-            <stop offset="5%" stop-color="#BE2F2B" stop-opacity="0.9"></stop>
-            <stop offset="95%" stop-color="#BE2F2B" stop-opacity="0.0"></stop>
-          </linearGradient>
-        </defs>
-        <g>
+      <div class="graph">
+        <svg width="100%" height="100%" version="1.1">
+          <defs>
+            <linearGradient id="colorRed" x1="0" y1="0" x2="0" y2="1">
+              <stop offset="5%" stop-color="#BE2F2B" stop-opacity="0.9"></stop>
+              <stop offset="95%" stop-color="#BE2F2B" stop-opacity="0.1"></stop>
+            </linearGradient>
+          </defs>
           <g>
-            <path stroke="none" fill="url(#colorRed)" fill-opacity="0.6" width="100%" height="100%" d="M5,83.75L48.5,72.5L92,27.5L135.5,16.25L179,55.625L222.5,89.375L266,50L309.5,66.875L353,78.125L396.5,72.5L440,33.125L483.5,10.625L527,21.875L570.5,38.75L614,78.125L657.5,61.25L701,33.125L744.5,21.875L788,16.25L831.5,38.75L875,21.875L875,140L831.5,140L788,140L744.5,140L701,140L657.5,140L614,140L570.5,140L527,140L483.5,140L440,140L396.5,140L353,140L309.5,140L266,140L222.5,140L179,140L135.5,140L92,140L48.5,140L5,140Z"></path>
-            <path stroke="#BE2F2B" fill="none" fill-opacity="0.6" width="100%" height="100%" d="M5,83.75L48.5,72.5L92,27.5L135.5,16.25L179,55.625L222.5,89.375L266,50L309.5,66.875L353,78.125L396.5,72.5L440,33.125L483.5,10.625L527,21.875L570.5,38.75L614,78.125L657.5,61.25L701,33.125L744.5,21.875L788,16.25L831.5,38.75L875,21.875"></path>
+            <g>
+              <path stroke="none" fill="url(#colorRed)" fill-opacity="0.6" width="870" height="135" d="M5,95L56.1764705882353,72.5L107.3529411764706,78.125L158.52941176470588,50L209.7058823529412,21.875L260.88235294117646,5L312.05882352941177,33.125L363.2352941176471,21.875L414.4117647058824,61.25L465.5882352941177,72.5L516.7647058823529,55.625L567.9411764705883,38.75L619.1176470588235,33.125L670.2941176470589,21.875L721.4705882352941,38.75L772.6470588235295,44.375L823.8235294117648,61.25L875,72.5L875,140L823.8235294117648,140L772.6470588235295,140L721.4705882352941,140L670.2941176470589,140L619.1176470588235,140L567.9411764705883,140L516.7647058823529,140L465.5882352941177,140L414.4117647058824,140L363.2352941176471,140L312.05882352941177,140L260.88235294117646,140L209.7058823529412,140L158.52941176470588,140L107.3529411764706,140L56.1764705882353,140L5,140Z"></path>
+              <path stroke="#BE2F2B" fill="none" fill-opacity="0.6" width="870" height="135" d="M5,95L56.1764705882353,72.5L107.3529411764706,78.125L158.52941176470588,50L209.7058823529412,21.875L260.88235294117646,5L312.05882352941177,33.125L363.2352941176471,21.875L414.4117647058824,61.25L465.5882352941177,72.5L516.7647058823529,55.625L567.9411764705883,38.75L619.1176470588235,33.125L670.2941176470589,21.875L721.4705882352941,38.75L772.6470588235295,44.375L823.8235294117648,61.25L875,72.5"></path>
+            </g>
+            <g>
+              <circle r="4" stroke="white" fill="#BE2F2B" fill-opacity="1" width="870" height="135" cx="516.7647058823529" cy="55.625" stroke-width="2"></circle>
+            </g>
           </g>
-        </g>
-      </svg>
+        </svg>
+        <div class="tooltip-wrapper">
+          <div class="custom-tooltip">
+            <p>Requests: 1413</p>
+          </div>
+        </div>
+      </div>
     </div>
     <div class="points">
       <div class="point">
@@ -581,39 +591,39 @@ layout: lander
       </div>
       <ul class="features fa-ul">
         <li>
-          <i class="fa-li fa fa-check"></i>
+          <i class="fa-li fa fa-check-circle"></i>
           Phone support
         </li>
         <li>
-          <i class="fa-li fa fa-check"></i>
+          <i class="fa-li fa fa-check-circle"></i>
           Audit logs
         </li>
         <li>
-          <i class="fa-li fa fa-check"></i>
+          <i class="fa-li fa fa-check-circle"></i>
           Uptime SLAs
         </li>
         <li>
-          <i class="fa-li fa fa-check"></i>
+          <i class="fa-li fa fa-check-circle"></i>
           Single sign-on
         </li>
         <li>
-          <i class="fa-li fa fa-check"></i>
+          <i class="fa-li fa fa-check-circle"></i>
           On premise hosting
         </li>
         <li>
-          <i class="fa-li fa fa-check"></i>
+          <i class="fa-li fa fa-check-circle"></i>
           GitHub Enterprise support
         </li>
         <li>
-          <i class="fa-li fa fa-check"></i>
+          <i class="fa-li fa fa-check-circle"></i>
           Dedicated customer success manager
         </li>
         <li>
-          <i class="fa-li fa fa-check"></i>
+          <i class="fa-li fa fa-check-circle"></i>
           Fine tuned role based acess control
         </li>
         <li>
-          <i class="fa-li fa fa-check"></i>
+          <i class="fa-li fa fa-check-circle"></i>
           Concierge onboarding
         </li>
       </ul>

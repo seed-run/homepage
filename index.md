@@ -45,7 +45,7 @@ layout: lander
         <i class="fa fa-code-fork" aria-hidden="true"></i>
       </div>
       <h2>Continuous Integration</h2>
-      <p>Seed is a fully-configured code pipeline for Serverless Framework projects on AWS. Here are a few ways Seed can help you with deployments.</p>
+      <p>Seed is a fully-configured code pipeline for Serverless Framework projects on AWS. Here are a few ways Seed can help you with continuous integration.</p>
     </div>
     <div class="ci-graphic">
       <div class="stage">
@@ -76,7 +76,7 @@ layout: lander
     <div class="points">
       <div class="point">
         <h6>Flexible Git workflow</h6>
-        <p>Easily create new Serverless stages from git branches. Each developing branch gets its own independent stage.</p>
+        <p>Easily create new Serverless stages from Git branches. Each feature branch gets its own independent stage.</p>
         <a href="/docs/adding-a-stage.html">
           Learn more
           <i class="fa fa-angle-right" aria-hidden="true"></i>
@@ -84,7 +84,7 @@ layout: lander
       </div>
       <div class="point">
         <h6>Immutable artifacts</h6>
-        <p>Each successful commit will generate an immutable artifact that will be used to promote to all downstream stages.</p>
+        <p>Every successful commit generates an immutable artifact that will be used to promote to all downstream stages.</p>
         <a href="/docs/promoting-to-production.html">
           Learn more
           <i class="fa fa-angle-right" aria-hidden="true"></i>
@@ -92,23 +92,15 @@ layout: lander
       </div>
       <div class="point">
         <h6>Artifact repository <span>Beta</span></h6>
-        <p>Each immutable artifact is stored securely in your AWS S3 bucket. Each artifact can be fetched at anytime and used to deploy to any downstream stage.</p>
-        <a>
-          Learn more
-          <i class="fa fa-angle-right" aria-hidden="true"></i>
-        </a>
+        <p>Immutable artifacts are stored securely in your AWS S3 bucket. Each artifact can be fetched at anytime and used to deploy to any downstream stage.</p>
       </div>
       <div class="point">
         <h6>Environment variables <span>Beta</span></h6>
-        <p>All environment variables are securely stored in your AWS SSM (Systems Manager).</p>
-        <a href="/docs/configuring-stage-variables.html">
-          Learn more
-          <i class="fa fa-angle-right" aria-hidden="true"></i>
-        </a>
+        <p>Environment variables configured through Seed are securely stored using your AWS Systems Manager.</p>
       </div>
       <div class="point">
         <h6>Sensitive data</h6>
-        <p>Sensitive environments are encrypted with your AWS KMS keys, and stored encrypted in your AWS SSM.</p>
+        <p>Sensitive environment variables are encrypted with your AWS KMS keys, and stored using your AWS Systems Manager.</p>
         <a href="/docs/storing-secrets.html">
           Learn more
           <i class="fa fa-angle-right" aria-hidden="true"></i>
@@ -116,7 +108,7 @@ layout: lander
       </div>
       <div class="point">
         <h6>Build notifications</h6>
-        <p>Get notified when a build starts, succeeds, and fails via the channel you prefer, whether it is Slack, email or custom webhook.</p>
+        <p>Get notified when a build starts, succeeds, or fails via the channel you prefer, whether it is Slack, email, or through a custom webhook.</p>
         <a href="/docs/adding-build-notifications.html">
           Learn more
           <i class="fa fa-angle-right" aria-hidden="true"></i>
@@ -133,7 +125,7 @@ layout: lander
         <i class="fa fa-refresh" aria-hidden="true"></i>
       </div>
       <h2>Continuous Delivery</h2>
-      <p>Create and configure multiple environments for your team. Environments in Seed are based on the stages in Serverless Framework with all the perks.</p>
+      <p>Create and configure multiple environments for your team. Monitor and visualize your pipelines using our simple and easy to use console.</p>
     </div>
     <div class="pipeline-table">
       <div class="table">
@@ -212,51 +204,39 @@ layout: lander
     <div class="points">
       <div class="point">
         <h6>Pipeline visualization</h6>
-        <p>One stop visualization of entire pipeline. Always know which build is running in which stage.</p>
-        <a>
-          Learn more
-          <i class="fa fa-angle-right" aria-hidden="true"></i>
-        </a>
+        <p>One stop visualization of your entire pipeline. Always know which build and git commit is deployed in which stage.</p>
       </div>
       <div class="point">
-        <h6>Multi-AWS account</h6>
-        <p>Turnkey solution for managing stages across multiple AWS accounts. From deploying one stage per account, to multiple stages sharing the same account.</p>
+        <h6>Multiple AWS accounts</h6>
+        <p>Manage stages across multiple AWS accounts. Deploy one stage per account or configure your pipeline to deploy multiple stages to the same account.</p>
         <a href="/docs/iam-credentials-per-stage.html">
           Learn more
           <i class="fa fa-angle-right" aria-hidden="true"></i>
         </a>
       </div>
       <div class="point">
-        <h6>Trusted build</h6>
-        <p>The same immutable artifact used to promote across all downstream environments.</p>
-        <a>
-          Learn more
-          <i class="fa fa-angle-right" aria-hidden="true"></i>
-        </a>
+        <h6>Trusted builds</h6>
+        <p>The same immutable artifact is used to promote across all downstream environments ensuring build consistency.</p>
       </div>
       <div class="point">
         <h6>Manual gating</h6>
-        <p>Manually review and approve promotions. Rejected builds are prohibited from being promoted.</p>
+        <p>Manually review and approve promotions. Verify CloudFormation Change Sets as a part of the review process.</p>
         <a href="/docs/promoting-to-production.html">
           Learn more
           <i class="fa fa-angle-right" aria-hidden="true"></i>
         </a>
       </div>
       <div class="point">
-        <h6>Rollback any version</h6>
-        <p>Any past immutable artifact can be re-deployed at any time. No re-packaging.</p>
+        <h6>Rollback to any version</h6>
+        <p>Any past trusted build can be re-deployed at any time. Single-click rollback without any repackaging.</p>
         <a href="/docs/rolling-back.html">
           Learn more
           <i class="fa fa-angle-right" aria-hidden="true"></i>
         </a>
       </div>
       <div class="point">
-        <h6>Bring your own CI <span>Beta</span></h6>
-        <p>Seamlessly integrate with your existing CI system. Seed CD will listen to new builds in your artifact repository, and automatically trigger the pipeline.</p>
-        <a>
-          Learn more
-          <i class="fa fa-angle-right" aria-hidden="true"></i>
-        </a>
+        <h6>Connect your CI <span>Beta</span></h6>
+        <p>Seamlessly integrate with your existing CI system. Seed will listen for new builds in your artifact repository and automatically trigger the pipeline.</p>
       </div>
     </div>
   </div>
@@ -269,7 +249,7 @@ layout: lander
         <i class="fa fa-sitemap" aria-hidden="true"></i>
       </div>
       <h2>Mono-Repo Workflow</h2>
-      <p>Seed supports mono-repo serverless applications with very little configuration. Simply add your repo and specifiy the services within the repo.</p>
+      <p>Seed supports mono-repo Serverless applications with very little configuration. Simply connect your repo and add your services.</p>
     </div>
     <div class="mono-repo-graphic">
       <div class="root folder">
@@ -325,51 +305,27 @@ layout: lander
     <div class="points">
       <div class="point">
         <h6>Service management</h6>
-        <p>Seamlessly add all Serverless services by specifying the path. Seed let's you manage all the services as a whole.</p>
-        <a href="">
-          Learn more
-          <i class="fa fa-angle-right" aria-hidden="true"></i>
-        </a>
+        <p>Add all your Serverless services by specifying their path. Seed lets you manage all the services as a whole.</p>
       </div>
       <div class="point">
         <h6>Service dependencies  <span>Beta</span></h6>
-        <p>Coordinate the deployment process between multiple services. Ability to define complex deployment structure with parallel and sequential deployments.</p>
-        <a href="">
-          Learn more
-          <i class="fa fa-angle-right" aria-hidden="true"></i>
-        </a>
+        <p>Coordinate the deployment process between multiple services. Define complex workflows with parallel and sequential deployments.</p>
       </div>
       <div class="point">
-        <h6>Git workflow</h6>
-        <p>Each commit triggers all services to be deployed at the same time.</p>
-        <a href="">
-          Learn more
-          <i class="fa fa-angle-right" aria-hidden="true"></i>
-        </a>
+        <h6>Concurrent deployments</h6>
+        <p>A Git commit triggers concurrent deployment across all services. This drastically reduces deployment times for large mono-repo projects.</p>
       </div>
       <div class="point">
-        <h6>Environment</h6>
-        <p>Simple environment context inheritance model. Configure and manage environments across all services.</p>
-        <a href="">
-          Learn more
-          <i class="fa fa-angle-right" aria-hidden="true"></i>
-        </a>
+        <h6>Environments</h6>
+        <p>Seed uses a simple environment context inheritance model. Configure and manage environments across all services.</p>
       </div>
       <div class="point">
         <h6>Pipelines</h6>
-        <p>Ability to configure and manage stage environments across all services. Deploy and rollback across all services as a whole.</p>
-        <a href="">
-          Learn more
-          <i class="fa fa-angle-right" aria-hidden="true"></i>
-        </a>
+        <p>Configure and visualize your pipeline across all your services. Promote and rollback builds for all your services as a whole.</p>
       </div>
       <div class="point">
-        <h6>Trusted build</h6>
-        <p>Artifacts are generated and securely stored for all services on every commit.</p>
-        <a href="">
-          Learn more
-          <i class="fa fa-angle-right" aria-hidden="true"></i>
-        </a>
+        <h6>Trusted builds</h6>
+        <p>Artifacts are generated and securely stored for all your services on every commit.</p>
       </div>
     </div>
   </div>
@@ -382,7 +338,7 @@ layout: lander
         <i class="fa fa-tachometer" aria-hidden="true"></i>
       </div>
       <h2>Manage &amp; Monitor</h2>
-      <p>Once your deployments are live, Seed can pull up detailed information on the deployed stack. And give you a live look at what is going on.</p>
+      <p>Seed can help you monitor your deployed stack in detail and give you a live look at how it's performing.</p>
     </div>
     <div class="metrics-graphic">
       <div class="graph">
@@ -413,7 +369,7 @@ layout: lander
     <div class="points">
       <div class="point">
         <h6>Live logs &amp; metrics</h6>
-        <p>Seed collects and displays live metrics from CloudWatch for both Lambdas and API Gateway.</p>
+        <p>Seed organizes and displays live metrics from CloudWatch for the Lambda and API Gateway resources in your stack.</p>
         <a href="/docs/viewing-metrics.html">
           Learn more
           <i class="fa fa-angle-right" aria-hidden="true"></i>
@@ -421,15 +377,11 @@ layout: lander
       </div>
       <div class="point">
         <h6>Resource management</h6>
-        <p>Have a overview of all Lambda resources deployed in the project.</p>
-        <a href="">
-          Learn more
-          <i class="fa fa-angle-right" aria-hidden="true"></i>
-        </a>
+        <p>Get a clear overview of all the resources deployed in your application including your Lambda and API Gateway endpoints.</p>
       </div>
       <div class="point">
         <h6>API management</h6>
-        <p>Turnkey solution for manage API domain and access logs across environments.</p>
+        <p>Turnkey solution for managing your API custom-domains and access logs across environments.</p>
         <a href="/docs/configuring-custom-domains.html">
           Learn more
           <i class="fa fa-angle-right" aria-hidden="true"></i>
@@ -635,11 +587,11 @@ layout: lander
         </li>
         <li>
           <i class="fa-li fa fa-check-circle"></i>
-          On premise hosting
+          On-premise hosting
         </li>
         <li>
           <i class="fa-li fa fa-check-circle"></i>
-          Dedicated customer success manager
+          Dedicated account manager
         </li>
         <li>
           <i class="fa-li fa fa-check-circle"></i>
@@ -651,7 +603,7 @@ layout: lander
         </li>
         <li>
           <i class="fa-li fa fa-check-circle"></i>
-          Fine tuned role based acess control
+          Fine tuned role based access control
         </li>
       </ul>
     </div>

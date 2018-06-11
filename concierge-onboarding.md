@@ -88,7 +88,7 @@ title: SEED Concierge Onboarding
   </div>
 
   <div class="closing">
-    <p>Concierge Onboarding is included free in our <a href="/#pricing">Pro plans</a>. Contact sales if you'd like to add it to your plan.</p>
+    <p>Concierge Onboarding is included free in our <a href="/#pricing">Enterprise plans</a>. Contact sales if you'd like to add it to your plan.</p>
     <div class="controls">
       <a class="contact" href="mailto:{{ site.sales_email }}?subject=Concierge%20Onboarding">
         Contact Sales

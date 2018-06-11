@@ -514,6 +514,9 @@ a:active {
   }
 }
 
+////////////
+// HEADER //
+////////////
 main > .header {
   padding: 0 $spacing-unit / 2 2 * $spacing-unit;
   background-color: $hero-bkg-color;
@@ -553,6 +556,9 @@ main > .header {
   }
 }
 
+////////////
+// ACTION //
+////////////
 main > .action {
   position: relative;
   padding: 0 $spacing-unit / 2;
@@ -665,6 +671,9 @@ main > .platforms {
   }
 }
 
+//////////////
+// FEATURES //
+//////////////
 main > .features {
   padding-bottom: $spacing-unit * 3;
 
@@ -741,7 +750,7 @@ main > .features {
       }
 
       div.point {
-        margin: $spacing-unit $spacing-unit / 2 0;
+        margin: $spacing-unit $spacing-unit / 2 + 5px 0;
         flex: 0 0 264px;
 
         @include media-query($on-palm) {
@@ -775,6 +784,7 @@ main > .features {
           display: inline-block;
 
           i {
+            margin-left: 2px;
             vertical-align: 0;
           }
         }
@@ -798,6 +808,9 @@ main > .features {
   }
 }
 
+/////////////
+// REVIEWS //
+/////////////
 main > .testimonials {
   background-color: darken($brand-color, 5%);
   background-image: $diamond-pattern;
@@ -899,6 +912,9 @@ main > .testimonials {
   }
 }
 
+/////////////
+// PRICING //
+/////////////
 main > .pricing {
   padding: $spacing-unit * 2 + 10px 0;
   border-top: 2px solid $accent-color;
@@ -1080,6 +1096,9 @@ main > .pricing {
   }
 }
 
+/////////////
+// CLOSING //
+/////////////
 main > .closing {
   border-top: 2px solid darken($hero-bkg-color, 5%);
   padding: $spacing-unit * 2 + 10px 0 $spacing-unit * 3;
@@ -1107,7 +1126,7 @@ main > .closing {
     margin-bottom: $spacing-unit - 5px;
     a.signup {
       margin-right: $spacing-unit / 2 + 1px;
-      @include action-button-dark;
+      @include action-button-brand;
       padding: 14px 26px;
       width: 222px;
 
@@ -1189,6 +1208,9 @@ main > .closing {
   font-size: 18px;
 }
 
+/////////////////
+// ABOUTE PAGE //
+/////////////////
 main > .wrapper > .about {
 
   .header {
@@ -1319,6 +1341,9 @@ main > .wrapper > .about {
 
 }
 
+/////////////////////
+// ONBOARDING PAGE //
+/////////////////////
 main > .concierge {
 
   .header {

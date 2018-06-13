@@ -11,7 +11,15 @@ When you first create a Seed project, an encryption key is generated and stored 
 
 You can then access them in your Node.js Lambda functions using the `process.env` object.
 
-To create a secret variable, navigate to the stage in your Seed console and select **Settings**.
+To add a secret, select the service you want to add it to.
+
+![Select service](/assets/docs/storing-secrets/select-service.png)
+
+Then select the stage.
+
+![Select service stage](/assets/docs/storing-secrets/select-service-stage.png)
+
+And hit **Settings**.
 
 ![Stage Settings](/assets/docs/storing-secrets/stage-settings.png)
 

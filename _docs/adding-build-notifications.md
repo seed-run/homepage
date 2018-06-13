@@ -3,9 +3,21 @@ layout: docs
 title: Adding Build Notifications
 ---
 
-Seed makes it easy to configure your stages with email and slack notifications. Notifications are sent when a build is deployed to the given stage.
+Seed makes it easy to configure your stages with email and slack notifications. Notifications are sent when a build is deployed to a stage.
 
 You can configure each stage separately. For example, maybe you only want to be notified for updates to the production stage. Or maybe you want a specific stage to notify a specific member on your team.
+
+To add build notifications, first select the service.
+
+![Select service](/assets/docs/adding-build-notifications/select-service.png)
+
+And select the stage.
+
+![Select service stage](/assets/docs/adding-build-notifications/select-service-stage.png)
+
+And from the **Settings**, select **Show Notification Options**.
+
+![Select service stage settings](/assets/docs/adding-build-notifications/select-service-stage-settings.png)
 
 ### Email Notifications
 

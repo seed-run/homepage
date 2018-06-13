@@ -17,22 +17,30 @@ Push the branch to remote.
 $ git push -u origin new-branch
 ```
 
-Go to Seed console, navigate to your project and select **Add Stage**.
+Go to Seed console, navigate to your project and select **Create a Stage**.
 
-![Add Stage](/assets/docs/adding-a-stage/add-stage.png)
+![Click Create a Stage Button](/assets/docs/adding-a-stage/click-create-a-stage.png)
 
-Select `new-branch` from the drop down, give it a **Stage Name**, and select **Add Stage**. A default stage name is pre-filled based on the branch name, you can select a different name.
+Select a branch (for example, `new-branch`) from the drop down, give it a **Stage Name**, and select **Create Stage**. A default stage name is pre-filled based on the branch name, you can select a different name.
 
 ![Select Branch](/assets/docs/adding-a-stage/select-branch.png)
 
 The stage name is used internally while deploying the project via `serverless deploy --stage STAGE_NAME`. The stage name is also used to [configure stage variables]({% link _docs/configuring-stage-variables.md %}). 
 
-When a new stage is created, Seed triggers a build automatically.
+Once a stage is created, it is available across all the services in the app.
 
-![Build Stage](/assets/docs/adding-a-stage/build-stage.png)
+![New stage added](/assets/docs/adding-a-stage/new-stage-added.png)
 
-If the build is successful and tests pass, the stage gets deployed. At the same time, a verified build is packaged for production. You can read more about this in the [Promoting to production]({% link _docs/promoting-to-production.md %}) chapter.
+You can now click on the stage to take a look at the services deployed in this stage.
+
+![New stage](/assets/docs/adding-a-stage/new-stage.png)
+
+And for that service, you create your first build for the stage by either hitting **Trigger Deploy** or by pushing a commit to the branch that is linked to the stage.
+
+![New stage service](/assets/docs/adding-a-stage/new-stage-service.png)
+
+If the build is successful and tests pass, the service gets deployed to this stage. At the same time, a verified build is packaged for production. You can read more about this in the [Promoting to production]({% link _docs/promoting-to-production.md %}) chapter.
 
 ![Build Stage Successful](/assets/docs/adding-a-stage/build-stage-success.png)
 
-Seed automatically creates a new build for the stage when you `git push` to the update the remote branch.
+Once a stage has been added, Seed will automatically create a new build when you `git push` to the update the remote branch.

@@ -15,7 +15,7 @@ Here Seed gives you a clear overview of the Lambda functions that have been depl
 
 ![Deployment Info](/assets/docs/viewing-logs/deployment-info.png)
 
-And hit **View Logs**.
+Hit **Logs** for a Lambda you are interested in.
 
 ![Lambda Logs](/assets/docs/viewing-logs/lambda-logs.png)
 
@@ -37,7 +37,7 @@ You can enable it by heading over to the **Deployment Settings** and hitting **E
 
 ![Enable Access Logs](/assets/docs/viewing-logs/enable-access-logs.png)
 
-With the access logs enabled, you can **View Deployment** and hit **View Access Logs**.
+With the access logs enabled, hit **Access Logs** for the API Gateway endpoint.
 
 ![View Access Logs](/assets/docs/viewing-logs/view-access-logs.png)
 

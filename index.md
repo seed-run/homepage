@@ -450,6 +450,10 @@ layout: lander
           Unlimited users
         </li>
         <li>
+          <i class="fa-li fa fa-check"></i>
+          Unlimited apps
+        </li>
+        <li>
           <i class="fa-li fa fa-long-arrow-right"></i>
           15 deploys per month
         </li>
@@ -469,6 +473,10 @@ layout: lander
         <li>
           <i class="fa-li fa fa-check"></i>
           Unlimited users
+        </li>
+        <li>
+          <i class="fa-li fa fa-check"></i>
+          Unlimited apps
         </li>
         <li>
           <i class="fa-li fa fa-long-arrow-right"></i>
@@ -492,8 +500,12 @@ layout: lander
       </div>
       <ul class="features fa-ul">
         <li>
-          <i class="fa-li fa fa-ellipsis-h"></i>
-          Everything in Startup
+          <i class="fa-li fa fa-check"></i>
+          Unlimited users
+        </li>
+        <li>
+          <i class="fa-li fa fa-check"></i>
+          Unlimited apps
         </li>
         <li>
           <i class="fa-li fa fa-long-arrow-right"></i>

@@ -739,11 +739,12 @@ main > .features {
     }
 
     div.points {
-      margin-top: $spacing-unit;
+      margin: $spacing-unit auto 0;
       padding: 0 $spacing-unit / 2;
       display: flex;
       justify-content: center;
       flex-wrap: wrap;
+      max-width: 936px;
 
       @include media-query($on-palm) {
         display: block;

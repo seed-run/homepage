@@ -96,11 +96,11 @@ layout: lander
       </div>
       <div class="point">
         <h6>Environment variables <span>Beta</span></h6>
-        <p>Environment variables configured through Seed are securely stored using your AWS Systems Manager.</p>
+        <p>Environment variables configured through Seed are securely stored in your AWS Systems Manager.</p>
       </div>
       <div class="point">
         <h6>Sensitive data</h6>
-        <p>Sensitive environment variables are encrypted with your AWS KMS keys, and stored using your AWS Systems Manager.</p>
+        <p>Sensitive environment variables are encrypted with your AWS KMS keys, and stored in your AWS Systems Manager.</p>
         <a href="/docs/storing-secrets.html">
           Learn more
           <i class="fa fa-angle-right" aria-hidden="true"></i>
@@ -306,6 +306,10 @@ layout: lander
       <div class="point">
         <h6>Service management</h6>
         <p>Add all your Serverless services by specifying their path. Seed lets you manage all the services as a whole.</p>
+        <a href="/docs/adding-a-service.html">
+          Learn more
+          <i class="fa fa-angle-right" aria-hidden="true"></i>
+        </a>
       </div>
       <div class="point">
         <h6>Service dependencies  <span>Beta</span></h6>
@@ -320,7 +324,7 @@ layout: lander
         <p>Seed uses a simple environment context inheritance model. Configure and manage environments across all services.</p>
       </div>
       <div class="point">
-        <h6>Pipelines</h6>
+        <h6>Pipelines <span>Beta</span></h6>
         <p>Configure and visualize your pipeline across all your services. Promote and rollback builds for all your services as a whole.</p>
       </div>
       <div class="point">
@@ -387,6 +391,20 @@ layout: lander
           <i class="fa fa-angle-right" aria-hidden="true"></i>
         </a>
       </div>
+    </div>
+  </div>
+
+  <hr />
+
+  <div class="action">
+    <p>Add your <b>Serverless Framework project</b> to get started or request a <b>personalized demo</b>.</p>
+    <div class="controls">
+      <a class="signup" href="{{ site.console_url }}{{ site.signup }}">
+        Sign up for free
+      </a>
+      <a class="demo" href="{{ site.console_url }}{{ site.request_demo }}">
+        Request a demo
+      </a>
     </div>
   </div>
 
@@ -513,7 +531,11 @@ layout: lander
         </li>
         <li>
           <i class="fa-li fa fa-plus"></i>
-          Team management
+          Mono-repo workflow
+        </li>
+        <li>
+          <i class="fa-li fa fa-plus"></i>
+          Organization account
         </li>
         <li>
           <i class="fa-li fa fa-plus"></i>
@@ -599,7 +621,7 @@ layout: lander
         </li>
         <li>
           <i class="fa-li fa fa-check-circle"></i>
-          On-premise hosting
+          Custom integration
         </li>
         <li>
           <i class="fa-li fa fa-check-circle"></i>

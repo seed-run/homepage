@@ -15,6 +15,8 @@ toc:
     subfolderitems:
       - page: Adding a stage
         url: /docs/adding-a-stage.html
+      - page: Adding a service
+        url: /docs/adding-a-service.html
       - page: Configuring stage variables
         url: /docs/configuring-stage-variables.html
       - page: Storing secrets

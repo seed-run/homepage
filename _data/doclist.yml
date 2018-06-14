@@ -1,7 +1,7 @@
 toc:
   - title: Getting started with Seed
     url: /docs/index.html
-  - title: Adding your project
+  - title: Adding your app
     subfolderitems:
       - page: Adding your IAM credentials
         url: /docs/adding-your-iam-credentials.html
@@ -9,20 +9,22 @@ toc:
         url: /docs/customizing-your-iam-policy.html
       - page: Adding Python projects
         url: /docs/adding-python-projects.html
-      - page: Adding project members
-        url: /docs/adding-project-members.html
-  - title: Configuring your project
+      - page: Adding app members
+        url: /docs/adding-app-members.html
+  - title: Configuring your app
     subfolderitems:
       - page: Adding a stage
         url: /docs/adding-a-stage.html
+      - page: Adding a service
+        url: /docs/adding-a-service.html
       - page: Configuring stage variables
         url: /docs/configuring-stage-variables.html
       - page: Storing secrets
         url: /docs/storing-secrets.html
       - page: Updating the stage source
         url: /docs/updating-the-stage-source.html
-      - page: Renaming a project
-        url: /docs/renaming-a-project.html
+      - page: Renaming an app
+        url: /docs/renaming-an-app.html
       - page: Adding build notifications
         url: /docs/adding-build-notifications.html
       - page: Running tests
@@ -33,7 +35,7 @@ toc:
         url: /docs/iam-credentials-per-stage.html
       - page: Private npm modules
         url: /docs/private-npm-modules.html
-  - title: Deploying your project
+  - title: Deploying your app
     subfolderitems:
       - page: Working with pull requests
         url: /docs/working-with-pull-requests.html

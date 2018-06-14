@@ -3,7 +3,7 @@ layout: docs
 title: Promoting to Production
 ---
 
-Seed creates two default stages when a project is added. A **dev** stage that builds project's default Git repository branch (usually the **master** branch) and a **production** or **prod** stage that can only be deployed by promoting a working build from a development stage. A Seed project will always have exactly one production stage, and it cannot be removed. However, you can add more development stages that track a specific [branch]({% link _docs/adding-a-stage.md %}) or a [pull request]({% link _docs/working-with-pull-requests.md %}).
+Seed creates two default stages when a project is added. A **dev** stage that builds project's default Git repository branch (usually the **master** branch) and a **production** or **prod** stage that can only be deployed by promoting a working build from a development stage. A Seed app will always have exactly one production stage, and it cannot be removed. However, you can add more development stages that track a specific [branch]({% link _docs/adding-a-stage.md %}) or a [pull request]({% link _docs/working-with-pull-requests.md %}).
 
 > The production stage in Seed does not track a branch and cannot be removed
 
@@ -21,17 +21,19 @@ To get started, select the development stage you want to promote. All developmen
 
 ![Select Stage To Promote](/assets/docs/promoting-to-production/select-stage-to-promote.png)
 
+And select the service.
+
+![Select service stage to promote](/assets/docs/promoting-to-production/select-service-stage-to-promote.png)
+
 You can only promote the current working build. Select **Promote**.
 
 ![Promote Stage](/assets/docs/promoting-to-production/promote-stage.png)
 
-When a project is deployed, Serverless Framework generates a new CloudFormation template file based on the resources defined in **serverless.yml**, and submits the template to CloudFormation. CloudFormation will then apply the resource changes. A mistake in the resource definition can lead to permanent data loss and/or a security breach, which can be very costly in the **production** environment.
+When a service is deployed, Serverless Framework generates a new CloudFormation template file based on the resources defined in **serverless.yml**, and submits the template to CloudFormation. CloudFormation will then apply the resource changes. A mistake in the resource definition can lead to permanent data loss and/or a security breach, which can be very costly in the **production** environment.
 
 Seed allows you to review the changes that are about to be applied in the **production** stage prior to promoting a development build. This is achieved by generating a CloudFormation Change Set with the new stack template.
 
-![Review Change Set](/assets/docs/promoting-to-production/review-change-set.png)
-
-The change set shows all the AWS resources about to be added, removed, and modified. Be sure to review these carefully. After you review and **confirm** the change set, the build will be promoted and the **production** stage will be updated.
+The Change Set shows all the AWS resources about to be added, removed, and modified. Be sure to review these carefully. After you review and **confirm** the Change Set, the build will be promoted and the **production** stage will be updated.
 
 ![Confirm Change Set](/assets/docs/promoting-to-production/confirm-change-set.png)
 

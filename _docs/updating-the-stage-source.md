@@ -9,7 +9,11 @@ This can happen when you are trying to test an update on staging that might not 
 
 ### Update the Source Branch
 
-To change the branch that is tied to a stage, go in to the stage settings and select **Update Source**.
+To change the branch that is tied to a stage, select the stage.
+
+![Select stage](/assets/docs/updating-the-stage-source/select-stage.png)
+
+Click **Settings** and select **Update Source**.
 
 ![Click Update Stage Source](/assets/docs/updating-the-stage-source/click-update-source.png)
 
@@ -36,9 +40,13 @@ Just as the case above, this allows you to select the branch you'd like to auto-
 
 Finally, you can trigger one-off deployments to a stage from any branch. This can be useful when you want to test a hotfix branch in your staging environment.
 
-To do so, hit the **Trigger Deploy** button from the stage settings.
+To do so, go to the service you want to deploy and hit **Settings**.
 
-![Hit trigger deploy](/assets/docs/updating-the-stage-source/trigger-deploy.png)
+![Hit service stage settings](/assets/docs/updating-the-stage-source/hit-service-stage-settings.png)
+
+Select **Trigger Deploy**.
+
+![Select trigger deploy](/assets/docs/updating-the-stage-source/select-trigger-deploy.png)
 
 You'll be asked to pick a branch to deploy.
 

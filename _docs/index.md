@@ -21,7 +21,8 @@ Seed needs very little configuration on your part and there is no CLI to install
 
 1. Add your project repository with your Git provider
 2. Create an IAM Role for your AWS account
+3. Optionally, specify the location of the default service in your repo.
 
-![Create a new project](/assets/docs/create-a-new-project.png)
+![Create a new app](/assets/docs/create-a-new-app.png)
 
 Let's get started with adding your project to the [Seed Console]({{ site.console_url }}/new) by taking a look at how to create a an [AWS IAM Role]({% link _docs/adding-your-iam-credentials.md %}). 

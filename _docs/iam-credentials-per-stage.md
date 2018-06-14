@@ -5,7 +5,15 @@ title: IAM Credentials per Stage
 
 While adding your project to [Seed](/), you are required to add the IAM credentials that you are going to deploy with. Seed uses these credentials for deployments to all the different stages. But it is good practice to deploy your stages to separate AWS accounts (or organizations). For example; you can separate your production and dev environments by deploying to completely different AWS accounts.
 
-To configure custom IAM credentials per stage, head over to the stage settings. By default, a stage uses the IAM credentials configured for the project.
+To configure custom IAM credentials per stage, select the stage.
+
+![Select stage](/assets/docs/custom-iam-credentials-per-stage/select-stage.png)
+
+And hit **Settings**.
+
+![Select stage settings](/assets/docs/custom-iam-credentials-per-stage/select-stage-settings.png)
+
+By default, a stage uses the IAM credentials configured for the project.
 
 > A stage defaults to using the project's IAM credentials.
 
@@ -13,7 +21,7 @@ To configure the stage with its own set of IAM credentials, hit **Use Custom IAM
 
 ![Custom IAM per stage panel](/assets/docs/custom-iam-credentials-per-stage/custom-iam-per-stage-panel.png)
 
-Once this is set, you can trigger a deployment to this stage using the new credentials.
+Once this is set, you can trigger a deployment to this stage using the new credentials. Also, this setting applies to all the services in the app.
 
 ![Set Custom IAM for stage](/assets/docs/custom-iam-credentials-per-stage/set-custom-iam-for-stage.png)
 

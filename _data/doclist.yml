@@ -3,6 +3,8 @@ toc:
     url: /docs/index.html
   - title: Adding your app
     subfolderitems:
+      - page: Mono-repo apps in Seed
+        url: /docs/mono-repo-apps-in-seed.html
       - page: Adding your IAM credentials
         url: /docs/adding-your-iam-credentials.html
       - page: Customizing your IAM Policy

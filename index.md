@@ -306,7 +306,7 @@ layout: lander
       <div class="point">
         <h6>Service management</h6>
         <p>Add all your Serverless services by specifying their path. Seed lets you manage all the services as a whole.</p>
-        <a href="/docs/adding-a-service.html">
+        <a href="/docs/mono-repo-apps-in-seed.html">
           Learn more
           <i class="fa fa-angle-right" aria-hidden="true"></i>
         </a>

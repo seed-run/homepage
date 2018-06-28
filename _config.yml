@@ -28,7 +28,7 @@ console_url: "https://console.seed.run"
 signup: "/signup-account"
 request_demo: "/request-demo"
 
-newsletter_signup_form: "https://emailoctopus.com/lists/b8068f8b-7584-11e8-a3c9-06b79b628af2/forms/subscribe"
+newsletter_signup_form: "http://eepurl.com/c1gHff"
 twitter: "https://twitter.com/SEED_run"
 
 google_analytics: "UA-3536629-12"

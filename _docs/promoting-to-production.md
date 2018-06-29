@@ -3,9 +3,7 @@ layout: docs
 title: Promoting to Production
 ---
 
-Seed creates two default stages when a project is added. A **dev** stage that builds project's default Git repository branch (usually the **master** branch) and a **production** or **prod** stage that can only be deployed by promoting a working build from a development stage. A Seed app will always have exactly one production stage, and it cannot be removed. However, you can add more development stages that track a specific [branch]({% link _docs/adding-a-stage.md %}) or a [pull request]({% link _docs/working-with-pull-requests.md %}).
-
-> The production stage in Seed does not track a branch and cannot be removed
+Seed creates two default stages when a project is added. A **dev** stage that builds project's default Git repository branch (usually the **master** branch) and a **production** or **prod** stage that by default can be deployed by promoting a working build from a development stage. A Seed app will always have exactly one production stage, and it cannot be removed. However, you can add more development stages that track a specific [branch]({% link _docs/adding-a-stage.md %}) or a [pull request]({% link _docs/working-with-pull-requests.md %}).
 
 The main reason for this is because code and infrastructure are closely coupled in Serverless. And every single deploy can include some infrastructure changes. This coupling is incredibly convenient and powerful. Internally, CloudFormation figures out which parts of your infrastructure are being added, modified, or removed.
 

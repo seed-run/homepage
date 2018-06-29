@@ -217,6 +217,10 @@ layout: lander
       <div class="point">
         <h6>Trusted builds</h6>
         <p>The same immutable artifact is used to promote across all downstream environments ensuring build consistency.</p>
+        <a href="/docs/generating-trusted-builds.html">
+          Learn more
+          <i class="fa fa-angle-right" aria-hidden="true"></i>
+        </a>
       </div>
       <div class="point">
         <h6>Manual gating</h6>

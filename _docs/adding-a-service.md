@@ -3,7 +3,7 @@ layout: docs
 title: Adding a Service
 ---
 
-Seed supports mono-repo Serverless applications. This means that you can have multiple Serverless Framework projects (services) in the same repo.
+Seed supports [mono-repo Serverless applications]({% link _docs/mono-repo-apps-in-seed.md %}). This means that you can have multiple Serverless Framework projects (services) in the same repo.
 
 ### Default Service
 

@@ -35,7 +35,7 @@ An alternative strategy is to completely separate the services into their own re
 
 Mono-repo apps can add a layer of complexity to your deployment process. Deploying your application involves co-ordinating deployment across multiple services.
 
-> Seed deploys all the services in a mono-repo app in parallel.
+> Seed deploys all the services in a mono-repo app concurrently.
 
 Seed simplifies this by deploying the entire application as a whole.
 
@@ -43,7 +43,7 @@ Seed simplifies this by deploying the entire application as a whole.
 
    ![App Pipeline view](/assets/docs/mono-repo-apps-in-seed/app-pipeline-view.png)
 
-2. A deployment to the app will now trigger all the services in the app to be deployed. Seed deploys all the services in a mono-repo app in parallel.
+2. A deployment to the app will now trigger all the services in the app to be deployed. Seed deploys all the services in a mono-repo app concurrently.
 
    ![App deployment in progress](/assets/docs/mono-repo-apps-in-seed/app-deployment-in-progress.png)
 

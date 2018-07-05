@@ -37,6 +37,8 @@ toc:
         url: /docs/iam-credentials-per-stage.html
       - page: Private npm modules
         url: /docs/private-npm-modules.html
+      - page: Deleting resources
+        url: /docs/deleting-resources.html
   - title: Deploying your app
     subfolderitems:
       - page: Working with pull requests

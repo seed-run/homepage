@@ -54,3 +54,4 @@ To use `jekyll.environment` in template, set `JEKYLL_ENV` to `production` as env
 - [Version 2](https://version2--seed.netlify.com/)
 - [Version 2.1](https://version2-1--seed.netlify.com/)
 - [Version 3](https://version3--seed.netlify.com/)
+- [Version 3.1](https://version3-1--seed.netlify.com)

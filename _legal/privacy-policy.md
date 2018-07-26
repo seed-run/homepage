@@ -7,7 +7,7 @@ title: Privacy Policy
 
 1. **Welcome**
 
-   Welcome to the Privacy Policy for [https://seed.run]({% link index.md %}) and the Seed application(s) (together the “**Platform**”), operated by Anomaly Innovations (hereafter referred to as “**AI**”, “**we**”, “**us**”, and “**our**”). Your privacy is very important to us. This Privacy Policy explains how personal information about you is collected, used and disclosed by AI with respect to your use and interaction with AI, the Platform and our related services (the “**Services**”).
+   Welcome to the Privacy Policy for [https://seed.run]({% link index.html %}) and the Seed application(s) (together the “**Platform**”), operated by Anomaly Innovations (hereafter referred to as “**AI**”, “**we**”, “**us**”, and “**our**”). Your privacy is very important to us. This Privacy Policy explains how personal information about you is collected, used and disclosed by AI with respect to your use and interaction with AI, the Platform and our related services (the “**Services**”).
 
    We may make changes to the Privacy Policy from time to time, so please be sure to check the Privacy Policy regularly. If we decide to make material changes to the Privacy Policy, we will notify you and other users via email or by placing a notice on the Platform.
 

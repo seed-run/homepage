@@ -1,0 +1,5 @@
+npm install --save convert-svg-to-png
+for file in assets/social-cards/*.svg
+do
+  $(npm bin)/convert-svg-to-png $file
+done

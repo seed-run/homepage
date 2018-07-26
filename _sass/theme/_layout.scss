@@ -273,6 +273,12 @@
     @extend %a-tertiary;
   }
 
+  a.social-link {
+    @extend %a-tertiary;
+    color: lighten($tertiary-text-color, 10%);
+    font-size: 26px;
+  }
+
   .site-title {
     font-family: $base-font-family;
     font-style: italic;

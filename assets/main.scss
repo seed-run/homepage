@@ -45,6 +45,8 @@ $on-laptop:                 800px;
 // Import partials from the `minima` theme.
 @import "theme";
 @import "svg";
+@import "blog";
+@import "about";
 
 /**
  * Links
@@ -56,7 +58,7 @@ a:visited {
   color: lighten($brand-color, 15%);
 }
 a:hover {
-  color: lighten($brand-color, 35%);
+  color: lighten($brand-color, 25%);
 }
 a:active {
   color: lighten($brand-color, 5%);
@@ -527,6 +529,45 @@ main > .header {
     padding-bottom: $spacing-unit;
   }
 
+  .announcement {
+    $bkg-color: lighten(mix($brand-color, $grey-color-light, 10%), 20%);
+
+    margin: 0 auto $spacing-unit / 2;
+    display: inline-block;
+    padding: 4px 11px;
+    border: 1px solid lighten($brand-color, 25%);
+    background-color: $bkg-color;
+    border-radius: 3px;
+    font-size: 15px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+
+    @include media-query($on-palm) {
+      display: block;
+    }
+
+    .label {
+      text-transform: uppercase;
+      font-family: $label-font-family;
+      letter-spacing: 1px;
+      color: $text-color;
+    }
+
+    .content {
+      color: $secondary-text-color;
+      i {
+        margin-left: 3px;
+      }
+    }
+
+    &:hover {
+      background-color: darken($bkg-color, 3%);
+      border-color: lighten($brand-color, 10%);
+      box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.1);
+    }
+  }
+
   h1 {
     margin: 0 auto 5px;
     padding-top: 1.5 * $spacing-unit;
@@ -860,7 +901,7 @@ main > .features {
 main > .testimonials {
   background-color: darken($brand-color, 5%);
   background-image: $diamond-pattern;
-  padding: $spacing-unit * 2 + 10px $spacing-unit / 2 + 5px;
+  padding: $spacing-unit * 2 $spacing-unit / 2 + 5px;
   border-top: 2px solid $accent-color;
   color: $background-color;
 
@@ -870,11 +911,56 @@ main > .testimonials {
   }
 
   h4 {
-    margin-bottom: $spacing-unit * 2;
+    margin-bottom: 10px;
     text-align: center;
     font-family: $base-font-family;
     font-size: 32px;
     text-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
+  }
+
+  div.customers {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+
+    @include media-query($on-palm) {
+      flex-direction: column;
+    }
+
+    a {
+      margin: $spacing-unit $spacing-unit;
+      display: block;
+      flex-shrink: 0;
+      height: 62px;
+      box-sizing: border-box;
+
+      &:first-child {
+        padding-top: 22px;
+      }
+      &:nth-child(2) {
+        padding-top: 6px;
+      }
+      &:nth-child(3) {
+        padding-top: 23px;
+      }
+      &:last-child {
+      }
+
+      @include media-query($on-palm) {
+        margin: $spacing-unit 0;
+      }
+    }
+  }
+
+  hr {
+    margin: $spacing-unit auto $spacing-unit * 2;
+    border-color: rgba(255, 255, 255, 0.2);
+    max-width: 720px;
+
+    @include media-query($on-palm) {
+      margin: $spacing-unit /2 $spacing-unit $spacing-unit * 1.5;
+    }
   }
 
   div.list {
@@ -893,35 +979,11 @@ main > .testimonials {
       }
     }
 
-    div.context {
-      h6 {
-        font-size: 18px;
-        text-align: center;
-        margin-bottom: 8px;
-        font-family: $label-font-family;
-        text-transform: uppercase;
-        letter-spacing: 1px;
-      }
-      p {
-        text-align: center;
-        color: darken($background-color, 15%);
-      }
-      hr {
-        margin: $spacing-unit / 2 $spacing-unit * 4 $spacing-unit / 2 - 2px;
-        border-color: rgba(255, 255, 255, 0.2);
-
-        @include media-query($on-palm) {
-          margin-right: $spacing-unit;
-          margin-left: $spacing-unit;
-        }
-      }
-    }
-
     & > p {
       margin-bottom: 8px;
       line-height: 1.7;
       font-family: $heading-font-family;
-      font-size: 24px;
+      font-size: 20px;
       text-align: center;
       color: $background-color;
 
@@ -1018,7 +1080,7 @@ main > .pricing {
         }
       }
 
-      &.premium .cost {
+      &.growth .cost {
         border-color: $accent-color;
         box-shadow: 0px 1px 2px 0px rgba(0, 0, 0, 0.21);
 
@@ -1142,29 +1204,171 @@ main > .pricing {
   }
 }
 
-/////////////
-// CLOSING //
-/////////////
-main > .closing {
+//////////////
+// TUTORIAL //
+//////////////
+main > .tutorial {
+  padding: 0 $spacing-unit;
   border-top: 2px solid darken($hero-bkg-color, 5%);
-  padding: $spacing-unit * 2 + 10px 0 $spacing-unit * 3;
-  text-align: center;
+  overflow: hidden;
 
   @include media-query($on-palm) {
     padding-top: $spacing-unit * 2;
-    padding-bottom: $spacing-unit * 2;
   }
 
-  .about {
-    margin-bottom: $spacing-unit / 2 + 4px;
-    font-size: 20px;
-    font-family: $heading-font-family;
-    padding: 0 $spacing-unit / 2;
-    a {
-      font-weight: bold;
+  .tutorial-container {
+    margin: 0 auto;
+    max-width: 940px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 440px;
+
+    @include media-query($on-palm) {
+      height: auto;
+      flex-direction: column;
     }
-    span {
-      @include logo-font;
+  }
+
+  .copy {
+    padding-right: $spacing-unit * 1.5 + 5px;
+    box-sizing: border-box;
+    flex: 0 0 55%;
+
+    @include media-query($on-palm) {
+      text-align: center;
+      flex: auto;
+      padding-right: 0;
+    }
+
+    h3 {
+      font-size: 28px;
+    }
+    p {
+      color: $secondary-text-color;
+      a, b {
+        font-weight: 500;
+      }
+    }
+    .action {
+      margin-top: $spacing-unit / 2 - 4px;
+      @include action-button-dark;
+      font-family: $base-font-family;
+      text-transform: none;
+      font-weight: 400;
+      letter-spacing: 0;
+      border-width: 1px;
+
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+  }
+
+  .browser-container {
+    position: relative;
+    margin: $spacing-unit 0 0;
+    flex: 0 0 45%;
+    height: 100%;
+
+    @include media-query($on-palm) {
+      height: auto;
+      flex: auto;
+    }
+  }
+  .browser {
+    $bar-height: 30px;
+    $bar-height-m: 20px;
+    $top-color: #E7E6E9;
+    $bottom-color: #DCDBDE;
+
+    width: 640px;
+    box-shadow: 0px 10px 33px 9px rgba(0, 0, 0, 0.17);
+    border-radius: 4px;
+    position: absolute;
+    bottom: -10px;
+    left: 0;
+
+    @include media-query($on-palm) {
+      width: auto;
+      position: relative;
+    }
+
+    .bar {
+      width: 100%;
+      background: linear-gradient(0deg, $bottom-color 0%, $top-color 100%);
+      height: $bar-height;
+      box-sizing: border-box;
+      border: {
+        top: 1px solid darken($top-color, 5%);
+        left: 1px solid darken($top-color, 8%);
+        right: 1px solid darken($top-color, 8%);
+        bottom: 1px solid darken($bottom-color, 8%);
+      }
+      border-radius: 4px 4px 0 0;
+      display: flex;
+      justify-content: flex-start;
+      align-items: center;
+
+      @include media-query($on-palm) {
+        height: $bar-height-m;
+      }
+
+      span {
+        $size: 12px;
+        width: $size;
+        height: $size;
+        border-radius: $size / 2;
+        $color: darken($bottom-color, 3%);
+        background-color: $color;
+        border: 1px solid darken($color, 5%);
+        margin-right: 8px;
+        display: block;
+        box-sizing: border-box;
+
+        @include media-query($on-palm) {
+          $size: 8px;
+          width: $size;
+          height: $size;
+          border-radius: $size / 2;
+          margin-right: 6px;
+        }
+
+        &:first-child {
+          margin-left: 10px;
+        }
+      }
+    }
+    img {
+      box-sizing: border-box;
+      border-radius: 0 0 4px 4px;
+      border: {
+        left: 1px solid darken($bottom-color, 5%);
+        right: 1px solid darken($bottom-color, 5%);
+        bottom: 1px solid darken($bottom-color, 5%);
+      }
+    }
+  }
+
+}
+
+////////////////////
+// CLOSING ACTION //
+////////////////////
+main > .closing-action {
+  border-top: 2px solid darken($hero-bkg-color, 5%);
+  padding: $spacing-unit * 2 + 10px $spacing-unit $spacing-unit * 3;
+  text-align: center;
+
+  & > p {
+    margin: 0 auto $spacing-unit;
+    max-width: 520px;
+    color: $tertiary-text-color;
+    font-size: 20px;
+
+    b {
+      color: $secondary-text-color;
+      font-weight: 500;
     }
   }
 
@@ -1252,139 +1456,6 @@ main > .closing {
   text-align: center;
   padding: 100px $spacing-unit / 2 100px;
   font-size: 18px;
-}
-
-/////////////////
-// ABOUTE PAGE //
-/////////////////
-main > .wrapper > .about {
-
-  .header {
-    margin: 0 auto;
-    max-width: 570px;
-    text-align: center;
-
-    h1 {
-      padding-top: $spacing-unit;
-      font-size: 40px;
-    }
-    p {
-      font-size: 20px;
-      color: $secondary-text-color;
-    }
-
-    @include media-query($on-palm) {
-      h1 {
-        padding-top: $spacing-unit / 2;
-        font-size: 34px;
-      }
-    }
-  }
-
-  hr {
-    margin: $spacing-unit * 3 auto;
-    max-width: 400px;
-    border-color: darken($hero-bkg-color, 10%);
-
-    @include media-query($on-palm) {
-      margin: $spacing-unit * 1.5 auto;
-    }
-  }
-
-  .team {
-    margin: 0 auto;
-    max-width: 720px;
-    text-align: center;
-
-    h3 {
-      font-size: 24px;
-    }
-
-    p {
-      color: $secondary-text-color;
-      font-size: 17px;
-      a {
-        font-weight: 500;
-      }
-    }
-  }
-
-  .investors {
-    margin: 0 auto;
-    text-align: center;
-    max-width: 720px;
-
-    h3 {
-      font-size: 24px;
-    }
-
-    p {
-      margin-bottom: $spacing-unit + 5px;
-      color: $secondary-text-color;
-      font-size: 17px;
-      a {
-        font-weight: 500;
-      }
-    }
-
-    .logos {
-      a {
-        display: inline-block;
-      }
-      a:first-child {
-        margin-right: $spacing-unit;
-        img {
-          margin-top: 35px;
-        }
-      }
-
-      @include media-query($on-palm) {
-        a {
-          display: block;
-        }
-        a:first-child {
-          margin-right: 0;
-          margin-bottom: $spacing-unit / 2;
-          img {
-            margin-top: 0;
-          }
-        }
-      }
-    }
-  }
-
-  .press {
-    margin: 0 auto;
-    text-align: center;
-    max-width: 500px;
-
-    h3 {
-      font-size: 24px;
-    }
-    img {
-      margin-bottom: $spacing-unit / 2;
-    }
-    p {
-      font-size: 17px;
-    }
-  }
-
-  .info {
-    margin-bottom: $spacing-unit * 3;
-    text-align: center;
-    p {
-      margin-bottom: 10px;
-      color: $tertiary-text-color;
-      font-size: 22px;
-      a {
-        color: $tertiary-text-color;
-      }
-    }
-    @include media-query($on-palm) {
-      margin-bottom: $spacing-unit * 2;
-    }
-  }
-
 }
 
 /////////////////////

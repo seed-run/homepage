@@ -4,3 +4,6 @@ _site
 .sass-cache
 .jekyll-metadata
 .DS_Store
+package-lock.json
+node_modules/
+assets/social-cards/*.png

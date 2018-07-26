@@ -10,11 +10,12 @@
           <li class="site-title">
             {{ site.title | escape }}
           </li>
+          <li><a class="page-link" href="{% link blog/index.md %}">Blog</a></li>
           <li><a class="page-link" href="{% link _docs/index.md %}">Docs</a></li>
           <li><a class="email-link" href="mailto:{{ site.email }}">Email</a></li>
-          <li><a class="page-link" href="{% link about.md %}">About</a></li>
-          <li><a class="page-link" href="{{ site.twitter }}" target="_blank">Twitter</a></li>
+          <li><a class="page-link" href="{% link about.html %}">About</a></li>
           <li><a class="page-link" href="{{ site.console_url }}/login">Console</a></li>
+          <li><a class="page-link" href="{{ site.newsletter_signup_form }}">Newsletter</a></li>
         </ul>
       </div>
 
@@ -24,6 +25,14 @@
           <li class="site-author">&copy; 2018 <a href="http://anoma.ly">Anomaly Innovations</a></li>
           <li><a class="page-link" href="{% link _legal/terms-of-service.md %}">Terms of Service</a></li>
           <li><a class="page-link" href="{% link _legal/privacy-policy.md %}">Privacy Policy</a></li>
+          <li>
+            <a class="social-link" href="{{ site.twitter }}">
+              <i class="fa fa-twitter-square" aria-hidden="true"></i>
+            </a>
+            <a class="social-link" href="{{ site.linkedin }}">
+              <i class="fa fa-linkedin-square" aria-hidden="true"></i>
+            </a>
+          </li>
         </ul>
       </div>
 
@@ -48,4 +57,3 @@ s0.parentNode.insertBefore(s1,s0);
 </script>
 <!--End of Tawk.to Script-->
 {% endif %}
-

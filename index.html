@@ -3,6 +3,14 @@ layout: lander
 ---
 
 <div class="header">
+  <a class="announcement" href="{% link _posts/2018-06-20-mono-repo-apps.md %}">
+    <span class="label">Introducing</span>
+    &mdash;
+    <span class="content">
+      Mono-repo apps in Seed
+      <i class="fa fa-angle-right" aria-hidden="true"></i>
+    </span>
+  </a>
   <h1>Deploy, Manage, and Monitor Serverless Applications on AWS</h1>
   <h3>Seed manages pipelines, configures environments, and monitors deployments for Serverless Framework projects.</h3>
 </div>
@@ -415,19 +423,30 @@ layout: lander
 </div>
 
 <div class="testimonials">
-  <h4 id="testimonials">Used by teams of different sizes around the globe</h4>
+  <h4 id="testimonials">Our Customers</h4>
+  <div class="customers">
+    <a href="https://www.myshyft.com" title="Shyft">
+      <img src="/assets/lander/shyft.png" width="120" />
+    </a>
+    <a href="https://www.bastiansolutions.com" title="Bastian Solutions">
+      <img src="/assets/lander/bastian-solutions.png" width="140" />
+    </a>
+    <a href="https://airware.com" title="Airware">
+      <img src="/assets/lander/airware.png" width="200" />
+    </a>
+    <a href="https://personably.co" title="Personably">
+      <img src="/assets/lander/personably.png" width="150" />
+    </a>
+  </div>
+  <hr />
   <div class="list">
     <div class="testimonial">
-      <div class="context">
-        <h6>Small Teams</h6>
-        <p>Let your CTO or technical lead focus on product and not on DevOps.</p>
-        <hr />
-      </div>
       <p>&ldquo;Seed has made deploying and managing our Serverless apps super slick. Prior to Seed, we’d looked at using services like Circle to handle our CI/CD, but so much configuration was needed for them to work well with Serverless. Plus the team at Seed are really helpful and responsive, which is vital when you’re working with new technology.&rdquo;</p>
       <div>
         <p>- <span>Lewis Blackwood</span>, CTO @ <a target="_blank" href="https://personably.co">Personably</a></p>
       </div>
     </div>
+    <!--
     <div class="testimonial">
       <div class="context">
         <h6>Agencies</h6>
@@ -450,6 +469,7 @@ layout: lander
         <p>- <span>Daniel Chen</span>, CTO @ <a target="_blank" href="https://myshyft.com">Shyft</a></p>
       </div>
     </div>
+    -->
   </div>
 </div>
 
@@ -469,10 +489,6 @@ layout: lander
       <ul class="features fa-ul">
         <li>
           <i class="fa-li fa fa-check"></i>
-          Unlimited users
-        </li>
-        <li>
-          <i class="fa-li fa fa-check"></i>
           Unlimited apps
         </li>
         <li>
@@ -481,10 +497,10 @@ layout: lander
         </li>
       </ul>
     </div>
-    <div class="startup">
+    <div class="individual">
       <div class="cost">
         <p class="header">
-          Startup
+          Individual
         </p>
         <div class="numbers">
           <p>$7</p>
@@ -494,11 +510,11 @@ layout: lander
       <ul class="features fa-ul">
         <li>
           <i class="fa-li fa fa-check"></i>
-          Unlimited users
+          Unlimited apps
         </li>
         <li>
           <i class="fa-li fa fa-check"></i>
-          Unlimited apps
+          Unlimited collaborators
         </li>
         <li>
           <i class="fa-li fa fa-long-arrow-right"></i>
@@ -510,10 +526,10 @@ layout: lander
         </li>
       </ul>
     </div>
-    <div class="standard">
+    <div class="startup">
       <div class="cost">
         <p class="header">
-          Standard
+          Startup
         </p>
         <div class="numbers">
           <p>$97</p>
@@ -523,11 +539,11 @@ layout: lander
       <ul class="features fa-ul">
         <li>
           <i class="fa-li fa fa-check"></i>
-          Unlimited users
+          Unlimited apps
         </li>
         <li>
           <i class="fa-li fa fa-check"></i>
-          Unlimited apps
+          Unlimited collaborators
         </li>
         <li>
           <i class="fa-li fa fa-long-arrow-right"></i>
@@ -547,10 +563,10 @@ layout: lander
         </li>
       </ul>
     </div>
-    <div class="premium">
+    <div class="growth">
       <div class="cost">
         <p class="header">
-          Premium
+          Growth
         </p>
         <div class="numbers">
           <p>$397</p>
@@ -560,7 +576,7 @@ layout: lander
       <ul class="features fa-ul">
         <li>
           <i class="fa-li fa fa-ellipsis-h"></i>
-          Everything in Standard
+          Everything in Startup
         </li>
         <li>
           <i class="fa-li fa fa-long-arrow-right"></i>
@@ -605,7 +621,7 @@ layout: lander
       <ul class="features fa-ul">
         <li>
           <i class="fa-li fa fa-ellipsis-h"></i>
-          Everything in Premium
+          Everything in Growth
         </li>
         <li>
           <i class="fa-li fa fa-check-circle"></i>
@@ -663,8 +679,27 @@ layout: lander
   </div>
 </div>
 
-<div class="closing">
-  <p class="about"><span class="logo">Seed</span> is <a href="{% link about.md %}">created by the trusted folks</a> behind <a target="_blank" href="http://serverless-stack.com">Serverless-Stack.com</a>,<br /> the best resource for building serverless apps on AWS.</p>
+<div class="tutorial">
+  <div class="tutorial-container">
+    <div class="copy">
+      <h3>New to Serverless?</h3>
+      <p>We created <a href="https://serverless-stack.com" target="_blank">Serverless Stack</a>; a <b>550+ page open source guide</b> on building full-stack serverless applications. With nearly <b>2K daily readers</b> and over <b>1K GitHub stars</b>, it's the most popular resource for creating serverless applications.</p>
+      <a class="action" target="_blank" href="https://serverless-stack.com">
+        View Guide
+        <i class="fa fa-angle-right" aria-hidden="true"></i>
+      </a>
+    </div>
+    <div class="browser-container">
+      <div class="browser">
+       <div class="bar"> <span></span> <span></span> <span></span> </div>
+       <img src="/assets/lander/serverless-stack-screenshot.png" />
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="closing-action">
+  <p>Add your <b>Serverless Framework project</b> to get started or request a <b>personalized demo</b>.</p>
   <div class="controls">
     <a class="signup" href="{{ site.console_url }}{{ site.signup }}">
       Sign up for free
@@ -684,7 +719,7 @@ layout: lander
     Subscribe to our newsletter
   </a>
   <br />
-  <a class="button" href="{{ site.twitter }}" target="_blank">
+  <a class="button" href="{{ site.twitter }}">
     Follow us on Twitter
   </a>
 </div>

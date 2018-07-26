@@ -16,7 +16,6 @@
 title: SEED
 email: contact@seed.run
 sales_email: sales@seed.run
-tel: +1 415 343-5350
 description: > # this means to ignore newlines until "baseurl:"
   Deploy, manage, and monitor
   Serverless applications on AWS
@@ -30,8 +29,12 @@ request_demo: "/request-demo"
 
 newsletter_signup_form: "http://eepurl.com/c1gHff"
 twitter: "https://twitter.com/SEED_run"
+twitter_username: "SEED_run"
+linkedin: "https://www.linkedin.com/company/seed-run/"
 
 google_analytics: "UA-3536629-12"
+
+permalink: /blog/:title:output_ext
 
 collections:
   docs:
@@ -56,4 +59,4 @@ defaults:
   - scope:
       path: ""
     values:
-      image: /assets/og-image.png
+      image: /assets/social-cards/default.png

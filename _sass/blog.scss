@@ -1,0 +1,106 @@
+.blog.post {
+  margin: 0 auto;
+  max-width: 800px;
+}
+
+.blog.post .post-header {
+  padding-bottom: $spacing-unit + 6px;
+  margin-bottom: $spacing-unit + 20px;
+  position: relative;
+}
+.blog.post .post-header .post-title {
+  margin-bottom: 10px;
+  text-align: center;
+  font-size: 32px;
+  line-height: 1.44;
+}
+.blog.post .post-header .post-title .separator {
+  color: $tertiary-text-color;
+}
+.blog.post .post-header .post-title a:last-child {
+  @extend %a-secondary;
+}
+
+.blog.post .post-header .post-info {
+  text-align: center;
+  font-size: 14px;
+}
+.blog.post .post-header .post-info .date {
+  color: $tertiary-text-color;
+}
+.blog.post .post-header .post-info .separator {
+  color: $grey-color-light;
+}
+.blog.post .post-header .post-info .twitter {
+  $color: #1DA1F2;
+
+  color: $color;
+
+  &:hover {
+    color: lighten($color, 13%);
+  }
+}
+.blog.post .post-header img.post-author {
+  $size: 48px;
+
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  margin-left: - $size / 2;
+  margin-bottom: - $size / 2;
+  border-radius: 100%;
+  //filter: grayscale(100%);
+}
+
+$img-size: 36px;
+$img-margin: 15px;
+
+@mixin post-list {
+  padding-left: 0;
+  margin-left: $img-size + $img-margin;
+  list-style-type: none;
+
+  li {
+    margin-bottom: $spacing-unit * 1.5;
+    position: relative;
+  }
+  li h3 img.bullet {
+    position: absolute;
+    left: - ($img-size + $img-margin);
+    width: $img-size;
+    top: 1px;
+    border-radius: 100%;
+    //filter: grayscale(100%);
+  }
+  li .post-info {
+    font-size: 14px;
+  }
+  li .post-info .date {
+    color: $tertiary-text-color;
+  }
+  li .post-info .separator {
+    color: $grey-color-light;
+  }
+}
+
+.blog .post-list {
+  @include post-list;
+}
+
+.blog.related-posts {
+  margin: 0 auto;
+  max-width: 800px;
+  margin-top: 1.5 * $spacing-unit;
+  padding-top: 1.5 * $spacing-unit;
+  border-top: 1px solid $grey-color-light;
+}
+.blog.related-posts ul.post-list {
+  @include post-list;
+}
+.blog.related-posts h5 {
+  padding-bottom: 1.5 * $spacing-unit;
+  margin-bottom: 1.5 * $spacing-unit;
+  font-size: 26px;
+  text-align: center;
+  border-bottom: 1px solid $grey-color-light;
+}

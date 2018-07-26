@@ -28,6 +28,16 @@ You can also turn on live reloading and incremental builds while editing.
 $ bundle exec jekyll serve --incremental --livereload
 ```
 
+### Build
+
+The build script is in `netlify.toml` and it runs the following:
+
+``` sh
+./pre-build && jekyll build
+```
+
+Where `pre-build` is a script to convert SVGs in the `assets/blog/` dir to PNGs.
+
 ### Deploy
 
 To deploy `git push` to `master` branch.

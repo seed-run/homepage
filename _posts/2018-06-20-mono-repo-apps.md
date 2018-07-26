@@ -23,3 +23,5 @@ You can read more about mono-repo support in our docs:
 - [Adding a service]({% link _docs/adding-a-service.md %})
 
 With mono-repo support, Seed now provides a complete CI/CD pipeline for Serverless applications!
+
+Join our discussion over at the [Serverless Forums](https://forum.serverless.com/t/ci-cd-for-mono-repo-serverless-apps/5255).

@@ -15,7 +15,7 @@ Seed currently supports the following:
 
 Support for other platforms and repositories are coming soon. [Send us an email](mailto: {{ site.email }}) to let us know what you would like us to support next.
 
-### Pre-requisites
+### Prerequisites
 
 Seed needs very little configuration on your part and there is no CLI to install. But to add your project you need to:
 

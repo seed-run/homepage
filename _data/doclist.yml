@@ -49,6 +49,8 @@ toc:
         url: /docs/working-with-pull-requests.html
       - page: Generating trusted builds
         url: /docs/generating-trusted-builds.html
+      - page: Cancelling builds
+        url: /docs/cancelling-builds.html
       - page: Promoting to production
         url: /docs/promoting-to-production.html
       - page: Rolling back

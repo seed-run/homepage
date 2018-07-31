@@ -25,8 +25,6 @@ toc:
         url: /docs/storing-secrets.html
       - page: Updating the stage source
         url: /docs/updating-the-stage-source.html
-      - page: Renaming an app
-        url: /docs/renaming-an-app.html
       - page: Adding build notifications
         url: /docs/adding-build-notifications.html
       - page: Running tests
@@ -39,6 +37,12 @@ toc:
         url: /docs/private-npm-modules.html
       - page: Deleting resources
         url: /docs/deleting-resources.html
+  - title: Configuring your organization
+    subfolderitems:
+      - page: Creating an organization
+        url: /docs/creating-an-organization.html
+      - page: Adding organization members
+        url: /docs/adding-organization-members.html
   - title: Deploying your app
     subfolderitems:
       - page: Working with pull requests

@@ -5,7 +5,7 @@ image: /assets/social-cards/organization-accounts.png
 author: frank
 ---
 
-Organization accounts in Seed are now publicly available. You can now create your organization, add team members and manage roles and permissions across all the apps in your organization.
+Organization accounts in Seed is now publicly available. You can create your organization, add team members, and manage roles and permissions across all the apps in your organization.
 
 ![Add organization member form](/assets/blog/organization-accounts/add-organization-member-form.png)
 

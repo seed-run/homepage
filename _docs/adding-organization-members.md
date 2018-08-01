@@ -45,7 +45,7 @@ Also note that by granting _Deploy Prod_ access, forces you to grant them _Deplo
 
 ### Changing Roles
 
-Once a member has been invited or added to the organization, you can still go in and change their roles.
+Once a member has been invited or added to the organization, you still have the ability to go in and change their roles.
 
 ![Edit member roles](/assets/docs/adding-organization-members/edit-member-roles.png)
 

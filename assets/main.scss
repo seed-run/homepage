@@ -929,22 +929,23 @@ main > .testimonials {
     }
 
     a {
-      margin: $spacing-unit $spacing-unit;
+      margin: $spacing-unit $spacing-unit - 10px;
       display: block;
       flex-shrink: 0;
-      height: 62px;
+      height: 65px;
       box-sizing: border-box;
 
       &:first-child {
-        padding-top: 22px;
+        padding-top: 9px;
       }
       &:nth-child(2) {
-        padding-top: 6px;
+        padding-top: 12px;
       }
-      &:nth-child(3) {
-        padding-top: 23px;
+      &:nth-child(4) {
+        padding-top: 18px;
       }
-      &:last-child {
+      &:last-child img {
+        margin-top: -4px;
       }
 
       @include media-query($on-palm) {

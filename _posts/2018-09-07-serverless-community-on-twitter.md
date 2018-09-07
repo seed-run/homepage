@@ -1,6 +1,7 @@
 ---
 layout: post
 title: #Serverless Community on Twitter
+image: /assets/social-cards/serverless-twitter.png
 author: stephie
 ---
 

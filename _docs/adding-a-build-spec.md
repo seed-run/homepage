@@ -27,7 +27,7 @@ The above commands are run in the following situations:
 
 - `before_compile`
 
-   Seed starts the build process by doing a `npm install` (for Node.js projects) or `pip install -r requirements.txt` (for Python projects). The `before_compile` step let's you run commands before this. This can be useful for [configuring private npm modules]({% link _docs/private-npm-modules.md %}). This step is not run when a build is promoted to production.
+   Seed starts the build process by doing a `npm install` (for Node.js projects), `pip install -r requirements.txt` (for Python projects), or `make` (for Go projects). The `before_compile` step let's you run commands before this. This can be useful for [configuring private npm modules]({% link _docs/private-npm-modules.md %}). This step is not run when a build is promoted to production.
 
 - `before_build`
 

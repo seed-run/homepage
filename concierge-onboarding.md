@@ -99,6 +99,7 @@ title: SEED Concierge Onboarding
     </div>
     <div class="platforms">
       <div>
+        <img title="Go" height="20" src="assets/go-logo.png" />
         <img title="Node.js" width="31" src="assets/node-logo.png" />
         <i title="Bitbucket" class="fa fa-bitbucket" aria-hidden="true"></i>
         <i title="GitHub" class="fa fa-github" aria-hidden="true"></i>

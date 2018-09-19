@@ -701,6 +701,10 @@ main > .platforms {
       opacity: 0.33;
       vertical-align: middle;
       margin: 0 9px;
+
+      @include media-query($on-palm) {
+        margin: 0 5px;
+      }
     }
 
     i {
@@ -708,6 +712,10 @@ main > .platforms {
       opacity: 0.4;
       font-size: 32px;
       vertical-align: middle;
+
+      @include media-query($on-palm) {
+        margin: 0 5px;
+      }
     }
   }
 }
@@ -1701,10 +1709,18 @@ main > .concierge {
             opacity: 0.4;
             font-size: 32px;
             vertical-align: middle;
+
+            @include media-query($on-palm) {
+              margin: 0 5px;
+            }
           }
 
           img {
             margin: 0 9px;
+
+            @include media-query($on-palm) {
+              margin: 0 5px;
+            }
           }
         }
 

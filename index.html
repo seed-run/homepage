@@ -11,24 +11,30 @@ layout: lander
       <i class="fa fa-angle-right" aria-hidden="true"></i>
     </span>
   </a>
-  <h1>Deploy, Manage, and Monitor Serverless Applications on AWS</h1>
-  <h3>Seed manages pipelines, configures environments, and monitors deployments for Serverless Framework projects.</h3>
-</div>
-
-<div class="action">
-  <div class="background">
-    <div></div>
-    <div></div>
-  </div>
-  <div class="controls">
-    <p>Add your <b>Serverless Framework project</b> to get started or request a <b>personalized demo</b>.</p>
-    <div class="buttons">
-      <a class="signup" href="{{ site.console_url }}{{ site.signup }}">
-        Sign up for free
-      </a>
-      <a class="demo" href="{{ site.console_url }}{{ site.request_demo }}">
-        Request a demo
-      </a>
+  <div class="hero-container">
+    <div class="hero">
+      <div class="copy">
+        <h1>Deploy, Manage, and Monitor Serverless Applications on AWS</h1>
+        <h3>Seed manages pipelines, configures environments, and monitors deployments for Serverless Framework projects.</h3>
+        <div class="controls">
+          <div class="buttons">
+            <a class="demo" href="{{ site.console_url }}{{ site.request_demo }}">
+              Request a demo
+            </a>
+            <a class="signup" href="{{ site.console_url }}{{ site.signup }}">
+              Sign up for free
+            </a>
+          </div>
+        </div>
+      </div>
+      <div class="graphic-container">
+        <div class="graphic">
+          <div class="browser">
+           <div class="bar"> <span></span> <span></span> <span></span> </div>
+           <img src="/assets/lander/seed-console-screenshot.png" />
+          </div>
+        </div>
+      </div>
     </div>
   </div>
 </div>
@@ -51,38 +57,75 @@ layout: lander
   <div class="feature">
     <div class="header">
       <div class="icon">
-        <i class="fa fa-code-fork" aria-hidden="true"></i>
+        <img src="/assets/lander/bolt.png" width="16" />
       </div>
-      <h2>Continuous Integration</h2>
-      <p>Seed is a fully-managed code pipeline for Serverless Framework projects on AWS. Here are a few ways Seed can help you with continuous integration.</p>
+      <h2>Made for Serverless</h2>
+      <p>Seed is a fully-managed code pipeline made specifically for Serverless Framework applications.</p>
     </div>
-    <div class="ci-graphic">
-      <div class="stage">
-        <i class="fa fa-git-square" aria-hidden="true"></i>
-        <p>Commit</p>
-      </div>
-      <div class="angle"></div>
-      <div class="stage">
-        <i class="fa fa-cogs" aria-hidden="true"></i>
-        <p>Build</p>
-      </div>
-      <div class="angle"></div>
-      <div class="stage">
-        <i class="fa fa-check-square-o" aria-hidden="true"></i>
-        <p>Test</p>
-      </div>
-      <div class="angle"></div>
-      <div class="stage">
-        <i class="fa fa-archive" aria-hidden="true"></i>
-        <p>Package</p>
-      </div>
-      <div class="angle"></div>
-      <div class="stage">
-        <i class="fa fa-rocket" aria-hidden="true"></i>
-        <p>Deploy</p>
+    <div class="mono-repo-graphic">
+      <div class="root folder">
+        <span>
+          <i class="fa fa-folder-open" aria-hidden="true"></i><span>/</span>
+        </span>
+        <div class="content">
+          <div class="folder">
+            <span>
+              <i class="fa fa-folder-open" aria-hidden="true"></i><span>apis/</span>
+            </span>
+            <div class="content">
+              <div class="service">
+                <img width="24" src="assets/serverless-folder.png" /><span>users/</span>
+              </div>
+              <div class="service">
+                <img width="24" src="assets/serverless-folder.png" /><span>groups/</span>
+              </div>
+              <div class="service">
+                <img width="24" src="assets/serverless-folder.png" /><span>posts/</span>
+              </div>
+            </div>
+          </div>
+          <div class="folder">
+            <span>
+              <i class="fa fa-folder-open" aria-hidden="true"></i><span>jobs/</span>
+            </span>
+            <div class="content">
+              <div class="service">
+                <img width="24" src="assets/serverless-folder.png" /><span>etl/</span>
+              </div>
+              <div class="service">
+                <img width="24" src="assets/serverless-folder.png" /><span>resizer/</span>
+              </div>
+            </div>
+          </div>
+          <div class="folder">
+            <span>
+              <i class="fa fa-folder-open" aria-hidden="true"></i><span>alerts/</span>
+            </span>
+            <div class="content">
+              <div class="service">
+                <img width="24" src="assets/serverless-folder.png" /><span>db-trigger/</span>
+              </div>
+              <div class="service">
+                <img width="24" src="assets/serverless-folder.png" /><span>notifier/</span>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
     <div class="points">
+      <div class="point">
+        <h6>Serverless plugin support</h6>
+        <p>Seed supports the most common Serverless Framework plugins like serverless-webpack, serverless-python-requirements, serverless-plugin-warmup, etc.</p>
+      </div>
+      <div class="point">
+        <h6>Mono-repo applications</h6>
+        <p>Coordinate the deployment process between multiple services. Define complex workflows with parallel and sequential deployments.</p>
+        <a href="/docs/mono-repo-apps-in-seed.html">
+          Learn more
+          <i class="fa fa-angle-right" aria-hidden="true"></i>
+        </a>
+      </div>
       <div class="point">
         <h6>Flexible Git workflow</h6>
         <p>Easily create new Serverless stages from Git branches. Each feature branch gets its own independent stage.</p>
@@ -92,36 +135,20 @@ layout: lander
         </a>
       </div>
       <div class="point">
-        <h6>Immutable artifacts</h6>
-        <p>Every successful commit generates an immutable artifact that will be used to promote to all downstream stages.</p>
+        <h6>Promote and rollback</h6>
+        <p>Every successful commit generates an immutable artifact that'll be used to promote to all downstream stages. And to rollback without any repackaging.</p>
         <a href="/docs/promoting-to-production.html">
           Learn more
           <i class="fa fa-angle-right" aria-hidden="true"></i>
         </a>
       </div>
       <div class="point">
-        <h6>Artifact repository <span>Beta</span></h6>
-        <p>Immutable artifacts are stored securely in your AWS S3 bucket. Each artifact can be fetched at any time and used to deploy to any downstream stage.</p>
+        <h6>Service pipelines</h6>
+        <p>One stop visualization of the entire pipeline across all of your Serverless services. Always know which git commit is deployed to which stage.</p>
       </div>
       <div class="point">
-        <h6>Environment variables <span>Beta</span></h6>
-        <p>Environment variables configured through Seed are securely stored in your AWS Systems Manager.</p>
-      </div>
-      <div class="point">
-        <h6>Sensitive data</h6>
-        <p>Sensitive environment variables are encrypted with your AWS KMS keys, and stored in your AWS Systems Manager.</p>
-        <a href="/docs/storing-secrets.html">
-          Learn more
-          <i class="fa fa-angle-right" aria-hidden="true"></i>
-        </a>
-      </div>
-      <div class="point">
-        <h6>Build notifications</h6>
-        <p>Get notified when a build starts, succeeds, or fails via the channel you prefer, whether it is Slack, email, or through a custom webhook.</p>
-        <a href="/docs/adding-build-notifications.html">
-          Learn more
-          <i class="fa fa-angle-right" aria-hidden="true"></i>
-        </a>
+        <h6>Connect your CI <span>Beta</span></h6>
+        <p>Seamlessly integrate with your existing CI system. Seed will listen for new builds in your artifact repository and automatically trigger the pipeline.</p>
       </div>
     </div>
   </div>
@@ -131,20 +158,35 @@ layout: lander
   <div class="feature">
     <div class="header">
       <div class="icon">
-        <i class="fa fa-refresh" aria-hidden="true"></i>
+        <i class="fa fa-tachometer" aria-hidden="true"></i>
       </div>
-      <h2>Continuous Delivery</h2>
-      <p>Create and configure multiple environments for your team. Monitor and visualize your pipelines using our simple and easy to use console.</p>
+      <h2>Zero AWS-Ops</h2>
+      <p>Seed automates the undifferentiated heavy lifting in managing your infrastructure across multiple AWS accounts replicated over multiple regions.</p>
     </div>
     <div class="pipeline-table">
       <div class="table">
         <div></div>
-        <div>Dev</div>
+        <div>
+          <h6>Dev</h6>
+          <span>us-east-1</span>
+        </div>
         <div></div>
-        <div>QA</div>
-        <div>Staging</div>
+        <div>
+          <h6>QA</h6>
+          <span>us-east-1</span>
+        </div>
+        <div>
+          <h6>Staging</h6>
+          <span>us-east-1</span>
+        </div>
         <div></div>
-        <div>Prod</div>
+        <div>
+          <h6>Prod</h6>
+          <p>
+            <span>us-east-1</span>
+            <span>eu-west-2</span>
+          </p>
+        </div>
         <div>Build 1318</div>
         <div class="info">
           <i class="fa fa-check-circle" aria-hidden="true"></i>
@@ -212,180 +254,27 @@ layout: lander
     </div>
     <div class="points">
       <div class="point">
-        <h6>Pipeline visualization</h6>
-        <p>One stop visualization of your entire pipeline. Always know which build and git commit is deployed in which stage.</p>
-      </div>
-      <div class="point">
         <h6>Multiple AWS accounts</h6>
-        <p>Manage stages across multiple AWS accounts. Deploy one stage per account or configure your pipeline to deploy multiple stages to the same account.</p>
+        <p>Turnkey solution for managing stages across multiple AWS accounts. Deploy one stage per account or multiple stages that share the same account.</p>
         <a href="/docs/iam-credentials-per-stage.html">
           Learn more
           <i class="fa fa-angle-right" aria-hidden="true"></i>
         </a>
       </div>
       <div class="point">
-        <h6>Trusted builds</h6>
-        <p>The same immutable artifact is used to promote across all downstream environments ensuring build consistency.</p>
-        <a href="/docs/generating-trusted-builds.html">
-          Learn more
-          <i class="fa fa-angle-right" aria-hidden="true"></i>
-        </a>
+        <h6>Multi-region support <span>Beta</span></h6>
+        <p>Manage multi-region AWS deployments for Serverless applications to achieve high availability without the added complexity.</p>
       </div>
       <div class="point">
-        <h6>Manual gating</h6>
-        <p>Manually review and approve promotions. Verify CloudFormation Change Sets as a part of the review process.</p>
-        <a href="/docs/promoting-to-production.html">
-          Learn more
-          <i class="fa fa-angle-right" aria-hidden="true"></i>
-        </a>
+        <h6>Pipeline Visualization</h6>
+        <p>Visualize your entire deployment pipeline over multiple AWS accounts and regions. Get a brid's-eye view of the status of your stages.</p>
       </div>
       <div class="point">
-        <h6>Rollback to any version</h6>
-        <p>Any past trusted build can be re-deployed at any time. Single-click rollback without any repackaging.</p>
-        <a href="/docs/rolling-back.html">
-          Learn more
-          <i class="fa fa-angle-right" aria-hidden="true"></i>
-        </a>
+        <h6>Resource management</h6>
+        <p>Get an overview of all the resources deployed in your application including your Lambda and API Gateway endpoints.</p>
       </div>
       <div class="point">
-        <h6>Connect your CI <span>Beta</span></h6>
-        <p>Seamlessly integrate with your existing CI system. Seed will listen for new builds in your artifact repository and automatically trigger the pipeline.</p>
-      </div>
-    </div>
-  </div>
-
-  <hr />
-
-  <div class="feature">
-    <div class="header">
-      <div class="icon">
-        <i class="fa fa-sitemap" aria-hidden="true"></i>
-      </div>
-      <h2>Mono-Repo Workflow</h2>
-      <p>Seed supports mono-repo Serverless applications with very little configuration. Simply connect your repo and add your services.</p>
-    </div>
-    <div class="mono-repo-graphic">
-      <div class="root folder">
-        <span>
-          <i class="fa fa-folder-open" aria-hidden="true"></i><span>/</span>
-        </span>
-        <div class="content">
-          <div class="folder">
-            <span>
-              <i class="fa fa-folder-open" aria-hidden="true"></i><span>apis/</span>
-            </span>
-            <div class="content">
-              <div class="service">
-                <img width="24" src="assets/serverless-folder.png" /><span>users/</span>
-              </div>
-              <div class="service">
-                <img width="24" src="assets/serverless-folder.png" /><span>groups/</span>
-              </div>
-              <div class="service">
-                <img width="24" src="assets/serverless-folder.png" /><span>posts/</span>
-              </div>
-            </div>
-          </div>
-          <div class="folder">
-            <span>
-              <i class="fa fa-folder-open" aria-hidden="true"></i><span>jobs/</span>
-            </span>
-            <div class="content">
-              <div class="service">
-                <img width="24" src="assets/serverless-folder.png" /><span>etl/</span>
-              </div>
-              <div class="service">
-                <img width="24" src="assets/serverless-folder.png" /><span>resizer/</span>
-              </div>
-            </div>
-          </div>
-          <div class="folder">
-            <span>
-              <i class="fa fa-folder-open" aria-hidden="true"></i><span>alerts/</span>
-            </span>
-            <div class="content">
-              <div class="service">
-                <img width="24" src="assets/serverless-folder.png" /><span>db-trigger/</span>
-              </div>
-              <div class="service">
-                <img width="24" src="assets/serverless-folder.png" /><span>notifier/</span>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div class="points">
-      <div class="point">
-        <h6>Service management</h6>
-        <p>Add all your Serverless services by specifying their path. Seed lets you manage all the services as a whole.</p>
-        <a href="/docs/mono-repo-apps-in-seed.html">
-          Learn more
-          <i class="fa fa-angle-right" aria-hidden="true"></i>
-        </a>
-      </div>
-      <div class="point">
-        <h6>Service dependencies  <span>Beta</span></h6>
-        <p>Coordinate the deployment process between multiple services. Define complex workflows with parallel and sequential deployments.</p>
-      </div>
-      <div class="point">
-        <h6>Concurrent deployments</h6>
-        <p>A Git commit triggers concurrent deployment across all services. This drastically reduces deployment times for large mono-repo projects.</p>
-      </div>
-      <div class="point">
-        <h6>Environments</h6>
-        <p>Seed uses a simple environment context inheritance model. Configure and manage environments across all services.</p>
-      </div>
-      <div class="point">
-        <h6>Pipelines <span>Beta</span></h6>
-        <p>Configure and visualize your pipeline across all your services. Promote and rollback builds for all your services as a whole.</p>
-      </div>
-      <div class="point">
-        <h6>Trusted builds</h6>
-        <p>Artifacts are generated and securely stored for all your services on every commit.</p>
-      </div>
-    </div>
-  </div>
-
-  <hr />
-
-  <div class="feature">
-    <div class="header">
-      <div class="icon">
-        <i class="fa fa-tachometer" aria-hidden="true"></i>
-      </div>
-      <h2>Manage &amp; Monitor</h2>
-      <p>Seed can help you monitor your deployed stack in detail and give you a live look at how it's performing.</p>
-    </div>
-    <div class="metrics-graphic">
-      <div class="graph">
-        <svg width="100%" height="100%" version="1.1">
-          <defs>
-            <linearGradient id="colorRed" x1="0" y1="0" x2="0" y2="1">
-              <stop offset="5%" stop-color="#BE2F2B" stop-opacity="0.9"></stop>
-              <stop offset="95%" stop-color="#BE2F2B" stop-opacity="0.1"></stop>
-            </linearGradient>
-          </defs>
-          <g>
-            <g>
-              <path stroke="none" fill="url(#colorRed)" fill-opacity="0.6" width="870" height="135" d="M5,95L56.1764705882353,72.5L107.3529411764706,78.125L158.52941176470588,50L209.7058823529412,21.875L260.88235294117646,5L312.05882352941177,33.125L363.2352941176471,21.875L414.4117647058824,61.25L465.5882352941177,72.5L516.7647058823529,55.625L567.9411764705883,38.75L619.1176470588235,33.125L670.2941176470589,21.875L721.4705882352941,38.75L772.6470588235295,44.375L823.8235294117648,61.25L875,72.5L875,140L823.8235294117648,140L772.6470588235295,140L721.4705882352941,140L670.2941176470589,140L619.1176470588235,140L567.9411764705883,140L516.7647058823529,140L465.5882352941177,140L414.4117647058824,140L363.2352941176471,140L312.05882352941177,140L260.88235294117646,140L209.7058823529412,140L158.52941176470588,140L107.3529411764706,140L56.1764705882353,140L5,140Z"></path>
-              <path stroke="#BE2F2B" fill="none" fill-opacity="0.6" width="870" height="135" d="M5,95L56.1764705882353,72.5L107.3529411764706,78.125L158.52941176470588,50L209.7058823529412,21.875L260.88235294117646,5L312.05882352941177,33.125L363.2352941176471,21.875L414.4117647058824,61.25L465.5882352941177,72.5L516.7647058823529,55.625L567.9411764705883,38.75L619.1176470588235,33.125L670.2941176470589,21.875L721.4705882352941,38.75L772.6470588235295,44.375L823.8235294117648,61.25L875,72.5"></path>
-            </g>
-            <g>
-              <circle r="4" stroke="white" fill="#BE2F2B" fill-opacity="1" width="870" height="135" cx="146.5" cy="55.625" stroke-width="2"></circle>
-            </g>
-          </g>
-        </svg>
-        <div class="tooltip-wrapper">
-          <div class="custom-tooltip">
-            <p>Requests: 1413</p>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div class="points">
-      <div class="point">
-        <h6>Live logs &amp; metrics</h6>
+        <h6>Live logs & metrics</h6>
         <p>Seed organizes and displays live metrics from CloudWatch for the Lambda and API Gateway resources in your stack.</p>
         <a href="/docs/viewing-metrics.html">
           Learn more
@@ -393,13 +282,128 @@ layout: lander
         </a>
       </div>
       <div class="point">
-        <h6>Resource management</h6>
-        <p>Get a clear overview of all the resources deployed in your application including your Lambda and API Gateway endpoints.</p>
-      </div>
-      <div class="point">
         <h6>API management</h6>
         <p>Turnkey solution for managing your API custom-domains and access logs across environments.</p>
         <a href="/docs/configuring-custom-domains.html">
+          Learn more
+          <i class="fa fa-angle-right" aria-hidden="true"></i>
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <hr />
+
+  <div class="feature">
+    <div class="header">
+      <div class="icon">
+        <i class="fa fa-id-badge" aria-hidden="true"></i>
+      </div>
+      <h2>Secure Pipelines</h2>
+      <p>Seed gives you the ability to secure your deployment pipelines by giving you fine-grained roles and controls.</p>
+    </div>
+    <div class="security-graphic">
+      <div class="graphic-container">
+        <div class="locked-area">
+          <i class="fa fa-lock" aria-hidden="true"></i>
+        </div>
+        <div class="user">
+          <i class="fa fa-user-circle" aria-hidden="true"></i>
+          <div class="permissions">
+            <div class="pill">Deploy Dev</div>
+            <div class="pill">Deploy Staging</div>
+            <div class="pill">Deploy Production</div>
+          </div>
+        </div>
+        <div class="iam">
+          <div class="roles">
+            <div class="pill">Dev IAM</div>
+            <div class="pill">Prod IAM</div>
+          </div>
+          <img src="/assets/lander/key-icon.png" width="24" />
+        </div>
+      </div>
+    </div>
+    <div class="points">
+      <div class="point">
+        <h6>IAM deployment roles</h6>
+        <p>Create restrictive IAM deployment roles to ensure that your team members can safely deploy to a given stage without affecting other resources.</p>
+      </div>
+      <div class="point">
+        <h6>Role-based access</h6>
+        <p>Assign deployment roles to each member in your organization, to restrict access to actions such as promoting to production.</p>
+      </div>
+      <div class="point">
+        <h6>SSO / 2FA</h6>
+        <p>Seed takes security very seriously. We offer the ability to enable 2FA for individual accounts and to enforce SSO for your entire organization.</p>
+      </div>
+    </div>
+  </div>
+
+  <hr />
+
+  <div class="feature">
+    <div class="header">
+      <div class="icon">
+        <i class="fa fa-plug" aria-hidden="true"></i>
+      </div>
+      <h2>Connect Your Tools</h2>
+      <p>Seed works with most of the tools and services that you already love and use.</p>
+    </div>
+    <div class="integrations-graphic">
+      <div class="services">
+        <div>
+          <img title="OpenID" width="48" src="/assets/lander/integrations/openid.png" />
+        </div>
+        <div>
+          <img title="npm" width="48" src="/assets/lander/integrations/npm.png" />
+        </div>
+        <div>
+          <img title="JFrog" width="48" src="/assets/lander/integrations/jfrog.png" />
+        </div>
+        <div>
+          <img title="GitHub" width="48" src="/assets/lander/integrations/github.png" />
+        </div>
+        <div>
+          <img title="GitLab" width="48" src="/assets/lander/integrations/gitlab.png" />
+        </div>
+        <div>
+          <img title="Bitbucket" width="42" src="/assets/lander/integrations/bitbucket.png" />
+        </div>
+        <div>
+          <img title="Slack" width="48" src="/assets/lander/integrations/slack.png" />
+        </div>
+        <div>
+          <img title="Okta" width="48" src="/assets/lander/integrations/okta.png" />
+        </div>
+        <div>
+          <img title="SAML" width="48" src="/assets/lander/integrations/saml.png" />
+        </div>
+        <div>
+          <img title="Webhook" width="48" src="/assets/lander/integrations/webhook.png" />
+        </div>
+        <div>
+          <img title="OneLogin" width="48" src="/assets/lander/integrations/onelogin.png" />
+        </div>
+      </div>
+    </div>
+    <div class="points">
+      <div class="point">
+        <h6>Build notifications</h6>
+        <p>Get notified when a build starts, succeeds, or fails via the channel you prefer, whether it is Slack, email, or through a custom webhook.</p>
+        <a href="/docs/adding-build-notifications.html">
+          Learn more
+          <i class="fa fa-angle-right" aria-hidden="true"></i>
+        </a>
+      </div>
+      <div class="point">
+        <h6>Authentication providers</h6>
+        <p>Seed integrates with Okta, so your team can login securely. We also support any SAML based auth provider, including OneLogin, G Suite, etc.</p>
+      </div>
+      <div class="point">
+        <h6>Private repositories</h6>
+        <p>Integrate any private code repositories directly into your deployment process. Seed supports npm and JFrog with very little configuration.</p>
+        <a href="/docs/private-npm-modules.html">
           Learn more
           <i class="fa fa-angle-right" aria-hidden="true"></i>
         </a>

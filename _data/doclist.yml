@@ -37,6 +37,8 @@ toc:
         url: /docs/iam-credentials-per-stage.html
       - page: Private npm modules
         url: /docs/private-npm-modules.html
+      - page: Integrating with JFrog
+        url: /docs/integrating-with-jfrog.html
       - page: Deleting resources
         url: /docs/deleting-resources.html
   - title: Configuring your organization

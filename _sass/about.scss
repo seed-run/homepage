@@ -158,6 +158,40 @@ main > .wrapper > .about {
     }
   }
 
+  .community {
+    margin: 0 auto;
+    max-width: 720px;
+    text-align: center;
+
+    h3 {
+      font-size: 24px;
+    }
+
+    p {
+      color: $secondary-text-color;
+      font-size: 17px;
+      a {
+        font-weight: 500;
+      }
+      b {
+        font-weight: 500;
+      }
+    }
+
+    .images {
+      a {
+        img {
+          margin-bottom: 5px;
+          filter: grayscale(100%);
+        }
+
+        &:hover img {
+          filter: none;
+        }
+      }
+    }
+  }
+
   .press {
     margin: 0 auto;
     text-align: center;

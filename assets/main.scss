@@ -1079,19 +1079,11 @@ main > .platforms {
   padding-bottom: 1.5 * $spacing-unit;
   text-align: center;
 
-  @include media-query($on-palm) {
-    padding-bottom: 2 * $spacing-unit;
-  }
-
   div {
     img {
       opacity: 0.33;
       vertical-align: middle;
       margin: 0 9px;
-
-      @include media-query($on-palm) {
-        margin: 0 5px;
-      }
     }
 
     i {
@@ -1099,9 +1091,11 @@ main > .platforms {
       opacity: 0.4;
       font-size: 32px;
       vertical-align: middle;
+    }
 
-      @include media-query($on-palm) {
-        margin: 0 5px;
+    @include media-query($on-palm) {
+      i {
+        display: none;
       }
     }
   }
@@ -2116,6 +2110,12 @@ main > .concierge {
 
             @include media-query($on-palm) {
               margin: 0 5px;
+            }
+          }
+
+          @include media-query($on-palm) {
+            i {
+              display: none;
             }
           }
         }

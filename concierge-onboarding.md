@@ -105,6 +105,7 @@ title: SEED Concierge Onboarding
         <i title="GitHub" class="fa fa-github" aria-hidden="true"></i>
         <i title="GitLab" class="fa fa-gitlab" aria-hidden="true"></i>
         <img title="Python" width="31" src="assets/python-logo.png" />
+        <img title=".NET Core" width="32" src="assets/dotnet-logo.png" />
       </div>
       <div>
         <img title="AWS" width="134" src="assets/aws-logo.png" />

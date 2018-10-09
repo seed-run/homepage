@@ -16,10 +16,12 @@ We have a simple starter repo with the [Makefile example here](https://github.co
 
 ### Using the serverless-go-build Plugin
 
-If a Makefile is not found then Seed will look to see if you are using the [serverless-go-build plugin](https://github.com/sean9keenan/serverless-go-build). If you are, then it will run the following while building your project:
+If a Makefile is not found, then Seed will look to see if you are using the [serverless-go-build plugin](https://github.com/sean9keenan/serverless-go-build). If you are, then it will run the following while building your project:
 
 - Install the dependencies using `dep ensure`. Where [dep](https://github.com/golang/dep) is the dependency manager for Go.
-- Run `serverless build`.
+- Run the serverless build.
+
+If a Makefile is found in addition to the plugin, then Seed will run `make` before serverless build.
 
 We also have a simple starter repo with the [serverless-go-build example here](https://github.com/fwang/serverless-go-starter-with-plugin).
 

@@ -13,6 +13,8 @@ toc:
         url: /docs/adding-python-projects.html
       - page: Adding Go projects
         url: /docs/adding-go-projects.html
+      - page: Adding .NET Core projects
+        url: /docs/adding-dotnet-core-projects.html
       - page: Adding app members
         url: /docs/adding-app-members.html
   - title: Configuring your app

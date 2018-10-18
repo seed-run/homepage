@@ -45,28 +45,6 @@ $on-laptop:                 800px;
 // Import partials from the `minima` theme.
 @import "theme";
 @import "svg";
-@import "blog";
-@import "about";
-
-/**
- * Links
- */
-a {
-  color: $link-color;
-}
-a:visited {
-  color: lighten($brand-color, 15%);
-}
-a:hover {
-  color: lighten($brand-color, 25%);
-}
-a:active {
-  color: lighten($brand-color, 5%);
-}
-
-::selection {
-  background: lighten($accent-color, 20%);
-}
 
 @mixin logo-font {
   font-family: $base-font-family;
@@ -158,6 +136,31 @@ a:active {
     border-color: darken($bkg, 30%);
     background-color: darken($bkg, 15%);
   }
+}
+
+// Import other pages
+@import "blog";
+@import "about";
+@import "pricing";
+
+/**
+ * Links
+ */
+a {
+  color: $link-color;
+}
+a:visited {
+  color: lighten($brand-color, 15%);
+}
+a:hover {
+  color: lighten($brand-color, 25%);
+}
+a:active {
+  color: lighten($brand-color, 5%);
+}
+
+::selection {
+  background: lighten($accent-color, 20%);
 }
 
 @mixin hero-graphic {
@@ -1248,7 +1251,6 @@ main > .features {
       }
     }
     a.signup {
-      margin-right: $spacing-unit / 2 + 1px;
       @include action-button;
       padding: 14px 26px;
       width: 222px;
@@ -1260,6 +1262,7 @@ main > .features {
       }
     }
     a.demo {
+      margin-right: $spacing-unit / 2 + 1px;
       @include action-button-brand;
       padding: 14px 26px;
       width: 222px;
@@ -1270,9 +1273,17 @@ main > .features {
     }
 
     @include media-query($on-palm) {
-      a.signup {
+      a.demo {
         margin-right: 0;
         margin-bottom: $spacing-unit / 2;
+      }
+    }
+    a.plans {
+      padding-top: $spacing-unit / 2;
+      display: inline-block;
+
+      i {
+        margin-left: 2px;
       }
     }
   }
@@ -1415,190 +1426,6 @@ main > .testimonials {
 
     &:last-child {
       margin-bottom: 0;
-    }
-  }
-}
-
-/////////////
-// PRICING //
-/////////////
-main > .pricing {
-  padding: $spacing-unit * 2 + 10px 0;
-  border-top: 2px solid $accent-color;
-
-  @include media-query($on-palm) {
-    padding-top: $spacing-unit * 2;
-    padding-bottom: $spacing-unit * 2;
-  }
-
-  h4 {
-    margin-bottom: $spacing-unit * 1.5;
-    text-align: center;
-    font-size: 24px;
-  }
-
-  .table {
-    display: flex;
-    justify-content: center;
-    align-items: flex-start;
-    flex-wrap: wrap;
-
-    & > div {
-      margin: 0 $spacing-unit / 2 1.5 * $spacing-unit;
-      width: 232px;
-
-      .cost {
-        border: 2px solid $grey-color-light;
-        border-radius: 3px;
-        height: 340px;
-
-        .header {
-          padding: 25px 0;
-          margin-bottom: 0;
-          text-transform: uppercase;
-          text-align: center;
-          letter-spacing: 2px;
-          font-size: 14px;
-          font-weight: 500;
-          line-height: 1.1;
-          border-bottom: 1px solid $grey-color-light;
-        }
-
-        .numbers {
-          text-align: center;
-          padding-top: $spacing-unit * 1.5;
-
-          p:first-child {
-            font-size: 60px;
-          }
-
-          p:nth-child(2) {
-            color: $tertiary-text-color;
-            font-size: 14px;
-          }
-        }
-      }
-
-      &.growth .cost {
-        border-color: $accent-color;
-        box-shadow: 0px 1px 2px 0px rgba(0, 0, 0, 0.21);
-
-        .header {
-          border-color: $accent-color;
-        }
-        .numbers p:first-child {
-          font-weight: 500;
-        }
-      }
-
-      &.enterprise .cost .numbers {
-        padding-top: 88px;
-
-        p:first-child {
-          margin-bottom: 5px;
-          font-size: 24px;
-          font-weight: 500;
-        }
-      }
-
-      ul {
-        padding-top: $spacing-unit;
-        padding-right: 5px;
-        font-size: 15px;
-        color: $secondary-text-color;
-
-        li {
-          padding-bottom: 10px;
-
-          i {
-            line-height: 1.3;
-          }
-
-          span {
-            padding: 3px 6px;
-            border-radius: 3px;
-            background-color: $tertiary-text-color;
-            color: white;
-            text-transform: uppercase;
-            font-size: 10px;
-            font-family: $label-font-family;
-            line-height: 1;
-          }
-
-          &:last-child {
-            padding-bottom: 0;
-          }
-        }
-      }
-    }
-
-    @include media-query($on-palm) {
-      flex-direction: column;
-      justify-content: flex-start;
-      align-items: center;
-
-      & > div {
-        margin-left: 0;
-        margin-right: 0;
-        width: 250px;
-      }
-    }
-
-    @include media-query($on-macbook) {
-      margin: 0 auto;
-      max-width: 800px;
-    }
-  }
-
-  .contact {
-    padding: 0 $spacing-unit / 2;
-    text-align: center;
-
-    p {
-      margin-bottom: 0;
-      font-size: 22px;
-      color: $tertiary-text-color;
-
-      &:first-child {
-        margin-bottom: 3px;
-      }
-    }
-
-    div.controls {
-      margin-top: $spacing-unit / 2 + 5px;
-      a.action {
-        @include action-button-dark;
-        padding: 8px 16px;
-        font-size: 16px;
-        line-height: 1.8;
-        border-width: 1px;
-      }
-
-      @include media-query($on-palm) {
-        a.action {
-          font-size: 14px;
-        }
-      }
-    }
-  }
-
-  .extra {
-    margin: 0 auto;
-    padding: 0 $spacing-unit / 2;
-    max-width: 560px;
-    text-align: center;
-
-    hr {
-      margin: $spacing-unit auto $spacing-unit / 2;
-      max-width: 560px;
-      border-color: darken($hero-bkg-color, 5%);
-    }
-
-    p {
-      margin-bottom: 0;
-      padding: 0 $spacing-unit / 2;
-      color: $tertiary-text-color;
-      font-size: 14px;
     }
   }
 }
@@ -1772,9 +1599,7 @@ main > .closing-action {
   }
 
   div.controls {
-    margin-bottom: $spacing-unit - 5px;
     a.signup {
-      margin-right: $spacing-unit / 2 + 1px;
       @include action-button;
       padding: 14px 26px;
       width: 222px;
@@ -1785,6 +1610,7 @@ main > .closing-action {
       }
     }
     a.demo {
+      margin-right: $spacing-unit / 2 + 1px;
       @include action-button-brand;
       padding: 14px 26px;
       width: 222px;
@@ -1794,10 +1620,20 @@ main > .closing-action {
     }
 
     @include media-query($on-palm) {
-      a.signup {
+      a.demo {
         margin-right: 0;
         margin-bottom: $spacing-unit / 2;
       }
+    }
+  }
+
+  a.plans {
+    margin-bottom: $spacing-unit / 2;
+    padding-top: $spacing-unit / 2;
+    display: inline-block;
+
+    i {
+      margin-left: 2px;
     }
   }
 

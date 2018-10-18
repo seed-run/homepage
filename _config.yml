@@ -24,7 +24,7 @@ url: "https://seed.run" # the base hostname & protocol for your site, e.g. http:
 logo: /assets/og-image.png
 
 console_url: "https://console.seed.run"
-signup: "/signup-account"
+signup: "/signup"
 request_demo: "/request-demo"
 
 newsletter_signup_form: "http://eepurl.com/c1gHff"

@@ -1320,7 +1320,7 @@ main > .testimonials {
   }
 
   h4 {
-    margin-bottom: 10px;
+    margin-bottom: 15px;
     text-align: center;
     font-family: $base-font-family;
     font-size: 32px;
@@ -1341,20 +1341,17 @@ main > .testimonials {
       margin: $spacing-unit $spacing-unit - 10px;
       display: block;
       flex-shrink: 0;
-      height: 65px;
+      height: 45px;
       box-sizing: border-box;
 
-      &:first-child {
-        padding-top: 6px;
+      &.hp img {
+        margin-top: -7px;
       }
-      &:nth-child(2) {
-        padding-top: 12px;
+      &.infosys {
+        padding-top: 1px;
       }
-      &:nth-child(3) {
-        padding-top: 18px;
-      }
-      &:last-child img {
-        margin-top: -4px;
+      &.airware {
+        padding-top: 3px;
       }
 
       @include media-query($on-palm) {
@@ -1364,12 +1361,12 @@ main > .testimonials {
   }
 
   hr {
-    margin: $spacing-unit auto $spacing-unit * 2;
+    margin: $spacing-unit / 2 auto $spacing-unit * 1.5;
     border-color: rgba(255, 255, 255, 0.2);
     max-width: 720px;
 
     @include media-query($on-palm) {
-      margin: $spacing-unit /2 $spacing-unit $spacing-unit * 1.5;
+      margin: $spacing-unit / 2 $spacing-unit $spacing-unit * 1.5;
     }
   }
 

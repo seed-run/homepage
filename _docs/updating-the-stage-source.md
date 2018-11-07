@@ -36,22 +36,4 @@ Just as the case above, this allows you to select the branch you'd like to auto-
 
 ![Disable auto-deploy for production](/assets/docs/updating-the-stage-source/disable-autodeploy-for-prod.png)
 
-### Manual Deploy
-
-Finally, you can trigger one-off deployments to a stage from any branch. This can be useful when you want to test a hotfix branch in your staging environment.
-
-To do so, go to the service you want to deploy and hit **Settings**.
-
-![Hit service stage settings](/assets/docs/updating-the-stage-source/hit-service-stage-settings.png)
-
-Select **Trigger Deploy**.
-
-![Select trigger deploy](/assets/docs/updating-the-stage-source/select-trigger-deploy.png)
-
-You'll be asked to pick a branch to deploy.
-
-![Select manual deploy branch](/assets/docs/updating-the-stage-source/select-manual-deploy-branch.png)
-
-And hitting **Deploy Branch** triggers a one-off deployment to the current stage.
-
-By updating the stage source, the auto-deploy options, and the ability to manually deploy; Seed gives you the flexibility to maintain consistent endpoints for your environments while deploying the branch you need.
+You can also trigger a one-off deployment by using [the manual deploy option]({% link _docs/manually-deploying.md %}).

@@ -57,6 +57,8 @@ toc:
         url: /docs/generating-trusted-builds.html
       - page: Cancelling builds
         url: /docs/cancelling-builds.html
+      - page: Manually deploying
+        url: /docs/manually-deploying.html
       - page: Promoting to production
         url: /docs/promoting-to-production.html
       - page: Rolling back

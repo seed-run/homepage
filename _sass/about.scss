@@ -178,6 +178,30 @@ main > .wrapper > .about {
       }
     }
 
+    .groups {
+      padding-top: 5px;
+      padding-bottom: $spacing-unit / 2 + 10px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-wrap: wrap;
+
+      a {
+        display: block;
+
+        &:first-child {
+          margin-top: 9px;
+          margin-right: $spacing-unit;
+
+          @include media-query($on-palm) {
+            margin-top: 0;
+            margin-right: 0;
+            margin-bottom: $spacing-unit / 2;
+          }
+        }
+      }
+    }
+
     .images {
       a {
         img {

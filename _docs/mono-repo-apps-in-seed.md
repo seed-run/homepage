@@ -35,7 +35,7 @@ An alternative strategy is to completely separate the services into their own re
 
 Mono-repo apps can add a layer of complexity to your deployment process. Deploying your application involves co-ordinating deployment across multiple services.
 
-> Seed deploys all the services in a mono-repo app concurrently.
+> Seed by default deploys all the services in a mono-repo app concurrently.
 
 Seed simplifies this by deploying the entire application as a whole.
 
@@ -43,11 +43,15 @@ Seed simplifies this by deploying the entire application as a whole.
 
    ![App Pipeline view](/assets/docs/mono-repo-apps-in-seed/app-pipeline-view.png)
 
-2. A deployment to the app will now trigger all the services in the app to be deployed. Seed deploys all the services in a mono-repo app concurrently.
+2. By default, all the services are deployed concurrently. You can configure the deployment order by hitting **Manage Deploy Phases** in the app settings. You can [read more about configuring deployment phases]({% link _docs/configuring-deploy-phases.md %}) here.
+
+   ![configure deploy phases](/assets/docs/mono-repo-apps-in-seed/configure-deploy-phases.png)
+
+3. A deployment to the app will now trigger all the services in the app to be deployed. Seed deploys all the services in a mono-repo app concurrently.
 
    ![App deployment in progress](/assets/docs/mono-repo-apps-in-seed/app-deployment-in-progress.png)
 
-3. Once you are ready to promote to production, you can pick the service and manually promote it.
+4. Once you are ready to promote to production, you can pick the service and manually promote it.
 
    ![Promote service build](/assets/docs/mono-repo-apps-in-seed/promote-service-build.png)
 
@@ -80,9 +84,5 @@ To drill down further, you click through to a service's specific stage setting.
 ![Service Stage settings](/assets/docs/mono-repo-apps-in-seed/service-stage-settings.png)
 
 In this case, if you set the environment variables; it sets them for the specific stage of this service. And not for all the other services in the stage.
-
-To help you distinguish between the various stages of a service, Seed will highlight this as `$Service-Name > $Stage-Name`.
-
-![Service Stage combo identifier](/assets/docs/mono-repo-apps-in-seed/service-stage-combo-identifier.png)
 
 The stages and services in an app allow you to easily control your mono-repo serverless apps in Seed.

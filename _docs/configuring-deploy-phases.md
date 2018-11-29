@@ -29,6 +29,8 @@ And hit **Update Phases**.
 
 Also, if you wanted to add the service back to Phase 1, you can just select it from the dropdown in Phase 1. 
 
+Finally, if you want to run integration tests or a script after all your deploy phases complete; you can [add a post-deploy phase]({% link _docs/adding-a-post-deploy-phase.md %}).
+
 ### Deployment Workflow
 
 With these changes, any new deployment will use the phases configured above as a part of the workflow.

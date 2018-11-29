@@ -25,6 +25,8 @@ toc:
         url: /docs/adding-a-service.html
       - page: Configuring deploy phases
         url: /docs/configuring-deploy-phases.html
+      - page: Adding a post-deploy phase
+        url: /docs/adding-a-post-deploy-phase.html
       - page: Configuring stage variables
         url: /docs/configuring-stage-variables.html
       - page: Storing secrets

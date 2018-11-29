@@ -11,13 +11,9 @@ When you first create a Seed project, an encryption key is generated and stored 
 
 You can then access them in your Node.js Lambda functions using the `process.env` object.
 
-To add a secret, select the service you want to add it to.
+To add a secret, select the stage you are trying to set it for.
 
-![Select service](/assets/docs/storing-secrets/select-service.png)
-
-Then select the stage.
-
-![Select service stage](/assets/docs/storing-secrets/select-service-stage.png)
+![Select stage](/assets/docs/storing-secrets/select-stage.png)
 
 And hit **Settings**.
 
@@ -31,13 +27,15 @@ Enter the **Key** and **Value** for the new secret, and click **Add**.
 
 ![Create Secret Variable](/assets/docs/storing-secrets/create-secret-variable.png)
 
-Note that the newly created secrets will take effect only after the next deployment to this stage.
+Note that the newly created secrets will take effect only after the next deployment to this stage. And these secrets will be available to all the services in your application.
 
 Secret variables take precedence over the [other stage variables](% link _docs/configuring-stage-variables.md %}) defined in `serverless.yml`. If you were to define a secret variable, and the same variable is defined in the yaml file; the value defined in `serverless.yml` is overridden.
 
 > Secrets take precedence over other environment variables
 
 This is useful when you are developing on your local where your Lambda functions are not going to have access to the secrets from the Seed console.
+
+> Secrets are available in your build process
 
 For example, we just created a secret variable **DB_PASSWORD** for the **production** stage. The same variable is also defined in the `serverless.yml`.
 

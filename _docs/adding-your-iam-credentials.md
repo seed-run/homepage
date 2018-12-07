@@ -5,6 +5,8 @@ title: Adding your IAM Credentials
 
 [Seed](/) needs your AWS IAM credentials to deploy your project on your behalf to your AWS account. There are two ways to get your credentials.
 
+Note that, Seed does not need `AdministratorAccess` to deploy your application. It only needs a restricted set of permissions in addition to the ones required by Serverless Framework. You can read more about this in the [Customizing your IAM Policy]({% link _docs/customizing-your-iam-policy.md %}) chapter.
+
 ### 1. Your Existing Credentials
 
 This is the quickest way to get your IAM credentials. If you have run the `serverless deploy` command in your terminal; you have probably configured your AWS CLI. And the IAM credentials are stored in `~/.aws/credentials`. By running the following:
@@ -51,7 +53,7 @@ Select **Attach existing policies directly**.
 
 Here you can hit **Create policy** to provide a custom IAM policy based on the permissions your project needs. You can do this by following the instructions in the [Customizing your IAM Policy]({% link _docs/customizing-your-iam-policy.md %}) chapter.
 
-But if you are just looking for a quick way to test your project on Seed you can search for **AdministratorAccess** and select the policy, then select **Next: Review**.
+But if you are just looking for a quick way to test your project on Seed you can search for **AdministratorAccess** and select the policy, then select **Next: Review**. Note that, this is not recommended for apps that are being deployed to production.
 
 ![Added Admin Policy Screenshot](/assets/docs/iam/added-admin-policy.png)
 

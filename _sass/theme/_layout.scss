@@ -272,6 +272,14 @@
   a.page-link {
     font-size: 13px;
     @extend %a-tertiary;
+
+    &.jobs {
+      color: darken($accent-color, 10%);
+
+      &:hover {
+        color: $accent-color;
+      }
+    }
   }
 
   a.social-link {

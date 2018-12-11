@@ -7,17 +7,19 @@ Seed makes it easy to configure your stages with email, slack, and custom webhoo
 
 You can configure each stage separately. For example, maybe you only want to be notified for updates to the production stage. Or maybe you want a specific stage to notify a specific member on your team.
 
-To add build notifications, first select the service.
+To add build notifications, first select the stage.
 
-![Select service](/assets/docs/adding-build-notifications/select-service.png)
+![Select stage](/assets/docs/adding-build-notifications/select-stage.png)
 
-And select the stage.
+And select the **Settings**.
 
-![Select service stage](/assets/docs/adding-build-notifications/select-service-stage.png)
+![Select stage settings](/assets/docs/adding-build-notifications/select-stage-settings.png)
 
-And from the **Settings**, select **Show Notification Options**.
+Then select **Show Notification Options**.
 
-![Select service stage settings](/assets/docs/adding-build-notifications/select-service-stage-settings.png)
+![Click Show Notification Options](/assets/docs/adding-build-notifications/click-show-notification-options.png)
+
+Note that, you'll be notified for all services that are built in this stage.
 
 ### Email Notifications
 

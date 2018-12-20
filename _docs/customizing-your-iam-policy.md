@@ -211,7 +211,7 @@ Additionally if you want Seed to set your custom domains for any API Gateway end
       "Action": [
           "apigateway:GET",
           "apigateway:POST",
-          "apigateway:DELETE",
+          "apigateway:DELETE"
       ],
       "Resource": [
         "arn:aws:apigateway:<region>::/domainnames"
@@ -228,11 +228,9 @@ And finally, if you'd like Seed to turn on access logs for API Gateway add this 
       "Effect": "Allow",
       "Action": [
           "apigateway:GET",
-          "apigateway:PATCH",
+          "apigateway:PATCH"
       ],
-      "Resource": [
-        "arn:aws:apigateway:<region>::/account"
-      ]
+      "Resource": "arn:aws:apigateway:<region>::/account"
   },
   {
       "Effect": "Allow",

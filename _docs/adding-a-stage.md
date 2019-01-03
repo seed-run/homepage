@@ -17,7 +17,7 @@ Push the branch to remote.
 $ git push -u origin new-branch
 ```
 
-Go to Seed console, navigate to your project and select **Create a Stage**.
+Go to Seed console, navigate to your project, hit **Settings**, and **Create a Stage**.
 
 ![Click Create a Stage Button](/assets/docs/adding-a-stage/click-create-a-stage.png)
 
@@ -35,12 +35,10 @@ You can now click on the stage to take a look at the services deployed in this s
 
 ![New stage](/assets/docs/adding-a-stage/new-stage.png)
 
-And for that service, you create your first build for the stage by either hitting **Trigger Deploy** or by pushing a commit to the branch that is linked to the stage.
+You start the first build for the stage by either hitting **Trigger Deploy** or by pushing a commit to the branch that is linked to the stage.
 
-![New stage service](/assets/docs/adding-a-stage/new-stage-service.png)
+![Build stage in progress](/assets/docs/adding-a-stage/build-stage-in-progress.png)
 
-If the build is successful and tests pass, the service gets deployed to this stage. At the same time, a verified build is packaged for production. You can read more about this in the [Promoting to production]({% link _docs/promoting-to-production.md %}) chapter.
-
-![Build Stage Successful](/assets/docs/adding-a-stage/build-stage-success.png)
+If the build is successful and tests pass, all the services get deployed to this stage. At the same time, a verified build is packaged for production. You can read more about this in the [Promoting to production]({% link _docs/promoting-to-production.md %}) chapter.
 
 Once a stage has been added, Seed will automatically create a new build when you `git push` to the update the remote branch.

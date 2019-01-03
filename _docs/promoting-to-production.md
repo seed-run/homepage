@@ -15,17 +15,13 @@ We think this extra step can help prevent any irreversible infrastructure change
 
 Let's look at this in a bit more detail.
 
-To get started, select the development stage you want to promote. All development stages tracking either a Git branch or a pull request can be promoted.
+### Promoting a Stage
+
+From your app homepage you can get a clear picture of the various stages, service, and builds in them.
+
+To promote a stage to production, hit the **Promote** button for the stage you want to promote.
 
 ![Select Stage To Promote](/assets/docs/promoting-to-production/select-stage-to-promote.png)
-
-And select the service.
-
-![Select service stage to promote](/assets/docs/promoting-to-production/select-service-stage-to-promote.png)
-
-You can only promote the current working build. Select **Promote**.
-
-![Promote Stage](/assets/docs/promoting-to-production/promote-stage.png)
 
 When a service is deployed, Serverless Framework generates a new CloudFormation template file based on the resources defined in **serverless.yml**, and submits the template to CloudFormation. CloudFormation will then apply the resource changes. A mistake in the resource definition can lead to permanent data loss and/or a security breach, which can be very costly in the **production** environment.
 
@@ -33,8 +29,26 @@ Seed allows you to review the changes that are about to be applied in the **prod
 
 The Change Set shows all the AWS resources about to be added, removed, and modified. Be sure to review these carefully. After you review and **confirm** the Change Set, the build will be promoted and the **production** stage will be updated.
 
+When you promote a stage, Seed will give you a chance to review the CloudFormation Change Sets for the services in the stage.
+
 ![Confirm Change Set](/assets/docs/promoting-to-production/confirm-change-set.png)
 
-After the update is complete, the build is marked as **Promoted**.
+Once confirmed, you'll notice that the services in the production stage are busy applying these changes.
 
-![Stage Promoted](/assets/docs/promoting-to-production/stage-promoted.png)
+![Production stage in progress](/assets/docs/promoting-to-production/production-stage-in-progress.png)
+
+### Promoting a Service
+
+Seed also gives you the flexibility to promote individual services. To do this, select a service.
+
+![Select service](/assets/docs/promoting-to-production/select-service-to-promote.png)
+
+Just as above, hit **Promote** for the stage you are trying to promote.
+
+![Hit promote service](/assets/docs/promoting-to-production/hit-promote-service.png)
+
+And you'll be asked to confirm the changes here as well.
+
+![Confirm service Change Set](/assets/docs/promoting-to-production/confirm-service-change-set.png)
+
+Once you confirm, the specific service in this stage will be promoted to production.

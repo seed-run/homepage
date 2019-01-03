@@ -5,6 +5,8 @@ title: Deleting Resources
 
 Seed gives you the option to delete an app, a stage, or a service and also to remove the deployed resources using a `serverless remove` command. Let's take a look at how to delete an app.
 
+### Removing an App
+
 Head over to the **Delete** panel in the **Settings** of an app.
 
 ![Delete panel in app settings](/assets/docs/deleting-resources/delete-panel-in-app-settings.png)
@@ -24,5 +26,17 @@ Selecting this checkbox does the following for the respective cases via a set of
 - App: Delete all the deployed services in all the stages.
 - Stage: Delete all the deployed services in the stage.
 - Service: Delete the deployed service in the various stages.
+
+### Removing a Stage
+
+Similar to the app, you can head over the a stage's **Settings**.
+
+![Removing a stage](/assets/docs/deleting-resources/removing-a-stage.png)
+
+### Removing a Service
+
+And for a service, head over to the service's **Settings**.
+
+![Removing a service](/assets/docs/deleting-resources/removing-a-serivce.png)
 
 So if you are looking to delete an app, stage, or service; you need to figure out if you are trying to just remove it from Seed or if you are trying to remove the deployed AWS resources. And remember that by default it only removes it from Seed.

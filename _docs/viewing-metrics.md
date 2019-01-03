@@ -7,13 +7,17 @@ title: Viewing Metrics
 
 ### Lambda Metrics
 
-To view the Lambda metrics for a stage, simply head over to the stage and click on **View Deployment**.
+To view the Lambda metrics for a stage, simply select the stage.
 
-![View Deployment](/assets/docs/viewing-metrics/view-deployment.png)
+![Select stage](/assets/docs/viewing-metrics/select-stage.png)
+
+Click **View Resources** for the service you are looking for.
+
+![Stage view resources](/assets/docs/viewing-metrics/stage-view-resources.png)
 
 Here Seed gives you a clear overview of the resources that have been deployed.
 
-![Deployment Info](/assets/docs/viewing-metrics/deployment-info.png)
+![Resources Info](/assets/docs/viewing-metrics/resources-info.png)
 
 And hit **Metrics** for the Lambda you are interested in.
 
@@ -39,7 +43,7 @@ To get a better sense of how the metrics are calculated over the various timespa
 
 To view the API Gateway metrics for a stage, click on **Metrics** on the API Gateway portion of your resources.
 
-![Deployment Info](/assets/docs/viewing-metrics/deployment-info.png)
+![Resources Info](/assets/docs/viewing-metrics/resources-info.png)
 
 The API Gateway metrics have a bit more info than the Lambda metrics.
 

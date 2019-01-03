@@ -15,7 +15,7 @@ service: service-name
 custom:
   myEnvironment:
     MESSAGE:
-      production: "This is production environment"
+      prod: "This is production environment"
       dev: "This is development environment"
       newBranch: "This is a newBranch environment"
 
@@ -29,7 +29,7 @@ Here the value `${opt:stage}` comes from the `--stage` option in the `serverless
 
 ![Stages](/assets/docs/configuring-stage-variables/stages.png)
 
-In the example above, we have the stage variables based on the `production`, `dev`, and `newBranch` stages in our `serverless.yml` and we have the exact same stages in our Seed console.
+In the example above, we have the stage variables based on the `prod`, `dev`, and `newBranch` stages in our `serverless.yml` and we have the exact same stages in our Seed console.
 
 > The stage name in your Seed console should map to your stage variables
 
@@ -39,7 +39,7 @@ This ensures that without any additional configuration the value of `process.env
 export function main(event, context, callback) {
 
   // Should output
-  // "This is production environment" in the production stage
+  // "This is prod environment" in the production stage
   // "This is development environment" in the dev stage
   // "This is a newBranch environment" in the newBranch stage
   console.log(process.env.MESSAGE);

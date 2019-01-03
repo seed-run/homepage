@@ -3,18 +3,31 @@ layout: docs
 title: Manually Deploying
 ---
 
-You can trigger one-off deployments to a stage from any branch. This can be useful when you want to test a hotfix branch in your staging environment.
+You can trigger one-off deployments to any stage or service in Seed. This can be useful for example, when you want to test a hotfix branch in your staging environment.
 
-To do so, go to the service you want to deploy and hit **Settings**.
+### Manually Deploy a Stage
 
-![Hit service stage settings](/assets/docs/updating-the-stage-source/hit-service-stage-settings.png)
+To manually deploy a stage, select the stage.
 
-Select **Trigger Deploy**.
+![Select stage](/assets/docs/manually-deploying/select-stage.png)
 
-![Select trigger deploy](/assets/docs/updating-the-stage-source/select-trigger-deploy.png)
+And hit **Trigger Deploy**.
 
-You'll be asked to pick a branch to deploy.
+![Hit stage trigger deploy](/assets/docs/manually-deploying/hit-stage-trigger-deploy.png)
 
-![Select manual deploy branch](/assets/docs/updating-the-stage-source/select-manual-deploy-branch.png)
+Here you'll be prompted to select a branch you want to deploy with. Or if this stage has a branch connected to it, you'll be asked if you want to deploy using it.
 
-And hitting **Deploy Branch** triggers a one-off deployment to the current stage.
+![Trigger deploy select branch](/assets/docs/manually-deploying/trigger-deploy-select-branch.png)
+
+### Manually Deploy a Service
+
+To deploy a specific service. Select the service.
+
+![Select service](/assets/docs/manually-deploying/select-service.png)
+
+Here you'll notice the service listed across all the stages. Hit **Trigger Deploy** for the stage you want to trigger a deployment in.
+
+![Hit service trigger deploy](/assets/docs/manually-deploying/hit-service-trigger-deploy.png)
+
+Just as above, you'll be asked to select a branch.
+

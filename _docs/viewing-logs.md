@@ -7,13 +7,17 @@ Seed makes it very easy to monitor your deployments by giving you a live look at
 
 ### Lambda Logs
 
-To view the Lambda logs for a stage, simply head over to the stage and click on **View Deployment**.
+To view the Lambda metrics for a stage, simply select the stage.
 
-![View Deployment](/assets/docs/viewing-logs/view-deployment.png)
+![Select stage](/assets/docs/viewing-logs/select-stage.png)
 
-Here Seed gives you a clear overview of the Lambda functions that have been deployed. And we also show you the API Gateway endpoint for this stage.
+Click **View Resources** for the service you are looking for.
 
-![Deployment Info](/assets/docs/viewing-logs/deployment-info.png)
+![Stage view resources](/assets/docs/viewing-logs/stage-view-resources.png)
+
+Here Seed gives you a clear overview of the resources that have been deployed.
+
+![Resources Info](/assets/docs/viewing-logs/resources-info.png)
 
 Hit **Logs** for a Lambda you are interested in.
 
@@ -39,7 +43,7 @@ You can enable it by heading over to the **Deployment Settings** and hitting **E
 
 With the access logs enabled, hit **Access Logs** for the API Gateway endpoint.
 
-![View Access Logs](/assets/docs/viewing-logs/view-access-logs.png)
+![Resources info](/assets/docs/viewing-logs/resources-info.png)
 
 Access logs are displayed similar to the Lambda logs. 
 

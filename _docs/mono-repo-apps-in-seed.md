@@ -65,7 +65,7 @@ The pipeline view of your app is a table where the columns are the various stage
 
 To get a better sense of this pipeline view let's click around a bit.
 
-1. Clicking on a service (row header) for example, gives you a view of the stages (or environments) that apply to the service. It also shows you the past few builds for the respective stages.
+1. Clicking on a service (row header) for example, gives you a view of the stages (or environments) that apply to the service.
 
    ![Service Stage](/assets/docs/mono-repo-apps-in-seed/service-stage.png)
 
@@ -78,11 +78,5 @@ Finally, the app's stage allows you to control the settings for all the services
 ![App Stage settings](/assets/docs/mono-repo-apps-in-seed/app-stage-settings.png)
 
 In the above example, using a set of custom IAM credentials would mean that all the services deployed to this stage will use this setting.
-
-To drill down further, you click through to a service's specific stage setting.
-
-![Service Stage settings](/assets/docs/mono-repo-apps-in-seed/service-stage-settings.png)
-
-In this case, if you set the environment variables; it sets them for the specific stage of this service. And not for all the other services in the stage.
 
 The stages and services in an app allow you to easily control your mono-repo serverless apps in Seed.

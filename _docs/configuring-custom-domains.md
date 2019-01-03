@@ -19,13 +19,17 @@ To configure a stage with a custom domain, Seed will automatically create the SS
 
 > Domains need to be managed by Amazon Route 53 for Seed to configure the custom domain
 
-To configure the custom domain for a service, head over to a stage and click **View Deployment**.
+To configure the custom domain for a service, head over to a stage you want to configure.
 
-![Stage View Deployment](/assets/docs/configuring-custom-domains/stage-view-deployment.png)
+![Select Stage](/assets/docs/configuring-custom-domains/select-stage.png)
+
+And click **View Resources** for the service you want.
+
+![Stage View Resources](/assets/docs/configuring-custom-domains/stage-view-resources.png)
 
 And select **Settings**.
 
-![Deployment Settings](/assets/docs/configuring-custom-domains/deployment-settings.png)
+![Resource Settings](/assets/docs/configuring-custom-domains/resource-settings.png)
 
 And select **Update Custom Domain**.
 

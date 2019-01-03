@@ -15,7 +15,7 @@ For example, you might want to point to a service called `users` in the `/servic
 
 ### Add a Service 
 
-Once your app is created, you can add other services to it by hitting the **Add a Service** button.
+Once your app is created, you can add other services to it by hitting the **Add a Service** button in the app's **Settings**.
 
 ![Click Add a service](/assets/docs/adding-a-service/click-add-a-service.png)
 

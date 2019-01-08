@@ -1088,19 +1088,6 @@ main > .platforms {
       vertical-align: middle;
       margin: 0 9px;
     }
-
-    i {
-      margin: 0 10px;
-      opacity: 0.4;
-      font-size: 32px;
-      vertical-align: middle;
-    }
-
-    @include media-query($on-palm) {
-      i {
-        display: none;
-      }
-    }
   }
 }
 
@@ -1927,28 +1914,11 @@ main > .concierge {
         }
 
         &:first-child {
-          i {
-            margin: 0 10px;
-            opacity: 0.4;
-            font-size: 32px;
-            vertical-align: middle;
-
-            @include media-query($on-palm) {
-              margin: 0 5px;
-            }
-          }
-
           img {
             margin: 0 9px;
 
             @include media-query($on-palm) {
               margin: 0 5px;
-            }
-          }
-
-          @include media-query($on-palm) {
-            i {
-              display: none;
             }
           }
         }

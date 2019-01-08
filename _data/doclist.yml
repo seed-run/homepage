@@ -15,6 +15,8 @@ toc:
         url: /docs/adding-go-projects.html
       - page: Adding .NET Core projects
         url: /docs/adding-dotnet-core-projects.html
+      - page: Adding Ruby projects
+        url: /docs/adding-ruby-projects.html
       - page: Adding app members
         url: /docs/adding-app-members.html
   - title: Configuring your app

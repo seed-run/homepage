@@ -3,7 +3,15 @@ layout: docs
 title: Running Tests
 ---
 
-Seed automatically runs the tests for your project. 
+Seed can automatically run the tests for your app. This is turned off initially, to allow you to set things up.
+
+### Enable Unit Tests
+
+To enable running unit tests for your app, head over to your app settings. And hit **Enable Unit Tests**.
+
+![Enable unit tests](/assets/docs/running-tests/enable-unit-tests.png)
+
+Once enabled, Seed will automatically detect and run your unit tests using the commands for the language/platform you are using.
 
 ### Node.js
 

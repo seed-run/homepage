@@ -21,8 +21,23 @@ Seed needs very little configuration on your part and there is no CLI to install
 
 1. Add your project repository with your Git provider
 2. Create an IAM Role for your AWS account
-3. Optionally, specify the location of the default service in your repo.
 
-![Create a new app](/assets/docs/create-a-new-app.png)
+![Create a new app](/assets/docs/index/create-a-new-app.png)
 
-Let's get started with adding your project to the [Seed Console]({{ site.console_url }}/new) by taking a look at how to create a an [AWS IAM Role]({% link _docs/adding-your-iam-credentials.md %}). 
+Once you select your repo, Seed will look for the `serverless.yml` file in your project root.
+
+![Auto-detect serverless.yml for new app](/assets/docs/index/auto-detect-serverless-yml-for-new-app.png)
+
+If detected, you can select to add this service. And Seed will create your app with it.
+
+![Confirm default service for new app](/assets/docs/index/confirm-default-service-for-new-app.png)
+
+Alternatively, you can add a different service by picking a different path.
+
+![Pick different default service for new app](/assets/docs/index/pick-different-default-service-for-new-app.png)
+
+You can always add additional services later. Or continue even if Seed is unable to detect a `serverless.yml`.
+
+![Continue without detecting service for new app](/assets/docs/index/continue-without-detecting-service-for-new-app.png)
+
+Next, let's look at how to create a an [AWS IAM Role]({% link _docs/adding-your-iam-credentials.md %}).

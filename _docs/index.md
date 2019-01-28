@@ -11,7 +11,7 @@ Seed currently supports the following:
 - [Serverless Framework](https://serverless.com/framework/) projects
 - Built with [Node.js](https://nodejs.org/en/), [Python](https://www.python.org), [.NET Core](https://github.com/dotnet/core), [Go](https://golang.org/), and [Ruby](https://www.ruby-lang.org/en/)
 - Deployed to [AWS](https://aws.amazon.com)
-- Hosted on [GitHub](https://github.com), [Bitbucket](https://bitbucket.org/), and [GitLab](https://gitlab.com)
+- Hosted on [GitHub](https://github.com), [GitHub Enterprise](https://github.com/enterprise), [Bitbucket](https://bitbucket.org/), and [GitLab](https://gitlab.com)
 
 Support for other platforms and repositories are coming soon. [Send us an email](mailto: {{ site.email }}) to let us know what you would like us to support next.
 

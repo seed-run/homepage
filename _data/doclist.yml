@@ -55,6 +55,8 @@ toc:
         url: /docs/creating-an-organization.html
       - page: Adding organization members
         url: /docs/adding-organization-members.html
+      - page: Enabling GitHub Enterprise
+        url: /docs/enabling-github-enterprise.html
   - title: Deploying your app
     subfolderitems:
       - page: Working with pull requests

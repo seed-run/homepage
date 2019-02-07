@@ -3,7 +3,7 @@ layout: docs
 title: Adding a Stage
 ---
 
-Seed supports both branch based workflow and [pull request based workflow]({% link _docs/working-with-pull-requests.md %}). With branch based workflow, Seed allows you to deploy individual Git branches to different stages.
+Seed supports both [branch based workflow]({% link _docs/working-with-branches.md %}) and [pull request based workflow]({% link _docs/working-with-pull-requests.md %}). In this chapter let's look at how to deploy individual Git branches to different stages.
 
 Create a new branch.
 
@@ -17,7 +17,7 @@ Push the branch to remote.
 $ git push -u origin new-branch
 ```
 
-Go to Seed console, navigate to your project, hit **Settings**, and **Create a Stage**.
+Go to Seed console, navigate to your app, hit **Settings**, and **Create a Stage**.
 
 ![Click Create a Stage Button](/assets/docs/adding-a-stage/click-create-a-stage.png)
 
@@ -42,3 +42,5 @@ You start the first build for the stage by either hitting **Trigger Deploy** or 
 If the build is successful and tests pass, all the services get deployed to this stage. At the same time, a verified build is packaged for production. You can read more about this in the [Promoting to production]({% link _docs/promoting-to-production.md %}) chapter.
 
 Once a stage has been added, Seed will automatically create a new build when you `git push` to the update the remote branch.
+
+Finally, you can configure Seed to automatically create and remove stages when a new Git branch is created or removed. You can read more about this in the [Working with Branches chapter]({% link _docs/working-with-branches.md %}).

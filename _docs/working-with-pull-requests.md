@@ -13,6 +13,22 @@ An important thing to note here is that the pull requests submitted to any branc
 
 Let's look at this in a bit more detail.
 
+### Enable Auto-Deploy Pull Requests
+
+By default, auto-deploying PRs are disabled. You can enable them by heading to your app, clicking **Settings**, and then hitting **Enable Auto-Deploy PRs**.
+
+![Enable auto deploy pull requests](/assets/docs/working-with-pull-requests/enable-auto-deploy-pr.png)
+
+You also have the option here to remove the stage and the deployed resources once the PR is closed.
+
+![Auto-deploy pull request options](/assets/docs/working-with-pull-requests/auto-deploy-pr-options.png)
+
+By default, Seed does not remove the stage and the deployed resources created as a part of the PR. But if the above option is enabled then Seed will automatically clean up all the resources that were created as a part of the pull request.
+
+Next, let's work through the PR workflow.
+
+### Create a PR
+
 Create a feature branch.
 
 ``` bash
@@ -56,11 +72,3 @@ provider:
 Any pull requests submitted to **master** (or the stage **dev**), will have the `process.env.MESSAGE` set to `This is development environment`.
 
 Once the pull request is merged a build is automatically triggered in the upstream stage and an updated build with the merged code is created. Alternatively, you can directly promote a build from the pull request stage without merging the pull request. This is useful when you are deploying a hotfix.
-
-### Disable Auto-Deploy Pull Requests
-
-Finally, you can disable auto-deploying pull requests by heading to the **App Settings** and hitting **Disable Auto-Deploy PR**.
-
-![Disable auto deploy pull requests](/assets/docs/working-with-pull-requests/disable-auto-deploy-pr.png)
-
-This is useful if you are using tools that automatically generate pull requests.

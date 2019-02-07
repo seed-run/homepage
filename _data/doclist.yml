@@ -17,8 +17,6 @@ toc:
         url: /docs/adding-dotnet-core-projects.html
       - page: Adding Ruby projects
         url: /docs/adding-ruby-projects.html
-      - page: Adding app members
-        url: /docs/adding-app-members.html
   - title: Configuring your app
     subfolderitems:
       - page: Adding a stage
@@ -59,6 +57,8 @@ toc:
         url: /docs/enabling-github-enterprise.html
   - title: Deploying your app
     subfolderitems:
+      - page: Working with branches
+        url: /docs/working-with-branches.html
       - page: Working with pull requests
         url: /docs/working-with-pull-requests.html
       - page: Generating trusted builds

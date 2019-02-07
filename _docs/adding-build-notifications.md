@@ -21,9 +21,21 @@ Then select **Show Notification Options**.
 
 Note that, you'll be notified for all services that are built in this stage.
 
+### Notification Options
+
+By default, you'll be notified for all the build events (success and failure).
+
+![Notification events](/assets/docs/adding-build-notifications/notification-events.png)
+
+You can change this to only be notified for failed builds by clicking on the dropdown and selecting **Build failures** as the **Notification event**.
+
+![Notification build failure event](/assets/docs/adding-build-notifications/notification-build-failure-event.png)
+
+The **Notification type** allows you to pick the way you want to be notified. Seed can notify you via email, Slack, or a custom webhook.
+
 ### Email Notifications
 
-Simply add the email of the person you'd like to notify from the stage settings.
+Add the email of the person you'd like to notify from the stage settings.
 
 ![Add email notification](/assets/docs/adding-build-notifications/add-email-notification.png)
 

@@ -3,7 +3,7 @@ layout: docs
 title: Working with Pull Requests
 ---
 
-When a pull request is opened, Seed receives a pull request notification from GitHub. Seed will then build, test, and deploy the pull request commits automatically into a new stage. The new pull request stage will receive a unique API Gateway endpoint just like any other stage. Seed will also build and deploy to the stage when commits are added to the pull request. We currently support pull requests only for GitHub. <a href="mailto:{{ site.email }}">Contact us</a> if you'd like to use it for Bitbucket or GitLab.
+When a pull request is opened, Seed receives a pull request notification from GitHub. Seed will then build, test, and deploy the pull request commits automatically into a new stage. The new pull request stage will receive a unique API Gateway endpoint just like any other stage. Seed will also build and deploy to the stage when commits are added to the pull request. We currently support pull requests only for GitHub. [Contact us](mailto:{{ site.email }}) if you'd like to use it for Bitbucket or GitLab.
 
 > Pull requests get their own unique endpoint and behave like any other stage
 

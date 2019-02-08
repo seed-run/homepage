@@ -71,6 +71,8 @@ toc:
         url: /docs/promoting-to-production.html
       - page: Rolling back
         url: /docs/rolling-back.html
+      - page: Connect your own CI
+        url: /docs/connect-your-own-ci.html
   - title: Managing deployments
     subfolderitems:
       - page: Configuring custom domains

@@ -17,9 +17,13 @@ Push the branch to remote.
 $ git push -u origin new-branch
 ```
 
-Go to Seed console, navigate to your app, hit **Settings**, and **Create a Stage**.
+Go to the Seed console, and click the **Edit Pipeline** link. You can also head over to your app **Settings** and click **Edit Pipeline** there.
 
-![Click Create a Stage Button](/assets/docs/adding-a-stage/click-create-a-stage.png)
+![Click edit pipeline from homepage](/assets/docs/adding-a-stage/click-edit-pipeline-from-homepage.png)
+
+We cover the various aspects of the pipeline editor in the [Editing the Pipeline]({% link _docs/editing-the-pipeline.md %}) chapter. But for now hit the **Add a Stage** button.
+
+![Click add a Stage Button](/assets/docs/adding-a-stage/click-add-a-stage.png)
 
 Select a branch (for example, `new-branch`) from the drop down, give it a **Stage Name**, and select **Create Stage**. A default stage name is pre-filled based on the branch name, you can select a different name.
 
@@ -44,3 +48,5 @@ If the build is successful and tests pass, all the services get deployed to this
 Once a stage has been added, Seed will automatically create a new build when you `git push` to the update the remote branch.
 
 Finally, you can configure Seed to automatically create and remove stages when a new Git branch is created or removed. You can read more about this in the [Working with Branches chapter]({% link _docs/working-with-branches.md %}).
+
+You can also set a stage to replace your production stage or set it as a pre-production (or staging) stage. You can read about this in detail in the [Editing the Pipeline]({% link _docs/editing-the-pipeline.md %}) chapter.

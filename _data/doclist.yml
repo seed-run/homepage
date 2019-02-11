@@ -23,6 +23,8 @@ toc:
         url: /docs/adding-a-stage.html
       - page: Adding a service
         url: /docs/adding-a-service.html
+      - page: Editing the pipeline
+        url: /docs/editing-the-pipeline.html
       - page: Configuring deploy phases
         url: /docs/configuring-deploy-phases.html
       - page: Adding a post-deploy phase

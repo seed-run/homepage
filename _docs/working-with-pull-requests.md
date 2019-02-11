@@ -29,22 +29,21 @@ Next, let's work through the PR workflow.
 
 ### Create a PR
 
-Create a feature branch.
-
-``` bash
-$ git checkout -b patch-1
-$ git push -u origin patch-1
-```
-
 Create a pull request.
 
 ![Create Pull Request](/assets/docs/working-with-pull-requests/create-pull-request.png)
+
+You'll notice that Seed will automatically start building the PR.
+
+![Seed PR building check in GitHub](/assets/docs/working-with-pull-requests/seed-pr-building-check-in-github.png)
 
 And in the Seed console you should see a new pull request stage created and building.
 
 ![Pull Request Stage Building](/assets/docs/working-with-pull-requests/pull-request-stage-building.png)
 
-Once the stage is built and deployed, you can access its endpoint.
+GitHub will let you know once the PR has been built.
+
+![Seed PR building complete in GitHub](/assets/docs/working-with-pull-requests/seed-pr-building-complete-in-github.png)
 
 Seed also takes care of the environment variables and secrets for your pull requests. The variables defined in the `serverless.yml` for the upstream stage are made available to the pull request stage. [Secret variables]({% link _docs/storing-secrets.md %}) are also inherited from the upstream stage.
 
@@ -72,3 +71,13 @@ provider:
 Any pull requests submitted to **master** (or the stage **dev**), will have the `process.env.MESSAGE` set to `This is development environment`.
 
 Once the pull request is merged a build is automatically triggered in the upstream stage and an updated build with the merged code is created. Alternatively, you can directly promote a build from the pull request stage without merging the pull request. This is useful when you are deploying a hotfix.
+
+You can now merge the pull request and optionally remove the PR branch by hitting **Delete branch** in GitHub.
+
+![GitHub delete PR branch](/assets/docs/working-with-pull-requests/github-delete-pr-branch.png)
+
+If you have the **Remove the stage and all the resources when the PR is closed** option enabled above, Seed will automatically remove the stage once the PR is closed.
+
+![Seed auto-remove PR branch](/assets/docs/working-with-pull-requests/seed-auto-remove-pr-branch.png)
+
+By enabling Auto-Deploy PRs, Seed makes it really easy to work with pull requests on GitHub.

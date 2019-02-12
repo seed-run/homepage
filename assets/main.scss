@@ -22,7 +22,7 @@ $background-color:          #F9F9FA;
 $hero-bkg-color:            lighten(#C7C6CC, 10%);
 $brand-color:               #53437D;
 $accent-color:              #FD9527;
-$link-color:                lighten($brand-color, 15%);
+$link-color:                #6A5CA2;
 
 $grey-color-light:          #C7C6CC;
 
@@ -150,13 +150,13 @@ a {
   color: $link-color;
 }
 a:visited {
-  color: lighten($brand-color, 15%);
+  color: lighten($link-color, 15%);
 }
 a:hover {
-  color: lighten($brand-color, 25%);
+  color: lighten($link-color, 20%);
 }
 a:active {
-  color: lighten($brand-color, 5%);
+  color: darken($link-color, 5%);
 }
 
 ::selection {

@@ -36,8 +36,29 @@ Alternatively, you can add a different service by picking a different path.
 
 ![Pick different default service for new app](/assets/docs/index/pick-different-default-service-for-new-app.png)
 
-You can always add additional services later. Or continue even if Seed is unable to detect a `serverless.yml`.
+You can always add additional services later. Or continue (even if Seed is unable to detect a `serverless.yml`), by hitting **Do this later**.
 
 ![Continue without detecting service for new app](/assets/docs/index/continue-without-detecting-service-for-new-app.png)
+
+If you've added an app before, you have the option of configuring your new app with the settings of an existing app. Hit the **Inherit Settings** tab.
+
+![Switch to inherit settings tab for new app](/assets/docs/index/switch-to-inherit-settings-tab-for-new-app.png)
+
+Here you can select one of your existing apps.
+
+![Select existing app settings for new app](/assets/docs/index/select-existing-app-settings-for-new-app.png)
+
+Seed will create your new app using the following from the selected app:
+
+- Stages
+- CI settings
+- IAM settings
+- Stage IAM settings
+- Stage notification settings
+- Stage environment variables
+
+> A personal app can only inherit the settings from another personal app. Similarly, an app in an organization can inherit the settings only from an app in the same organization.
+
+This is useful when you are adding multiple apps and they all share similar settings. This way you won't have to configure all the settings for a new app by hand. Note that, you can still tweak the settings manually even if they have been inherited.
 
 Next, let's look at how to create a an [AWS IAM Role]({% link _docs/adding-your-iam-credentials.md %}).

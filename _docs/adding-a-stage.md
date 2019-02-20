@@ -25,11 +25,21 @@ We cover the various aspects of the pipeline editor in the [Editing the Pipeline
 
 ![Click add a Stage Button](/assets/docs/adding-a-stage/click-add-a-stage.png)
 
-Select a branch (for example, `new-branch`) from the drop down, give it a **Stage Name**, and select **Create Stage**. A default stage name is pre-filled based on the branch name, you can select a different name.
+Here you can pick a stage name. And optionally select if a branch you want to connect it to. If connected to a stage, Seed will auto-deploy to this stage when you `git push` to the branch. You can always [configure the auto-deploy settings later]({% link _docs/updating-the-stage-source.md %}#auto-deploy-options).
 
 ![Select Branch](/assets/docs/adding-a-stage/select-branch.png)
 
 The stage name is used internally while deploying the project via `serverless deploy --stage STAGE_NAME`. The stage name is also used to [configure stage variables]({% link _docs/configuring-stage-variables.md %}). 
+
+You can also optionally copy the settings from an existing stage by selecting **Inherit settings from an existing stage**.
+
+![Inherit settings from an existing stage](/assets/docs/adding-a-stage/inherit-settings-from-an-existing-stage.png)
+
+If you select a stage to inherit from, Seed will copy over the following to your new stage:
+
+- IAM settings
+- Notification settings
+- Environment variables
 
 Once a stage is created, it is available across all the services in the app.
 

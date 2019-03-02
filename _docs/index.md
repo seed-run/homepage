@@ -22,9 +22,21 @@ Seed needs very little configuration on your part and there is no CLI to install
 1. Add your project repository with your Git provider
 2. Create an IAM Role for your AWS account
 
+To start with, Seed will ask you to create a new app by adding your project from your repository.
+
 ![Create a new app](/assets/docs/index/create-a-new-app.png)
 
-Once you select your repo, Seed will look for the `serverless.yml` file in your project root.
+Once you select your Git provider (GitHub for example), you'll be asked to login to your Github.
+
+![Login to GitHub](/assets/docs/index/login-to-github.png)
+
+Here you'll be asked to authorize Seed. Make sure to select the **Repositories** and **Organization access** you need.
+
+![Authorize Seed on GitHub](/assets/docs/index/authorize-seed-on-github.png)
+
+Once authorized, you can select your repo. Seed will look for the `serverless.yml` file in your project root.
+
+If you are unable to find your repo, it might be because Seed doesn't have the permissions to access your repo. You can [read about how to fix this here]({% link _docs/cannot-find-my-repo.md %}).
 
 ![Auto-detect serverless.yml for new app](/assets/docs/index/auto-detect-serverless-yml-for-new-app.png)
 
@@ -57,7 +69,7 @@ Seed will create your new app using the following from the selected app:
 - Stage notification settings
 - Stage environment variables
 
-> A personal app can only inherit the settings from another personal app. Similarly, an app in an organization can inherit the settings only from an app in the same organization.
+> A personal app can only inherit the settings from another personal app. And the same applies to organization apps.
 
 This is useful when you are adding multiple apps and they all share similar settings. This way you won't have to configure all the settings for a new app by hand. Note that, you can still tweak the settings manually even if they have been inherited.
 

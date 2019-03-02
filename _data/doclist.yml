@@ -3,12 +3,12 @@ toc:
     url: /docs/index.html
   - title: Adding your app
     subfolderitems:
-      - page: Mono-repo apps in Seed
-        url: /docs/mono-repo-apps-in-seed.html
       - page: Adding your IAM credentials
         url: /docs/adding-your-iam-credentials.html
       - page: Customizing your IAM Policy
         url: /docs/customizing-your-iam-policy.html
+      - page: Mono-repo apps in Seed
+        url: /docs/mono-repo-apps-in-seed.html
       - page: Adding Python projects
         url: /docs/adding-python-projects.html
       - page: Adding Go projects
@@ -83,3 +83,7 @@ toc:
         url: /docs/viewing-metrics.html
       - page: Viewing logs
         url: /docs/viewing-logs.html
+  - title: Common issues
+    subfolderitems:
+      - page: Cannot find my repo
+        url: /docs/cannot-find-my-repo.html

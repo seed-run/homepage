@@ -70,6 +70,7 @@ $on-laptop:                 800px;
   letter-spacing: 1px;
   box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2);
   box-sizing: border-box;
+  transition: background-color .15s ease-out, border .15s ease-out;
 
   &:hover {
     background-color: darken($bkg, 5%);
@@ -101,6 +102,7 @@ $on-laptop:                 800px;
   letter-spacing: 1px;
   box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2);
   box-sizing: border-box;
+  transition: background-color .15s ease-out, border .15s ease-out;
 
   &:hover {
     background-color: darken($bkg, 5%);
@@ -127,6 +129,7 @@ $on-laptop:                 800px;
   letter-spacing: 1px;
   box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2);
   box-sizing: border-box;
+  transition: background-color .15s ease-out, border .15s ease-out;
 
   &:hover {
     background-color: darken($bkg, 5%);
@@ -148,6 +151,7 @@ $on-laptop:                 800px;
  */
 a {
   color: $link-color;
+  transition: .2s;
 }
 a:visited {
   color: lighten($link-color, 15%);

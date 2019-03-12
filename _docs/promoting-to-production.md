@@ -3,11 +3,11 @@ layout: docs
 title: Promoting to Production
 ---
 
-Seed creates two default stages when a project is added. A **dev** stage that builds project's default Git repository branch (usually the **master** branch) and a **production** or **prod** stage that by default can be deployed by promoting a working build from a development stage. A Seed app will always have exactly one production stage, and it cannot be removed. However, you can add more development stages that track a specific [branch]({% link _docs/adding-a-stage.md %}) or a [pull request]({% link _docs/working-with-pull-requests.md %}).
+Seed creates two default stages when a project is added. A **dev** stage that builds project's default Git repository branch (usually the **master** branch) and a **production** or **prod** stage that by default can be deployed by promoting a working build from a development stage. A Seed app will always have exactly one production stage, and it cannot be removed.
 
-The main reason for this is because code and infrastructure are closely coupled in Serverless. And every single deploy can include some infrastructure changes. This coupling is incredibly convenient and powerful. Internally, CloudFormation figures out which parts of your infrastructure are being added, modified, or removed.
+The reason we support a manual promotion step is because code and infrastructure are closely coupled in Serverless. A single deploy can include some infrastructure changes. This coupling is incredibly convenient and powerful. Internally, CloudFormation figures out which parts of your infrastructure are being added, modified, or removed.
 
-To ensure that you have a clear idea of the infrastructure changes that are being deployed, Seed generates a change set for each build. Promoting to production requires you to manually review the stack changes that are going to be applied.
+To ensure that you have a clear idea of the infrastructure changes that are being deployed, Seed generates a [CloudFormation Change Set](https://aws.amazon.com/blogs/aws/new-change-sets-for-aws-cloudformation/) for each build. Promoting to production requires you to manually review the stack changes that are going to be applied. The Change Sets are generated using the build artifacts that were created as a part of the build process. You can read more about them in the [Generating Trusted Builds]({% link _docs/generating-trusted-builds.md %}) chapter.
 
 > You need to review the infrastructure changes before promoting to production
 

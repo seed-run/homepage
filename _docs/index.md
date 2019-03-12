@@ -9,7 +9,7 @@ Seed is a fully-configured code pipeline for building and deploying Serverless a
 Seed currently supports the following:
 
 - [Serverless Framework](https://serverless.com/framework/) projects
-- Built with [Node.js](https://nodejs.org/en/), [Python](https://www.python.org), [.NET Core](https://github.com/dotnet/core), [Go](https://golang.org/), and [Ruby](https://www.ruby-lang.org/en/)
+- Built with [Node.js]({% link _docs/adding-nodejs-projects.md %}), [Python]({% link _docs/adding-python-projects.md %}), [.NET Core]({% link _docs/adding-dotnet-core-projects.md %}), [Go]({% link _docs/adding-go-projects.md %}), and [Ruby]({% link _docs/adding-ruby-projects.md %})
 - Deployed to [AWS](https://aws.amazon.com)
 - Hosted on [GitHub](https://github.com), [GitHub Enterprise](https://github.com/enterprise), [Bitbucket](https://bitbucket.org/), and [GitLab](https://gitlab.com)
 

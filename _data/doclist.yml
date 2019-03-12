@@ -9,6 +9,8 @@ toc:
         url: /docs/customizing-your-iam-policy.html
       - page: Mono-repo apps in Seed
         url: /docs/mono-repo-apps-in-seed.html
+      - page: Adding Node.js projects
+        url: /docs/adding-nodejs-projects.html
       - page: Adding Python projects
         url: /docs/adding-python-projects.html
       - page: Adding Go projects

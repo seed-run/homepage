@@ -3,11 +3,13 @@ layout: docs
 title: Adding a Build Spec
 ---
 
-While [Seed](/) does not need a build spec to configure your pipelines or your project, there are cases where you need to run some scripts during the build process.
+While [Seed](/) does not need a build spec to configure your pipelines or your project, there are cases where you need to run some scripts during the build process. You can get a sense of the different build steps by looking at one of your build logs.
+
+![Build logs screenshot](/assets/docs/adding-a-build-spec/build-logs-screenshot.png)
 
 ### Seed.yml
 
-To do this, just add a `seed.yml` in the root of your project directory. Here is the basic skeleton of our build spec.
+To hook into the build process, add a `seed.yml` in the root of your project directory. Here is the basic skeleton of our build spec.
 
 ``` yml
 before_compile:
@@ -23,7 +25,7 @@ after_deploy:
   - echo "After deploy"
 ```
 
-The above commands are run in the following situations:
+Below is a brief description of when these commands are run.
 
 - `before_compile`
 

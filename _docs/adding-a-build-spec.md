@@ -37,18 +37,49 @@ Below is a brief description of when these commands are run.
 
 - `before_deploy`
 
-   After the build packages are created, Seed deploys these using the `serverless deploy` command. The `before_deploy` let's you run your commands before this happens. This step is run for all builds and also when they are promoted to production. You can distinguish between the cases by using the `$SEED_STAGE` build environment variable.
+   After the build packages are created, Seed deploys these using the `serverless deploy` command. The `before_deploy` let's you run your commands before this happens. This step is run for all builds and also when they are promoted to production. You can distinguish between the cases by using the `$SEED_STAGE_NAME` build environment variable.
 
 - `after_deploy`
 
-   Finally, after the deployment is complete you can use the `after_deploy` step to run any post deployment scripts you might have. Again, this step is run for all builds and also when they are promoted to production. You can distinguish between the cases by using the `$SEED_STAGE` build environment variable.
+   Finally, after the deployment is complete you can use the `after_deploy` step to run any post deployment scripts you might have. Again, this step is run for all builds and also when they are promoted to production. You can distinguish between the cases by using the `$SEED_STAGE_NAME` build environment variable.
 
 ### Build Environment Variables
 
 Seed also has a couple of build environment variables that you can use to customize your build process. These should not be confused with the [secret environment variables]({% link _docs/storing-secrets.md %}) that are defined in the console.
 
-- `$SEED_STAGE`: This is the name of the stage that is being built. The stage names are exactly as shown in the console.
+- `$SEED_STAGE_NAME`: The name of the stage that is being built. The stage names are exactly as shown in the console.
+- `$SEED_APP_NAME`: The app name.
+- `$SEED_SERVICE_NAME`: The name of the service.
+- `$SEED_BUILD_ID`: The build id.
 
 - Secrets: All your [secrets in the Seed console]({% link _docs/storing-secrets.md %}) are also made available during the build process. For example, a secret environment variable called **TEST_VAR** would be available as `$TEST_VAR` in the build process.
 
-The above configuration options can let you customize your build process.
+For example, let's take a build URL in the console:
+
+```
+https://console.seed.run/jayair/serverless-app/stages/dev/builds/32/services/users
+```
+
+Here the `$SEED_APP_NAME` would be `serverless-app`, `$SEED_STAGE_NAME` would be `dev`, `$SEED_SERVICE_NAME` would be `users`, and `$SEED_BUILD_ID` would be `32`.
+
+### Build Spec Examples
+
+You can use these build environment variables to customize your build process. Here are a couple of examples of what you could do with them.
+
+#### Run a script after deploy only in prod 
+
+Let's assume your production stage is called `prod`.
+
+```
+after_deploy:
+  - if [ $SEED_STAGE_NAME = "prod" ]; then echo 'deployed prod'; fi
+```
+
+#### Run a script after deploying a specific service
+
+Let's assume your service is called `users`.
+
+```
+after_deploy:
+  - if [ $SEED_SERVICE_NAME = "users" ]; then echo 'deployed users'; fi
+```

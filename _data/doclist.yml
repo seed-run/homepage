@@ -77,6 +77,8 @@ toc:
         url: /docs/rolling-back.html
       - page: Connect your own CI
         url: /docs/connect-your-own-ci.html
+      - page: Pinning the Serverless Version
+        url: /docs/pinning-the-serverless-version.html
   - title: Managing deployments
     subfolderitems:
       - page: Configuring custom domains

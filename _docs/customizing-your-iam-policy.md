@@ -3,16 +3,9 @@ layout: docs
 title: Customizing your IAM Policy
 ---
 
-Seed manages the serverless project in your AWS account on behalf of the IAM user that you create. It is important to grant sufficient permissions to this user.
+Seed manages the serverless project in your AWS account on behalf of the IAM user that you create. This means that you need to specify the permissions Serverless Framework needs to deploy your project.
 
-The permissions required can be categorized into the following areas:
-
-- Permissions required by Seed
-- Permissions required by Serverless Framework
-- Permissions required by your Serverless Framework plugins
-- Permissions required by your Lambda code
-
-Let's look at the least amount of permissions that needs to be granted for your project to work on Seed. Below is a nuanced policy template that restricts access to the Serverless project that is being deployed.
+Since the permissions that Serverless Framework needs depends on the services that are being deployed. Let's take a look at the least amount of permissions that needs to be granted for your project give that you are deploying Lambda and API Gateway.
 
 ``` json
 {
@@ -21,24 +14,15 @@ Let's look at the least amount of permissions that needs to be granted for your 
     {
       "Effect": "Allow",
       "Action": [
-        "cloudformation:Describe*",
-        "cloudformation:List*",
-        "cloudformation:Get*",
-        "cloudformation:PreviewStackUpdate",
         "cloudformation:CreateStack",
+        "cloudformation:Describe*",
+        "cloudformation:ValidateTemplate",
         "cloudformation:UpdateStack",
-        "cloudformation:DeleteStack"
+        "cloudformation:List*"
       ],
       "Resource": [
         "arn:aws:cloudformation:<region>:<account_no>:stack/<service_name>*/*"
       ]
-    },
-    {
-      "Effect": "Allow",
-      "Action": [
-        "cloudformation:ValidateTemplate"
-      ],
-      "Resource": "*"
     },
     {
       "Effect": "Allow",
@@ -130,27 +114,6 @@ Let's look at the least amount of permissions that needs to be granted for your 
       "Resource": [
         "*"
       ]
-    },
-    {
-      "Effect": "Allow",
-      "Action": [
-        "kms:CreateKey",
-        "kms:CreateAlias",
-        "kms:ListAliases"
-      ],
-      "Resource": [
-        "*"
-      ]
-    },
-    {
-      "Effect": "Allow",
-      "Action": [
-        "kms:Decrypt",
-        "kms:Encrypt"
-      ],
-      "Resource": [
-        "arn:aws:kms:*:<account_no>:key/*"
-      ]
     }
   ]
 }
@@ -182,67 +145,6 @@ Make sure to replace `<region>`, `<account_no>`, `<service_name>`, `<s3_bucket_n
   ```
   
   The `<api_id>` in this case is `n5z17getxh`. You can read more about it [here](https://docs.aws.amazon.com/apigateway/latest/developerguide/how-to-call-api.html).
-
-Additionally if you want Seed to set your custom domains for any API Gateway endpoints you might have; add the following blocks to your IAM Role.
-
-``` json
-[
-  {
-      "Effect": "Allow",
-      "Action": [
-          "route53:ChangeResourceRecordSets",
-          "route53:ListHostedZones",
-          "route53:ListResourceRecordSets"
-      ],
-      "Resource": "*"
-  },
-  {
-      "Effect": "Allow",
-      "Action": [
-          "acm:AddTagsToCertificate",
-          "acm:RequestCertificate",
-          "acm:DescribeCertificate",
-          "acm:DeleteCertificate"
-      ],
-      "Resource": "*"
-  },
-  {
-      "Effect": "Allow",
-      "Action": [
-          "apigateway:GET",
-          "apigateway:POST",
-          "apigateway:DELETE"
-      ],
-      "Resource": [
-        "arn:aws:apigateway:<region>::/domainnames"
-      ]
-  }
-]
-```
-
-And finally, if you'd like Seed to turn on access logs for API Gateway add this as well.
-
-``` json
-[
-  {
-      "Effect": "Allow",
-      "Action": [
-          "apigateway:GET",
-          "apigateway:PATCH"
-      ],
-      "Resource": "arn:aws:apigateway:<region>::/account"
-  },
-  {
-      "Effect": "Allow",
-      "Action": [
-          "logs:CreateLogGroup",
-          "logs:describeLogGroups"
-      ],
-      "Resource": "arn:aws:logs:<region>:<account_no>:log-group:API-Gateway-Access-Logs_*:log-stream:*"
-  }
-]
-```
-
 
 If you need any help setting this up, you can always [contact us](mailto:{{ site.email }}) directly.
 

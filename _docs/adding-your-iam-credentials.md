@@ -3,70 +3,47 @@ layout: docs
 title: Adding your IAM Credentials
 ---
 
-[Seed](/) needs your AWS IAM credentials to deploy your project on your behalf to your AWS account. There are two ways to get your credentials.
+[Seed](/) needs your AWS IAM credentials to deploy your project on your behalf to your AWS account.
 
-Note that, Seed does not need `AdministratorAccess` to deploy your application. It only needs a restricted set of permissions in addition to the ones required by Serverless Framework. You can read more about this in the [Customizing your IAM Policy]({% link _docs/customizing-your-iam-policy.md %}) chapter.
+The IAM permissions that Seed requires is made up of:
 
-### 1. Your Existing Credentials
+1. The permissions that Seed needs
+2. And the permissions Serverless Framework needs to deploy your app
 
-This is the quickest way to get your IAM credentials. If you have run the `serverless deploy` command in your terminal; you have probably configured your AWS CLI. And the IAM credentials are stored in `~/.aws/credentials`. By running the following:
+Start by reviewing the permissions that Seed needs.
 
-``` bash
-$ cat ~/.aws/credentials
-```
+![Review Seed IAM permissions screenshot](/assets/docs/iam/review-seed-iam-permissions.png)
 
-The format of this looks something like this:
+Next, customize the permissions that Serverless Framework needs to deploy your app. By default these permissions are very broad since this depends specifically on your app. If you are already using a set of IAM permissions to deploy, you can paste them here.
 
-```
-[default]
-aws_access_key_id = AKABCDEFGHIJ72LMNOPQ
-aws_secret_access_key = 7r0uzfABCDefgh11234567ijklmnop09875quwzs
-```
+![Customize Serverless Framework IAM permissions screenshot](/assets/docs/iam/customize-serverless-framework-iam-permissions.png)
 
-Here the `aws_access_key_id` is your **IAM Access Key** and `aws_secret_access_key` is your **IAM Secret Key**.
+Alternatively, you can read the [Customizing your IAM Policy]({% link _docs/customizing-your-iam-policy.md %}) chapter; to get a better idea on how to craft an airtight policy.
 
-While it is easy to get your existing credentials, it is better to create it from scratch. This gives you better control over what permissions are granted to Seed.
+Once, you are done customizing the permissions, Seed will put the two above sets of permissions together. And will help you create an IAM user using CloudFormation.
 
-### 2. Create New Credentials
+Hit the **Create with CloudFormation** button.
 
-Log in to your [AWS Console](https://console.aws.amazon.com) and select IAM from the list of services.
+![Click Create with CloudFormation screenshot](/assets/docs/iam/click-create-with-cloudformation.png)
 
-![Select IAM Service Screenshot](/assets/docs/iam/select-iam-service.png)
+This will redirect you to CloudFormation on your AWS Console.
 
-Select **Users**.
+![CloudFormation Seed template screenshot](/assets/docs/iam/cloudformation-seed-template.png)
 
-![Select IAM Users Screenshot](/assets/docs/iam/select-iam-users.png)
+Scroll down to the bottom of the page, hit the **I acknowledge that AWS CloudFormation might create IAM resources.** and click **Create**.
 
-Select **Add User**.
+![Click create CloudFormation Seed template screenshot](/assets/docs/iam/click-create-cloudformation-seed-template.png)
 
-![Add IAM User Screenshot](/assets/docs/iam/add-iam-user.png)
+CloudFormation will now create a Seed IAM user. This will take a minute or two.
 
-Enter a **User name** and check **Programmatic access**, then select **Next: Permissions**.
+![CloudFormation Seed user creating screenshot](/assets/docs/iam/cloudformation-seed-use-creating.png)
 
-This account will be used by Seed. It will be connecting to the AWS API directly and will not be using the Management Console.
+Once complete, expand the **Outputs** section. And copy the **AccessKey** and **SecretKey**.
 
-![Fill in IAM User Info Screenshot](/assets/docs/iam/fill-in-iam-user-info.png)
+![CloudFormation complete output screenshot](/assets/docs/iam/cloudformation-complete-output.png)
 
-Select **Attach existing policies directly**.
+Paste it back over on Seed.
 
-![Add IAM User Policy Screenshot](/assets/docs/iam/add-iam-user-policy.png)
+![Paste IAM credentials on Seed screenshot](/assets/docs/iam/paste-iam-credentials-on-seed.png)
 
-Here you can hit **Create policy** to provide a custom IAM policy based on the permissions your project needs. You can do this by following the instructions in the [Customizing your IAM Policy]({% link _docs/customizing-your-iam-policy.md %}) chapter.
-
-But if you are just looking for a quick way to test your project on Seed you can search for **AdministratorAccess** and select the policy, then select **Next: Review**. Note that, this is not recommended for apps that are being deployed to production.
-
-![Added Admin Policy Screenshot](/assets/docs/iam/added-admin-policy.png)
-
-Select **Create user**.
-
-![Review IAM User Screenshot](/assets/docs/iam/review-iam-user.png)
-
-Select **Show** to reveal **Secret access key**.
-
-![Added IAM User Screenshot](/assets/docs/iam/added-iam-user.png)
-
-Take a note of the **Access key ID** and **Secret access key**.
-
-![IAM User Credentials Screenshot](/assets/docs/iam/iam-user-credentials.png)
-
-Use these as the **IAM Access Key** and the **IAM Secret Key** when you [create your project]({{ site.console_url }}/new).
+Hit **Add App** to complete creating your app!

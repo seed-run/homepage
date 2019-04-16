@@ -20,7 +20,7 @@ Next, customize the permissions that Serverless Framework needs to deploy your a
 
 Alternatively, you can read the [Customizing your IAM Policy]({% link _docs/customizing-your-iam-policy.md %}) chapter; to get a better idea on how to craft an airtight policy.
 
-Once, you are done customizing the permissions, Seed will put the two above sets of permissions together. And will help you create an IAM user using CloudFormation.
+Once you are done customizing the permissions, Seed will put the two above sets of permissions together. And will help you create an IAM user using CloudFormation.
 
 Hit the **Create with CloudFormation** button.
 

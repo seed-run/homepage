@@ -89,7 +89,7 @@ The parties hereby agree to the following terms:
 
    7.1 <u>Free Trial.</u> AI may offer the Customer a free trial Subscription. Free trials are for new Customers only. The free trial period lasts until the Customer exceeds a prescribed limit on the number of deployments per month (“Trial Period”), or as otherwise specified to the Customer. At end of the Trial Period, the free trial Subscription will come to an end and the Customer must purchase a Subscription Plan to continue to use the Service.
 
-   7.2 <u>Subscription Plans.</u> AI offers Customers various subscription plans for the use of the Service (each a “Subscription Plan”). A description of each Subscription Plan is set out in the Fee Schedule, which can be found on the Seed website at [https://seed.run#pricing]({% link index.html %}#pricing) (the “Fee Schedule”). AI may also offer certain enterprise Customers custom-made Subscription Plans.
+   7.2 <u>Subscription Plans.</u> AI offers Customers various subscription plans for the use of the Service (each a “Subscription Plan”). A description of each Subscription Plan is set out in the Fee Schedule, which can be found on the Seed website at [https://seed.run/pricing]({% link pricing.html %}) (the “Fee Schedule”). AI may also offer certain enterprise Customers custom-made Subscription Plans.
 
    7.3 <u>Subscription Fees.</u> The monthly subscription fee (the “Subscription Fee”) for each Subscription Plan is set out in the Fee Schedule.
 

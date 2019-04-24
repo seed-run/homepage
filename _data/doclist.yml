@@ -7,8 +7,6 @@ toc:
         url: /docs/adding-your-iam-credentials.html
       - page: Customizing your IAM Policy
         url: /docs/customizing-your-iam-policy.html
-      - page: Mono-repo apps in Seed
-        url: /docs/mono-repo-apps-in-seed.html
       - page: Adding Node.js projects
         url: /docs/adding-nodejs-projects.html
       - page: Adding Python projects
@@ -27,10 +25,6 @@ toc:
         url: /docs/adding-a-service.html
       - page: Editing the pipeline
         url: /docs/editing-the-pipeline.html
-      - page: Configuring deploy phases
-        url: /docs/configuring-deploy-phases.html
-      - page: Adding a post-deploy phase
-        url: /docs/adding-a-post-deploy-phase.html
       - page: Configuring stage variables
         url: /docs/configuring-stage-variables.html
       - page: Storing secrets
@@ -53,6 +47,14 @@ toc:
         url: /docs/integrating-with-jfrog.html
       - page: Deleting resources
         url: /docs/deleting-resources.html
+  - title: Working with mono-repo apps
+    subfolderitems:
+      - page: Mono-repo apps in Seed
+        url: /docs/mono-repo-apps-in-seed.html
+      - page: Configuring deploy phases
+        url: /docs/configuring-deploy-phases.html
+      - page: Adding a post-deploy phase
+        url: /docs/adding-a-post-deploy-phase.html
   - title: Configuring your organization
     subfolderitems:
       - page: Creating an organization

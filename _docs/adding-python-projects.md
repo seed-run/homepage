@@ -7,7 +7,8 @@ Seed makes it really easy to deploy Serverless Python projects. We support:
 
 - Python 2.7, 3.6, and 3.7
 - Unit tests using [unittest](https://docs.python.org/2/library/unittest.html#module-unittest)
-- Dependencies using [Virtualenv](https://pypi.python.org/pypi/virtualenv) & [serverless-python-requirements](https://github.com/UnitedIncome/serverless-python-requirements)
+- Support for the [serverless-python-requirements](https://github.com/UnitedIncome/serverless-python-requirements) plugin
+- Dependencies using [pip](https://pypi.org/project/pip/) & [pipenv](https://pipenv.readthedocs.io)
 
 Non-Python modules usually need to be built on your local machine using a Docker image that targets the Lambda environment.
 

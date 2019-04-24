@@ -31,4 +31,12 @@ Now any deployments to this stage will run your commands as a part of the post-d
 
 ![Post-Deploy Phase in Deployment workflow](/assets/docs/adding-a-post-deploy-phase/post-deploy-phase-in-deployment-workflow.png)
 
+### Post-Deploy phase vs after_deploy hook
+
+One final note on post-deploy phases. If you've configured a build spec, you might be wondering what the difference is between adding a post-deploy phase and using the `after_deploy` hook.
+
+They are both run after a deployment. The key difference being that the post-deploy phase is run after **all your services** have been deployed. As opposed to the `after_deploy` hook that is run after **each of your services** in your app.
+
+This also means that for an app with a single service, the post-deploy phase and the `after_deploy` hook do basically the same thing.
+
 And that's it, now you can add your integration tests and post-deployment scripts to your mono-repo workflow.

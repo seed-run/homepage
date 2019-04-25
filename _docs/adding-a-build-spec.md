@@ -62,6 +62,30 @@ https://console.seed.run/jayair/serverless-app/stages/dev/builds/32/services/use
 
 Here the `$SEED_APP_NAME` would be `serverless-app`, `$SEED_STAGE_NAME` would be `dev`, `$SEED_SERVICE_NAME` would be `users`, and `$SEED_BUILD_ID` would be `32`.
 
+### Custom Build Environment Variables
+
+Environment variables that are set in the build spec do not persist across commands. This means that in the following build spec, `$MY_VAR` will not be printed out.
+
+``` yml
+before_compile:
+  - export MY_VAR=hello
+  - echo $MY_VAR
+```
+
+To ensure that your custom build environment variables persist across commands; Seed allows you to do something similar to [CircleCI](https://circleci.com/docs/2.0/env-vars/#using-bash_env-to-set-environment-variables). You export your custom environment variables to a `$BASH_ENV` and Seed will load that on every command.
+
+So a variation of the above with `$BASH_ENV` looks like this:
+
+``` yml
+before_compile:
+  - echo 'export MY_VAR=hello' >> $BASH_ENV
+  - echo $MY_VAR
+```
+
+In this case `$MY_VAR` is loaded from `$BASH_ENV` and should be printed out correctly.
+
+---
+
 ### Build Spec Examples
 
 You can use these build environment variables to customize your build process. Here are a couple of examples of what you could do with them.

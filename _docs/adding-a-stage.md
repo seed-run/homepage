@@ -45,11 +45,7 @@ Once a stage is created, it is available across all the services in the app.
 
 ![New stage added](/assets/docs/adding-a-stage/new-stage-added.png)
 
-You can now click on the stage to take a look at the services deployed in this stage.
-
-![New stage](/assets/docs/adding-a-stage/new-stage.png)
-
-You start the first build for the stage by either hitting **Trigger Deploy** or by pushing a commit to the branch that is linked to the stage.
+You start the first build for the stage by either hitting **Deploy** or by pushing a commit to the branch that is linked to the stage.
 
 ![Build stage in progress](/assets/docs/adding-a-stage/build-stage-in-progress.png)
 

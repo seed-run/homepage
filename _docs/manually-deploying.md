@@ -7,25 +7,29 @@ You can trigger one-off deployments to any stage or service in Seed. This can be
 
 ### Manually Deploy a Stage
 
-To manually deploy a stage, select the stage.
+To manually deploy a stage, head over to the app pipeline.
 
 ![Select stage](/assets/docs/manually-deploying/select-stage.png)
 
-And hit **Trigger Deploy**.
+And hit **Deploy** on the stage you want to manually deploy.
 
-![Hit stage trigger deploy](/assets/docs/manually-deploying/hit-stage-trigger-deploy.png)
+![Hit stage trigger deploy](/assets/docs/manually-deploying/hit-stage-deploy.png)
 
 Here you'll be prompted to select a branch you want to deploy with. Or if this stage has a branch connected to it, you'll be asked if you want to deploy using it.
 
 ![Trigger deploy select branch](/assets/docs/manually-deploying/trigger-deploy-select-branch.png)
 
+You can optionally force a deploy using the [Serverless Framework](https://serverless.com) `--force' flag. By default, Serverless Framework only deploys the services that have been updated. The `--force` option overrides this and deploys even if there are no changes.
+
+![Force deploy option](/assets/docs/manually-deploying/force-deploy-option.png)
+
 ### Manually Deploy a Service
 
-To deploy a specific service. Select the service.
+To deploy a specific service, click the dropdown for the service in the stage you want to deploy.
 
-![Select service](/assets/docs/manually-deploying/select-service.png)
+![Select service dropdown](/assets/docs/manually-deploying/select-service-down.png)
 
-Here you'll notice the service listed across all the stages. Hit **Trigger Deploy** for the stage you want to trigger a deployment in.
+Hit **Deploy Service**.
 
 ![Hit service trigger deploy](/assets/docs/manually-deploying/hit-service-trigger-deploy.png)
 

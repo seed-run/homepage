@@ -35,7 +35,7 @@ Similar to the app, you can head over the a stage's **Settings**.
 
 ### Removing a Service
 
-And for a service, head over to the service's **Settings**.
+For a service, head over to the service.
 
 ![Removing a service](/assets/docs/deleting-resources/removing-a-serivce.png)
 

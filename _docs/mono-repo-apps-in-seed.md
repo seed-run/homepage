@@ -65,9 +65,9 @@ The pipeline view of your app is a table where the columns are the various stage
 
 To get a better sense of this pipeline view let's click around a bit.
 
-1. Clicking on a service (row header) for example, gives you a view of the stages (or environments) that apply to the service.
+1. Clicking on a service row (dropdown) for example, gives you the ability to deploy or promote just that service.
 
-   ![Service Stage](/assets/docs/mono-repo-apps-in-seed/service-stage.png)
+   ![Service Stage](/assets/docs/mono-repo-apps-in-seed/service-dropdown.png)
 
 2. Whereas, clicking on a stage (column header) shows you the various services deployed to that stage. It also shows you the builds that are deployed and the resulting deployment.
 

@@ -11,10 +11,6 @@ You can enter the pipeline editor by either clicking the **Edit Pipeline** link 
 
 ![Click edit pipeline from homepage](/assets/docs/editing-the-pipeline/click-edit-pipeline-from-homepage.png)
 
-Or by going to the app **Settings** and hitting **Edit Pipeline**.
-
-![Click edit pipeline from settings](/assets/docs/editing-the-pipeline/click-edit-pipeline-from-settings.png)
-
 The pipeline editor gives you the ability to move stages around and add new stages.
 
 ![View edit pipeline](/assets/docs/editing-the-pipeline/view-edit-pipeline.png)

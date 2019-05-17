@@ -29,23 +29,15 @@ Seed allows you to review the changes that are about to be applied in the **prod
 
 The Change Set shows all the AWS resources about to be added, removed, and modified. Be sure to review these carefully. After you review and **confirm** the Change Set, the build will be promoted and the **production** stage will be updated.
 
-When you promote a stage, Seed will give you a chance to review the CloudFormation Change Sets for the services in the stage.
+When you promote a stage, Seed will give you a chance to review the CloudFormation Change Sets for the services in the stage. You can also click to review the code changes by comparing the commits.
 
 ![Confirm Change Set](/assets/docs/promoting-to-production/confirm-change-set.png)
 
-Once confirmed, you'll notice that the services in the production stage are busy applying these changes.
-
-![Production stage in progress](/assets/docs/promoting-to-production/production-stage-in-progress.png)
-
 ### Promoting a Service
 
-Seed also gives you the flexibility to promote individual services. To do this, select a service.
+Seed also gives you the flexibility to promote individual services. To do this, select the dropdown for service in the stage you want to promote. And hit **Promote Service**.
 
-![Select service](/assets/docs/promoting-to-production/select-service-to-promote.png)
-
-Just as above, hit **Promote** for the stage you are trying to promote.
-
-![Hit promote service](/assets/docs/promoting-to-production/hit-promote-service.png)
+![Select service dropdown to promote](/assets/docs/promoting-to-production/select-service-dropdown-to-promote.png)
 
 And you'll be asked to confirm the changes here as well.
 

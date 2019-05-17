@@ -5,12 +5,12 @@ title: Cancelling Builds
 
 There are cases when something might go wrong while running a build and you might want to manually stop or cancel it. Seed allows you to cancel a build while it is in progress.
 
-You can do this by heading over to the build page while it is in progress. For example, here we select build `v3` in the `pr2` stage.
+You can do this by hitting **Cancel** on the stage that the build is running in.
 
-![Select in progress build](/assets/docs/cancelling-builds/select-in-progress-build.png)
+![Cancel build in pipeline](/assets/docs/cancelling-builds/cancel-build-in-pipeline.png)
 
-And hit **Cancel Build**.
+You can also click through to the build in question and hit **Cancel Build**.
 
-![Build cancel button](/assets/docs/cancelling-builds/build-cancel-button.png)
+![Cancel build in build report](/assets/docs/cancelling-builds/cancel-build-in-build-report.png)
 
 This will cancel the build in progress. Note that, while Seed can cancel the build process for you, it cannot control the state of the deployed resources for the cancelled build.

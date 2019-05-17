@@ -11,11 +11,7 @@ To add build notifications, first select the stage.
 
 ![Select stage](/assets/docs/adding-build-notifications/select-stage.png)
 
-And select the **Settings**.
-
-![Select stage settings](/assets/docs/adding-build-notifications/select-stage-settings.png)
-
-Then select **Show Notification Options**.
+Select the **Settings** and click **Show Notification Options**.
 
 ![Click Show Notification Options](/assets/docs/adding-build-notifications/click-show-notification-options.png)
 

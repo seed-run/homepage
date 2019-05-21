@@ -35,3 +35,11 @@ Hit **Deploy Service**.
 
 Just as above, you'll be asked to select a branch.
 
+
+### Force Deploys
+
+By default, Serverless Framework only deploys the services that have changed. It does this by comparing the code package and the CloudFormation template. However, there might be cases where you want to override this behavior. You can do this by selecting the **Force deploy** option from the manual deploy dialog.
+
+![Select force option](/assets/docs/manually-deploying/select-force-option.png)
+
+This option tells Seed to deploy using the Serverless Framework `--force` flag and deploy even if there are no changes.

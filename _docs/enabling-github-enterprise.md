@@ -48,7 +48,7 @@ Next we'll create an OAuth app for Seed on GitHub.
 
 7. (Optional) Add the Seed logo and colors.
 
-   Logo image: `https://s3.amazonaws.com/anomaly/Seed/github-oauth-icon.png`  
+   Logo image: `https://anomaly.s3.amazonaws.com/Seed/github-oauth-icon.png`    
    Badge background color: `#53437D`  
 
 8. Copy the **Client ID** and the **Client Secret**.

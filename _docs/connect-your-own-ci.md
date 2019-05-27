@@ -5,6 +5,10 @@ title: Connect Your Own CI
 
 Seed can optionally allow you to connect to your own CI (continuous integration) service. This can be useful for cases where you have a complex set of tests or checks that need to be run before your app can be deployed. By default, Seed will deploy your app automatically on `git push` to a branch. But you can optionally tell Seed that you only want to deploy after your CI process has completed successfully.
 
+> We currently support connecting a CI only for GitHub and Bitbucket.
+
+[Contact us](mailto:{{ site.email }}) if you'd like to use it for GitLab.
+
 For example, you might have Travis CI or CircleCI connected to your Git repository. If you enable the **Connect Your CI** option, then Seed will wait until the CI process has completed.
 
 You can enable this option by heading to your app **Settings** and hitting **Connect Your CI**.

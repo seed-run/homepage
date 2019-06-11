@@ -16,17 +16,17 @@ layout: lander
   <div class="hero-container">
     <div class="hero">
       <div class="copy">
-        <h1>Deploy, Manage, and Monitor Serverless Applications on AWS</h1>
-        <h3>Seed manages pipelines, configures environments, and monitors deployments for Serverless Framework projects.</h3>
+        <h1>Work on your serverless app,<br /> skip the DevOps.</h1>
+        <h3>We know you've been putting off setting up a CI/CD pipeline for your serverless app. Don't worry, Seed will automate your deployments and manage your environments; all with very little configuration.
+        </h3>
+        <p>Sign up to get started. It'll only take a minute. Seriously.</p>
         <div class="controls">
           <div class="buttons">
-            <a class="demo" href="{{ site.console_url }}{{ site.request_demo }}">
-              Request a demo
-            </a>
             <a class="signup" href="{{ site.console_url }}{{ site.signup }}">
               Sign up for free
             </a>
           </div>
+          <p></p>
         </div>
       </div>
       <div class="graphic-container">
@@ -41,126 +41,9 @@ layout: lander
   </div>
 </div>
 
-<div class="platforms">
-  <div>
-    <img title="Go" height="20" src="assets/go-logo.png" />
-    <img title="Ruby" width="30" src="assets/ruby-logo.png" />
-    <img title="Node.js" width="31" src="assets/node-logo.png" />
-    <img title="Python" width="31" src="assets/python-logo.png" />
-    <img title=".NET Core" width="32" src="assets/dotnet-logo.png" />
-  </div>
-</div>
-
 <div class="features">
 
-  <hr />
-
-  <div class="feature">
-    <div class="header">
-      <div class="icon">
-        <img src="/assets/lander/bolt.png" width="16" />
-      </div>
-      <h2>Made for Serverless</h2>
-      <p>Seed is a fully-managed code pipeline made specifically for Serverless Framework applications.</p>
-    </div>
-    <div class="mono-repo-graphic">
-      <div class="root folder">
-        <span>
-          <i class="fa fa-folder-open" aria-hidden="true"></i><span>/</span>
-        </span>
-        <div class="content">
-          <div class="folder">
-            <span>
-              <i class="fa fa-folder-open" aria-hidden="true"></i><span>apis/</span>
-            </span>
-            <div class="content">
-              <div class="service">
-                <img width="24" src="assets/serverless-folder.png" /><span>users/</span>
-              </div>
-              <div class="service">
-                <img width="24" src="assets/serverless-folder.png" /><span>groups/</span>
-              </div>
-              <div class="service">
-                <img width="24" src="assets/serverless-folder.png" /><span>posts/</span>
-              </div>
-            </div>
-          </div>
-          <div class="folder">
-            <span>
-              <i class="fa fa-folder-open" aria-hidden="true"></i><span>jobs/</span>
-            </span>
-            <div class="content">
-              <div class="service">
-                <img width="24" src="assets/serverless-folder.png" /><span>etl/</span>
-              </div>
-              <div class="service">
-                <img width="24" src="assets/serverless-folder.png" /><span>resizer/</span>
-              </div>
-            </div>
-          </div>
-          <div class="folder">
-            <span>
-              <i class="fa fa-folder-open" aria-hidden="true"></i><span>alerts/</span>
-            </span>
-            <div class="content">
-              <div class="service">
-                <img width="24" src="assets/serverless-folder.png" /><span>db-trigger/</span>
-              </div>
-              <div class="service">
-                <img width="24" src="assets/serverless-folder.png" /><span>notifier/</span>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div class="points">
-      <div class="point">
-        <h6>Serverless plugin support</h6>
-        <p>Seed supports the most common Serverless Framework plugins like serverless-webpack, serverless-python-requirements, serverless-plugin-warmup, etc.</p>
-        <a class="more" href="{% link _docs/using-serverless-plugins.md %}">
-          Learn more
-          <i class="fa fa-angle-right" aria-hidden="true"></i>
-        </a>
-      </div>
-      <div class="point">
-        <h6>Mono-repo applications</h6>
-        <p>Coordinate the deployment process between multiple services. Define complex workflows with parallel and sequential deployments.</p>
-        <a class="more" href="{% link _docs/configuring-deploy-phases.md %}">
-          Learn more
-          <i class="fa fa-angle-right" aria-hidden="true"></i>
-        </a>
-      </div>
-      <div class="point">
-        <h6>Flexible Git workflow</h6>
-        <p>Easily create new Serverless stages from Git branches. Each feature branch gets its own independent stage.</p>
-        <a class="more" href="{% link _docs/adding-a-stage.md %}">
-          Learn more
-          <i class="fa fa-angle-right" aria-hidden="true"></i>
-        </a>
-      </div>
-      <div class="point">
-        <h6>Promote and rollback</h6>
-        <p>Every successful commit generates an immutable artifact that'll be used to generate <a href="https://aws.amazon.com/blogs/aws/new-change-sets-for-aws-cloudformation/">Change Sets</a> while promoting. And to rollback without any repackaging.</p>
-        <a class="more" href="{% link _docs/promoting-to-production.md %}">
-          Learn more
-          <i class="fa fa-angle-right" aria-hidden="true"></i>
-        </a>
-      </div>
-      <div class="point">
-        <h6>Service pipelines</h6>
-        <p>One stop visualization of the entire pipeline across all of your Serverless services. Always know which git commit is deployed to which stage.</p>
-      </div>
-      <div class="point">
-        <h6>Connect your CI</h6>
-        <p>Seamlessly integrate with your existing CI system. Seed will listen for new builds in your artifact repository and automatically trigger the pipeline.</p>
-        <a class="more" href="{% link _docs/connect-your-own-ci.md %}">
-          Learn more
-          <i class="fa fa-angle-right" aria-hidden="true"></i>
-        </a>
-      </div>
-    </div>
-  </div>
+  <h4 class="opening">Are you a small team building a Serverless Framework app on AWS? Here is how Seed can make your life a lot easier:</h4>
 
   <hr />
 
@@ -169,8 +52,7 @@ layout: lander
       <div class="icon">
         <i class="fa fa-tachometer" aria-hidden="true"></i>
       </div>
-      <h2>Zero AWS-Ops</h2>
-      <p>Seed automates the undifferentiated heavy lifting in managing your infrastructure across multiple AWS accounts replicated over multiple regions.</p>
+      <h2>Just connect your repo and you are ready to deploy. No build scripts needed.</h2>
     </div>
     <div class="pipeline-table">
       <div class="table">
@@ -261,43 +143,11 @@ layout: lander
         </div>
       </div>
     </div>
-    <div class="points">
-      <div class="point">
-        <h6>Multiple AWS accounts</h6>
-        <p>Turnkey solution for managing stages across multiple AWS accounts. Deploy one stage per account or multiple stages that share the same account.</p>
-        <a class="more" href="{% link _docs/iam-credentials-per-stage.md %}">
-          Learn more
-          <i class="fa fa-angle-right" aria-hidden="true"></i>
-        </a>
-      </div>
-      <div class="point">
-        <h6>Multi-region support <span>Beta</span></h6>
-        <p>Manage multi-region AWS deployments for Serverless applications to achieve high availability without the added complexity.</p>
-      </div>
-      <div class="point">
-        <h6>Pipeline Visualization</h6>
-        <p>Visualize your entire deployment pipeline over multiple AWS accounts and regions. Get a bird's-eye view of the status of your stages.</p>
-      </div>
-      <div class="point">
-        <h6>Resource management</h6>
-        <p>Get an overview of all the resources deployed in your application including your Lambda and API Gateway endpoints.</p>
-      </div>
-      <div class="point">
-        <h6>Live logs & metrics</h6>
-        <p>Seed organizes and displays live metrics from CloudWatch for the Lambda and API Gateway resources in your stack.</p>
-        <a class="more" href="{% link _docs/viewing-metrics.md %}">
-          Learn more
-          <i class="fa fa-angle-right" aria-hidden="true"></i>
-        </a>
-      </div>
-      <div class="point">
-        <h6>API management</h6>
-        <p>Turnkey solution for managing your API custom-domains and access logs across environments.</p>
-        <a class="more" href="{% link _docs/configuring-custom-domains.md %}">
-          Learn more
-          <i class="fa fa-angle-right" aria-hidden="true"></i>
-        </a>
-      </div>
+    <div class="body">
+      <p>You are trying to manage multiple environments for your team; dev, staging, and production. They might be in different AWS accounts. Your dev and staging environments are deployed on git push. While you might need to approve the changes that get promoted to production.
+      </p>
+      <p>All this takes some scripting to configure through a CI like Circle or Travis. Not with Seed. You get all of this with almost no configuration. It's like having your own DevOps team!</p>
+      <p>Learn more about <a href="{% link _docs/adding-a-stage.md %}">adding environments</a> and <a href="{% link _docs/iam-credentials-per-stage.md %}">using multiple AWS accounts</a> per environment.</p>
     </div>
   </div>
 
@@ -306,46 +156,65 @@ layout: lander
   <div class="feature">
     <div class="header">
       <div class="icon">
-        <i class="fa fa-id-badge" aria-hidden="true"></i>
+        <img src="/assets/lander/bolt.png" width="16" />
       </div>
-      <h2>Secure Pipelines</h2>
-      <p>Seed gives you the ability to secure your deployment pipelines by giving you fine-grained roles and controls.</p>
+      <h2>Finally something that works for mono-repo Serverless apps.</h2>
     </div>
-    <div class="security-graphic">
-      <div class="graphic-container">
-        <div class="locked-area">
-          <i class="fa fa-lock" aria-hidden="true"></i>
-        </div>
-        <div class="user">
-          <i class="fa fa-user-circle" aria-hidden="true"></i>
-          <div class="permissions">
-            <div class="pill">Deploy Dev</div>
-            <div class="pill">Deploy Staging</div>
-            <div class="pill">Deploy Production</div>
+    <div class="mono-repo-graphic">
+      <div class="root folder">
+        <span>
+          <i class="fa fa-folder-open" aria-hidden="true"></i><span>/</span>
+        </span>
+        <div class="content">
+          <div class="folder">
+            <span>
+              <i class="fa fa-folder-open" aria-hidden="true"></i><span>apis/</span>
+            </span>
+            <div class="content">
+              <div class="service">
+                <img width="24" src="assets/serverless-folder.png" /><span>users/</span>
+              </div>
+              <div class="service">
+                <img width="24" src="assets/serverless-folder.png" /><span>groups/</span>
+              </div>
+              <div class="service">
+                <img width="24" src="assets/serverless-folder.png" /><span>posts/</span>
+              </div>
+            </div>
+          </div>
+          <div class="folder">
+            <span>
+              <i class="fa fa-folder-open" aria-hidden="true"></i><span>jobs/</span>
+            </span>
+            <div class="content">
+              <div class="service">
+                <img width="24" src="assets/serverless-folder.png" /><span>etl/</span>
+              </div>
+              <div class="service">
+                <img width="24" src="assets/serverless-folder.png" /><span>resizer/</span>
+              </div>
+            </div>
+          </div>
+          <div class="folder">
+            <span>
+              <i class="fa fa-folder-open" aria-hidden="true"></i><span>alerts/</span>
+            </span>
+            <div class="content">
+              <div class="service">
+                <img width="24" src="assets/serverless-folder.png" /><span>db-trigger/</span>
+              </div>
+              <div class="service">
+                <img width="24" src="assets/serverless-folder.png" /><span>notifier/</span>
+              </div>
+            </div>
           </div>
         </div>
-        <div class="iam">
-          <div class="roles">
-            <div class="pill">Dev IAM</div>
-            <div class="pill">Prod IAM</div>
-          </div>
-          <img src="/assets/lander/key-icon.png" width="24" />
-        </div>
       </div>
     </div>
-    <div class="points">
-      <div class="point">
-        <h6>IAM deployment roles</h6>
-        <p>Create restrictive IAM deployment roles to ensure that your team members can safely deploy to a given stage without affecting other resources.</p>
-      </div>
-      <div class="point">
-        <h6>Role-based access</h6>
-        <p>Assign deployment roles to each member in your organization, to restrict access to actions such as promoting to production.</p>
-      </div>
-      <div class="point">
-        <h6>SSO / 2FA</h6>
-        <p>Seed takes security very seriously. We offer the ability to enable 2FA for individual accounts and to enforce SSO for your entire organization.</p>
-      </div>
+    <div class="body">
+      <p>Your serverless app has a few services. And you just added another last week. Deploying a mono-repo serverless app through a traditional CI is both slow and expensive; they charge you extra for concurrency.</p>
+      <p>Seed is built specifically for serverless apps with multiple services. Add them through our dashboard and we'll deploy them concurrently. Or set the order in which you want them deployed. You can even deploy some services individually if you need to get a hotfix out to production.</p>
+      <p>Learn more about <a href="{% link _docs/mono-repo-apps-in-seed.md %}">working with mono-repo apps</a> and <a href="{% link _docs/configuring-deploy-phases.md %}">managing service dependencies</a>.</p>
     </div>
   </div>
 
@@ -353,89 +222,36 @@ layout: lander
 
   <div class="feature">
     <div class="header">
-      <div class="icon">
-        <i class="fa fa-plug" aria-hidden="true"></i>
-      </div>
-      <h2>Connect Your Tools</h2>
-      <p>Seed works with most of the tools and services that you already love and use.</p>
-    </div>
-    <div class="integrations-graphic">
-      <div class="services">
-        <div>
-          <img title="OpenID" width="48" src="/assets/lander/integrations/openid.png" />
-        </div>
-        <div>
-          <img title="npm" width="48" src="/assets/lander/integrations/npm.png" />
-        </div>
-        <div>
-          <img title="JFrog" width="48" src="/assets/lander/integrations/jfrog.png" />
-        </div>
-        <div>
-          <img title="GitHub" width="48" src="/assets/lander/integrations/github.png" />
-        </div>
-        <div>
-          <img title="GitLab" width="48" src="/assets/lander/integrations/gitlab.png" />
-        </div>
-        <div>
-          <img title="Bitbucket" width="42" src="/assets/lander/integrations/bitbucket.png" />
-        </div>
-        <div>
-          <img title="Slack" width="48" src="/assets/lander/integrations/slack.png" />
-        </div>
-        <div>
-          <img title="Okta" width="48" src="/assets/lander/integrations/okta.png" />
-        </div>
-        <div>
-          <img title="SAML" width="48" src="/assets/lander/integrations/saml.png" />
-        </div>
-        <div>
-          <img title="Webhook" width="48" src="/assets/lander/integrations/webhook.png" />
-        </div>
-        <div>
-          <img title="OneLogin" width="48" src="/assets/lander/integrations/onelogin.png" />
-        </div>
-      </div>
+      <h2>But wait there's more! Because Seed isn't just another CI/CD service.</h2>
     </div>
     <div class="points">
       <div class="point">
-        <h6>Build notifications</h6>
-        <p>Get notified when a build starts, succeeds, or fails via the channel you prefer, whether it is Slack, email, or through a custom webhook.</p>
-        <a class="more" href="{% link _docs/adding-build-notifications.md %}">
-          Learn more
-          <i class="fa fa-angle-right" aria-hidden="true"></i>
-        </a>
+        <h6>A Great Dashboard</h6>
+        <p>Want to know what's running in production? Not sure if the posts service in QA was deployed with the latest code? Our dashboard tells you exactly which commit is deployed to which environment or service. So you get a great birds-eye view of the state of your app across all the different environments. Oh and our dashboard looks really good too!</p>
       </div>
       <div class="point">
-        <h6>Authentication providers</h6>
-        <p>Seed integrates with Okta, so your team can login securely. We also support any SAML based auth provider, including OneLogin, G Suite, etc.</p>
-      </div>
-      <div class="point">
-        <h6>Private repositories</h6>
-        <p>Integrate any private code repositories directly into your deployment process. Seed supports npm and JFrog with very little configuration.</p>
-        <a class="more" href="{% link _docs/private-npm-modules.md %}">
-          Learn more
-          <i class="fa fa-angle-right" aria-hidden="true"></i>
-        </a>
+        <h6>Intuitive Change Sets</h6>
+        <p>Are you unsure what is being promoted to production? Is this the build with all those infrastructure changes? Seed shows you a diff of which AWS resources are being added, removed, or modified. We generate change sets that are easy to read, not the AWS ones with obscure resource identifiers. We also show you all the important stuff at the top. So you'll never drop that table by mistake.</p>
       </div>
     </div>
   </div>
+
+  <h4 class="closing">
+    Oh btw, we also <a href="{% link _docs/rolling-back.md %}">handle rollbacks</a>, help you <a href="{% link _docs/configuring-custom-domains.md %}">set up custom domains</a>, and <a href="{% link _docs/viewing-logs.md %}">show you logs</> <a href="{% link _docs/viewing-metrics.md %}">and metrics</a>.
+  </h4>
 
   <hr />
 
   <div class="action">
-    <p>Add your <b>Serverless Framework project</b> to get started or request a <b>personalized demo</b>.</p>
+    <p>So let us manage the deployments for your serverless app, and you can get back to working on it.</p>
     <div class="controls">
-      <a class="demo" href="{{ site.console_url }}{{ site.request_demo }}">
-        Request a demo
+      <a class="plans" href="{% link pricing.html %}">
+        View paid plans
       </a>
       <a class="signup" href="{{ site.console_url }}{{ site.signup }}">
         Sign up for free
       </a>
     </div>
-    <a class="plans" href="{% link pricing.html %}">
-      Check out our pricing plans
-      <i class="fa fa-angle-right" aria-hidden="true"></i>
-    </a>
   </div>
 
 </div>
@@ -470,6 +286,12 @@ layout: lander
         <p>- <span>Daniel Chen</span>, CTO @ <a target="_blank" href="https://myshyft.com">Shyft</a></p>
       </div>
     </div>
+    <div class="testimonial">
+      <p>&ldquo;Seed has made deploying and managing our Serverless apps super slick. Prior to Seed, we’d looked at using services like Circle to handle our CI/CD, but so much configuration was needed for them to work well with Serverless. Plus the team at Seed are really helpful and responsive, which is vital when you’re working with new technology.&rdquo;</p>
+      <div>
+        <p>- <span>Lewis Blackwood</span>, CTO @ <a target="_blank" href="https://personably.co">Personably</a></p>
+      </div>
+    </div>
     <!--
     <div class="testimonial">
       <div class="context">
@@ -501,7 +323,7 @@ layout: lander
   <div class="tutorial-container">
     <div class="copy">
       <h3>New to Serverless?</h3>
-      <p>We created <a href="https://serverless-stack.com" target="_blank">Serverless Stack</a>; a <b>550+ page open source guide</b> on building full-stack serverless applications. With nearly <b>2K daily readers</b> and over <b>1K GitHub stars</b>, it's the most popular resource for creating serverless applications.</p>
+      <p>We created <a href="https://serverless-stack.com" target="_blank">Serverless Stack</a> &mdash; a 650+ page open source guide on building full-stack serverless applications. With nearly 3K daily readers, over 2K GitHub stars, and translated in multiple languages; it's the most popular resource for learning how to build serverless applications.</p>
       <a class="action" target="_blank" href="https://serverless-stack.com">
         View Guide
         <i class="fa fa-angle-right" aria-hidden="true"></i>
@@ -517,19 +339,25 @@ layout: lander
 </div>
 
 <div class="closing-action">
-  <p>Add your <b>Serverless Framework project</b> to get started or request a <b>personalized demo</b>.</p>
+
+  <p>Add your <b>Serverless Framework project</b> to get started.</p>
   <div class="controls">
-    <a class="demo" href="{{ site.console_url }}{{ site.request_demo }}">
-      Request a demo
+    <a class="plans" href="{% link pricing.html %}">
+      View paid plans
     </a>
     <a class="signup" href="{{ site.console_url }}{{ site.signup }}">
       Sign up for free
     </a>
   </div>
-  <a class="plans" href="{% link pricing.html %}">
-    Check out our pricing plans
-    <i class="fa fa-angle-right" aria-hidden="true"></i>
-  </a>
+  <div class="platforms">
+    <div>
+      <img title="Go" height="20" src="assets/go-logo.png" />
+      <img title="Ruby" width="30" src="assets/ruby-logo.png" />
+      <img title="Node.js" width="31" src="assets/node-logo.png" />
+      <img title="Python" width="31" src="assets/python-logo.png" />
+      <img title=".NET Core" width="32" src="assets/dotnet-logo.png" />
+    </div>
+  </div>
   <div class="divider">
     <div>
       <hr />

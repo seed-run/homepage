@@ -899,7 +899,6 @@ main > .header {
       }
 
       .copy {
-        margin-top: - 2 * $spacing-unit;
         flex: 0 0 50%;
         padding-left: $spacing-unit + 5px;
 
@@ -923,7 +922,7 @@ main > .header {
   }
 
   h1 {
-    margin: 0 auto 5px;
+    margin: 0 auto 10px;
     padding-top: 1.5 * $spacing-unit;
     font-family: $base-font-family;
     font-size: 36px;
@@ -942,13 +941,21 @@ main > .header {
     margin: 0 auto;
     font-family: $base-font-family;
     color: $tertiary-text-color;
-    font-size: 20px;
+    font-size: 18px;
     text-align: left;
 
     @include media-query($on-palm) {
-      font-size: 20px;
+      font-size: 18px;
       text-align: center;
     }
+  }
+
+  p {
+    margin-top: $spacing-unit / 2 - 5px;
+    margin-bottom: 0;
+    text-align: left;
+    color: $tertiary-text-color;
+    font-size: 18px;
   }
 
   div.controls {
@@ -958,31 +965,15 @@ main > .header {
     a.signup {
       @include action-button;
       padding: 14px 26px;
-
-      @include media-query($on-palm) {
-        padding: 10px 22px;
-      }
-    }
-    a.demo {
-      margin-right: 10px;
-      @include action-button-brand;
-      padding: 14px 26px;
-
-      @include media-query($on-palm) {
-        padding: 10px 22px;
-      }
-    }
-    a.signup, a.demo {
       font-size: 16px;
+
+      @include media-query($on-palm) {
+        padding: 10px 22px;
+      }
     }
 
     @include media-query($on-palm) {
       text-align: center;
-
-      a.demo {
-        margin-right: 0;
-        margin-bottom: $spacing-unit / 2;
-      }
     }
   }
 
@@ -1081,20 +1072,6 @@ main > .action {
   }
 }
 
-main > .platforms {
-  margin-top: 1.5 * $spacing-unit;
-  padding-bottom: 1.5 * $spacing-unit;
-  text-align: center;
-
-  div {
-    img {
-      opacity: 0.33;
-      vertical-align: middle;
-      margin: 0 9px;
-    }
-  }
-}
-
 //////////////
 // FEATURES //
 //////////////
@@ -1103,6 +1080,34 @@ main > .features {
 
   @include media-query($on-palm) {
     padding-bottom: $spacing-unit * 2;
+  }
+
+  & > h4.opening,
+  & > h4.closing {
+    margin: 2 * $spacing-unit auto 0;
+    max-width: 640px;
+    text-align: center;
+    font-size: 20px;
+    font-family: $base-font-family;
+    color: $secondary-text-color;
+    a {
+      font-weight: 500;
+    }
+  }
+
+
+  hr {
+    margin: $spacing-unit * 2.5 auto;
+    max-width: 800px;
+    border-color: darken($hero-bkg-color, 10%);
+
+    &:nth-child(2) {
+      margin: 2 * $spacing-unit auto;
+    }
+
+    @include media-query($on-palm) {
+      margin: $spacing-unit * 2 auto;
+    }
   }
 
   .feature {
@@ -1140,14 +1145,30 @@ main > .features {
         }
       }
       h2 {
-        margin-bottom: 4px;
+        margin: 0 auto 4px;
         font-size: 32px;
+        max-width: 860px;
       }
       p {
         margin: 0 auto;
         max-width: 600px;
         color: $tertiary-text-color;
         line-height: 1.8;
+      }
+    }
+
+    div.body {
+      margin: 2 * $spacing-unit auto 0;
+      max-width: 640px;
+      color: $secondary-text-color;
+      font-size: 20px;
+
+      p {
+        margin-bottom: $spacing-unit / 2;
+
+        a {
+          font-weight: 500;
+        }
       }
     }
 
@@ -1184,8 +1205,9 @@ main > .features {
       }
 
       div.point {
-        margin: $spacing-unit $spacing-unit / 2 + 5px 0;
-        flex: 0 0 264px;
+        padding: $spacing-unit $spacing-unit / 2 + 5px 0;
+        box-sizing: border-box;
+        flex: 0 0 50%;
 
         @include media-query($on-palm) {
           margin: $spacing-unit $spacing-unit / 2 0;
@@ -1196,6 +1218,7 @@ main > .features {
           font-size: 20px;
           font-family: $base-font-family;
           font-weight: 500;
+          color: $tertiary-text-color;
 
           span {
             margin-left: 2px;
@@ -1233,7 +1256,7 @@ main > .features {
     p {
       margin: 0 auto $spacing-unit;
       max-width: 520px;
-      color: $tertiary-text-color;
+      color: $secondary-text-color;
       font-size: 20px;
 
       b {
@@ -1243,24 +1266,21 @@ main > .features {
     }
     a.signup {
       @include action-button;
-      padding: 14px 26px;
+      padding: 14px 0;
       width: 222px;
-      font-size: 18px;
+      font-size: 16px;
 
       @include media-query($on-palm) {
         font-size: 22px;
         padding: 10px 22px;
       }
     }
-    a.demo {
+    a.plans {
       margin-right: $spacing-unit / 2 + 1px;
-      @include action-button-brand;
-      padding: 14px 26px;
+      @include action-button-dark;
+      padding: 14px 0;
       width: 222px;
-      font-size: 18px;
-    }
-    a.signup, a.demo {
-      font-size: 18px;
+      font-size: 16px;
     }
 
     @include media-query($on-palm) {
@@ -1268,29 +1288,6 @@ main > .features {
         margin-right: 0;
         margin-bottom: $spacing-unit / 2;
       }
-    }
-    a.plans {
-      padding-top: $spacing-unit / 2;
-      display: inline-block;
-
-      i {
-        margin-left: 2px;
-      }
-    }
-  }
-
-  hr {
-    margin: $spacing-unit * 2.5 auto;
-    max-width: 800px;
-    border-color: darken($hero-bkg-color, 10%);
-
-    &:first-child {
-      margin-top: 0;
-      margin-bottom: $spacing-unit * 2.5;
-    }
-
-    @include media-query($on-palm) {
-      margin: $spacing-unit * 2 auto;
     }
   }
 }
@@ -1597,9 +1594,9 @@ main > .closing-action {
         padding: 10px 22px;
       }
     }
-    a.demo {
+    a.plans {
       margin-right: $spacing-unit / 2 + 1px;
-      @include action-button-brand;
+      @include action-button-dark;
       padding: 14px 26px;
       width: 222px;
     }
@@ -1608,20 +1605,23 @@ main > .closing-action {
     }
 
     @include media-query($on-palm) {
-      a.demo {
+      a.plans {
         margin-right: 0;
         margin-bottom: $spacing-unit / 2;
       }
     }
   }
 
-  a.plans {
-    margin-bottom: $spacing-unit / 2;
-    padding-top: $spacing-unit / 2;
-    display: inline-block;
+  .platforms {
+    margin-top: $spacing-unit;
+    text-align: center;
 
-    i {
-      margin-left: 2px;
+    div {
+      img {
+        opacity: 0.33;
+        vertical-align: middle;
+        margin: 0 6px;
+      }
     }
   }
 

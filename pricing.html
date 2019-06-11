@@ -6,7 +6,10 @@ title: Pricing Plans
 <div class="pricing">
   <div class="header">
     <h1>Pricing Plans</h1>
+    <!--
     <p>Find a plan that fits your project. Or <a href="mailto:{{ site.email }}">simply contact us</a> and we'll find the one that is right for you.</p>
+    -->
+    <p>Affordable plans for startups and small teams. Get started for free. Or <a href="mailto:{{ site.email }}">contact us</a> if you have custom needs and we'll get you set up.</p>
   </div>
   <div class="table">
     <div class="row">
@@ -30,7 +33,11 @@ title: Pricing Plans
           </li>
           <li>
             <i class="fa-li fa fa-check"></i>
-            Mono-repo workflow
+            Unlimited concurrency
+          </li>
+          <li>
+            <i class="fa-li fa fa-check"></i>
+            Mono-repo deployments
           </li>
           <li>
             <i class="fa-li fa fa-check"></i>
@@ -40,6 +47,10 @@ title: Pricing Plans
             <i class="fa-li fa fa-check"></i>
             Single user account
           </li>
+          <li>
+            <i class="fa-li fa fa-check"></i>
+            500 build minutes
+          </li>
         </ul>
       </div>
       <div class="startup">
@@ -48,49 +59,7 @@ title: Pricing Plans
             Startup
           </p>
           <div class="numbers">
-            <p>$95</p>
-            <p>per month</p>
-          </div>
-          <a class="action signup" href="{{ site.console_url }}{{ site.signup }}">
-            Try it for free
-          </a>
-        </div>
-        <ul class="features fa-ul">
-          <li>
-            <i class="fa-li fa fa-check"></i>
-            Unlimited apps
-          </li>
-          <li>
-            <i class="fa-li fa fa-check"></i>
-            Mono-repo workflow
-          </li>
-          <li>
-            <i class="fa-li fa fa-plus"></i>
-            Organization account
-          </li>
-          <li>
-            <i class="fa-li fa fa-plus"></i>
-            Standard email support
-          </li>
-          <li>
-            <i class="fa-li fa fa-plus"></i>
-            5 users included
-          </li>
-          <li>
-            <i class="fa-li fa fa-plus"></i>
-            Add a user for $19/mo
-          </li>
-        </ul>
-      </div>
-    </div>
-    <div class="row">
-      <div class="growth">
-        <div class="cost">
-          <p class="header">
-            Growth
-          </p>
-          <div class="numbers">
-            <p>$390</p>
+            <p>$30</p>
             <p>per month</p>
           </div>
           <a class="action start" href="{{ site.console_url }}{{ site.signup }}">
@@ -104,42 +73,36 @@ title: Pricing Plans
           </li>
           <li>
             <i class="fa-li fa fa-check"></i>
-            Mono-repo workflow
+            Unlimited concurrency
           </li>
           <li>
             <i class="fa-li fa fa-check"></i>
-            Organization account
+            Mono-repo deployments
           </li>
           <li>
             <i class="fa-li fa fa-plus"></i>
-            Priority email support
+            Standard email support
           </li>
           <li>
             <i class="fa-li fa fa-plus"></i>
-            Two-factor auth
+            3 users included
+          </li>
+          <li>
+            <i class="fa-li fa fa-plus"></i>
+            1.5K build minutes/user
+          </li>
+          <li>
+            <i class="fa-li fa fa-plus"></i>
+            Add a user for $10/month
           </li>
           <li>
             <i class="fa-li fa fa-plus"></i>
             Role-based access control
           </li>
-          <li>
-            <i class="fa-li fa fa-plus"></i>
-            Programmable API access
-          </li>
-          <li>
-            <i class="fa-li fa fa-plus"></i>
-            Multiple downstream environments
-          </li>
-          <li>
-            <i class="fa-li fa fa-plus"></i>
-            10 users included
-          </li>
-          <li>
-            <i class="fa-li fa fa-plus"></i>
-            Add a user for $39/mo
-          </li>
         </ul>
       </div>
+    </div>
+    <div class="row">
       <div class="enterprise">
         <div class="cost">
           <p class="header">
@@ -175,23 +138,21 @@ title: Pricing Plans
           </li>
           <li>
             <i class="fa-li fa fa-check-circle"></i>
+            Priority Email support
+          </li>
+          <!--
+          <li>
+            <i class="fa-li fa fa-check-circle"></i>
             Concierge onboarding
           </li>
-          <li>
-            <i class="fa-li fa fa-check-circle"></i>
-            Dedicated Slack support
-          </li>
-          <li>
-            <i class="fa-li fa fa-check-circle"></i>
-            GitHub Enterprise support
-          </li>
+          -->
           <li>
             <i class="fa-li fa fa-check-circle"></i>
             Dedicated account manager
           </li>
           <li>
             <i class="fa-li fa fa-check-circle"></i>
-            Connect your own CI pipeline
+            GitHub Enterprise integration
           </li>
           <li>
             <i class="fa-li fa fa-check-circle"></i>
@@ -214,6 +175,11 @@ title: Pricing Plans
       </a>
     </div>
   </div>
+  <div class="concurrency">
+    <hr />
+    <h4>How do we compare?</h4>
+    <p>Other CI services charge you extra for concurrency. This means that if your app has 5 services and each service takes 2 minutes to deploy; your entire app will take 5 x 2 minutes = 10 minutes to deploy when using one concurrent build server. Seed on the other hand will build all your services concurrently, so the entire deployment takes 2 minutes.</p>
+  </div>
   <div class="faq">
     <hr />
     <h4>Frequently Asked Questions</h4>
@@ -222,40 +188,23 @@ title: Pricing Plans
         <li>
           <span class="fa-li" ><i class="fa fa-chevron-right"></i></span>
           <p>
-            Are there any limits on how many deployments I can make?
+            What are build minutes?
           </p>
           <p>
-            There are soft limits on how many deployments you can make. But in our experience these limits work out comfortably for most folks. There is a soft limit of 200 deployments per month for the Individual plan. And the limit starts at 1500 and 6000 per month for the Startup and Growth plans respectively. If you think you might need more, feel free to <a href="mailto:{{ site.email }}">contact us</a>.
-          </p>
-        </li>
-
-        <li>
-          <span class="fa-li" ><i class="fa fa-chevron-right"></i></span>
-          <p>
-            What counts as a deployment?
-          </p>
-          <p>
-            We count a deployment when a Serverless service is packaged and deployed to any stage (or environment).
+            Build minutes are the amount of time a build process takes to complete in minutes.
           </p>
         </li>
 
         <li>
           <span class="fa-li" ><i class="fa fa-chevron-right"></i></span>
           <p>
-            How many concurrent deployments can I make?
+            How are build minutes calculated on an account?
           </p>
           <p>
-            There are no limits on the number of concurrent deployments. You can create unlimited stages with unlimited concurrent deployments. Just note that if a stage is being currently deployed to, it will queue any subsequent deployments. This is because the AWS resources for a stage are busy when it is being deployed to.
-          </p>
-        </li>
-
-        <li>
-          <span class="fa-li" ><i class="fa fa-chevron-right"></i></span>
-          <p>
-            How does dedicated Slack support work?
+            Free accounts have a limit of 500 build minutes a month. While the paid plans give you 1500 build minutes per user on the account. So if your account has 10 users; your account has 10 x 1500 build minutes = 150 000 build minutes. If you need more build minutes on your account, add another user to the account.
           </p>
           <p>
-            We create a shared Slack channel in our company account and invite your team to it. That way you'll have direct access to our engineers in case you have any questions.
+            If you have custom requirements, feel free to <a href="mailto:{{ site.email }}">contact us</a>.
           </p>
         </li>
 

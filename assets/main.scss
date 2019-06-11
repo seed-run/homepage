@@ -965,7 +965,7 @@ main > .header {
     a.signup {
       @include action-button;
       padding: 14px 26px;
-      font-size: 16px;
+      font-size: 18px;
 
       @include media-query($on-palm) {
         padding: 10px 22px;
@@ -1268,7 +1268,7 @@ main > .features {
       @include action-button;
       padding: 14px 0;
       width: 222px;
-      font-size: 16px;
+      font-size: 18px;
 
       @include media-query($on-palm) {
         font-size: 22px;
@@ -1280,7 +1280,7 @@ main > .features {
       @include action-button-dark;
       padding: 14px 0;
       width: 222px;
-      font-size: 16px;
+      font-size: 18px;
     }
 
     @include media-query($on-palm) {
@@ -1600,7 +1600,7 @@ main > .closing-action {
       padding: 14px 26px;
       width: 222px;
     }
-    a.signup, a.demo {
+    a.signup, a.plans {
       font-size: 18px;
     }
 

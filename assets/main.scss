@@ -1195,6 +1195,9 @@ main > .features {
           margin-bottom: 0;
         }
       }
+      @include media-query($on-palm) {
+        font-size: 18px;
+      }
     }
 
     div.pipeline-table {

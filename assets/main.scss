@@ -26,6 +26,8 @@ $link-color:                #6A5CA2;
 
 $grey-color-light:          #C7C6CC;
 
+$divider-color:             #E2E2E5;
+
 // Width of the content     area
 $content-width:             1100px;
 
@@ -1261,7 +1263,7 @@ main > .features {
           font-size: 20px;
           font-family: $base-font-family;
           font-weight: 500;
-          color: $tertiary-text-color;
+          color: lighten($tertiary-text-color, 15%);
 
           span {
             margin-left: 2px;

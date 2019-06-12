@@ -48,7 +48,7 @@ main .pricing {
     }
 
     & > .row > div {
-      margin: 0 12px 1.5 * $spacing-unit;
+      margin: 0 12px $spacing-unit;
       width: 260px;
 
       @include media-query($on-palm) {
@@ -160,6 +160,61 @@ main .pricing {
           }
         }
       }
+    }
+  }
+
+  .concurrency {
+    $padding: $spacing-unit / 2 + 5px;
+
+    margin: 0 auto $spacing-unit + 10px;
+    border-radius: 6px;
+    border: 1px solid darken($divider-color, 4%);
+    padding: $padding $padding $padding + 5px $padding + 5px;
+    background-color: $divider-color;
+    max-width: 660px;
+    display: flex;
+
+    h4 {
+      font-family: $base-font-family;
+      margin-bottom: 5px;
+      font-size: 22px;
+    }
+
+    p {
+      color: $secondary-text-color;
+
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+
+    div.icon {
+      $size: 48px;
+
+      margin-top: 5px;
+      margin-right: $spacing-unit / 2;
+      width: $size;
+      height: $size;
+      border-radius: 50%;
+      background-color: lighten($brand-color, 20%);
+      text-align: center;
+      flex: 0 0 $size;
+
+      i {
+        color: white;
+        font-size: 21px;
+        line-height: $size;
+      }
+
+      img {
+        padding: 20px 0 18px;
+      }
+    }
+
+    @include media-query($on-palm) {
+      margin-left: $spacing-unit / 2;
+      margin-right: $spacing-unit / 2;
+      padding: $spacing-unit / 2;
     }
   }
 

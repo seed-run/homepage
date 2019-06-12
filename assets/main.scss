@@ -70,10 +70,10 @@ $on-laptop:                 800px;
   letter-spacing: 1px;
   box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2);
   box-sizing: border-box;
-  transition: background-color .15s ease-out, border .15s ease-out;
+  transition: background-color .3s ease-out, border .3s ease-out;
 
   &:hover {
-    background-color: darken($bkg, 5%);
+    background-color: darken($bkg, 8%);
   }
 
   &:active {
@@ -102,7 +102,7 @@ $on-laptop:                 800px;
   letter-spacing: 1px;
   box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2);
   box-sizing: border-box;
-  transition: background-color .15s ease-out, border .15s ease-out;
+  transition: background-color .3s ease-out, border .3s ease-out;
 
   &:hover {
     background-color: darken($bkg, 5%);
@@ -129,7 +129,7 @@ $on-laptop:                 800px;
   letter-spacing: 1px;
   box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2);
   box-sizing: border-box;
-  transition: background-color .15s ease-out, border .15s ease-out;
+  transition: background-color .3s ease-out, border .3s ease-out;
 
   &:hover {
     background-color: darken($bkg, 5%);
@@ -183,7 +183,7 @@ a:active {
   }
 
   .browser {
-    $bar-height: 20px;
+    $bar-height: 22px;
     $bar-height-m: 10px;
     $top-color: #E7E6E9;
     $bottom-color: #DCDBDE;
@@ -227,8 +227,8 @@ a:active {
         border-radius: $size / 2;
         $color: darken($bottom-color, 3%);
         background-color: $color;
-        border: 1px solid darken($color, 5%);
-        margin-right: 6px;
+        border: 1px solid darken($color, 2%);
+        margin-right: 5px;
         display: block;
         box-sizing: border-box;
 
@@ -241,7 +241,7 @@ a:active {
         }
 
         &:first-child {
-          margin-left: 10px;
+          margin-left: 8px;
         }
       }
     }
@@ -424,19 +424,12 @@ a:active {
 @mixin pipeline-table {
   $border-width: 2px;
 
-  margin: 2 * $spacing-unit auto 0;
-  overflow-x: auto;
-
-  @include media-query($on-palm) {
-    margin-bottom: 2 * $spacing-unit - 10px;
-  }
-
   div.table {
     margin: 0 auto;
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
-    width: 750px;
+    width: 570px;
 
     div {
       display: flex;
@@ -488,7 +481,7 @@ a:active {
       }
 
       // First row
-      &:nth-child(n + 1):nth-child(-n + 7) {
+      &:nth-child(n):nth-child(-n + 6) {
         display: block;
         height: 80px;
         text-align: center;
@@ -515,19 +508,10 @@ a:active {
           }
         }
       }
-      // First column
-      &:nth-child(8),
-      &:nth-child(15),
-      &:nth-child(22) {
-        font-size: 14px;
-        color: $secondary-text-color;
-        font-weight: 500;
-        padding-left: 10px;
-      }
       // Bottom row
-      &:nth-child(30),
-      &:nth-child(32),
-      &:nth-child(34) {
+      &:nth-child(25),
+      &:nth-child(27),
+      &:nth-child(29) {
         height: 72px;
         flex-direction: column;
         justify-content: center;
@@ -542,36 +526,36 @@ a:active {
       }
 
       // Row dividers
-      &:nth-child(n + 1):nth-child(-n + 7),
-      &:nth-child(n + 8):nth-child(-n + 14),
-      &:nth-child(n + 15):nth-child(-n + 21),
-      &:nth-child(n + 22):nth-child(-n + 28) {
+      &:nth-child(n):nth-child(-n + 6),
+      &:nth-child(n + 7):nth-child(-n + 12),
+      &:nth-child(n + 13):nth-child(-n + 18),
+      &:nth-child(n + 19):nth-child(-n + 24) {
         border-bottom: 1px solid lighten($grey-color-light, 10%);
       }
 
       // Horizontal dashed borders
-      &:nth-child(9),
-      &:nth-child(16),
-      &:nth-child(23),
-      &:nth-child(14),
-      &:nth-child(21),
-      &:nth-child(28) {
+      &:nth-child(7),
+      &:nth-child(13),
+      &:nth-child(19),
+      &:nth-child(12),
+      &:nth-child(18),
+      &:nth-child(24) {
         border: {
           width: 0 $border-width;
         }
       }
 
       // Dev & prod top borders
-      &:nth-child(2),
-      &:nth-child(7) {
+      &:nth-child(1),
+      &:nth-child(6) {
         border: {
           radius: 6px 6px 0 0;
           width: $border-width $border-width 0 $border-width;
         }
       }
       // Dev & prod bottom borders
-      &:nth-child(30),
-      &:nth-child(34) {
+      &:nth-child(25),
+      &:nth-child(29) {
         border: {
           radius: 0 0 6px 6px;
           width: 0 $border-width $border-width $border-width;
@@ -579,37 +563,37 @@ a:active {
       }
 
       // QA top border
-      &:nth-child(4) {
+      &:nth-child(3) {
         border: {
           radius: 6px 0 0 0;
           width: $border-width 0 0 $border-width;
         }
       }
       // Staging top border
-      &:nth-child(5) {
+      &:nth-child(4) {
         border: {
           radius: 0 6px 0 0;
           width: $border-width $border-width 0 0;
         }
       }
       // QA horizontal border
-      &:nth-child(11),
-      &:nth-child(18),
-      &:nth-child(25) {
+      &:nth-child(9),
+      &:nth-child(15),
+      &:nth-child(21) {
         border: {
           width: 0 0 0 $border-width;
         }
       }
       // Staging horizontal border
-      &:nth-child(12),
-      &:nth-child(19),
-      &:nth-child(26) {
+      &:nth-child(10),
+      &:nth-child(16),
+      &:nth-child(22) {
         border: {
           width: 0 $border-width 0 0;
         }
       }
       // QA & staging bottom border
-      &:nth-child(32) {
+      &:nth-child(27) {
         border: {
           radius: 0 0 6px 6px;
           width: 0 $border-width $border-width $border-width;
@@ -620,25 +604,24 @@ a:active {
       $cell-width: 130px;
       $cell-padding: 10px;
 
-      &:nth-child(7n + 3),
-      &:nth-child(7n + 6) {
+      &:nth-child(6n + 2),
+      &:nth-child(6n + 5) {
         width: $cell-padding;
       }
-      &:nth-child(7n + 1),
-      &:nth-child(7n + 2),
-      &:nth-child(7n + 4),
-      &:nth-child(7n + 5) {
+      &:nth-child(6n + 1),
+      &:nth-child(6n + 3),
+      &:nth-child(6n + 4) {
         width: $cell-width;
       }
-      &:nth-child(7n + 7),
-      &:nth-child(34) {
-        width: $cell-width + 50px;
+      &:nth-child(6n + 6),
+      &:nth-child(29) {
+        width: $cell-width;
       }
-      &:nth-child(31),
-      &:nth-child(33) {
+      &:nth-child(26),
+      &:nth-child(28) {
         width: $cell-padding;
       }
-      &:nth-child(32) {
+      &:nth-child(27) {
         width: 2 * $cell-width;
       }
     }
@@ -646,16 +629,8 @@ a:active {
 }
 
 @mixin mono-repo-graphic {
-  margin-top: $spacing-unit * 2 - 15px;
   display: flex;
   justify-content: center;
-
-  @include media-query($on-palm) {
-    padding: 0 $spacing-unit / 2;
-    overflow-x: auto;
-    justify-content: flex-start;
-    margin-bottom: 2 * $spacing-unit - 10px;
-  }
 
   div.folder {
     box-sizing: border-box;
@@ -674,7 +649,7 @@ a:active {
     }
 
     div.content {
-      border: 3px solid #E9DC5F;
+      border: 3px solid lighten(#F05952, 25%);
       border-radius: 6px;
       margin-top: 5px;
     }
@@ -692,7 +667,7 @@ a:active {
   }
 
   div.content > div.folder {
-    width: 200px;
+    width: 175px;
     margin-right: $spacing-unit;
 
     div.service {
@@ -900,7 +875,7 @@ main > .header {
 
       .copy {
         flex: 0 0 50%;
-        padding-left: $spacing-unit + 5px;
+        padding-left: $spacing-unit;
 
         @include media-query($on-palm) {
           margin-top: 0;
@@ -940,22 +915,13 @@ main > .header {
   h3 {
     margin: 0 auto;
     font-family: $base-font-family;
-    color: $tertiary-text-color;
+    color: lighten($secondary-text-color, 5%);
     font-size: 18px;
     text-align: left;
 
     @include media-query($on-palm) {
-      font-size: 18px;
       text-align: center;
     }
-  }
-
-  p {
-    margin-top: $spacing-unit / 2 - 5px;
-    margin-bottom: 0;
-    text-align: left;
-    color: $tertiary-text-color;
-    font-size: 18px;
   }
 
   div.controls {
@@ -971,6 +937,18 @@ main > .header {
         padding: 10px 22px;
       }
     }
+
+    @include media-query($on-palm) {
+      text-align: center;
+    }
+  }
+
+  p {
+    margin-top: 12px;
+    margin-bottom: 0;
+    text-align: left;
+    color: $tertiary-text-color;
+    font-size: 14px;
 
     @include media-query($on-palm) {
       text-align: center;
@@ -1085,6 +1063,7 @@ main > .features {
   & > h4.opening,
   & > h4.closing {
     margin: 2 * $spacing-unit auto 0;
+    padding: 0 $spacing-unit / 2;
     max-width: 640px;
     text-align: center;
     font-size: 20px;
@@ -1092,6 +1071,10 @@ main > .features {
     color: $secondary-text-color;
     a {
       font-weight: 500;
+    }
+
+    @include media-query($on-palm) {
+      margin: 2 * $spacing-unit - 10px auto 0;
     }
   }
 
@@ -1106,11 +1089,14 @@ main > .features {
     }
 
     @include media-query($on-palm) {
-      margin: $spacing-unit * 2 auto;
+      &, &:nth-child(2) {
+        margin: 2 * $spacing-unit - 10px auto;
+      }
     }
   }
 
   .feature {
+    overflow: hidden;
 
     div.header {
       $size: 64px;
@@ -1140,8 +1126,7 @@ main > .features {
         }
 
         img {
-          line-height: $size;
-          padding: 20px 0;
+          padding: 20px 0 18px;
         }
       }
       h2 {
@@ -1159,41 +1144,93 @@ main > .features {
 
     div.body {
       margin: 2 * $spacing-unit auto 0;
-      max-width: 640px;
+      display: flex;
+      max-width: 1100px;
+      align-items: center;
+      justify-content: flex-end;
+
+      @include media-query($on-palm) {
+        display: block;
+        margin: 1.5 * $spacing-unit auto 0;
+      }
+
+      div.graphic {
+        flex: 0 0 47%;
+      }
+
+      div.copy {
+        margin-left: $spacing-unit;
+        margin-right: $spacing-unit;
+        max-width: 640px;
+        flex: 0 0 53%;
+      }
+    }
+
+    &.mono-repo {
+      div.body {
+        justify-content: flex-start;
+
+        div.graphic {
+          order: 2;
+        }
+
+        div.copy {
+          order: 1;
+        }
+      }
+    }
+
+    div.copy {
       color: $secondary-text-color;
       font-size: 20px;
 
       p {
-        margin-bottom: $spacing-unit / 2;
+        margin-bottom: $spacing-unit / 2 + 5px;
 
         a {
           font-weight: 500;
         }
+
+        &:last-child {
+          margin-bottom: 0;
+        }
+      }
+    }
+
+    div.pipeline-table {
+      @include pipeline-table;
+
+      @include media-query($on-palm) {
+        overflow-x: auto;
+        margin-bottom: 1.5 * $spacing-unit;
+      }
+    }
+
+    div.mono-repo-graphic {
+      @include mono-repo-graphic;
+
+      @include media-query($on-palm) {
+        padding: 0 $spacing-unit / 2;
+        overflow-x: auto;
+        justify-content: flex-start;
+        margin-bottom: 1.5 * $spacing-unit;
       }
     }
 
 //    div.ci-graphic {
 //      @include ci-graphic;
 //    }
-
-    div.security-graphic {
-      @include security-graphic;
-    }
-
-    div.pipeline-table {
-      @include pipeline-table;
-    }
-
-    div.mono-repo-graphic {
-      @include mono-repo-graphic;
-    }
-
-    div.integrations-graphic {
-      @include integrations-graphic;
-    }
+//
+//    div.security-graphic {
+//      @include security-graphic;
+//    }
+//
+//    div.integrations-graphic {
+//      @include integrations-graphic;
+//    }
 
     div.points {
-      margin: $spacing-unit auto 0;
+      margin: $spacing-unit * 2 auto 0;
       padding: 0 $spacing-unit / 2;
       display: flex;
       justify-content: center;
@@ -1202,15 +1239,18 @@ main > .features {
 
       @include media-query($on-palm) {
         display: block;
+        margin: 1.5 * $spacing-unit auto 0;
       }
 
       div.point {
-        padding: $spacing-unit $spacing-unit / 2 + 5px 0;
+        padding: 0 $spacing-unit / 2 + 5px 0;
         box-sizing: border-box;
         flex: 0 0 50%;
 
         @include media-query($on-palm) {
-          margin: $spacing-unit $spacing-unit / 2 0;
+          &:first-child {
+            margin-bottom: $spacing-unit;
+          }
         }
 
         h6 {
@@ -1271,8 +1311,9 @@ main > .features {
       font-size: 18px;
 
       @include media-query($on-palm) {
+        width: 260px;
         font-size: 22px;
-        padding: 10px 22px;
+        padding: 10px 20px;
       }
     }
     a.plans {
@@ -1281,10 +1322,16 @@ main > .features {
       padding: 14px 0;
       width: 222px;
       font-size: 18px;
+
+      @include media-query($on-palm) {
+        width: 260px;
+        font-size: 22px;
+        padding: 10px 20px;
+      }
     }
 
     @include media-query($on-palm) {
-      a.demo {
+      a.plans {
         margin-right: 0;
         margin-bottom: $spacing-unit / 2;
       }
@@ -1332,14 +1379,8 @@ main > .testimonials {
       height: 45px;
       box-sizing: border-box;
 
-      &.hp img {
-        margin-top: -7px;
-      }
-      &.infosys {
-        padding-top: 1px;
-      }
-      &.airware {
-        padding-top: 3px;
+      &.bastian {
+        margin-top: 12px;
       }
 
       @include media-query($on-palm) {

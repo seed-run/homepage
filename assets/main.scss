@@ -29,7 +29,7 @@ $grey-color-light:          #C7C6CC;
 $divider-color:             #E2E2E5;
 
 // Width of the content     area
-$content-width:             1100px;
+$content-width:             1280px;
 
 $on-palm:                   600px;
 $on-laptop:                 800px;
@@ -427,11 +427,10 @@ a:active {
   $border-width: 2px;
 
   div.table {
-    margin: 0 auto;
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
-    width: 570px;
+    width: 540px;
 
     div {
       display: flex;
@@ -1147,7 +1146,7 @@ main > .features {
     div.body {
       margin: 2 * $spacing-unit auto 0;
       display: flex;
-      max-width: 1100px;
+      max-width: $content-width;
       align-items: center;
       justify-content: flex-end;
 
@@ -1157,14 +1156,25 @@ main > .features {
       }
 
       div.graphic {
-        flex: 0 0 47%;
+        margin-left: $spacing-unit;
+
+        @include media-query($on-palm) {
+          margin: 0  0 1.5 * $spacing-unit $spacing-unit / 2;
+        }
       }
 
       div.copy {
-        margin-left: $spacing-unit;
         margin-right: $spacing-unit;
+        margin-left: 1.5 * $spacing-unit;
+        flex: 1 1 auto;
         max-width: 640px;
-        flex: 0 0 53%;
+        min-width: 500px;
+
+        @include media-query($on-palm) {
+          margin: 0 $spacing-unit / 2;
+          max-width: auto;
+          min-width: auto;
+        }
       }
     }
 
@@ -1173,11 +1183,19 @@ main > .features {
         justify-content: flex-start;
 
         div.graphic {
+          margin-right: $spacing-unit;
+          margin-left: 0;
           order: 2;
+
+          @include media-query($on-palm) {
+            margin: 0  0 1.5 * $spacing-unit $spacing-unit / 2;
+          }
         }
 
         div.copy {
           order: 1;
+          margin-right: 1.5 * $spacing-unit;
+          margin-left: $spacing-unit;
         }
       }
     }
@@ -1207,7 +1225,6 @@ main > .features {
 
       @include media-query($on-palm) {
         overflow-x: auto;
-        margin-bottom: 1.5 * $spacing-unit;
       }
     }
 
@@ -1215,10 +1232,8 @@ main > .features {
       @include mono-repo-graphic;
 
       @include media-query($on-palm) {
-        padding: 0 $spacing-unit / 2;
         overflow-x: auto;
         justify-content: flex-start;
-        margin-bottom: 1.5 * $spacing-unit;
       }
     }
 
@@ -1280,6 +1295,7 @@ main > .features {
         p {
           margin-bottom: 0;
           color: $secondary-text-color;
+          font-size: 18px;
         }
         a.more {
           margin-top: 10px;
@@ -1475,7 +1491,7 @@ main > .tutorial {
 
   .tutorial-container {
     margin: 0 auto;
-    max-width: 940px;
+    max-width: $content-width;
     display: flex;
     justify-content: center;
     align-items: center;

@@ -215,6 +215,12 @@ main .pricing {
       margin-left: $spacing-unit / 2;
       margin-right: $spacing-unit / 2;
       padding: $spacing-unit / 2;
+
+      display: block;
+
+      div.icon {
+        margin-bottom: $spacing-unit / 2 - 2px;
+      }
     }
   }
 

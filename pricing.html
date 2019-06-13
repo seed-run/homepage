@@ -19,8 +19,10 @@ title: Pricing Plans
             Individual
           </p>
           <div class="numbers">
-            <p>$0</p>
-            <p>per month</p>
+            <div>
+              <p><span>$</span>0</p>
+              <p>per month</p>
+            </div>
           </div>
           <a class="action signup" href="{{ site.console_url }}{{ site.signup }}">
             Sign up for free
@@ -56,11 +58,14 @@ title: Pricing Plans
       <div class="startup">
         <div class="cost">
           <p class="header">
-            Startup
+            Team
           </p>
           <div class="numbers">
-            <p>$30</p>
-            <p>per month</p>
+            <div>
+              <p><span>$</span>10</p>
+              <p>per user / month</p>
+            </div>
+            <p>Starts at $30 / month</p>
           </div>
           <a class="action start" href="{{ site.console_url }}{{ site.signup }}">
             Try it for free
@@ -85,19 +90,11 @@ title: Pricing Plans
           </li>
           <li>
             <i class="fa-li fa fa-plus"></i>
-            3 users included
+            Starts at 3 users + 4500 build minutes
           </li>
           <li>
             <i class="fa-li fa fa-plus"></i>
-            1.5K build minutes/user
-          </li>
-          <li>
-            <i class="fa-li fa fa-plus"></i>
-            Add a user for $10/month
-          </li>
-          <li>
-            <i class="fa-li fa fa-plus"></i>
-            Role-based access control
+            Add a user + 1500 build minutes for $10/month
           </li>
         </ul>
       </div>
@@ -118,7 +115,7 @@ title: Pricing Plans
         <ul class="features fa-ul">
           <li>
             <i class="fa-li fa fa-ellipsis-h"></i>
-            Everything in Growth
+            Everything in Team
           </li>
           <li>
             <i class="fa-li fa fa-check-circle"></i>
@@ -145,11 +142,11 @@ title: Pricing Plans
             <i class="fa-li fa fa-check-circle"></i>
             Concierge onboarding
           </li>
-          -->
           <li>
             <i class="fa-li fa fa-check-circle"></i>
             Dedicated account manager
           </li>
+          -->
           <li>
             <i class="fa-li fa fa-check-circle"></i>
             GitHub Enterprise integration
@@ -196,7 +193,7 @@ title: Pricing Plans
             What are build minutes?
           </p>
           <p>
-            Build minutes are the amount of time a build process takes to complete in minutes.
+            Build minutes is the amount of time a build process takes to complete in minutes. There is a monthly limit on the total number of build minutes per account. For example, the Individual plan has a limit of 500 build minutes per month.
           </p>
         </li>
 
@@ -206,10 +203,20 @@ title: Pricing Plans
             How are build minutes calculated on an account?
           </p>
           <p>
-            Free accounts have a limit of 500 build minutes a month. While the paid plans give you 1500 build minutes per user on the account. So if your account has 10 users; your account has 10 x 1500 build minutes = 15000 build minutes. If you need more build minutes on your account, add another user to the account.
+            The Individual plan has a limit of 500 build minutes a month. While the Team plan gives you 1500 build minutes per user on the account. So if your account has 10 users; it has a limit of 10 x 1500 build minutes = 15000 build minutes per month. If you need more build minutes on your account, simply add another user to the account.
           </p>
           <p>
             If you have custom requirements, feel free to <a href="mailto:{{ site.email }}">contact us</a>.
+          </p>
+        </li>
+
+        <li>
+          <span class="fa-li" ><i class="fa fa-chevron-right"></i></span>
+          <p>
+            What happens if I go over the build minutes limit?
+          </p>
+          <p>
+            We'll send you an email to let you know you are above the limit. Your account will still function normally, giving you a chance to upgrade your account. However, if you go significantly above the limit, you won't be able to trigger any new builds. But don't worry, it'll be back to normal once you upgrade your account or when the limit resets for the next month.
           </p>
         </li>
 

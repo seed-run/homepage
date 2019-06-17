@@ -820,7 +820,7 @@ main > .header {
   .announcement {
     $bkg-color: lighten(mix($brand-color, $grey-color-light, 10%), 20%);
 
-    margin: 0 auto $spacing-unit / 2;
+    margin: 0 auto;
     display: inline-block;
     padding: 4px 11px;
     border: 1px solid lighten($brand-color, 25%);

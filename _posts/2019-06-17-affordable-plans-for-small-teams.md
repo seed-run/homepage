@@ -11,7 +11,7 @@ Here are the main changes:
 1. Our plans now start at $30/month, as opposed to $95/month.
 2. The limit on our plans is changing from the number of builds to the build minutes used.
 
-We are also increasing the usage limits on our plans while reducing the cost per user. Here is a quick comparison of the our old and new paid plans:
+We are also increasing the usage limits on our plans while lowering the price per user. Here is a quick comparison of the our old and new paid plans:
 
 |                           | Old | New               |
 |---------------------------|---------------|--------------------|

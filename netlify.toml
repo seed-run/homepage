@@ -1,4 +1,4 @@
 [build]
   base    = ""
   publish = "_site/"
-  command = "./pre-build && jekyll build"
+  command = "jekyll build"

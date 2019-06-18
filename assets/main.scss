@@ -1369,9 +1369,9 @@ main > .features {
 // REVIEWS //
 /////////////
 main > .testimonials {
+  padding: $spacing-unit * 2 $spacing-unit / 2 + 5px $spacing-unit * 2 +7px;
   background-color: darken($brand-color, 5%);
   background-image: $diamond-pattern;
-  padding: $spacing-unit * 2 $spacing-unit / 2 + 5px;
   border-top: 2px solid $accent-color;
   color: $background-color;
 
@@ -1407,6 +1407,10 @@ main > .testimonials {
 
       &.bastian {
         margin-top: 12px;
+      }
+
+      &.shyft {
+        margin-top: 32px;
       }
 
       @include media-query($on-palm) {

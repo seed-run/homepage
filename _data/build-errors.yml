@@ -1,0 +1,8 @@
+toc:
+  - title: Function doesn't exist in this service
+    url: /docs/serverless-errors/function-doesnt-exist-in-this-service.html
+  - title: Unzipped size must be smaller than bytes
+    url: /docs/serverless-errors/unzipped-size-must-be-smaller-than-bytes.html
+  - title: Serverless version does not satisfy the frameworkVersion
+    url: /docs/serverless-errors/serverless-version-does-not-satisfy-the-frameworkversion.html
+

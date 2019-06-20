@@ -471,6 +471,11 @@
     font-size: 32px;
   }
 }
+.post-title-context {
+  margin-bottom: 0;
+  color: $tertiary-text-color;
+  font-size: 14px;
+}
 
 a.post-info {
   font-size: 14px;
@@ -521,7 +526,6 @@ span.post-info-separator {
 
 .post-closing {
   margin-top: 2 * $spacing-unit;
-  margin-bottom: $spacing-unit;
   text-align: center;
 
   hr {
@@ -550,6 +554,66 @@ span.post-info-separator {
   }
 }
 
+.post-cta {
+  margin: $spacing-unit / 2 0 $spacing-unit;
+  padding: $spacing-unit / 2;
+  background-color: lighten($divider-color , 2%);
+  border-radius: 3px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  @include media-query($on-palm) {
+    margin-top: $spacing-unit;
+    display: block;
+  }
+
+  & p {
+    margin-bottom: 0;
+    font-size: 16px;
+    color: $secondary-text-color;
+  }
+  & p a {
+    font-weight: 500;
+  }
+  & a.button {
+    $bkg: $accent-color;
+    $border: darken($bkg, 10%);
+
+    margin-left: 10px;
+    flex: 0 0 auto;
+    border-radius: 3px;
+    padding: 10px 17px 11px;
+    display: block;
+    font-size: 16px;
+    color: white;
+    border: 2px solid $border;
+    background-color: $bkg;
+
+    &:hover {
+      background-color: darken($bkg, 5%);
+    }
+
+    &:active {
+      border-color: darken($border, 15%);
+      background-color: darken($bkg, 15%);
+    }
+
+    @include media-query($on-palm) {
+      margin-left: 0;
+      margin-top: 10px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+  }
+  & a.button i.fa {
+    margin-left: 3px;
+    font-size: 14px;
+    opacity: 0.85;
+  }
+}
+
 .post-footer {
   @extend %clearfix;
   margin-top: 54px;
@@ -570,4 +634,32 @@ span.post-info-separator {
   .next {
     float: right;
   }
+}
+
+/**
+ * Docs Build Errors
+ */
+.page-content .docs-wrapper.build-errors header a.breadcrumb {
+  padding: 0 0 3px;
+  display: inline-block;
+}
+.page-content .docs-wrapper.build-errors header a.breadcrumb:after {
+  padding-left: 4px;
+  font-size: 16px;
+  color: $grey-color-light;
+  content: "/\00a0";
+}
+.page-content .docs-wrapper.build-errors h1.post-title {
+  font-size: 32px;
+}
+.page-content .docs-wrapper.build-errors blockquote {
+  padding: 5px $spacing-unit / 2 $spacing-unit / 2;
+  text-align: left;
+}
+.page-content .docs-wrapper.build-errors blockquote p:before,
+.page-content .docs-wrapper.build-errors blockquote p:after {
+  content: none;
+}
+.page-content .docs-wrapper.build-errors blockquote p {
+  font-family: $code-font-family;
 }

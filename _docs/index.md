@@ -34,45 +34,34 @@ Here you'll be asked to authorize Seed. Make sure to select the **Repositories**
 
 ![Authorize Seed on GitHub](/assets/docs/index/authorize-seed-on-github.png)
 
-Once authorized, you can select your repo. Seed will look for the `serverless.yml` file in your project root.
+Once authorized, you can select your repo. Seed will look for all the `serverless.yml` files in your repo.
 
 If you are unable to find your repo, it might be because Seed doesn't have the permissions to access your repo. You can [read about how to fix this here]({% link _docs/cannot-find-my-repo.md %}).
 
 ![Auto-detect serverless.yml for new app](/assets/docs/index/auto-detect-serverless-yml-for-new-app.png)
 
-If detected, you can select to add this service. And Seed will create your app with it.
+If detected, you can select to add a service. You can always add other services later.
 
 ![Confirm default service for new app](/assets/docs/index/confirm-default-service-for-new-app.png)
 
-Alternatively, you can add a different service by picking a different path.
+If the services could not be detected, you can add it manually.
 
 ![Pick different default service for new app](/assets/docs/index/pick-different-default-service-for-new-app.png)
 
-You can always add additional services later. Or continue (even if Seed is unable to detect a `serverless.yml`), by hitting **Do this later**.
+Next, Seed will create a **dev** and **prod** stage (or environment) for your app. Note that, you'll need to change the names to match the stage names you are using to deploy your app. This is important because Seed will deploy your app using the `serverless deploy --stage $STAGE_NAME` command. Here `$STAGE_NAME` is the name.
 
-![Continue without detecting service for new app](/assets/docs/index/continue-without-detecting-service-for-new-app.png)
+> Seed deploys to your environments using the stage name.
 
-Next, you'll be asked to configure the IAM user for your app.
+You also need to configure the stage with the AWS IAM credentials needed to deploy to it. By default, Seed will use the same credentials to deploy to production. You can change this if your production environment is in a different AWS account.
 
 ![Configure IAM user for a new app](/assets/docs/index/configure-iam-user-for-new-app.png)
 
-If you've added an app before, you have the option of configuring your new app with the settings of an existing app. Hit the **Inherit Settings** tab.
+If you've added an app before, you have the option of configuring your new app with the settings of an existing app. Hit the **Copy Settings** tab.
 
 Here you can select one of your existing apps.
 
 ![Select existing app settings for new app](/assets/docs/index/select-existing-app-settings-for-new-app.png)
 
-Seed will create your new app using the following from the selected app:
-
-- Stages
-- CI settings
-- IAM settings
-- Stage IAM settings
-- Stage notification settings
-- Stage environment variables
-
 > A personal app can only inherit the settings from another personal app. And the same applies to organization apps.
-
-This is useful when you are adding multiple apps and they all share similar settings. This way you won't have to configure all the settings for a new app by hand. Note that, you can still tweak the settings manually even if they have been inherited.
 
 Next, let's look at how to create an [AWS IAM User]({% link _docs/adding-your-iam-credentials.md %}).

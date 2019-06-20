@@ -95,3 +95,5 @@ toc:
     subfolderitems:
       - page: Cannot find my repo
         url: /docs/cannot-find-my-repo.html
+  - title: Common serverless errors
+    url: /docs/serverless-errors/index.html

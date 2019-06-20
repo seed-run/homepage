@@ -10,7 +10,11 @@ The IAM permissions that Seed requires is made up of:
 1. The permissions that Seed needs
 2. And the permissions Serverless Framework needs to deploy your app
 
-Start by reviewing the permissions that Seed needs.
+Seed can help you create an IAM user with the necessary credentials. Hit the **Help me create an IAM user** link.
+
+![Click the help me create an IAM user link screenshot](/assets/docs/iam/click-the-help-me-create-an-iam-user-link.png)
+
+Review the permissions that Seed needs.
 
 ![Review Seed IAM permissions screenshot](/assets/docs/iam/review-seed-iam-permissions.png)
 
@@ -22,9 +26,9 @@ Alternatively, you can read the [Customizing your IAM Policy]({% link _docs/cust
 
 Once you are done customizing the permissions, Seed will put the two above sets of permissions together. And will help you create an IAM user using CloudFormation.
 
-Hit the **Create with CloudFormation** button.
+Hit the **Create an IAM User using CloudFormation** button.
 
-![Click Create with CloudFormation screenshot](/assets/docs/iam/click-create-with-cloudformation.png)
+![Click Create an IAM user using CloudFormation screenshot](/assets/docs/iam/click-create-an-iam-user-using-cloudformation.png)
 
 This will redirect you to CloudFormation on your AWS Console.
 

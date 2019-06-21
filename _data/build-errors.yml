@@ -1,8 +1,28 @@
 toc:
+  - title: Resource already exist
+    url: /docs/serverless-errors/resource-already-exist.html
+  - title: Stack with id does not exist
+    url: /docs/serverless-errors/stack-with-id-does-not-exist.html
+  - title: Serverless plugin not found
+    url: /docs/serverless-errors/serverless-plugin-not-found.html
+  - title: Code storage limit exceeded
+    url: /docs/serverless-errors/code-storage-limit-exceeded.html
   - title: Function doesn't exist in this service
     url: /docs/serverless-errors/function-doesnt-exist-in-this-service.html
+  - title: A version for this Lambda function exists
+    url: /docs/serverless-errors/a-version-for-this-lambda-function-exists.html
   - title: Unzipped size must be smaller than bytes
     url: /docs/serverless-errors/unzipped-size-must-be-smaller-than-bytes.html
+  - title: Service files not changed. Skipping deployment.
+    url: /docs/serverless-errors/service-files-not-changed-skipping-deployment.html
+  - title: Export resource cannot be deleted as it is in use
+    url: /docs/serverless-errors/export-resource-cannot-be-deleted-as-it-is-in-use.html
+  - title: The serverless deployment bucket does not exist
+    url: /docs/serverless-errors/the-serverless-deployment-bucket-does-not-exist.html
   - title: Serverless version does not satisfy the frameworkVersion
     url: /docs/serverless-errors/serverless-version-does-not-satisfy-the-frameworkversion.html
+  - title: "Template format error: Number of resources is greater than maximum allowed"
+    url: /docs/serverless-errors/template-format-error-number-of-resources-is-greater-than-maximum-allowed.html
+  - title: CloudFormation cannot update a stack when a custom-named resource requires replacing
+    url: /docs/serverless-errors/cloudformation-cannot-update-a-stack-when-a-custom-named-resource-requires-replacing.html
 

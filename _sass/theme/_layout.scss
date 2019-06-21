@@ -663,3 +663,15 @@ span.post-info-separator {
 .page-content .docs-wrapper.build-errors blockquote p {
   font-family: $code-font-family;
 }
+.page-content .docs-wrapper ul.build-errors-list li {
+  margin-bottom: 5px;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+}
+.page-content .docs-wrapper ul.build-errors-list li i {
+  top: 6px;
+  opacity: 0.8;
+  font-size: 14px;
+}

@@ -12,7 +12,7 @@
   <rect x="0" y="0" width="1200" height="600" fill="url(#grad1)" />
   <text
     x="50%"
-    y="250"
+    y="270"
     fill="#FFFFFF"
     font-size="64"
     text-anchor="middle"

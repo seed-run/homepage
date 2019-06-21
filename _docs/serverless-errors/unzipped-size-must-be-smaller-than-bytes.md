@@ -2,7 +2,7 @@
 layout: build-errors
 title: Unzipped size must be smaller than xxxx bytes
 image: /assets/social-cards/common-errors.png
-description: An error occurred&#58; LambdaFunction - Unzipped size must be smaller than 262144000 bytes (Service&#58; AWSLambdaInternal; Status Code&#58; 400; Error Code&#58; InvalidParameterValueException; Request ID&#58; xxxx-xxxx-xxxx-xxxx).
+description: "An error occurred: LambdaFunction - Unzipped size must be smaller than 262144000 bytes (Service: AWSLambdaInternal; Status Code: 400; Error Code: InvalidParameterValueException; Request ID: xxxx-xxxx-xxxx-xxxx)."
 ---
 
 #### Error Message

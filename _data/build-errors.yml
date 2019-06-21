@@ -1,6 +1,6 @@
 toc:
-  - title: Resource already exist
-    url: /docs/serverless-errors/resource-already-exist.html
+  - title: Resource already exists
+    url: /docs/serverless-errors/resource-already-exists.html
   - title: Stack with id does not exist
     url: /docs/serverless-errors/stack-with-id-does-not-exist.html
   - title: Serverless plugin not found

@@ -19,6 +19,8 @@ toc:
     url: /docs/serverless-errors/export-resource-cannot-be-deleted-as-it-is-in-use.html
   - title: The serverless deployment bucket does not exist
     url: /docs/serverless-errors/the-serverless-deployment-bucket-does-not-exist.html
+  - title: The security token included in the request is invalid
+    url: /docs/serverless-errors/the-security-token-included-in-the-request-is-invalid.html
   - title: Serverless version does not satisfy the frameworkVersion
     url: /docs/serverless-errors/serverless-version-does-not-satisfy-the-frameworkversion.html
   - title: "Template format error: Number of resources is greater than maximum allowed"

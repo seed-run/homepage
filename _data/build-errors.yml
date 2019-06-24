@@ -1,30 +1,62 @@
 toc:
   - title: Resource already exists
     url: /docs/serverless-errors/resource-already-exists.html
+  - title: No export named found
+    url: /docs/serverless-errors/no-export-named-found.html
   - title: Stack with id does not exist
     url: /docs/serverless-errors/stack-with-id-does-not-exist.html
   - title: Serverless plugin not found
     url: /docs/serverless-errors/serverless-plugin-not-found.html
   - title: Code storage limit exceeded
     url: /docs/serverless-errors/code-storage-limit-exceeded.html
+  - title: The stack service name is not valid
+    url: /docs/serverless-errors/the-stack-service-name-is-not-valid.html
+  - title: "API: s3:CreateBucket Access Denied"
+    url: /docs/serverless-errors/api-s3-createbucket-access-denied.html
   - title: Function doesn't exist in this service
     url: /docs/serverless-errors/function-doesnt-exist-in-this-service.html
+  - title: Missing "handler" property in function
+    url: /docs/serverless-errors/missing-handler-property-in-function.html
+  - title: Missing required key 'Bucket' in params
+    url: /docs/serverless-errors/missing-required-key-Bucket-in-params.html
+  - title: Stack is in state and can not be updated
+    url: /docs/serverless-errors/stack-is-in-state-and-can-not-be-updated.html
   - title: A version for this Lambda function exists
     url: /docs/serverless-errors/a-version-for-this-lambda-function-exists.html
   - title: Unzipped size must be smaller than bytes
     url: /docs/serverless-errors/unzipped-size-must-be-smaller-than-bytes.html
+  - title: Export with name is already exported by stack
+    url: /docs/serverless-errors/export-with-name-is-already-exported-by-stack.html
   - title: Service files not changed. Skipping deployment.
     url: /docs/serverless-errors/service-files-not-changed-skipping-deployment.html
   - title: Export resource cannot be deleted as it is in use
     url: /docs/serverless-errors/export-resource-cannot-be-deleted-as-it-is-in-use.html
   - title: The serverless deployment bucket does not exist
     url: /docs/serverless-errors/the-serverless-deployment-bucket-does-not-exist.html
+  - title: iamRoleStatements should be an array of objects
+    url: /docs/serverless-errors/iamrolestatements-should-be-an-array-of-objects.html
   - title: The security token included in the request is invalid
     url: /docs/serverless-errors/the-security-token-included-in-the-request-is-invalid.html
+  - title: User is not authorized to perform action on resource
+    url: /docs/serverless-errors/user-is-not-authorized-to-perform-action-on-resource.html
+  - title: You have attempted to create more buckets than allowed
+    url: /docs/serverless-errors/you-have-attempted-to-create-more-buckets-than-allowed.html
   - title: Serverless version does not satisfy the frameworkVersion
     url: /docs/serverless-errors/serverless-version-does-not-satisfy-the-frameworkversion.html
+  - title: No matching handler found. Check your service definition.
+    url: /docs/serverless-errors/no-matching-handler-found-check-your-service-definition.html
+  - title: The AWS Access Key Id needs a subscription for the service
+    url: /docs/serverless-errors/the-aws-access-key-id-needs-a-subscription-for-the-service.html
+  - title: Trying to populate non string value into a string for variable
+    url: /docs/serverless-errors/trying-to-populate-non-string-value-into-a-string-for-variable.html
+  - title: Lambda was unable to configure your environment variables
+    url: /docs/serverless-errors/lambda-was-unable-to-configure-your-environment-variables.html
+  - title: IamRoleLambdaExecution - Resource must be in ARN format or
+    url: /docs/serverless-errors/iamrolelambdaexecution-resource-must-be-in-arn-format-or.html
   - title: "Template format error: Number of resources is greater than maximum allowed"
     url: /docs/serverless-errors/template-format-error-number-of-resources-is-greater-than-maximum-allowed.html
   - title: CloudFormation cannot update a stack when a custom-named resource requires replacing
     url: /docs/serverless-errors/cloudformation-cannot-update-a-stack-when-a-custom-named-resource-requires-replacing.html
+  - title: Enabling API Gateway X-Ray Tracing for existing deployments requires a remove and re-deploy of your API Gateway
+    url: /docs/serverless-errors/enabling-api-gateway-x-ray-tracing-for-existing-deployments-requires-a-remove-and-re-deploy-of-your-api-Gateway.html
 

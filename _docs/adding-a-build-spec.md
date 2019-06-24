@@ -51,6 +51,7 @@ Seed also has a couple of build environment variables that you can use to custom
 - `$SEED_APP_NAME`: The app name.
 - `$SEED_SERVICE_NAME`: The name of the service.
 - `$SEED_BUILD_ID`: The build id.
+- `$SEED_BRANCH`: The Git branch used in the build process. Does not apply to promotions and rollbacks.
 
 - Secrets: All your [secrets in the Seed console]({% link _docs/storing-secrets.md %}) are also made available during the build process. For example, a secret environment variable called **TEST_VAR** would be available as `$TEST_VAR` in the build process.
 

@@ -1,6 +1,6 @@
 ---
 name: Common Serverless Errors
-about: Submit a new Serverless error that should be added to the list.
+about: Submit a new Serverless error that should be added to the list
 title: "[SLS ERR]"
 labels: enhancement
 assignees: jayair

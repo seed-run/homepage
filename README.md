@@ -46,7 +46,7 @@ Deploy status can be viewed on the Netlify dashboard.
 
 https://app.netlify.com/sites/seed
 
-To use `jekyll.environment` in template, set `JEKYLL_ENV` to `production` as environment varialbe in the Netlify dashboard.
+To use `jekyll.environment` in template, set `JEKYLL_ENV` to `production` as environment variable in the Netlify dashboard.
 
 ### Older Versions
 

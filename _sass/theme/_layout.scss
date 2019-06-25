@@ -663,6 +663,33 @@ span.post-info-separator {
 .page-content .docs-wrapper.build-errors blockquote p {
   font-family: $code-font-family;
 }
+
+// Header Controls
+.page-content .docs-wrapper div.build-errors-header-controls {
+  margin-bottom: $spacing-unit - 5px;
+  padding: 5px;
+  display: flex;
+  background-color: $divider-color;
+  border-radius: 6px;
+}
+.page-content .docs-wrapper div.build-errors-header-controls .panel {
+  flex: 1 1 auto;
+  padding: 10px;
+  border-radius: 3px 0 0 3px;
+  background-color: $divider-color-light;
+  text-align: center;
+  font-size: 20px;
+  color: $tertiary-text-color;
+}
+.page-content .docs-wrapper div.build-errors-header-controls .panel:last-child {
+  margin-left: 5px;
+  border-radius: 0 3px 3px 0;
+}
+.page-content .docs-wrapper div.build-errors-header-controls .panel i.fa {
+  margin-right: 5px;
+}
+
+// Errors List
 .page-content .docs-wrapper ul.build-errors-list li {
   margin-bottom: 5px;
 

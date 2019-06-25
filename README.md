@@ -1,5 +1,7 @@
 # SEED Homepage
 
+[![Netlify Status](https://api.netlify.com/api/v1/badges/446816a0-b43c-45a5-8531-a36ade5840b1/deploy-status)](https://app.netlify.com/sites/seed/deploys)
+
 ### Local Usage
 
 To use this repo locally, start by running.

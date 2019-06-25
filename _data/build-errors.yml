@@ -55,10 +55,13 @@ toc:
     url: /docs/serverless-errors/lambda-was-unable-to-configure-your-environment-variables.html
   - title: IamRoleLambdaExecution - Resource must be in ARN format or
     url: /docs/serverless-errors/iamrolelambdaexecution-resource-must-be-in-arn-format-or.html
+  - title: Cannot perform more than one GSI creation or deletion in a single update
+    url: /docs/serverless-errors/cannot-perform-more-than-one-gsi-creation-or-deletion-in-a-single-update.html
   - title: "Template format error: Number of resources is greater than maximum allowed"
     url: /docs/serverless-errors/template-format-error-number-of-resources-is-greater-than-maximum-allowed.html
   - title: CloudFormation cannot update a stack when a custom-named resource requires replacing
     url: /docs/serverless-errors/cloudformation-cannot-update-a-stack-when-a-custom-named-resource-requires-replacing.html
+  - title: Property AttributeDefinitions is inconsistent with the KeySchema of the table and the secondary indexes
+    url: /docs/serverless-errors/property-attributedefinitions-is-inconsistent-with-the-keyschema-of-the-table-and-the-secondary-indexes.html
   - title: Enabling API Gateway X-Ray Tracing for existing deployments requires a remove and re-deploy of your API Gateway
     url: /docs/serverless-errors/enabling-api-gateway-x-ray-tracing-for-existing-deployments-requires-a-remove-and-re-deploy-of-your-api-Gateway.html
-

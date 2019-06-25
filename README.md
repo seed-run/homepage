@@ -1,4 +1,4 @@
-# SEED Lander
+# SEED Homepage
 
 ### Local Usage
 

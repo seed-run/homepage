@@ -1,11 +1,11 @@
 ---
-layout: docs
+layout: build-errors
 title: Common Serverless Errors
 description: Common Serverless Errors is a collection of the most common Serverless Framework errors developers run into on AWS. Also listed, is an explanation of why the error occurred and what you can do to fix it.
 image: /assets/social-cards/common-errors.png
 ---
 
-<div class="build-errors-header-controls">
+<div class="build-error-header-controls">
   <div class="panel">
     <a href="mailto:?&cc=&bcc=&subject=Debug Serverless Errors&body=Check out this great resource for debugging Serverless errors on AWS - https://seed.run/docs/serverless-errors/">
       <i class="fa fa-envelope" aria-hidden="true"></i>
@@ -31,7 +31,7 @@ image: /assets/social-cards/common-errors.png
 
 We compiled a list of the most common Serverless Framework errors on AWS and how to fix them. Available as [an open-source GitHub repo]({{ site.github_repo }}{{ site.github_repo_errors_path }}) that you can contribute new issues to or submit a PR with an edit.
 
-<ul class="build-errors-list fa-ul">
+<ul class="build-error-list fa-ul">
   {% for item in site.data.build-errors.toc %}
     <li>
       <i class="fa-li fa fa-file-text-o"></i>

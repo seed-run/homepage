@@ -1,25 +1,21 @@
 ---
 layout: default
 ---
-<div class="docs-wrapper build-errors">
+<article class="post build-error">
 
-  <div class="sidebar">
-    {% include docs-sidebar.html %}
+  <header class="post-header">
+    {% if page.url != "/docs/serverless-errors/index.html" %}
+      <a class="breadcrumb" href="{% link _docs/serverless-errors/index.md %}">
+        Common Serverless Errors
+      </a>
+    {% endif %}
+    <h1 class="post-title">{{ page.title | escape }}</h1>
+  </header>
+
+  <div class="post-content">
+    {{ content }}
   </div>
 
-  <article class="post">
+  {% include docs-closing.html %}
 
-    <header class="post-header">
-      <a class="breadcrumb" href="{% link _docs/serverless-errors/index.md %}">Common Serverless Errors</a>
-      <h1 class="post-title">{{ page.title | escape }}</h1>
-    </header>
-
-    <div class="post-content">
-      {{ content }}
-    </div>
-
-    {% include docs-closing.html %}
-
-  </article>
-
-</div>
+</article>

@@ -1,14 +1,20 @@
 toc:
+  - title: Profile does not exist
+    url: /docs/serverless-errors/profile-does-not-exist.html
   - title: Resource already exists
     url: /docs/serverless-errors/resource-already-exists.html
   - title: No export named found
     url: /docs/serverless-errors/no-export-named-found.html
+  - title: Property cannot be empty
+    url: /docs/serverless-errors/property-cannot-be-empty.html
   - title: Stack with id does not exist
     url: /docs/serverless-errors/stack-with-id-does-not-exist.html
   - title: Serverless plugin not found
     url: /docs/serverless-errors/serverless-plugin-not-found.html
   - title: Code storage limit exceeded
     url: /docs/serverless-errors/code-storage-limit-exceeded.html
+  - title: No integration defined for method
+    url: /docs/serverless-errors/no-integration-defined-for-method.html
   - title: The stack service name is not valid
     url: /docs/serverless-errors/the-stack-service-name-is-not-valid.html
   - title: Encountered unsupported property
@@ -20,11 +26,15 @@ toc:
   - title: Missing "handler" property in function
     url: /docs/serverless-errors/missing-handler-property-in-function.html
   - title: Missing required key 'Bucket' in params
-    url: /docs/serverless-errors/missing-required-key-Bucket-in-params.html
+    url: /docs/serverless-errors/missing-required-key-bucket-in-params.html
   - title: Stack is in state and can not be updated
     url: /docs/serverless-errors/stack-is-in-state-and-can-not-be-updated.html
   - title: A version for this Lambda function exists
     url: /docs/serverless-errors/a-version-for-this-lambda-function-exists.html
+  - title: Missing required key 'restApiId' in params
+    url: /docs/serverless-errors/missing-required-bkey-restapiid-in-params.html
+  - title: Invalid characters in environment variable
+    url: /docs/serverless-errors/invalid-characters-in-environment-variable.html
   - title: Unzipped size must be smaller than bytes
     url: /docs/serverless-errors/unzipped-size-must-be-smaller-than-bytes.html
   - title: Export with name is already exported by stack
@@ -61,7 +71,11 @@ toc:
     url: /docs/serverless-errors/template-format-error-number-of-resources-is-greater-than-maximum-allowed.html
   - title: CloudFormation cannot update a stack when a custom-named resource requires replacing
     url: /docs/serverless-errors/cloudformation-cannot-update-a-stack-when-a-custom-named-resource-requires-replacing.html
+  - title: "Template format error: Unresolved resource dependencies in the Resources block of the template"
+    url: /docs/serverless-errors/template-format-error-unresolved-resource-dependencies-in-the-resources-block-of-the-template.html
+  - title: "The requested resource exceeds the maximum number allowed. (Service: AmazonCloudWatchEvents)"
+    url: /docs/serverless-errors/the-requested-resource-exceeds-the-maximum-number-allowed-service-amazoncloudwatchevents.html
   - title: Property AttributeDefinitions is inconsistent with the KeySchema of the table and the secondary indexes
     url: /docs/serverless-errors/property-attributedefinitions-is-inconsistent-with-the-keyschema-of-the-table-and-the-secondary-indexes.html
   - title: Enabling API Gateway X-Ray Tracing for existing deployments requires a remove and re-deploy of your API Gateway
-    url: /docs/serverless-errors/enabling-api-gateway-x-ray-tracing-for-existing-deployments-requires-a-remove-and-re-deploy-of-your-api-Gateway.html
+    url: /docs/serverless-errors/enabling-api-gateway-x-ray-tracing-for-existing-deployments-requires-a-remove-and-re-deploy-of-your-api-gateway.html

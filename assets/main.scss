@@ -149,27 +149,6 @@ $on-laptop:                 800px;
 @import "about";
 @import "pricing";
 
-/**
- * Links
- */
-a {
-  color: $link-color;
-  transition: .2s;
-}
-a:visited {
-  color: lighten($link-color, 15%);
-}
-a:hover {
-  color: #330033;
-}
-a:active {
-  color: darken($link-color, 5%);
-}
-
-::selection {
-  background: lighten($accent-color, 20%);
-}
-
 @mixin hero-graphic {
   $width: 785px;
   $height: 460px;

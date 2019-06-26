@@ -18,18 +18,7 @@ layout: default
       {{ content }}
     </div>
 
-    <div class="post-closing">
-      <hr />
-      <p>If you have any questions or feedback feel free to <a href="mailto:{{ site.email }}">contact us via email</a>.</p>
-    </div>
-
-    <div class="post-cta">
-      <p>If you are having troubles configuring your CI/CD pipeline for Serverless Framework; let <a href="/">Seed</a> do it for you!</p>
-      <a class="button" href="/">
-        Learn More
-        <i class="fa fa-chevron-right" aria-hidden="true"></i>
-      </a>
-    </div>
+    {% include docs-closing.html %}
 
   </article>
 

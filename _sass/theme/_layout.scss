@@ -525,10 +525,13 @@ span.post-info-separator {
 }
 
 .post-closing {
-  margin-top: 2 * $spacing-unit;
+  margin-top: 2.5 * $spacing-unit;
   text-align: center;
+  padding-bottom: 10px;
+  border-bottom: 1px solid $divider-color;
 
   hr {
+    margin-bottom: 1.5 * $spacing-unit;
     font-size: 28px;
     letter-spacing: .6em;
     display: block;
@@ -545,11 +548,42 @@ span.post-info-separator {
     }
   }
 
-  p {
-    font-size: 14px;
-    color: $secondary-text-color;
-    a {
-      font-weight: 500;
+  @include media-query($on-palm) {
+    margin-top: 2 * $spacing-unit;
+    hr {
+      margin-bottom: $spacing-unit;
+    }
+  }
+
+  .controls {
+    padding-top: 10px;
+    border-top: 1px solid $divider-color;
+    display: flex;
+    justify-content: space-between;
+
+    p {
+      margin-bottom: 0;
+      padding: 0 2px;
+      font-size: 16px;
+      color: $secondary-text-color;
+      a {
+        font-weight: 500;
+      }
+      i.fa {
+        padding-left: 2px;
+      }
+
+      &:first-child {
+        order: 2;
+      }
+    }
+
+    @include media-query($on-palm) {
+      display: block;
+
+      p:last-child {
+        margin-top: 5px;
+      }
     }
   }
 }
@@ -564,13 +598,13 @@ span.post-info-separator {
   justify-content: space-between;
 
   @include media-query($on-palm) {
-    margin-top: $spacing-unit;
+    margin-top: $spacing-unit / 2;
     display: block;
   }
 
   & p {
     margin-bottom: 0;
-    font-size: 16px;
+    font-size: 15px;
     color: $secondary-text-color;
   }
   & p a {
@@ -673,20 +707,48 @@ span.post-info-separator {
   border-radius: 6px;
 }
 .page-content .docs-wrapper div.build-errors-header-controls .panel {
+  margin-right: 5px;
   flex: 1 1 auto;
-  padding: 10px;
+  padding: 0 10px;
   border-radius: 3px 0 0 3px;
   background-color: $divider-color-light;
   text-align: center;
-  font-size: 20px;
+  font-size: 16px;
   color: $tertiary-text-color;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.page-content .docs-wrapper div.build-errors-header-controls .panel:nth-child(2) {
+  border-radius: 0;
 }
 .page-content .docs-wrapper div.build-errors-header-controls .panel:last-child {
-  margin-left: 5px;
+  margin-right: 0;
   border-radius: 0 3px 3px 0;
 }
+.page-content .docs-wrapper div.build-errors-header-controls .panel a {
+  padding: 0 5px;
+  display: block;
+  height: 44px;
+
+  @include media-query($on-palm) {
+    padding: 0 7px;
+  }
+}
 .page-content .docs-wrapper div.build-errors-header-controls .panel i.fa {
-  margin-right: 5px;
+  font-size: 22px;
+  line-height: 44px;
+}
+.page-content .docs-wrapper div.build-errors-header-controls .panel i.fa-envelope {
+  font-size: 20px;
+}
+.page-content .docs-wrapper div.build-errors-header-controls .panel span {
+  padding-left: 5px;
+  vertical-align: 2px;
+
+  @include media-query($on-palm) {
+    display: none;
+  }
 }
 
 // Errors List

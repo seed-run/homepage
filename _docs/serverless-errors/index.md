@@ -7,13 +7,19 @@ image: /assets/social-cards/common-errors.png
 
 <div class="build-errors-header-controls">
   <div class="panel">
-    <a target="_blank" href="https://twitter.com/intent/tweet?url=https%3A%2F%2Fseed.run%2Fdocs%2Fserverless-errors%2F&via=SEED_run&text=Check%20out%20this%20great%20resource%20for%20debugging%20Serverless%20errors%20on%20AWS">
-      <i class="fa fa-twitter" aria-hidden="true"></i>
-    </a>
     <a href="mailto:?&cc=&bcc=&subject=Debug Serverless Errors&body=Check out this great resource for debugging Serverless errors on AWS - https://seed.run/docs/serverless-errors/">
       <i class="fa fa-envelope" aria-hidden="true"></i>
     </a>
-    <span>Share</span>
+    <a target="_blank" href="https://twitter.com/intent/tweet?url=https%3A%2F%2Fseed.run%2Fdocs%2Fserverless-errors%2F&via=SEED_run&text=Check%20out%20this%20great%20resource%20for%20debugging%20Serverless%20errors%20on%20AWS">
+      <i class="fa fa-twitter" aria-hidden="true"></i>
+      <span>Share</span>
+    </a>
+  </div>
+  <div class="panel">
+    <a href="javascript:alert('Please bookmark this page in your browser')">
+      <i class="fa fa-bookmark" aria-hidden="true"></i>
+      <span>Bookmark</span>
+    </a>
   </div>
   <div class="panel">
     <a target="_blank" href="{{ site.github_repo }}/issues/new?assignees=jayair&labels=enhancement&template=common-serverless-errors.md&title=%5BSLS+ERR%5D">
@@ -36,7 +42,7 @@ We compiled a list of the most common Serverless Framework errors on AWS and how
 
 ---
 
-#### Motivation
+#### About
 
 While working on your [Serverless](https://serverless.com) app on AWS, you might notice that some of the errors can be really hard to debug. It can either be an obscure AWS error or it might just have a misleading error message.
 

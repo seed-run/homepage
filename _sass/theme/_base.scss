@@ -92,21 +92,27 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 
-
 /**
  * Links
  */
 a {
-  color: $brand-color;
+  color: $link-color;
+  transition: .2s;
   text-decoration: none;
 
   &:visited {
-    color: darken($brand-color, 15%);
+    color: lighten($link-color, 8%);
   }
-
   &:hover {
-    color: $text-color;
+    color: #330033;
   }
+  &:active {
+    color: darken($link-color, 5%);
+  }
+}
+
+::selection {
+  background: lighten($accent-color, 20%);
 }
 
 %a-secondary {

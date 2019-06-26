@@ -27,8 +27,11 @@ logo: /assets/og-image.png
 console_url: "https://console.seed.run"
 signup: "/signup"
 request_demo: "/request-demo"
+
+# GitHub
 github_repo: "https://github.com/seed-run/homepage"
 github_repo_errors_path: "/tree/master/_docs/serverless-errors"
+github_edit_prefix: "/edit/master/"
 
 newsletter_signup_form: "http://eepurl.com/c1gHff"
 twitter: "https://twitter.com/SEED_run"

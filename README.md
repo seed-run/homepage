@@ -1,6 +1,13 @@
 # SEED Homepage
 
 
+### Contributing
+
+If you'd like to contribute to our compilation of [**Common Serverless Errors**](https://seed.run/docs/serverless-errors/), [submit a new issue](https://github.com/seed-run/homepage/issues/new?assignees=jayair&labels=enhancement&template=common-serverless-errors.md&title=%5BSLS+ERR%5D) and fill out the template.
+
+Or if you'd like to edit a specific doc, just submit a PR!
+
+
 ### Local Usage
 
 To use this repo locally, start by running.

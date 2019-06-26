@@ -32,7 +32,7 @@ toc:
   - title: A version for this Lambda function exists
     url: /docs/serverless-errors/a-version-for-this-lambda-function-exists.html
   - title: Missing required key 'restApiId' in params
-    url: /docs/serverless-errors/missing-required-bkey-restapiid-in-params.html
+    url: /docs/serverless-errors/missing-required-key-restapiid-in-params.html
   - title: Invalid characters in environment variable
     url: /docs/serverless-errors/invalid-characters-in-environment-variable.html
   - title: Unzipped size must be smaller than bytes

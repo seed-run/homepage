@@ -5,6 +5,8 @@ description: Common Serverless Errors is a collection of the most common Serverl
 image: /assets/social-cards/common-errors.png
 ---
 
+Common Serverless Errors is a compilation of some of the most common Serverless Framework AWS errors and how to fix them. Available as [an open source GitHub repo]({{ site.github_repo }}{{ site.github_repo_errors_path }}), edits and contributions are welcome!
+
 <div class="build-error-header-controls">
   <div class="panel">
     <a href="mailto:?&cc=&bcc=&subject=Debug Serverless Errors&body=Check out this great resource for debugging Serverless errors on AWS - https://seed.run/docs/serverless-errors/">
@@ -29,8 +31,6 @@ image: /assets/social-cards/common-errors.png
   </div>
 </div>
 
-We compiled a list of the most common Serverless Framework errors on AWS and how to fix them. Available as [an open-source GitHub repo]({{ site.github_repo }}{{ site.github_repo_errors_path }}) that you can contribute new issues to or submit a PR with an edit.
-
 <ul class="build-error-list fa-ul">
   {% for item in site.data.build-errors.toc %}
     <li>
@@ -44,6 +44,6 @@ We compiled a list of the most common Serverless Framework errors on AWS and how
 
 #### About
 
-While working on your [Serverless](https://serverless.com) app on AWS, you might notice that some of the errors can be really hard to debug. It can either be an obscure AWS error or it might just have a misleading error message.
+While working on your Serverless app on AWS, you might notice that some of the errors can be really hard to debug. It can either be an obscure AWS error or it might just have a misleading error message.
 
-At [Seed](/), we've had a chance to help a lot of our users work through some of these issues. We decided to catalogue the errors and their fixes. We think this will be useful for both future reference and something the Serverless community can use.
+At [Seed](/), we've had a chance to help a lot of our users work through some of these issues. We decided to catalogue the errors and their fixes. We think this will be useful for future reference and something the Serverless community can use.

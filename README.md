@@ -1,4 +1,5 @@
-# SEED Lander
+# SEED Homepage
+
 
 ### Local Usage
 
@@ -33,10 +34,15 @@ $ bundle exec jekyll serve --incremental --livereload
 The build script is in `netlify.toml` and it runs the following:
 
 ``` sh
-./pre-build && jekyll build
+$ jekyll build
 ```
 
-Where `pre-build` is a script to convert SVGs in the `assets/blog/` dir to PNGs.
+You can also convert SVG social cards to PNGs with:
+
+``` sh
+$ ./gen-social-cards
+```
+
 
 ### Deploy
 

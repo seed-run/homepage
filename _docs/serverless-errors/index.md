@@ -1,7 +1,7 @@
 ---
 layout: build-errors
 title: Common Serverless Errors
-description: Common Serverless Errors is a collection of the most common Serverless Framework errors developers run into on AWS. Also listed, is an explanation of why the error occurred and what you can do to fix it.
+description: Common Serverless Errors is a compilation of the most common Serverless Framework errors developers run into on AWS. Also listed, is an explanation of why the error occurred and what you can do to fix it.
 image: /assets/social-cards/common-errors.png
 ---
 

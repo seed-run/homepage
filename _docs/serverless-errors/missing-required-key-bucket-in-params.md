@@ -22,13 +22,13 @@ There are two common reasons for the S3 bucket failing to create:
 The two above failures have two error messages that look like:
 
 ```
-You have attempted to create more buckets than allowed.
+s3:CreateBucket Access Denied.
 ```
 
 or
 
 ```
-s3:CreateBucket Access Denied.
+You have attempted to create more buckets than allowed.
 ```
 
 Check your first failed deployment for these error messages.

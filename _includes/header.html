@@ -1,8 +1,4 @@
-{% if page.url == "/" %}
-<header class="site-header lander" role="banner">
-{% else %}
-<header class="site-header page" role="banner">
-{% endif %}
+<header class="site-header {% if page.url == "/" %}lander{% else %}page{% endif %}" role="banner">
 
   <div class="wrapper">
 

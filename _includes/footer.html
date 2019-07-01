@@ -60,14 +60,25 @@
   };
 </script>
 {% if page.url contains "/docs" %}
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.0.0/jquery.min.js"></script>
 <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.js"></script> 
 <script type="text/javascript">
-  // DocSearch
+  /** Start sidebar ToC **/
+  $('#docs-sidebar ul:has(li.active)').addClass('open').prev().addClass('open');
+
+  $('#docs-sidebar p.title a').click(function(e) {
+    e.preventDefault();
+    $(this).parent().toggleClass('open').next().toggleClass('open');
+  });
+  /** End sidebar ToC **/
+
+  /** Start of DocSearch **/
   docsearch({ 
     apiKey: '7d8f2220f594c54d84e8932490788f6b', 
     indexName: 'seed', 
     inputSelector: '#search-input', 
   }); 
+  /** End of DocSearch **/
 </script> 
 {% endif %}
 <script src="//instant.page/1.1.0" type="module" integrity="sha384-EwBObn5QAxP8f09iemwAJljc+sU+eUXeL9vSBw1eNmVarwhKk2F9vBEpaN9rsrtp"></script>

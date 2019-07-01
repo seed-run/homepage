@@ -112,6 +112,9 @@
           background-color: $divider-color;
           border-color: transparent;
         }
+        &:visited {
+          color: $link-color;
+        }
         i.fa-caret-up {
           display: none;
         }

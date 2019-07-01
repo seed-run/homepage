@@ -1,27 +1,33 @@
-/**
- * Site header for the lander
- */
-.site-header.lander {
+@mixin header {
   @extend %clearfix;
-  padding: $spacing-unit / 2 0 $spacing-unit;
 
   .site-header-col-1 {
     float: left;
+    display: flex;
+    align-items: center;
 
-    a {
+    a.logo {
       font-family: $base-font-family;
       font-style: italic;
       font-weight: 700;
-      line-height: 38px;
+      line-height: 40px;
       font-size: 24px;
       color: $brand-color;
+    }
+    a.button {
+      display: none;
+    }
+
+    section.search {
+      margin-left: $spacing-unit / 2;
+      @extend %search;
     }
   }
 
   .site-header-col-2 {
     float: right;
 
-    a {
+    a.links {
       font-family: $label-font-family;
       border-radius: 3px;
       padding: 10px 17px 11px;
@@ -67,97 +73,205 @@
       }
     }
   }
+}
+
+@mixin header-mobile {
+  padding: 0;
+
+  .wrapper {
+    padding: 0;
+  }
+  .site-header-col-1,
+  .site-header-col-2 {
+    float: none;
+    text-align: center;
+  }
+  .site-header-col-2 {
+    display: none;
+  }
+  .site-header-col-1 {
+    display: block;
+
+    span.menu-header {
+      display: flex;
+      padding: $spacing-unit / 2;
+      justify-content: space-between;
+      align-items: center;
+
+      a.logo {
+        line-height: 1;
+      }
+
+      a.button {
+        padding: 0 10px;
+        border: 1px solid $divider-color;
+        border-radius: 3px;
+        display: block;
+
+        &:hover,
+        &:active {
+          background-color: $divider-color;
+          border-color: transparent;
+        }
+        i.fa-caret-up {
+          display: none;
+        }
+      }
+    }
+
+    section.search {
+      margin: 0;
+      display: none;
+    }
+  }
+
+  &.expanded {
+    .site-header-col-1 {
+      span.menu-header {
+        border-bottom: 1px solid $divider-color;
+
+        a.button {
+          i.fa-caret-down {
+            display: none;
+          }
+          i.fa-caret-up {
+            display: inline-block;
+          }
+        }
+      }
+      section.search {
+        display: inline-block;
+      }
+    }
+    .site-header-col-2 {
+      padding-bottom: 7px;
+      display: flex;
+      flex-direction: column;
+      align-items: stretch;
+      text-align: left;
+      background-color: $divider-color-light;
+
+      a.links {
+        order: 3;
+        padding-top: $spacing-unit / 2;
+        padding-bottom: $spacing-unit / 2;
+        font-size: 16px;
+      }
+
+      a.login,
+      a.signup {
+        margin: 0 $spacing-unit / 2 10px;
+        font-size: 14px;
+        order: 2;
+        align-self: flex-start;
+        padding-top: 12px;
+        padding-bottom: 12px;
+        display: inline-block;
+
+        &.signup {
+          order: 1;
+          margin-top: $spacing-unit / 2;
+          margin-bottom: $spacing-unit / 2;
+        }
+      }
+    }
+  }
+}
+
+%search {
+  position: relative;
+  font-size: 15px;
+  display: inline-block;
+
+  label {
+    position: absolute;
+    left: $spacing-unit / 2;
+    top: 50%;
+    margin-top: -12px;
+    z-index: 10;
+    opacity: 0.4;
+    pointer-events: none;
+  }
+
+  input {
+    padding: 3px 10px 3px 36px;
+    height: 40px;
+    width: 236px;
+    color: $secondary-text-color;
+    background-color: transparent;
+    border: {
+      width: 0 0 0 1px;
+      style: solid;
+      color: darken($divider-color, 2%);
+    }
+    transition: border-color ease-in-out .15s, background-color ease-in-out .15s;
+    font-size: 16px;
+    line-height: 1.3333333;
+    box-sizing: border-box;
+
+    &:focus {
+      outline: 0;
+      color: $text-color;
+      border-radius: 4px;
+      border: 1px solid lighten($brand-color, 5%);
+    }
+  }
 
   @include media-query($on-palm) {
-    .wrapper {
-      padding: 0;
+    width: 100%;
+    input {
+      width: 100%;
+      height: 44px;
+      padding-top: 5px;
+      padding-bottom: 5px;
+      border-width: 0 0 1px;
+      border-color: $divider-color;
+      background-color: $divider-color-light;
+
+      &:focus {
+        border-radius: 0;
+        border-width: 0 0 1px;
+      }
     }
-    .site-header-col-1,
-    .site-header-col-2 {
-      float: none;
-      text-align: center;
+    .algolia-autocomplete .ds-dropdown-menu {
+      min-width: 300px;
     }
   }
 }
 
 /**
- * Site header for pages
+ * Site header for the lander
  */
-.site-header.page {
-  @extend %clearfix;
-  padding: $spacing-unit / 2 0 $spacing-unit / 2;
-  margin-bottom: $spacing-unit / 2;
-  border-bottom: 1px solid $grey-color-light;
+.site-header.lander {
+  padding: $spacing-unit / 2 0 $spacing-unit;
 
-  .site-header-col-1 {
-    float: left;
-
-    a {
-      font-family: $base-font-family;
-      font-style: italic;
-      font-weight: 700;
-      line-height: 38px;
-      font-size: 24px;
-      color: $brand-color;
-    }
-  }
+  @include header;
 
   .site-header-col-2 {
-    float: right;
-
-    a {
-      font-family: $label-font-family;
-      border-radius: 3px;
-      padding: 10px 17px 11px;
-      display: inline-block;
-      font-size: 14px;
-      line-height: 1;
-    }
-
     a.signup {
-      $bkg: $accent-color;
-      $border: darken($bkg, 10%);
-
-      color: white;
-      margin: 0 $spacing-unit / 2 0 0;
-      border: 2px solid $border;
-      background-color: $bkg;
-
-      &:hover {
-        background-color: darken($bkg, 5%);
-      }
-
-      &:active {
-        border-color: darken($border, 15%);
-        background-color: darken($bkg, 15%);
-      }
-    }
-
-    a.login {
-      $bkg: lighten($grey-color-light, 15%);
-      $border: darken($bkg, 10%);
-
-      color: $secondary-text-color;
-      border: 2px solid $border;
-      background-color: $bkg;
-
-      &:hover {
-        background-color: darken($bkg, 3%);
-      }
-
-      &:active {
-        border-color: darken($border, 5%);
-        background-color: darken($bkg, 5%);
-      }
+      display: none;
     }
   }
 
   @include media-query($on-palm) {
-    .site-header-col-1,
-    .site-header-col-2 {
-      float: none;
-      text-align: center;
-    }
+    @include header-mobile;
+  }
+}
+
+
+
+/**
+ * Site header for pages
+ */
+.site-header.page {
+  padding: $spacing-unit / 2 0 $spacing-unit / 2;
+  margin-bottom: $spacing-unit / 2;
+  border-bottom: 1px solid $grey-color-light;
+
+  @include header;
+
+  @include media-query($on-palm) {
+    @include header-mobile;
   }
 }
 

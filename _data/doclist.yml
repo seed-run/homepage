@@ -47,9 +47,9 @@ toc:
         url: /docs/integrating-with-jfrog.html
       - page: Deleting resources
         url: /docs/deleting-resources.html
-  - title: Working with mono-repo apps
+  - title: Working with monorepo apps
     subfolderitems:
-      - page: Mono-repo apps in Seed
+      - page: Monorepo apps in Seed
         url: /docs/mono-repo-apps-in-seed.html
       - page: Configuring deploy phases
         url: /docs/configuring-deploy-phases.html

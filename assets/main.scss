@@ -794,10 +794,6 @@ main > .header {
   background-image: linear-gradient(to bottom, $background-color 0%, rgba(255, 255, 255, 0) 90%, rgba(255, 255, 255, 0) 100%), $rain-pattern;
   text-align: center;
 
-  @include media-query($on-palm) {
-    padding: 0 $spacing-unit / 2 $spacing-unit;
-  }
-
   .announcement {
     $bkg-color: lighten(mix($brand-color, $grey-color-light, 10%), 20%);
 
@@ -814,6 +810,9 @@ main > .header {
 
     @include media-query($on-palm) {
       display: block;
+      padding: 5px $spacing-unit / 2;
+      border-width: 1px 0;
+      border-radius: 0;
     }
 
     .label {
@@ -842,6 +841,7 @@ main > .header {
 
     @include media-query($on-palm) {
       overflow: initial;
+      padding: 0 $spacing-unit / 2 $spacing-unit;
     }
 
     .hero {

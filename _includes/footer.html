@@ -52,4 +52,21 @@
 <script type="text/javascript" id="hs-script-loader" async defer src="//js.hs-scripts.com/4154594.js"></script>
 <!-- End of HubSpot Embed Code -->
 {% endif %}
+<script type="text/javascript">
+  // Mobile Menu
+  document.getElementById("mobile-menu-button").onclick = function() {
+    document.getElementsByClassName("site-header")[0].classList.toggle("expanded");
+  };
+</script>
+{% if page.url contains "/docs" %}
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.js"></script> 
+<script type="text/javascript">
+  // DocSearch
+  docsearch({ 
+    apiKey: '7d8f2220f594c54d84e8932490788f6b', 
+    indexName: 'seed', 
+    inputSelector: '#search-input', 
+  }); 
+</script> 
+{% endif %}
 <script src="//instant.page/1.1.0" type="module" integrity="sha384-EwBObn5QAxP8f09iemwAJljc+sU+eUXeL9vSBw1eNmVarwhKk2F9vBEpaN9rsrtp"></script>

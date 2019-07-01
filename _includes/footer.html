@@ -54,7 +54,8 @@
 {% endif %}
 <script type="text/javascript">
   // Mobile Menu
-  document.getElementById("mobile-menu-button").onclick = function() {
+  document.getElementById("mobile-menu-button").onclick = function(e) {
+    e.preventDefault();
     document.getElementsByClassName("site-header")[0].classList.toggle("expanded");
   };
 </script>

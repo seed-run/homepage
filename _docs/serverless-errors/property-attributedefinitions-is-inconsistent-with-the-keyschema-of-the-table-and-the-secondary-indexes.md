@@ -1,6 +1,6 @@
 ---
 layout: build-errors
-title: Enabling API Gateway X-Ray Tracing for existing deployments requires a remove and re-deploy of your API Gateway
+title: Property AttributeDefinitions is inconsistent with the KeySchema of the table and the secondary indexes.
 image: /assets/social-cards/common-errors.png
 description: Property AttributeDefinitions is inconsistent with the KeySchema of the table and the secondary indexes.
 ---

@@ -4,6 +4,9 @@ Just a quick recap, there are two ways of API logging:
 - execution logs: logs detailed information as API Gateway goes through each step of processing the request. Useful for tracing individual requests.
 - access logs: logs who has accessed your API. Each request generates a single entry in the logs similar to NGINX logs. Useful for sending to analytics tool to gather metrics.
 
+### For Seed users
+You can enable with 1 click. Here is the doc..
+
 ### Enable API Gateway Access logs
 This is a two step process. First, we need to create an IAM role that allows API Gateway to write logs in CloudWatch. Then we need to turn on logging for our API project.
 

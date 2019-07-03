@@ -3,6 +3,7 @@ layout: post
 title: How to manage secrets for your Serverless app?
 image: /assets/social-cards/manage-serverless-secrets.png
 description: In this post we'll look at the different ways to handle secrets or sensitive information in your Serverless Framework app on AWS. We'll look at how to store it locally in a file, using a CI/CD provider, AWS SSM, and a combination of a couple of approaches.
+categories: how-to
 author: frank
 ---
 

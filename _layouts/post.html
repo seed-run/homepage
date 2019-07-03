@@ -54,6 +54,12 @@ layout: default
 </article>
 
 {% if page.id %}
+<div class="blog post-cta">
+  {% include post-cta.html %}
+</div>
+{% endif %}
+
+{% if page.id %}
 <div class="blog related-posts">
   <h5>Recent Updates</h5>
   <ul class="post-list">

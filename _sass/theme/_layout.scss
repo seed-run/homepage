@@ -646,6 +646,11 @@ span.post-info-separator {
     font-size: 14px;
     opacity: 0.85;
   }
+
+  &.blog {
+    margin: 0 auto;
+    max-width: 900px;
+  }
 }
 
 .post-footer {

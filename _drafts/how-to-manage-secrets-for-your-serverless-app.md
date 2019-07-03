@@ -2,6 +2,7 @@
 layout: post
 title: How to manage secrets for your Serverless app?
 image: /assets/social-cards/manage-serverless-secrets.png
+description: In this post we'll look at the different ways to handle secrets or sensitive information in your Serverless Framework app on AWS. We'll look at how to store it locally in a file, using a CI/CD provider, AWS SSM, and a combination of a couple of approaches.
 author: frank
 ---
 
@@ -73,7 +74,7 @@ Here is how to store secrets in your CI/CD provider:
    const stripe = Stripe(process.env.stripeSecretKey);
    ```
 
-**PROS**: You can use this alongside a local `env.yml` file for both local and remote usage while keeping your Lambda code the same, ie. `process.env.stripeSecretKey`.
+**PROS**: You can use this alongside a local `env.yml` file for both local and remote usage while keeping your Lambda code the same, ie. `process.env.stripeSecretKey`. We talk about this approach [in detail over on Serverless Stack](https://serverless-stack.com/chapters/load-secrets-from-env-yml.html).
 
 **CONS**: You have to manage your secrets through your CI/CD provider.
 

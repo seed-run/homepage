@@ -1,4 +1,11 @@
-# How to enable access logs for API Gateway?
+---
+layout: post
+title: How to enable access logs for API Gateway?
+image: 
+description: 
+categories: how-to
+author: jack
+---
 
 Just a quick recap, there are two ways of API logging:
 - execution logs: logs detailed information as API Gateway goes through each step of processing the request. Useful for tracing individual requests.

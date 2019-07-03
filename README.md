@@ -44,10 +44,10 @@ The build script is in `netlify.toml` and it runs the following:
 $ jekyll build
 ```
 
-You can also convert SVG social cards to PNGs with:
+You can convert a SVG social card to PNG with:
 
 ``` sh
-$ ./gen-social-cards
+$ ./gen-social-cards assets/social-cards/filename.svg
 ```
 
 

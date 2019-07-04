@@ -1,17 +1,14 @@
 {% for item in site.data.doclist.toc %}
   {% if item.url %}
-
-    {% assign class = "" %}
-
-    {% if item.url == page.url %}
-      {% assign class = "active" %}
-    {% elsif item.url contains "/docs/serverless-errors/index.html" and page.url contains "/docs/serverless-errors" %}
-      {% assign class = "active" %}
-    {% endif %}
-
-    <p class="{{ class }}"><a href="{{ item.url }}">{{ item.title }}</a></li>
+    <p class="{% if item.url == page.url %}active{% endif %}">
+      <a href="{{ item.url }}">{{ item.title }}</a>
+    </p>
   {% else %}
-    <p class="title">{{ item.title }}</p>
+    <p class="title">
+      <i class="fa fa-caret-right" aria-hidden="true"></i>
+      <i class="fa fa-caret-down" aria-hidden="true"></i>
+      <a href="#">{{ item.title }}</a>
+    </p>
     <ul>
       {% for entry in item.subfolderitems %}
         <li class="{% if entry.url == page.url %}active{% endif %}"><a href="{{ entry.url }}">{{ entry.page }}</a></li>

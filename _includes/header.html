@@ -1,16 +1,28 @@
-<header class="site-header lander" role="banner">
+<header class="site-header {% if page.url == "/" %}lander{% else %}page{% endif %}" role="banner">
 
   <div class="wrapper">
 
     <div class="site-header-col site-header-col-1">
-      <a href="/">{{ site.title | escape }}</a>
+      <span class="menu-header">
+        <a class="logo" href="/">{{ site.title | escape }}</a>
+        <a id="mobile-menu-button" class="button" href="#">
+          <i class="fa fa-caret-down" aria-hidden="true"></i>
+          <i class="fa fa-caret-up" aria-hidden="true"></i>
+        </a>
+      </span>
+      {% if page.url contains "/docs" %}
+        {% include search-field.html %}
+      {% endif %}
     </div>
 
     <div class="site-header-col site-header-col-2">
-      <a href="{% link pricing.html %}">Pricing</a>
-      <a href="{% link _docs/index.md %}">Docs</a>
-      <a href="{% link blog/index.md %}">Blog</a>
-      <a href="{{ site.console_url }}/login" class="login">Login</a>
+      <a class="links" href="{% link pricing.html %}">Pricing</a>
+      <a class="links" href="{% link _docs/index.md %}">Docs</a>
+      <a class="links" href="{% link blog/index.md %}">Blog</a>
+      <a class="links signup" href="{{ site.console_url }}{{ site.signup }}">
+        Create a Free Account
+      </a>
+      <a class="links login" href="{{ site.console_url }}/login">Login</a>
     </div>
 
   </div>

@@ -1,6 +1,6 @@
 ---
 layout: docs
-title: Mono-Repo Apps in Seed
+title: Monorepo Apps in Seed
 ---
 
 [Serverless Framework](https://serverless.com) applications are made up of multiple services. A service can be thought of as a project that is based on a single `serverless.yml` file. By default, Serverless Framework applications start with a `serverless.yml` in the project root.
@@ -18,7 +18,7 @@ Error --------------------------------------------------
 The CloudFormation template is invalid: Template format error: Number of resources, 201, is greater than maximum allowed, 200
 ```
 
-### Mono-Repo
+### Monorepo
 
 A common way to organize your multiple services is to create a `services/` directory in your application and adding the various services there.
 
@@ -27,15 +27,15 @@ $ ls services/
 groups    posts     users
 ```
 
-Here each service has it's own `serverless.yml`. Meaning you would deploy them by running the `serverless deploy` command inside each service directory. In effect, you have multiple projects in the same repository. This type of organization (multiple services in the same repo) is generally referred to as mono-repo.
+Here each service has it's own `serverless.yml`. Meaning you would deploy them by running the `serverless deploy` command inside each service directory. In effect, you have multiple projects in the same repository. This type of organization (multiple services in the same repo) is generally referred to as monorepo.
 
 An alternative strategy is to completely separate the services into their own repositories. This is desirable when you are thinking of having different developers (or teams) manage those services on their own.
 
 ### Deployments
 
-Mono-repo apps can add a layer of complexity to your deployment process. Deploying your application involves co-ordinating deployment across multiple services.
+Monorepo apps can add a layer of complexity to your deployment process. Deploying your application involves co-ordinating deployment across multiple services.
 
-> Seed by default deploys all the services in a mono-repo app concurrently.
+> Seed by default deploys all the services in a monorepo app concurrently.
 
 Seed simplifies this by deploying the entire application as a whole.
 
@@ -47,7 +47,7 @@ Seed simplifies this by deploying the entire application as a whole.
 
    ![configure deploy phases](/assets/docs/mono-repo-apps-in-seed/configure-deploy-phases.png)
 
-3. A deployment to the app will now trigger all the services in the app to be deployed. Seed deploys all the services in a mono-repo app concurrently.
+3. A deployment to the app will now trigger all the services in the app to be deployed. Seed deploys all the services in a monorepo app concurrently.
 
    ![App deployment in progress](/assets/docs/mono-repo-apps-in-seed/app-deployment-in-progress.png)
 
@@ -79,4 +79,4 @@ Finally, the app's stage allows you to control the settings for all the services
 
 In the above example, using a set of custom IAM credentials would mean that all the services deployed to this stage will use this setting.
 
-The stages and services in an app allow you to easily control your mono-repo serverless apps in Seed.
+The stages and services in an app allow you to easily control your monorepo serverless apps in Seed.

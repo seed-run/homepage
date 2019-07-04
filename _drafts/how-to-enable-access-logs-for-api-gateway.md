@@ -1,128 +1,133 @@
 ---
 layout: post
 title: How to enable access logs for API Gateway?
-image: 
-description: 
+image: assets/social-cards/enable-access-logs.png
+description: In this post we'll look at how to enable access logs in API Gateway by creating an IAM role to allow API Gateway to log to CloudWatch. We'll also look at how to view API Gateway access logs in the CloudWatch console by using the log groups and log streams that are created. 
 categories: how-to
 author: jack
 ---
 
-Just a quick recap, there are two ways of API logging:
-- execution logs: logs detailed information as API Gateway goes through each step of processing the request. Useful for tracing individual requests.
-- access logs: logs who has accessed your API. Each request generates a single entry in the logs similar to NGINX logs. Useful for sending to analytics tool to gather metrics.
+In this post we are going to look at how to enable and use access logs for API Gateway in CloudWatch.
 
-### For Seed users
-You can enable with 1 click. Here is the doc..
+Just a quick recap, there are two ways of logging API Gateway:
 
-### Enable API Gateway Access logs
-This is a two step process. First, we need to create an IAM role that allows API Gateway to write logs in CloudWatch. Then we need to turn on logging for our API project.
+- Execution logs: Logs with detailed information as API Gateway goes through each step of processing the request. Useful for tracing individual requests. Can generate lots of log data, resulting in a large CloudWatch bill.
+- Access logs: Logs of who has accessed your API. Each request generates a single entry in the logs, similar to NGINX logs. Useful for sending to an analytics tool to gather metrics.
 
-First, log in to your [AWS Console](https://console.aws.amazon.com/) and select IAM from the list of services.
+[Seed](/) has built-in support for API Gateway access logs. It can turn it on for you in one click and you can even view it directly in the Seed console. You can [read more on it here in our docs]({% link _docs/viewing-logs.md %}#access-logs).
 
-![](https://d33wubrfki0l68.cloudfront.net/07bc0503a7d837f6f3c284b498d225b58dac783f/aa9a2/assets/logging/select-iam-service.png)
-
-Select Roles on the left menu.
-![](https://d33wubrfki0l68.cloudfront.net/fbc6e501d1350a7177a00cf593d0749d14c6e326/b3770/assets/logging/select-iam-roles.png)
+Let's start by looking at how to enable access logs.
 
 
-Select Create Role.
-![](https://d33wubrfki0l68.cloudfront.net/8857bba78f8b2c909a80d8989788fc254d433c3f/267bd/assets/logging/select-create-iam-role.png)
+### Enabling API Gateway access logs
 
+This is a two step process. First, we need to create an IAM role that allows API Gateway to write logs to CloudWatch. Then we need to turn on logging for our API Gateway project.
 
-Under AWS service, select API Gateway.
-![](https://d33wubrfki0l68.cloudfront.net/6f777a1046a80b7b200b64b1e971330191e7f3fe/49e68/assets/logging/select-api-gateway-iam-role.png)
+Start by logging into your [AWS Console](https://console.aws.amazon.com/) and select IAM from the list of services.
 
+![Select IAM from list of AWS services](/assets/blog/how-to-enable-access-logs-for-api-gateway/select-iam-from-list-of-aws-services.png)
 
-Click Next: Permissions.
-![](https://d33wubrfki0l68.cloudfront.net/f29c9b06f7b09832dd25f788fac7cebcfc94a866/164f3/assets/logging/select-iam-role-attach-permissions.png)
+Click **Roles** on the left menu.
 
+![Select IAM Roles from left menu](/assets/blog/how-to-enable-access-logs-for-api-gateway/select-iam-roles-from-left-menu.png)
 
-Click Next: Review.
-![](https://d33wubrfki0l68.cloudfront.net/ebbba71519556778ac91a19fcc0c40421084c7d8/a8471/assets/logging/select-review-iam-role.png)
+Click **Create role**.
 
+![Select Create IAM Role](/assets/blog/how-to-enable-access-logs-for-api-gateway/select-create-iam-role.png)
 
-Enter a Role name and select Create role. In our case, we called our role ```APIGatewayCloudWatchLogs```.
-![](https://d33wubrfki0l68.cloudfront.net/d7cee9dcd3dc60673426940c059c9f1fe1ff6698/a7390/assets/logging/fill-in-iam-role-info.png)
+Under **AWS service**, select **API Gateway**.
 
+![Select API Gateway from AWS services](/assets/blog/how-to-enable-access-logs-for-api-gateway/select-api-gateway-from-aws-services.png)
+
+Click **Next: Permissions**.
+
+![Click Next: Permissions](/assets/blog/how-to-enable-access-logs-for-api-gateway/click-next-permissions.png)
+
+Click **Next: Review**.
+
+![Click Next: Review](/assets/blog/how-to-enable-access-logs-for-api-gateway/click-next-review.png)
+
+Enter a **Role name** and click **Create role**. In our case, we call our role `APIGatewayCloudWatchLogs`.
+
+![Enter a role name and create role](/assets/blog/how-to-enable-access-logs-for-api-gateway/enter-a-role-name-and-create-role.png)
 
 Click on the role we just created.
-![](https://d33wubrfki0l68.cloudfront.net/8c66c2eeacb2a0e946276671988746a0f1ad23e8/66076/assets/logging/select-created-api-gateway-iam-role.png)
 
+![Click on new role](/assets/blog/how-to-enable-access-logs-for-api-gateway/click-on-new-role.png)
 
-Take a note of the Role ARN. We will be needing this soon.
-![](https://d33wubrfki0l68.cloudfront.net/f308acfc467e0e31b2543785e62ee37170289bb9/1d8c5/assets/logging/iam-role-arn.png)
+Make a note of the **Role ARN**. We'll be needing this soon.
 
-Now that we have created our IAM role, let’s turn on logging for our API Gateway project.
+![Copy Role ARN](/assets/blog/how-to-enable-access-logs-for-api-gateway/copy-role-arn.png)
+
+Now that we've created an IAM role, let’s turn on logging for our API Gateway project.
 
 Go back to your [AWS Console](https://console.aws.amazon.com/) and select API Gateway from the list of services.
 
-![](https://d33wubrfki0l68.cloudfront.net/43d4ff3647df55040a6b5e34df09aa3bdd45a059/9bc20/assets/logging/select-api-gateway-service.png)
+![Select API Gateway from list](/assets/blog/how-to-enable-access-logs-for-api-gateway/select-api-gateway-from-list.png)
 
+Click on **Settings** in the left panel.
 
-Select Settings from the left panel.
-![](https://d33wubrfki0l68.cloudfront.net/e6fc71499ce75b914437ee6cba01b236c32569c8/2bc8b/assets/logging/select-api-gateway-settings.png)
+![Click on API Gateway settings](/assets/blog/how-to-enable-access-logs-for-api-gateway/click-on-api-gateway-settings.png)
 
+Enter the **ARN** of the IAM role we just created in the **CloudWatch log role ARN** field and hit **Save**.
 
-Enter the ARN of the IAM role we just created in the CloudWatch log role ARN field and hit Save.
-![](https://d33wubrfki0l68.cloudfront.net/9915ca6535e00478ea77b6bce1c8a136b9ddb4b0/af784/assets/logging/fill-in-api-gateway-cloudwatch-info.png)
+![Enter IAM Role ARN and save](/assets/blog/how-to-enable-access-logs-for-api-gateway/enter-iam-role-arn-and-save.png)
 
+Select your API project from the left panel, click **Stages**, then pick the stage you want to enable logging for. For our API, we deployed it to the prod stage.
 
-Select your API project from the left panel, select Stages, then pick the stage you want to enable logging for. For the case of our Notes App API, we deployed to the prod stage.
-
-![](https://i.imgur.com/SaMWPQT.png)
+![Select API Gateway project and stage](/assets/blog/how-to-enable-access-logs-for-api-gateway/select-api-gateway-project-and-stage.png)
 
 In the Logs tab:
 
-- Check Enable Access Logging.
-- Enter a CloudWatch Group name with the API Gateway id and stage name to ensure uniqueness
-```
-API-Gateway-Access-Logs_{API_GATEWAT_ID}/{STAGE}
-```
-- Enter Log Format or pick one of the predefined log format in CLF, JSON, XML or CSV
-```
-{ "requestId":"$context.requestId",
-  "ip": "$context.identity.sourceIp",
-  "caller":"$context.identity.caller",
-  "user":"$context.identity.user",
-  "requestTime":"$context.requestTime",
-  "httpMethod":"$context.httpMethod",
-  "resourcePath":"$context.resourcePath",
-  "status":"$context.status",
-  "protocol":"$context.protocol",
-  "responseLength":"$context.responseLength"
-}
-```
+- Check **Enable Access Logging**.
+- Enter a **CloudWatch Group** name with the API Gateway id and stage name to ensure uniqueness. Ie, `API-Gateway-Access-Logs_{API_GATEWAY_ID}/{STAGE}`.
+- Enter the **Log Format** or pick one of the predefined log format in CLF, JSON, XML or CSV.
+  ``` json
+  {
+    "requestId":"$context.requestId",
+    "ip": "$context.identity.sourceIp",
+    "caller":"$context.identity.caller",
+    "user":"$context.identity.user",
+    "requestTime":"$context.requestTime",
+    "httpMethod":"$context.httpMethod",
+    "resourcePath":"$context.resourcePath",
+    "status":"$context.status",
+    "protocol":"$context.protocol",
+    "responseLength":"$context.responseLength"
+  }
+  ```
 
-![](https://i.imgur.com/sFuNC6U.png)
+![Enable Access Logging and set log format](/assets/blog/how-to-enable-access-logs-for-api-gateway/enable-access-logging-and-set-log-format.png)
 
-
-Scroll to the bottom of the page and click Save Changes. Now our API Gateway requests should be logged via CloudWatch.
+Scroll to the bottom of the page and click **Save changes**. Now our API Gateway requests should be logged via CloudWatch.
 
 
-### Enable API Gateway Access logs
+### Viewing API Gateway access logs
 
 CloudWatch groups log entries into Log Groups and then further into Log Streams. Log Groups and Log Streams can mean different things for different AWS services. For API Gateway, when logging is first enabled in an API project’s stage, API Gateway creates 1 log group for the stage, and 300 log streams in the group ready to store log entries. API Gateway picks one of these streams when there is an incoming request.
 
 To view API Gateway logs, log in to your AWS Console and select CloudWatch from the list of services.
 
-![](https://d33wubrfki0l68.cloudfront.net/eff00ffdc2b2680ebeeac8c09db64c1db8431d29/e69b0/assets/logging/select-cloudwatch-service.png)
+![Select CloudWatch service](/assets/blog/how-to-enable-access-logs-for-api-gateway/select-cloudwatch-service.png)
 
-Select Logs from the left panel.
+Select **Logs** from the left panel.
 
-![](https://d33wubrfki0l68.cloudfront.net/93be646196ce32a9e020f95e53a2a5d62c4a4df9/bfcbc/assets/logging/select-cloudwatch-logs.png)
+![Select CloudWatch logs](/assets/blog/how-to-enable-access-logs-for-api-gateway/select-cloudwatch-logs.png)
 
-Select the log group prefixed with API-Gateway-Access-Logs_ followed by the API Gateway id.
+Select the log group that starts with `API-Gateway-Access-Logs_` followed by the API Gateway id.
 
-![](https://i.imgur.com/MRzcT9g.png)
+![Select log group with API Gateway id](/assets/blog/how-to-enable-access-logs-for-api-gateway/select-log-group-with-api-gateway-id.png)
 
+You should see 300 log streams ordered by the last event time. This is the last time a request was recorded. Click on the first stream.
 
-You should see 300 log streams ordered by the last event time. This is the last time a request was recorded. Select the first stream.
+![Select first log stream from group](/assets/blog/how-to-enable-access-logs-for-api-gateway/select-first-log-stream-from-group.png)
 
-![](https://i.imgur.com/HRUk6pD.png)
+This shows you one log entry for each API request. Expand a row, the log data should reflect the format you had previously defined.
 
+![Select log row from API Gateway request](/assets/blog/how-to-enable-access-logs-for-api-gateway/select-log-row-from-api-gateway-request.png)
 
-This shows you one log entry for each API request. Expand a row, the log data should reflect the format you previously defined.
+Note that, two consecutive groups of logs are not necessarily two consecutive requests in real time. This is because there might be other requests that are processed in between these two that were picked up by one of the other log streams.
 
-![](https://i.imgur.com/T3I2Kfv.png)
+#### Summary
 
-Note that two consecutive groups of logs are not necessarily two consecutive requests in real time. This is because there might be other requests that are processed in between these two that were picked up by one of the other log streams.
+This post should give you a good idea of how to enable access logs for your API Gateway project and also how to view them from the CloudWatch console.

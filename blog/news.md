@@ -1,6 +1,6 @@
 ---
 layout: post
-listed_category: community
+listed_category: news
 title: Product Updates
 ---
 

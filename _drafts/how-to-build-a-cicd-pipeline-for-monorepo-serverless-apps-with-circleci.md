@@ -58,7 +58,8 @@ A monorepo Serverless app is a git repo with multiple Serverless services each s
 
 - Name the new file **.circleci/config.yml** and paste the following content
 
-```yaml=
+{% raw %}
+``` yaml
 version: 2.1
 
 jobs:
@@ -122,6 +123,7 @@ workflows:
           stage_name: ${CIRCLE_BRANCH}
           context: Development
 ```
+{% endraw %}
 
 - A couple of things to note:
   - We created a job called **deploy-service**, that takes the **path of a service** and the **name of the stage** you want to deploy to, which will be used for `--stage` in Serverless commands.
@@ -152,7 +154,9 @@ workflows:
 - Repeat the ealier step of creating a **Development** context, and create a **Production** context with the AWS Access Key Id and Secret Access Key of your production AWS account.
 ![](https://i.imgur.com/AgyLfhj.png)
 - Go to your GitHub repo and open **.circleci/config.yml** that we created above. Remove what we wrote previously and paste the following block:
-```yaml=
+
+{% raw %}
+``` yaml
 version: 2.1
 
 jobs:
@@ -253,8 +257,9 @@ workflows:
           filters:
             branches:
               only: master
-
 ```
+{% endraw %}
+
 - This does a couple of things:
   - git pushes to the **master** branch will be deployed to the **prod** stage, instead of the default branch name.
   - git pushes to the **master** branch will use the **Production** context, hence gets deployed to your production AWS accouont.
@@ -269,7 +274,8 @@ Unfortunately CircleCI does not support pull request. It can be achieved manuall
 
 - Again, go to your GitHub repo and open **.circleci/config.yml** that we created above. Remove what we wrote previously and paste the following block:
 
-```yaml=
+{% raw %}
+``` yaml
 version: 2.1
 
 jobs:
@@ -393,6 +399,7 @@ workflows:
             branches:
               only: master
 ```
+{% endraw %}
 
 - This does a couple of things:
   - We added a **Check Pull Request** step. We check the built-in environment variable **$CIRCLE_PULL_REQUEST** to decide if the current branch belongs to a pull request. If it is, we set an environment variable called **$PR_NUMBER** with the pull request id.
@@ -407,7 +414,9 @@ After a feature branch is deleted, or a pull request closed, you want to clean u
 We can however tell CircleCI to remove a stage instead of deploy to one if it sees a tag called named **rm-stage-STAGE_NAME**
 
 - Again, go to your GitHub repo and open **.circleci/config.yml** that we created above. Remove what we wrote previously and paste the following block:
-```yaml=
+
+{% raw %}
+``` yaml
 version: 2.1
 
 jobs:
@@ -605,6 +614,8 @@ workflows:
             branches:
               ignore: /.*/
 ```
+{% endraw %}
+
 - This does a couple of things:
   - We created a new job called **remove-service**. It is similar to our **deploy-service** except it runs `sls remove`. It assumes the name of the tag if of the format **rm-stage-STAGE_NAME** and parses for the stage name after the 2nd hyphen.
   - We also told workflow to run **remove-service** job for each of our service when it sees the tag

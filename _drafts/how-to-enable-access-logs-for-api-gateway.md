@@ -1,6 +1,6 @@
 ---
 layout: post
-title: How to enable access logs for API Gateway?
+title: How to enable access logs for API Gateway
 image: assets/social-cards/enable-access-logs.png
 description: In this post we'll look at how to enable access logs in API Gateway by creating an IAM role to allow API Gateway to log to CloudWatch. We'll also look at how to view API Gateway access logs in the CloudWatch console by using the log groups and log streams that are created. 
 categories: tips

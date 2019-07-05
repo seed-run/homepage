@@ -1,4 +1,12 @@
-# How to build a CI/CD pipeline for monorepo Serverless apps with CircleCI?
+---
+layout: post
+title: How to build a CI/CD pipeline for monorepo Serverless apps with CircleCI
+image: assets/social-cards/enable-execution-logs.png
+description: In this post we'll look at how to enable execution logs in API Gateway by creating an IAM role to allow API Gateway to log to CloudWatch. We'll also look at how to view API Gateway execution logs in the CloudWatch console by using the log groups and log streams that are created. 
+categories: tips
+author: jack
+---
+
 
 A monorepo Serverless app is a git repo with multiple Serverless services each sitting in a subfolder with its own serverless.yml file. Here is a [template repo](https://github.com/fwang/sls-monorepo-with-circleci). Code structure looks like:
 

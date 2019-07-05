@@ -92,12 +92,17 @@
       }
     }
 
+    &:active {
+      box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.08), 0 2px 4px -1px rgba(0, 0, 0, 0.03);
+      transform: translateY(1px);
+    }
+
     &:last-child {
       margin-right: 0;
     }
 
     @include media-query($on-palm) {
-      margin: 0 0 $spacing-unit / 2;
+      margin: 0 0 10px;
       flex: 1 1 auto;
 
       &:last-child {
@@ -107,6 +112,7 @@
   }
 
   @include media-query($on-palm) {
+    padding: 10px;
     flex-direction: column;
   }
 }

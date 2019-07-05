@@ -2,6 +2,7 @@
 layout: post
 title: Improved Code Fetching
 image: /assets/social-cards/building-artifacts-concurrently.png
+categories: news
 author: jack
 ---
 

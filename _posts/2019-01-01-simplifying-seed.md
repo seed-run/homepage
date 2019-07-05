@@ -1,6 +1,7 @@
 ---
 layout: post
 title: Simplifying Seed
+categories: news
 author: jay
 ---
 

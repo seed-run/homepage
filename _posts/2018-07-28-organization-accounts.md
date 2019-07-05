@@ -2,6 +2,7 @@
 layout: post
 title: Organization Accounts
 image: /assets/social-cards/organization-accounts.png
+categories: news
 author: frank
 ---
 
@@ -16,4 +17,4 @@ You can visit our docs to read more about:
 - [Creating organizations]({% link _docs/creating-an-organization.md %})
 - [Managing organization members]({% link _docs/adding-organization-members.md %})
 
-Organization accounts and [mono-repo support]({% link _posts/2018-06-20-mono-repo-apps.md %}) together give you the tools needed to manage the workflows for the Serverless applications across your team.
+Organization accounts and [monorepo support]({% link _posts/2018-06-20-mono-repo-apps.md %}) together give you the tools needed to manage the workflows for the Serverless applications across your team.

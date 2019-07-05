@@ -3,7 +3,7 @@ layout: docs
 title: Adding a Service
 ---
 
-Seed supports [mono-repo Serverless applications]({% link _docs/mono-repo-apps-in-seed.md %}). This means that you can have multiple Serverless Framework projects (services) in the same repo.
+Seed supports [monorepo Serverless applications]({% link _docs/mono-repo-apps-in-seed.md %}). This means that you can have multiple Serverless Framework projects (services) in the same repo.
 
 Once your app is created, you can add other services to it by hitting the **Add a Service** from your app pipeline.
 

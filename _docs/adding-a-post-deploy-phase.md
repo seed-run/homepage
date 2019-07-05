@@ -3,7 +3,7 @@ layout: docs
 title: Adding a Post-Deploy Phase
 ---
 
-With mono-repo deployments, you often want to run your integration tests after all your services have been deployed. To do this, Seed allows you to configure a post-deploy phase. A post-deploy phase can include a set of commands that you want to run after all your services have been successfully deployed.
+With monorepo deployments, you often want to run your integration tests after all your services have been deployed. To do this, Seed allows you to configure a post-deploy phase. A post-deploy phase can include a set of commands that you want to run after all your services have been successfully deployed.
 
 > Seed can run your integration tests as a part of the post-deploy phase
 
@@ -39,4 +39,4 @@ They are both run after a deployment. The key difference being that the post-dep
 
 This also means that for an app with a single service, the post-deploy phase and the `after_deploy` hook do basically the same thing.
 
-And that's it, now you can add your integration tests and post-deployment scripts to your mono-repo workflow.
+And that's it, now you can add your integration tests and post-deployment scripts to your monorepo workflow.

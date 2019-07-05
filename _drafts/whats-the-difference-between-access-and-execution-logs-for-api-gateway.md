@@ -3,7 +3,7 @@ layout: post
 title: What's the difference between access and execution logs for API Gateway?
 image: assets/social-cards/access-vs-execution-logs.png
 description: There are two CloudWatch logging options for API Gateway; execution logs and access logs. In this post, we'll look at what the differences are between the two options and when to use them.
-categories: how-to
+categories: tips
 author: jack
 ---
 

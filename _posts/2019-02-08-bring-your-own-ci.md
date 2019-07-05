@@ -1,6 +1,7 @@
 ---
 layout: post
 title: Bring Your Own CI
+categories: news
 author: jay
 ---
 

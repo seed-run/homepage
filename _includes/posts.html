@@ -1,0 +1,31 @@
+<ul class="post-list">
+  {% for post in include.posts %}
+    <li>
+      <h3>
+        <a
+          href="https://www.linkedin.com/in/{{ site.data.authors[post.author].linkedin }}/"
+        >
+          <img
+            width="36"
+            class="bullet"
+            title="{{ site.data.authors[post.author].name }}"
+            src="{{ site.data.authors[post.author].picture }}"
+          />
+        </a>
+        <a href="{{ post.url }}">{{ post.title }}</a>
+      </h3>
+      <div>{{ post.excerpt }}</div>
+      <div class="post-info">
+        {% assign category_name = post.categories[0] %}
+        {% assign category = site.data.categories[category_name] %}
+        <a href="{{ site.baseurl }}/blog/{{ category_name }}" class="category">
+          <i class="fa fa-{{ category.icon }}" aria-hidden="true"></i>
+          {{ category.title }}
+        </a>
+        <span class="separator">&nbsp;&bull;&nbsp;</span>
+        <span class="date">{{ post.date | date: '%B %d, %Y' }}</span>
+      </div>
+    </li>
+
+  {% endfor %}
+</ul>

@@ -1,6 +1,7 @@
 ---
 layout: post
 title: Settings up Apps & Stages with Ease
+categories: news
 author: jack
 ---
 

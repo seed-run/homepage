@@ -2,6 +2,7 @@
 layout: post
 title: .NET Core Support
 image: /assets/social-cards/dotnet-support-seed.png
+categories: news
 author: frank
 ---
 

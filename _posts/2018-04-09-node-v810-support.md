@@ -1,6 +1,7 @@
 ---
 layout: post
 title: Node v8.10 Support
+categories: news
 author: aash
 ---
 

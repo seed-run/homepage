@@ -1,6 +1,7 @@
 ---
 layout: post
 title: Automatically Create Seed IAM Users
+categories: news
 author: jack
 ---
 

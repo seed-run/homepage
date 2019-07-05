@@ -1,6 +1,7 @@
 ---
 layout: post
 title: Cancelling Builds
+categories: news
 author: jack
 ---
 

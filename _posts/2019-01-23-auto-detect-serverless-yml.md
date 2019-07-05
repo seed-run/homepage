@@ -1,6 +1,7 @@
 ---
 layout: post
 title: Auto-Detect Serverless.yml
+categories: news
 author: jack
 ---
 

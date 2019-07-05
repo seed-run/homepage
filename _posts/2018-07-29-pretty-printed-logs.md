@@ -2,6 +2,7 @@
 layout: post
 title: Pretty Printed Logs
 image: /assets/social-cards/pretty-printed-logs.png
+categories: news
 author: aash
 ---
 

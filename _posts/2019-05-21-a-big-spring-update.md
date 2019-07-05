@@ -1,6 +1,7 @@
 ---
 layout: post
 title: A Big Spring Update
+categories: news
 author: frank
 ---
 
@@ -53,7 +54,7 @@ The new UI improvements gives you a great bird's-eye view of your deployment pip
 
 ### Only Deploy Updated Services
 
-Another big update that we had been working on, is to be able to skip deploying services that haven't changed. Previously, Seed would force deploy all your services on every commit. This meant that for [mono-repo serverless apps]({% link  _docs/mono-repo-apps-in-seed.md %}) with [multiple deploy phases]({% link _docs/configuring-deploy-phases.md %}), builds could be really slow.
+Another big update that we had been working on, is to be able to skip deploying services that haven't changed. Previously, Seed would force deploy all your services on every commit. This meant that for [monorepo serverless apps]({% link  _docs/mono-repo-apps-in-seed.md %}) with [multiple deploy phases]({% link _docs/configuring-deploy-phases.md %}), builds could be really slow.
 
 Now Seed will skip deployments for services that haven't been updated. We rely on the check that Serverless Framework does for this. It diffs the code package and CloudFormation template to see if the service needs to be deployed. Note that, the entire build process proceeds as if the build has been successful. This means that all the relevant [hooks in the build spec]({% link _docs/adding-a-build-spec.md %}) are executed.
 

@@ -1,6 +1,7 @@
 ---
 layout: post
 title: Listing All Your Repos
+categories: news
 author: aash
 ---
 

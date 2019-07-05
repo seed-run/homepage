@@ -1,6 +1,7 @@
 ---
 layout: post
 title: Add Project Members
+categories: news
 author: jay
 ---
 

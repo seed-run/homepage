@@ -1,6 +1,7 @@
 ---
 layout: post
 title: Review Change Sets
+categories: news
 author: frank
 ---
 

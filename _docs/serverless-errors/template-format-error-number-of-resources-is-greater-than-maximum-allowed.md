@@ -24,4 +24,4 @@ For example, you can move all user related APIs to the users-api service. Or mov
 
 This not only gets around the 200 resource limit, but also makes your deployment process a lot faster.
 
-We talk about this in detail in a chapter on [Organizing Serverless Projects](https://serverless-stack.com/chapters/organizing-serverless-projects.html) over on [Serverless Stack](https://serverless-stack.com). We also have a repo with [a sample mono-repo serverless app here](https://github.com/AnomalyInnovations/serverless-stack-demo-mono-api).
+We talk about this in detail in a chapter on [Organizing Serverless Projects](https://serverless-stack.com/chapters/organizing-serverless-projects.html) over on [Serverless Stack](https://serverless-stack.com). We also have a repo with [a sample monorepo serverless app here](https://github.com/AnomalyInnovations/serverless-stack-demo-mono-api).

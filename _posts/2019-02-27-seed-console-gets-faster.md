@@ -1,6 +1,7 @@
 ---
 layout: post
 title: Seed Console Gets Faster
+categories: news
 author: frank
 ---
 

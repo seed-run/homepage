@@ -1,6 +1,7 @@
 ---
 layout: post
 title: Docs for GitHub Enterprise
+categories: news
 author: jack
 ---
 

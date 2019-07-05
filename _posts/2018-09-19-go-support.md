@@ -2,6 +2,7 @@
 layout: post
 title: Go Support
 image: /assets/social-cards/go-support-seed.png
+categories: news
 author: frank
 ---
 

@@ -2,6 +2,7 @@
 layout: post
 title: Talking About Serverless Web Applications
 image: /assets/social-cards/serverless-meetup-aug8.png
+categories: community
 author: stephie
 ---
 

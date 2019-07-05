@@ -1,6 +1,7 @@
 ---
 layout: post
 title: Viewing Logs and Metrics
+categories: news
 author: frank
 ---
 

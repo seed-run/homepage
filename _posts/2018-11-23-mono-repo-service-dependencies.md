@@ -1,17 +1,18 @@
 ---
 layout: post
-title: Mono-Repo Service Dependencies
+title: Monorepo Service Dependencies
 image: /assets/social-cards/deploy-phases.png
+categories: news
 author: frank
 ---
 
-Handling service dependencies has been a long standing problem for mono-repo Serverless apps. Today we are introducing the concept of deployment phases to help address this issue.
+Handling service dependencies has been a long standing problem for monorepo Serverless apps. Today we are introducing the concept of deployment phases to help address this issue.
 
 ![Configure Deploy Phases](/assets/blog/mono-repo-service-dependencies/configure-deploy-phases.png)
 
 ### Background
 
-A little background before we look at how deploy phases work. If you've designed Serverless apps with multiple services or followed [our Serverless Stack guide on mono-repo apps](https://serverless-stack.com/chapters/organizing-serverless-projects.html); you'll notice an obvious problem. Some services end up depending on some others. This could be your API service depending on the _infrastructure_ type services (setting up databases, queues, S3 buckets, etc). This means that the API service needs to be deployed after the infrastructure services. This can introduce a layer of complexity in your CI/CD pipelines that can make it hard to work with. You typically end up creating custom scripts to handle this, or worse deploy them manually.
+A little background before we look at how deploy phases work. If you've designed Serverless apps with multiple services or followed [our Serverless Stack guide on monorepo apps](https://serverless-stack.com/chapters/organizing-serverless-projects.html); you'll notice an obvious problem. Some services end up depending on some others. This could be your API service depending on the _infrastructure_ type services (setting up databases, queues, S3 buckets, etc). This means that the API service needs to be deployed after the infrastructure services. This can introduce a layer of complexity in your CI/CD pipelines that can make it hard to work with. You typically end up creating custom scripts to handle this, or worse deploy them manually.
 
 ### Our Motivations
 

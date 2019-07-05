@@ -1,6 +1,7 @@
 ---
 layout: post
 title: Talking About Serverless Development
+categories: community
 author: stephie
 ---
 

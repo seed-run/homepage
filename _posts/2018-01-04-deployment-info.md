@@ -1,6 +1,7 @@
 ---
 layout: post
 title: Deployment Info
+categories: news
 author: jay
 ---
 

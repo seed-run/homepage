@@ -2,6 +2,7 @@
 layout: post
 title: Common Serverless Errors
 image: /assets/social-cards/common-errors.png
+categories: community
 author: jay
 ---
 

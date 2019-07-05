@@ -2,6 +2,7 @@
 layout: post
 title: Running Integration Tests
 image: /assets/social-cards/post-deploy-phase.png
+categories: news
 author: frank
 ---
 

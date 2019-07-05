@@ -1,6 +1,7 @@
 ---
 layout: post
 title: Build Source Branch
+categories: news
 author: aash
 ---
 

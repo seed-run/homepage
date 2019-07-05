@@ -1,6 +1,7 @@
 ---
 layout: post
 title: Build Status Favicons
+categories: news
 author: jack
 ---
 

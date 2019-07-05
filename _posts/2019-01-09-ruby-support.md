@@ -1,6 +1,7 @@
 ---
 layout: post
 title: Ruby Support
+categories: news
 author: jack
 ---
 

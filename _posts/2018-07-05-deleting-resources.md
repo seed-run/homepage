@@ -1,6 +1,7 @@
 ---
 layout: post
 title: Deleting Resources
+categories: news
 author: aash
 ---
 

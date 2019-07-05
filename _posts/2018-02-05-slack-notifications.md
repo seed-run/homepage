@@ -1,6 +1,7 @@
 ---
 layout: post
 title: Slack Notifications
+categories: news
 author: jay
 ---
 

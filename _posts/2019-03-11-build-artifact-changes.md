@@ -1,6 +1,7 @@
 ---
 layout: post
 title: Build Artifact Changes
+categories: news
 author: jack
 ---
 

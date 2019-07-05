@@ -2,6 +2,7 @@
 layout: post
 title: Application Serverless Web Apps
 image: /assets/social-cards/serverless-meetup-aug8.png
+categories: community
 author: frank
 ---
 

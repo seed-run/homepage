@@ -1,6 +1,7 @@
 ---
 layout: post
 title: Stage Environment Variables
+categories: news
 author: jack
 ---
 

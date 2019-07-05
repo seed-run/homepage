@@ -1,6 +1,7 @@
 ---
 layout: post
 title: GitHub Status Checks
+categories: news
 author: jack
 ---
 

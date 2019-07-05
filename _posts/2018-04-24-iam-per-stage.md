@@ -1,6 +1,7 @@
 ---
 layout: post
 title: IAM Credentials per Stage
+categories: news
 author: aash
 ---
 

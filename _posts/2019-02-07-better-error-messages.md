@@ -1,6 +1,7 @@
 ---
 layout: post
 title: Better Error Messages
+categories: news
 author: jack
 ---
 

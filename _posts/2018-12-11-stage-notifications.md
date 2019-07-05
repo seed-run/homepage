@@ -1,6 +1,7 @@
 ---
 layout: post
 title: Stage Notifications
+categories: news
 author: jack
 ---
 

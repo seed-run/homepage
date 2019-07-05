@@ -2,6 +2,7 @@
 layout: post
 title: Custom Webhooks
 image: /assets/social-cards/custom-webhooks.png
+categories: news
 author: aash
 ---
 

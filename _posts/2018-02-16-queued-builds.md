@@ -1,6 +1,7 @@
 ---
 layout: post
 title: Queued Builds
+categories: news
 author: frank
 ---
 

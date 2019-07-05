@@ -1,0 +1,12 @@
+news:
+  title: Product Updates
+  icon: bell
+  description: Seed news, updates, and announcements.
+tips:
+  title: Serverless Tips
+  icon: magic
+  description: Serverless how tos, tips and tricks.
+community:
+  title: Community News
+  icon: newspaper-o
+  description: Seed Serverless community updates.

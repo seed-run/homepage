@@ -1,6 +1,7 @@
 ---
 layout: post
 title: Serverless Build Info
+categories: news
 author: aash
 ---
 

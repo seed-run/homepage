@@ -1,6 +1,7 @@
 ---
 layout: post
 title: Email Notifications
+categories: news
 author: jay
 ---
 

@@ -2,6 +2,7 @@
 layout: post
 title: Seed at Functions Conf 2018
 image: /assets/social-cards/seed-at-serverlessdays-toronto.jpg
+categories: community
 author: stephie
 ---
 

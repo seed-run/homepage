@@ -1,6 +1,7 @@
 ---
 layout: post
 title: Python 3.7 Support
+categories: news
 author: jack
 ---
 

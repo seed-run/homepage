@@ -2,6 +2,7 @@
 layout: post
 title: Affordable Plans for Small Teams
 image: /assets/social-cards/affordable-plans.png
+categories: news
 author: jay
 ---
 

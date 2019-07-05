@@ -1,6 +1,7 @@
 ---
 layout: post
 title: Python Support
+categories: news
 author: jay
 ---
 

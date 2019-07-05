@@ -3,9 +3,9 @@ layout: docs
 title: Configuring Deploy Phases
 ---
 
-Seed supports [mono-repo Serverless Framework apps]({% link _docs/mono-repo-apps-in-seed.md %}). By default, all the services in a mono-repo app are deployed concurrently. This means that a new git commit triggers a deployment to all the services in the mono-repo app at the same time.
+Seed supports [monorepo Serverless Framework apps]({% link _docs/mono-repo-apps-in-seed.md %}). By default, all the services in a monorepo app are deployed concurrently. This means that a new git commit triggers a deployment to all the services in the monorepo app at the same time.
 
-However, there are cases where some services in your mono-repo app are dependent on the others. This can happen when you have an _infrastructure_ specific service (that creates your DynamoDB tables) that need to be deployed before your APIs. To do this, Seed gives you a very convenient way to configure your deployment workflow into phases.
+However, there are cases where some services in your monorepo app are dependent on the others. This can happen when you have an _infrastructure_ specific service (that creates your DynamoDB tables) that need to be deployed before your APIs. To do this, Seed gives you a very convenient way to configure your deployment workflow into phases.
 
 ### Deploy Phases
 

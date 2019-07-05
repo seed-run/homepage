@@ -1,6 +1,7 @@
 ---
 layout: post
 title: A More Effective Change Set
+categories: news
 author: frank
 ---
 

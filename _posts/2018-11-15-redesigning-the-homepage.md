@@ -2,6 +2,7 @@
 layout: post
 title: Redesigning the Homepage
 image: /assets/social-cards/redesigning-the-homepage.jpg
+categories: news
 author: frank
 ---
 

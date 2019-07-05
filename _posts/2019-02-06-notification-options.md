@@ -1,6 +1,7 @@
 ---
 layout: post
 title: Notification Options
+categories: news
 author: jack
 ---
 

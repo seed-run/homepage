@@ -1,6 +1,7 @@
 ---
 layout: post
 title: Improving the Build Logs
+categories: news
 author: frank
 ---
 

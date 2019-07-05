@@ -1,6 +1,7 @@
 ---
 layout: post
 title: A Bigger Free Tier
+categories: news
 author: jay
 ---
 

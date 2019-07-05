@@ -2,6 +2,7 @@
 layout: post
 title: Seed Integrates with Okta
 image: /assets/social-cards/seed-integrates-okta.png
+categories: news
 author: jack
 ---
 

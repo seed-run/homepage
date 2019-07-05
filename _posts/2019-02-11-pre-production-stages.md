@@ -1,6 +1,7 @@
 ---
 layout: post
 title: Pre-Production Stages
+categories: news
 author: frank
 ---
 

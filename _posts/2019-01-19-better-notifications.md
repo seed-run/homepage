@@ -1,6 +1,7 @@
 ---
 layout: post
 title: Better Notifications
+categories: news
 author: frank
 ---
 

@@ -1,6 +1,7 @@
 ---
 layout: post
 title: Build Issues on April 8th, 2019
+categories: news
 author: jay
 ---
 

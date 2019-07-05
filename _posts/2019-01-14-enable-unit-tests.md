@@ -1,6 +1,7 @@
 ---
 layout: post
 title: Enable Unit Tests
+categories: news
 author: jack
 ---
 

@@ -2,6 +2,7 @@
 layout: post
 title: Integrating with JFrog
 image: /assets/social-cards/integrating-with-jfrog.png
+categories: news
 author: jack
 ---
 

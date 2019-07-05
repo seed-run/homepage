@@ -1,6 +1,7 @@
 ---
 layout: post
 title: Downstream Stage Details While Promoting
+categories: news
 author: jack
 ---
 

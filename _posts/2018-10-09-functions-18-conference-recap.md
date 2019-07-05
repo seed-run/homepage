@@ -1,6 +1,7 @@
 ---
 layout: post
 title: Functions 18 Conference Recap
+categories: community
 author: stephie
 ---
 

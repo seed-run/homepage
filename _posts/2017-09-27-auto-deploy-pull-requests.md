@@ -1,6 +1,7 @@
 ---
 layout: post
 title: Auto-Deploy Pull Requests
+categories: news
 author: frank
 ---
 

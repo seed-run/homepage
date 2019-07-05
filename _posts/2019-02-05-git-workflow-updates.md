@@ -1,6 +1,7 @@
 ---
 layout: post
 title: Git Workflow Updates
+categories: news
 author: frank
 ---
 

@@ -1,10 +1,11 @@
 ---
 layout: post
-title: Mono Repo Support in Beta
+title: Monorepo Support in Beta
+categories: news
 author: jay
 ---
 
-Mono-repo support is now in beta! You can now specify that a project is a part of a mono-repo project while adding it to Seed.
+monorepo support is now in beta! You can now specify that a project is a part of a monorepo project while adding it to Seed.
 
 Once the beta period is complete you'll be able to easily add multiple services to your existing projects.
 

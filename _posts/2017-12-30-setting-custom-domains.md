@@ -1,6 +1,7 @@
 ---
 layout: post
 title: Setting Custom Domains
+categories: news
 author: jay
 ---
 

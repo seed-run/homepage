@@ -4,7 +4,7 @@ title: Getting Started with Seed
 description: Documentation for using Seed to build and deploy Serverless apps
 ---
 
-Seed is a fully-configured code pipeline for building and deploying Serverless apps on AWS. Simply add your Git repository and IAM credentials and your entire team can `git push` to deploy updates to your Serverless app.
+Seed is a fully managed CI/CD pipeline for Serverless apps on AWS. Simply add your Git repository and IAM credentials and your entire team can `git push` to deploy updates to your Serverless app.
 
 Seed currently supports the following:
 

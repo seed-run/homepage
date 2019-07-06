@@ -16,9 +16,8 @@ const dynamodb = new AWS.DynamoDB.DocumentClient();
 const sns = new AWS.SNS();
 
 export async function main(event, context) {
+  await dynamodb.put({ ... }).promise();
   await sns.publish({ ... }).promise();
-  await dynamodb.put({ ... }).promise();
-  await dynamodb.put({ ... }).promise();
 }
 ```
 
@@ -27,7 +26,7 @@ Now, a user makes an API call and gets a 500 HTTP response, there can be many po
  2. did API Gateway invoked the Lambda function successfully?
  3. did the Lambda function experienced a cold start and caused the request timeout?
  4. did SNS fail to publish the message?
- 5. did DynamoDB fail? If so, the first query or the second?
+ 5. did DynamoDB query fail?
 
 You have to rely on a per-service or per-resource process to track the request down as it travels across various services. This makes it difficult to correlate the various pieces of data and create an end-to-end picture of a request from the time it originates at the end-user or service to when a response is returned by your application.
 
@@ -35,14 +34,13 @@ You have to rely on a per-service or per-resource process to track the request d
 ### What can X-Ray do?
 
 X-Ray can record a thorough chronological trace for your API requests including starting from API Gateway receiving the request all the way to sending a response back to the user. A trace looks like:
-
-[ SCREEN SHOT OF TRACE ]
+![](https://i.imgur.com/yyf8Oc5.png)
 
 It shows:
 - when the request is received by API Gateway, and how long it took
 - when the request is received by Lambda
 - how long it took SNS to publish the request
-- how long each DynamoDB query took and the type of the query
+- how long DynamoDB query took and the type of the query
 
 
 ### How does it work?

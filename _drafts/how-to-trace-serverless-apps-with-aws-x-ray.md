@@ -118,4 +118,4 @@ This time:
 - Out of the 185ms, DynamoDB query took 73ms and SNS publish call took 98ms
 
 
-The full version of the example code can be found here [repo]()
+The full version of the example code can be found here - [serverless-example-with-xray](https://github.com/seed-run/serverless-example-with-xray)

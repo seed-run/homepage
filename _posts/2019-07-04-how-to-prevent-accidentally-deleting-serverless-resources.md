@@ -1,7 +1,7 @@
 ---
 layout: post
 title: How to prevent accidentally deleting Serverless resources
-image: /assets/social-cards/prevent-accidental-deletes.png
+image: /assets/social-cards/prevent-accidental-delete.png
 description: In this post we'll look at how to prevent Serverless resources from being accidentally deleted by generating change sets, setting the DeletionPolicy to Retain, and enabling stack termination protection.
 categories: tips
 author: jack

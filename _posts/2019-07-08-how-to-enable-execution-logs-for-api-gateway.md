@@ -14,6 +14,8 @@ Just a quick recap, there are two ways of logging API Gateway:
 - Execution logs: Logs with detailed information as API Gateway goes through each step of processing the request. Useful for tracing individual requests. Can generate lots of log data, resulting in a large CloudWatch bill.
 - Access logs: Logs of who has accessed your API. Each request generates a single entry in the logs, similar to NGINX logs. Useful for sending to an analytics tool to gather metrics.
 
+We have a detailed post looking at [the differences between execution logs and access logs here]({% link _posts/2019-07-05-whats-the-difference-between-access-logs-and-execution-logs-in-api-gateway.md %}).
+
 Let's start by looking at how to enable execution logs.
 
 

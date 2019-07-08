@@ -34,7 +34,7 @@ Let's start by looking at execution logs.
 
 ![CloudWatch API Gateway Execution Logs details](/assets/blog/whats-the-difference-between-access-and-execution-logs-for-api-gateway/cloudwatch-api-gateway-execution-logs-details.png)
 
-So we recommend being selective while turning on execution logs. We will be looking at how to turn on execution logs in an upcoming post.
+So we recommend being selective while turning on execution logs. We have [a post detailing how to do that here]({% link _posts/2019-07-08-how-to-enable-execution-logs-for-api-gateway.md %}).
 
 
 ### Access logs
@@ -71,4 +71,4 @@ An example of the log format in JSON looks like:
 
 ![CloudWatch API Gateway Access Logs details](/assets/blog/whats-the-difference-between-access-and-execution-logs-for-api-gateway/cloudwatch-api-gateway-access-logs-details.png)
 
-We recommend keeping your access logs turned on. It'll come in handy when you need to look up some information retroactively. This is similar to the web server logs from your pre-serverless days. We will be looking at how to turn on your access logs in an upcoming post.
+We recommend keeping your access logs turned on. It'll come in handy when you need to look up some information retroactively. This is similar to the web server logs from your pre-serverless days. We have a detailed post on [how to turn on your access logs here]({% link _posts/2019-07-08-how-to-enable-access-logs-for-api-gateway.md %}).

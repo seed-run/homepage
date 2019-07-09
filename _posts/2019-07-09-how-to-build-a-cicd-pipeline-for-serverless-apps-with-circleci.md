@@ -7,7 +7,7 @@ categories: tips
 author: frank
 ---
 
-At [Seed](/), we've built a fully managed CI/CD pipeline for [Serverless Framework](https://serverless.com) apps on AWS. So you can imagine we've quite a bit of experience with the various CI/CD services. Over the next few weeks we are going to dive into some of the most popular services out there. We'll take a detailed look at what it takes to run your own CI/CD pipeline for Serverless apps. This'll give you a good feel for not just how things work but how Seed makes your life easier!
+At [Seed](/), we've built a fully managed CI/CD pipeline for [Serverless Framework](https://serverless.com) apps on AWS. So you can imagine we have quite a bit of experience with the various CI/CD services. Over the next few weeks we are going to dive into some of the most popular services out there. We'll take a detailed look at what it takes to run your own CI/CD pipeline for Serverless apps. This'll give you a good feel for not just how things work but how Seed makes your life easier!
 
 Today we'll be looking at [CircleCI](https://circleci.com). You might have come across tutorials that help you set up a CI/CD pipeline for Serverless on Circle. However, most of these are way too simplistic and don't talk about how to deploy large real-world Serverless apps.
 
@@ -49,7 +49,7 @@ Also, worth mentioning that while this guide is helping you create a fully-funct
 
 - A [CircleCI account](https://circleci.com).
 - AWS credentials (Access Key Id and Secret Access Key) of the AWS account you are going to deploy to. Follow [this guide](https://serverless-stack.com/chapters/create-an-iam-user.html) to create one.
-- A monorepo Serverless app in a GitHub repo. Go to the [template repo](https://github.com/seed-run/serverless-template-monorepo) and click on **Use this template** to clone it to your account.
+- A monorepo Serverless app in a GitHub repo. Head over to our [template repo](https://github.com/seed-run/serverless-template-monorepo) and click on **Use this template** to clone it to your account.
 
 ![Use Seed monorepo Serverless GitHub template](/assets/blog/how-to-build-a-cicd-pipeline-for-serverless-apps-with-circleci/use-seed-monorepo-serverless-github-template.png)
 

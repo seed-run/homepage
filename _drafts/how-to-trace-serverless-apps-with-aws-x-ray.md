@@ -10,7 +10,7 @@ author: jack
 
 AWS X-Ray is a service that records and visualizes requests made by your application. It provides an end-to-end view of requests as they travel through your Serverless application, and shows a map of your application's underlying components.
 
-To get a better understanding of how X-Ray works and why you should consider using it, we've got a detailed post here.
+To get a better understanding of how X-Ray works and why you should consider using it, we've got [a detailed post here]({% link _posts/2019-07-10-what-is-aws-x-ray.md %}).
 
 In this post we will show you how to set up AWS X-Ray to trace API requests and Lambda invocations for your Serverless Framework applications.
 

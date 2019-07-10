@@ -130,7 +130,7 @@ jobs:
       - save_cache:
           paths:
             - node_modules
-            - services/users-api/node_modules
+            - << parameters.service_path >>/node_modules
           key: dependencies-cache-{{ checksum "package-lock.json" }}-{{ checksum "<< parameters.service_path >>/package-lock.json" }}
 
 workflows:
@@ -237,7 +237,7 @@ jobs:
       - save_cache:
           paths:
             - node_modules
-            - services/users-api/node_modules
+            - << parameters.service_path >>/node_modules
           key: dependencies-cache-{{ checksum "package-lock.json" }}-{{ checksum "<< parameters.service_path >>/package-lock.json" }}
 
 workflows:
@@ -380,7 +380,7 @@ jobs:
       - save_cache:
           paths:
             - node_modules
-            - services/users-api/node_modules
+            - << parameters.service_path >>/node_modules
           key: dependencies-cache-{{ checksum "package-lock.json" }}-{{ checksum "<< parameters.service_path >>/package-lock.json" }}
 
 workflows:
@@ -524,7 +524,7 @@ jobs:
       - save_cache:
           paths:
             - node_modules
-            - services/users-api/node_modules
+            - << parameters.service_path >>/node_modules
           key: dependencies-cache-{{ checksum "package-lock.json" }}-{{ checksum "<< parameters.service_path >>/package-lock.json" }}
 
   remove-service:
@@ -564,7 +564,7 @@ jobs:
       - save_cache:
           paths:
             - node_modules
-            - services/users-api/node_modules
+            - << parameters.service_path >>/node_modules
           key: dependencies-cache-{{ checksum "package-lock.json" }}-{{ checksum "<< parameters.service_path >>/package-lock.json" }}
 
 workflows:

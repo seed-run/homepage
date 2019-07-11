@@ -63,9 +63,9 @@
 <!-- Start sidebar ToC -->
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.0.0/jquery.min.js"></script>
 <script type="text/javascript">
-  $('#docs-sidebar ul:has(li.active)').addClass('open').prev().addClass('open');
+  $('.docs-sidebar ul:has(li.active)').addClass('open').prev().addClass('open');
 
-  $('#docs-sidebar p.title a').click(function(e) {
+  $('.docs-sidebar p.title a').click(function(e) {
     e.preventDefault();
     $(this).parent().toggleClass('open').next().toggleClass('open');
   });

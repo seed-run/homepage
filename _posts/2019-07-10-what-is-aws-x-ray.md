@@ -63,4 +63,4 @@ This might seem expensive but you can control how much you want to trace via a s
 
 For example, you might want to disable sampling and trace for all requests or calls that modify state or handle user accounts or transactions. For high-volume read-only calls, like background polling, health checks, or connection maintenance, you can sample at a low rate and still get enough data to see any issues that might arise.
 
-In an upcoming article we'll be covering how to enable AWS X-Ray and how to read a trace.
+We cover [how to enable AWS X-Ray and how to read a trace in this post here]({% link _posts/2019-07-11-how-to-trace-serverless-apps-with-aws-x-ray.md %}).

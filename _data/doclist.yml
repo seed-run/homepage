@@ -43,6 +43,8 @@ toc:
         url: /docs/using-serverless-plugins.html
       - page: Private npm modules
         url: /docs/private-npm-modules.html
+      - page: Integrating with Serverless Enterprise
+        url: /docs/integrating-with-serverless-enterprise.html
       - page: Integrating with JFrog
         url: /docs/integrating-with-jfrog.html
       - page: Deleting resources

@@ -1,10 +1,10 @@
 ---
 layout: post
 title: How to buy a domain name on Amazon Route 53 for my Serverless API?
-image: assets/social-cards/aws-xray.png
+image: assets/social-cards/custom-domains.png
 description: In this post we'll look at how you can purchase your own domain name for your Serverless API using Amazon Route 53.
 categories: tips
-author: jack
+author: frank
 ---
 
 When you deploy your Serverless application with API Gateway, AWS auto-generates an URL for you with a default AWS domain. Over the next couple of posts we'll be looking at how to buy and manage custom domains for your Serverless API.

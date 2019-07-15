@@ -188,7 +188,7 @@ Now that we have the basics up and running, let's look at how to deploy our app 
 
 ### 2. How to deploy to multiple AWS accounts
 
-You might be curious as to why we would want to deploy to multiple AWS accounts. It's good practice to keep your development and production environments in separate accounts. By separating them completely, you can secure access to your production environment. This will reduce the likelihood of accidentally removing resources from it while developing.
+You might be curious as to why we would want to deploy to multiple AWS accounts. It's a good practice to keep your development and production environments in separate accounts. By separating them completely, you can secure access to your production environment. This will reduce the likelihood of accidentally removing resources from it while developing.
 
 To deploy to another account, repeat the earlier step of creating a **Development** context, and create a **Production** context with the AWS Access Key Id and Secret Access Key of your production AWS account.
 
@@ -682,7 +682,7 @@ And that's it! Let's wrap things up next.
 
 #### Next steps
 
-It took us a few steps but we now have a fully-functional CI/CD pipeline for our monorepo Serverless app. It supports a PR based workflow and even cleans up, once a PR is merged. The repo used in this guide is available [here with the complete CircleCI configs](https://github.com/seed-run/serverless-example-monorepo-with-circleci).
+It took us a few steps but we now have a fully-functional CI/CD pipeline for our monorepo Serverless app. It supports a PR based workflow and even cleans up once a PR is merged. The repo used in this guide is available [here with the complete CircleCI configs](https://github.com/seed-run/serverless-example-monorepo-with-circleci).
 
 Some helpful next steps would be to auto-create custom domains for your API endpoints, send out Slack or email notifications, generate CloudFormation change sets and add a manual confirmation step when pushing to production, etc. You also might want to design your workflow to accommodate for any dependencies your services might have. These are cases where the output from one service is use in another. 
 

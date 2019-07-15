@@ -7,17 +7,15 @@ categories: tips
 author: frank
 ---
 
-At [Seed](/), we've built a fully managed CI/CD pipeline for [Serverless Framework](https://serverless.com) apps on AWS. So you can imagine we have quite a bit of experience with the various CI/CD services. Over the next few weeks we are going to dive into some of the most popular services out there. We'll take a detailed look at what it takes to run your own CI/CD pipeline for Serverless apps. This'll give you a good feel for not just how things work but how Seed makes your life easier!
+In one of our [previous posts we looked at how to build a CI/CD pipeline for Serverless apps on AWS with CircleCI]({% link _posts/2019-07-09-how-to-build-a-cicd-pipeline-for-serverless-apps-with-circleci.md %}). Today, we'll look at how to do the same with [Travis CI](http://travis-ci.com). The purpose of these posts is to dive deep into real-world CI/CD setups, something which most of the tutorials out there skip. We'll try to illustrate how to set up something similar to [Seed](/) but using Travis CI instead. It'll also give a you chance to see how Seed makes your life easier!
 
-Today we'll be looking at [Travis CI](https://travis-ci.com). You might have come across tutorials that help you set up a CI/CD pipeline for Serverless on Travis. However, most of these are way too simplistic and don't talk about how to deploy large real-world Serverless apps.
-
-Instead we'll be working with a more accurate real-world setup comprising of:
+To cover a real-world setup we'll be using a:
 
 - A monorepo Serverless app
 - With multiple services
 - Deployed to separate development and production AWS accounts
 
-As a refresher, a monorepo Serverless app is one where multiple Serverless services are in subdirectories with their own `serverless.yml` file. Here is [the repo of the app that we'll be configuring](https://github.com/seed-run/serverless-example-monorepo-with-travisci) you can refer to. The directory structure might look something like this:
+As a refresher, a monorepo Serverless app is one where multiple Serverless services are in subdirectories with their own `serverless.yml` file. Here is [a sample repo for the app that we'll be configuring](https://github.com/seed-run/serverless-example-monorepo-with-travisci). The directory structure might look something like this:
 
 ```
 /
@@ -43,28 +41,29 @@ As a refresher, a monorepo Serverless app is one where multiple Serverless servi
 
 Note that, this guide is structured to work in standalone steps. So if you only need to get to be able to deploy to multiple AWS accounts, you can stop after step 2.
 
-Also, worth mentioning that while this guide is helping you create a fully-functional CI/CD pipeline for Serverless; all of these features are available in [Seed](/) without any configuration or scripting.
-
 ### Pre-requisites
 
 - A [Travis CI account](https://travis-ci.com).
 - AWS credentials (Access Key Id and Secret Access Key) of the AWS account you are going to deploy to. Follow [this guide](https://serverless-stack.com/chapters/create-an-iam-user.html) to create one.
 - A monorepo Serverless app in a GitHub repo. Head over to our [template repo](https://github.com/seed-run/serverless-template-monorepo) and click on **Use this template** to clone it to your account.
 
-![Use Seed monorepo Serverless GitHub template](https://d33wubrfki0l68.cloudfront.net/0d9d4d964139682f8b5cf2f53666725a2eb51c3a/3e8df/assets/blog/how-to-build-a-cicd-pipeline-for-serverless-apps-with-circleci/use-seed-monorepo-serverless-github-template.png)
+![Use Seed monorepo Serverless GitHub template](/assets/blog/how-to-build-a-cicd-pipeline-for-serverless-apps-with-travis-ci/use-seed-monorepo-serverless-github-template.png)
 
 ### 1. How to deploy your monorepo app on Git push
 
 Let's start by configuring the Travis side of things.
 
-Go into your [Travis CI account](https://travis-ci.com). Click on your profile and select **Activate**.
-![](https://i.imgur.com/hVzhSAq.png)
+Go into your [Travis CI account](https://travis-ci.com). Head over to your profile and click **Activate**.
 
-Select the repositories you want to build on Travis, and select **Approve & Install**.
-![](https://i.imgur.com/jc3Dqhk.png)
+![Activate Travis CI account](/assets/blog/how-to-build-a-cicd-pipeline-for-serverless-apps-with-travis-ci/activate-travis-ci-account.png)
 
-Click on **Settings** of the repository you just added.
-![Add Environment Variable in Travis CI](https://i.imgur.com/0O3B4Iy.png)
+Select the repository you want to build on Travis, and select **Approve & Install**.
+
+![Approve and Install repository in Travis CI account](/assets/blog/how-to-build-a-cicd-pipeline-for-serverless-apps-with-travis-ci/approve-and-install-repository-in-travis-ci-account.png)
+
+Click on **Settings** for the repository you just added.
+
+![Click-on-repository-settings-in-Travis-CI](/assets/blog/how-to-build-a-cicd-pipeline-for-serverless-apps-with-travis-ci/click-on-repository-settings-in-travis-ci.png)
 
 Scroll down to the **Environment Variables** section, and add a variable with:
   - Name: **AWS_ACCESS_KEY_ID**
@@ -74,11 +73,11 @@ Repeat the previous step and create another variable with:
   - Name: **AWS_SECRET_ACCESS_KEY**
   - Value: Secret Access Key of the IAM user
 
-![Add AWS Credentials as Environment Variables in Travis CI](https://i.imgur.com/WKDrqaK.png)
+![Add-AWS-Credentials-as-Environment-Variables-in-Travis-CI](/assets/blog/how-to-build-a-cicd-pipeline-for-serverless-apps-with-travis-ci/add-aws-credentials-as-environment-variables-in-travis-ci.png)
 
 Go to the cloned repository and click on **Create new file**.
 
-![Create new file in cloned GitHub repo](https://d33wubrfki0l68.cloudfront.net/9e001b8409492bd8e9ddd3845d94f2d664e7d691/478be/assets/blog/how-to-build-a-cicd-pipeline-for-serverless-apps-with-circleci/create-new-file-in-cloned-github-repo.png)
+![Create new file in cloned GitHub repo](/assets/blog/how-to-build-a-cicd-pipeline-for-serverless-apps-with-travis-ci/create-new-file-in-cloned-github-repo.png)
 
 Name the new file `.travis.yml` and paste the following:
 
@@ -133,9 +132,11 @@ Let's quickly go over what we are doing here:
 Next, scroll to the bottom and click **Commit new file**.
 
 Back in Travis, you will see the 3 jobs that are currently running.
+
 ![View running jobs in Travis CI](https://i.imgur.com/iXPp8Cg.png)
 
 Click on a job. You will see the output for each of the steps. Scroll down to the **Deploy application** section, and you should see the output for the `serverless deploy -s master` command.
+
 ![View build logs in Travis CI](https://i.imgur.com/3mJQrdt.png)
 
 Now that we have the basics up and running, let's look at how to deploy our app to multiple AWS accounts.
@@ -143,13 +144,15 @@ Now that we have the basics up and running, let's look at how to deploy our app 
 
 ### 2. How to deploy to multiple AWS accounts
 
-You might be curious as to why we would want to deploy to multiple AWS accounts. It's good practice to keep your development and production environments in separate accounts. By separating them completely, you can secure access to your production environment. This will reduce the likelihood of accidentally removing resources from it while developing.
+You might be curious as to why we would want to deploy to multiple AWS accounts. It's a good practice to keep your development and production environments in separate accounts. By separating them completely, you can secure access to your production environment. This will reduce the likelihood of accidentally removing resources from it while developing.
 
-To deploy to another account, repeat the earlier step of creating the environment variables, and create two more with the AWS Access Key Id and Secret Access Key of your production AWS account. Name them
+To deploy to another account, repeat the earlier step of creating the environment variables, and create two more with the AWS Access Key Id and Secret Access Key of your production AWS account. Name them:
+
 - **AWS_ACCESS_KEY_ID_PRODUCTION**, and
 - **AWS_SECRET_ACCESS_KEY_PRODUCTION**
 
-To keep variable naming clean, rename the previously created **AWS_ACCESS_KEY_ID** and **AWS_SECRET_ACCESS_KEY** to **AWS_ACCESS_KEY_ID_DEVELOPMENT** and **AWS_SECRET_ACCESS_KEY_DEVELOPMENT** by removing and re-creating them.
+To prevent any confusion, rename the previously created **AWS_ACCESS_KEY_ID** and **AWS_SECRET_ACCESS_KEY** to **AWS_ACCESS_KEY_ID_DEVELOPMENT** and **AWS_SECRET_ACCESS_KEY_DEVELOPMENT** by removing and re-creating them.
+
 ![Add Production AWS Credentials as Environment Variables in Travis CI](https://i.imgur.com/dj3ghqj.png)
 
 Go to your GitHub repo and open `.travis.yml`. Replace it with the following:
@@ -358,13 +361,8 @@ jobs:
 {% endraw %}
 
 Let's go over the changes we've made.
-  - We added a **Check Pull Request** step. We check the built-in environment variable **$TRAVIS_PULL_REQUEST** to decide if the current branch belongs to a pull request. If it does, then we set an environment variable called **$PR_NUMBER** with the pull request id.
-  - We also added a **Merge Pull Request** step, where we checkout the merged version of code from GitHub.
-  - We then change the **Deploy application** step to deploy to the name the stage **pr#** when deploying a pull request.
-
-:
-Travis provides a convenient environment variable named **TRAVIS_PULL_REQUEST** with the pull request number. We will set the stage name to **pr#** and use the **Development** AWS credentials when deploying a pull request.
-
+  - Travis provides a convenient environment variable named **$TRAVIS_PULL_REQUEST** with the pull request number.
+  - We will set the stage name to **pr#** and use the **Development** AWS credentials when deploying a pull request.
 
 Commit these changes to `.travis.yml`.
 
@@ -527,7 +525,8 @@ jobs:
 
 Let's look at what we changed here:
 
-  - We created a new job called **remove_service_job**. It's similar to our **deploy_service_job** job, except it runs `serverless remove`. It assumes the name of the tag is of the format `rm-stage-STAGE_NAME`. It parses for the stage name after the 2nd hyphen.
+  - We created a new job called **remove_service_job**.
+  - It's similar to our **deploy_service_job** job, except it runs `serverless remove`. It assumes the name of the tag is of the format `rm-stage-STAGE_NAME`. It parses for the stage name after the 2nd hyphen.
   - We also defined 3 jobs that runs the **remove_service_job** for each service, while passing in the path of the service.
 
 To test this, try tagging the pull request branch before you close the PR.
@@ -538,14 +537,15 @@ $ git push --tags
 ```
 
 You'll notice that the **pr1** stage will be removed from your development account.
-![View remove services Workflow in Travis](https://i.imgur.com/3x9HdoX.png)
+
+![View-remove-services-job-in-Travis-CI](/assets/blog/how-to-build-a-cicd-pipeline-for-serverless-apps-with-travis-ci/view-remove-services-job-in-travis-ci.png)
 
 And that's it! Let's wrap things up next.
 
 #### Next steps
 
-It took us a few steps but we now have a fully-functional CI/CD pipeline for our monorepo Serverless app. It supports a PR based workflow and even cleans up, once a PR is merged. The repo used in this guide is available [here with the complete Travis CI configs](https://github.com/seed-run/serverless-example-monorepo-with-travisci).
+It took us a few steps but we now have a fully-functional CI/CD pipeline for our monorepo Serverless app. It supports a PR based workflow and even cleans up once a PR is merged. The repo used in this guide is available [here with the complete Travis CI configs](https://github.com/seed-run/serverless-example-monorepo-with-travisci).
 
 Some helpful next steps would be to auto-create custom domains for your API endpoints, send out Slack or email notifications, generate CloudFormation change sets and add a manual confirmation step when pushing to production, etc. You also might want to design your workflow to accommodate for any dependencies your services might have. These are cases where the output from one service is use in another. 
 
-Finally, if you are not familiar with Seed, it's worth noting that it'll do all of the above for you out of the box! And you don't need to write up a build spec or do any scripting.
+Finally, if you are not familiar with [Seed](/), it's worth noting that it'll do all of the above for you out of the box! And you don't need to write up a build spec or do any scripting.

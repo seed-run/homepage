@@ -7,7 +7,7 @@ categories: tips
 author: frank
 ---
 
-When you deploy your Serverless application with API Gateway, AWS auto-generates an URL for you with a default AWS domain. Over the next couple of posts we'll be looking at how to buy and manage custom domains for your Serverless API.
+When you deploy your Serverless application with API Gateway, AWS auto-generates an URL for you with a default AWS domain. In an upcoming post we'll be looking at how to buy and manage custom domains for your Serverless API.
 
 You'll recall that the auto-generated API Gateway endpoints have the following format:
 

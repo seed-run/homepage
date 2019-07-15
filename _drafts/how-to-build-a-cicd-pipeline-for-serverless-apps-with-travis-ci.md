@@ -133,11 +133,11 @@ Next, scroll to the bottom and click **Commit new file**.
 
 Back in Travis, you will see the 3 jobs that are currently running.
 
-![View running jobs in Travis CI](https://i.imgur.com/iXPp8Cg.png)
+![View-running-jobs-in-Travis-CI](/assets/blog/how-to-build-a-cicd-pipeline-for-serverless-apps-with-travis-ci/view-running-jobs-in-travis-ci.png)
 
 Click on a job. You will see the output for each of the steps. Scroll down to the **Deploy application** section, and you should see the output for the `serverless deploy -s master` command.
 
-![View build logs in Travis CI](https://i.imgur.com/3mJQrdt.png)
+![View-build-logs-in-Travis-CI](/assets/blog/how-to-build-a-cicd-pipeline-for-serverless-apps-with-travis-ci/view-build-logs-in-travis-ci.png)
 
 Now that we have the basics up and running, let's look at how to deploy our app to multiple AWS accounts.
 
@@ -153,7 +153,7 @@ To deploy to another account, repeat the earlier step of creating the environmen
 
 To prevent any confusion, rename the previously created **AWS_ACCESS_KEY_ID** and **AWS_SECRET_ACCESS_KEY** to **AWS_ACCESS_KEY_ID_DEVELOPMENT** and **AWS_SECRET_ACCESS_KEY_DEVELOPMENT** by removing and re-creating them.
 
-![Add Production AWS Credentials as Environment Variables in Travis CI](https://i.imgur.com/dj3ghqj.png)
+![Add-Production-AWS-Credentials-as-Environment-Variables-in-Travis-CI](/assets/blog/how-to-build-a-cicd-pipeline-for-serverless-apps-with-travis-ci/add-production-aws-credentials-as-environment-variables-in-travis-ci.png)
 
 Go to your GitHub repo and open `.travis.yml`. Replace it with the following:
 

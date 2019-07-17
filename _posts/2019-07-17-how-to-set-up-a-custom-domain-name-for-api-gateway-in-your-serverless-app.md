@@ -31,7 +31,8 @@ A solution to this problem is to use a custom domain for your API and map it to 
 
 ### Pre-requisites
 
-1. A domain name on AWS Route 53. We are going to use **api.seed-frank-playground.download** as an example in this post. If you don't have a domain name, you can purchase one on Route 53, by following the steps in our post on how to buy a domain name with Amazon Route 53. 
+1. A domain name on AWS Route 53. We are going to use **api.seed-frank-playground.download** as an example in this post. If you don't have a domain name, you can purchase one on Route 53, by following the steps in [our post on how to buy a domain name with Amazon Route 53]({% link _posts/2019-07-15-how-to-buy-a-domain-name-on-amazon-route-53-for-my-serverless-api.md %}).
+
 2. A Serverless Framework project with an API Gateway endpoint. Here's a sample repo that you can fork, [serverless-example-with-custom-domain](https://github.com/seed-run/serverless-example-with-custom-domain).
 
 ### AWS services used

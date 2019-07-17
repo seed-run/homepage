@@ -7,7 +7,7 @@ categories: tips
 author: frank
 ---
 
-When you deploy your Serverless application with API Gateway, AWS auto-generates an URL for you with a default AWS domain. In an upcoming post we'll be looking at how to buy and manage custom domains for your Serverless API.
+When you deploy your Serverless application with API Gateway, AWS auto-generates an URL for you with a default AWS domain. In [an upcoming post we'll be looking at how to manage custom domains for your Serverless API]({% link _posts/2019-07-17-how-to-set-up-a-custom-domain-name-for-api-gateway-in-your-serverless-app.md %}).
 
 You'll recall that the auto-generated API Gateway endpoints have the following format:
 
@@ -51,4 +51,4 @@ Finally, review your details and confirm the purchase by hitting **Complete Purc
 
 ![Confirm Route 53 domain purchase](/assets/blog/how-to-buy-a-domain-name-on-amazon-route-53-for-my-serverless-api/confirm-route-53-domain-purchase.png)
 
-And that's it! In the next post, we'll look at how to configure your app to use the new domain.
+And that's it! In the [next post, we'll look at how to configure your app to use the new domain]({% link _posts/2019-07-17-how-to-set-up-a-custom-domain-name-for-api-gateway-in-your-serverless-app.md %}).

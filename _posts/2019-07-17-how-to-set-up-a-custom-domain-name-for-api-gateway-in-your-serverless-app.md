@@ -1,6 +1,6 @@
 ---
 layout: post
-title: How to set up a custom domain name for API Gateway in your Serverless app?
+title: How to set up a custom domain name for API Gateway in your Serverless app
 image: assets/social-cards/custom-domains.png
 description: In this post we'll look at how to set up a custom domain name for API Gateway in your Serverless app. We'll be purchasing a domain with Amazon Route 53, configuring a SSL certificate with AWS Certificate Manager, and using the serverless-domain-manager plugin to configure our Serverless app.
 categories: tips

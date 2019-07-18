@@ -1,6 +1,6 @@
 ---
 layout: post
-title: How to buy a domain name on Amazon Route 53 for my Serverless API?
+title: How to buy a domain name on Amazon Route 53 for my Serverless API
 image: assets/social-cards/custom-domains.png
 description: In this post we'll look at how you can purchase your own domain name for your Serverless API using Amazon Route 53.
 categories: tips

@@ -1,6 +1,6 @@
 ---
 layout: post
-title: How to trace Serverless apps with AWS X-Ray?
+title: How to trace Serverless apps with AWS X-Ray
 image: assets/social-cards/aws-xray.png
 description: In this post we will show you how to set up AWS X-Ray to trace API requests and Lambda invocations for your Serverless Framework applications.
 categories: tips

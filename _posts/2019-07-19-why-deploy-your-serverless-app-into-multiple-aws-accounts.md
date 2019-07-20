@@ -7,6 +7,7 @@ categories: tips
 author: jack
 ---
 
+In this post we'll be looking at why deploying your Serverless app to multiple AWS accounts is a good practice.
 
 The general idea is to deploy each of your environments to a separate AWS account. Or at the very least keep your _production_ environment separate from the rest of your environments (_dev_, _staging_, _QA_, etc.).
 

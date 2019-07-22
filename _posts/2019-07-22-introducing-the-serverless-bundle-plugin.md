@@ -87,6 +87,6 @@ The serverless-bundle plugin also helps run your tests. It applies the same conf
 
 ### Roadmap
 
-We included the serverless-bundle plugin in our ever popular [Serverless Node.js Starter](https://github.com/AnomalyInnovations/serverless-nodejs-starter). By open-sourcing we want to continue to build on it to help tackle a few of the other local development issues that Serverless folks tend to run into. We want to do this while minimizing the amount of configuration and complexity that developers need to manage.
+We included the serverless-bundle plugin in our ever popular [Serverless Node.js Starter](https://github.com/AnomalyInnovations/serverless-nodejs-starter). If your project is based on an older version of our Node.js starter, we have [upgrade instructions here](https://github.com/AnomalyInnovations/serverless-nodejs-starter/releases/tag/v2.0). By open-sourcing we want to continue to build on it to help tackle a few of the other local development issues that Serverless folks tend to run into. We want to do this while minimizing the amount of configuration and complexity that developers need to manage.
 
 If you'd like to help contribute or support the project, make sure to [star the serverless-bundle page on GitHub](https://github.com/AnomalyInnovations/serverless-bundle).

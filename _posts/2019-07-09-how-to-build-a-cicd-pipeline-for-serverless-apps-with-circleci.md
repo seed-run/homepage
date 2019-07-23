@@ -7,7 +7,9 @@ categories: tips
 author: frank
 ---
 
-At [Seed](/), we've built a fully managed CI/CD pipeline for [Serverless Framework](https://serverless.com) apps on AWS. So you can imagine we have quite a bit of experience with the various CI/CD services. Over the next few weeks we are going to dive into some of the most popular services out there. We'll take a detailed look at what it takes to run your own CI/CD pipeline for Serverless apps. This'll give you a good feel for not just how things work but how Seed makes your life easier!
+At [Seed](/), we've built a fully managed CI/CD pipeline for [Serverless Framework](https://serverless.com) apps on AWS. So you can imagine we have quite a bit of experience with the various CI/CD services.
+
+Over the next few weeks we are going to dive into some of the most popular services out there. We'll take a detailed look at what it takes to run your own CI/CD pipeline for Serverless apps. This'll give you a good feel for not just how things work but how Seed makes your life easier!
 
 Today we'll be looking at [CircleCI](https://circleci.com). You might have come across tutorials that help you set up a CI/CD pipeline for Serverless on Circle. However, most of these are way too simplistic and don't talk about how to deploy large real-world Serverless apps.
 
@@ -684,6 +686,6 @@ And that's it! Let's wrap things up next.
 
 It took us a few steps but we now have a fully-functional CI/CD pipeline for our monorepo Serverless app. It supports a PR based workflow and even cleans up once a PR is merged. The repo used in this guide is available [here with the complete CircleCI configs](https://github.com/seed-run/serverless-example-monorepo-with-circleci).
 
-Some helpful next steps would be to auto-create custom domains for your API endpoints, send out Slack or email notifications, generate CloudFormation change sets and add a manual confirmation step when pushing to production, etc. You also might want to design your workflow to accommodate for any dependencies your services might have. These are cases where the output from one service is use in another. 
+Some helpful next steps would be to auto-create custom domains for your API endpoints, send out Slack or email notifications, generate CloudFormation change sets and add a manual confirmation step when pushing to production, etc. You also might want to design your workflow to accommodate for any dependencies your services might have. These are cases where the output from one service is used in another. 
 
 Finally, if you are not familiar with Seed, it's worth noting that it'll do all of the above for you out of the box! And you don't need to write up a build spec or do any scripting.

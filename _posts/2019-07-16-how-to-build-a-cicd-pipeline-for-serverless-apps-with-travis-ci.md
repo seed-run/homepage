@@ -7,7 +7,9 @@ categories: tips
 author: frank
 ---
 
-In one of our [previous posts we looked at how to build a CI/CD pipeline for Serverless apps on AWS with CircleCI]({% link _posts/2019-07-09-how-to-build-a-cicd-pipeline-for-serverless-apps-with-circleci.md %}). Today, we'll look at how to do the same with [Travis CI](http://travis-ci.com). The purpose of these posts is to dive deep into real-world CI/CD setups, something which most of the tutorials out there skip. We'll try to illustrate how to set up something similar to [Seed](/) but using Travis CI instead. It'll also give a you chance to see how Seed makes your life easier!
+In one of our [previous posts we looked at how to build a CI/CD pipeline for Serverless apps on AWS with CircleCI]({% link _posts/2019-07-09-how-to-build-a-cicd-pipeline-for-serverless-apps-with-circleci.md %}). Today, we'll look at how to do the same with [Travis CI](http://travis-ci.com).
+
+The purpose of these posts is to dive deep into real-world CI/CD setups, something which most of the tutorials out there skip. We'll try to illustrate how to set up something similar to [Seed](/) but using Travis CI instead. It'll also give a you chance to see how Seed makes your life easier!
 
 To cover a real-world setup we'll be using a:
 
@@ -546,6 +548,6 @@ And that's it! Let's wrap things up next.
 
 It took us a few steps but we now have a fully-functional CI/CD pipeline for our monorepo Serverless app. It supports a PR based workflow and even cleans up once a PR is merged. The repo used in this guide is available [here with the complete Travis CI configs](https://github.com/seed-run/serverless-example-monorepo-with-travisci).
 
-Some helpful next steps would be to auto-create custom domains for your API endpoints, send out Slack or email notifications, generate CloudFormation change sets and add a manual confirmation step when pushing to production, etc. You also might want to design your workflow to accommodate for any dependencies your services might have. These are cases where the output from one service is use in another. 
+Some helpful next steps would be to auto-create custom domains for your API endpoints, send out Slack or email notifications, generate CloudFormation change sets and add a manual confirmation step when pushing to production, etc. You also might want to design your workflow to accommodate for any dependencies your services might have. These are cases where the output from one service is used in another. 
 
 Finally, if you are not familiar with [Seed](/), it's worth noting that it'll do all of the above for you out of the box! And you don't need to write up a build spec or do any scripting.

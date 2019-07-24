@@ -40,6 +40,6 @@ You don't have to setup the billing details for each account. Billing is consoli
 
 #### Summary
 
-This post should give you a good idea why it's recommended to deploy your environments to separate AWS accounts for your Serverless app. If you are currently deploying all your environments to a single AWS account, a good way to split it up would be to slowly move your non-production environments to a new AWS account. We are going to cover this is a lot more detail in an upcoming post.
+This post should give you a good idea why it's recommended to deploy your environments to separate AWS accounts for your Serverless app. If you are currently deploying all your environments to a single AWS account, a good way to split it up would be to slowly move your non-production environments to a new AWS account. We cover how to deploy your Serverless app into multiple AWS accounts [in detail here]({% link _posts/2019-07-24-how-to-deploy-your-serverless-app-into-multiple-aws-accounts.md %}).
 
 If you are looking for a way to configure your CI/CD pipelines to deploy to multiple accounts, our posts on [CircleCI]({% link _posts/2019-07-09-how-to-build-a-cicd-pipeline-for-serverless-apps-with-circleci.md %}) and [Travis CI]({% link _posts/2019-07-16-how-to-build-a-cicd-pipeline-for-serverless-apps-with-travis-ci.md %}) cover this in detail. And for [Seed](/), we have [built-in support for multiple AWS accounts]({% link _docs/iam-credentials-per-stage.md %}). So it's even easier to implement this best-practice!

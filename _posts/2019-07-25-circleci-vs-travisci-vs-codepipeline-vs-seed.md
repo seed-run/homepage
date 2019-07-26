@@ -17,7 +17,7 @@ If you've been following our blog, you might have come across our guides on how 
 - [Travis CI]({% link _posts/2019-07-16-how-to-build-a-cicd-pipeline-for-serverless-apps-with-travis-ci.md %})
 - [CodePipeline + CodeBuild]({% link _posts/2019-07-23-how-to-build-a-cicd-pipeline-for-serverless-apps-with-codepipeline-and-codebuild.md %})
 
-We are going to use the concepts we learnt on those posts to compare how these services stack up against each other. We'll be comparing these services across a few important criteria:
+We are going to use the concepts we looked at in those posts to compare how these services stack up against each other. We'll be comparing these services across a few important criteria:
 
 1. Ease of setup
 2. Operational complexity
@@ -50,7 +50,7 @@ Let's start by looking at how easy it is to setup a real-world monorepo app on e
   - No buildspec required.
   - Auto-detects services in an app.
   - Out of the box support for environments/stages and ability to associate a stage to an AWS account.
-  - A great dashboard showing the version of each service that is deployed to each stage.
+  - A dashboard showing the version of each service that is deployed to each stage.
 
 ### 2. Operational complexity
 
@@ -69,7 +69,7 @@ Once you have your CI/CD pipeline up and running, you run into cases where you n
 
 **Seed**
   - LOWEST
-  - New service can be added through the dashboard in a couple of clicks.
+  - New services can be added through the dashboard in a couple of clicks.
   - New stages/environments can be added through a couple of clicks as well.
   - New AWS accounts can be linked through the settings with ease.
 
@@ -141,7 +141,7 @@ Also common is the practice of using feature branches while developing. Let's lo
 
 **Travis/Circle**
   - NOT GOOD
-  - You need to manually remove resources in feature stages when a branch is closed. Meaning you'll need to handle failures as well.
+  - You need to manually remove resources in stages when a feature branch is closed. Meaning you'll need to handle failures as well.
 
 **Seed**
   - FULLY SUPPORTED
@@ -150,7 +150,7 @@ Also common is the practice of using feature branches while developing. Let's lo
 
 ### 7. Cost
 
-All these services have their own pricing models and it can be tricky to compare them at a glance. So it's worth taking a deeper look at them.
+Finally, let's talk about price. All these services have their own pricing models and it can be tricky to compare them at a glance. So it's worth taking a deeper look at them.
 
 **Circle/Travis**
 - Comparatively expensive.
@@ -173,7 +173,7 @@ All these services have their own pricing models and it can be tricky to compare
 Now that we know how these services compare with each other. Let's get a feel for when one is a good fit for your use-case.  
 
 #### When to use Seed
-- If you have a monorepo app with multiple services.
+- If you have a monorepo Serverless app with multiple services.
 - And the number of services in your app is growing.
 - If some of your environments/stages are short-lived (ie. you are using the PR workflow or the feature branch workflow).
 - You would like to have a birds-eye view of the pipeline for all the services across all stages.
@@ -184,11 +184,11 @@ Now that we know how these services compare with each other. Let's get a feel fo
 - You only have 1 service per app.
 - Or if you are deploying a monorepo app but paying a higher cost for concurrency isn't a concern.
 - If you are using a separate solution for CD.
-- Your Serverless app is a part of a large deployment system with complex test cases. Circle and Travis are great at handling tests for a variety of build environments. As an aside, we recommend using Seed in [**Connect CI**]({% link _docs/connect-your-own-ci.md %}) mode. So Seed will be a part of your larger deployment process and it'll wait for your Circle process to complete before deploying your app through Seed.
+- Your Serverless app is a part of a large deployment system with complex test cases. Circle and Travis are great at handling tests for a variety of build environments. As an aside, for these cases we recommend using Seed in [**Connect CI**]({% link _docs/connect-your-own-ci.md %}) mode. So Seed will be a part of your pipeline and it'll wait for your Circle process to complete before deploying your app.
 
 #### When to use CodePipeline
 - You are all-in on the AWS approach. So you can take advantage of the consolidated billing feature. You'll get 1 bill for all your services.
 - If you’re looking for a cheap CI solution,
 - Or if you don't mind the setup and operational cost involved in building and maintaining your environments.
 
-And there you have it! This post should give you a great idea of the various CI/CD options out there for your Serverless app.
+And there you have it! This post should give you a great idea of the various CI/CD options out there for your Serverless app. Feel free to [contact us](mailto:{{ site.email }}) if you have any questions about Seed or if you want to know if it's the right fit for your team.

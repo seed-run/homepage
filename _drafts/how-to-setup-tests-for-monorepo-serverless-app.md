@@ -1,4 +1,11 @@
-# How to setup tests for monorepo Serverless app?
+---
+layout: post
+title: How to setup tests for monorepo Serverless app?
+image: 
+description: 
+categories: tips
+author: jack
+---
 
 With Serverless, you are deploying both Code and Infrastructure. Infrastructure changes are not always (easily) reversible. Need to be extra careful releasing changes to production.
 

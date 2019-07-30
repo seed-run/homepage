@@ -19,7 +19,7 @@ Here you'll be prompted to select a branch you want to deploy with. Or if this s
 
 ![Trigger deploy select branch](/assets/docs/manually-deploying/trigger-deploy-select-branch.png)
 
-You can optionally force a deploy using the [Serverless Framework](https://serverless.com) `--force' flag. By default, Serverless Framework only deploys the services that have been updated. The `--force` option overrides this and deploys even if there are no changes.
+You can optionally force a deploy using the [Serverless Framework](https://serverless.com) `--force` flag. By default, Serverless Framework only deploys the services that have been updated. The `--force` option overrides this and deploys even if there are no changes.
 
 ![Force deploy option](/assets/docs/manually-deploying/force-deploy-option.png)
 

@@ -2,7 +2,7 @@
 layout: post
 title: How to structure a real-world monorepo Serverless app
 image: assets/social-cards/serverless-monorepo.png
-description: 
+description: In this post we look at how to organize monorepo Serverless Framework apps in detail. We'll also look at how to share common code and config and how to structure the serverless.yml file.
 categories: tips
 author: frank
 ---

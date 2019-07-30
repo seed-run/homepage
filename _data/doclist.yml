@@ -77,6 +77,8 @@ toc:
         url: /docs/configuring-deploy-phases.html
       - page: Adding a post-deploy phase
         url: /docs/adding-a-post-deploy-phase.html
+      - page: Deploying monorepo apps
+        url: /docs/deploying-monorepo-apps.html
   - title: Managing deployments
     subfolderitems:
       - page: Configuring custom domains

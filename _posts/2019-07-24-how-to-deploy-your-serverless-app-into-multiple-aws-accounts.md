@@ -1,6 +1,6 @@
 ---
 layout: post
-title: How to deploy your Serverless app into multiple AWS accounts?
+title: How to deploy your Serverless app into multiple AWS accounts
 image: assets/social-cards/multiple-accounts.png
 description: In this post we'll look at how to deploy the various environments of your Serverless app to multiple AWS accounts. We'll also look at how to parameterize your resources to avoid any name collisions. And how to conditionally deploy some resources to a stage. Finally, we'll look at a couple of little details to watch out for, while working with multiple AWS accounts.
 categories: tips

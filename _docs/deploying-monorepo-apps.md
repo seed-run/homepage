@@ -97,7 +97,11 @@ Seed uses a simple algorithm to determine if a service in your app needs to be d
 
    So to summarize, it's the same as the one above, with the added caveat that Seed will deploy a service if the files changed belong to a service in a parent directory.
 
-Seed will apply the above algorithm for each service in your app to decide if it needs to trigger a deployment process. Finally, Seed will skip the above check and deploy all your services if:
+Seed will apply the above algorithm for each service in your app to decide if it needs to trigger a deployment process. A service with a skipped deployment step will look something like this:
+
+![Skipped service with no code changes](/assets/docs/deploying-monorepo-apps/skipped-service-with-no-code-changes.png)
+
+Finally, Seed will skip the above check and deploy all your services if:
 
 - This is the first deployment
 - The previous deployment had failed

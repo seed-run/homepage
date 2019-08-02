@@ -7,39 +7,30 @@ You can trigger one-off deployments to any stage or service in Seed. This can be
 
 ### Manually Deploy a Stage
 
-To manually deploy a stage, head over to the app pipeline.
+To manually deploy a stage, head over to the app pipeline. And hit **Deploy** on the stage you want to manually deploy.
 
 ![Select stage](/assets/docs/manually-deploying/select-stage.png)
 
-And hit **Deploy** on the stage you want to manually deploy.
+Here you'll be prompted to select a branch you want to deploy with. Or if this stage has a branch connected to it, you'll be asked if you want to deploy using it.
 
 ![Hit stage trigger deploy](/assets/docs/manually-deploying/hit-stage-deploy.png)
 
-Here you'll be prompted to select a branch you want to deploy with. Or if this stage has a branch connected to it, you'll be asked if you want to deploy using it.
-
-![Trigger deploy select branch](/assets/docs/manually-deploying/trigger-deploy-select-branch.png)
-
-You can optionally force a deploy using the [Serverless Framework](https://serverless.com) `--force` flag. By default, Serverless Framework only deploys the services that have been updated. The `--force` option overrides this and deploys even if there are no changes.
-
-![Force deploy option](/assets/docs/manually-deploying/force-deploy-option.png)
+You can optionally force a deploy, more on this below.
 
 ### Manually Deploy a Service
 
-To deploy a specific service, click the dropdown for the service in the stage you want to deploy.
+To deploy a specific service, click the dropdown for the service in the stage you want to deploy. Hit **Deploy Service**.
 
 ![Select service dropdown](/assets/docs/manually-deploying/select-service-down.png)
 
-Hit **Deploy Service**.
+Just as above, you'll be asked to select a branch.
 
 ![Hit service trigger deploy](/assets/docs/manually-deploying/hit-service-trigger-deploy.png)
 
-Just as above, you'll be asked to select a branch.
-
-
 ### Force Deploys
 
-By default, Serverless Framework only deploys the services that have changed. It does this by comparing the code package and the CloudFormation template. However, there might be cases where you want to override this behavior. You can do this by selecting the **Force deploy** option from the manual deploy dialog.
+By default, Seed will only deploy the services that have been updated. You can read more about [how Seed figures out which services need to be deployed here]({% link _docs/deploying-monorepo-apps.md %}). To skip this check and deploy all your services, select the **Force deploy** option.
 
 ![Select force option](/assets/docs/manually-deploying/select-force-option.png)
 
-This option tells Seed to deploy using the Serverless Framework `--force` flag and deploy even if there are no changes.
+This option tells Seed to deploy all your services even if there are no changes that've been detected.

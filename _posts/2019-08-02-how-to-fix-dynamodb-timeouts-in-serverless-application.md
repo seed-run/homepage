@@ -1,7 +1,7 @@
 ---
 layout: post
 title: How to fix DynamoDB timeouts in Serverless apps
-image: assets/social-cards/dynamodb-timeout.png
+image: assets/social-cards/dynamodb-timeouts.png
 description: In this post we are going to look at how to debug DynamoDB timeouts in Serverless apps. We are going to tweak the http connection timeout and the number of retries that the AWS SDK uses.
 categories: tips
 author: frank

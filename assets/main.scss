@@ -879,13 +879,14 @@ main > .header {
   }
 
   h1 {
-    margin: 0 auto 10px;
+    margin-bottom: 10px;
     padding-top: 1.5 * $spacing-unit;
     font-family: $base-font-family;
     font-size: 36px;
     line-height: 1.4;
     color: $text-color;
     text-align: left;
+    max-width: 550px;
 
     @include media-query($on-palm) {
       font-size: 26px;
@@ -895,7 +896,7 @@ main > .header {
   }
 
   h3 {
-    margin: 0 auto;
+    margin: 0;
     font-family: $base-font-family;
     color: lighten($secondary-text-color, 5%);
     font-size: 18px;

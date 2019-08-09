@@ -17,7 +17,7 @@ An artifact that is reused in this way is called an **Immutable Artifact**. The 
 
 ### Serverless Framework CI/CD pipelines
 
-Unfortunately, this is not the case for Serverless Framework apps. When you generate an artifact by running the `serverless package --stage dev` command; the artifact can only be used for the `dev` stage. Here is why. The artifact is made up of three parts. [Here is a quick recap of how Serverless Framework generates these artifacts INSERT LINK HERE](/).
+Unfortunately, this is not the case for Serverless Framework apps. When you generate an artifact by running the `serverless package --stage dev` command; the artifact can only be used for the `dev` stage. Here is why. The artifact is made up of three parts. [Here is a quick recap of how Serverless Framework generates these artifacts]({% link _posts/2019-08-09-how-to-generate-deployment-artifacts-in-your-cicd-pipeline-for-serverless-apps.md %}).
 
 1. One or more zip files containing the Lambda code for your service(s).
 2. A CloudFormation template file that describes the resources defined in your `serverless.yml`.

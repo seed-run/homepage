@@ -1297,6 +1297,63 @@ main > .features {
     }
   }
 
+  div.why-seed {
+    margin: 3 * $spacing-unit auto;
+    max-width: 850px;
+    background-color: white;
+    border-radius: 4px;
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1), 0 5px 15px rgba(0, 0, 0, 0.04);
+
+    div.layout {
+      padding: 0 $spacing-unit / 2;
+      border: 1px solid $divider-color;
+      display: flex;
+      align-items: center;
+
+      div.col1 {
+        flex: 0 0 45%;
+        padding: $spacing-unit 15px;
+        text-align: center;
+
+        h2 {
+          margin-bottom: $spacing-unit;
+          font-size: 18px;
+          font-weight: 500;
+          color: $tertiary-text-color;
+        }
+        P {
+          margin-bottom: 10px;
+          font-style: italic;
+          font-size: 22px;
+        }
+      }
+      div.col2 {
+        flex: 0 0 55%;
+        padding: $spacing-unit 15px;
+        border-left: 1px solid $divider-color;
+
+        & > p {
+          margin-bottom: $spacing-unit / 2;
+        }
+      }
+
+      ul.main {
+        & > li > span {
+          font-size: 18px;
+          i {
+            color: lighten($brand-color, 20%);
+            top: 5px;
+          }
+        }
+        ul {
+          margin: 5px 0 10px 17px;
+          font-size: 14px;
+          color: $tertiary-text-color;
+        }
+      }
+    }
+  }
+
   div.action {
     text-align: center;
     padding: 0 $spacing-unit;

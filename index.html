@@ -3,11 +3,11 @@ layout: lander
 ---
 
 <div class="header">
-  <a class="announcement" href="{% link _posts/2019-07-22-introducing-the-serverless-bundle-plugin.md %}">
+  <a class="announcement" href="{% link _posts/2019-08-13-seed-only-deploys-the-services-that-have-been-updated.md %}">
     <span class="label">Announcing</span>
     &mdash;
     <span class="content">
-      serverless-bundle plugin
+      Only deploy updated services
       <i class="fa fa-angle-right" aria-hidden="true"></i>
     </span>
   </a>
@@ -208,8 +208,8 @@ layout: lander
       </div>
       <div class="copy">
         <p>Your Serverless app has a few services. And you just added another last week. Deploying it with a traditional CI is either slow or very expensive. They charge you extra to concurrently deploy your services.</p>
-        <p>Seed is built specifically for Serverless apps with multiple services. Add them through our dashboard and we'll deploy them concurrently. Or set the order in which you want them deployed. You can even deploy some services individually if you need to get a hotfix out to production.</p>
-        <p>Learn more about <a href="{% link _docs/mono-repo-apps-in-seed.md %}">working with monorepo apps</a> and <a href="{% link _docs/configuring-deploy-phases.md %}">managing service dependencies</a>.</p>
+        <p>Seed is built specifically for Serverless apps with multiple services. Add them through our dashboard and we'll deploy them concurrently. Or set the order in which you want them deployed. And to make sure your deployments are fast, Seed will only deploy the services that have been updated.</p>
+        <p>Learn more about <a href="{% link _docs/deploying-monorepo-apps.md %}">monorepo deployments</a> and <a href="{% link _docs/configuring-deploy-phases.md %}">managing service dependencies</a>.</p>
       </div>
     </div>
   </div>

@@ -14,8 +14,6 @@ Let's look at these two checks in detail.
 
 ### 1. Check the Git log for updates
 
-_Note that, this feature is currently in Beta. If you would like to turn this on for your account, feel free [to send us an email]({{ site.email }})._
-
 Seed uses a simple algorithm to determine if a service in your app needs to be deployed. The algorithm is based on the directory structure of your Serverless app. Let's look at the cases in detail.
 
 1. Single service per repo

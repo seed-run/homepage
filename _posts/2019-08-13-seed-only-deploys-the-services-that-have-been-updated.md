@@ -32,12 +32,12 @@ This'll give you a chance to get used to how the new deployment process works an
 
 ### Opting out
 
-We also have an escape hatch in case you don't want to use this feature. Or if you have a setup that is incompatible with this. You can simply add the following to your `seed.yml` and Seed will always deploy all your services.
+We also have a way for you to opt out, in case you have a setup that is incompatible with this feature. You can simply add the following to your `seed.yml` and Seed will always deploy all your services.
 
 ``` yml
-- force_deploy: always
+check_code_change: false
 ```
 
-You can read more about this in our docs INSERT LINK HERE. And as always you can [contact us](mailto:{{ site.email }}) if you have any questions.
+You can [read more about this in our docs]({% link _docs/adding-a-build-spec.md %}#other-options). And as always, you can [contact us](mailto:{{ site.email }}) if you have any questions.
 
 With this update, Seed now perfectly supports Serverless Framework applications with multiple services. And your deployments will always be fast and efficient, even if you have dozens of services. A huge thanks to our beta testers for their feedback. And we continue to be excited as we work to make Seed the best way to deploy your Serverless apps on AWS!

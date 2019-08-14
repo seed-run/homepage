@@ -104,6 +104,7 @@ Finally, Seed will skip the above check and deploy all your services if:
 - This is the first deployment
 - The previous deployment had failed
 - It's a manual deploy with the force option enabled
+- The `check_code_change` is set to `false` [in your seed.yml]({% link _docs/adding-a-build-spec.md %}#other-options)
 
 Once the process has been triggered, there is a further check that Seed (or Serverless Framework) will do to see if the deployment to AWS needs to be completed. Let's look at that next.
 

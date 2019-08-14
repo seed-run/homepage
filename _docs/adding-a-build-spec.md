@@ -85,6 +85,14 @@ before_compile:
 
 In this case `$MY_VAR` is loaded from `$BASH_ENV` and should be printed out correctly.
 
+### Other Options
+
+You can also add the following to your `seed.yml` to [deploy all your services without checking if anything has been updated]({% link _docs/deploying-monorepo-apps.md %}).
+
+``` yml
+check_code_change: false
+```
+
 ---
 
 ### Build Spec Examples

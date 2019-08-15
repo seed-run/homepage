@@ -27,10 +27,10 @@ Say ServiceA creates an SNS topic and exports the topic's ARN in its serverless.
     resources:
       - Outputs:
           ATopicArn:
-    	    Value:
-    		  Ref: ATopic
-    		Export:
-    		  Name: ATopicArn
+            Value:
+              Ref: ATopic
+            Export:
+              Name: ATopicArn
 ```
 And ServiceB and ServiceC uses the SNS topic as their Lambda triggersss:
 ```

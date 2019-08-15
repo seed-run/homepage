@@ -215,46 +215,49 @@ layout: lander
   </div>
 
   <div class="why-seed">
-    <div class="layout">
-      <div class="col1">
-        <h2>Now we know what you are thinking&hellip;</h2>
-        <p>Why can't I just do a<br /> `serverless deploy`<br /> in CircleCI?</p>
+    <div class="zig-zag"></div>
+    <div class="card-margin">
+      <div class="card">
+        <div class="col1">
+          <h6>Now we know what you are thinking&hellip;</h6>
+          <p>&ldquo;Why can't I just do a `serverless deploy` in Circle or Travis?&rdquo;</p>
+        </div>
+        <div class="col2">
+          <p>Here's why you should use Seed instead.</p>
+          <ul class="main fa-ul">
+            <li>
+              <span>
+                <i class="fa-li fa fa-rocket"></i>
+                It's faster
+              </span>
+              <ul>
+                <li>All your services are deployed concurrently</li>
+                <li>Only the updated services are redeployed</li>
+              </ul>
+            </li>
+            <li>
+              <span>
+                <i class="fa-li fa fa-shield"></i>
+                It's more reliable
+              </span>
+              <ul>
+                <li>Review the infrastructure changes in a build</li>
+                <li>1-click rollback to any of your previous builds</li>
+              </ul>
+            </li>
+            <li>
+              <span>
+                <i class="fa-li fa fa-usd"></i>
+                And it works out cheaper!
+              </span>
+              <ul class="fa-ul">
+                <li>Other CIs charge you extra for concurrency</li>
+              </ul>
+            </li>
+          </ul>
+        </div>
       </div>
-      <div class="col2">
-        <p>Here's why Seed is a better option.</p>
-        <ul class="main fa-ul">
-          <li>
-            <span>
-              <i class="fa-li fa fa-check-square-o"></i>
-              It's faster
-            </span>
-            <ul>
-              <li>All services are deployed concurrently</li>
-              <li>Only the updated services are redeployed</li>
-            </ul>
-          </li>
-          <li>
-            <span>
-              <i class="fa-li fa fa-check-square-o"></i>
-              There's nothing to manage
-            </span>
-            <ul>
-              <li>No pipelines or build scripts to maintain</li>
-              <li>Add new environments or services with a click</li>
-            </ul>
-          </li>
-          <li>
-            <span>
-              <i class="fa-li fa fa-check-square-o"></i>
-              And it might end up cheaper!
-            </span>
-            <ul>
-              <li>Other services charge a lot for concurrency</li>
-            </ul>
-          </li>
-        </ul>
-      </div>
-    </div>
+  </div>
   </div>
 
   <div class="feature">

@@ -1298,57 +1298,118 @@ main > .features {
   }
 
   div.why-seed {
-    margin: 3 * $spacing-unit auto;
-    max-width: 850px;
-    background-color: white;
-    border-radius: 4px;
-    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1), 0 5px 15px rgba(0, 0, 0, 0.04);
+    margin: 3 * $spacing-unit 0;
+    position: relative;
 
-    div.layout {
+    @include media-query($on-palm) {
+      margin: 1.5 * $spacing-unit + 5px 0;
+    }
+
+    div.zig-zag {
+      position: absolute;
+      top: 50%;
+      display:block;
+      margin-top: -3px;
+      height: 6px;
+      width: 100%;
+      background: 0 center repeat-x $sawtooth-shape;
+
+      @include media-query($on-palm) {
+        display: none;
+      }
+    }
+
+    div.card-margin {
+      margin: 0 auto;
       padding: 0 $spacing-unit / 2;
-      border: 1px solid $divider-color;
+    }
+
+    div.card {
+      $border-color: lighten($brand-color, 50%);
+
+      margin: 0 auto;
       display: flex;
       align-items: center;
+      max-width: 850px;
+      border-radius: 5px;
+      box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1), 0 5px 15px rgba(0, 0, 0, 0.04);
+      position: relative;
+      overflow: hidden;
+      background-color: lighten($divider-color-light, 5%);
+      border: 1px solid $border-color;
+
+      @include media-query($on-palm) {
+        display: block;
+      }
 
       div.col1 {
-        flex: 0 0 45%;
-        padding: $spacing-unit 15px;
+        flex: 0 1 45%;
+        padding: $spacing-unit;
         text-align: center;
+        position: relative;
 
-        h2 {
+        h6 {
           margin-bottom: $spacing-unit;
-          font-size: 18px;
-          font-weight: 500;
-          color: $tertiary-text-color;
+          font-size: 26px;
+          font-family: $heading-font-family;
         }
-        P {
+        p {
           margin-bottom: 10px;
+          font-size: 20px;
+          line-height: 1.7;
+          color: $secondary-text-color;
           font-style: italic;
-          font-size: 22px;
+
+          @include media-query($on-palm) {
+            margin-bottom: 0;
+          }
         }
       }
       div.col2 {
-        flex: 0 0 55%;
-        padding: $spacing-unit 15px;
-        border-left: 1px solid $divider-color;
+        flex: 0 1 55%;
+        padding: $spacing-unit $spacing-unit - 5px $spacing-unit + 2px;
+        border: {
+          width: 0 0 0 1px;
+          style: solid;
+          color: $border-color;
+        }
+        background-color: white;
+
+        @include media-query($on-palm) {
+          border-width: 1px 0 0 0;
+        }
 
         & > p {
-          margin-bottom: $spacing-unit / 2;
+          margin-left: 3px;
+          margin-bottom: $spacing-unit / 2 + 5px;
+          color: $tertiary-text-color;
+          font-size: 20px;
         }
       }
 
       ul.main {
-        & > li > span {
-          font-size: 18px;
-          i {
-            color: lighten($brand-color, 20%);
-            top: 5px;
+        margin-bottom: 0;
+
+        & > li {
+          span {
+            font-size: 20px;
+            i {
+              color: lighten($brand-color, 20%);
+              top: 6px;
+            }
+          }
+
+          &:last-child ul {
+            margin-bottom: 0;
           }
         }
         ul {
-          margin: 5px 0 10px 17px;
-          font-size: 14px;
+          margin: 5px 0 $spacing-unit / 2 18px;
           color: $tertiary-text-color;
+          list-style-type: circle;
+          li {
+            line-height: 1.7;
+          }
         }
       }
     }

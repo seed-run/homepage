@@ -39,6 +39,9 @@ How to prevent accidentally deleting Serverless resources
 ## Reference
 
 CircleCI vs Travis CI vs CodePipeline vs Seed
+
 How to build a CI/CD pipeline for Serverless apps with CircleCI
+
 How to build a CI/CD pipeline for Serverless apps with Travis CI
+
 How to build a CI/CD pipeline for Serverless apps with AWS CodePipeline and CodeBuild

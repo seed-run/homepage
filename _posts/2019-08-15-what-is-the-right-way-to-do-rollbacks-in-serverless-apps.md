@@ -1,6 +1,6 @@
 ---
 layout: post
-title: What is the right way to do rollbacks in Serverless apps
+title: What is the right way to do rollbacks in Serverless apps?
 image: assets/social-cards/serverless-cicd-tips.png
 description: In this post we look at what the right rollback strategy is for Serverless apps in their CI/CD pipelines. The rollback strategy for Serverless Framework apps is different because the deployment artifacts are not immutable and because the plugins are a part of the deployment process.
 categories: tips

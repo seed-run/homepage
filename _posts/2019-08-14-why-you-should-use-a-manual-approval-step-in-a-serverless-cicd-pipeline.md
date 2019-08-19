@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Why you should use a manual approval step in a Serverless CI/CD pipeline
+title: Why you should use a manual approval step in a Serverless CI/CD pipeline?
 image: assets/social-cards/serverless-cicd-tips.png
 description: In this post we'll look at why you should use a manual approval step as a part of the CI/CD pipeline for your Serverless Framework app. Since Serverless apps deploy infrastructure changes in addition to code changes, it is important to review these changes before promoting them to your production environment.
 categories: tips

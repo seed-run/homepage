@@ -1,47 +1,60 @@
-# Serverless CI/CD Best Practices
+---
+layout: post
+title: Serverless CI/CD Best Practices
+image: assets/social-cards/serverless-cicd-tips.png
+description: This post is a compilation of all the best practices around building a CI/CD pipeline for Serverless Framework applications on AWS.
+categories: tips
+author: frank
+---
 
-## Overview
+Over the past few weeks we've been writing about various topics around how to build and maintain a CI/CD pipeline for [Serverless Framework](https://serverless.com) applications on AWS.
 
-[Should I Use Hosted Or On-Premise CI](https://www.notion.so/cff9df4ad7eb420992736010095e01af)
+This post is a compilation of all the topics we've covered. We think this should give you all you need to build out your own production-ready CI/CD Serverless pipeline.
 
-[Why a traditional CI/CD service won't work for monorepo Serverless apps?](https://www.notion.so/ee96eabea439442c853afb1a23f26a6a)
+Feel free to use this page as a reference. Make sure to bookmark this page and share it with your friends.
 
-## Continuous Deployment
+### Overview
 
-Why deploy your Serverless app into multiple AWS accounts?
+[Should I use a hosted or on-premise CI/CD for my Serverless app?]({% link _posts/2019-08-07-should-i-use-a-hosted-or-on-premise-cicd-for-my-serverless-app.md %})
 
-How to deploy your Serverless app into multiple AWS accounts
+[Why a traditional CI/CD service isn't a good fit for monorepo Serverless apps?]({% link _posts/2019-08-08-why-a-traditional-cicd-service-isnt-a-good-fit-for-monorepo-serverless-apps.md %})
 
-Git workflow for Serverless apps
+### Deployment Workflows
 
-Testing your Serverless app
+[Testing your Serverless app]({% link _posts/2019-07-31-testing-your-serverless-app.md %})
 
-How to manage secrets for your Serverless app
+[Git workflow for Serverless apps]({% link _posts/2019-07-26-git-workflow-for-serverless-apps.md %})
 
-[Can I deploy the services in a monorepo Serverless app concurrently when there are inter dependencies between them? ](https://www.notion.so/fdea16ee639f4ccb8acbde0cc9792cc8)
+[How to manage secrets for your Serverless app]({% link _posts/2019-07-03-how-to-manage-secrets-for-your-serverless-app.md %})
 
-[How to deploy only changed services in a monorepo Serverless app?](https://www.notion.so/e6a939e1a8024c3f9d8da0ac4dee6287)
+[Why deploy your Serverless app into multiple AWS accounts?]({% link _posts/2019-07-19-why-deploy-your-serverless-app-into-multiple-aws-accounts.md %})
 
-## Production Deployment
+[How to deploy your Serverless app into multiple AWS accounts]({% link _posts/2019-07-24-how-to-deploy-your-serverless-app-into-multiple-aws-accounts.md %})
 
-[How to create deployment artifacts for Serverless apps that can be re-used on rollback?](https://www.notion.so/2912d83e32ef42988ef89946d1040f05)
+[Deploying a monorepo Serverless app with interdependent services]({% link _posts/2019-08-16-deploying-a-monorepo-serverless-app-with-interdependent-services.md %})
 
-[Why Serverless deployment artifacts cannot be reused across stages?](https://www.notion.so/1161419b196e43de946bc14fcddc720d)
+[How to deploy only the updated services in a monorepo Serverless app]({% link _posts/2019-08-19-how-to-deploy-only-the-updated-services-in-a-monorepo-serverless-app.md %})
 
-[Why is manual approval important for my Serverless application?](https://www.notion.so/93f08e32fc6649f98faef5e880a123b7)
+### Production Deployments
 
-[Why is rollback strategy different for Serverless apps?](https://www.notion.so/2852055bd52745f384f36c5c5b8aca1e)
+[What is the right way to do rollbacks in Serverless apps?]({% link _posts/2019-08-15-what-is-the-right-way-to-do-rollbacks-in-serverless-apps.md %})
 
-[How to handle service dependencies when rolling back monorepo Serverless apps?](https://www.notion.so/0787563c50194f798a8f90d73b89da4d)
+[How to prevent accidentally deleting Serverless resources]({% link _posts/2019-07-04-how-to-prevent-accidentally-deleting-serverless-resources.md %})
 
-How to prevent accidentally deleting Serverless resources
+[Why Serverless deployment artifacts cannot be reused across stages?]({% link _posts/2019-08-12-why-serverless-deployment-artifacts-cannot-be-reused-across-stages.md %})
 
-## Reference
+[Why you should use a manual approval step in a Serverless CI/CD pipeline?]({% link _posts/2019-08-14-why-you-should-use-a-manual-approval-step-in-a-serverless-cicd-pipeline.md %})
 
-CircleCI vs Travis CI vs CodePipeline vs Seed
+[How to generate deployment artifacts in your CI/CD pipeline for Serverless apps]({% link _posts/2019-08-09-how-to-generate-deployment-artifacts-in-your-cicd-pipeline-for-serverless-apps.md %})
 
-How to build a CI/CD pipeline for Serverless apps with CircleCI
+[How to handle service dependencies when rolling back a monorepo Serverless app]({% link _drafts/how-to-handle-service-dependencies-when-rolling-back-a-monorepo-serverless-app.md %})
 
-How to build a CI/CD pipeline for Serverless apps with Travis CI
+### Reference
 
-How to build a CI/CD pipeline for Serverless apps with AWS CodePipeline and CodeBuild
+[CircleCI vs Travis CI vs CodePipeline vs Seed]({% link _posts/2019-07-25-circleci-vs-travisci-vs-codepipeline-vs-seed.md %})
+
+[How to build a CI/CD pipeline for Serverless apps with CircleCI]({% link _posts/2019-07-09-how-to-build-a-cicd-pipeline-for-serverless-apps-with-circleci.md %})
+
+[How to build a CI/CD pipeline for Serverless apps with Travis CI]({% link _posts/2019-07-16-how-to-build-a-cicd-pipeline-for-serverless-apps-with-travis-ci.md %})
+
+[How to build a CI/CD pipeline for Serverless apps with AWS CodePipeline and CodeBuild]({% link _posts/2019-07-23-how-to-build-a-cicd-pipeline-for-serverless-apps-with-codepipeline-and-codebuild.md %})

@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Serverless CI/CD Best Practices
+title: Building a CI/CD pipeline for Serverless apps
 image: assets/social-cards/serverless-cicd-tips.png
 description: This post is a compilation of all the best practices around building a CI/CD pipeline for Serverless Framework applications on AWS.
 categories: tips
@@ -11,13 +11,21 @@ Over the past few weeks we've been writing about various topics around how to bu
 
 This post is a compilation of all the topics we've covered. We think this should give you all you need to build out your own production-ready CI/CD Serverless pipeline.
 
-Feel free to use this page as a reference. Make sure to bookmark this page and share it with your friends.
+Feel free to use this page as a reference. And make sure to bookmark this page and share it with your friends.
 
 ### Overview
 
 [Should I use a hosted or on-premise CI/CD for my Serverless app?]({% link _posts/2019-08-07-should-i-use-a-hosted-or-on-premise-cicd-for-my-serverless-app.md %})
 
 [Why a traditional CI/CD service isn't a good fit for monorepo Serverless apps?]({% link _posts/2019-08-08-why-a-traditional-cicd-service-isnt-a-good-fit-for-monorepo-serverless-apps.md %})
+
+### Guides
+
+[How to build a CI/CD pipeline for Serverless apps with CircleCI]({% link _posts/2019-07-09-how-to-build-a-cicd-pipeline-for-serverless-apps-with-circleci.md %})
+
+[How to build a CI/CD pipeline for Serverless apps with Travis CI]({% link _posts/2019-07-16-how-to-build-a-cicd-pipeline-for-serverless-apps-with-travis-ci.md %})
+
+[How to build a CI/CD pipeline for Serverless apps with AWS CodePipeline and CodeBuild]({% link _posts/2019-07-23-how-to-build-a-cicd-pipeline-for-serverless-apps-with-codepipeline-and-codebuild.md %})
 
 ### Deployment Workflows
 
@@ -47,14 +55,8 @@ Feel free to use this page as a reference. Make sure to bookmark this page and s
 
 [How to generate deployment artifacts in your CI/CD pipeline for Serverless apps]({% link _posts/2019-08-09-how-to-generate-deployment-artifacts-in-your-cicd-pipeline-for-serverless-apps.md %})
 
-[How to handle service dependencies when rolling back a monorepo Serverless app]({% link _drafts/how-to-handle-service-dependencies-when-rolling-back-a-monorepo-serverless-app.md %})
+[How to handle service dependencies when rolling back a monorepo Serverless app]({% link _posts/2019-08-19-how-to-handle-service-dependencies-when-rolling-back-a-monorepo-serverless-app.md %})
 
 ### Reference
 
 [CircleCI vs Travis CI vs CodePipeline vs Seed]({% link _posts/2019-07-25-circleci-vs-travisci-vs-codepipeline-vs-seed.md %})
-
-[How to build a CI/CD pipeline for Serverless apps with CircleCI]({% link _posts/2019-07-09-how-to-build-a-cicd-pipeline-for-serverless-apps-with-circleci.md %})
-
-[How to build a CI/CD pipeline for Serverless apps with Travis CI]({% link _posts/2019-07-16-how-to-build-a-cicd-pipeline-for-serverless-apps-with-travis-ci.md %})
-
-[How to build a CI/CD pipeline for Serverless apps with AWS CodePipeline and CodeBuild]({% link _posts/2019-07-23-how-to-build-a-cicd-pipeline-for-serverless-apps-with-codepipeline-and-codebuild.md %})

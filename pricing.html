@@ -24,7 +24,7 @@ title: Pricing Plans
               <p>per month</p>
             </div>
           </div>
-          <a class="action signup" href="{{ site.console_url }}{{ site.signup }}">
+          <a class="action signup" {% include signup-link.html %}>
             Sign up for free
           </a>
         </div>
@@ -67,7 +67,7 @@ title: Pricing Plans
             </div>
             <p>Starts at $30 / month</p>
           </div>
-          <a class="action start" href="{{ site.console_url }}{{ site.signup }}">
+          <a class="action start" {% include signup-link.html %}>
             Try it for free
           </a>
         </div>

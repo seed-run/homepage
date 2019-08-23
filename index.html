@@ -288,7 +288,7 @@ layout: lander
       <a class="plans" href="{% link pricing.html %}">
         View paid plans
       </a>
-      <a class="signup" href="{{ site.console_url }}{{ site.signup }}">
+      <a class="signup" {% include signup-link.html %}>
         Sign up for free
       </a>
     </div>
@@ -382,7 +382,7 @@ layout: lander
     <a class="plans" href="{% link pricing.html %}">
       View paid plans
     </a>
-    <a class="signup" href="{{ site.console_url }}{{ site.signup }}">
+    <a class="signup" {% include signup-link.html %}>
       Sign up for free
     </a>
   </div>

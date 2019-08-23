@@ -17,7 +17,7 @@
       <a class="links" href="{% link pricing.html %}">Pricing</a>
       <a class="links" href="{% link _docs/index.md %}">Docs</a>
       <a class="links" href="{% link blog/index.md %}">Blog</a>
-      <a class="links signup" href="{{ site.console_url }}{{ site.signup }}">
+      <a class="links signup" {% include signup-link.html %}>
         Create a Free Account
       </a>
       <a class="links login" href="{{ site.console_url }}/login">Login</a>

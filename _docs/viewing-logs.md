@@ -37,7 +37,7 @@ If you have an API Gateway endpoint in your deployment, you can view the access 
 
 API Gateway Access Logs are disabled by default and need to be enabled on AWS. You'd need to create an IAM Role, configure CloudWatch, etc. to do so. We simplify this on Seed.
 
-You can enable it by heading over to the **Deployment Settings** and hitting **Enable Access Logs**.
+You can enable it by hitting **Enable Access Logs** button.
 
 ![Enable Access Logs](/assets/docs/viewing-logs/enable-access-logs.png)
 

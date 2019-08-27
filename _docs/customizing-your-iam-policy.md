@@ -150,4 +150,41 @@ If you need any help setting this up, you can always [contact us](mailto:{{ site
 
 The above provides sufficient permissions for a minimal Serverless project. However, if you provision any additional resources in your `serverless.yml`, or install Serverless plugins, or invoke any AWS APIs in your application code; you would need to update the IAM policy to accommodate for those changes.
 
+### Custom Domains
+
+If you want to [manage your custom domains in Seed]({% link _docs/configuring-custom-domains.md %}), you'll need to add the following permissions as well:
+
+``` json
+{
+  "Version": "2012-10-17",
+  "Statement": [
+    {
+      "Effect": "Allow",
+      "Action": [
+        "route53:ListHostedZones",
+        "route53:ListResourceRecordSets",
+        "route53:ChangeResourceRecordSets",
+        "route53:GetHostedZone",
+        "acm:ListCertificates",
+        "acm:DescribeCertificate",
+        "acm:RequestCertificate",
+        "acm:AddTagsToCertificate",
+        "cloudfront:UpdateDistribution"
+      ],
+      "Resource": "*"
+    },
+    {
+      "Effect": "Allow",
+      "Action": [
+        "apigateway:*"
+      ],
+      "Resource": [
+        "arn:aws:apigateway:*::/domainnames",
+        "arn:aws:apigateway:*::/domainnames/*"
+      ]
+    }
+  ]
+}
+```
+
 Finally, if you are looking for details on where this policy comes from; here is an in-depth discussion on the minimal [Serverless IAM Deployment Policy](https://github.com/serverless/serverless/issues/1439) required for a Serverless project.

@@ -95,6 +95,8 @@ toc:
         url: /docs/adding-organization-members.html
       - page: Enabling GitHub Enterprise
         url: /docs/enabling-github-enterprise.html
+      - page: Adding an SSH key for your organization
+        url: /docs/adding-an-organization-ssh-key.html
   - title: Common issues
     subfolderitems:
       - page: Cannot find my repo

@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Add an SSH Key to Your Builds
+title: Add an SSH key to your builds
 categories: news
 author: jack
 ---

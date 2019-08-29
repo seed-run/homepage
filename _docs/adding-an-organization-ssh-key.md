@@ -14,6 +14,20 @@ To run the above operations you'll need your private SSH keys in the build proce
 
 You can set this by adding a private SSH key for your organization.
 
+### Adding an SSH Key
+
+Head over to your organization settings and click on **Add Org SSH Key**.
+
+![Org setting SSH key](/assets/docs/adding-an-organization-ssh-key/org-setting-ssh-key.png)
+
+Enter your private key and hit **Add**.
+
+![Enter private SSH key](/assets/docs/adding-an-organization-ssh-key/enter-private-ssh-key.png)
+
+Once it has been added, double check that it has been set correctly by comparing the displayed fingerprint.
+
+![View SSH key fingerprint](/assets/docs/adding-an-organization-ssh-key/view-ssh-key-fingerprint.png)
+
 ### Check out Other Repos
 
 If you are looking to check out other repositories as a part of your build process, make sure that you are using the correct SSH URL format:

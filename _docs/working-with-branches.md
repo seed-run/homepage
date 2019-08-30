@@ -5,10 +5,6 @@ title: Working with Branches
 
 Stages in Seed are usually tied to a Git branch. You can read more about [adding a stage here]({% link _docs/adding-a-stage.md %}). Seed can also automatically create stages when a new Git branch is created.
 
-> We currently support automatic branch deployments only for GitHub.
-
-[Contact us](mailto:{{ site.email }}) if you’d like to use it for Bitbucket or GitLab.
-
 Head over to your app, click **Settings** and hit **Enable Auto-Deploy Branches**.
 
 ![Enable auto deploy branches](/assets/docs/working-with-branches/enable-auto-deploy-branches.png)

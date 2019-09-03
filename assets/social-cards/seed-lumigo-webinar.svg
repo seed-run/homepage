@@ -11,8 +11,8 @@
   </defs>
   <rect x="0" y="0" width="1200" height="600" fill="url(#grad1)" />
   <text
-    x="432"
-    y="250"
+    x="412"
+    y="380"
     font-size="56"
     fill="#FFFFFF"
     text-anchor="middle"
@@ -23,7 +23,7 @@
   </text>
   <text
     x="588"
-    y="250"
+    y="380"
     fill="#FFFFFF"
     font-size="58"
     fill-opacity="0.5"
@@ -33,10 +33,10 @@
   >
     +
   </text>
-  <image x="667" y="150" width="180" height="180" xlink:href="lumigo-white.svg" />
+  <image x="687" y="280" width="180" height="180" xlink:href="lumigo-white.svg" />
   <text
     x="50%"
-    y="425"
+    y="480"
     fill="#FFFFFF"
     font-size="32"
     text-anchor="middle"

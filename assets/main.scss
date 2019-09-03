@@ -795,7 +795,7 @@ main > .header {
   text-align: center;
 
   .announcement {
-    $bkg-color: lighten(mix($brand-color, $grey-color-light, 10%), 20%);
+    $bkg-color: lighten(mix($brand-color, $grey-color-light, 10%), 15%);
 
     margin: 0 auto;
     display: inline-block;
@@ -804,9 +804,16 @@ main > .header {
     background-color: $bkg-color;
     border-radius: 3px;
     font-size: 15px;
-    white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
+
+    & > span {
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+
+      @include media-query($on-palm) {
+        display: block;
+      }
+    }
 
     @include media-query($on-palm) {
       display: block;

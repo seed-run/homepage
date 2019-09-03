@@ -14,4 +14,4 @@ We'll be covering the importance of moving fast by taking advantage of Continuou
 
 [**You can register for the webinar here**][webinar-link].
 
-[webinar-link]: https://zoom.us/webinar/register/5715669148349/WN_x1dU0URURhm6z6bAMpyMkw
+[webinar-link]: http://bit.ly/2PpqmOW

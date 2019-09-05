@@ -5,28 +5,26 @@ title: Cannot Find My Repo
 
 #### Problem
 
-You might have successfully authenticated with your Git provider but you are unable to see your repo in the list. This usually happens when Seed doesn't have the right permissions; either to your private repositories or your organizations.
+You might have successfully authenticated with your Git provider but you are unable to see your repo in the list. This usually happens either if the Seed GitHub app has not been added to your organization. Or if Seed does not have access to the given repo.
 
 #### The Fix
 
-To fix this, head over to your GitHub settings.
+First make sure the Seed GitHub app has been added. If you are adding a personal app, head over to your settings on GitHub and check the **Applications** section.
 
-![Click GitHub settings](/assets/docs/cannot-find-my-repo/click-github-settings.png)
+![Application settings for personal GitHub account](/assets/docs/cannot-find-my-repo/application-settings-for-personal-github-account.png)
 
-From the sidebar, click **Applications**.
+For repos in your organization, head over to the **Installed GitHub Apps** section in your organization's settings.
 
-![Click Applications in GitHub sidebar](/assets/docs/cannot-find-my-repo/click-applications-in-github-sidebar.png)
+![Installed GitHub apps in GitHub organization](/assets/docs/cannot-find-my-repo/installed-github-apps-in-github-organization.png)
 
-And select **Authorized OAuth Apps** from the tabs at the top.
+If you don't find Seed installed in your organization, you can add it back in the Seed console. Hit the **Add an organization…** button and configure your organization.
 
-![Click Authorized OAuth Apps in GitHub](/assets/docs/cannot-find-my-repo/click-authorized-oauth-apps-in-github.png)
+![Add Seed to GitHub organization](/assets/docs/cannot-find-my-repo/add-seed-to-github-organization.png)
 
-Look for **Seed** in the list and click through.
+Next, hit the **Configure** button next to the Seed GitHub app to view its settings. Here you need to make sure that you have given the Seed app permission to the repo you are trying to add.
 
-![Click on Seed in GitHub settings](/assets/docs/cannot-find-my-repo/click-on-seed-in-github-settings.png)
+![Repository access for Seed app in GitHub](/assets/docs/cannot-find-my-repo/repository-access-for-seed-app-in-github.png)
 
-Here, make sure the **Permissions** and **Organization access** are correctly granted for the repo you are looking to add.
+Now over on Seed, you should be able to find your repo once you refresh and authenticate with GitHub.
 
-![Set Seed permissions in GitHub settings](/assets/docs/cannot-find-my-repo/set-seed-permissions-in-github-settings.png)
-
-Now over on Seed, you should be able to find your repo once you refresh and authenticate with GitHub. If you are still having problems, feel free to [contact us](mailto:{{ site.email }}).
+If you are still having problems, feel free to [contact us](mailto:{{ site.email }}).

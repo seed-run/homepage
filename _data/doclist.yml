@@ -41,6 +41,8 @@ toc:
         url: /docs/iam-credentials-per-stage.html
       - page: Using Serverless plugins
         url: /docs/using-serverless-plugins.html
+      - page: GitHub integration
+        url: /docs/github-integration.html
       - page: Private npm modules
         url: /docs/private-npm-modules.html
       - page: Integrating with Serverless Enterprise

@@ -57,7 +57,7 @@ Seed adds some useful info once your PR has been built.
 
 In the above screenshot:
 
-1. Seed will add a comment with any deployed API endpoints. This is useful for cases where you have a frontend application that needs to be tested against this endpoint.
+1. Seed will add a comment with a list of any deployed API endpoints. This is useful for cases where you have a frontend application that needs to be tested against this endpoint.
 
 2. And the **View deployment** button in the environments section takes you to the deployed stage in Seed.
 

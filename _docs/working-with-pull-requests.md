@@ -43,9 +43,29 @@ And in the Seed console you should see a new pull request stage created and buil
 
 ![Pull Request Stage Building](/assets/docs/working-with-pull-requests/pull-request-stage-building.png)
 
+For monorepo Serverless apps, you can keep an eye on the progress as services get deployed.
+
+![Seed PR building check in GitHub](/assets/docs/working-with-pull-requests/seed-pr-building-check-progress-in-github.png)
+
 GitHub will let you know once the PR has been built.
 
 ![Seed PR building complete in GitHub](/assets/docs/working-with-pull-requests/seed-pr-building-complete-in-github.png)
+
+Seed adds some useful info once your PR has been built.
+
+![Seed PR complete info in GitHub](/assets/docs/working-with-pull-requests/seed-pr-complete-info-in-github.png)
+
+In the above screenshot:
+
+1. Seed will add a comment with any deployed API endpoints. This is useful for cases where you have a frontend application that needs to be tested against this endpoint.
+
+2. And the **View deployment** button in the environments section takes you to the deployed stage in Seed.
+
+Also, if the PR fails to deploy, the **Details** link will take you straight to the build logs on Seed.
+
+![Seed PR building failed in GitHub](/assets/docs/working-with-pull-requests/seed-pr-building-failed-in-github.png)
+
+### Environment Variables
 
 Seed also takes care of the environment variables and secrets for your pull requests. The variables defined in the `serverless.yml` for the upstream stage are made available to the pull request stage. [Secret variables]({% link _docs/storing-secrets.md %}) are also inherited from the upstream stage.
 

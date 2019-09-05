@@ -22,6 +22,6 @@ Alternatively, you can set a range.
 frameworkVersion: ">=1.0.0 <2.0.0"
 ```
 
-Where the Serverless Framework version to be used should be in between (and including) `1.0.0` or anything less than `2.0.0`.
+Where the Serverless Framework version to be used should be in between (and including) `1.0.0` or anything less than `2.0.0`. In this case, Seed will use the highest locally cached version that matches the range.
 
 You can read more about [version pinning in the Serverless Framework docs](https://serverless.com/framework/docs/providers/aws/guide/services#pinning-a-version).

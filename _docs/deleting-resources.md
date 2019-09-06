@@ -15,11 +15,7 @@ Here you are asked to enter the app name to confirm deleting the app.
 
 ![App name to confirm deleting app](/assets/docs/deleting-resources/app-name-to-confirm-deleting-app.png)
 
-Note that, by default this only **removes the app from Seed**.
-
-To remove the resources that were deployed as a part of this app (in all of its stages and services), you'd need to select the checkbox.
-
-![Select delete resources checkbox](/assets/docs/deleting-resources/select-delete-resources-checkbox.png)
+Note that, by default this removes the app **from Seed** and **from AWS**. To remove the app only from Seed, you'd need to deselect the checkbox.
 
 Selecting this checkbox does the following for the respective cases via a set of `serverless remove` commands:
 
@@ -39,4 +35,10 @@ For a service, head over to the service.
 
 ![Removing a service](/assets/docs/deleting-resources/removing-a-serivce.png)
 
-So if you are looking to delete an app, stage, or service; you need to figure out if you are trying to just remove it from Seed or if you are trying to remove the deployed AWS resources. And remember that by default it only removes it from Seed.
+So if you are looking to delete an app, stage, or service; you need to figure out if you are trying to just remove it from Seed or if you are trying to remove the deployed AWS resources.
+
+### Removing a monorepo app
+
+If your app has multiple services that [are deployed in phases]({% link _docs/configuring-deploy-phases.md %}), Seed will **remove them in the reverse order**.
+
+To understand how this works, it helps to look at an example. Let's assume your services; `serviceA`, `serviceB`, and `serviceC` are deployed in the following order: `serviceA` > `serviceB` > `serviceC`. When a stage is removed, they'll be removed in reverse; `serviceC` > `serviceB` > `serviceA`. This is to handle the case where a service might be referencing a resource from one that was deployed before it. 

@@ -3,33 +3,45 @@ aash:
   picture: /assets/profiles/aash.png
   linkedin: aashdeep-brar
   twitter: SEED_run
+  team: true
 
 frank:
   name: Frank
   picture: /assets/profiles/frank.png
   linkedin: fanjiewang
   twitter: fanjiewang
+  team: true
 
 stephie:
   name: Stephanie
   picture: /assets/profiles/stephie.png
   linkedin: stephanie-mckay-7039b88b
   twitter: SEED_run
+  team: true
 
 jack:
   name: Jack
   picture: /assets/profiles/jack.png
   linkedin: jack-jiang-52b147a4
   twitter: SEED_run
+  team: true
 
 jay:
   name: Jay
   picture: /assets/profiles/jay.png
   linkedin: jayair
   twitter: jayair
+  team: true
 
 sam:
   name: Sam
   picture: /assets/profiles/sam.png
   linkedin: samdumcum
   twitter: SEED_run
+  team: true
+
+erez:
+  name: Erez Berkner
+  picture: /assets/profiles/erez.png
+  linkedin: erezbe
+  twitter: erezberkner

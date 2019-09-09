@@ -24,12 +24,15 @@ title: About Us
     <p>Seed is created by <a href="http://anoma.ly">Anomaly Innovations</a>. We are based in <b>San Francisco</b> and <b>Toronto</b>. We've got a great deal of experience with Serverless and AWS. And as a team we are intensely focused on providing a great developer experience within Seed. If you are passionate about Serverless or React, we would love for you to <a href="mailto:{{ site.jobs_email }}">join our team!</a></p>
     <div class="members">
       {% for member in site.data.authors %}
-        <a
-          title="{{ site.data.authors[member.first].name }}"
-          href="https://www.linkedin.com/in/{{ site.data.authors[member.first].linkedin }}/"
-        >
-          <img src="{{ site.data.authors[member.first].picture }}" />
-        </a>
+        {% assign person = site.data.authors[member.first] %}
+        {% if person.team == true %}
+          <a
+            title="{{ person.name }}"
+            href="https://www.linkedin.com/in/{{ person.linkedin }}/"
+          >
+            <img src="{{ person.picture }}" />
+          </a>
+        {% endif %}
       {% endfor %}
     </div>
   </div>

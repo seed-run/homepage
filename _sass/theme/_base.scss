@@ -51,6 +51,11 @@ img {
   max-width: 100%;
   vertical-align: middle;
 }
+img + em {
+  color: $tertiary-text-color;
+  display: block;
+  font-size: 14px;
+}
 
 
 
@@ -278,6 +283,15 @@ hr {
   padding: 0;
 }
 
+
+
+/**
+ * Twitter Embed
+ */
+.twitter-tweet {
+  margin-top: $spacing-unit / 2 !important;
+  margin-bottom: $spacing-unit / 2 + 5px !important;
+}
 
 
 /**

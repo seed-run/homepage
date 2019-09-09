@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Introducing the serverles-bundle Plugin
+title: Introducing the serverles-bundle plugin
 image: assets/social-cards/serverless-bundle.png
 description: Today we are open-sourcing a key part of the internal development workflow here at Seed. The serverless-bundle plugin is a zero-config way to generate optimized packages for your Node.js Lambda functions.
 categories: community

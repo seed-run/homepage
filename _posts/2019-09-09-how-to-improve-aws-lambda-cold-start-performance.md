@@ -82,6 +82,11 @@ And as Yan Cui pointed out [in a recent article](https://lumigo.io/blog/to-vpc-o
 ![AWS VPC decision tree](/assets/blog/how-to-improve-aws-lambda-cold-start-performance/aws-vpc-decision-tree.png)
 *Source: [Serverless Applications Lens - AWS Well-Architected Framework](https://d1.awsstatic.com/whitepapers/architecture/AWS-Serverless-Applications-Lens.pdf)*
 
+**Update**
+
+Following the recent [announcement by AWS](https://aws.amazon.com/blogs/compute/announcing-improved-vpc-networking-for-aws-lambda-functions/) (September 2019), it seems that performance issues affecting Lambdas inside VPCs could soon be a thing of the past.
+Leveraging **Hyperplane**, the Network Function Virtualization platform, AWS is claiming “dramatic improvements to [Lambda] function startup performance” inside VPCs. It all looks very promising, but we’ll wait until the update is fully rolled out over the next couple months before changing our recommendations.
+
 ### Conclusion
 
 As we’ve seen, there are a variety of ways to reduce the impact of cold starts, but unfortunately none of them can be relied upon to completely solve the problem in every situation. 

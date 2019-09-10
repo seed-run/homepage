@@ -24,4 +24,8 @@ frameworkVersion: ">=1.0.0 <2.0.0"
 
 Where the Serverless Framework version to be used should be in between (and including) `1.0.0` or anything less than `2.0.0`. In this case, Seed will use the highest locally cached version that matches the range.
 
+#### Caching Versions
+
+Seed internally caches versions of Serverless Framework to speed up your builds. So if you pin your service to use a specific version, Seed will first check if it's been previously cached. If not, then it'll be added to a job queue to cache it in the future.
+
 You can read more about [version pinning in the Serverless Framework docs](https://serverless.com/framework/docs/providers/aws/guide/services#pinning-a-version).

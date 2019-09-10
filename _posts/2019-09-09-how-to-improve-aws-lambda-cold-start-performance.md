@@ -1,7 +1,7 @@
 ---
 layout: post
 title: How to improve AWS Lambda Cold Start performance
-categories: community
+categories: tips
 author: erez
 excerpt: One of the great promises of serverless has always been that it would free developers to focus on writing code without having to give too much consideration to the underlying infrastructure.
 canonical_url: https://lumigo.io/blog/how-to-improve-aws-lambda-cold-start-performance/

@@ -65,3 +65,12 @@ defaults:
       path: ""
     values:
       image: /assets/social-cards/default.png
+  - scope:
+      type: "posts"
+    values:
+      image: /assets/social-cards/blog.png
+  - scope:
+      path: ""
+      type: "docs"
+    values:
+      image: /assets/social-cards/docs.png

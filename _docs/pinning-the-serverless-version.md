@@ -4,7 +4,13 @@ title: Pinning the Serverless Version
 description: You can set the version of Serverless Framework you want to use for your deployments by setting it in the serverless.yml
 ---
 
-Seed uses a recent stable version of Serverless Framework. We wait until most common issues have been ironed out in a release to upgrade to it. This means that if your app relies on a newer version of Serverless Framework, you need to set it in your `serverless.yml`.
+Seed uses the following scheme while deciding which Serverless Framework version to use.
+
+1. We **use a recent stable release** as a _default_ when your app or service is created. We do this because Serverless Framework releases can sometimes be buggy and these end up breaking previously working builds. We update the _default_ version every once in a while.
+
+2. However, we **do not update previously deployed apps** with the new _default_ version. These changes only affect any newly created apps or services.
+
+3. To use a newer version of Serverless Framework for your builds, **you can set it** in your `serverless.yml`.
 
 You can see the version of Serverless Framework that was used for a build in the build log page. You can see this in the build logs as well.
 

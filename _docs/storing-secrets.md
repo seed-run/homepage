@@ -5,9 +5,7 @@ title: Storing Secrets
 
 At times your code needs to access sensitive information such as private keys, passwords, and access tokens. You should avoid storing these in your `serverless.yml`. Seed lets you store them as secret environment variables through the Seed console.
 
-When you first create a Seed project, an encryption key is generated and stored in your [AWS KMS](https://aws.amazon.com/kms/) account. Seed uses this key to encrypt the secret value when you create a secret variable, and stores the encrypted value. And upon deployment, Seed decrypts the value and sets it as a Lambda environment variable.
-
-> Seed encrypts your secrets using your AWS KMS keys
+Seed encrypts your secrets (using [AWS KMS](https://aws.amazon.com/kms/)) and stores them. Upon deployment, Seed decrypts them and sets it as a Lambda environment variable.
 
 You can then access them in your Node.js Lambda functions using the `process.env` object.
 

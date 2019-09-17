@@ -1,6 +1,7 @@
 ---
 layout: post
 title: Changes to how environment variables are stored
+image: assets/social-cards/environment-variables.png
 categories: news
 author: frank
 ---

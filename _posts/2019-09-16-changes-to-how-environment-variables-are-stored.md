@@ -25,7 +25,7 @@ Like most changes that we make to the Seed build process, it's being rolled out 
 
 1. These changes go into effect immediately for any newly created apps.
 
-2. For existing apps, we'll be switching them over on Sep 23rd, 2019.
+2. For existing apps, we'll be switching them over on Sep 23rd, 2019. You should not notice any changes to your deployments.
 
 Note that these changes only apply to the environment variables that you choose to have stored on Seed. These typically include things like credentials that are needed in the build process. For secrets that are used in your app, we recommend using [AWS Parameter Store](https://docs.aws.amazon.com/systems-manager/latest/userguide/systems-manager-parameter-store.html). We've written about this in one of our Serverless Tips posts — [How to manage secrets for your Serverless app]({% link _posts/2019-07-03-how-to-manage-secrets-for-your-serverless-app.md %}).
 

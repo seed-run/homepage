@@ -31,6 +31,20 @@ Now any deployments to this stage will run your commands as a part of the post-d
 
 ![Post-Deploy Phase in Deployment workflow](/assets/docs/adding-a-post-deploy-phase/post-deploy-phase-in-deployment-workflow.png)
 
+### Post-Deploy phase environment
+
+Seed will pick an environment based on the **first** service that is deployed as a part of your app. This means that if you only have one service then the Post-Deploy phase will have the same environment as your builds.
+
+Additionally, the following environment variables are available in the Post-Deploy phase environment.
+
+- `$SEED_STAGE_NAME`: The name of the stage that is being built. The stage names are exactly as shown in the console.
+- `$SEED_APP_NAME`: The app name.
+- `$SEED_BUILD_ID`: The build id.
+- `$SEED_BRANCH`: The Git branch used in the build process. Does not apply to promotions and rollbacks. For PR stages, this is the branch the PR was submitted to.
+- `$SEED_PULL_REQUEST_NUMBER`: For PR stages, this is the number of the Pull Request.
+
+- Secrets: All your [secrets in the Seed console]({% link _docs/storing-secrets.md %}) are also made available during the build process. For example, a secret environment variable called **TEST_VAR** would be available as `$TEST_VAR` in the build process.
+
 ### Post-Deploy phase vs after_deploy hook
 
 One final note on post-deploy phases. If you've configured a build spec, you might be wondering what the difference is between adding a post-deploy phase and using the `after_deploy` hook.

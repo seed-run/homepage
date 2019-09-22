@@ -13,7 +13,7 @@ As your Serverless app starts to grow, you start adding new services and organiz
 
 This post will attempt to answer the following questions:
 
-1. Do I one or multiple `package.json` files?
+1. Do I use one or multiple `package.json` files?
 2. How do I share common code and config between services?
 3. How do I share common config between the various `serverless.yml`?
 4. How do I reference resources across services?

@@ -117,3 +117,16 @@ Let's assume your service is called `users`.
 after_deploy:
   - if [ $SEED_SERVICE_NAME = "users" ]; then echo 'deployed users'; fi
 ```
+
+#### Install PostgreSQL
+
+If you need to start a PostgreSQL server locally for tests.
+
+```
+before_compile:
+  - apt-get install wget ca-certificates -y
+  - wget --quiet -O - https://www.postgresql.org/media/keys/ACCC4CF8.asc | apt-key add -
+  - sh -c 'echo "deb http://apt.postgresql.org/pub/repos/apt/ `lsb_release -cs`-pgdg main" >> /etc/apt/sources.list.d/pgdg.list'
+  - apt-get update
+  - apt-get install postgresql postgresql-contrib -y
+```

@@ -98,7 +98,7 @@ check_code_change: false
 
 ### Build Spec Examples
 
-You can use these build environment variables to customize your build process. Here are a couple of examples of what you could do with them.
+Here are a couple of examples of what you could do in a build spec.
 
 #### Run a script after deploy only in prod 
 

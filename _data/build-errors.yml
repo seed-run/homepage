@@ -13,6 +13,8 @@ toc:
     url: /docs/serverless-errors/serverless-plugin-not-found.html
   - title: Code storage limit exceeded
     url: /docs/serverless-errors/code-storage-limit-exceeded.html
+  - title: Your lockfile needs to be updated
+    url: /docs/serverless-errors/your-lockfile-needs-to-be-updated.html
   - title: No integration defined for method
     url: /docs/serverless-errors/no-integration-defined-for-method.html
   - title: The stack service name is not valid

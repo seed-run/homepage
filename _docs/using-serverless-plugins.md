@@ -5,7 +5,7 @@ title: Using Serverless Plugins
 
 Seed supports most of the common [Serverless Framework plugins](https://github.com/serverless/plugins) out of the box. The exception, would be plugins that are not related to the build or deployment process of the app. If you are having problems getting a specific plugin to work, <a href="mailto:{{ site.email }}">feel free to contact us</a>.
 
-Below is a list of plugins that need some configuration to work with Seed. 
+Below are a list of plugins that need some additional configuration to work with Seed.
 
 
 ### serverless-domain-manager
@@ -37,3 +37,10 @@ However, if you are already using the serverless-domain-manager plugin, you need
    ```
  
    Where `my-service/` is the path to the service with the custom domain configured.
+
+
+### serverless-plugin-canary-deployments
+
+The [serverless-plugin-canary-deployments](https://github.com/davidgf/serverless-plugin-canary-deployments) plugin is used to implement canary deployments of Lambda functions using AWS CodeDeploy.
+
+It works with Seed without any changes. However, depending on the traffic shifting configuration that is used, your builds might time out. For example, `Linear10PercentEvery10Minutes` strategy will take over an hour to completely deploy your app. Builds in Seed (on the free tier) have roughly a 20min timeout. You'll need to upgrade to [one of our paid plans]({% link pricing.html %}) and we'll raise the timeout to fix this.

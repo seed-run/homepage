@@ -102,6 +102,7 @@ title: SEED Concierge Onboarding
         <img title="Go" height="20" src="assets/go-logo.png" />
         <img title="Ruby" width="30" src="assets/ruby-logo.png" />
         <img title="Node.js" width="31" src="assets/node-logo.png" />
+        <img title="Java" height="32" src="assets/java-logo.png" />
         <img title="Python" width="31" src="assets/python-logo.png" />
         <img title=".NET Core" width="32" src="assets/dotnet-logo.png" />
       </div>

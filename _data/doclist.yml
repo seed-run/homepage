@@ -17,6 +17,8 @@ toc:
         url: /docs/adding-dotnet-core-projects.html
       - page: Adding Ruby projects
         url: /docs/adding-ruby-projects.html
+      - page: Adding Java projects
+        url: /docs/adding-java-projects.html
   - title: Configuring your app
     subfolderitems:
       - page: Adding a stage

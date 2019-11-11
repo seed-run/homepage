@@ -1746,11 +1746,12 @@ main > .tutorial {
 ////////////////////
 main > .closing-action {
   border-top: 2px solid darken($hero-bkg-color, 5%);
-  padding: $spacing-unit * 2 + 10px $spacing-unit $spacing-unit * 3;
+  padding: $spacing-unit * 2 + 10px 0 $spacing-unit * 3;
   text-align: center;
 
   & > p {
     margin: 0 auto $spacing-unit;
+    padding: 0 $spacing-unit;
     max-width: 520px;
     color: $tertiary-text-color;
     font-size: 20px;
@@ -1762,6 +1763,7 @@ main > .closing-action {
   }
 
   div.controls {
+    padding: 0 $spacing-unit;
     a.signup {
       @include action-button;
       padding: 14px 26px;
@@ -1814,7 +1816,7 @@ main > .closing-action {
     div {
     position: relative;
     padding-left: $spacing-unit / 2;
-    padding-right: $spacing-unit / 2;
+    padding-right: $spacing-unit;
     }
     hr {
       margin: 0;

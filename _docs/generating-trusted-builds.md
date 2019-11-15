@@ -14,5 +14,3 @@ Seed splits up the `serverless deploy` process into a couple of steps. For examp
 3. The target stage (in this case `dev`) is deployed using the `serverless deploy --package` command. Here the package is the one generated in Step 1.
 
 The package created in Step 2 of this process is tagged with the Git commit and stored for later use. So when you decide to promote this build to production, we load up that previously stored package and use that to generate a [CloudFormation Change Set](https://aws.amazon.com/blogs/aws/new-change-sets-for-aws-cloudformation/).
-
-While rolling back to a previous build, we use the same stored package and deploy it using the `serverless deploy --package` command. Thereby avoiding any unnecessary surprises we might encounter if we were to re-package it at a later date.

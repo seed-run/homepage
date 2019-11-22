@@ -196,6 +196,11 @@ pre {
     padding-left: 0;
   }
 }
+p code,
+li code {
+  white-space: pre-wrap;
+  word-wrap: break-word;
+}
 
 
 

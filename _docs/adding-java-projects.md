@@ -3,7 +3,12 @@ layout: docs
 title: Adding Java Projects
 ---
 
-Seed gives you a zero-config way to deploy Serverless Java 8 projects. We provide out-of-the-box support for the following ways to build your project:
+Seed gives you a zero-config way to deploy Serverless Java projects. We currently support:
+
+- Java 8
+- Java 11
+
+Seed also provides out-of-the-box support for the following ways to build your project:
 
 1. Using [Maven](https://maven.apache.org/what-is-maven.html)
 2. Using [Gradle](https://gradle.org)

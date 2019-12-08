@@ -5,7 +5,7 @@ title: Adding Python Projects
 
 Seed makes it really easy to deploy Serverless Python projects. We support:
 
-- Python 2.7, 3.6, and 3.7
+- Python 2.7, 3.6, 3.7, and 3.8
 - Unit tests using [unittest](https://docs.python.org/2/library/unittest.html#module-unittest)
 - Support for the [serverless-python-requirements](https://github.com/UnitedIncome/serverless-python-requirements) plugin
 - Dependencies using [pip](https://pypi.org/project/pip/) & [pipenv](https://pipenv.readthedocs.io)

@@ -9,9 +9,9 @@ Head over to your app, click **Settings** and hit **Enable Auto-Deploy Branches*
 
 ![Enable auto deploy branches](/assets/docs/working-with-branches/enable-auto-deploy-branches.png)
 
-Here you can specify a stage to inherit the environment variables and other settings from. For example, your `dev` stage might be configured with environment variables for your app and with a set of IAM credentials specific for dev deployments. By selecting the `dev` stage, any stage that is automatically created for a new branch will inherit the settings from the `dev` stage.
+Here you can specify a stage to copy the environment variables and other settings from. For example, your `dev` stage might be configured with environment variables for your app and with a set of IAM credentials specific for dev deployments. By selecting the `dev` stage, any stage that is automatically created for a new branch will copy the settings from the `dev` stage.
 
-Seed will inherit the following settings (if available) from the selected stage:
+Seed will copy the following settings (if available) from the selected stage:
 
 - IAM settings
 - Post-deploy phase

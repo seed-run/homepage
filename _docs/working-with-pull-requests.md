@@ -9,23 +9,24 @@ When a pull request is opened, Seed receives a pull request notification from Gi
 
 [Contact us](mailto:{{ site.email }}) if you'd like to use it for Bitbucket or GitLab.
 
-An important thing to note here is that the pull requests submitted to any branch that is not being tracked in Seed will not be built. This is because Seed uses the environment variables and secrets of the upstream stage to build the pull request.
-
-> Pull requests submitted to branches that are not being tracked are ignored
-
-Let's look at this in a bit more detail.
-
 ### Enable Auto-Deploy Pull Requests
 
 By default, auto-deploying PRs are disabled. You can enable them by heading to your app, clicking **Settings**, and then hitting **Enable Auto-Deploy PRs**.
 
 ![Enable auto deploy pull requests](/assets/docs/working-with-pull-requests/enable-auto-deploy-pr.png)
 
-You also have the option here to remove the stage and the deployed resources once the PR is closed.
+Here you can specify a stage to copy the environment variables and other settings from. For example, your `dev` stage might be configured with environment variables for your app and with a set of IAM credentials specific for dev deployments. By selecting the `dev` stage, any stage that is automatically created for a new branch will copy the settings from the `dev` stage.
+
+Seed will copy the following settings (if available) from the selected stage:
+
+- IAM settings
+- Post-deploy phase
+- Notification settings
+- Environment variables
+
+You also have the option here to remove the PR stage and the deployed resources once the PR is closed.
 
 ![Auto-deploy pull request options](/assets/docs/working-with-pull-requests/auto-deploy-pr-options.png)
-
-By default, Seed does not remove the stage and the deployed resources created as a part of the PR. But if the above option is enabled then Seed will automatically clean up all the resources that were created as a part of the pull request.
 
 Next, let's work through the PR workflow.
 
@@ -67,11 +68,11 @@ Also, if the PR fails to deploy, the **Details** link will take you straight to 
 
 ### Environment Variables
 
-Seed also takes care of the environment variables and secrets for your pull requests. The variables defined in the `serverless.yml` for the upstream stage are made available to the pull request stage. [Secret variables]({% link _docs/storing-secrets.md %}) are also inherited from the upstream stage.
+Seed also takes care of the environment variables and secrets for your pull requests. The variables defined in the `serverless.yml` for the _default_ stage (selected above in the settings) are made available to the pull request stage. [Secret variables]({% link _docs/storing-secrets.md %}) are also copied from the _default_ stage.
 
-> Environment variables and secrets of the upstream stage are automatically available to the pull request build
+> Environment variables and secrets of the default stage are automatically available to the pull request build
 
-In the example above, the pull request was submitted to the **master** branch, which is tracked by the **dev** stage. This means that any pull requests submitted to the **master** branch will use environment variables set for the **dev** branch. And the secrets for the **dev** stage will also be available to the pull request build.
+In the example above, the _default_ stage, **dev** is connected to the **master** branch. This means that any pull requests stages will use environment variables set for the **dev** branch. And the secrets for the **dev** stage will also be available to the pull request build.
 
 Say for example your `serverless.yml` looks like:
 
@@ -90,7 +91,7 @@ provider:
     MESSAGE: ${self:custom.myEnvironment.MESSAGE.${opt:stage}}
 ```
 
-Any pull requests submitted to **master** (or the stage **dev**), will have the `process.env.MESSAGE` set to `This is development environment`.
+Any pull requests, will have the `process.env.MESSAGE` set to `This is development environment`.
 
 Once the pull request is merged a build is automatically triggered in the upstream stage and an updated build with the merged code is created. Alternatively, you can directly promote a build from the pull request stage without merging the pull request. This is useful when you are deploying a hotfix.
 

@@ -11,7 +11,7 @@ To manually deploy a stage, head over to the app pipeline. And hit **Deploy** on
 
 ![Select stage](/assets/docs/manually-deploying/select-stage.png)
 
-Here you'll be prompted to select a branch you want to deploy with. Or if this stage has a branch connected to it, you'll be asked if you want to deploy using it.
+Here you can confirm the branch you want to deploy with. Or if the stage isn't connected to a branch, you'll be asked to select one.
 
 ![Hit stage trigger deploy](/assets/docs/manually-deploying/hit-stage-deploy.png)
 
@@ -23,7 +23,7 @@ To deploy a specific service, click the dropdown for the service in the stage yo
 
 ![Select service dropdown](/assets/docs/manually-deploying/select-service-down.png)
 
-Just as above, you'll be asked to select a branch.
+Just as above, you'll be asked to confirm the branch or to select one.
 
 ![Hit service trigger deploy](/assets/docs/manually-deploying/hit-service-trigger-deploy.png)
 

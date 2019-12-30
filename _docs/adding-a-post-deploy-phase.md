@@ -15,12 +15,11 @@ To configure a post-deploy phase, head over to the settings for the stage you ar
 
 ![Enable Post-Deploy Phase](/assets/docs/adding-a-post-deploy-phase/enable-post-deploy-phase.png)
 
-Here you can set the commands you'd like to run. Each line contains its own command. For example, the following script would be split up and run as three separate commands:
+Here you can set the commands you'd like to run. Each line contains its own command. For example, the following script would be split up and run as two separate commands:
 
 ``` bash
 echo "Starting Integration Tests"
-cd scripts/
-./runTests
+cd scripts && ./runTests
 ```
 
 Finally, hit **Save** once you are done.

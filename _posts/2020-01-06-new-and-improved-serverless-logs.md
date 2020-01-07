@@ -29,7 +29,7 @@ Simply start typing the name of the Lambda function (or service name) to filter 
 
 ![Autocomplete Lambda and API Gateway log groups](/assets/blog/new-and-improved-serverless-logs/autocomplete-lambda-and-api-gateway-log-groups.png)
 
-Seed will also remember all your recent searches. This comes in handy when you are developing and going back and forth between a couple of Lambda functions.
+Seed will also remember all your **recent searches**. This comes in handy when you are developing and going back and forth between a couple of Lambda functions.
 
 ![Recent log group searches](/assets/blog/new-and-improved-serverless-logs/recent-log-group-searches.png)
 
@@ -47,11 +47,11 @@ By default CloudWatch will show you a single log per line. And a few logs put to
 
 By grouping the requests together, Seed can show you all the logs related to that request. This ends up being valuable because you might be logging quite a few things in a single request.
 
-So for example, you might log a JSON object to debug what is going on in your Lambda function. Seed will automatically format this and display it alongside the rest of the request.
+So for example, you might log a JSON object to debug what is going on in your Lambda function. Seed will **automatically format** this and display it alongside the rest of the request.
 
 ![JSON formatting in Lambda logs](/assets/blog/new-and-improved-serverless-logs/json-formatting-in-lambda-logs.png)
 
-Seed will also format stack traces for you.
+Seed will also **format stack traces** for you.
 
 ![Stack trace formatting in Lambda logs](/assets/blog/new-and-improved-serverless-logs/stack-trace-formatting-in-lambda-logs.png)
 
@@ -69,7 +69,7 @@ In Node.js anything you logged using `console.error` will also get highlighted. 
 
 The automatic grouping of Lambda log requests allows us to fix one of the biggest issues of working with logs, sharing log with your team!
 
-Lambda requests (and API Gateway access logs) comes with a permalink that you can share with anybody on your team.
+Lambda requests (and API Gateway access logs) comes with a **permalink** that you can share with anybody on your team.
 
 ![Lambda log request permalink](/assets/blog/new-and-improved-serverless-logs/lambda-log-request-permalink.png)
 
@@ -101,41 +101,41 @@ And just as Lambda logs above, access logs with errors get highlighted.
 
 Seed also makes it really easy to look up logs around a specific date and time. We've taken extra care to support some key use cases.
 
-For example, you might have received an alert for an error and want to check the logs for it. You can easily look up the logs from the past few minutes.
+For example, you might have received an alert for an error and want to check the logs for it. You can easily look up the logs from the **past few minutes**.
 
 ![Logs from few minutes ago](/assets/blog/new-and-improved-serverless-logs/logs-from-few-minutes-ago.png)
 
-We also support a variety of date and time formats. Including ones with an explicit UTC timezone. This is typically what you might receive from other error reporting services, like [Sentry](https://sentry.io).
+We also support a variety of date and time formats. Including ones with an explicit **UTC timezone**. This is typically what you might receive from other error reporting services, like [Sentry](https://sentry.io).
 
 ![Logs for time with UTC timezone](/assets/blog/new-and-improved-serverless-logs/logs-for-time-with-utc-timezone.png)
 
-You can also use a Unix timestamp.
+You can also use a **Unix timestamp**.
 
 ![Logs for time with Unix timestamp](/assets/blog/new-and-improved-serverless-logs/logs-for-time-with-unix-timestamp.png)
 
-And finally, look up logs within a given time range.
+And finally, look up logs within a given **time range**.
 
 ![Logs within a time range](/assets/blog/new-and-improved-serverless-logs/logs-within-a-time-range.png)
 
 ### Filter by search terms
 
-You can filter logs with a variety of search terms. For example, you can search for a single term.
+You can filter logs with a variety of search terms. For example, you can search for a **single term**.
 
 ![Filter by single term](/assets/blog/new-and-improved-serverless-logs/filter-by-single-term.png)
 
-You can search for a phrase using quotes.
+You can search for a **phrase** using quotes.
 
 ![Filter by a phrase](/assets/blog/new-and-improved-serverless-logs/filter-by-a-phrase.png)
 
-Or search for multiple terms or phrases.
+Or search for **multiple terms** or phrases.
 
 ![Filter by multiple term](/assets/blog/new-and-improved-serverless-logs/filter-by-multiple-term.png)
 
-You can even exclude certain terms in your search.
+You can even **exclude certain terms** in your search.
 
 ![Filter by excluding a term](/assets/blog/new-and-improved-serverless-logs/filter-by-excluding-a-term.png)
 
-Finally, Seed will highlight the filtered logs with your search terms.
+Finally, Seed will **highlight** the filtered logs with your search terms.
 
 ![Highlight search terms in filter](/assets/blog/new-and-improved-serverless-logs/highlight-search-terms-in-filter.png)
 
@@ -167,7 +167,7 @@ A couple of things to note with this new logs interface.
 
 4. Viewing logs live is completely free.
 
-5. However, AWS will charge you based on the amount of logs that are queried. When you filter your logs you are charged $0.005 per GB of log data scanned. So if you are querying large production apps, it's important to be aware that there is a cost.
+5. However, AWS will charge you based on the amount of logs that are queried. When you filter your logs you are charged $0.005 per GB of log data scanned (depending on your region). So if you are querying large production apps, it's important to be aware that there is a cost. Make sure to check for [CloudWatch Analyze (Logs Insights queries) pricing](https://aws.amazon.com/cloudwatch/pricing/) for your region.
 
 6. If you are viewing logs for high traffic Lambdas and API endpoints, it might skip some requests as it can be hard to keep up with the live updates.
 

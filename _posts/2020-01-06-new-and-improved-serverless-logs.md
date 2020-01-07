@@ -1,6 +1,7 @@
 ---
 layout: post
 title: New and Improved Serverless Logs
+image: assets/social-cards/seed-serverless-logs.png
 categories: news
 author: jay
 ---

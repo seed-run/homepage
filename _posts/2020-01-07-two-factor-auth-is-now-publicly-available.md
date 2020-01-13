@@ -12,4 +12,4 @@ You can now secure your Seed accounts by enabling two-factor auth. Simply head o
 
 Previously, two-factor auth was only available upon request. But we decided to make it publicly available since most of our users are deploying their production applications with Seed. 
 
-If you are interested in **enforcing two-factor auth** across your organization on Seed, feel free to [**get in touch with us**](mailto:{{{ site.email }}}).
+If you are interested in **enforcing two-factor auth** across your organization on Seed, feel free to [**get in touch with us**](mailto:{{ site.email }}).

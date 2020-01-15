@@ -94,6 +94,10 @@ You can also add the following to your `seed.yml` to [deploy all your services w
 check_code_change: false
 ```
 
+### AWS CLI
+
+The scripts in your build spec are run in an environment that are using your AWS IAM credentials. This means that you can directly use any AWS commands in your script using the AWS CLI without having to configure it.
+
 ---
 
 ### Build Spec Examples

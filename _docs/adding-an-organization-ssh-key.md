@@ -14,6 +14,18 @@ To run the above operations you'll need your private SSH keys in the build proce
 
 You can set this by adding a private SSH key for your organization.
 
+### Generating an SSH Key
+
+Use the following command to generate your SSH Key.
+
+``` bash
+$ ssh-keygen -m PEM -t rsa -C "your_email@example.com"
+```
+
+Note that, since Seed cannot decrypt SSH keys, every new key must have an empty passphrase. Seed also does not support OpenSSH's default file format. Make sure to use `ssh-keygen -m pem` if you are using OpenSSH to generate your key.
+
+Additionally, recent updates in `ssh-keygen` don’t generate the key in PEM format by default. If your private key does not start with `-----BEGIN RSA PRIVATE KEY-----`, enforce PEM format by generating the key with `ssh-keygen -m PEM -t rsa -C "your_email@example.com"`.
+
 ### Adding an SSH Key
 
 Head over to your organization settings and click on **Add Org SSH Key**.

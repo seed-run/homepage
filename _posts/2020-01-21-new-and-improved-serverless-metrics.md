@@ -8,9 +8,7 @@ author: frank
 
 Following on the heels of the recent [update to our logs viewer]({% link _posts/2020-01-06-new-and-improved-serverless-logs.md %}); we are excited to announce a complete redesign to how Seed displays your Lambda and API metrics.
 
-<!--
 ![Seed Serverless Metrics](/assets/blog/new-and-improved-serverless-metrics/seed-serverless-metrics.gif)
--->
 
 We've made a couple of key improvements. Let's go over them really quickly.
 

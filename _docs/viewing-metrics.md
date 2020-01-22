@@ -3,7 +3,14 @@ layout: docs
 title: Viewing Metrics
 ---
 
-[Seed](/) pulls together CloudWatch metrics to give you an overview of your deployments. You can view the metrics for your Lambda and API Gateway endpoints.
+[Seed](/) pulls together CloudWatch Metrics to give you an overview of your Lambda and API metrics. This includes the number of requests, number of errors, and latency of your Lambda function or API endpoint over time. Viewing these metrics gives you a view of how your Serverless app is performing and you can use it to debug specific issues.
+
+A couple of quick notes about the metrics viewer in Seed:
+
+- Seed internally uses CloudWatch Metrics for this.
+- This means that you get unlimited data retention!
+- However, AWS will charge you small amount based on your region. It's roughly $0.01 per 1,000 metrics queried. Make sure to check the [CloudWatch Metrics pricing](https://aws.amazon.com/cloudwatch/pricing/) for your region.
+- We also need a couple of additional permissions to connect to CloudWatch in your account. More on this below.
 
 ### Lambda Metrics
 
@@ -11,17 +18,21 @@ To view the Lambda metrics for a stage, simply select the stage.
 
 ![Select stage](/assets/docs/viewing-metrics/select-stage.png)
 
-Click **View Resources** for the service you are looking for.
+Click **View Resources** for the service you are looking for and navigate to the **Metrics** for the Lambda function.
 
 ![Stage view resources](/assets/docs/viewing-metrics/stage-view-resources.png)
 
-Here Seed gives you a clear overview of the resources that have been deployed.
+Or type in the name of the Lambda function you are looking for in the search.
 
-![Resources Info](/assets/docs/viewing-metrics/resources-info.png)
+![Search for Lambda log](/assets/docs/viewing-metrics/search-for-lambda-metric.png)
 
-And hit **Metrics** for the Lambda you are interested in.
+This gives you a live look at the last **1 hour** of metrics.
 
-![Lambda Metrics](/assets/docs/viewing-metrics/lambda-metrics.png)
+![Lambda Metrics Live](/assets/docs/viewing-metrics/lambda-metrics-live.png)
+
+You can easily view the metrics for a different period of time. The time field can take a specific time, range, timestamp, or even a different timezone.
+
+![Lambda Logs change duration filter](/assets/docs/viewing-metrics/lambda-metrics-change-duration-filter.png)
 
 For Lambda, Seed shows you the following metrics:
 
@@ -29,60 +40,86 @@ For Lambda, Seed shows you the following metrics:
 
    This is the number of times the Lambda has been invoked.
 
-2. **Duration**
-
-   This is the average time (in ms) it took to execute the Lambda.
-
-3. **Error Count**
+2. **Error Count**
 
    This is the number of times the Lambda generated an error.
 
-To get a better sense of how the metrics are calculated over the various timespans, read the section below on [Timespan of Graphs](#timespan-of-graphs);
+3. **Duration**
+
+   This is the average, P90, P95, and P99 time (in ms) it took to execute the Lambda.
 
 ### API Gateway Metrics
 
-To view the API Gateway metrics for a stage, click on **Metrics** on the API Gateway portion of your resources.
+To view the API Gateway metrics for a stage, click on **Metrics** for the API endpoint. Or you can use the search field just as above.
 
-![Resources Info](/assets/docs/viewing-metrics/resources-info.png)
+![Stage view resources](/assets/docs/viewing-metrics/stage-view-resources.png)
 
-The API Gateway metrics have a bit more info than the Lambda metrics.
+Similar to the Lambda metrics, you get a live view of the last hour of metrics.
 
-![API Gateway Metrics](/assets/docs/viewing-metrics/api-gateway-metrics.png)
+![API Metrics Live](/assets/docs/viewing-metrics/api-metrics-live.png)
 
-Here are the metrics for API Gateway:
+You can view the following API metrics here:
 
 1. **Request Count**
 
    This is the number of requests made to API Gateway.
 
-2. **4xx Errors**
+2. **Error Count**
 
-   This is the number of 4xx response errors generated for the requests.
+   This is the number of times the API endpoint responded with a 4xx or 5xx error.
 
-3. **5xx Errors**
+3. **Latency**
 
-   This is the number of 5xx response errors generated for the requests.
+   This is the average, P90, P95, and P99 time (in ms) it took to respond to a request.
 
-4. **Latency**
+### Inspecting Logs
 
-   This is the average time (in ms) it took to make the entire request.
+You can click on a data point on any of the above graphs to inspect it in detail. This is especially useful in debugging errors.
 
-5. **Integration Latency**
+![API Metrics inspect errors](/assets/docs/viewing-metrics/api-metrics-inspect-errors.png)
 
-   This is the average time (in ms) it took to make the Lambda part of the request.
+Clicking through brings up the logs from that period of time. And in the case of errors, Seed will display just the errors.
 
-You might notice in some cases that the **Integration Latency** is larger that the **Latency** (even though the Latency should be the total request time). This is because **OPTIONS** requests do not hit your Lambdas and have an Integration Latency of 0. And as a result it brings down the average for the Integration Latency of requests.
+![API Logs inspect errors](/assets/docs/viewing-metrics/api-logs-inspect-errors.png)
 
-### Timespan of Graphs
+Note that for Lambda functions, the errors logged in the metrics points to errors that take place outside the handler function. Errors like:
 
-You can view the various metrics over the following timespans and each point is the data collected for the given amount of time.
+- Out of memory
+- Time out
+- Errors before initialization
+  - Before handler
+  - Syntax errors
+  - Handler file/function not found
 
-| Label | Timespan   | Each Point |
-|-------|------------|------------|
-| Live  | 60 minutes | 1 minute   |
-| 24H   | 24 hours   | 30 minutes |
-| 1WK   | 1 week     | 3 hours    |
-| 1MO   | 1 month    | 1 day      |
-|-------|------------|------------|
+So inspecting the metrics for errors helps track issues that would otherwise not be reported through services like [Sentry](https://sentry.io). 
 
-So for example, in the 24H setting (24 hours); the total number of points are displayed over the span of 24 hours. While each point on the graph represents the amount of the data collected over the span of 30 minutes. In the case of a count, this is the total number over the span of 30 minutes. And for a duration type metric, it is the average of the points collected over 30 minutes.
+A couple of caveats:
+
+- Errors related to IAM permissions might show up in the metrics but not in the logs.
+- Also, we are not displaying any Lambda throttling errors in the metrics.
+- Inspecting the Lambda errors is currently supported for the Node.js and Python runtimes.
+
+### Additional IAM Permissions
+
+To connect to CloudWatch in your AWS account, Seed needs the following set of additional permissions.
+  
+``` json
+{
+  "PolicyName": "MonitorMetrics",
+  "PolicyDocument": {
+    "Version": "2012-10-17",
+    "Statement": [
+      {
+        "Effect": "Allow",
+        "Action": [
+          "apigateway:GET",
+          "cloudwatch:GetMetricData"
+        ],
+        "Resource": "*"
+      }
+    ]
+  }
+}
+```
+
+The metrics viewer in Seed is designed to work with your development workflow by helping you quickly debug any issues with your deployed apps.

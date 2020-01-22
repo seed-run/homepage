@@ -3,7 +3,7 @@ layout: docs
 title: Viewing Logs
 ---
 
-Seed makes it very easy to monitor your deployments by giving you a live look at your API Gateway Access Logs and Lambda Logs. This allows you to monitor your deployments and decide if you need to rollback in case of an error.
+[Seed](/) makes it very easy to monitor your deployments by giving you a live look at your API Gateway Access Logs and Lambda Logs. This allows you to monitor your deployments and decide if you need to rollback in case of an error.
 
 A couple of quick notes about the log viewer in Seed:
 

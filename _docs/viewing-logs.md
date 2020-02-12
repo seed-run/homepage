@@ -10,7 +10,7 @@ A couple of quick notes about the log viewer in Seed:
 - Seed internally uses CloudWatch Logs and Logs Insight queries.
 - This means that you get unlimited log retention!
 - Viewing your logs live is completely free.
-- However, AWS will charge you based on the amount of logs that are queried. When you filter your logs you are charged $0.005 per GB of log data scanned (depending on your region). So if you are querying large production apps, it’s important to be aware that there is a cost. Make sure to check for [CloudWatch Analyze (Logs Insights queries) pricing](https://aws.amazon.com/cloudwatch/pricing/) for your region.
+- However, AWS will charge you based on the amount of logs that are queried. When you filter your logs you are charged $0.005 per GB of log data scanned (depending on your region). So if you are querying large production apps, it’s important to be aware that there is a cost. Make sure to check the [CloudWatch Analyze (Logs Insights queries) pricing](https://aws.amazon.com/cloudwatch/pricing/) for your region.
 - We also need a couple of additional permissions to connect to CloudWatch in your account. More on this below.
 
 ### Lambda Logs

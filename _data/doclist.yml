@@ -87,10 +87,12 @@ toc:
     subfolderitems:
       - page: Configuring custom domains
         url: /docs/configuring-custom-domains.html
-      - page: Viewing metrics
-        url: /docs/viewing-metrics.html
       - page: Viewing logs
         url: /docs/viewing-logs.html
+      - page: Viewing metrics
+        url: /docs/viewing-metrics.html
+      - page: Viewing app reports
+        url: /docs/viewing-app-reports.html
   - title: Adding your organization
     subfolderitems:
       - page: Creating an organization

@@ -12,7 +12,7 @@ Introducing App Reports in Seed — a simple way to monitor the performance of y
   <img src="/assets/blog/introducing-app-reports/introducing-app-reports.png" alt="Serverless App Reports" width="600" />
 </p>
 
-App Reports are weekly (or daily) email reports that contain the key metrics for your Serverless apps. They allow you to keep an eye on the performance of your app. It makes it apparent if some of your APIs or Lambda functions have an increase in errors or if they are now performing slower than normal.
+App Reports are weekly (sent on Monday) or daily email reports that contain the key metrics for your Serverless apps. They allow you to keep an eye on the performance of your app. It makes it apparent if some of your APIs or Lambda functions have an increase in errors or if they are now performing slower than normal.
 
 Clicking through on the report will take you over to our [metrics viewer]({% link _docs/viewing-metrics.md %}).
 

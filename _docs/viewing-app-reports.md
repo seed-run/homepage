@@ -13,7 +13,7 @@ App Reports are generated for all the apps in your organization.
 
 App Reports allow you to keep an eye on the performance of your app. It makes it apparent if some of your APIs or Lambda functions have an increase in errors or if they are now performing slower than before.
 
-By default, these reports are sent out once a week (on Monday) but they can be configured to be sent daily. You can find these in your organization's settings.
+By default, these reports are sent out once a week (on Monday around 2am UTC) but they can be configured to be sent daily (around 1am UTC). You can find these in your organization's settings.
 
 ![App report in org settings](/assets/docs/viewing-app-reports/app-report-in-org-settings.png)
 

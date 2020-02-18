@@ -12,17 +12,25 @@ description: "ApiGatewayDeploymentxxxxxx - No integration defined for method (Se
 
 #### Problem
 
-People have reported different scenarios where this could happen. If you have not manually changed the API Gateway project configuration in the console, this most likely is not an issue with your app.
+People have reported different scenarios where this could happen. If you haven't manually changed the API Gateway project configuration in the console, this most likely is not an issue with your app.
+
+It can happen when multiple Serverless services that share the same API Gateway project are deployed concurrently. When you add a new API sub-path in one of your services, Serverless Framework tries to create an `AWS::ApiGateway::Method` resource. If another service is deployed while CloudFormation is still in the middle of creating the `AWS::ApiGateway::Method` resource, you'll get the above error. Since Serverless Framework creates an `AWS::ApiGateway::Deployment` resource for that same API Gateway project while it's still being updated.
+
+Note that, the above is not a very common error but is more likely to happen when a stack is first created and the services invloved are being deployed concurrently.
 
 
 #### Solution
 
-There are a couple of solutions that worked for people depending on the cause. We've listed them out in the order starting with the ones are least likely to impact your deployed resources:
+If your deployment failed because you were concurrently deploying your services, you'll need to retry the deployment.
 
-1. Update your Serverless Framework to v1.30.3 or later and try deploying again.
+1. Check if the CloudFormation stack is in the `ROLLBACK_COMPLETE` state.
 
-2. If your Lambdas have http events with cors enabled, turn off cors by removing `cors: true` from your `serverless.yml` and try deploying the service again. After the deployment succeeds, put the `cors: true` option back and deploy again.
+2. If it is, then you'll need to remove the stack from the CloudFormation console before proceeding. You cannot update a stack that's in the `ROLLBACK_COMPLETE` state, you'll get the following error if you do.
 
-3. Remove all http events from your Lambda definitions and try deploying the service again. This will remove the API Gateway project entirely. After the deployment succeeds, put the http events back and deploy again. Note that, removing and redeploying will result in a different API Gateway endpoint.
+   ```
+   Stack:arn:aws:cloudformation:us-xxxx-x:xxxxxxxxx:stack/xxx-xx-prod/xxxx-xxxx-xxxx-xxxx-xxxx is in ROLLBACK_COMPLETE state and can not be updated.
+   ```
 
-4. If removing the service is an option for you, run `serverless remove` to remove the service entirely. Ensure all API Gateway resources have been successfully removed in the API Gateway console. Then deploy the service again.
+3. After the stack has been removed you can try deploying the service again.
+
+Note that, [Seed](/) will do the above automatically. It'll check the CloudFormation stack status, remove the stack if necessary, and retry the deployment (up to 3 times).

@@ -53,6 +53,8 @@ toc:
     url: /docs/serverless-errors/the-security-token-included-in-the-request-is-invalid.html
   - title: User is not authorized to perform action on resource
     url: /docs/serverless-errors/user-is-not-authorized-to-perform-action-on-resource.html
+  - title: Another Deployment is in progress for rest api with id
+    url: /docs/serverless-errors/another-deployment-is-in-progress-for-rest-api-with-id.html
   - title: You have attempted to create more buckets than allowed
     url: /docs/serverless-errors/you-have-attempted-to-create-more-buckets-than-allowed.html
   - title: Serverless version does not satisfy the frameworkVersion

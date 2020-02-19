@@ -12,7 +12,7 @@ description: You are not currently logged in
 
 #### Problem
 
-Serverless Framework tries to log you into your Serverless account when you have a Serverless organization specified it in your `serverless.yml`:
+Serverless Framework tries to log you into your Serverless account when you have a Serverless organization specified in your `serverless.yml`:
 
 ``` yml
 org: acme
@@ -30,8 +30,6 @@ If you do not have a Serverless account, or want to skip the login step, you can
 ``` yml
 # org: acme
 service: notes
-
-...
 ```
 
-Alternatively, you can configure your Serverless token by following these instructions -  https://seed.run/docs/integrating-with-serverless-enterprise.
+Alternatively, if you have a Serverless account, you can configure your Serverless token on Seed by [following our docs]({% link _docs/integrating-with-serverless-enterprise.md %}).

@@ -51,11 +51,11 @@ Below is a brief description of when these commands are run.
 
 - `before_remove`
 
-   Seed run the `serverless remove` command to remove a deployed service. The `before_remove` let's you run your commands before this happens. This step is only run on remove.
+   Seed runs the `serverless remove` command to remove a deployed service. The `before_remove` step let's you run any commands before this happens. Note that, this step is only run when a service is being removed.
 
 - `after_remove`
 
-   Finally, after the removal is complete you can use the `after_remove` step to run any cleanup scripts you might have. Again, this step is only run on remove.
+   Similar to the `before_remove`, the `after_remove` step is run after a service has been removed. This can be used to run any cleanup scripts you might have.
 
 ### Build Environment Variables
 
@@ -66,7 +66,7 @@ Seed also has a couple of build environment variables that you can use to custom
 - `$SEED_APP_NAME`: The app name.
 - `$SEED_SERVICE_NAME`: The name of the service.
 - `$SEED_BUILD_ID`: The build id.
-- `$SEED_BRANCH`: The Git branch used in the build process. Does not apply to promotions and rollbacks. For PR stages, this is the branch the PR was submitted to.
+- `$SEED_BRANCH`: The Git branch used to trigger this build. Does not apply to promotions and rollbacks. For PR stages, this is the branch the PR was submitted to. Note the difference between this and the `$SEED_STAGE_BRANCH` variable. These two variables will differ if you trigger a manual deployment using a branch that's different from the one the stage is set to auto-deploy from.
 - `$SEED_PULL_REQUEST_NUMBER`: For PR stages, this is the number of the Pull Request.
 
 - Secrets: All your [secrets in the Seed console]({% link _docs/storing-secrets.md %}) are also made available during the build process. For example, a secret environment variable called **TEST_VAR** would be available as `$TEST_VAR` in the build process.

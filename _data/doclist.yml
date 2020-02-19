@@ -73,6 +73,8 @@ toc:
         url: /docs/connect-your-own-ci.html
       - page: Pinning the Serverless Version
         url: /docs/pinning-the-serverless-version.html
+      - page: Caching Dependencies
+        url: /docs/caching-dependencies.html
   - title: Working with monorepo apps
     subfolderitems:
       - page: Monorepo apps in Seed

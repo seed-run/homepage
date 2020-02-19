@@ -34,3 +34,6 @@ By default, Seed will only deploy the services that have been updated. You can r
 ![Select force option](/assets/docs/manually-deploying/select-force-option.png)
 
 This option tells Seed to deploy all your services even if there are no changes that've been detected.
+
+A **Force deploy** also clears the [dependency cache]({% link _docs/caching-dependencies.md %}) for the stage you are deploying to.
+

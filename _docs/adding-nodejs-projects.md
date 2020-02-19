@@ -10,4 +10,6 @@ Seed provides first-class support for [Node.js](https://nodejs.org/) projects. W
 - Unit tests via the `npm run test` command. You can read more on [running tests here]({% link _docs/running-tests.md %}).
 - Most common Serverless plugins including, [Serverless Webpack](https://github.com/serverless-heaven/serverless-webpack).
 
+Seed auto-detects the package manager. If a `yarn.lock` is found then Yarn will be used, And if `package-lock.json` is found then npm will be used. If neither are found then Seed defaults to npm.
+
 We also have a popular starter project you can use - [Serverless Node.js Starter](https://github.com/AnomalyInnovations/serverless-nodejs-starter).

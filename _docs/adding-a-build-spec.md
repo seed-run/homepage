@@ -23,6 +23,12 @@ before_deploy:
 
 after_deploy:
   - echo "After deploy"
+
+before_remove:
+  - echo "Before deploy"
+
+after_remove:
+  - echo "After deploy"
 ```
 
 Below is a brief description of when these commands are run.
@@ -41,17 +47,26 @@ Below is a brief description of when these commands are run.
 
 - `after_deploy`
 
-   Finally, after the deployment is complete you can use the `after_deploy` step to run any post deployment scripts you might have. Again, this step is run for all builds and also when they are promoted to production. You can distinguish between the cases by using the `$SEED_STAGE_NAME` build environment variable.
+   After the deployment is complete you can use the `after_deploy` step to run any post deployment scripts you might have. Again, this step is run for all builds and also when they are promoted to production. You can distinguish between the cases by using the `$SEED_STAGE_NAME` build environment variable.
+
+- `before_remove`
+
+   Seed runs the `serverless remove` command to remove a deployed service. The `before_remove` step let's you run any commands before this happens. Note that, this step is only run when a service is being removed.
+
+- `after_remove`
+
+   Similar to the `before_remove`, the `after_remove` step is run after a service has been removed. This can be used to run any cleanup scripts you might have.
 
 ### Build Environment Variables
 
 Seed also has a couple of build environment variables that you can use to customize your build process. These should not be confused with the [secret environment variables]({% link _docs/storing-secrets.md %}) that are defined in the console.
 
 - `$SEED_STAGE_NAME`: The name of the stage that is being built. The stage names are exactly as shown in the console.
+- `$SEED_STAGE_BRANCH`: The name of the git branch the stage is auto-deployed from. If the stage is not auto-deployed, the value is not defined.
 - `$SEED_APP_NAME`: The app name.
 - `$SEED_SERVICE_NAME`: The name of the service.
 - `$SEED_BUILD_ID`: The build id.
-- `$SEED_BRANCH`: The Git branch used in the build process. Does not apply to promotions and rollbacks. For PR stages, this is the branch the PR was submitted to.
+- `$SEED_BRANCH`: The Git branch used to trigger this build. Does not apply to promotions and rollbacks. For PR stages, this is the branch the PR was submitted to. Note the difference between this and the `$SEED_STAGE_BRANCH` variable. These two variables will differ if you trigger a manual deployment using a branch that's different from the one the stage is set to auto-deploy from.
 - `$SEED_PULL_REQUEST_NUMBER`: For PR stages, this is the number of the Pull Request.
 
 - Secrets: All your [secrets in the Seed console]({% link _docs/storing-secrets.md %}) are also made available during the build process. For example, a secret environment variable called **TEST_VAR** would be available as `$TEST_VAR` in the build process.

@@ -14,6 +14,7 @@ Here is how it works for Node.js projects.
   - If instead, npm is detected, Seed will cache `node_modules` directory in the project root.
 - In the _Init_ step of the build process, Seed will restore the dependency cache. And in the _Cleanup_ step of the build process, Seed will update the dependency cache.
 - Dependencies are cached on a per-stage basis. So when deploying a stage, the cache for that stage is loaded up.
-- Finally to clear the cache, you can use the **Force deploy** option while [triggering a manual deployment]({% link _docs/manually-deploying.md %}#force-deploys).
+- If a stage hasn't been deployed to for 7 days, the cache is automatically cleared.
+- Finally you can manually clear the cache by using the **Force deploy** option while [triggering a deployment]({% link _docs/manually-deploying.md %}#force-deploys).
 
 A quick note on the impact of caching dependencies on build minutes. The time it takes to restore the cache counts towards the build minutes of your account. While the time to update the build cache does not.

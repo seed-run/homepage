@@ -42,7 +42,7 @@ Next we'll create an OAuth app for Seed on GitLab.
 
 5. Scroll down and hit **Save application**.
 
-   ![Save Application](/assets/docs/enabling-gitlab-enterprise/save-application.png)
+   ![Save Application](/assets/docs/enabling-gitlab-enterprise/save-new-application.png)
 
 6. Copy the **Application ID** and the **Secret**.
 

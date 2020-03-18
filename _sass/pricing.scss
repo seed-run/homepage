@@ -24,10 +24,51 @@ main .pricing {
         font-size: 34px;
       }
     }
+
+    .announcement {
+      $bkg-color: lighten(mix($brand-color, $grey-color-light, 10%), 15%);
+
+      margin: $spacing-unit auto 0;
+      display: inline-block;
+      padding: 4px 11px;
+      border: 1px solid lighten($brand-color, 25%);
+      background-color: $bkg-color;
+      border-radius: 3px;
+      font-size: 15px;
+
+      & > span {
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+
+        @include media-query($on-palm) {
+          display: block;
+        }
+      }
+
+      @include media-query($on-palm) {
+        margin: $spacing-unit / 2 auto 0;
+        padding: 5px $spacing-unit / 2;
+        font-size: 14px;
+      }
+
+      .content {
+        color: $secondary-text-color;
+        i {
+          margin-left: 3px;
+        }
+      }
+
+      &:hover {
+        background-color: darken($bkg-color, 3%);
+        border-color: lighten($brand-color, 10%);
+        box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.1);
+      }
+    }
   }
 
   .table {
-    margin: 2.5 * $spacing-unit auto 0;
+    margin: $spacing-unit + 10px auto $spacing-unit;
     display: flex;
     justify-content: center;
     align-items: flex-start;

@@ -378,10 +378,13 @@
 .link-list {
   list-style: none;
   margin-left: 0;
+
+  & > li+li {
+    margin-top: 10px;
+  }
 }
 
 .footer-col-wrapper {
-  font-size: 15px;
   color: $tertiary-text-color;
   margin-left: -$spacing-unit / 2;
   @extend %clearfix;
@@ -393,7 +396,6 @@
 
   a.email-link,
   a.page-link {
-    font-size: 13px;
     @extend %a-tertiary;
 
     &.jobs {
@@ -408,13 +410,15 @@
   a.social-link {
     @extend %a-tertiary;
     color: lighten($tertiary-text-color, 10%);
-    font-size: 26px;
+    font-size: 34px;
   }
 
   .site-title {
     font-family: $base-font-family;
     font-style: italic;
     font-weight: 700;
+    font-size: 20px;
+    color: $tertiary-text-color;
   }
 
   .site-description {
@@ -423,7 +427,6 @@
 
   .site-author {
     padding-top: 4px;
-    font-size: 13px;
     a {
       @extend %a-tertiary;
     }
@@ -437,22 +440,38 @@
 }
 
 .footer-col-1 {
-  width: -webkit-calc(60% - (#{$spacing-unit} / 2));
-  width:         calc(60% - (#{$spacing-unit} / 2));
-}
-
-.footer-col-2 {
-	text-align: right;
   width: -webkit-calc(40% - (#{$spacing-unit} / 2));
   width:         calc(40% - (#{$spacing-unit} / 2));
 }
 
+.footer-col-2 {
+	text-align: right;
+  width: -webkit-calc(60% - (#{$spacing-unit} / 2));
+  width:         calc(60% - (#{$spacing-unit} / 2));
+}
+
 @include media-query($on-palm) {
-  .footer-col {
-    float: none;
-		text-align: left;
-    width: -webkit-calc(100% - (#{$spacing-unit} / 2));
-    width:         calc(100% - (#{$spacing-unit} / 2));
+  footer > .wrapper {
+    margin: 0;
+    padding: 0;
+
+    .footer-col-wrapper {
+      margin: 0;
+    }
+    .footer-col {
+      float: none;
+      text-align: left;
+      width: auto;
+      padding: 0 $spacing-unit / 2;
+
+      &:first-child {
+        margin-bottom: $spacing-unit - 10px;
+      }
+      &:last-child {
+        padding-top: $spacing-unit - 10px;
+        border-top: 1px solid $divider-color;
+      }
+    }
   }
 }
 

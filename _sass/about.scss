@@ -35,6 +35,117 @@ main > .wrapper > .about {
     }
   }
 
+  .investors {
+    margin: 0 auto;
+    text-align: center;
+    max-width: 720px;
+
+    h3 {
+      font-size: 24px;
+    }
+
+    p {
+      margin-bottom: $spacing-unit;
+      color: $secondary-text-color;
+      font-size: 17px;
+      a {
+        font-weight: 500;
+      }
+    }
+
+    .logos {
+      a {
+        display: inline-block;
+      }
+      a:last-child {
+        margin-left: $spacing-unit;
+        img {
+          margin-top: 32px;
+        }
+      }
+
+      @include media-query($on-palm) {
+        a {
+          display: block;
+        }
+        a:first-child {
+          margin-right: 0;
+          margin-bottom: $spacing-unit / 2;
+          img {
+            margin-top: 0;
+          }
+        }
+      }
+    }
+
+    ul {
+      margin: $spacing-unit -10px 0 0;
+      padding: 0;
+      list-style: none;
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: space-between;
+
+      @include media-query($on-palm) {
+        margin: $spacing-unit / 2 0 0 0;
+      }
+
+      li {
+        flex: 0 0 33%;
+        margin-top: $spacing-unit / 2 + 10px;
+        margin-right: 10px;
+        max-width: 156px;
+        text-align: left;
+
+        @include media-query($on-palm) {
+          margin-right: 0;
+          flex: 0 1 50%;
+        }
+
+        a {
+          font-weight: 500;
+          font-size: 17px;
+          @include media-query($on-palm) {
+            font-size: 15px;
+          }
+        }
+        p {
+          margin: 0;
+          font-size: 13px;
+          color: $tertiary-text-color;
+        }
+
+        &:last-child {
+          color: $tertiary-text-color;
+          font-weight: 500;
+        }
+      }
+    }
+  }
+
+  .founders {
+    margin: 0 auto;
+    max-width: 720px;
+    text-align: center;
+
+    h3 {
+      font-size: 24px;
+      margin-bottom: $spacing-unit;
+    }
+
+    p {
+      color: $secondary-text-color;
+      font-size: 17px;
+      a {
+        font-weight: 500;
+      }
+      b {
+        font-weight: 500;
+      }
+    }
+  }
+
   .team {
     margin: 0 auto;
     max-width: 720px;
@@ -45,7 +156,7 @@ main > .wrapper > .about {
       overflow: hidden;
     }
     .map {
-      margin: 0 auto;
+      margin: 0 auto $spacing-unit / 2;
       width: 512px;
       height: 300px;
       position: relative;
@@ -109,50 +220,6 @@ main > .wrapper > .about {
         }
         &:hover img {
           filter: none;
-        }
-      }
-    }
-  }
-
-  .investors {
-    margin: 0 auto;
-    text-align: center;
-    max-width: 720px;
-
-    h3 {
-      font-size: 24px;
-    }
-
-    p {
-      margin-bottom: $spacing-unit + 5px;
-      color: $secondary-text-color;
-      font-size: 17px;
-      a {
-        font-weight: 500;
-      }
-    }
-
-    .logos {
-      a {
-        display: inline-block;
-      }
-      a:first-child {
-        margin-right: $spacing-unit;
-        img {
-          margin-top: 35px;
-        }
-      }
-
-      @include media-query($on-palm) {
-        a {
-          display: block;
-        }
-        a:first-child {
-          margin-right: 0;
-          margin-bottom: $spacing-unit / 2;
-          img {
-            margin-top: 0;
-          }
         }
       }
     }

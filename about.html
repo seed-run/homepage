@@ -6,13 +6,72 @@ title: About Us
 <div class="about">
 
   <div class="header">
-    <h1 class="title">Making it easy to build<br /> and deploy Serverless apps</h1>
-    <p>Our mission at Seed is to make it extremely easy and efficient for teams to build and deploy Serverless Framework projects on AWS. We want to make sure your team has everything it needs to build great products.</p>
+    <h1 class="title">Making it easy to build Serverless applications</h1>
+    <p><b>Founded in 2017</b> with the sole purpose of making it easy to build Serverless applications on AWS. We want to make sure your team has everything it needs to build great products.</p>
+  </div>
+
+  <hr />
+
+  <div class="investors">
+    <h3>Our Investors</h3>
+    <p>We are lucky to have some of the greatest investors of Silicon Valley on our side.</p>
+    <div class="logos">
+      <a href="https://svangel.com"><img width="144" src="assets/about/sv-angel.png" /></a>
+      <a href="http://www.greylock.com"><img height="32" src="assets/about/greylock.png" /></a>
+    </div>
+    <ul>
+      <li>
+        <a href="http://en.wikipedia.org/wiki/Reid_Hoffman">Reid Hoffman</a>
+        <p>Founded LinkedIn</p>
+      </li>
+      <li>
+        <a href="http://en.wikipedia.org/wiki/Max_Levchin">Max Levchin</a>
+        <p>Founded PayPal</p>
+      </li>
+      <li>
+        <a href="http://en.wikipedia.org/wiki/Steve_Chen_(YouTube)">Steve Chen</a>
+        <p>Founded YouTube</p>
+      </li>
+      <li>
+        <a href="http://en.wikipedia.org/wiki/Russel_Simmons">Russ Simmons</a>
+        <p>Founded Yelp</p>
+      </li>
+      <li>
+        <a href="https://en.wikipedia.org/wiki/Aber_Whitcomb">Aber Whitcomb</a>
+        <p>Founded MySpace</p>
+      </li>
+      <li>
+        <a href="https://en.wikipedia.org/wiki/Ashwin_Navin">Ashwin Navin</a>
+        <p>Founded BitTorrent Inc.</p>
+      </li>
+      <li>
+        <a href="https://www.linkedin.com/in/jimydotorg/">Jim Young</a>
+        <p>Founded Hot or Not</p>
+      </li>
+      <li>
+        <a href="https://angel.co/jhong">James Hong</a>
+        <p>Founded Hot or Not</p>
+      </li>
+      <li>
+        <a href="https://angel.co/tgm">Tom McInerney</a>
+        <p>Investor</p>
+      </li>
+      <li>
+        <a href="https://www.linkedin.com/in/harryhcheung/">Harry Cheung</a>
+        <p>Investor</p>
+      </li>
+      <li>
+        <a href="https://angel.co/company/bragiel-brothers">Paul &amp; Dan Bragiel</a>
+        <p>Investors</p>
+      </li>
+      <li>&hellip;and more</li>
+    </ul>
   </div>
 
   <hr />
 
   <div class="team">
+    <h3>The Team</h3>
     <div class="map-container">
       <div class="map">
         <div class="pattern"></div>
@@ -20,70 +79,14 @@ title: About Us
         <i title="San Francisco" class="fa fa-map-marker sf" aria-hidden="true"></i>
       </div>
     </div>
-    <h3>The Team</h3>
-    <p>Seed is created by <a href="http://anoma.ly">Anomaly Innovations</a>. We are based in <b>San Francisco</b> and <b>Toronto</b>. We've got a great deal of experience with Serverless and AWS. And as a team we are intensely focused on providing a great developer experience within Seed. If you are passionate about Serverless or React, we would love for you to <a href="mailto:{{ site.jobs_email }}">join our team!</a></p>
-    <div class="members">
-      {% for member in site.data.authors %}
-        {% assign person = site.data.authors[member.first] %}
-        {% if person.team == true %}
-          <a
-            title="{{ person.name }}"
-            href="https://www.linkedin.com/in/{{ person.linkedin }}/"
-          >
-            <img src="{{ person.picture }}" />
-          </a>
-        {% endif %}
-      {% endfor %}
-    </div>
+    <p>Our team has years of experience building Serverless applications. Originally founded in <b>San Francisco</b>, we now run distributed teams in San Francisco and Toronto. And as a team we are intensely focused on providing a great developer experience within Seed. If you are passionate about Serverless or React, we would love for you to <a href="mailto:{{ site.jobs_email }}">join our team!</a></p>
   </div>
 
   <hr />
 
-  <div class="investors">
-    <h3>Our Investors</h3>
-    <p>We are lucky to have a great set of investors on our side; including <a href="http://en.wikipedia.org/wiki/Russel_Simmons">Russ Simmons</a>, <a href="http://en.wikipedia.org/wiki/Max_Levchin">Max Levchin</a>, <a href="http://en.wikipedia.org/wiki/Reid_Hoffman">Reid Hoffman</a>, <a href="http://en.wikipedia.org/wiki/Steve_Chen_(YouTube)">Steve Chen</a>, <a href="http://en.wikipedia.org/wiki/James_Hong_%28entrepreneur%29">James Hong</a>, <a href="http://en.wikipedia.org/wiki/SV_Angel">SV Angel</a> and a few others.</p>
-    <div class="logos">
-      <a href="http://www.greylock.com"><img height="32" src="assets/about/greylock.png" /></a>
-      <a href="https://svangel.com"><img width="144" src="assets/about/sv-angel.png" /></a>
-    </div>
-  </div>
-
-  <hr />
-
-  <div class="community">
-    <h3>In the Community</h3>
-    <p>We are very active in the Serverless and AWS community. We helped organize <a href="https://serverlessdays.io">Serverless Days</a>/<a href="https://functions.events/2018/toronto/">Functions 18</a>, the biggest Serverless conference in Canada. And we help run <a href="http://serverlesstoronto.org">our local Serverless Toronto meetup</a>.
-    <div class="groups">
-      <a href="https://functions.events/2018/toronto/">
-        <img width="400" src="assets/about/serverlessdaystoronto.svg" />
-      </a>
-      <a href="http://serverlesstoronto.org">
-        <img width="110" src="assets/about/serverlesstoronto.svg" />
-      </a>
-    </div>
-    <p>We are also authors of <a href="https://serverless-stack.com">Serverless Stack</a>; an open source guide for building full-stack serverless applications. We've helped hundreds of folks in the community get started with serverless.</p>
-    <div class="images">
-      <a href="https://twitter.com/FunctionsConf/status/1045758692220694531">
-        <img width="300" src="assets/about/frank-fun18.jpg" />
-      </a>
-      <a href="https://twitter.com/FunctionsConf/status/1045758692220694531">
-        <img width="300" src="assets/about/jay-fun18.jpg" />
-      </a>
-    </div>
-  </div>
-
-  <hr />
-
-  <div class="press">
-    <h3>In the Press</h3>
-    <a href="https://read.acloud.guru/serverless-superheroes-jay-and-frank-are-keeping-the-original-promise-of-serverless-bb3a32f7b8f1">
-      <img width="500" src="assets/about/cloud-guru.png" />
-    </a>
-    <p>
-      <a href="https://read.acloud.guru/serverless-superheroes-jay-and-frank-are-keeping-the-original-promise-of-serverless-bb3a32f7b8f1">
-        Serverless Superheroes: Jay and Frank are keeping the original promise of serverless
-      </a>
-    </p>
+  <div class="founders">
+    <h3>Founders</h3>
+    <p>Founded by <a href="https://twitter.com/{{ site.data.authors.jay.twitter }}">Jay V</a> and <a href="https://twitter.com/{{ site.data.authors.frank.twitter }}">Frank Wang</a>; authors of <a href="https://serverless-stack.com">Serverless Stack</a>, and early Serverless community members. They've spoken at <a href="https://functions.events/2018/toronto/">ServerlessDays 2018</a> and also help run the <a href="http://serverlesstoronto.org/">Serverless Toronto Meetup</a> group.</p>
   </div>
 
   <hr />
@@ -91,7 +94,7 @@ title: About Us
   <div class="info">
     <p><a href="mailto:{{ site.email }}">{{ site.email }}</a></p>
     <p><a href="{{ site.twitter }}">@SEED_run</a></p>
-    <p><a href="https://s3.amazonaws.com/anomaly/Seed/Media+Kit.zip">Media Kit</a></p>
+    <p><a href="https://anomaly.s3.amazonaws.com/Seed/Media+Kit.zip">Media Kit</a></p>
   </div>
 
 </div>

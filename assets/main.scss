@@ -95,7 +95,7 @@ $on-laptop:                 800px;
 
   display: inline-block;
   background-color: $bkg;
-  border: 2px solid darken($bkg, 10%);
+  border: 2px solid darken($bkg, 5%);
   border-radius: 3px;
   padding: 4px 11px;
   color: white;
@@ -122,7 +122,7 @@ $on-laptop:                 800px;
 
   display: inline-block;
   background-color: $bkg;
-  border: 2px solid darken($bkg, 10%);
+  border: 2px solid darken($bkg, 5%);
   border-radius: 3px;
   padding: 4px 11px;
   color: white;
@@ -165,18 +165,29 @@ $on-laptop:                 800px;
     max-width: none;
   }
 
+  .wallpaper {
+    position: absolute;
+    left: 105px;
+    top: 29px;
+    width: 577px;
+    height: 360px;
+    background: linear-gradient(to top, #FAE3CF, #C9C4DD);
+  }
+
   .browser {
     $bar-height: 22px;
     $bar-height-m: 10px;
     $top-color: #E7E6E9;
     $bottom-color: #DCDBDE;
 
-    width: 480px;
-    box-shadow: 0px 8px 20px 9px rgba(0, 0, 0, 0.07);
+    width: 540px;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.04),
+                0 2px 3px rgba(0, 0, 0, 0.03),
+                0 3px 4px rgba(0, 0, 0, 0.02);
     border-radius: 4px;
     position: absolute;
-    top: 49px;
-    left: 153px;
+    top: 41px;
+    left: 123px;
 
     @include media-query($on-palm) {
       width: auto;
@@ -189,10 +200,7 @@ $on-laptop:                 800px;
       height: $bar-height;
       box-sizing: border-box;
       border: {
-        top: 1px solid darken($top-color, 5%);
-        left: 1px solid darken($top-color, 8%);
-        right: 1px solid darken($top-color, 8%);
-        bottom: 1px solid darken($bottom-color, 8%);
+        bottom: 1px solid darken($bottom-color, 5%);
       }
       border-radius: 4px 4px 0 0;
       display: flex;
@@ -231,11 +239,6 @@ $on-laptop:                 800px;
     img {
       box-sizing: border-box;
       border-radius: 0 0 4px 4px;
-      border: {
-        left: 1px solid darken($bottom-color, 5%);
-        right: 1px solid darken($bottom-color, 5%);
-        bottom: 1px solid darken($bottom-color, 5%);
-      }
     }
   }
 }
@@ -400,6 +403,743 @@ $on-laptop:                 800px;
       position: center;
       repeat: no-repeat;
       image: $angle-icon;
+    }
+  }
+}
+
+@mixin mini-pipeline {
+
+  & > .container {
+    position: relative;
+    text-align: center;
+    width: 600px;
+
+    .repo {
+      display: inline-block;
+      background-color: #4078C0;
+      padding: 8px 16px 8px 12px;
+      height: 40px;
+      box-sizing: border-box;
+      line-height: 1;
+      border-radius: 20px;
+      color: white;
+      font-size: 15px;
+      box-shadow: 0 1px 1px rgba(46, 45, 51, 0.02),
+                  0 1px 2px rgba(46, 45, 51, 0.03),
+                  0 2px 4px rgba(46, 45, 51, 0.04),
+                  0 3px 6px rgba(46, 45, 51, 0.05);
+
+      i.fa {
+        margin-right: 4px;
+        font-size: 24px;
+        vertical-align: -4px;
+      }
+    }
+
+    & > .connector {
+      top: 19px;
+      position: absolute;
+      border-radius: 12px;
+      border-style: dotted;
+      border-color: $divider-color;
+      z-index: -1;
+
+      &.rectangle {
+        left: 100px;
+        width: 410px;
+        height: 120px;
+        border-width: 4px 4px 0 4px;
+      }
+
+      &.line {
+        left: 50%;
+        margin-left: -2px;
+        width: 4px;
+        height: 120px;
+        border-width: 0 4px 0 0;
+      }
+    }
+  }
+
+  .table {
+    text-align: left;
+    margin-top: 1.5 * $spacing-unit;
+    display: flex;
+  }
+
+  .part {
+    margin-top: 10px;
+    flex: 1 1 33%;
+    width: 190px;
+
+    &+.part {
+      margin-left: $spacing-unit / 2;
+    }
+    
+    & > .title {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 0 1px 9px;
+    }
+    & > .title h5 {
+      margin: 0;
+      font-size: 12px;
+      font-family: $label-font-family;
+      letter-spacing: 1px;
+      font-weight: 600;
+      text-transform: uppercase;
+      line-height: 18px;
+      color: #AEACB5;
+    }
+    & > .title i.fa {
+      color: #C7C6CC;
+      line-height: 1;
+      font-size: 14px;
+    }
+    
+    .cell {
+      margin-right: $spacing-unit;
+      padding: 7px 7px 14px;
+      width: 100%;
+      background-color: white;
+      border-radius: 4px;
+      box-sizing: border-box;
+      flex: 0 0 auto;
+      box-shadow: 0 1px 1px rgba(46, 45, 51, 0.01),
+                  0 1px 2px rgba(46, 45, 51, 0.01),
+                  0 2px 4px rgba(46, 45, 51, 0.01),
+                  0 3px 6px rgba(46, 45, 51, 0.03),
+                  0 5px 10px rgba(46, 45, 51, 0.03),
+                  0 10px 20px rgba(46, 45, 51, 0.03);
+      
+      &+.cell {
+        margin-top: $spacing-unit / 2;
+      }
+
+      & > div.title {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 0 0 7px 4px;
+        margin-bottom: 9px;
+        border-bottom: 1px solid $divider-color-light;
+        height: 33px;
+        box-sizing: border-box;
+
+        .name {
+          margin-bottom: -2px;
+          font-size: 15px;
+          color: $secondary-text-color;
+        }
+        .promote {
+          font-size: 11px;
+          color: $link-color;
+          background-color: $divider-color-light;
+          border-radius: 3px;
+          padding: 7px 9px;
+          line-height: 1;
+        }
+      }
+        
+      .status {
+        padding-left: 5px;
+        display: flex;
+        align-items: center;
+
+        & > div {
+          min-width: 0;
+          flex-grow: 1;
+        }
+        & > div p {
+          margin: 0;
+        }
+        & > div p+p {
+          margin-top: 1px;
+        }
+        & > i.fa {
+          margin-right: 8px;
+          display: block;
+          font-size: 30px;
+          color: darken($accent-color, 12%);
+        }
+        & > i.fa-times-circle {
+          color: #A35502;
+        }
+        & > i.fa-check-circle {
+          color: #6fA492;
+        }
+        & > i.fa-minus-circle {
+          color: #908C99;
+        }
+        & .id {
+          color: $secondary-text-color;
+        }
+        & .date {
+          margin-left: 3px;
+          font-size: 12px;
+          color: #AEACB5;
+        }
+        & .line-2 {
+          display: flex;
+          align-items: center;
+        }
+        &.mini .line-2 {
+          margin-top: 3px;
+        }
+        & .branch {
+          margin-right: 5px;
+          font-size: 12px;
+          color: #908C99;
+          white-space: nowrap;
+          overflow: hidden;
+          text-overflow: ellipsis;
+          flex: 0 1 auto;
+        }
+        & .branch i.fa {
+          margin-right: 3px;
+          opacity: 0.9;
+        }
+        & .commit {
+          flex: 0 0 auto;
+          font-size: 12px;
+          color: #908C99;
+          font-family: "Source Code Pro", monospace;
+          border: 1px solid rgba(0, 0, 0, 0.07);
+          border-radius: 3px;
+          padding: 2px 4px;
+          line-height: 1;
+          display: inline-block;
+          white-space: nowrap;
+        }
+      }
+    }
+  }
+}
+
+@mixin metrics-graphic {
+
+  & > .container {
+    width: 600px;
+  }
+
+  .header {
+    padding: 0 3px 5px;
+    text-align: right;
+
+    h5 {
+      font-family: $label-font-family;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      font-weight: 600;
+      text-align: right;
+      color: #AEACB5;
+      margin: 0;
+      display: inline-block;
+
+      &:last-child {
+        margin-right: 8px;
+        width: 150px;
+      }
+    }
+  }
+  
+  .metric {
+    background-color: white;
+    border-radius: 6px;
+    padding: 10px 12px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    box-shadow: 0 1px 2px rgba(46, 45, 51, 0.02),
+                0 2px 4px rgba(46, 45, 51, 0.03),
+                0 3px 6px rgba(46, 45, 51, 0.03),
+                0 4px 8px rgba(46, 45, 51, 0.03);
+    
+    &+.metric {
+      margin-top: 10px;
+    }
+
+    .name {
+      min-width: 0;
+    }
+    .name > span:first-child {
+      margin-bottom: 1px;
+      display: block;
+      white-space: nowrap;
+    }
+    .name > span:first-child b {
+      margin-right: 3px;
+      vertical-align: -7px;
+      width: 11px;
+      height: 11px;
+      border-radius: 50%;
+      display: inline-block;
+      background-color: #D9534F;
+      box-shadow: 0 0 4px 0 rgba(217, 83, 79, 0.4);
+
+      &.green {
+        background-color: rgb(111, 164, 146);
+        box-shadow: 0 0 4px 0 rgba(111, 164, 146, 0.4);
+      }
+    }
+    .name > span:first-child i.fa-angle-right {
+      margin: 0 6px 0 2px;
+      color: #AEACB5;
+    }
+    .name > span:first-child > span {
+      opacity: 0.7;
+    }
+    .name > span:last-child {
+      font-size: 14px;
+      color: #C7C6CC;
+      display: block;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+    .values {
+      margin-left: 30px;
+      white-space: nowrap;
+    }
+    .values > span {
+      display: inline-block;
+      text-align: right;
+    }
+    .values > span.errors {
+      margin-left: 30px;
+    }
+    .values > span.latency {
+    }
+    .values > span+span {
+      margin-left: 5px;
+    }
+    .values > span span:first-child {
+      margin-right: 10px;
+      display: inline-block;
+      width: 65px;
+      height: 18px;
+      vertical-align: -2px;
+    }
+    .values > span span:first-child.empty {
+      vertical-align: 6px;
+      height: 1px;
+      background-color: rgb(199, 198, 204);
+      opacity: 0.6;
+    }
+    .values > span span:last-child {
+      font-family: "Source Code Pro", monospace;
+      font-size: 20px;
+      display: inline-block;
+    }
+    .values > span.latency > span:last-child {
+      width: 80px;
+    }
+    .values > span.errors > span:last-child {
+      width: 40px;
+    }
+  }
+  
+}
+
+@mixin logs-graphic {
+  $blend-height: 133px;
+
+  height: 400px;
+  margin-bottom: $blend-height;
+  transform: translateY(45px);
+  position: relative;
+
+  &::after {
+    content: "";
+    position: absolute;
+    height: $blend-height;
+    width: calc(100% + 40px);
+    bottom: -1 * $blend-height;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 1;
+    background-image: linear-gradient(0deg, $background-color 70%, rgba(249,249,250, 0));
+  }
+
+  @include media-query($on-palm) {
+    margin-bottom: 0;
+    height: auto;
+    transform: none;
+
+    &::after {
+      display: none;
+    }
+  }
+
+  .logs-panel {
+    min-width: 540px;
+    max-width: 680px;
+    border-radius: 4px;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.07),
+                0 2px 6px rgba(0, 0, 0, 0.06),
+                0 4px 12px rgba(0, 0, 0, 0.05),
+                0 8px 24px rgba(0, 0, 0, 0.04),
+                0 12px 36px rgba(0, 0, 0, 0.03);
+
+    .log-entry {
+      background-color: white;
+
+      &:first-child {
+        border-radius: 4px 4px 0 0;
+      }
+
+      &:last-child {
+        border-radius: 0 0 4px 4px;
+        .summary {
+          border-bottom: none;
+        }
+      }
+
+      &.expanded {
+        border-bottom: 1px solid $divider-color-light;
+      }
+
+      .summary {
+        border-bottom: 1px solid $divider-color-light;
+        font-family: "Source Code Pro", monospace;
+        overflow: hidden;
+        position: relative;
+      }
+      .summary .contents {
+        display: flex;
+        align-items: center;
+        margin-left: 23px;
+        margin-right: 10px;
+        padding: 8px 0;
+        overflow: hidden;
+      }
+      .summary .caret {
+        margin-top: 1px;
+        display: block;
+        height: 0;
+        width: 0;
+        border-style: solid;
+        position: absolute;
+        left: 10px;
+        top: 50%;
+        margin-top: -2px;
+      }
+      .summary .caret.right {
+        margin-top: -5px;
+        border-width: 5px 0 5px 5px;
+        border-color: transparent #C7C6CC;
+      }
+      .summary .caret.down {
+        left: 7px;
+        border-width: 5px 5px 0;
+        border-color: #C7C6CC transparent;
+      }
+      .summary .level {
+        margin-right: 10px;
+        padding: 3px 0;
+        font-family: "Exo 2", sans-serif;
+        letter-spacing: 1px;
+        font-size: 8px;
+        font-weight: 600;
+        text-transform: uppercase;
+        border-radius: 2px;
+        flex: 0 0 40px;
+        display: inline-block;
+        text-align: center;
+        color: #C7C6CC;
+        background-color: #EFEFF1;
+      }
+      .summary.error .level {
+        color: rgba(217, 83, 79, 0.5);
+        background-color: rgba(217, 83, 79, 0.2);
+      }
+      .summary.warn .level {
+        color: rgba(253, 149, 39, 0.6);
+        background-color: rgba(253, 149, 39, 0.2);
+      }
+      .summary .time {
+        font-size: 12px;
+        flex: 0 0 auto;
+      }
+      .summary .duration {
+        text-align: right;
+        flex: 0 0 80px;
+        font-size: 12px;
+        color: $secondary-text-color;
+      }
+      .summary .memory {
+        margin-right: 20px;
+        text-align: right;
+        flex: 0 0 60px;
+        font-size: 12px;
+        color: $secondary-text-color;
+      }
+      .summary .text {
+        font-size: 14px;
+        white-space: nowrap;
+        color: $secondary-text-color;
+      }
+      .summary.error .text {
+        color: #D9534F;
+      }
+      .details {
+        padding: 5px 10px 10px 10px;
+
+        .controls {
+          margin-bottom: 5px;
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+        }
+        .controls h5 {
+          margin: 0;
+          line-height: 22px;
+          color: $grey-color-light;
+          font-size: 12px;
+          font-family: $label-font-family;
+          letter-spacing: 1px;
+          font-weight: 600;
+          text-transform: uppercase;
+        }
+        .controls .link {
+          color: $link-color;
+          font-size: 12px;
+        }
+        .controls .link i.fa {
+          font-size: 11px;
+          opacity: 0.95;
+        }
+        .controls .link i.fa {
+          margin-right: 5px;
+        }
+        .controls .link.xray i.fa {
+          margin-left: 5px;
+        }
+        .controls .separator {
+          padding: 0 12px 0 9px;
+          font-size: 12px;
+          color: $divider-color;
+        }
+        .logs {
+          background-color: $secondary-text-color;
+          padding: 7px 14px;
+          border-radius: 3px;
+        }
+        .log {
+          padding: 7px 0;
+          display: flex;
+          overflow: hidden;
+          align-items: flex-start;
+
+          pre {
+            white-space: nowrap;
+          }
+          p {
+            margin-top: 1px;
+            margin-bottom: 0;
+            white-space: nowrap;
+            color: rgba(255, 255, 255, 0.7);
+            font-family: "Source Code Pro", monospace;
+            font-size: 12px;
+            flex: 0 0 88px;
+          }
+          pre {
+            padding: 0;
+            margin: 0;
+            background: transparent;
+            border: 0 none;
+            font-family: "Source Code Pro", monospace;
+            font-size: 14px;
+            color: rgba(255, 255, 255, 0.9);
+          }
+        }
+        .divider {
+          margin-left: 167px;
+          border-bottom: 1px solid rgba(255, 255, 255, 0.15);
+
+          &:last-child {
+            display: none;
+          }
+        }
+      }
+    }
+  }
+}
+
+@mixin resource-pseudo-layer($index, $dist, $offset) {
+  width: calc(100% - #{$index} * 2 * #{$dist});
+  top: -1 * $index * ($dist - $offset);
+  left: $index * $dist;
+}
+
+@mixin resources-graphic {
+  $border-radius: 4px;
+  $card-color: #FFFCFA;
+
+  & > .api {
+    min-width: 560px;
+    background-color: $card-color;
+    border-radius: $border-radius;
+    position: relative;
+
+    &,
+    .pseudo-layer {
+      box-shadow: 0 1px 1px rgba(46, 45, 51, 0.08),
+                  0 1px 2px rgba(46, 45, 51, 0.06),
+                  0 2px 6px rgba(46, 45, 51, 0.04),
+                  0 3px 12px rgba(46, 45, 51, 0.03),
+                  0 4px 16px rgba(46, 45, 51, 0.02);
+    }
+
+    .pseudo-layer {
+      $dist: 10px;
+      $offset: 2px;
+
+      z-index: -1;
+      background-color: $card-color;
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      border-radius: $border-radius;
+
+      &:nth-last-child(4) {
+        @include resource-pseudo-layer(4, $dist, $offset);
+        background-color: #FAF9FA;
+      }
+      &:nth-last-child(3) {
+        @include resource-pseudo-layer(3, $dist, $offset);
+        background-color: #FCFAFA;
+      }
+      &:nth-last-child(2) {
+        @include resource-pseudo-layer(2, $dist, $offset);
+        background-color: #FDFBFA;
+      }
+      &:nth-last-child(1) {
+        @include resource-pseudo-layer(1, $dist, $offset);
+        background-color: #FEFCFA;
+      }
+    }
+
+    & > div.header {
+      padding: 8px 15px 0;
+    }
+    & > div.header h4 {
+      margin: 0;
+      font-size: 20px;
+      font-family: $base-font-family;
+      font-weight: 500;
+      color: $secondary-text-color;
+    }
+    & ul {
+      margin: 0;
+      padding: 0;
+      list-style: none;
+    }
+    & ul.endpoint .resource {
+      padding-top: 5px;
+      padding-bottom: 10px;
+    }
+    & .resource {
+      border-bottom: 1px solid rgba(0, 0, 0, 0.07);
+    }
+    & .resource:last-child {
+      border-bottom: 0 none;
+    }
+
+    & > div.separator {
+      padding: 10px 0;
+      position: relative;
+      text-align: center;
+    }
+    & > div.separator hr {
+      margin: 0;
+      border-color: rgba(0, 0, 0, 0.08);
+    }
+    & > div.separator h5 {
+      position: absolute;
+      left: 50%;
+      margin: 0 0 0 -37px;
+      top: 1px;
+      background-color: $card-color;
+      padding: 0 7px;
+      display: inline;
+      font-size: 12px;
+      font-family: $label-font-family;
+      letter-spacing: 1px;
+      font-weight: 600;
+      text-transform: uppercase;
+      color: $tertiary-text-color;
+    }
+    .resource {
+      padding: 15px 15px 14px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+
+      & > div:first-child {
+        flex-grow: 1;
+        margin-right: 15px;
+      }
+      &.api > div:first-child p.name {
+        margin-bottom: 2px;
+        color: $secondary-text-color;
+      }
+      &.api > div:first-child p.name a {
+        color: #2E2D33;
+      }
+      & > div:first-child p.info {
+        margin-bottom: 0;
+        font-size: 14px;
+        color: #908C99;
+      }
+      & > div:last-child {
+        white-space: nowrap;
+      }
+      & > div:last-child .link {
+        font-size: 14px;
+        vertical-align: 1px;
+        color: $link-color;
+      }
+      & > div:last-child span.separator {
+        padding: 0 8px;
+        font-size: 12px;
+        color: rgba(0, 0, 0, 0.1);
+        vertical-align: 1px;
+      }
+      &.lambda > div:first-child {
+        min-width: 0;
+        display: flex;
+        align-items: center;
+      }
+      &.lambda > div:first-child p.name {
+        margin: 0;
+        flex: 1 1 auto;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+        overflow: hidden;
+        font-size: 15px;
+        color: $secondary-text-color;
+      }
+      &.lambda > div:first-child p.tag {
+        flex: 0 0 50px;
+        margin: 0 10px 0 0;
+        height: 18px;
+        text-align: center;
+        background-color: darken($card-color, 5%);
+        padding: 2px 5px 1px;
+        border-radius: 3px;
+        color: #908C99;
+        font-size: 9px;
+        font-family: $code-font-family;
+        box-sizing: border-box;
+      }
+      &.lambda > div:first-child p.info {
+        margin-left: 15px;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+        overflow: hidden;
+      }
     }
   }
 }
@@ -889,11 +1629,10 @@ main > .header {
     margin-bottom: 10px;
     padding-top: 1.5 * $spacing-unit;
     font-family: $base-font-family;
-    font-size: 36px;
-    line-height: 1.4;
-    color: $text-color;
+    font-size: 44px;
+    line-height: 1.35;
+    color: lighten($text-color, 10%);
     text-align: left;
-    max-width: 550px;
 
     @include media-query($on-palm) {
       font-size: 26px;
@@ -1044,19 +1783,19 @@ main > .action {
 // FEATURES //
 //////////////
 main > .features {
-  padding-bottom: $spacing-unit * 3 + 5px;
+  padding-bottom: $spacing-unit * 3.5;
 
   @include media-query($on-palm) {
     padding-bottom: $spacing-unit * 2;
   }
 
-  & > h4.opening,
-  & > h4.closing {
+  & > h4.opening {
     margin: 2 * $spacing-unit auto 0;
     padding: 0 $spacing-unit / 2;
-    max-width: 640px;
+    max-width: 670px;
+    line-height: 1.8;
     text-align: center;
-    font-size: 20px;
+    font-size: 24px;
     font-family: $base-font-family;
     color: $secondary-text-color;
     a {
@@ -1064,7 +1803,8 @@ main > .features {
     }
 
     @include media-query($on-palm) {
-      margin: 2 * $spacing-unit - 10px auto 0;
+      margin: $spacing-unit auto 0;
+      font-size: 20px;
     }
   }
 
@@ -1074,13 +1814,9 @@ main > .features {
     max-width: 800px;
     border-color: darken($hero-bkg-color, 10%);
 
-    &:nth-child(2) {
-      margin: 2 * $spacing-unit auto;
-    }
-
     @include media-query($on-palm) {
-      &, &:nth-child(2) {
-        margin: 2 * $spacing-unit - 10px auto;
+      & {
+        margin: $spacing-unit auto $spacing-unit + 5px;
       }
     }
   }
@@ -1088,338 +1824,153 @@ main > .features {
   .feature {
     overflow: hidden;
 
-    div.header {
-      $size: 64px;
-      text-align: center;
-      padding: 0 $spacing-unit / 2;
+    margin: 0 auto;
+    display: flex;
+    max-width: $content-width;
+    align-items: center;
+    justify-content: flex-end;
 
-      div.icon {
-        margin: 0 auto $spacing-unit - 10px;
-        width: $size;
-        height: $size;
-        border-radius: 50%;
-        background-color: lighten($brand-color, 20%);
-        text-align: center;
-
-        i {
-          color: white;
-          font-size: 28px;
-          line-height: $size;
-
-          &.fa-code-fork {
-            margin-left: 4px;
-          }
-
-          &.fa-tachometer {
-            margin-top: -3px;
-          }
-        }
-
-        img {
-          padding: 20px 0 18px;
-        }
-      }
-      h2 {
-        margin: 0 auto 4px;
-        font-size: 32px;
-        max-width: 860px;
-      }
-      p {
-        margin: 0 auto;
-        max-width: 600px;
-        color: $tertiary-text-color;
-        line-height: 1.8;
-      }
+    &:nth-child(even) {
+      justify-content: flex-start;
     }
 
-    div.body {
-      margin: 2 * $spacing-unit auto 0;
-      display: flex;
-      max-width: $content-width;
-      align-items: center;
-      justify-content: flex-end;
-
-      @include media-query($on-palm) {
-        display: block;
-        margin: 1.5 * $spacing-unit auto 0;
-      }
-
-      div.graphic {
-        margin-left: $spacing-unit;
-
-        @include media-query($on-palm) {
-          margin: 0  0 1.5 * $spacing-unit $spacing-unit / 2;
-        }
-      }
-
-      div.copy {
-        margin-right: $spacing-unit;
-        margin-left: 1.5 * $spacing-unit;
-        flex: 1 1 auto;
-        max-width: 640px;
-        min-width: 500px;
-
-        @include media-query($on-palm) {
-          margin: 0 $spacing-unit / 2;
-          max-width: auto;
-          min-width: auto;
-        }
-      }
+    &+.feature {
+      margin-top: 3 * $spacing-unit;
     }
-
-    &.mono-repo {
-      div.body {
-        justify-content: flex-start;
-
-        div.graphic {
-          margin-right: $spacing-unit;
-          margin-left: 0;
-          order: 2;
-
-          @include media-query($on-palm) {
-            margin: 0  0 1.5 * $spacing-unit $spacing-unit / 2;
-          }
-        }
-
-        div.copy {
-          order: 1;
-          margin-right: 1.5 * $spacing-unit;
-          margin-left: $spacing-unit;
-
-          @include media-query($on-palm) {
-            margin: 0 $spacing-unit / 2;
-          }
-        }
-      }
-    }
-
-    div.copy {
-      color: $secondary-text-color;
-      font-size: 20px;
-
-      p {
-        margin-bottom: $spacing-unit / 2 + 5px;
-
-        a {
-          font-weight: 500;
-        }
-
-        &:last-child {
-          margin-bottom: 0;
-        }
-      }
-      @include media-query($on-palm) {
-        font-size: 18px;
-      }
-    }
-
-    div.pipeline-table {
-      @include pipeline-table;
-
-      @include media-query($on-palm) {
-        overflow-x: auto;
-      }
-    }
-
-    div.mono-repo-graphic {
-      @include mono-repo-graphic;
-
-      @include media-query($on-palm) {
-        overflow-x: auto;
-        justify-content: flex-start;
-      }
-    }
-
-//    div.ci-graphic {
-//      @include ci-graphic;
-//    }
-//
-//    div.security-graphic {
-//      @include security-graphic;
-//    }
-//
-//    div.integrations-graphic {
-//      @include integrations-graphic;
-//    }
-
-    div.points {
-      margin: $spacing-unit * 2 auto 0;
-      padding: 0 $spacing-unit / 2;
-      display: flex;
-      justify-content: center;
-      flex-wrap: wrap;
-      max-width: 936px;
-
-      @include media-query($on-palm) {
-        display: block;
-        margin: 1.5 * $spacing-unit auto 0;
-      }
-
-      div.point {
-        padding: 0 $spacing-unit / 2 + 5px 0;
-        box-sizing: border-box;
-        flex: 0 0 50%;
-
-        @include media-query($on-palm) {
-          padding: 0;
-          &:first-child {
-            margin-bottom: $spacing-unit;
-          }
-        }
-
-        h6 {
-          margin-bottom: 5px;
-          font-size: 20px;
-          font-family: $base-font-family;
-          font-weight: 500;
-          color: lighten($tertiary-text-color, 15%);
-
-          span {
-            margin-left: 2px;
-            padding: 3px 6px;
-            border-radius: 3px;
-            background-color: $tertiary-text-color;
-            color: white;
-            text-transform: uppercase;
-            font-size: 10px;
-            font-family: $label-font-family;
-            vertical-align: 3px;
-          }
-        }
-        p {
-          margin-bottom: 0;
-          color: $secondary-text-color;
-          font-size: 18px;
-        }
-        a.more {
-          margin-top: 10px;
-          display: inline-block;
-
-          i {
-            margin-left: 2px;
-            vertical-align: 0;
-          }
-        }
-      }
-    }
-  }
-
-  div.why-seed {
-    margin: 3 * $spacing-unit 0;
-    position: relative;
 
     @include media-query($on-palm) {
-      margin: 1.5 * $spacing-unit + 5px 0;
-    }
+      display: block;
+      padding-bottom: 1.5 * $spacing-unit;
+      border-bottom: 1px solid $divider-color;
 
-    div.zig-zag {
-      position: absolute;
-      top: 50%;
-      display:block;
-      margin-top: -3px;
-      height: 6px;
-      width: 100%;
-      background: 0 center repeat-x $sawtooth-shape;
+      &+.feature {
+        margin-top: 1.5 * $spacing-unit;
+      }
 
-      @include media-query($on-palm) {
-        display: none;
+      &:last-child {
+        padding-bottom: 0;
+        border-bottom: none;
       }
     }
 
-    div.card-margin {
-      margin: 0 auto;
-      padding: 0 $spacing-unit / 2;
-    }
-
-    div.card {
-      $border-color: lighten($brand-color, 50%);
-
-      margin: 0 auto;
-      display: flex;
-      align-items: center;
-      max-width: 850px;
-      border-radius: 5px;
-      box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1), 0 5px 15px rgba(0, 0, 0, 0.04);
-      position: relative;
-      overflow: hidden;
-      background-color: lighten($divider-color-light, 5%);
-      border: 1px solid $border-color;
+    & > div.body {
+      margin-right: $spacing-unit;
+      margin-left: 2 * $spacing-unit;
+      min-width: 400px;
 
       @include media-query($on-palm) {
-        display: block;
+        margin: 0 $spacing-unit / 2;
+        min-width: auto;
       }
 
-      div.col1 {
-        flex: 0 1 45%;
-        padding: $spacing-unit;
-        text-align: center;
-        position: relative;
+      & > div.header {
+        text-align: left;
 
-        h6 {
-          margin-bottom: $spacing-unit;
-          font-size: 26px;
-          font-family: $heading-font-family;
+        h2 {
+          margin: 0 0 2px;
+          font-size: 32px;
         }
         p {
-          margin-bottom: 10px;
+          margin: 0;
           font-size: 20px;
-          line-height: 1.7;
           color: $secondary-text-color;
-          font-style: italic;
-
-          @include media-query($on-palm) {
-            margin-bottom: 0;
-          }
-        }
-      }
-      div.col2 {
-        flex: 0 1 55%;
-        padding: $spacing-unit $spacing-unit - 5px $spacing-unit + 2px;
-        border: {
-          width: 0 0 0 1px;
-          style: solid;
-          color: $border-color;
-        }
-        background-color: white;
-
-        @include media-query($on-palm) {
-          border-width: 1px 0 0 0;
-        }
-
-        & > p {
-          margin-left: 3px;
-          margin-bottom: $spacing-unit / 2 + 5px;
-          color: $tertiary-text-color;
-          font-size: 20px;
+          line-height: 1.8;
         }
       }
 
-      ul.main {
-        margin-bottom: 0;
+      ul.points {
+        margin: $spacing-unit + 5px 0 0;
+        padding: 0;
+        list-style: none;
 
-        & > li {
-          span {
-            font-size: 20px;
+        li {
+          display: flex;
+          align-items: flex-start;
+
+          div.icon {
+            $size: 28px;
+
+            margin-top: 1px;
+            margin-right: 10px;
+            flex: 0 0 auto;
+            width: $size;
+            height: $size;
+            border-radius: 50%;
+            background-color: lighten($brand-color, 20%);
+            text-align: center;
+
             i {
-              color: lighten($brand-color, 20%);
-              top: 6px;
+              color: white;
+              font-size: 14px;
+              line-height: $size;
+
+              &.fa-code-fork { margin-left: 2px; }
+              &.fa-folder { margin-left: 1px; }
+              &.fa-th { margin-top: 1px; }
+              &.fa-search { margin-top: -1px; }
+              &.fa-link { margin-left: 1px; }
+              &.fa-filter { margin-top: 1px; }
+              &.fa-tachometer { margin-top: -1px; }
+              &.fa-newspaper-o { margin-top: 1px; }
+            }
+
+            img {
+              padding: 20px 0 18px;
             }
           }
 
-          &:last-child ul {
-            margin-bottom: 0;
+          h5 {
+            margin: 0 0 5px;
+            font-size: 18px;
+            font-family: $base-font-family;
+            font-weight: 500;
           }
-        }
-        ul {
-          margin: 5px 0 $spacing-unit / 2 18px;
-          color: $tertiary-text-color;
-          list-style-type: circle;
-          li {
+          p {
+            margin-bottom: 0;
+            color: $secondary-text-color;
             line-height: 1.7;
+          }
+
+          &+li {
+            margin-top: $spacing-unit - 5px;
           }
         }
       }
     }
+
+    &:nth-child(even) > div.body {
+      order: -1;
+      margin-left: $spacing-unit;
+      margin-right: 2 * $spacing-unit;
+
+      @include media-query($on-palm) {
+        margin: 0 $spacing-unit / 2;
+      }
+    }
+
+    div.graphic {
+      margin-left: 2 * $spacing-unit;
+
+      @include media-query($on-palm) {
+        margin: 0;
+        padding: 0 $spacing-unit / 2 $spacing-unit + 10px;
+        overflow-x: auto;
+      }
+    }
+
+    &:nth-child(even) > div.graphic {
+      margin-left: 0;
+      margin-right: 2 * $spacing-unit;
+
+      @include media-query($on-palm) {
+        margin: 0;
+      }
+    }
+
+    div.graphic.mini-pipeline   { @include mini-pipeline; }
+    div.graphic.resources       { @include resources-graphic; }
+    div.graphic.logs            { @include logs-graphic; }
+    div.graphic.metrics         { @include metrics-graphic; }
   }
 
   div.action {
@@ -1476,33 +2027,25 @@ main > .features {
 // REVIEWS //
 /////////////
 main > .testimonials {
-  padding: $spacing-unit * 2 $spacing-unit / 2 + 5px $spacing-unit * 2 +7px;
+  padding-top: $spacing-unit - 5px;
   background-color: darken($brand-color, 5%);
-  background-image: $diamond-pattern;
   border-top: 2px solid $accent-color;
   color: $background-color;
 
   @include media-query($on-palm) {
-    padding-top: $spacing-unit * 2;
-    padding-bottom: $spacing-unit * 2;
-  }
-
-  h4 {
-    margin-bottom: 15px;
-    text-align: center;
-    font-family: $base-font-family;
-    font-size: 32px;
-    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
+    padding-top: $spacing-unit - 5px;
   }
 
   div.customers {
     display: flex;
     justify-content: center;
     align-items: center;
-    flex-wrap: wrap;
+    overflow-x: auto;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
 
     @include media-query($on-palm) {
-      flex-direction: column;
+      justify-content: flex-start;
+      padding: 0 $spacing-unit / 2;
     }
 
     a {
@@ -1512,40 +2055,56 @@ main > .testimonials {
       height: 45px;
       box-sizing: border-box;
 
-      &.bastian {
-        margin-top: 12px;
+      &.freelancer {
+        margin-top: 28px;
       }
 
       &.shyft {
-        margin-top: 32px;
+        margin-bottom: 28px;
       }
 
       @include media-query($on-palm) {
-        margin: $spacing-unit 0;
+        &:first-child {
+          margin-left: 0;
+        }
+        &:last-child {
+          margin-right: 0;
+        }
       }
-    }
-  }
-
-  hr {
-    margin: $spacing-unit / 2 auto $spacing-unit * 1.5;
-    border-color: rgba(255, 255, 255, 0.2);
-    max-width: 720px;
-
-    @include media-query($on-palm) {
-      margin: $spacing-unit / 2 $spacing-unit $spacing-unit * 1.5;
     }
   }
 
   div.list {
+    margin: 0 auto;
+    max-width: $content-width;
+    display: flex;
+
+    @include media-query($on-palm) {
+      display: block;
+    }
   }
 
   div.testimonial {
-    margin: 0 auto $spacing-unit * 2 + 5px;
-    max-width: 900px;
+    flex: 1 1 50%;
+    padding: $spacing-unit $spacing-unit $spacing-unit + 2px;
     text-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    &:first-child {
+      border-right: 1px solid rgba(255, 255, 255, 0.2);
+
+      @include media-query($on-palm) {
+        border-right: none;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+      }
+    }
 
     @include media-query($on-palm) {
-      margin: 0 0 2 * $spacing-unit;
+      display: block;
+      padding: 0 0 $spacing-unit;
+      margin: $spacing-unit;
 
       &:last-child {
         margin-bottom: 0;
@@ -1553,42 +2112,51 @@ main > .testimonials {
     }
 
     & > p {
-      margin-bottom: 8px;
       line-height: 1.7;
       font-family: $heading-font-family;
       font-size: 20px;
-      text-align: center;
+      text-align: left;
       color: $background-color;
 
       @include media-query($on-palm) {
-        margin-bottom: 5px;
-        font-size: 20px;
+        font-size: 18px;
       }
     }
 
-    & > div:last-child {
-      text-align: center;
+    & > div.person {
+      margin-top: $spacing-unit / 2;
+      display: flex;
+      align-items: center;
 
-      p:first-child {
-        $color: darken($background-color, 10%);
+      @include media-query($on-palm) {
+        margin-top: 10px;
+      }
 
+      img {
+        width: 48px;
+        height: 48px;
+        border-radius: 50%;
+        border: 2px solid white;
+        box-shadow: 0 1px 1px rgba(0, 0, 0, 0.08),
+                    0 1px 2px rgba(0, 0, 0, 0.06),
+                    0 2px 4px rgba(0, 0, 0, 0.05);
+      }
+      div.info {
+        margin-left: $spacing-unit / 2;
+      }
+      p {
         margin-bottom: 0;
-        font-size: 14px;
-        color: $color;
+        font-size: 16px;
 
-        span {
-          font-weight: 500;
-          font-size: 16px;
-        }
+        &:last-child {
+          font-size: 14px;
+          opacity: 0.8;
 
-        a {
-          color: $color;
+          a {
+            color: white;
+          }
         }
       }
-    }
-
-    &:last-child {
-      margin-bottom: 0;
     }
   }
 }
@@ -1611,7 +2179,7 @@ main > .tutorial {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 440px;
+    height: 415px;
 
     @include media-query($on-palm) {
       height: auto;
@@ -1623,6 +2191,8 @@ main > .tutorial {
     padding-right: $spacing-unit * 1.5 + 5px;
     box-sizing: border-box;
     flex: 0 0 55%;
+    font-size: 18px;
+    line-height: 1.7;
 
     @include media-query($on-palm) {
       text-align: center;
@@ -1631,6 +2201,7 @@ main > .tutorial {
     }
 
     h3 {
+      margin-bottom: 10px;
       font-size: 28px;
     }
     p {
@@ -1647,6 +2218,7 @@ main > .tutorial {
       font-weight: 400;
       letter-spacing: 0;
       border-width: 1px;
+      font-size: 16px;
 
       &:last-child {
         margin-bottom: 0;
@@ -1656,11 +2228,12 @@ main > .tutorial {
 
   .browser-container {
     position: relative;
-    margin: $spacing-unit 0 0;
+    margin: 0;
     flex: 0 0 45%;
     height: 100%;
 
     @include media-query($on-palm) {
+      margin-top: $spacing-unit / 2;
       height: auto;
       flex: auto;
     }
@@ -1672,10 +2245,14 @@ main > .tutorial {
     $bottom-color: #DCDBDE;
 
     width: 640px;
-    box-shadow: 0px 10px 33px 9px rgba(0, 0, 0, 0.17);
+    box-shadow: 0 -1px 3px 0 rgba(46, 45, 51, 0.03),
+                0 -2px 4px 0 rgba(46, 45, 51, 0.02),
+                0 -3px 6px 0 rgba(46, 45, 51, 0.01),
+                0 0 40px 20px rgba(46, 45, 51, 0.05),
+                0 0 60px 30px rgba(46, 45, 51, 0.08);
     border-radius: 4px;
     position: absolute;
-    bottom: -10px;
+    bottom: -1 * $spacing-unit;
     left: 0;
 
     @include media-query($on-palm) {
@@ -1688,12 +2265,7 @@ main > .tutorial {
       background: linear-gradient(0deg, $bottom-color 0%, $top-color 100%);
       height: $bar-height;
       box-sizing: border-box;
-      border: {
-        top: 1px solid darken($top-color, 5%);
-        left: 1px solid darken($top-color, 8%);
-        right: 1px solid darken($top-color, 8%);
-        bottom: 1px solid darken($bottom-color, 8%);
-      }
+      border-bottom: 1px solid darken($bottom-color, 5%);
       border-radius: 4px 4px 0 0;
       display: flex;
       justify-content: flex-start;
@@ -1731,11 +2303,6 @@ main > .tutorial {
     img {
       box-sizing: border-box;
       border-radius: 0 0 4px 4px;
-      border: {
-        left: 1px solid darken($bottom-color, 5%);
-        right: 1px solid darken($bottom-color, 5%);
-        bottom: 1px solid darken($bottom-color, 5%);
-      }
     }
   }
 
@@ -1770,7 +2337,6 @@ main > .closing-action {
       width: 222px;
 
       @include media-query($on-palm) {
-        font-size: 22px;
         padding: 10px 22px;
       }
     }
@@ -1779,6 +2345,10 @@ main > .closing-action {
       @include action-button-dark;
       padding: 14px 26px;
       width: 222px;
+
+      @include media-query($on-palm) {
+        padding: 10px 22px;
+      }
     }
     a.signup, a.plans {
       font-size: 18px;

@@ -977,8 +977,12 @@ $on-laptop:                 800px;
   $border-radius: 4px;
   $card-color: #FFFCFA;
 
+  @include media-query($on-palm) {
+    padding-top: 50px;
+  }
+
   & > .api {
-    min-width: 560px;
+    width: 560px;
     background-color: $card-color;
     border-radius: $border-radius;
     position: relative;
@@ -1840,11 +1844,11 @@ main > .features {
 
     @include media-query($on-palm) {
       display: block;
-      padding-bottom: 1.5 * $spacing-unit;
+      padding-bottom: $spacing-unit;
       border-bottom: 1px solid $divider-color;
 
       &+.feature {
-        margin-top: 1.5 * $spacing-unit;
+        margin-top: $spacing-unit;
       }
 
       &:last-child {
@@ -2182,8 +2186,8 @@ main > .tutorial {
     height: 415px;
 
     @include media-query($on-palm) {
+      display: block;
       height: auto;
-      flex-direction: column;
     }
   }
 
@@ -2257,6 +2261,7 @@ main > .tutorial {
 
     @include media-query($on-palm) {
       width: auto;
+      min-width: 440px;
       position: relative;
     }
 

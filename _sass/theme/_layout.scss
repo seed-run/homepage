@@ -453,7 +453,6 @@
 @include media-query($on-palm) {
   footer > .wrapper {
     margin: 0;
-    padding: 0;
 
     .footer-col-wrapper {
       margin: 0;
@@ -461,8 +460,8 @@
     .footer-col {
       float: none;
       text-align: left;
+      padding: 0;
       width: auto;
-      padding: 0 $spacing-unit / 2;
 
       &:first-child {
         margin-bottom: $spacing-unit - 10px;

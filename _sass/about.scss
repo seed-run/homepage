@@ -15,6 +15,9 @@ main > .wrapper > .about {
     p {
       font-size: 20px;
       color: $secondary-text-color;
+      b {
+        font-weight: 500;
+      }
     }
 
     @include media-query($on-palm) {

@@ -1652,6 +1652,7 @@ main > .header {
     @include media-query($on-palm) {
       font-size: 26px;
       padding-top: $spacing-unit - 5px;
+      letter-spacing: normal;
       text-align: center;
     }
   }

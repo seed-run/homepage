@@ -540,6 +540,16 @@ $on-laptop:                 800px;
           padding: 7px 9px;
           line-height: 1;
         }
+        .region {
+          margin-left: 6px;
+          color: $tertiary-text-color;
+          font-size: 12px;
+        }
+      }
+
+      &.prod > div.title {
+        justify-content: flex-start;
+        align-items: baseline;
       }
         
       .status {
@@ -2059,13 +2069,10 @@ main > .testimonials {
       height: 45px;
       box-sizing: border-box;
 
-      &.freelancer {
-        margin-top: 28px;
-      }
-
-      &.shyft {
-        margin-bottom: 28px;
-      }
+      &.freelancer { margin-top: 28px; }
+      &.kasa { margin-bottom: 28px; }
+      &.shyft { margin-bottom: 26px; }
+      &.essensys { margin-bottom: 26px; }
 
       @include media-query($on-palm) {
         &:first-child {

@@ -59,6 +59,8 @@ toc:
         url: /docs/working-with-branches.html
       - page: Working with pull requests
         url: /docs/working-with-pull-requests.html
+      - page: Multi-region deployments
+        url: /docs/multi-region-deployments.html
       - page: Generating trusted builds
         url: /docs/generating-trusted-builds.html
       - page: Cancelling builds

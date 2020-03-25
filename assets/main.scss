@@ -1642,6 +1642,7 @@ main > .header {
   h1 {
     margin-bottom: 10px;
     padding-top: 1.5 * $spacing-unit;
+    letter-spacing: -1px;
     font-family: $base-font-family;
     font-size: 44px;
     line-height: 1.35;

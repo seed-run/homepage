@@ -105,6 +105,8 @@ toc:
         url: /docs/adding-organization-members.html
       - page: Enabling GitHub Enterprise
         url: /docs/enabling-github-enterprise.html
+      - page: Enabling mandatory 2FA
+        url: /docs/enable-mandatory-two-factor-auth.html
       - page: Adding an SSH key for your organization
         url: /docs/adding-an-organization-ssh-key.html
   - title: Common issues

@@ -16,4 +16,4 @@ This can be enabled through your organization settings. And once enabled, your t
 
 ![2FA required modal on Seed](/assets/blog/mandatory-two-factor-auth/2fa-required-modal-on-seed.png)
 
-Mandatory two-factor auth helps enforce good security practices across your organization. You can [read more on this over on our docs]({% link _docs/enable-mandatory-two-factor-auth.md %}). This setting is available as a part of [our Enterprise plans]({% link pricing.html %}). [Contact us](mailto:{{ site.email }}) if you would like to enable this for your organization.
+Mandatory two-factor auth helps enforce good security practices across your organization. You can [read more on this over on our docs]({% link _docs/enabling-mandatory-two-factor-auth.md %}). This setting is available as a part of [our Enterprise plans]({% link pricing.html %}). [Contact us](mailto:{{ site.email }}) if you would like to enable this for your organization.

@@ -11,4 +11,4 @@ Seed can connect to your GitHub Enterprise account. And once enabled, you'll be 
 
 To add GitHub Enterprise to your Seed organization you need to create an OAuth app. You can read more about it here in the [Enabling GitHub Enterprise chapter]({% link _docs/enabling-github-enterprise.md %}).
 
-Note that, GitHub Enterprise is available as a part of our Enterprise plan. You can read more about our [pricing plans here]({% link pricing.html %}) and send an email to [{{ site.sales_email }}]({{ site.sales_email }}) to help get started.
+Note that, GitHub Enterprise is available as a part of our Enterprise plan. You can read more about our [pricing plans here]({% link pricing.html %}) and send an email to [{{ site.sales_email }}](mailto:{{ site.sales_email }}) to help get started.

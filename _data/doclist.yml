@@ -103,12 +103,14 @@ toc:
         url: /docs/creating-an-organization.html
       - page: Adding organization members
         url: /docs/adding-organization-members.html
-      - page: Enabling GitHub Enterprise
-        url: /docs/enabling-github-enterprise.html
       - page: Enabling mandatory 2FA
-        url: /docs/enable-mandatory-two-factor-auth.html
+        url: /docs/enabling-mandatory-two-factor-auth.html
       - page: Adding an SSH key for your organization
         url: /docs/adding-an-organization-ssh-key.html
+      - page: Enabling GitHub Enterprise
+        url: /docs/enabling-github-enterprise.html
+      - page: Enabling GitLab Self-Managed
+        url: /docs/enabling-github-self-managed.html
   - title: Common issues
     subfolderitems:
       - page: Cannot find my repo

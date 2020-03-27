@@ -5,7 +5,7 @@ title: Enabling Mandatory Two-Factor Auth
 
 Seed supports two-factor authentication. And organizations on Seed can make it mandatory for their members to have to enable two-factor authentication on their accounts.
 
-Mandatory two-factor auth is available as a part of our Enterprise plans. [Contact us](mailto:{{ site.email }}) if you would like to enable this for your organization.
+Mandatory two-factor auth is available as a part of our **Enterprise** plans. [Contact us](mailto:{{ site.email }}) if you would like to enable this for your organization.
 
 You can head over to your organization settings and hit **Manage Members**.
 

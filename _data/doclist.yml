@@ -110,7 +110,7 @@ toc:
       - page: Enabling GitHub Enterprise
         url: /docs/enabling-github-enterprise.html
       - page: Enabling GitLab Self-Managed
-        url: /docs/enabling-github-self-managed.html
+        url: /docs/enabling-gitlab-self-managed.html
   - title: Common issues
     subfolderitems:
       - page: Cannot find my repo

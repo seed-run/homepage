@@ -59,6 +59,8 @@ toc:
         url: /docs/working-with-branches.html
       - page: Working with pull requests
         url: /docs/working-with-pull-requests.html
+      - page: Multi-region deployments
+        url: /docs/multi-region-deployments.html
       - page: Generating trusted builds
         url: /docs/generating-trusted-builds.html
       - page: Cancelling builds
@@ -103,6 +105,8 @@ toc:
         url: /docs/adding-organization-members.html
       - page: Enabling GitHub Enterprise
         url: /docs/enabling-github-enterprise.html
+      - page: Enabling mandatory 2FA
+        url: /docs/enable-mandatory-two-factor-auth.html
       - page: Adding an SSH key for your organization
         url: /docs/adding-an-organization-ssh-key.html
   - title: Common issues

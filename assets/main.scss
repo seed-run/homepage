@@ -1884,7 +1884,11 @@ main > .features {
 
         h2 {
           margin: 0 0 2px;
-          font-size: 32px;
+          font-size: 40px;
+
+          @include media-query($on-palm) {
+            font-size: 32px;
+          }
         }
         p {
           margin: 0;

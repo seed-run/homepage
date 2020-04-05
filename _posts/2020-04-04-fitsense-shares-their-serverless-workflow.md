@@ -5,20 +5,20 @@ categories: community
 author: stephie
 ---
 
-[FitSense](https://www.fitsense.io) recently shared a blog post detailing their Serverless development workflow. They use Serverless, AWS CloudFormation, and Seed to automatically bring up and tear down new environments.
+[FitSense](https://www.fitsense.io) recently shared a blog post detailing their Serverless development workflow. They use Seed to automatically bring up and tear down new environments.
 
-![FitSense landing page](/assets/blog/fitsense-shares-their-serverless-workflow/fitsense-landing-page.png)
+[![FitSense landing page](/assets/blog/fitsense-shares-their-serverless-workflow/fitsense-landing-page.png)](https://www.fitsense.io)
 
-[Mitchell Shelton](https://www.linkedin.com/in/mitchell-shelton/) from the [FitSense](https://www.fitsense.io) team [recently wrote about the key lessons they learnt from scaling their development environment](https://medium.com/@mitchellshelton97/key-lessons-learnt-from-scaling-a-development-environment-2c1af911c31). They used [Seed]({{ site.url }}) to allow their developers to automatically create their own completely isolated environments.
+[Mitchell Shelton](https://www.linkedin.com/in/mitchell-shelton/) from the [FitSense](https://www.fitsense.io) team [recently wrote about the key lessons they learnt from scaling their development environment](https://medium.com/@mitchellshelton97/key-lessons-learnt-from-scaling-a-development-environment-2c1af911c31). They use Serverless, AWS CloudFormation, and [Seed]({{ site.url }}) to allow their developers to automatically create their own completely isolated environments.
 
-To create a new Serverless environment, the developers on the FitSense team simply need to:
+To create a new Serverless environment, the developers on the FitSense team simply need to create a new Git branch:
 
 ``` bash
 $ git checkout -b popup-stack
 $ git push origin popup-stack
 ```
 
-And to tear it down:
+This creates a completely isolated environment on demand that they can use to develop and test with. And to tear it down, you simply delete the branch:
 
 ``` bash
 $ git push -d origin popup-stack

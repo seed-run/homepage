@@ -17,7 +17,7 @@ Once Seed finds the file you can add the service. It will also auto-detect the n
 
 ![Detected service serverless.yml](/assets/docs/adding-a-service/detected-service-serverless-yml.png)
 
-If you don't have a `serverless.yml` for the service yet, you can still add the service anyway. Just make sure to add the file or change the path to it later.
+If you don't have a `serverless.yml` for the service yet, you can still add the service anyway. You'll need to specify the **name of the service** manually. And make sure to add the file or change the path to it later.
 
 ![Service serverless.yml not found](/assets/docs/adding-a-service/service-serverless-yml-path-not-found.png)
 

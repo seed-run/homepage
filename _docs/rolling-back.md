@@ -5,7 +5,7 @@ title: Rolling Back
 
 [Seed](/) keeps track of your builds. This means that you can rollback to any of your past builds without having to rebuild your project.
 
-You can do this by going into the **Production** stage and hit **Rollback** to revert to a previous build.
+You can do this by going into the **Activity** tab, select the **Production** filter and hit **Rollback** to revert to a previous build.
 
 ![Rollback Production](/assets/docs/rolling-back/rollback-production.png)
 

@@ -31,4 +31,4 @@ This flow is visualized in the pipeline in your app's homepage.
 
 ![View new pipeline](/assets/docs/editing-the-pipeline/view-new-pipeline.png)
 
-Finally, you can revert this change by hitting the **Set as Development** button. You can also replace your current production stage by hitting the **Set as Production** button.
+Finally, you can revert this change by hitting the **Set as Development** button. You can also set it as a production stage by hitting the **Set as Production** button. This will allow you to configure multi-region deployments. [Read about this in detail here]({% link _docs/multi-region-deployments.md %}).

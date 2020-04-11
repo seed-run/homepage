@@ -22,10 +22,6 @@ Click **View Resources** for the service you are looking for and navigate to the
 
 ![Stage view resources](/assets/docs/viewing-metrics/stage-view-resources.png)
 
-Or type in the name of the Lambda function you are looking for in the search.
-
-![Search for Lambda log](/assets/docs/viewing-metrics/search-for-lambda-metric.png)
-
 This gives you a live look at the last **1 hour** of metrics.
 
 ![Lambda Metrics Live](/assets/docs/viewing-metrics/lambda-metrics-live.png)

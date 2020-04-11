@@ -19,84 +19,12 @@ toc:
         url: /docs/adding-ruby-projects.html
       - page: Adding Java projects
         url: /docs/adding-java-projects.html
-  - title: Configuring your app
-    subfolderitems:
-      - page: Adding a stage
-        url: /docs/adding-a-stage.html
-      - page: Adding a service
-        url: /docs/adding-a-service.html
-      - page: Editing the pipeline
-        url: /docs/editing-the-pipeline.html
-      - page: Configuring stage variables
-        url: /docs/configuring-stage-variables.html
-      - page: Storing secrets
-        url: /docs/storing-secrets.html
-      - page: Updating the stage source
-        url: /docs/updating-the-stage-source.html
-      - page: Adding build notifications
-        url: /docs/adding-build-notifications.html
-      - page: Running tests
-        url: /docs/running-tests.html
-      - page: Adding a build spec
-        url: /docs/adding-a-build-spec.html
-      - page: IAM credentials per stage
-        url: /docs/iam-credentials-per-stage.html
-      - page: Using Serverless plugins
-        url: /docs/using-serverless-plugins.html
-      - page: GitHub integration
-        url: /docs/github-integration.html
-      - page: Private npm modules
-        url: /docs/private-npm-modules.html
-      - page: Integrating with Serverless Enterprise
-        url: /docs/integrating-with-serverless-enterprise.html
-      - page: Integrating with JFrog
-        url: /docs/integrating-with-jfrog.html
-      - page: Deleting resources
-        url: /docs/deleting-resources.html
-  - title: Deploying your app
-    subfolderitems:
-      - page: Working with branches
-        url: /docs/working-with-branches.html
-      - page: Working with pull requests
-        url: /docs/working-with-pull-requests.html
-      - page: Multi-region deployments
-        url: /docs/multi-region-deployments.html
-      - page: Generating trusted builds
-        url: /docs/generating-trusted-builds.html
-      - page: Cancelling builds
-        url: /docs/cancelling-builds.html
-      - page: Manually deploying
-        url: /docs/manually-deploying.html
-      - page: Promoting to production
-        url: /docs/promoting-to-production.html
-      - page: Rolling back
-        url: /docs/rolling-back.html
-      - page: Connect your own CI
-        url: /docs/connect-your-own-ci.html
-      - page: Pinning the Serverless Version
-        url: /docs/pinning-the-serverless-version.html
-      - page: Caching Dependencies
-        url: /docs/caching-dependencies.html
-  - title: Working with monorepo apps
-    subfolderitems:
-      - page: Monorepo apps in Seed
-        url: /docs/mono-repo-apps-in-seed.html
-      - page: Configuring deploy phases
-        url: /docs/configuring-deploy-phases.html
-      - page: Adding a post-deploy phase
-        url: /docs/adding-a-post-deploy-phase.html
-      - page: Deploying monorepo apps
-        url: /docs/deploying-monorepo-apps.html
-  - title: Managing deployments
-    subfolderitems:
-      - page: Configuring custom domains
-        url: /docs/configuring-custom-domains.html
-      - page: Viewing logs
-        url: /docs/viewing-logs.html
-      - page: Viewing metrics
-        url: /docs/viewing-metrics.html
-      - page: Viewing app reports
-        url: /docs/viewing-app-reports.html
+      - page: Enabling GitHub Enterprise
+        url: /docs/enabling-github-enterprise.html
+      - page: Enabling GitLab Self-Managed
+        url: /docs/enabling-gitlab-self-managed.html
+      - page: Cannot find my repo
+        url: /docs/cannot-find-my-repo.html
   - title: Adding your organization
     subfolderitems:
       - page: Creating an organization
@@ -107,13 +35,93 @@ toc:
         url: /docs/enabling-mandatory-two-factor-auth.html
       - page: Adding an SSH key for your organization
         url: /docs/adding-an-organization-ssh-key.html
-      - page: Enabling GitHub Enterprise
-        url: /docs/enabling-github-enterprise.html
-      - page: Enabling GitLab Self-Managed
-        url: /docs/enabling-gitlab-self-managed.html
-  - title: Common issues
+  - title: Adding monorepo apps
     subfolderitems:
-      - page: Cannot find my repo
-        url: /docs/cannot-find-my-repo.html
-  - title: Common serverless errors
+      - page: Monorepo apps in Seed
+        url: /docs/mono-repo-apps-in-seed.html
+      - page: Deploying monorepo apps
+        url: /docs/deploying-monorepo-apps.html
+      - page: Configuring deploy phases
+        url: /docs/configuring-deploy-phases.html
+      - page: Adding a post-deploy phase
+        url: /docs/adding-a-post-deploy-phase.html
+  - title: Setting up your pipeline
+    subfolderitems:
+      - page: Adding a stage
+        url: /docs/adding-a-stage.html
+      - page: Adding a service
+        url: /docs/adding-a-service.html
+      - page: Editing the pipeline
+        url: /docs/editing-the-pipeline.html
+      - page: Running tests
+        url: /docs/running-tests.html
+      - page: Adding a build spec
+        url: /docs/adding-a-build-spec.html
+      - page: Private npm modules
+        url: /docs/private-npm-modules.html
+      - page: Integrating with JFrog
+        url: /docs/integrating-with-jfrog.html
+      - page: Deleting resources
+        url: /docs/deleting-resources.html
+      - page: Caching Dependencies
+        url: /docs/caching-dependencies.html
+  - title: Managing environments
+    subfolderitems:
+      - page: Storing secrets
+        url: /docs/storing-secrets.html
+      - page: Configuring stage variables
+        url: /docs/configuring-stage-variables.html
+      - page: Updating the stage source
+        url: /docs/updating-the-stage-source.html
+      - page: IAM credentials per stage
+        url: /docs/iam-credentials-per-stage.html
+      - page: Adding build notifications
+        url: /docs/adding-build-notifications.html
+      - page: Multi-region deployments
+        url: /docs/multi-region-deployments.html
+  - title: Deploying with Git
+    subfolderitems:
+      - page: GitHub integration
+        url: /docs/github-integration.html
+      - page: Working with branches
+        url: /docs/working-with-branches.html
+      - page: Working with pull requests
+        url: /docs/working-with-pull-requests.html
+      - page: Connect your own CI
+        url: /docs/connect-your-own-ci.html
+  - title: Manual deployments
+    subfolderitems:
+      - page: Manually deploying
+        url: /docs/manually-deploying.html
+      - page: Cancelling builds
+        url: /docs/cancelling-builds.html
+  - title: Promoting and rolling back 
+    subfolderitems:
+      - page: Generating trusted builds
+        url: /docs/generating-trusted-builds.html
+      - page: Promoting to production
+        url: /docs/promoting-to-production.html
+      - page: Rolling back
+        url: /docs/rolling-back.html
+  - title: Managing your app
+    subfolderitems:
+      - page: Configuring custom domains
+        url: /docs/configuring-custom-domains.html
+  - title: Monitoring your app
+    subfolderitems:
+      - page: Viewing logs
+        url: /docs/viewing-logs.html
+      - page: Viewing metrics
+        url: /docs/viewing-metrics.html
+      - page: Viewing app reports
+        url: /docs/viewing-app-reports.html
+  - title: Configuring Serverless
+    subfolderitems:
+      - page: Pinning the Serverless Version
+        url: /docs/pinning-the-serverless-version.html
+      - page: Using Serverless plugins
+        url: /docs/using-serverless-plugins.html
+      - page: Integrating with Serverless Enterprise
+        url: /docs/integrating-with-serverless-enterprise.html
+  - title: Common Serverless errors
     url: /docs/serverless-errors/index.html

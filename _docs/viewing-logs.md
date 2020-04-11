@@ -23,7 +23,7 @@ Click **View Resources** for the service you are looking for and navigate to the
 
 ![Stage view resources](/assets/docs/viewing-logs/stage-view-resources.png)
 
-Or type in the name of the Lambda function you are looking for in the search.
+Or search for the Lambda function right from the dashboard.
 
 ![Search for Lambda log](/assets/docs/viewing-logs/search-for-lambda-log.png)
 

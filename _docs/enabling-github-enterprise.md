@@ -55,12 +55,13 @@ Next we'll create an OAuth app for Seed on GitHub.
 
    ![Copy the Client ID and Client Secret](/assets/docs/enabling-github-enterprise/copy-the-client-id-and-the-client-secret.png)
 
-### Send us your details
+### Enable GitHub Enterprise on Seed
 
-Finally, send an email to [{{ site.email }}](mailto:{{ site.email }}) with:
+Now head over to your **organization settings** on Seed. Here you'll be able to put in your:
 
-- Your Organization name
-- The Organization domain (ex: ghe.my-corp-domain.com)
-- Client ID & Client Secret (from above)
+- **Organization domain** (ex: ghe.my-corp-domain.com)
+- **Client ID** & **Client Secret** (from above)
 
-And we'll have GitHub Enterprise enabled for your organization on Seed!
+![Enabled GitHub Enterprise on Seed](/assets/docs/enabling-github-enterprise/enable-github-enterprise-on-seed.png)
+
+Note that, you'll need to be on the Enterprise plan to be able to enable GitHub Enterprise on Seed.

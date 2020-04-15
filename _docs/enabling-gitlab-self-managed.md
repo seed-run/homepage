@@ -48,13 +48,13 @@ Next we'll create an OAuth app for Seed on GitLab.
 
    ![Copy the Application ID and Secret](/assets/docs/enabling-gitlab-self-managed/copy-the-application-id-and-the-secret.png)
 
-### Send us your details
+### Enable GitLab Self-Managed on Seed
 
-Finally, send an email to [{{ site.email }}](mailto:{{ site.email }}) with:
+Now head over to your **organization settings** on Seed. Here you'll be able to put in your:
 
-- Your Organization name
-- The Organization domain (ex: gitlab.my-corp-domain.com)
-- Application ID & Secret (from above)
+- **Organization domain** (ex: gitlab.my-corp-domain.com)
+- **Application ID** & **Secret** (from above)
 
-And we'll have GitLab Self-Managed enabled for your organization on Seed!
+![Enabled GitLab Self-Managed on Seed](/assets/docs/enabling-gitlab-self-managed/enable-gitlab-self-managed-on-seed.png)
 
+Note that, you'll need to be on the Enterprise plan to be able to enable GitLab Self-Managed on Seed.

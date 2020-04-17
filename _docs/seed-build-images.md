@@ -7,7 +7,7 @@ Seed runs your builds inside a virtual machine and it'll use a build image based
 
 To check which build image is being used, head over to the build logs for your build.
 
-![Build image info in build logs](/assets/docs/build-image-types/build-image-info-in-build-logs.png)
+![Build image info in build logs](/assets/docs/seed-build-images/build-image-info-in-build-logs.png)
 
 ## Build Images
 
@@ -114,7 +114,7 @@ OS: Debian 9
 | NPM             | 6.1.0   |
 | PIP             | 18.1    |
 
-### .NET 2.1
+### .NET Core 2.1
 
 Upgrade to: [General Purpose v1.0](#general-purpose-v10)
 

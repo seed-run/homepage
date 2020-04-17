@@ -77,7 +77,7 @@ toc:
         url: /docs/adding-build-notifications.html
       - page: Multi-region deployments
         url: /docs/multi-region-deployments.html
-  - title: Customizing the builds
+  - title: Customizing your builds
     subfolderitems:
       - page: Adding a build spec
         url: /docs/adding-a-build-spec.html

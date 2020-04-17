@@ -17,7 +17,7 @@ The Standard build machine should work for most build processes. However, there 
 
 To use a high performance build machine, head over to your app pipeline a select the service that you want to configure.
 
-![Build machine options in service settings](/assets/docs/build-machine-options/build-machine-options-in-service-settings.png)
+![Build machine options in service settings](/assets/docs/build-machine-types/build-machine-options-in-service-settings.png)
 
 Here you'll be able to select a different build machine. And moving forward all the builds on the service will use this new build machine.
 
@@ -30,6 +30,6 @@ If a build process takes 2 minutes to complete:
 
 To look at the amount of build minutes used, head over to the build logs.
 
-![Build minutes usage in build logs](/assets/docs/build-machine-options/build-minutes-usage-in-build-logs.png)
+![Build minutes usage in build logs](/assets/docs/build-machine-types/build-minutes-usage-in-build-logs.png)
 
 You'll notice how long the build process took, and given the build machine used, the amount of build minutes it used.

@@ -3,7 +3,7 @@ layout: docs
 title: Docker Commands in Your Builds
 ---
 
-You can run Docker commands as a part of your build process by adding them to your [build spec]({% link _docs/adding-a-build-spec.md %}).
+You can run Docker commands as a part of your build process by adding them to your [build spec]({% link _docs/adding-a-build-spec.md %}). However, Docker is not enabled by default.
 
 ### Enable Docker
 
@@ -12,7 +12,7 @@ To enable Docker:
 - You'll need to be on one of our [paid plans]({% link pricing.html %}).
 - Your builds need to be using one of our [General Purpose build images]({% link _docs/seed-build-images.md %}#build-images).
 
-[Contact us](mailto:{{ site.email }}) and let us know which service needs to have it enabled. Note that, enabling Docker can slow down your builds by a small amount.
+[Contact us](mailto:{{ site.email }}) and let us know which service needs to have it enabled.
 
 ### Running LocalStack on Seed
 

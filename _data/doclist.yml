@@ -55,8 +55,6 @@ toc:
         url: /docs/editing-the-pipeline.html
       - page: Running tests
         url: /docs/running-tests.html
-      - page: Adding a build spec
-        url: /docs/adding-a-build-spec.html
       - page: Private npm modules
         url: /docs/private-npm-modules.html
       - page: Integrating with JFrog
@@ -79,6 +77,16 @@ toc:
         url: /docs/adding-build-notifications.html
       - page: Multi-region deployments
         url: /docs/multi-region-deployments.html
+  - title: Customizing your builds
+    subfolderitems:
+      - page: Adding a build spec
+        url: /docs/adding-a-build-spec.html
+      - page: Build machine types
+        url: /docs/build-machine-types.html
+      - page: Seed build images
+        url: /docs/seed-build-images.html
+      - page: Docker commands in your builds
+        url: /docs/docker-commands-in-your-builds.html
   - title: Deploying with Git
     subfolderitems:
       - page: GitHub integration

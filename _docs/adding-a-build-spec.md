@@ -149,3 +149,7 @@ before_compile:
   - apt-get update
   - apt-get install postgresql postgresql-contrib -y
 ```
+
+#### Running Docker commands
+
+You'll need to enable Docker to use it in your build spec. Head over to our [chapter on running Docker commands]({% link _docs/docker-commands-in-your-builds.md %}) for further details. 

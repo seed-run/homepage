@@ -13,9 +13,30 @@ To check which build image is being used, head over to the build logs for your b
 
 Below are the build images that are used and the types of services they are used for. A build image is chosen based on the Lambda runtime of the service.
 
-### General Purpose v2.0
+### General Purpose v3.0
 
-Lambda runtimes: Node.js 12.x, Python 3.8, Go 1.x, Java 11
+Lambda runtimes: Node.js 12.x, 10.x & 8.10, Python 3.8, Go 1.x, Ruby 2.7, Java 11
+
+OS: Ubuntu 18.04
+
+| Includes        | Version |
+|-----------------|:-------:|
+| Node.js         | 12.16.1 |
+| Python          | 3.8.1   |
+| Ruby            | 2.7.0   |
+| Go              | 1.14    |
+| .NET Core       | 3.1.102 |
+| Java            | 11.0.5  |
+| PHP             | 7.4.1   |
+| NPM             | 6.13.4  |
+| YARN            | 1.22.0  |
+| PIP             | 19.3.1  |
+| Docker*         | 19.03.3 |
+| Docker Compose* | 1.24.0  |
+
+*[Docker and Docker Compose need to be enabled.]({% link _docs/docker-commands-in-your-builds.md %})
+
+### General Purpose v2.0
 
 OS: Ubuntu 18.04
 
@@ -29,6 +50,7 @@ OS: Ubuntu 18.04
 | Java            | 11      |
 | PHP             | 7.3     |
 | NPM             | 6.13.4  |
+| YARN            | 1.12.3  |
 | PIP             | 19.3.1  |
 | Docker*         | 19.03   |
 | Docker Compose* | 1.24    |
@@ -37,7 +59,7 @@ OS: Ubuntu 18.04
 
 ### General Purpose v1.0
 
-Lambda runtimes: Node.js 10.x & 8.10, Python 3.7, Java 8, .NET Core 2.1
+Lambda runtimes: Python 3.7, Java 8, .NET Core 2.1
 
 OS: Ubuntu 18.04
 
@@ -51,6 +73,7 @@ OS: Ubuntu 18.04
 | Java            | 11      |
 | PHP             | 7.3     |
 | NPM             | 6.13.4  |
+| YARN            | 1.12.3  |
 | PIP             | 19.3.1  |
 | Docker*         | 18.09   |
 | Docker Compose* | 1.24    |
@@ -68,6 +91,7 @@ OS: Debian 9
 | Node.js         | 8.15    |
 | Python          | 3.6     |
 | NPM             | 6.1.0   |
+| YARN            | 1.12.3  |
 | PIP             | 9.0.1   |
 
 ### Python 2.7
@@ -81,6 +105,7 @@ OS: Debian 9
 | Node.js         | 8.15    |
 | Python          | 2.7     |
 | NPM             | 6.1.0   |
+| YARN            | 1.12.3  |
 | PIP             | 9.0.1   |
 
 ### Ruby 2.5
@@ -94,6 +119,7 @@ OS: Debian 9
 | Node.js         | 8.10    |
 | Ruby            | 2.5     |
 | NPM             | 6.1.0   |
+| YARN            | 1.12.3  |
 
 ## Deprecated Build Images
 
@@ -112,6 +138,7 @@ OS: Debian 9
 | Node.js         | 8.15    |
 | Python          | 3.7     |
 | NPM             | 6.1.0   |
+| YARN            | 1.12.3  |
 | PIP             | 18.1    |
 
 ### .NET Core 2.1
@@ -127,6 +154,7 @@ OS: Debian 9
 | Node.js   | 8.10    |
 | .NET Core | 2.1     |
 | NPM       | 6.1.0   |
+| YARN      | 1.12.3  |
 
 ## Changing the Build Image
 

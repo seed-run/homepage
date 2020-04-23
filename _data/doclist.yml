@@ -25,16 +25,6 @@ toc:
         url: /docs/enabling-gitlab-self-managed.html
       - page: Cannot find my repo
         url: /docs/cannot-find-my-repo.html
-  - title: Adding your organization
-    subfolderitems:
-      - page: Creating an organization
-        url: /docs/creating-an-organization.html
-      - page: Adding organization members
-        url: /docs/adding-organization-members.html
-      - page: Enabling mandatory 2FA
-        url: /docs/enabling-mandatory-two-factor-auth.html
-      - page: Adding an SSH key for your organization
-        url: /docs/adding-an-organization-ssh-key.html
   - title: Adding monorepo apps
     subfolderitems:
       - page: Monorepo apps in Seed
@@ -115,6 +105,18 @@ toc:
     subfolderitems:
       - page: Configuring custom domains
         url: /docs/configuring-custom-domains.html
+  - title: Managing your organization
+    subfolderitems:
+      - page: Creating an organization
+        url: /docs/creating-an-organization.html
+      - page: Adding organization members
+        url: /docs/adding-organization-members.html
+      - page: Enabling mandatory 2FA
+        url: /docs/enabling-mandatory-two-factor-auth.html
+      - page: Adding an SSH key for your organization
+        url: /docs/adding-an-organization-ssh-key.html
+      - page: Audit logs in Seed
+        url: /docs/audit-logs-in-seed.html
   - title: Monitoring your app
     subfolderitems:
       - page: Viewing logs

@@ -14,7 +14,7 @@ layout: default
     </header>
 
     <div class="post-content">
-      {{ content }}
+      {% include anchor_headings.html html=content anchorClass="anchor" anchorBody="#" %}
     </div>
 
     {% include docs-closing.html %}

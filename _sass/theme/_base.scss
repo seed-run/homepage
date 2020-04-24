@@ -94,6 +94,19 @@ li {
 h1, h2, h3, h4, h5, h6 {
 	font-family: $heading-font-family;
   font-weight: $base-font-weight;
+
+  & > a.anchor {
+    opacity: 0.5;
+    color: $tertiary-text-color;
+    transition: opacity 0.2s ease-in-out 0.1s;
+  }
+  &:hover > a.anchor {
+    opacity: 1;
+
+    &:hover {
+      color: $secondary-text-color;
+    }
+  }
 }
 
 

@@ -12,8 +12,6 @@ While [Seed](/) does not need a build spec to configure your pipelines or your p
 To hook into the build process, add a `seed.yml` in the root of your project directory. Here is the basic skeleton of our build spec.
 
 ``` yml
-stage_name_constructor: echo "custom-stage-name"
-
 before_compile:
   - echo "Before compile"
 
@@ -34,17 +32,6 @@ after_remove:
 ```
 
 Below is a brief description of when these commands are run.
-
-- `stage_name_constructor`
-
-   - takes a bash command
-   - script has a time out of 2 seconds. But should complete much quicker.
-   - if not provided, branch name is used as the stage name
-   - if script fails, branch name is used as the stage name
-   - has access to environment variable SEED_STAGE_BRANCH
-   - should prints out a string to stdout
-   - see below for a multi-line command example
-
 
 - `before_compile`
 
@@ -69,6 +56,42 @@ Below is a brief description of when these commands are run.
 - `after_remove`
 
    Similar to the `before_remove`, the `after_remove` step is run after a service has been removed. This can be used to run any cleanup scripts you might have.
+
+### Other Options
+
+Apart from the build hooks, there are a couple of other options that can help you customize the Seed build process.
+
+#### Disable checking code changes
+
+You can also add the following to your `seed.yml` to [deploy all your services without checking if anything has been updated]({% link _docs/deploying-monorepo-apps.md %}).
+
+``` yml
+check_code_change: false
+```
+
+#### Customize stage names
+
+The stage name is central to the way Seed manages deployments and resources for your Serverless app. It is either [specified manually]({% link _docs/adding-a-stage.md %}). Or Seed automatically generates it based on the [auto-deployed branch]({% link _docs/working-with-branches.md %}). If it's being generated, Seed will sanitize the branch names so it works with Serverless Framework and AWS.
+
+However, there might be rare cases where you might wish to customize the automatically generated stage names. To do so, specify a bash command using the `stage_name_constructor` option. Note that:
+
+- The command needs to print out a string to stdout.
+- It has access to the `$SEED_STAGE_BRANCH` [environment variable](#build-environment-variables).
+- There's a timeout of 2 seconds for the command.
+- If the commands fails or times out, Seed will use the automatically generated stage name.
+
+Let's look at an example. Say your feature branches have the naming convention `feature/feature-name`. However, you want the stage names to be `feature-name`. And you don't want to transform some specific branch names. Add the following to your `seed.yml`.
+
+``` yml
+stage_name_constructor: >
+  if [ $SEED_STAGE_BRANCH == 'master' ]; then
+    echo 'dev'
+  elif [ $SEED_STAGE_BRANCH == 'beta' ]; then
+    echo 'beta'
+  else
+    echo $SEED_STAGE_BRANCH | cut -d'/' -f2
+  fi
+```
 
 ### Build Environment Variables
 
@@ -114,14 +137,6 @@ before_compile:
 
 In this case `$MY_VAR` is loaded from `$BASH_ENV` and should be printed out correctly.
 
-### Other Options
-
-You can also add the following to your `seed.yml` to [deploy all your services without checking if anything has been updated]({% link _docs/deploying-monorepo-apps.md %}).
-
-``` yml
-check_code_change: false
-```
-
 ### AWS CLI
 
 The scripts in your build spec are run in an environment that are using your AWS IAM credentials. This means that you can directly use any AWS commands in your script using the AWS CLI without having to configure it.
@@ -132,27 +147,11 @@ The scripts in your build spec are run in an environment that are using your AWS
 
 Here are a couple of examples of what you could do in a build spec.
 
-#### Generate stage name based on branch
-
-Let's assume your feature branches has the naming convention `feature/feature-name`, and you want the stage name to be just 'featureName'.
-
-```
-stage_name_constructor: >
-  if [ $SEED_STAGE_BRANCH == 'master' ]; then
-    echo 'dev'
-  elif [ $SEED_STAGE_BRANCH == 'beta' ]; then
-    echo 'beta'
-  else
-    echo $SEED_STAGE_BRANCH | cut -d'/' -f2
-  fi
-  
-```
-
 #### Run a script after deploy only in prod 
 
 Let's assume your production stage is called `prod`.
 
-```
+``` yml
 after_deploy:
   - if [ $SEED_STAGE_NAME = "prod" ]; then echo 'deployed prod'; fi
 ```
@@ -161,7 +160,7 @@ after_deploy:
 
 Let's assume your service is called `users`.
 
-```
+``` yml
 after_deploy:
   - if [ $SEED_SERVICE_NAME = "users" ]; then echo 'deployed users'; fi
 ```
@@ -170,7 +169,7 @@ after_deploy:
 
 If you need to start a PostgreSQL server locally for tests.
 
-```
+``` yml
 before_compile:
   - apt-get install wget ca-certificates -y
   - wget --quiet -O - https://www.postgresql.org/media/keys/ACCC4CF8.asc | apt-key add -
@@ -178,6 +177,21 @@ before_compile:
   - apt-get update
   - apt-get install postgresql postgresql-contrib -y
 ```
+
+#### Invoke a Lambda Function
+
+If you want to invoke a Lambda function as a part of your build process.
+
+``` yml
+after_deploy:
+  - >
+    aws lambda invoke
+    --function-name my-function
+    --payload '{"name":"Bob"}'
+    /dev/stdout
+```
+
+This works because the AWS CLI is available and configured with the IAM credentials of the stage.
 
 #### Running Docker commands
 

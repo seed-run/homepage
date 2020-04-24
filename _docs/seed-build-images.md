@@ -15,7 +15,7 @@ Below are the build images that are used and the types of services they are used
 
 ### General Purpose v3.0
 
-Lambda runtimes: Node.js 12.x, 10.x & 8.10, Python 3.8, Go 1.x, Ruby 2.7, Java 11
+Lambda runtimes: Node.js 12.x, Python 3.8, Go 1.x, Ruby 2.7, Java 11
 
 OS: Ubuntu 18.04
 
@@ -59,7 +59,7 @@ OS: Ubuntu 18.04
 
 ### General Purpose v1.0
 
-Lambda runtimes: Python 3.7, Java 8, .NET Core 2.1
+Lambda runtimes: Node.js 10.x, Python 3.7, Java 8, .NET Core 2.1
 
 OS: Ubuntu 18.04
 

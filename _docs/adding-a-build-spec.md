@@ -12,6 +12,8 @@ While [Seed](/) does not need a build spec to configure your pipelines or your p
 To hook into the build process, add a `seed.yml` in the root of your project directory. Here is the basic skeleton of our build spec.
 
 ``` yml
+stage_name_constructor: echo "custom-stage-name"
+
 before_compile:
   - echo "Before compile"
 
@@ -32,6 +34,17 @@ after_remove:
 ```
 
 Below is a brief description of when these commands are run.
+
+- `stage_name_constructor`
+
+   - takes a bash command
+   - script has a time out of 2 seconds. But should complete much quicker.
+   - if not provided, branch name is used as the stage name
+   - if script fails, branch name is used as the stage name
+   - has access to environment variable SEED_STAGE_BRANCH
+   - should prints out a string to stdout
+   - see below for a multi-line command example
+
 
 - `before_compile`
 
@@ -118,6 +131,22 @@ The scripts in your build spec are run in an environment that are using your AWS
 ### Build Spec Examples
 
 Here are a couple of examples of what you could do in a build spec.
+
+#### Generate stage name based on branch
+
+Let's assume your feature branches has the naming convention `feature/feature-name`, and you want the stage name to be just 'featureName'.
+
+```
+stage_name_constructor: >
+  if [ $SEED_STAGE_BRANCH == 'master' ]; then
+    echo 'dev'
+  elif [ $SEED_STAGE_BRANCH == 'beta' ]; then
+    echo 'beta'
+  else
+    echo $SEED_STAGE_BRANCH | cut -d'/' -f2
+  fi
+  
+```
 
 #### Run a script after deploy only in prod 
 

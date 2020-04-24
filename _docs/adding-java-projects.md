@@ -17,7 +17,7 @@ Seed also provides out-of-the-box support for the following ways to build your p
 
 Seed first checks if you have a `pom.xml` file in your project. If so, then it assumes that you have the right steps for building your project.
 
-We have a simple starter repo with the [Maven example here](https://github.com/fwang/serverless-java-maven-starter).
+We have a simple starter repo with the [Maven example here](https://github.com/seed-run/serverless-java-maven-starter).
 
 ### Using Gradle
 
@@ -28,6 +28,6 @@ $ gradle wrapper
 $ ./gradlew build
 ```
 
-We also have a simple starter repo with the [Gradle example here](https://github.com/fwang/serverless-java-gradle-starter).
+We also have a simple starter repo with the [Gradle example here](https://github.com/seed-run/serverless-java-gradle-starter).
 
 Once the project has been built (with either of the two above approaches), Seed continues the standard Serverless deployment process.

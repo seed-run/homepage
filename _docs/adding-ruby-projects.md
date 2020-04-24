@@ -7,4 +7,4 @@ Seed gives you a simple way to deploy Serverless Ruby 2.5 & 2.7 projects. We pro
 
 You can also run your tests using [RSpec](http://rspec.info).
 
-We created [a simple starter project](https://github.com/fwang/serverless-ruby-starter) that you can use. It shows an example using Bundler and RSpec.
+We created [a simple starter project](https://github.com/seed-run/serverless-ruby-starter) that you can use. It shows an example using Bundler and RSpec.

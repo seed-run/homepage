@@ -22,4 +22,4 @@ custom:
     dockerizePip: false
 ```
 
-We also have a [Serverless Python 3.6 Starter](https://github.com/AnomalyInnovations/serverless-python-starter) and a [Serverless Python 3.7 Starter](https://github.com/fwang/serverless-python3.7-starter) that you can use.
+We also have a [Serverless Python 3.6 Starter](https://github.com/AnomalyInnovations/serverless-python-starter) and a [Serverless Python 3.7 Starter](https://github.com/seed-run/serverless-python3.7-starter) that you can use.

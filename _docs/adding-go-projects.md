@@ -12,7 +12,7 @@ Seed gives you a zero-config way to deploy Serverless Go projects. We provide ou
 
 Seed first checks if you have a Makefile in your project. If so, then it assumes that you have the right steps for building your project.
 
-We have a simple starter repo with the [Makefile example here](https://github.com/fwang/serverless-go-starter).
+We have a simple starter repo with the [Makefile example here](https://github.com/seed-run/serverless-go-starter).
 
 ### Using the serverless-go-build Plugin
 
@@ -23,6 +23,6 @@ If a Makefile is not found, then Seed will look to see if you are using the [ser
 
 If a Makefile is found in addition to the plugin, then Seed will run `make` before serverless build.
 
-We also have a simple starter repo with the [serverless-go-build example here](https://github.com/fwang/serverless-go-starter-with-plugin).
+We also have a simple starter repo with the [serverless-go-build example here](https://github.com/seed-run/serverless-go-starter-with-plugin).
 
 Once the project has been built (with either of the two approaches), Seed continues the standard Serverless deployment process.

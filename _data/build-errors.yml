@@ -15,6 +15,8 @@ toc:
     url: /docs/serverless-errors/code-storage-limit-exceeded.html
   - title: You are not currently logged in
     url: /docs/serverless-errors/you-are-not-currently-logged-in.html
+  - title: "Serverless Error: Rate exceeded"
+    url: /docs/serverless-errors/serverless-error-rate-exceeded.html
   - title: Your lockfile needs to be updated
     url: /docs/serverless-errors/your-lockfile-needs-to-be-updated.html
   - title: No integration defined for method
@@ -37,10 +39,10 @@ toc:
     url: /docs/serverless-errors/a-version-for-this-lambda-function-exists.html
   - title: Missing required key 'restApiId' in params
     url: /docs/serverless-errors/missing-required-key-restapiid-in-params.html
-  - title: Invalid characters in environment variable
-    url: /docs/serverless-errors/invalid-characters-in-environment-variable.html
   - title: Unzipped size must be smaller than bytes
     url: /docs/serverless-errors/unzipped-size-must-be-smaller-than-bytes.html
+  - title: Invalid characters in environment variable
+    url: /docs/serverless-errors/invalid-characters-in-environment-variable.html
   - title: Export with name is already exported by stack
     url: /docs/serverless-errors/export-with-name-is-already-exported-by-stack.html
   - title: Service files not changed. Skipping deployment.

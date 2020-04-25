@@ -37,3 +37,5 @@ To get out of this state, you'll need to manually go delete the CloudFormation s
 To address this, Seed will **automatically detect** the above errors, check the CloudFormation stack status, **remove the stack**, and **retry the deployment** (up to 3 times) right away. In most cases you won't even notice the little hiccup!
 
 You can read about the [above]({% link _docs/serverless-errors/no-integration-defined-for-method.md %}) [errors]({% link _docs/serverless-errors/another-deployment-is-in-progress-for-rest-api-with-id.md %}) and the auto-recovery process in detail over on our docs.
+
+**Update**: We've added auto-retrying for a couple of other Serverless Framework related errors that you can [read about in our docs here]({% link _docs/auto-retrying-serverless-errors.md %}).

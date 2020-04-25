@@ -33,4 +33,4 @@ If your deployment failed because you were concurrently deploying your services,
 
 3. After the stack has been removed you can try deploying the service again.
 
-Note that, [Seed](/) will do the above automatically. It'll check the CloudFormation stack status, remove the stack if necessary, and retry the deployment (up to 3 times).
+Note that, [Seed](/) will do the above automatically. It'll check the CloudFormation stack status, remove the stack if necessary, and retry the deployment (up to 3 times). You can [read more about this here]({% link _docs/auto-retrying-serverless-errors.md %}#auto-retrying-on-deploy).

@@ -133,5 +133,7 @@ toc:
         url: /docs/using-serverless-plugins.html
       - page: Integrating with Serverless Enterprise
         url: /docs/integrating-with-serverless-enterprise.html
+      - page: Auto-retrying Serverless errors
+        url: /docs/auto-retrying-serverless-errors.html
   - title: Common Serverless errors
     url: /docs/serverless-errors/index.html

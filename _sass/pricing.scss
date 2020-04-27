@@ -3,7 +3,7 @@
 /////////////
 main .pricing {
 
-  .header {
+  & > .header {
     margin: 0 auto;
     max-width: 570px;
     padding: 0 $spacing-unit / 2;
@@ -107,8 +107,8 @@ main .pricing {
           margin-bottom: 0;
           text-transform: uppercase;
           text-align: center;
-          letter-spacing: 2px;
-          font-size: 14px;
+          letter-spacing: 1px;
+          font-size: 20px;
           font-weight: 500;
           line-height: 1.1;
           border-bottom: 2px solid $grey-color-light;
@@ -116,7 +116,7 @@ main .pricing {
 
         .numbers {
           text-align: center;
-          padding-top: $spacing-unit * 2;
+          padding-top: $spacing-unit * 2.5;
           height: 200px;
           display: flex;
           flex-direction: column;
@@ -124,13 +124,13 @@ main .pricing {
 
           & div p:first-child {
             line-height: 1;
-            font-size: 80px;
+            font-size: 68px;
 
             & span {
-              font-size: 54px;
+              font-size: 42px;
               margin-right: 4px;
               font-weight: 400;
-              vertical-align: 12px;
+              vertical-align: 14px;
             }
           }
 
@@ -185,8 +185,7 @@ main .pricing {
 
       &.enterprise .cost .numbers {
         p:first-child {
-          margin-top: 44px;
-          font-size: 30px;
+          font-weight: 500;
         }
       }
 
@@ -211,6 +210,107 @@ main .pricing {
 
           &:last-child {
             padding-bottom: 0;
+          }
+        }
+      }
+    }
+  }
+
+  .comparison {
+    $cell-name-size: 220px;
+    $cell-size: 180px;
+    $cell-margin: 1.5 * $spacing-unit;
+
+    margin: 0 auto 2.5 * $spacing-unit;
+    width: $cell-name-size + 3 * $cell-size + 3 * $cell-margin;
+
+    h3 {
+      margin-bottom: 1.5 * $spacing-unit;
+      text-align: center;
+      font-size: 28px;
+    }
+
+    .header {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding-bottom: 5px;
+      border-bottom: 1px solid $divider-color-light;
+
+      & > div {
+        width: $cell-size;
+
+        &:first-child {
+          color: $tertiary-text-color;
+          align-self: flex-end;
+          width: $cell-name-size;
+        }
+
+        &+div {
+          margin-left: $cell-margin;
+        }
+      }
+
+      h6 {
+        margin-bottom: 0;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+        font-size: 20px;
+        font-weight: 500;
+        line-height: 1.1;
+        font-family: $base-font-family;
+      }
+      .cost {
+        margin-top: 5px;
+        display: flex;
+        align-items: center;
+        p {
+          margin-bottom: 0;
+
+          &:first-child {
+            font-size: 22px;
+          }
+          &:last-child {
+            margin-left: 7px;
+            color: $tertiary-text-color;
+            font-size: 12px;
+            line-height: 1.3;
+          }
+        }
+      }
+    }
+    .section {
+      & > .name {
+        margin: $spacing-unit / 2 auto 0;
+        font-family: $base-font-family;
+        font-size: 16px;
+        font-weight: 500;
+        padding-bottom: 10px;
+        border-bottom: 1px solid $divider-color-light;
+      }
+      .feature {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-bottom: 1px solid $divider-color-light;
+        padding: 10px 0;
+
+        div {
+          width: $cell-size;
+
+          i.fa-times-circle {
+            color: $grey-color-light;
+          }
+          i.fa-check-circle {
+            color: $brand-color;
+          }
+
+          &:first-child {
+            color: $tertiary-text-color;
+            width: $cell-name-size;
+          }
+          &+div {
+            margin-left: $cell-margin;
           }
         }
       }

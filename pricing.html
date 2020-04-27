@@ -6,10 +6,8 @@ title: Pricing Plans
 <div class="pricing">
   <div class="header">
     <h1>Pricing Plans</h1>
+    <p>Simple &amp; transparent plans for teams of all sizes. Get started for free. Or <a href="mailto:{{ site.email }}">contact us</a> if you have custom needs.</p>
     <!--
-    <p>Find a plan that fits your project. Or <a href="mailto:{{ site.email }}">simply contact us</a> and we'll find the one that is right for you.</p>
-    -->
-    <p>Simple &amp; affordable plans for startups and small teams. Get started for free. Or <a href="mailto:{{ site.email }}">contact us</a> if you have custom needs.</p>
     <a class="announcement" href="{% link _posts/2020-03-17-managing-your-seed-costs.md %}">
       <span>
         <span class="content">
@@ -18,7 +16,9 @@ title: Pricing Plans
         <i class="fa fa-angle-right" aria-hidden="true"></i>
       </span>
     </a>
+    -->
   </div>
+
   <div class="table">
     <div class="row">
       <div class="individual">
@@ -36,6 +36,7 @@ title: Pricing Plans
             Sign up for free
           </a>
         </div>
+        <!--
         <ul class="features fa-ul">
           <li>
             <i class="fa-li fa fa-check"></i>
@@ -62,6 +63,7 @@ title: Pricing Plans
             500 build minutes
           </li>
         </ul>
+        -->
       </div>
       <div class="startup">
         <div class="cost">
@@ -70,15 +72,16 @@ title: Pricing Plans
           </p>
           <div class="numbers">
             <div>
-              <p><span>$</span>10</p>
-              <p>per user / month</p>
+              <p><span>$</span>30</p>
+              <p>per month</p>
             </div>
-            <p>Starts at $30 / month</p>
+            <p>3 users + $10 per user / mo</p>
           </div>
           <a class="action start" {% include signup-link.html %}>
             Try it for free
           </a>
         </div>
+        <!--
         <ul class="features fa-ul">
           <li>
             <i class="fa-li fa fa-check"></i>
@@ -105,6 +108,7 @@ title: Pricing Plans
             Add a user + 1500 build minutes for $10 / month
           </li>
         </ul>
+        -->
       </div>
     </div>
     <div class="row">
@@ -114,12 +118,17 @@ title: Pricing Plans
             Enterprise
           </p>
           <div class="numbers">
-            <p>Custom</p>
+            <div>
+              <p><span>$</span>300</p>
+              <p>per month</p>
+            </div>
+            <p>5 users + $15 per user / mo</p>
           </div>
           <a class="action demo" href="mailto:{{ site.sales_email }}?subject=Enterprise%20plan">
             Contact us
           </a>
         </div>
+        <!--
         <ul class="features fa-ul">
           <li>
             <i class="fa-li fa fa-ellipsis-h"></i>
@@ -145,16 +154,14 @@ title: Pricing Plans
             <i class="fa-li fa fa-check-circle"></i>
             Priority Email support
           </li>
-          <!--
           <li>
             <i class="fa-li fa fa-check-circle"></i>
-            Concierge onboarding
+            [Hidden] Concierge onboarding
           </li>
           <li>
             <i class="fa-li fa fa-check-circle"></i>
-            Dedicated account manager
+            [Hidden] Dedicated account manager
           </li>
-          -->
           <li>
             <i class="fa-li fa fa-check-circle"></i>
             GitHub Enterprise integration
@@ -164,9 +171,233 @@ title: Pricing Plans
             Fine-tuned role-based access control
           </li>
         </ul>
+        -->
       </div>
     </div>
   </div>
+
+  <div class="comparison">
+    <h3>Comparison</h3>
+    <div class="list">
+      <div class="header">
+        <div>Features</div>
+        <div class="individual">
+          <h6>Individual</h6>
+          <div class="cost">
+            <p>$0</p>
+            <p>per month</p>
+          </div>
+        </div>
+        <div class="team">
+          <h6>Team</h6>
+          <div class="cost">
+            <p>$30</p>
+            <p>per month</p>
+          </div>
+        </div>
+        <div class="enterprise">
+          <h6>Enterprise</h6>
+          <div class="cost">
+            <p>$300</p>
+            <p>per month</p>
+          </div>
+        </div>
+      </div>
+      <div class="section">
+        <h6 class="name">Users</h6>
+        <div class="feature">
+          <div>Users</div>
+          <div>1</div>
+          <div>3</div>
+          <div>5</div>
+        </div>
+        <div class="feature">
+          <div>Additional users</div>
+          <div><i class="fa fa-times-circle" aria-hidden="true"></i></div>
+          <div>$10 per user / month</div>
+          <div>$15 per user / month</div>
+        </div>
+      </div>
+      <div class="section">
+        <h6 class="name">Fully-managed CI/CD</h6>
+        <div class="feature">
+          <div>Build minutes</div>
+          <div>500</div>
+          <div>4500</div>
+          <div>15000</div>
+        </div>
+        <div class="feature">
+          <div>Additional minutes</div>
+          <div><i class="fa fa-times-circle" aria-hidden="true"></i></div>
+          <div>$10 / month for 1500</div>
+          <div>$10 / month for 1500</div>
+        </div>
+        <div class="feature">
+          <div>Deploy phases</div>
+          <div><i class="fa fa-check-circle" aria-hidden="true"></i></div>
+          <div><i class="fa fa-check-circle" aria-hidden="true"></i></div>
+          <div><i class="fa fa-check-circle" aria-hidden="true"></i></div>
+        </div>
+        <div class="feature">
+          <div>Concurrent builds</div>
+          <div>Unlimited</div>
+          <div>Unlimited</div>
+          <div>Unlimited</div>
+        </div>
+        <div class="feature">
+          <div>Build notifications</div>
+          <div><i class="fa fa-check-circle" aria-hidden="true"></i></div>
+          <div><i class="fa fa-check-circle" aria-hidden="true"></i></div>
+          <div><i class="fa fa-check-circle" aria-hidden="true"></i></div>
+        </div>
+        <div class="feature">
+          <div>Multi-region deploys</div>
+          <div><i class="fa fa-check-circle" aria-hidden="true"></i></div>
+          <div><i class="fa fa-check-circle" aria-hidden="true"></i></div>
+          <div><i class="fa fa-check-circle" aria-hidden="true"></i></div>
+        </div>
+        <div class="feature">
+          <div>Connect your own CI</div>
+          <div><i class="fa fa-check-circle" aria-hidden="true"></i></div>
+          <div><i class="fa fa-check-circle" aria-hidden="true"></i></div>
+          <div><i class="fa fa-check-circle" aria-hidden="true"></i></div>
+        </div>
+        <div class="feature">
+          <div>GitHub Enterprise</div>
+          <div><i class="fa fa-times-circle" aria-hidden="true"></i></div>
+          <div>Add-on</div>
+          <div>Add-on</div>
+        </div>
+        <div class="feature">
+          <div>GitLab Self-Managed</div>
+          <div><i class="fa fa-times-circle" aria-hidden="true"></i></div>
+          <div>Add-on</div>
+          <div>Add-on</div>
+        </div>
+        <div class="feature">
+          <div>Run Docker commands</div>
+          <div><i class="fa fa-times-circle" aria-hidden="true"></i></div>
+          <div><i class="fa fa-check-circle" aria-hidden="true"></i></div>
+          <div><i class="fa fa-check-circle" aria-hidden="true"></i></div>
+        </div>
+        <div class="feature">
+          <div>High-performance builds</div>
+          <div><i class="fa fa-check-circle" aria-hidden="true"></i></div>
+          <div><i class="fa fa-check-circle" aria-hidden="true"></i></div>
+          <div><i class="fa fa-check-circle" aria-hidden="true"></i></div>
+        </div>
+      </div>
+      <div class="section">
+        <h6 class="name">Logging and monitoring</h6>
+        <div class="feature">
+          <div>Live dashboard</div>
+          <div><i class="fa fa-check-circle" aria-hidden="true"></i></div>
+          <div><i class="fa fa-check-circle" aria-hidden="true"></i></div>
+          <div><i class="fa fa-check-circle" aria-hidden="true"></i></div>
+        </div>
+        <div class="feature">
+          <div>Log retention</div>
+          <div>Unlimited</div>
+          <div>Unlimited</div>
+          <div>Unlimited</div>
+        </div>
+        <div class="feature">
+          <div>App reports</div>
+          <div><i class="fa fa-check-circle" aria-hidden="true"></i></div>
+          <div><i class="fa fa-check-circle" aria-hidden="true"></i></div>
+          <div><i class="fa fa-check-circle" aria-hidden="true"></i></div>
+        </div>
+        <div class="feature">
+          <div>Monitored events</div>
+          <div>Unlimited</div>
+          <div>Unlimited</div>
+          <div>Unlimited</div>
+        </div>
+      </div>
+      <div class="section">
+        <h6 class="name">Security &amp; access control</h6>
+        <div class="feature">
+          <div>Audit logs</div>
+          <div><i class="fa fa-times-circle" aria-hidden="true"></i></div>
+          <div><i class="fa fa-times-circle" aria-hidden="true"></i></div>
+          <div><i class="fa fa-check-circle" aria-hidden="true"></i></div>
+        </div>
+        <div class="feature">
+          <div>Single-sign on</div>
+          <div><i class="fa fa-times-circle" aria-hidden="true"></i></div>
+          <div><i class="fa fa-times-circle" aria-hidden="true"></i></div>
+          <div><i class="fa fa-check-circle" aria-hidden="true"></i></div>
+        </div>
+        <div class="feature">
+          <div>Mandatory 2FA</div>
+          <div><i class="fa fa-times-circle" aria-hidden="true"></i></div>
+          <div><i class="fa fa-times-circle" aria-hidden="true"></i></div>
+          <div><i class="fa fa-check-circle" aria-hidden="true"></i></div>
+        </div>
+        <div class="feature">
+          <div>Role-based access</div>
+          <div><i class="fa fa-times-circle" aria-hidden="true"></i></div>
+          <div><i class="fa fa-times-circle" aria-hidden="true"></i></div>
+          <div><i class="fa fa-check-circle" aria-hidden="true"></i></div>
+        </div>
+      </div>
+      <div class="section">
+        <h6 class="name">Billing</h6>
+        <div class="feature">
+          <div>Billing role</div>
+          <div><i class="fa fa-times-circle" aria-hidden="true"></i></div>
+          <div><i class="fa fa-times-circle" aria-hidden="true"></i></div>
+          <div><i class="fa fa-check-circle" aria-hidden="true"></i></div>
+        </div>
+        <div class="feature">
+          <div>Invoice billing</div>
+          <div><i class="fa fa-times-circle" aria-hidden="true"></i></div>
+          <div><i class="fa fa-times-circle" aria-hidden="true"></i></div>
+          <div><i class="fa fa-check-circle" aria-hidden="true"></i></div>
+        </div>
+        <div class="feature">
+          <div>Custom contract</div>
+          <div><i class="fa fa-times-circle" aria-hidden="true"></i></div>
+          <div><i class="fa fa-times-circle" aria-hidden="true"></i></div>
+          <div><i class="fa fa-check-circle" aria-hidden="true"></i></div>
+        </div>
+      </div>
+      <div class="section">
+        <h6 class="name">Support</h6>
+        <div class="feature">
+          <div>Community support</div>
+          <div><i class="fa fa-check-circle" aria-hidden="true"></i></div>
+          <div><i class="fa fa-check-circle" aria-hidden="true"></i></div>
+          <div><i class="fa fa-check-circle" aria-hidden="true"></i></div>
+        </div>
+        <div class="feature">
+          <div>Standard support</div>
+          <div><i class="fa fa-times-circle" aria-hidden="true"></i></div>
+          <div><i class="fa fa-check-circle" aria-hidden="true"></i></div>
+          <div><i class="fa fa-check-circle" aria-hidden="true"></i></div>
+        </div>
+        <div class="feature">
+          <div>Priority support</div>
+          <div><i class="fa fa-times-circle" aria-hidden="true"></i></div>
+          <div><i class="fa fa-times-circle" aria-hidden="true"></i></div>
+          <div><i class="fa fa-check-circle" aria-hidden="true"></i></div>
+        </div>
+        <div class="feature">
+          <div>Support SLA</div>
+          <div><i class="fa fa-times-circle" aria-hidden="true"></i></div>
+          <div><i class="fa fa-times-circle" aria-hidden="true"></i></div>
+          <div>Add-on</div>
+        </div>
+        <div class="feature">
+          <div>Uptime SLA</div>
+          <div><i class="fa fa-times-circle" aria-hidden="true"></i></div>
+          <div><i class="fa fa-times-circle" aria-hidden="true"></i></div>
+          <div>Add-on</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
   <div class="concurrency">
     <div class="icon">
       <i class="fa fa-exchange" aria-hidden="true"></i>

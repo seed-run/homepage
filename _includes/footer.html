@@ -53,7 +53,7 @@
 <!-- End of HubSpot Embed Code -->
 {% endif %}
 
-{% if page.url contains "/docs" %}
+{% if page.url contains "/docs" or page.url contains "pricing" %}
 <!-- Sidebar ToC include -->
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.0.0/jquery.min.js"></script>
 {% endif %}
@@ -113,6 +113,15 @@
   $('.docs-sidebar p.title a').click(function(e) {
     e.preventDefault();
     $(this).parent().toggleClass('open').next().toggleClass('open');
+  });
+  /** End sidebar ToC include **/
+  {% endif %}
+
+  {% if page.url contains "/pricing" %}
+  /** Start pricing features info **/
+  $('.comparison .feature .title').click(function(e) {
+    e.preventDefault();
+    $(this).parent().toggleClass('open');
   });
   /** End sidebar ToC include **/
   {% endif %}

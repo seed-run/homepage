@@ -16,6 +16,9 @@ main .pricing {
     p {
       font-size: 20px;
       color: $secondary-text-color;
+      a {
+        font-weight: 500;
+      }
     }
 
     @include media-query($on-palm) {
@@ -224,7 +227,7 @@ main .pricing {
     margin: 0 auto 2.5 * $spacing-unit;
     width: $cell-name-size + 3 * $cell-size + 3 * $cell-margin;
 
-    h3 {
+    h4 {
       margin-bottom: 1.5 * $spacing-unit;
       text-align: center;
       font-size: 28px;
@@ -255,7 +258,7 @@ main .pricing {
         margin-bottom: 0;
         text-transform: uppercase;
         letter-spacing: 1px;
-        font-size: 20px;
+        font-size: 18px;
         font-weight: 500;
         line-height: 1.1;
         font-family: $base-font-family;
@@ -268,7 +271,7 @@ main .pricing {
           margin-bottom: 0;
 
           &:first-child {
-            font-size: 22px;
+            font-size: 16px;
           }
           &:last-child {
             margin-left: 7px;
@@ -282,15 +285,17 @@ main .pricing {
     .section {
       & > .name {
         margin: $spacing-unit / 2 auto 0;
-        font-family: $base-font-family;
         font-size: 16px;
-        font-weight: 500;
         padding-bottom: 10px;
         border-bottom: 1px solid $divider-color-light;
+        font-weight: 600;
+        text-transform: uppercase;
+        font-family: $label-font-family;
+        letter-spacing: 1px;
       }
       .feature {
         display: flex;
-        align-items: center;
+        align-items: flex-start;
         justify-content: center;
         border-bottom: 1px solid $divider-color-light;
         padding: 10px 0;
@@ -305,13 +310,178 @@ main .pricing {
             color: $brand-color;
           }
 
-          &:first-child {
+          &.name {
             color: $tertiary-text-color;
             width: $cell-name-size;
+
+            & > span {
+              cursor: pointer;
+              color: $tertiary-text-color;
+              border-bottom: 1px dotted $grey-color-light;
+              transition: .2s;
+
+              &:hover {
+                color: $secondary-text-color;
+              }
+            }
+            p {
+              margin: 10px 0 0;
+              display: none;
+              font-size: 14px;
+              line-height: 1.55;
+              color: $text-color;
+
+              a {
+                white-space: nowrap;
+              }
+
+              i.fa-angle-right {
+                font-size: 13px;
+              }
+            }
+
+            &.open p {
+              display: block;
+            }
+          }
+          &:last-child a {
+            font-weight: 500;
           }
           &+div {
             margin-left: $cell-margin;
           }
+        }
+      }
+    }
+  }
+
+  .addons {
+    margin: 0 auto 2.5 * $spacing-unit;
+    max-width: 900px;
+
+    h4 {
+      margin-bottom: 1.5 * $spacing-unit;
+      text-align: center;
+      font-size: 28px;
+    }
+
+    .list {
+      padding: $spacing-unit / 2;
+      background-color: $divider-color-light;
+      border-radius: 6px;
+
+      .addon {
+        padding: $spacing-unit / 2 200px + $spacing-unit / 2 $spacing-unit / 2 88px;
+        background-color: white;
+        border-radius: 3px;
+        box-sizing: border-box;
+        position: relative;
+        overflow: hidden;
+        box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.08),
+                    0 2px 4px -1px rgba(0, 0, 0, 0.03);
+
+        .icon {
+          $size: 96px;
+
+          position: absolute;
+          width: $size;
+          height: $size;
+          left: -20px;
+          top: 50%;
+          margin-top: - $size / 2;
+          border-radius: 50%;
+          text-align: center;
+          background-color: lighten($accent-color, 34%);
+
+          i.fa {
+            color: $accent-color;
+            font-size: 36px;
+            line-height: $size;
+          }
+        }
+
+        h6 {
+          margin-bottom: 3px;
+          font-family: $base-font-family;
+          font-size: 20px;
+          font-weight: 500;
+        }
+
+        & > p {
+          margin: 0;
+          color: $secondary-text-color;
+        }
+
+        hr {
+          margin: $spacing-unit / 2 0 13px;
+          border-color: $divider-color-light;
+          border-width: 5px;
+        }
+
+        .features {
+          span {
+            color: $secondary-text-color;
+            font-size: 14px;
+
+            i.fa {
+              margin-right: 2px;
+              color: $accent-color;
+            }
+
+            &+span {
+              margin-left: $spacing-unit;
+            }
+          }
+        }
+
+        .price {
+          position: absolute;
+          background-color: $background-color;
+          width: 200px;
+          height: 100%;
+          top: 0;
+          right: 0;
+          display: flex;
+          flex-direction: column;
+          justify-content: flex-end;
+
+          .numbers {
+            margin-bottom: 10px;
+            text-align: center;
+
+            & > p:first-child {
+              margin-bottom: 0;
+              line-height: 1;
+              font-size: 44px;
+
+              & span {
+                font-size: 26px;
+                margin-right: 4px;
+                font-weight: 400;
+                vertical-align: 10px;
+              }
+            }
+
+            & > p:nth-child(2) {
+              margin-bottom: 0;
+              color: $tertiary-text-color;
+              font-size: 14px;
+            }
+          }
+
+          a.action {
+            @include action-button-brand;
+            margin: 0 $spacing-unit / 2 $spacing-unit / 2;
+            padding: 10px;
+            box-shadow: none;
+            font-size: 13px;
+            display: block;
+            text-align: center;
+          }
+        }
+
+        &+.addon {
+          margin-top: $spacing-unit / 2;
         }
       }
     }

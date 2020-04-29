@@ -78,7 +78,7 @@ title: Pricing Plans
             <p>3 users + $10 per user / mo</p>
           </div>
           <a class="action start" {% include signup-link.html %}>
-            Try it for free
+            Upgrade
           </a>
         </div>
         <!--
@@ -125,7 +125,7 @@ title: Pricing Plans
             <p>5 users + $15 per user / mo</p>
           </div>
           <a class="action demo" href="mailto:{{ site.sales_email }}?subject=Enterprise%20plan">
-            Contact us
+            Upgrade
           </a>
         </div>
         <!--
@@ -177,7 +177,7 @@ title: Pricing Plans
   </div>
 
   <div class="comparison">
-    <h3>Comparison</h3>
+    <h4>Comparison</h4>
     <div class="list">
       <div class="header">
         <div>Features</div>
@@ -204,159 +204,240 @@ title: Pricing Plans
         </div>
       </div>
       <div class="section">
-        <h6 class="name">Users</h6>
+        <h6 class="name">Teams</h6>
         <div class="feature">
-          <div>Users</div>
+          <div class="name">
+            <span class="title">Users</span>
+            <p>The number of users included in the plan.</p>
+          </div>
           <div>1</div>
           <div>3</div>
           <div>5</div>
         </div>
         <div class="feature">
-          <div>Additional users</div>
+          <div class="name">
+            <span class="title">Additional users</span>
+            <p>Add additional users to the account.</p>
+          </div>
           <div><i class="fa fa-times-circle" aria-hidden="true"></i></div>
           <div>$10 per user / month</div>
           <div>$15 per user / month</div>
         </div>
       </div>
       <div class="section">
-        <h6 class="name">Fully-managed CI/CD</h6>
+        <h6 class="name">Fully-Managed CI/CD</h6>
         <div class="feature">
-          <div>Build minutes</div>
+          <div class="name">
+            <span class="title">Concurrent builds</span>
+            <p>The number of services that can be deployed concurrently. Deploy your monorepo apps as fast as they can be deployed.</p>
+          </div>
+          <div>Unlimited</div>
+          <div>Unlimited</div>
+          <div>Unlimited</div>
+        </div>
+        <div class="feature">
+          <div class="name">
+            <span class="title">Build minutes</span>
+            <p>The amount of time it takes for a build to complete, rounded up to the nearest minute.</p>
+          </div>
           <div>500</div>
           <div>4500</div>
           <div>15000</div>
         </div>
         <div class="feature">
-          <div>Additional minutes</div>
+          <div class="name">
+            <span class="title">Additional minutes</span>
+            <p>Add additional build minutes to your account.</p>
+          </div>
           <div><i class="fa fa-times-circle" aria-hidden="true"></i></div>
           <div>$10 / month for 1500</div>
           <div>$10 / month for 1500</div>
         </div>
         <div class="feature">
-          <div>Deploy phases</div>
+          <div class="name">
+            <span class="title">Deploy phases</span>
+            <p>Deploy the interdependent services in your app in separate phases. <a href="{% link _docs/configuring-deploy-phases.md %}#custom-webhooks">Learn more <i class="fa fa-angle-right" aria-hidden="true"></i></a></p>
+          </div>
           <div><i class="fa fa-check-circle" aria-hidden="true"></i></div>
           <div><i class="fa fa-check-circle" aria-hidden="true"></i></div>
           <div><i class="fa fa-check-circle" aria-hidden="true"></i></div>
         </div>
         <div class="feature">
-          <div>Concurrent builds</div>
+          <div class="name">
+            <span class="title">Multi-region deploys</span>
+            <p>Configure stages to deploy your services to multiple regions. <a href="{% link _docs/multi-region-deployments.md %}">Learn more <i class="fa fa-angle-right" aria-hidden="true"></i></a></p>
+          </div>
+          <div><i class="fa fa-check-circle" aria-hidden="true"></i></div>
+          <div><i class="fa fa-check-circle" aria-hidden="true"></i></div>
+          <div><i class="fa fa-check-circle" aria-hidden="true"></i></div>
+        </div>
+        <div class="feature">
+          <div class="name">
+            <span class="title">Slack &amp; email notifications</span>
+            <p>Get notified by Slack or email on the status of your builds.</p>
+          </div>
+          <div><i class="fa fa-check-circle" aria-hidden="true"></i></div>
+          <div><i class="fa fa-check-circle" aria-hidden="true"></i></div>
+          <div><i class="fa fa-check-circle" aria-hidden="true"></i></div>
+        </div>
+        <div class="feature">
+          <div class="name">
+            <span class="title">Custom build webhooks</span>
+            <p>Setup webhooks to be triggered once your builds complete. <a href="{% link _docs/adding-build-notifications.md %}#custom-webhooks">Learn more <i class="fa fa-angle-right" aria-hidden="true"></i></a></p>
+          </div>
+          <div><i class="fa fa-check-circle" aria-hidden="true"></i></div>
+          <div><i class="fa fa-check-circle" aria-hidden="true"></i></div>
+          <div><i class="fa fa-check-circle" aria-hidden="true"></i></div>
+        </div>
+        <div class="feature">
+          <div class="name">
+            <span class="title">Connect your own CI</span>
+            <p>Configure Seed to deploy after your build process in CircleCI, Travis CI, or GitHub Actions completes. <a href="{% link _docs/connect-your-own-ci.md %}">Learn more <i class="fa fa-angle-right" aria-hidden="true"></i></a></p>
+          </div>
+          <div><i class="fa fa-check-circle" aria-hidden="true"></i></div>
+          <div><i class="fa fa-check-circle" aria-hidden="true"></i></div>
+          <div><i class="fa fa-check-circle" aria-hidden="true"></i></div>
+        </div>
+        <div class="feature">
+          <div class="name">
+            <span class="title">High-performance builds</span>
+            <p>Configure your builds to run in high performance machines. <a href="{% link _docs/build-machine-types.md %}">Learn more <i class="fa fa-angle-right" aria-hidden="true"></i></a></p>
+          </div>
+          <div><i class="fa fa-check-circle" aria-hidden="true"></i></div>
+          <div><i class="fa fa-check-circle" aria-hidden="true"></i></div>
+          <div><i class="fa fa-check-circle" aria-hidden="true"></i></div>
+        </div>
+        <div class="feature">
+          <div class="name">
+            <span class="title">Run Docker commands</span>
+            <p>Run Docker commands inside your builds process. <a href="{% link _docs/docker-commands-in-your-builds.md %}">Learn more <i class="fa fa-angle-right" aria-hidden="true"></i></a></p>
+          </div>
+          <div><i class="fa fa-times-circle" aria-hidden="true"></i></div>
+          <div><i class="fa fa-check-circle" aria-hidden="true"></i></div>
+          <div><i class="fa fa-check-circle" aria-hidden="true"></i></div>
+        </div>
+        <div class="feature">
+          <div class="name">
+            <span class="title">GitHub Enterprise</span>
+            <p>Add your GitHub Enterprise repos in Seed.</p>
+          </div>
+          <div><i class="fa fa-times-circle" aria-hidden="true"></i></div>
+          <div><i class="fa fa-times-circle" aria-hidden="true"></i></div>
+          <div><a href="#enterprise-add-ons">Add-on</a></div>
+        </div>
+        <div class="feature">
+          <div class="name">
+            <span class="title">GitLab Self-Managed</span>
+            <p>Add your GitHub Self-Managed repos in Seed.</p>
+          </div>
+          <div><i class="fa fa-times-circle" aria-hidden="true"></i></div>
+          <div><i class="fa fa-times-circle" aria-hidden="true"></i></div>
+          <div><a href="#enterprise-add-ons">Add-on</a></div>
+        </div>
+      </div>
+      <div class="section">
+        <h6 class="name">Logging &amp; Monitoring</h6>
+        <div class="feature">
+          <div class="name">
+            <span class="title">Live dashboard</span>
+            <p>Get a live view of the key metrics of your app.</p>
+          </div>
+          <div><i class="fa fa-check-circle" aria-hidden="true"></i></div>
+          <div><i class="fa fa-check-circle" aria-hidden="true"></i></div>
+          <div><i class="fa fa-check-circle" aria-hidden="true"></i></div>
+        </div>
+        <div class="feature">
+          <div class="name">
+            <span class="title">App reports</span>
+            <p>Get daily or weekly email reports with the latency and error rates of your APIs and Lambda functions. <a href="{% link _docs/viewing-app-reports.md %}">Learn more <i class="fa fa-angle-right" aria-hidden="true"></i></a></p>
+          </div>
+          <div><i class="fa fa-check-circle" aria-hidden="true"></i></div>
+          <div><i class="fa fa-check-circle" aria-hidden="true"></i></div>
+          <div><i class="fa fa-check-circle" aria-hidden="true"></i></div>
+        </div>
+        <div class="feature">
+          <div class="name">
+            <span class="title">Monitored events</span>
+            <p>Seed connects to CloudWatch Metrics, so there is no limit on the number of the number of events that can be monitored.</p>
+          </div>
           <div>Unlimited</div>
           <div>Unlimited</div>
           <div>Unlimited</div>
         </div>
         <div class="feature">
-          <div>Build notifications</div>
-          <div><i class="fa fa-check-circle" aria-hidden="true"></i></div>
-          <div><i class="fa fa-check-circle" aria-hidden="true"></i></div>
-          <div><i class="fa fa-check-circle" aria-hidden="true"></i></div>
+          <div class="name">
+            <span class="title">Log retention</span>
+            <p>Seed connects to CloudWatch Logs, so there is no limit to how far back you can access your logs.</p>
+          </div>
+          <div>Unlimited</div>
+          <div>Unlimited</div>
+          <div>Unlimited</div>
         </div>
+      </div>
+      <div class="section">
+        <h6 class="name">Security &amp; Access Control</h6>
         <div class="feature">
-          <div>Multi-region deploys</div>
-          <div><i class="fa fa-check-circle" aria-hidden="true"></i></div>
-          <div><i class="fa fa-check-circle" aria-hidden="true"></i></div>
-          <div><i class="fa fa-check-circle" aria-hidden="true"></i></div>
-        </div>
-        <div class="feature">
-          <div>Connect your own CI</div>
-          <div><i class="fa fa-check-circle" aria-hidden="true"></i></div>
-          <div><i class="fa fa-check-circle" aria-hidden="true"></i></div>
-          <div><i class="fa fa-check-circle" aria-hidden="true"></i></div>
-        </div>
-        <div class="feature">
-          <div>GitHub Enterprise</div>
+          <div class="name">
+            <span class="title">Audit logs</span>
+            <p>Get a complete log of all the actions applied to your organization on Seed. <a href="{% link _docs/audit-logs-in-seed.md %}">Learn more <i class="fa fa-angle-right" aria-hidden="true"></i></a></p>
+          </div>
           <div><i class="fa fa-times-circle" aria-hidden="true"></i></div>
-          <div>Add-on</div>
-          <div>Add-on</div>
-        </div>
-        <div class="feature">
-          <div>GitLab Self-Managed</div>
-          <div><i class="fa fa-times-circle" aria-hidden="true"></i></div>
-          <div>Add-on</div>
-          <div>Add-on</div>
-        </div>
-        <div class="feature">
-          <div>Run Docker commands</div>
           <div><i class="fa fa-times-circle" aria-hidden="true"></i></div>
           <div><i class="fa fa-check-circle" aria-hidden="true"></i></div>
+        </div>
+        <div class="feature">
+          <div class="name">
+            <span class="title">Single-sign on</span>
+            <p>Allow the members of your organization to login to Seed with your SAML based SSO provider.</p>
+          </div>
+          <div><i class="fa fa-times-circle" aria-hidden="true"></i></div>
+          <div><i class="fa fa-times-circle" aria-hidden="true"></i></div>
+          <div><a href="#enterprise-add-ons">Add-on</a></div>
+        </div>
+        <div class="feature">
+          <div class="name">
+            <span class="title">Mandatory 2FA</span>
+            <p>Require that all the members of your organization on Seed need to enable 2 factor authentication. <a href="{% link _docs/enabling-mandatory-two-factor-auth.md %}">Learn more <i class="fa fa-angle-right" aria-hidden="true"></i></a></p>
+          </div>
+          <div><i class="fa fa-times-circle" aria-hidden="true"></i></div>
+          <div><i class="fa fa-times-circle" aria-hidden="true"></i></div>
           <div><i class="fa fa-check-circle" aria-hidden="true"></i></div>
         </div>
         <div class="feature">
-          <div>High-performance builds</div>
-          <div><i class="fa fa-check-circle" aria-hidden="true"></i></div>
-          <div><i class="fa fa-check-circle" aria-hidden="true"></i></div>
+          <div class="name">
+            <span class="title">Role-based access</span>
+            <p>Retrict the stages that members in your organization have access to. <a href="{% link _docs/adding-organization-members.md %}#member-roles">Learn more <i class="fa fa-angle-right" aria-hidden="true"></i></a></p>
+          </div>
+          <div><i class="fa fa-times-circle" aria-hidden="true"></i></div>
+          <div><i class="fa fa-times-circle" aria-hidden="true"></i></div>
           <div><i class="fa fa-check-circle" aria-hidden="true"></i></div>
         </div>
       </div>
       <div class="section">
-        <h6 class="name">Logging and monitoring</h6>
+        <h6 class="name">Billing Options</h6>
         <div class="feature">
-          <div>Live dashboard</div>
-          <div><i class="fa fa-check-circle" aria-hidden="true"></i></div>
-          <div><i class="fa fa-check-circle" aria-hidden="true"></i></div>
-          <div><i class="fa fa-check-circle" aria-hidden="true"></i></div>
-        </div>
-        <div class="feature">
-          <div>Log retention</div>
-          <div>Unlimited</div>
-          <div>Unlimited</div>
-          <div>Unlimited</div>
-        </div>
-        <div class="feature">
-          <div>App reports</div>
-          <div><i class="fa fa-check-circle" aria-hidden="true"></i></div>
-          <div><i class="fa fa-check-circle" aria-hidden="true"></i></div>
-          <div><i class="fa fa-check-circle" aria-hidden="true"></i></div>
-        </div>
-        <div class="feature">
-          <div>Monitored events</div>
-          <div>Unlimited</div>
-          <div>Unlimited</div>
-          <div>Unlimited</div>
-        </div>
-      </div>
-      <div class="section">
-        <h6 class="name">Security &amp; access control</h6>
-        <div class="feature">
-          <div>Audit logs</div>
+          <div class="name">
+            <span class="title">Billing role</span>
+            <p>Billing roles only have access to the billing settings of your organization on Seed.</p>
+          </div>
           <div><i class="fa fa-times-circle" aria-hidden="true"></i></div>
           <div><i class="fa fa-times-circle" aria-hidden="true"></i></div>
           <div><i class="fa fa-check-circle" aria-hidden="true"></i></div>
         </div>
         <div class="feature">
-          <div>Single-sign on</div>
+          <div class="name">
+            <span class="title">Invoice billing</span>
+            <p>Receive invoices from Seed that can be verified and completed by your Accounts Payable department.</p>
+          </div>
           <div><i class="fa fa-times-circle" aria-hidden="true"></i></div>
           <div><i class="fa fa-times-circle" aria-hidden="true"></i></div>
           <div><i class="fa fa-check-circle" aria-hidden="true"></i></div>
         </div>
         <div class="feature">
-          <div>Mandatory 2FA</div>
-          <div><i class="fa fa-times-circle" aria-hidden="true"></i></div>
-          <div><i class="fa fa-times-circle" aria-hidden="true"></i></div>
-          <div><i class="fa fa-check-circle" aria-hidden="true"></i></div>
-        </div>
-        <div class="feature">
-          <div>Role-based access</div>
-          <div><i class="fa fa-times-circle" aria-hidden="true"></i></div>
-          <div><i class="fa fa-times-circle" aria-hidden="true"></i></div>
-          <div><i class="fa fa-check-circle" aria-hidden="true"></i></div>
-        </div>
-      </div>
-      <div class="section">
-        <h6 class="name">Billing</h6>
-        <div class="feature">
-          <div>Billing role</div>
-          <div><i class="fa fa-times-circle" aria-hidden="true"></i></div>
-          <div><i class="fa fa-times-circle" aria-hidden="true"></i></div>
-          <div><i class="fa fa-check-circle" aria-hidden="true"></i></div>
-        </div>
-        <div class="feature">
-          <div>Invoice billing</div>
-          <div><i class="fa fa-times-circle" aria-hidden="true"></i></div>
-          <div><i class="fa fa-times-circle" aria-hidden="true"></i></div>
-          <div><i class="fa fa-check-circle" aria-hidden="true"></i></div>
-        </div>
-        <div class="feature">
-          <div>Custom contract</div>
+          <div class="name">
+            <span class="title">Custom contract</span>
+            <p>Sign a custom agreement with Seed with the terms and policies that work best for your enterprise.</p>
+          </div>
           <div><i class="fa fa-times-circle" aria-hidden="true"></i></div>
           <div><i class="fa fa-times-circle" aria-hidden="true"></i></div>
           <div><i class="fa fa-check-circle" aria-hidden="true"></i></div>
@@ -365,34 +446,180 @@ title: Pricing Plans
       <div class="section">
         <h6 class="name">Support</h6>
         <div class="feature">
-          <div>Community support</div>
-          <div><i class="fa fa-check-circle" aria-hidden="true"></i></div>
-          <div><i class="fa fa-check-circle" aria-hidden="true"></i></div>
-          <div><i class="fa fa-check-circle" aria-hidden="true"></i></div>
+          <div class="name">
+            <span class="title">Support</span>
+            <p>Community support is available <a href="https://discourse.serverless-stack.com/">via our forums</a>. Standard and priority support options are available over email and chat.</p>
+          </div>
+          <div>Community</div>
+          <div>Standard</div>
+          <div>Priority</div>
         </div>
         <div class="feature">
-          <div>Standard support</div>
+          <div class="name">
+            <span class="title">Support SLA</span>
+            <p>Support SLA options can be added to your plan via an add-on.</p>
+          </div>
           <div><i class="fa fa-times-circle" aria-hidden="true"></i></div>
-          <div><i class="fa fa-check-circle" aria-hidden="true"></i></div>
-          <div><i class="fa fa-check-circle" aria-hidden="true"></i></div>
+          <div><i class="fa fa-times-circle" aria-hidden="true"></i></div>
+          <div><a href="#enterprise-add-ons">Add-on</a></div>
         </div>
         <div class="feature">
-          <div>Priority support</div>
+          <div class="name">
+            <span class="title">Uptime SLA</span>
+            <p>Uptime SLA options can be added to your plan via an add-on.</p>
+          </div>
           <div><i class="fa fa-times-circle" aria-hidden="true"></i></div>
           <div><i class="fa fa-times-circle" aria-hidden="true"></i></div>
-          <div><i class="fa fa-check-circle" aria-hidden="true"></i></div>
+          <div><a href="#enterprise-add-ons">Add-on</a></div>
         </div>
-        <div class="feature">
-          <div>Support SLA</div>
-          <div><i class="fa fa-times-circle" aria-hidden="true"></i></div>
-          <div><i class="fa fa-times-circle" aria-hidden="true"></i></div>
-          <div>Add-on</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="addons">
+    <h4 id="enterprise-add-ons">Enterprise Add-Ons</h4>
+    <div class="list">
+      <div class="addon">
+        <div class="icon">
+          <i class="fa fa-git" aria-hidden="true"></i>
         </div>
-        <div class="feature">
-          <div>Uptime SLA</div>
-          <div><i class="fa fa-times-circle" aria-hidden="true"></i></div>
-          <div><i class="fa fa-times-circle" aria-hidden="true"></i></div>
-          <div>Add-on</div>
+        <h6>GitHub Enterprise</h6>
+        <p>Add apps connected to GitHub Enterprise repos in Seed.</p>
+        <hr />
+        <div class="features">
+          <span>
+            <i class="fa fa-check-circle" aria-hidden="true"></i>
+            GitHub Enterprise
+          </span>
+          <span>
+            <i class="fa fa-check-circle" aria-hidden="true"></i>
+            Private Build IPs
+          </span>
+        </div>
+        <div class="price">
+          <div class="numbers">
+            <p><span>$</span>100</p>
+            <p>per month</p>
+          </div>
+          <a class="action signup" {% include signup-link.html %}>
+            Upgrade
+          </a>
+        </div>
+      </div>
+      <div class="addon">
+        <div class="icon">
+          <i class="fa fa-git" aria-hidden="true"></i>
+        </div>
+        <h6>GitLab Self-Managed</h6>
+        <p>Add apps connected to GitHub Self-Managed repos in Seed.</p>
+        <hr />
+        <div class="features">
+          <span>
+            <i class="fa fa-check-circle" aria-hidden="true"></i>
+            GitLab Self-Managed
+          </span>
+          <span>
+            <i class="fa fa-check-circle" aria-hidden="true"></i>
+            Private Build IPs
+          </span>
+        </div>
+        <div class="price">
+          <div class="numbers">
+            <p><span>$</span>100</p>
+            <p>per month</p>
+          </div>
+          <a class="action signup" {% include signup-link.html %}>
+            Upgrade
+          </a>
+        </div>
+      </div>
+      <div class="addon">
+        <div class="icon">
+          <i class="fa fa-key" aria-hidden="true"></i>
+        </div>
+        <h6>Single Sign-On</h6>
+        <p>Sign in to Seed using your SAML based SSO provider.</p>
+        <hr />
+        <div class="features">
+          <span>
+            <i class="fa fa-check-circle" aria-hidden="true"></i>
+            SAML SSO
+          </span>
+          <span>
+            <i class="fa fa-check-circle" aria-hidden="true"></i>
+            Okta
+          </span>
+          <span>
+            <i class="fa fa-check-circle" aria-hidden="true"></i>
+            Integration Support
+          </span>
+        </div>
+        <div class="price">
+          <div class="numbers">
+            <p><span>$</span>500</p>
+            <p>per month</p>
+          </div>
+          <a class="action signup" {% include signup-link.html %}>
+            Upgrade
+          </a>
+        </div>
+      </div>
+      <div class="addon">
+        <div class="icon">
+          <i class="fa fa-calendar-check-o" aria-hidden="true"></i>
+        </div>
+        <h6>Uptime SLA</h6>
+        <p>Seed build servers and web console backed by a 99.99% SLA.</p>
+        <hr />
+        <div class="features">
+          <span>
+            <i class="fa fa-check-circle" aria-hidden="true"></i>
+            99.99%
+          </span>
+          <span>
+            <i class="fa fa-check-circle" aria-hidden="true"></i>
+            Build Servers
+          </span>
+          <span>
+            <i class="fa fa-check-circle" aria-hidden="true"></i>
+            Web Console
+          </span>
+        </div>
+        <div class="price">
+          <div class="numbers">
+            <p><span>$</span>500</p>
+            <p>per month</p>
+          </div>
+          <a class="action signup" {% include signup-link.html %}>
+            Upgrade
+          </a>
+        </div>
+      </div>
+      <div class="addon">
+        <div class="icon">
+          <i class="fa fa-life-ring" aria-hidden="true"></i>
+        </div>
+        <h6>Support SLA</h6>
+        <p>Guaranteed response time of 4 hours in 6 AM - 6 PM PST. Business critical issues in 1 hour.</p>
+        <hr />
+        <div class="features">
+          <span>
+            <i class="fa fa-check-circle" aria-hidden="true"></i>
+            6 AM - 6 PM
+          </span>
+          <span>
+            <i class="fa fa-check-circle" aria-hidden="true"></i>
+            4 hr response time
+          </span>
+        </div>
+        <div class="price">
+          <div class="numbers">
+            <p><span>$</span>1000</p>
+            <p>per month</p>
+          </div>
+          <a class="action signup" {% include signup-link.html %}>
+            Upgrade
+          </a>
         </div>
       </div>
     </div>
@@ -403,7 +630,7 @@ title: Pricing Plans
       <i class="fa fa-exchange" aria-hidden="true"></i>
     </div>
     <div class="copy">
-      <h4>Why is concurrency important?</h4>
+      <h4>Why does concurrency matter?</h4>
       <p>Traditional CIs are not well-suited for Serverless apps that have multiple services. They charge you extra to deploy them concurrently. This means that if your app has 5 services and each service takes 2 minutes to deploy; your entire app will take 5 x 2 minutes = 10 minutes to deploy, when using one concurrent build server.</p>
       <p>Seed on the other hand, will deploy all your services concurrently. So the entire deployment will take only 2 minutes. At no extra cost!</p>
     </div>

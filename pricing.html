@@ -6,8 +6,7 @@ title: Pricing Plans
 <div class="pricing">
   <div class="header">
     <h1>Pricing Plans</h1>
-    <p>Simple &amp; transparent plans for teams of all sizes. Get started for free. Or <a href="mailto:{{ site.email }}">contact us</a> if you have custom needs.</p>
-    <!--
+    <p>Simple &amp; transparent pricing options for teams of all sizes. Get started for free.</p>
     <a class="announcement" href="{% link _posts/2020-03-17-managing-your-seed-costs.md %}">
       <span>
         <span class="content">
@@ -16,7 +15,6 @@ title: Pricing Plans
         <i class="fa fa-angle-right" aria-hidden="true"></i>
       </span>
     </a>
-    -->
   </div>
 
   <div class="table">
@@ -36,34 +34,6 @@ title: Pricing Plans
             Sign up for free
           </a>
         </div>
-        <!--
-        <ul class="features fa-ul">
-          <li>
-            <i class="fa-li fa fa-check"></i>
-            Unlimited apps
-          </li>
-          <li>
-            <i class="fa-li fa fa-check"></i>
-            Unlimited concurrency
-          </li>
-          <li>
-            <i class="fa-li fa fa-check"></i>
-            Monorepo deployments
-          </li>
-          <li>
-            <i class="fa-li fa fa-check"></i>
-            Community support
-          </li>
-          <li>
-            <i class="fa-li fa fa-check"></i>
-            Single user account
-          </li>
-          <li>
-            <i class="fa-li fa fa-check"></i>
-            500 build minutes
-          </li>
-        </ul>
-        -->
       </div>
       <div class="startup">
         <div class="cost">
@@ -81,34 +51,6 @@ title: Pricing Plans
             Upgrade
           </a>
         </div>
-        <!--
-        <ul class="features fa-ul">
-          <li>
-            <i class="fa-li fa fa-check"></i>
-            Unlimited apps
-          </li>
-          <li>
-            <i class="fa-li fa fa-check"></i>
-            Unlimited concurrency
-          </li>
-          <li>
-            <i class="fa-li fa fa-check"></i>
-            Monorepo deployments
-          </li>
-          <li>
-            <i class="fa-li fa fa-plus"></i>
-            Standard email support
-          </li>
-          <li>
-            <i class="fa-li fa fa-plus"></i>
-            Starts with 3 users + 4500 build minutes
-          </li>
-          <li>
-            <i class="fa-li fa fa-plus"></i>
-            Add a user + 1500 build minutes for $10 / month
-          </li>
-        </ul>
-        -->
       </div>
     </div>
     <div class="row">
@@ -128,56 +70,11 @@ title: Pricing Plans
             Upgrade
           </a>
         </div>
-        <!--
-        <ul class="features fa-ul">
-          <li>
-            <i class="fa-li fa fa-ellipsis-h"></i>
-            Everything in Team
-          </li>
-          <li>
-            <i class="fa-li fa fa-check-circle"></i>
-            Audit logs
-          </li>
-          <li>
-            <i class="fa-li fa fa-check-circle"></i>
-            Uptime SLAs
-          </li>
-          <li>
-            <i class="fa-li fa fa-check-circle"></i>
-            Single sign-on
-          </li>
-          <li>
-            <i class="fa-li fa fa-check-circle"></i>
-            Custom integration
-          </li>
-          <li>
-            <i class="fa-li fa fa-check-circle"></i>
-            Priority Email support
-          </li>
-          <li>
-            <i class="fa-li fa fa-check-circle"></i>
-            [Hidden] Concierge onboarding
-          </li>
-          <li>
-            <i class="fa-li fa fa-check-circle"></i>
-            [Hidden] Dedicated account manager
-          </li>
-          <li>
-            <i class="fa-li fa fa-check-circle"></i>
-            GitHub Enterprise integration
-          </li>
-          <li>
-            <i class="fa-li fa fa-check-circle"></i>
-            Fine-tuned role-based access control
-          </li>
-        </ul>
-        -->
       </div>
     </div>
   </div>
 
   <div class="comparison">
-    <h4>Comparison</h4>
     <div class="list">
       <div class="header">
         <div>Features</div>
@@ -204,7 +101,7 @@ title: Pricing Plans
         </div>
       </div>
       <div class="section">
-        <h6 class="name">Teams</h6>
+        <h6 class="name">Members</h6>
         <div class="feature">
           <div class="name">
             <span class="title">Users</span>
@@ -476,8 +373,32 @@ title: Pricing Plans
     </div>
   </div>
 
+  <div class="concurrency">
+    <div class="container">
+      <div class="icon">
+        <i class="fa fa-exchange" aria-hidden="true"></i>
+      </div>
+      <div class="copy">
+        <h4>A quick note on concurrent builds</h4>
+        <p>Traditional CIs are not well-suited for Serverless apps that have multiple services. They charge you extra to deploy them concurrently. This means that if your app has 5 services and each service takes 2 minutes to deploy; your entire app will take 5 x 2 minutes = 10 minutes to deploy, when using one concurrent build server.</p>
+        <p>Seed on the other hand, will deploy all your services concurrently. So the entire deployment will take only 2 minutes. At no extra cost!</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="opening-action">
+    <p>Sign up for a free account and upgrade when you are ready. Or <a href="mailto:{{ site.sales_email }}">contact sales</a> if you have custom needs.</p>
+    <div class="controls">
+      <a class="sales" href="mailto:{{ site.sales_email }}">
+        Contact Sales
+      </a>
+    </div>
+  </div>
+
   <div class="addons">
-    <h4 id="enterprise-add-ons">Enterprise Add-Ons</h4>
+    <hr id="enterprise-add-ons" />
+    <h4>Enterprise Add-Ons</h4>
+    <p>Upgrade right from <a href="{% include signup-link.html %}">your console</a>. Or <a href="mailto:{{ site.sales_email }}">contact us</a> and we'd be happy to assist.</p>
     <div class="list">
       <div class="addon">
         <div class="icon">
@@ -498,12 +419,15 @@ title: Pricing Plans
         </div>
         <div class="price">
           <div class="numbers">
-            <p><span>$</span>100</p>
-            <p>per month</p>
+            <span><span>$</span>100</span>
+            <span>/ month</span>
           </div>
           <a class="action signup" {% include signup-link.html %}>
             Upgrade
           </a>
+          <p class="email">
+            <a href="mailto:{{ site.sales_email }}">Contact sales</a>
+          </p>
         </div>
       </div>
       <div class="addon">
@@ -525,12 +449,15 @@ title: Pricing Plans
         </div>
         <div class="price">
           <div class="numbers">
-            <p><span>$</span>100</p>
-            <p>per month</p>
+            <span><span>$</span>100</span>
+            <span>/ month</span>
           </div>
           <a class="action signup" {% include signup-link.html %}>
             Upgrade
           </a>
+          <p class="email">
+            <a href="mailto:{{ site.sales_email }}">Contact sales</a>
+          </p>
         </div>
       </div>
       <div class="addon">
@@ -556,12 +483,15 @@ title: Pricing Plans
         </div>
         <div class="price">
           <div class="numbers">
-            <p><span>$</span>500</p>
-            <p>per month</p>
+            <span><span>$</span>500</span>
+            <span>/ month</span>
           </div>
           <a class="action signup" {% include signup-link.html %}>
             Upgrade
           </a>
+          <p class="email">
+            <a href="mailto:{{ site.sales_email }}">Contact sales</a>
+          </p>
         </div>
       </div>
       <div class="addon">
@@ -587,12 +517,15 @@ title: Pricing Plans
         </div>
         <div class="price">
           <div class="numbers">
-            <p><span>$</span>500</p>
-            <p>per month</p>
+            <span><span>$</span>500</span>
+            <span>/ month</span>
           </div>
           <a class="action signup" {% include signup-link.html %}>
             Upgrade
           </a>
+          <p class="email">
+            <a href="mailto:{{ site.sales_email }}">Contact sales</a>
+          </p>
         </div>
       </div>
       <div class="addon">
@@ -611,30 +544,27 @@ title: Pricing Plans
             <i class="fa fa-check-circle" aria-hidden="true"></i>
             4 hr response time
           </span>
+          <span>
+            <i class="fa fa-check-circle" aria-hidden="true"></i>
+            1 hr business critical
+          </span>
         </div>
         <div class="price">
           <div class="numbers">
-            <p><span>$</span>1000</p>
-            <p>per month</p>
+            <span><span>$</span>1000</span>
+            <span>/ month</span>
           </div>
           <a class="action signup" {% include signup-link.html %}>
             Upgrade
           </a>
+          <p class="email">
+            <a href="mailto:{{ site.sales_email }}">Contact sales</a>
+          </p>
         </div>
       </div>
     </div>
   </div>
 
-  <div class="concurrency">
-    <div class="icon">
-      <i class="fa fa-exchange" aria-hidden="true"></i>
-    </div>
-    <div class="copy">
-      <h4>Why does concurrency matter?</h4>
-      <p>Traditional CIs are not well-suited for Serverless apps that have multiple services. They charge you extra to deploy them concurrently. This means that if your app has 5 services and each service takes 2 minutes to deploy; your entire app will take 5 x 2 minutes = 10 minutes to deploy, when using one concurrent build server.</p>
-      <p>Seed on the other hand, will deploy all your services concurrently. So the entire deployment will take only 2 minutes. At no extra cost!</p>
-    </div>
-  </div>
   <div class="contact">
     <p>Have an existing setup? Need help transitioning?</p>
     <p>Our engineers can help with that.</p>
@@ -644,6 +574,7 @@ title: Pricing Plans
       </a>
     </div>
   </div>
+
   <div class="faq">
     <hr />
     <h4>Frequently Asked Questions</h4>
@@ -695,15 +626,15 @@ title: Pricing Plans
         <li>
           <span class="fa-li" ><i class="fa fa-chevron-right"></i></span>
           <p>
-            What if I need some Enterprise features in my current plan?
+            What if I have some Enterprise requirements not listed here?
           </p>
           <p>
-            No worries, we can figure out a custom pricing plan for you. Just <a href="mailto:{{ site.email }}">send us an email</a> with your requirements and we'll get you set up.
+            No worries, we can figure out how to get you setup. Just <a href="mailto:{{ site.email }}">send us an email</a> with your requirements and we'll schedule a call a call with one of our engineers.
           </p>
         </li>
 
       </ul>
     </div>
-    <p>Feel free to <a href="mailto:{{ site.email }}">contact us</a> if you have any questions about our plans or features.</p>
+    <p>Feel free to <a href="mailto:{{ site.email }}"><b>contact us</b></a> if you have any questions about our plans or features.</p>
   </div>
 </div>

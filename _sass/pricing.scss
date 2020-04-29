@@ -71,7 +71,7 @@ main .pricing {
   }
 
   .table {
-    margin: $spacing-unit + 10px auto $spacing-unit;
+    margin: $spacing-unit + 10px auto 0;
     display: flex;
     justify-content: center;
     align-items: flex-start;
@@ -92,8 +92,8 @@ main .pricing {
     }
 
     & > .row > div {
-      margin: 0 12px $spacing-unit;
-      width: 270px;
+      margin: 0 $spacing-unit / 2 $spacing-unit;
+      width: 280px;
 
       @include media-query($on-palm) {
         margin-left: 0;
@@ -158,7 +158,7 @@ main .pricing {
             @include action-button;
           }
           &.demo {
-            @include action-button-dark;
+            @include action-button-brand;
           }
 
           &.demo,
@@ -221,11 +221,34 @@ main .pricing {
 
   .comparison {
     $cell-name-size: 220px;
-    $cell-size: 180px;
     $cell-margin: 1.5 * $spacing-unit;
 
-    margin: 0 auto 2.5 * $spacing-unit;
-    width: $cell-name-size + 3 * $cell-size + 3 * $cell-margin;
+    margin: 0 auto;
+    padding: 0 $spacing-unit / 2;
+
+    @include media-query($on-palm) {
+      overflow-x: auto;
+    }
+
+    & > .list {
+      margin: 0 auto;
+      padding: $spacing-unit / 2;
+      min-width: 720px;
+      max-width: 900px;
+      border-radius: 3px;
+      box-sizing: border-box;
+      background-color: $divider-color-light;
+      position: relative;
+
+      &:after {
+        content: "";
+        display: block;
+        position: absolute;
+        right: -15px;
+        width: 15px;
+        height: 1px;
+      }
+    }
 
     h4 {
       margin-bottom: 1.5 * $spacing-unit;
@@ -238,15 +261,15 @@ main .pricing {
       align-items: center;
       justify-content: center;
       padding-bottom: 5px;
-      border-bottom: 1px solid $divider-color-light;
+      border-bottom: 1px solid $divider-color;
 
       & > div {
-        width: $cell-size;
+        flex: 1 1 auto;
 
         &:first-child {
           color: $tertiary-text-color;
           align-self: flex-end;
-          width: $cell-name-size;
+          flex: 0 0 $cell-name-size;
         }
 
         &+div {
@@ -266,7 +289,7 @@ main .pricing {
       .cost {
         margin-top: 5px;
         display: flex;
-        align-items: center;
+        align-items: baseline;
         p {
           margin-bottom: 0;
 
@@ -287,7 +310,7 @@ main .pricing {
         margin: $spacing-unit / 2 auto 0;
         font-size: 16px;
         padding-bottom: 10px;
-        border-bottom: 1px solid $divider-color-light;
+        border-bottom: 1px solid $divider-color;
         font-weight: 600;
         text-transform: uppercase;
         font-family: $label-font-family;
@@ -297,11 +320,11 @@ main .pricing {
         display: flex;
         align-items: flex-start;
         justify-content: center;
-        border-bottom: 1px solid $divider-color-light;
+        border-bottom: 1px solid $divider-color;
         padding: 10px 0;
 
         div {
-          width: $cell-size;
+          flex: 1 1 0;
 
           i.fa-times-circle {
             color: $grey-color-light;
@@ -312,7 +335,7 @@ main .pricing {
 
           &.name {
             color: $tertiary-text-color;
-            width: $cell-name-size;
+            flex: 0 0 $cell-name-size;
 
             & > span {
               cursor: pointer;
@@ -352,136 +375,11 @@ main .pricing {
           }
         }
       }
-    }
-  }
 
-  .addons {
-    margin: 0 auto 2.5 * $spacing-unit;
-    max-width: 900px;
-
-    h4 {
-      margin-bottom: 1.5 * $spacing-unit;
-      text-align: center;
-      font-size: 28px;
-    }
-
-    .list {
-      padding: $spacing-unit / 2;
-      background-color: $divider-color-light;
-      border-radius: 6px;
-
-      .addon {
-        padding: $spacing-unit / 2 200px + $spacing-unit / 2 $spacing-unit / 2 88px;
-        background-color: white;
-        border-radius: 3px;
-        box-sizing: border-box;
-        position: relative;
-        overflow: hidden;
-        box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.08),
-                    0 2px 4px -1px rgba(0, 0, 0, 0.03);
-
-        .icon {
-          $size: 96px;
-
-          position: absolute;
-          width: $size;
-          height: $size;
-          left: -20px;
-          top: 50%;
-          margin-top: - $size / 2;
-          border-radius: 50%;
-          text-align: center;
-          background-color: lighten($accent-color, 34%);
-
-          i.fa {
-            color: $accent-color;
-            font-size: 36px;
-            line-height: $size;
-          }
-        }
-
-        h6 {
-          margin-bottom: 3px;
-          font-family: $base-font-family;
-          font-size: 20px;
-          font-weight: 500;
-        }
-
-        & > p {
-          margin: 0;
-          color: $secondary-text-color;
-        }
-
-        hr {
-          margin: $spacing-unit / 2 0 13px;
-          border-color: $divider-color-light;
-          border-width: 5px;
-        }
-
-        .features {
-          span {
-            color: $secondary-text-color;
-            font-size: 14px;
-
-            i.fa {
-              margin-right: 2px;
-              color: $accent-color;
-            }
-
-            &+span {
-              margin-left: $spacing-unit;
-            }
-          }
-        }
-
-        .price {
-          position: absolute;
-          background-color: $background-color;
-          width: 200px;
-          height: 100%;
-          top: 0;
-          right: 0;
-          display: flex;
-          flex-direction: column;
-          justify-content: flex-end;
-
-          .numbers {
-            margin-bottom: 10px;
-            text-align: center;
-
-            & > p:first-child {
-              margin-bottom: 0;
-              line-height: 1;
-              font-size: 44px;
-
-              & span {
-                font-size: 26px;
-                margin-right: 4px;
-                font-weight: 400;
-                vertical-align: 10px;
-              }
-            }
-
-            & > p:nth-child(2) {
-              margin-bottom: 0;
-              color: $tertiary-text-color;
-              font-size: 14px;
-            }
-          }
-
-          a.action {
-            @include action-button-brand;
-            margin: 0 $spacing-unit / 2 $spacing-unit / 2;
-            padding: 10px;
-            box-shadow: none;
-            font-size: 13px;
-            display: block;
-            text-align: center;
-          }
-        }
-
-        &+.addon {
-          margin-top: $spacing-unit / 2;
+      &:last-child {
+        .feature:last-child {
+          padding-bottom: 0;
+          border-bottom: 0;
         }
       }
     }
@@ -490,13 +388,28 @@ main .pricing {
   .concurrency {
     $padding: $spacing-unit / 2 + 5px;
 
-    margin: 0 auto $spacing-unit + 10px;
-    border-radius: 6px;
-    border: 1px solid darken($divider-color, 4%);
-    padding: $padding $padding $padding + 5px $padding + 5px;
-    background-color: $divider-color;
-    max-width: 660px;
-    display: flex;
+    margin: $spacing-unit - 10px auto 0;
+    padding: 0 $spacing-unit / 2;
+
+    & > .container {
+      margin: 0 auto;
+      border-radius: 3px;
+      padding: $padding $padding $padding + 5px $padding + 5px;
+      background-color: $divider-color-light;
+      box-sizing: border-box;
+      max-width: 900px;
+      display: flex;
+
+      @include media-query($on-palm) {
+        padding: $spacing-unit / 2;
+
+        display: block;
+
+        div.icon {
+          margin-bottom: $spacing-unit / 2 - 2px;
+        }
+      }
+    }
 
     h4 {
       font-family: $base-font-family;
@@ -534,28 +447,256 @@ main .pricing {
         padding: 20px 0 18px;
       }
     }
+  }
 
-    @include media-query($on-palm) {
-      margin-left: $spacing-unit / 2;
-      margin-right: $spacing-unit / 2;
+  .opening-action {
+    margin-top: 1.5 * $spacing-unit;
+    text-align: center;
+
+    & > p {
+      margin: 0 auto 20px;
+      padding: 0 $spacing-unit;
+      max-width: 520px;
+      color: $secondary-text-color;
+      font-size: 20px;
+
+      b {
+        color: $secondary-text-color;
+        font-weight: 500;
+      }
+    }
+
+    div.controls {
+      padding: 0 $spacing-unit;
+      a.sales {
+        @include action-button;
+        font-size: 18px;
+        padding: 14px 26px;
+        width: 222px;
+
+        @include media-query($on-palm) {
+        font-size: 18px;
+          padding: 10px 22px;
+        }
+      }
+    }
+  }
+
+  .addons {
+    $icon-space: 88px;
+    $price-width: 200px;
+    $price-height: 70px;
+
+    margin: 0 auto;
+    max-width: 900px;
+
+    & > hr {
+      margin: 2 * $spacing-unit auto 2 * $spacing-unit - 10px;
+    }
+
+    h4 {
+      margin-bottom: 10px;
+      text-align: center;
+      font-size: 28px;
+    }
+
+    & > p {
+      margin: 0 auto 1.5 * $spacing-unit;
+      padding: 0 $spacing-unit;
+      color: $tertiary-text-color;
+      text-align: center;
+      font-size: 18px;
+    }
+
+    .list {
       padding: $spacing-unit / 2;
+      background-color: $divider-color-light;
+      border-radius: 6px;
 
-      display: block;
+      @include media-query($on-palm) {
+        border-radius: 0;
+      }
 
-      div.icon {
-        margin-bottom: $spacing-unit / 2 - 2px;
+      .addon {
+        $padding: $spacing-unit / 2 + 5px;
+        $m-padding: 10px;
+
+        padding: $padding $price-width + $padding $padding $icon-space;
+        background-color: white;
+        border-radius: 3px;
+        box-sizing: border-box;
+        position: relative;
+        overflow: hidden;
+        box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.08),
+                    0 2px 4px -1px rgba(0, 0, 0, 0.03);
+
+        @include media-query($on-palm) {
+          padding-right: $m-padding;
+          padding-bottom: $price-height + $m-padding;
+        }
+
+        .icon {
+          $size: 96px;
+
+          position: absolute;
+          width: $size;
+          height: $size;
+          left: -20px;
+          top: 50%;
+          margin-top: - $size / 2;
+          border-radius: 50%;
+          text-align: center;
+          background-color: lighten($accent-color, 34%);
+
+          @include media-query($on-palm) {
+            margin-top: - ( $size + $price-height ) / 2;
+          }
+
+          i.fa {
+            color: $accent-color;
+            font-size: 36px;
+            line-height: $size;
+          }
+        }
+
+        h6 {
+          margin-bottom: 3px;
+          font-family: $base-font-family;
+          font-size: 20px;
+          font-weight: 500;
+        }
+
+        & > p {
+          margin: 0;
+          color: $tertiary-text-color;
+        }
+
+        hr {
+          margin: $padding + 3px 0 $spacing-unit / 2;
+          border-color: $divider-color-light;
+          border-width: 5px;
+        }
+
+        .features {
+          span {
+            color: $secondary-text-color;
+            font-size: 14px;
+
+            i.fa {
+              margin-right: 3px;
+              color: #6FA492;
+            }
+
+            &+span {
+              margin-left: $spacing-unit;
+
+              @include media-query($on-palm) {
+                margin-left: 10px;
+              }
+            }
+          }
+        }
+
+        .price {
+          position: absolute;
+          background-color: $background-color;
+          width: $price-width;
+          height: 100%;
+          top: 0;
+          right: 0;
+          display: flex;
+          box-sizing: border-box;
+          flex-direction: column;
+          justify-content: center;
+
+          @include media-query($on-palm) {
+            bottom: 0;
+            top: auto;
+            width: 100%;
+            height: $price-height;
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: center;
+            padding: $m-padding $m-padding $m-padding;
+          }
+
+          .numbers {
+            margin-top: $spacing-unit / 2;
+            margin-bottom: 13px;
+            text-align: center;
+
+            & > span:first-child {
+              margin-bottom: 0;
+              line-height: 1;
+              font-size: 32px;
+
+              & span {
+                font-size: 18px;
+                margin-right: 3px;
+                font-weight: 400;
+                vertical-align: 8px;
+              }
+            }
+
+            & > span:nth-child(2) {
+              margin-bottom: 0;
+              color: $tertiary-text-color;
+              font-size: 14px;
+
+              @include media-query($on-palm) {
+                vertical-align: 6px;
+              }
+            }
+
+            @include media-query($on-palm) {
+              margin: 0 $spacing-unit / 2 0 0;
+            }
+          }
+
+          a.action {
+            @include action-button-brand;
+            margin: 0 $spacing-unit;
+            padding: 10px;
+            box-shadow: none;
+            font-size: 13px;
+            display: block;
+            text-align: center;
+
+            @include media-query($on-palm) {
+              margin: 0;
+              flex: 1;
+              max-width: 160px;
+            }
+          }
+
+          p.email {
+            margin: 5px 0 8px;
+            font-size: 14px;
+            text-align: center;
+            color: $tertiary-text-color;
+
+            @include media-query($on-palm) {
+              display: none;
+            }
+          }
+        }
+
+        &+.addon {
+          margin-top: $spacing-unit / 2;
+        }
       }
     }
   }
 
   .contact {
+    margin-top: $spacing-unit;
     padding: 0 $spacing-unit / 2;
     text-align: center;
 
     p {
       margin-bottom: 0;
       font-size: 22px;
-      color: $tertiary-text-color;
+      color: $secondary-text-color;
 
       &:first-child {
         margin-bottom: 3px;
@@ -608,6 +749,10 @@ main .pricing {
           p {
             color: $secondary-text-color;
 
+            a {
+              font-weight: 500;
+            }
+
             &:nth-child(2) {
               margin-bottom: 10px;
               font-size: 20px;
@@ -622,6 +767,10 @@ main .pricing {
       margin-top: 1.5 * $spacing-unit;
       color: $secondary-text-color;
       text-align: center;
+
+      a {
+        font-weight: 500;
+      }
     }
   }
 }

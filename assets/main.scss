@@ -1978,6 +1978,10 @@ main > .features {
         margin: 0;
         padding: 0 $spacing-unit / 2 $spacing-unit + 10px;
         overflow-x: auto;
+
+        & > div {
+          @include fix-scroll-clip($spacing-unit / 2);
+        }
       }
     }
 
@@ -2089,6 +2093,7 @@ main > .testimonials {
         }
         &:last-child {
           margin-right: 0;
+          @include fix-scroll-clip($spacing-unit / 2);
         }
       }
     }

@@ -357,3 +357,19 @@ hr {
   opacity: 1;
   cursor: pointer;
 }
+
+/**
+ * Hack to handle horizontal scroll right clip issue
+ */
+@mixin fix-scroll-clip($space) {
+  position: relative;
+
+  &:after {
+    content: "";
+    display: block;
+    position: absolute;
+    right: - $space;
+    width: 2 * $space;
+    height: 1px;
+  }
+}

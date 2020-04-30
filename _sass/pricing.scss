@@ -207,22 +207,13 @@ main .pricing {
 
     & > .list {
       margin: 0 auto;
-      padding: $spacing-unit / 2;
+      padding: $spacing-unit / 2 + 7px $spacing-unit / 2 $spacing-unit / 2;
       min-width: 720px;
       max-width: 900px;
       border-radius: 3px;
       box-sizing: border-box;
       background-color: $divider-color-light;
-      position: relative;
-
-      &:after {
-        content: "";
-        display: block;
-        position: absolute;
-        right: -15px;
-        width: 15px;
-        height: 1px;
-      }
+      @include fix-scroll-clip($spacing-unit / 2);
     }
 
     h4 {
@@ -235,7 +226,7 @@ main .pricing {
       display: flex;
       align-items: center;
       justify-content: center;
-      padding-bottom: 5px;
+      padding-bottom: $spacing-unit / 2;
       border-bottom: 1px solid $divider-color;
 
       & > div {
@@ -351,9 +342,6 @@ main .pricing {
             }
           }
           & > b {
-            font-weight: 500;
-          }
-          &:last-child a {
             font-weight: 500;
           }
           &+div {

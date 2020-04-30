@@ -191,31 +191,6 @@ main .pricing {
           font-weight: 500;
         }
       }
-
-      ul {
-        padding-top: $spacing-unit;
-        padding-right: 5px;
-        font-size: 15px;
-        color: $secondary-text-color;
-
-        li {
-          padding-bottom: 10px;
-
-          i {
-            line-height: 1.3;
-          }
-
-          span {
-            background-color: lighten($accent-color, 20%);
-            padding: 1px 4px 1px 2px;
-            border-radius: 2px;
-          }
-
-          &:last-child {
-            padding-bottom: 0;
-          }
-        }
-      }
     }
   }
 
@@ -347,6 +322,14 @@ main .pricing {
                 color: $secondary-text-color;
               }
             }
+            & > i.fa {
+              padding-left: 3px;
+              font-size: 17px;
+              color: $red-text-color;
+            }
+            & > .expand {
+              cursor: pointer;
+            }
             p {
               margin: 10px 0 0;
               display: none;
@@ -354,6 +337,12 @@ main .pricing {
               line-height: 1.55;
               color: $text-color;
 
+              span {
+                color: $red-darker-color;
+        text-transform: uppercase;
+        font-family: $label-font-family;
+        letter-spacing: 1px;
+              }
               a {
                 white-space: nowrap;
               }
@@ -366,6 +355,9 @@ main .pricing {
             &.open p {
               display: block;
             }
+          }
+          & > b {
+            font-weight: 500;
           }
           &:last-child a {
             font-weight: 500;
@@ -584,7 +576,7 @@ main .pricing {
 
             i.fa {
               margin-right: 3px;
-              color: #6FA492;
+              color: $red-darker-color;
             }
 
             &+span {

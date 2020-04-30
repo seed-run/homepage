@@ -6,7 +6,7 @@ title: Pricing Plans
 <div class="pricing">
   <div class="header">
     <h1>Pricing Plans</h1>
-    <p>Simple &amp; transparent pricing options for teams of all sizes. Get started for free.</p>
+    <p>Simple &amp; transparent pricing options for teams of all sizes.</p>
     <a class="announcement" href="{% link _posts/2020-03-17-managing-your-seed-costs.md %}">
       <span>
         <span class="content">
@@ -104,7 +104,7 @@ title: Pricing Plans
         <h6 class="name">Members</h6>
         <div class="feature">
           <div class="name">
-            <span class="title">Users</span>
+            <span class="title expand">Users</span>
             <p>The number of users included in the plan.</p>
           </div>
           <div>1</div>
@@ -113,7 +113,7 @@ title: Pricing Plans
         </div>
         <div class="feature">
           <div class="name">
-            <span class="title">Additional users</span>
+            <span class="title expand">Additional users</span>
             <p>Add additional users to the account.</p>
           </div>
           <div><i class="fa fa-times-circle" aria-hidden="true"></i></div>
@@ -125,16 +125,17 @@ title: Pricing Plans
         <h6 class="name">Fully-Managed CI/CD</h6>
         <div class="feature">
           <div class="name">
-            <span class="title">Concurrent builds</span>
-            <p>The number of services that can be deployed concurrently. Deploy your monorepo apps as fast as they can be deployed.</p>
+            <span class="title expand">Concurrent builds</span>
+            <i class="fa fa-bullhorn expand" aria-hidden="true"></i>
+            <p><span class="important">Important:</span> Deploy all the services in your monorepo app concurrently, at no extra charge! <a href="#concurrency">Learn more <i class="fa fa-angle-right" aria-hidden="true"></i></a></p>
           </div>
-          <div>Unlimited</div>
-          <div>Unlimited</div>
-          <div>Unlimited</div>
+          <div><b>Unlimited</b></div>
+          <div><b>Unlimited</b></div>
+          <div><b>Unlimited</b></div>
         </div>
         <div class="feature">
           <div class="name">
-            <span class="title">Build minutes</span>
+            <span class="title expand">Build minutes</span>
             <p>The amount of time it takes for a build to complete, rounded up to the nearest minute.</p>
           </div>
           <div>500</div>
@@ -143,7 +144,7 @@ title: Pricing Plans
         </div>
         <div class="feature">
           <div class="name">
-            <span class="title">Additional minutes</span>
+            <span class="title expand">Additional minutes</span>
             <p>Add additional build minutes to your account.</p>
           </div>
           <div><i class="fa fa-times-circle" aria-hidden="true"></i></div>
@@ -152,8 +153,9 @@ title: Pricing Plans
         </div>
         <div class="feature">
           <div class="name">
-            <span class="title">Deploy phases</span>
-            <p>Deploy the interdependent services in your app in separate phases. <a href="{% link _docs/configuring-deploy-phases.md %}#custom-webhooks">Learn more <i class="fa fa-angle-right" aria-hidden="true"></i></a></p>
+            <span class="title expand">Deploy phases</span>
+            <i class="fa fa-bullhorn expand" aria-hidden="true"></i>
+            <p><span class="important">Important:</span> Deploy the interdependent services in your monorepo app in separate phases. <a href="{% link _docs/configuring-deploy-phases.md %}">Learn more <i class="fa fa-angle-right" aria-hidden="true"></i></a></p>
           </div>
           <div><i class="fa fa-check-circle" aria-hidden="true"></i></div>
           <div><i class="fa fa-check-circle" aria-hidden="true"></i></div>
@@ -161,7 +163,7 @@ title: Pricing Plans
         </div>
         <div class="feature">
           <div class="name">
-            <span class="title">Multi-region deploys</span>
+            <span class="title expand">Multi-region deploys</span>
             <p>Configure stages to deploy your services to multiple regions. <a href="{% link _docs/multi-region-deployments.md %}">Learn more <i class="fa fa-angle-right" aria-hidden="true"></i></a></p>
           </div>
           <div><i class="fa fa-check-circle" aria-hidden="true"></i></div>
@@ -170,7 +172,7 @@ title: Pricing Plans
         </div>
         <div class="feature">
           <div class="name">
-            <span class="title">Slack &amp; email notifications</span>
+            <span class="title expand">Slack &amp; email notifications</span>
             <p>Get notified by Slack or email on the status of your builds.</p>
           </div>
           <div><i class="fa fa-check-circle" aria-hidden="true"></i></div>
@@ -179,7 +181,7 @@ title: Pricing Plans
         </div>
         <div class="feature">
           <div class="name">
-            <span class="title">Custom build webhooks</span>
+            <span class="title expand">Custom build webhooks</span>
             <p>Setup webhooks to be triggered once your builds complete. <a href="{% link _docs/adding-build-notifications.md %}#custom-webhooks">Learn more <i class="fa fa-angle-right" aria-hidden="true"></i></a></p>
           </div>
           <div><i class="fa fa-check-circle" aria-hidden="true"></i></div>
@@ -188,7 +190,7 @@ title: Pricing Plans
         </div>
         <div class="feature">
           <div class="name">
-            <span class="title">Connect your own CI</span>
+            <span class="title expand">Connect your own CI</span>
             <p>Configure Seed to deploy after your build process in CircleCI, Travis CI, or GitHub Actions completes. <a href="{% link _docs/connect-your-own-ci.md %}">Learn more <i class="fa fa-angle-right" aria-hidden="true"></i></a></p>
           </div>
           <div><i class="fa fa-check-circle" aria-hidden="true"></i></div>
@@ -197,7 +199,7 @@ title: Pricing Plans
         </div>
         <div class="feature">
           <div class="name">
-            <span class="title">High-performance builds</span>
+            <span class="title expand">High-performance builds</span>
             <p>Configure your builds to run in high performance machines. <a href="{% link _docs/build-machine-types.md %}">Learn more <i class="fa fa-angle-right" aria-hidden="true"></i></a></p>
           </div>
           <div><i class="fa fa-check-circle" aria-hidden="true"></i></div>
@@ -206,7 +208,7 @@ title: Pricing Plans
         </div>
         <div class="feature">
           <div class="name">
-            <span class="title">Run Docker commands</span>
+            <span class="title expand">Run Docker commands</span>
             <p>Run Docker commands inside your builds process. <a href="{% link _docs/docker-commands-in-your-builds.md %}">Learn more <i class="fa fa-angle-right" aria-hidden="true"></i></a></p>
           </div>
           <div><i class="fa fa-times-circle" aria-hidden="true"></i></div>
@@ -215,7 +217,7 @@ title: Pricing Plans
         </div>
         <div class="feature">
           <div class="name">
-            <span class="title">GitHub Enterprise</span>
+            <span class="title expand">GitHub Enterprise</span>
             <p>Add your GitHub Enterprise repos in Seed.</p>
           </div>
           <div><i class="fa fa-times-circle" aria-hidden="true"></i></div>
@@ -224,7 +226,7 @@ title: Pricing Plans
         </div>
         <div class="feature">
           <div class="name">
-            <span class="title">GitLab Self-Managed</span>
+            <span class="title expand">GitLab Self-Managed</span>
             <p>Add your GitHub Self-Managed repos in Seed.</p>
           </div>
           <div><i class="fa fa-times-circle" aria-hidden="true"></i></div>
@@ -236,7 +238,7 @@ title: Pricing Plans
         <h6 class="name">Logging &amp; Monitoring</h6>
         <div class="feature">
           <div class="name">
-            <span class="title">Live dashboard</span>
+            <span class="title expand">Live dashboard</span>
             <p>Get a live view of the key metrics of your app.</p>
           </div>
           <div><i class="fa fa-check-circle" aria-hidden="true"></i></div>
@@ -245,7 +247,7 @@ title: Pricing Plans
         </div>
         <div class="feature">
           <div class="name">
-            <span class="title">App reports</span>
+            <span class="title expand">App reports</span>
             <p>Get daily or weekly email reports with the latency and error rates of your APIs and Lambda functions. <a href="{% link _docs/viewing-app-reports.md %}">Learn more <i class="fa fa-angle-right" aria-hidden="true"></i></a></p>
           </div>
           <div><i class="fa fa-check-circle" aria-hidden="true"></i></div>
@@ -254,28 +256,28 @@ title: Pricing Plans
         </div>
         <div class="feature">
           <div class="name">
-            <span class="title">Monitored events</span>
-            <p>Seed connects to CloudWatch Metrics, so there is no limit on the number of the number of events that can be monitored.</p>
+            <span class="title expand">Monitored events</span>
+            <p>Seed connects to CloudWatch Metrics, so there is no limit on the number of the events that can be monitored.</p>
           </div>
-          <div>Unlimited</div>
-          <div>Unlimited</div>
-          <div>Unlimited</div>
+          <div><b>Unlimited</b></div>
+          <div><b>Unlimited</b></div>
+          <div><b>Unlimited</b></div>
         </div>
         <div class="feature">
           <div class="name">
-            <span class="title">Log retention</span>
+            <span class="title expand">Log retention</span>
             <p>Seed connects to CloudWatch Logs, so there is no limit to how far back you can access your logs.</p>
           </div>
-          <div>Unlimited</div>
-          <div>Unlimited</div>
-          <div>Unlimited</div>
+          <div><b>Unlimited</b></div>
+          <div><b>Unlimited</b></div>
+          <div><b>Unlimited</b></div>
         </div>
       </div>
       <div class="section">
         <h6 class="name">Security &amp; Access Control</h6>
         <div class="feature">
           <div class="name">
-            <span class="title">Audit logs</span>
+            <span class="title expand">Audit logs</span>
             <p>Get a complete log of all the actions applied to your organization on Seed. <a href="{% link _docs/audit-logs-in-seed.md %}">Learn more <i class="fa fa-angle-right" aria-hidden="true"></i></a></p>
           </div>
           <div><i class="fa fa-times-circle" aria-hidden="true"></i></div>
@@ -284,7 +286,7 @@ title: Pricing Plans
         </div>
         <div class="feature">
           <div class="name">
-            <span class="title">Single-sign on</span>
+            <span class="title expand">Single-sign on</span>
             <p>Allow the members of your organization to login to Seed with your SAML based SSO provider.</p>
           </div>
           <div><i class="fa fa-times-circle" aria-hidden="true"></i></div>
@@ -293,7 +295,7 @@ title: Pricing Plans
         </div>
         <div class="feature">
           <div class="name">
-            <span class="title">Mandatory 2FA</span>
+            <span class="title expand">Mandatory 2FA</span>
             <p>Require that all the members of your organization on Seed need to enable 2 factor authentication. <a href="{% link _docs/enabling-mandatory-two-factor-auth.md %}">Learn more <i class="fa fa-angle-right" aria-hidden="true"></i></a></p>
           </div>
           <div><i class="fa fa-times-circle" aria-hidden="true"></i></div>
@@ -302,7 +304,7 @@ title: Pricing Plans
         </div>
         <div class="feature">
           <div class="name">
-            <span class="title">Role-based access</span>
+            <span class="title expand">Role-based access</span>
             <p>Retrict the stages that members in your organization have access to. <a href="{% link _docs/adding-organization-members.md %}#member-roles">Learn more <i class="fa fa-angle-right" aria-hidden="true"></i></a></p>
           </div>
           <div><i class="fa fa-times-circle" aria-hidden="true"></i></div>
@@ -314,7 +316,7 @@ title: Pricing Plans
         <h6 class="name">Billing Options</h6>
         <div class="feature">
           <div class="name">
-            <span class="title">Billing role</span>
+            <span class="title expand">Billing role</span>
             <p>Billing roles only have access to the billing settings of your organization on Seed.</p>
           </div>
           <div><i class="fa fa-times-circle" aria-hidden="true"></i></div>
@@ -323,7 +325,7 @@ title: Pricing Plans
         </div>
         <div class="feature">
           <div class="name">
-            <span class="title">Invoice billing</span>
+            <span class="title expand">Invoice billing</span>
             <p>Receive invoices from Seed that can be verified and completed by your Accounts Payable department.</p>
           </div>
           <div><i class="fa fa-times-circle" aria-hidden="true"></i></div>
@@ -332,7 +334,7 @@ title: Pricing Plans
         </div>
         <div class="feature">
           <div class="name">
-            <span class="title">Custom contract</span>
+            <span class="title expand">Custom contract</span>
             <p>Sign a custom agreement with Seed with the terms and policies that work best for your enterprise.</p>
           </div>
           <div><i class="fa fa-times-circle" aria-hidden="true"></i></div>
@@ -344,7 +346,7 @@ title: Pricing Plans
         <h6 class="name">Support</h6>
         <div class="feature">
           <div class="name">
-            <span class="title">Support</span>
+            <span class="title expand">Support</span>
             <p>Community support is available <a href="https://discourse.serverless-stack.com/">via our forums</a>. Standard and priority support options are available over email and chat.</p>
           </div>
           <div>Community</div>
@@ -353,7 +355,7 @@ title: Pricing Plans
         </div>
         <div class="feature">
           <div class="name">
-            <span class="title">Support SLA</span>
+            <span class="title expand">Support SLA</span>
             <p>Support SLA options can be added to your plan via an add-on.</p>
           </div>
           <div><i class="fa fa-times-circle" aria-hidden="true"></i></div>
@@ -362,7 +364,7 @@ title: Pricing Plans
         </div>
         <div class="feature">
           <div class="name">
-            <span class="title">Uptime SLA</span>
+            <span class="title expand">Uptime SLA</span>
             <p>Uptime SLA options can be added to your plan via an add-on.</p>
           </div>
           <div><i class="fa fa-times-circle" aria-hidden="true"></i></div>
@@ -373,13 +375,13 @@ title: Pricing Plans
     </div>
   </div>
 
-  <div class="concurrency">
+  <div id="concurrency" class="concurrency">
     <div class="container">
       <div class="icon">
         <i class="fa fa-exchange" aria-hidden="true"></i>
       </div>
       <div class="copy">
-        <h4>A quick note on concurrent builds</h4>
+        <h4>Why build concurrency matters</h4>
         <p>Traditional CIs are not well-suited for Serverless apps that have multiple services. They charge you extra to deploy them concurrently. This means that if your app has 5 services and each service takes 2 minutes to deploy; your entire app will take 5 x 2 minutes = 10 minutes to deploy, when using one concurrent build server.</p>
         <p>Seed on the other hand, will deploy all your services concurrently. So the entire deployment will take only 2 minutes. At no extra cost!</p>
       </div>
@@ -566,7 +568,7 @@ title: Pricing Plans
   </div>
 
   <div class="contact">
-    <p>Have an existing setup? Need help transitioning?</p>
+    <p>Need help transitioning an existing setup?</p>
     <p>Our engineers can help with that.</p>
     <div class="controls">
       <a class="action" href="{% link concierge-onboarding.md %}">

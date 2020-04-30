@@ -119,7 +119,7 @@
 
   {% if page.url contains "/pricing" %}
   /** Start pricing features info **/
-  $('.comparison .feature .title').click(function(e) {
+  $('.comparison .feature .expand').click(function(e) {
     e.preventDefault();
     $(this).parent().toggleClass('open');
   });

@@ -157,12 +157,12 @@ main .pricing {
           &.start {
             @include action-button;
           }
-          &.demo {
+          &.upgrade {
             @include action-button-brand;
           }
 
-          &.demo,
           &.start,
+          &.upgrade,
           &.signup {
             margin: 0 $spacing-unit / 2 $spacing-unit / 2;
             padding: 12px;
@@ -337,12 +337,6 @@ main .pricing {
               line-height: 1.55;
               color: $text-color;
 
-              span {
-                color: $red-darker-color;
-        text-transform: uppercase;
-        font-family: $label-font-family;
-        letter-spacing: 1px;
-              }
               a {
                 white-space: nowrap;
               }
@@ -576,7 +570,7 @@ main .pricing {
 
             i.fa {
               margin-right: 3px;
-              color: $red-darker-color;
+              color: darken($accent-color, 15%);
             }
 
             &+span {

@@ -27,6 +27,7 @@ logo: /assets/og-image.png
 console_url: "https://console.seed.run"
 signup: "/signup"
 request_demo: "/request-demo"
+upgrade: "/upgrade"
 
 # GitHub
 github_repo: "https://github.com/seed-run/homepage"

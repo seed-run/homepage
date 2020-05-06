@@ -6,7 +6,7 @@ categories: news
 author: jay
 ---
 
-Today we are introducing a new Enterprise plan. We also updated [our pricing page]({% link pricing.html %}) to make our plans as simple and transparent as possible.
+Today we are introducing some changes to our Enterprise plan to make it far more accessible! We also updated [our pricing page]({% link pricing.html %}) to make our plans as simple and transparent as possible.
 
 ![New Seed pricing plan table](/assets/blog/a-new-enterprise-plan/new-seed-pricing-plan-table.png)
 

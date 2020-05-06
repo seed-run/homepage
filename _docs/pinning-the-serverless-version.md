@@ -16,10 +16,17 @@ You can see the version of Serverless Framework that was used for a build in the
 
 ![Serverless Framework version in build log](/assets/docs/pinning-the-serverless-version/serverless-framework-version-in-build-log.png)
 
-To tell Seed which version to use (for example `1.40.0`), you can set the following in your `serverless.yml`.
+To tell Seed which version to use (for example `1.40.0`), you can set the `frameworkVersion` in the top of your `serverless.yml`.
 
 ``` yml
 frameworkVersion: "1.40.0"
+
+service: my-service
+
+provider:
+  name: aws
+
+...
 ```
 
 Alternatively, you can set a range.
@@ -32,6 +39,6 @@ Where the Serverless Framework version to be used should be in between (and incl
 
 #### Caching Versions
 
-Seed internally caches versions of Serverless Framework to speed up your builds. So if you pin your service to use a specific version, Seed will first check if it's been previously cached. If not, then it'll be added to a job queue to cache it in the future.
+Seed internally caches versions of Serverless Framework to speed up your builds. So if you pin your service to use a specific version, Seed will first check if it's been previously cached. If not, then it'll be added to a queue to cache it in the future.
 
 You can read more about [version pinning in the Serverless Framework docs](https://serverless.com/framework/docs/providers/aws/guide/services#pinning-a-version).

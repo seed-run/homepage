@@ -26,3 +26,9 @@ Once you add the service, you'll notice that it's deployed across all the stages
 ![Service across all stages](/assets/docs/adding-a-service/service-across-all-stages.png)
 
 You can also trigger a build for a specific service in a stage by [manually triggering a deploy for it]({% link _docs/updating-the-stage-source.md %}#manual-deploy).
+
+### Handling service not exist in repo
+
+- If the service does not exist, the service is marked as **Skipped** in the build workflow.
+- If all services are **Skipped** in a build, the build is marked as **Failed**.
+- If there are services that were not **Skipped** in a build, the build will succeed or fail depending on the result of those services.

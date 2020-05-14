@@ -87,6 +87,8 @@ toc:
         url: /docs/working-with-pull-requests.html
       - page: Connect your own CI
         url: /docs/connect-your-own-ci.html
+      - page: Skipped builds
+        url: /docs/skipped-builds.html
   - title: Manual deployments
     subfolderitems:
       - page: Manually deploying

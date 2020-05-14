@@ -26,3 +26,17 @@ Once you add the service, you'll notice that it's deployed across all the stages
 ![Service across all stages](/assets/docs/adding-a-service/service-across-all-stages.png)
 
 You can also trigger a build for a specific service in a stage by [manually triggering a deploy for it]({% link _docs/updating-the-stage-source.md %}#manual-deploy).
+
+### Newly created services
+
+While working on a new service, you might want to add it to Seed in a specific stage first. For example, your dev stage might be tied to `master`, while you might have a feature branch called `new-service` that's being deployed to a separate stage. Assume that the `new-service` branch has the new service that you've just added to the pipeline. This service cannot be deployed in dev because the service does not exist in the `master` branch.
+
+For these cases, Seed uses the following scheme:
+
+- If deploying a stage that doesn't have the new service (dev in our example), the service is not deployed and it's marked as **Skipped**.
+- The skipped service does not affect the overall status of the build. 
+- However, if all services in a build are **Skipped**, the build is marked as **Failed**. This is because nothing was deployed in that build.
+
+![Skipped service build log](/assets/docs/adding-a-service/skipped-service-build-log.png)
+
+For further details on what can cause builds to be skipped, refer to our [chapter on skipped builds]({% link _docs/skipped-builds.md %}).

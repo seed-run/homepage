@@ -38,7 +38,13 @@ If the test script is not found in the `package.json`, then the tests are skippe
 
 ### Python
 
-For Python we use the following command to run the tests in your project.
+For Python, if a `Pipfile` is found, Seed runs the following command to run the tests in your project.
+
+``` bash
+$ pipenv run test
+```
+
+If a `requirements.txt` is found, the following command is used.
 
 ``` bash
 $ python -m unittest discover -s tests

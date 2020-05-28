@@ -3,16 +3,13 @@ layout: docs
 title: Deploying Monorepo Apps
 ---
 
-A monorepo Serverless app is one where multiple Serverless services are in the same repo. This means that a commit will trigger a deployment to all the services in [Seed](/). However, this can be a slow process if you are only trying to deploy a change to a single service. There are two things that Seed does to fix this:
+A monorepo Serverless app is one where multiple Serverless services are in the same repo. This means that a commit will trigger a deployment to all the services in [Seed](/). However, this can be a slow process if you are only trying to deploy a change to a single service.
 
-1. Check the Git log to see if the code for a service has been updated.
-2. Rely on [Serverless Framework](https://serverless.com) to check if the Lambda package (code and CloudFormation template) has been changed.
+To fix this, Seed will check the Git log to see if the code for a service has been updated. This greatly speeds up your builds and also makes deployments cost-effective.
 
-This two step process works in tandem to only deploy the services that have been updated. This greatly speeds up your builds and also makes deployments cost-effective.
+Let's look at how this check works in detail.
 
-Let's look at these two checks in detail.
-
-### 1. Check the Git log for updates
+### Check the Git log for updates
 
 Seed uses a simple algorithm to determine if a service in your app needs to be deployed. The algorithm is based on the directory structure of your Serverless app. Let's look at the cases in detail.
 
@@ -103,13 +100,11 @@ Finally, Seed will skip the above check and deploy all your services if:
 
 - This is the first deployment
 - The previous deployment had failed
-- It's a manual deploy with the force option enabled
+- It's a [manual deploy with the force option enabled]({% link _docs/manually-deploying.md %}#force-deploys)
 - The `check_code_change` is set to `false` [in your seed.yml]({% link _docs/adding-a-build-spec.md %}#other-options)
 
-Once the process has been triggered, there is a further check that Seed (or Serverless Framework) will do to see if the deployment to AWS needs to be completed. Let's look at that next.
+If you are trying to figure out why Seed deployed your service, you can check the details in your build log. Note the, `Checking for changes` section below.
 
-### 2. Check if the Lambda package has changed
+![Seed found code changes in service](/assets/docs/deploying-monorepo-apps/seed-found-code-changes-in-service.png)
 
-Serverless Framework generates a package that it'll send to AWS when you run `serverless deploy`. Recall that Seed runs this command on your behalf. The newly generated package is compared to the most recent deployment package (as stored in S3). If there are no changes, then Serverless Framework will skip updating the service.
-
-These two checks make sure that Seed will only deploy your changes if the relevant services have been updated. This ensures that the deployments for your monorepo Serverless apps on Seed are fast and cost-effective.
+The above check makes it so that Seed will only deploy your services if the relevant parts of your code have been updated. This ensures that the deployments for your monorepo Serverless apps on Seed are fast and cost-effective.

@@ -90,7 +90,7 @@ Here clicking on the stages, takes you directly to the settings for that stage.
 
 You might have noticed one new tab in your app pages — Issues!
 
-We've got something amazing in store for you. But it needs [**it's own announcement**]({% link _posts/2020-06-10-issues-beta.md %})!
+We've got something amazing in store for you. But it needs [**its own announcement**]({% link _posts/2020-06-10-issues-beta.md %})!
 
 ### Closing
 

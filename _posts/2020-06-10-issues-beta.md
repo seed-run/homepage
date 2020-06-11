@@ -3,6 +3,7 @@ layout: post
 title: Issues Beta
 categories: news
 author: frank
+tweet: https://twitter.com/SEED_run/status/1271056084355203074
 ---
 
 If you've checked out the [recent Seed console redesign]({% link _posts/2020-06-10-seed-console-gets-a-ux-update.md %}), you might have noticed a new tab in your apps. **Issues** — native, real-time Lambda monitoring and alerting.

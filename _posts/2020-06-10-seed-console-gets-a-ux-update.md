@@ -4,6 +4,7 @@ title: Seed Console Gets a UX Update
 categories: news
 author: jay
 image: assets/social-cards/seed-console-ux-update.png
+tweet: https://twitter.com/SEED_run/status/1271055270295359489
 ---
 
 Today we are rolling out a major design update to the Seed console. In this post we'll be going over the changes that are a part of this update.

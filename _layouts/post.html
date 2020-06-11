@@ -83,7 +83,23 @@ layout: default
   </header>
 
   <div class="post-content">
+
     {{ content }}
+
+    {% if page.tweet %}
+    <div class="twitter-share">
+      <span>If you liked this post, please show some love to it on Twitter.</span>
+      <a href="{{ page.tweet }}">
+        <i class="fa fa-twitter" aria-hidden="true"></i>
+        Share the love
+      </a>
+    </div>
+    {% endif %}
+
+  </div>
+
+  <div class="post-closing">
+    <hr />
   </div>
 
 </article>

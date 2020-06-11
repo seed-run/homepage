@@ -51,10 +51,16 @@ img {
   max-width: 100%;
   vertical-align: middle;
 }
+.post-content > p > img {
+  margin: 0 auto;
+  display: block;
+}
 img + em {
+  margin-top: 2px;
   color: $tertiary-text-color;
   display: block;
   font-size: 14px;
+  text-align: center;
 }
 
 

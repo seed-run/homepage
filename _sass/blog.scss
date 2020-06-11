@@ -215,6 +215,33 @@ $img-margin: 15px;
   }
 }
 
+.blog .post-content .twitter-share {
+  margin-top: $spacing-unit / 2 + 5px;
+  line-height: 2;
+  span {
+    margin-right: 4px;
+  }
+  a {
+    padding: 6px 11px 5px;
+    line-height: 1.6;
+    border-radius: 3px;
+    display: inline-block;
+    font-size: 13px;
+    color: white;
+    background-color: #1DA1F2;
+
+    &:hover {
+      background-color: #0C7ABF;
+    }
+
+    i.fa {
+      margin-right: 4px;
+      font-size: 15px;
+      vertical-align: -1px;
+    }
+  }
+}
+
 .blog .post-list {
   @include post-list;
 }

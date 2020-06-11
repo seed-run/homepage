@@ -121,6 +121,8 @@ toc:
         url: /docs/audit-logs-in-seed.html
   - title: Monitoring your app
     subfolderitems:
+      - page: Issues and alerts
+        url: /docs/issues-and-alerts.html
       - page: Viewing logs
         url: /docs/viewing-logs.html
       - page: Viewing metrics

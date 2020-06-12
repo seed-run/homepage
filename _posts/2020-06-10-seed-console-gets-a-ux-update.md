@@ -75,7 +75,7 @@ Here you get a clear view of the:
 
 - Current state of the pipeline
 - The Git repo that your app is connected to
-- The [deploy phases]({% link _docs/configuring-deploy-phases.md %}) for your services
+- The deploy phases for your services
 - And the auto-deploy settings
 
 You'll notice that **clicking on the stage** now takes you to **the build activity** for that stage.
@@ -85,6 +85,21 @@ On the other hand, editing the pipeline gives you easy access to everything you 
 ![Edit pipeline page in new design](/assets/blog/seed-console-gets-a-ux-update/edit-pipeline-page-in-new-design.png)
 
 Here clicking on the stages, takes you directly to the settings for that stage.
+
+#### Deploy Phases
+
+A key part of the pipelines in Seed are the [deploy phases]({% link _docs/configuring-deploy-phases.md %}) and [post-deploy phases]({% link _docs/adding-a-post-deploy-phase.md %}). Previously, you had to configure them in separate parts of the console.
+
+This new design brings them together. You can manage your deploy phases right from your pipeline.
+
+![Manage deploy phases in new design](/assets/blog/seed-console-gets-a-ux-update/manage-deploy-phases-in-new-design.png)
+
+On the same screen, you can configure a **post-deploy phase for all your stages**!
+
+![Configure post-deploy phases in new design](/assets/blog/seed-console-gets-a-ux-update/configure-post-deploy-phases-in-new-design.png)
+
+No more having to go from stage to stage to set it up.
+
 
 #### Bonus
 

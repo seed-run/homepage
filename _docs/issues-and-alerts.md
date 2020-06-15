@@ -115,12 +115,12 @@ While unhandled errors are automatically reported to Issues. There are a class o
    
    ``` javascript
    try {
-	   // Your code
+     // Your code
    } catch(e) {
-	   // Report the error
-   	console.error('Caught an exception for the loading the user object');
-   	// Reports another error!
-   	console.error(e);
+     // Report the error
+     console.error('Caught an exception for the loading the user object');
+     // Reports another error!
+     console.error(e);
    }
    ```
    

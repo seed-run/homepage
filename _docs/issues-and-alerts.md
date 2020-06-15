@@ -14,7 +14,7 @@ title: Issues and Alerts
 
 Issues is currently in private beta. Head over to your app and join the waitlist. And we'll contact you once we are ready for you.
 
-Note that native error reporting is currently supported for Node.js. If you are interested in using it with another runtime, let us know and we'll set it up for you.
+Note that native error reporting is currently supported for Node.js (10.x and above). If you are interested in using it with another runtime, let us know and we'll set it up for you.
 
 ### How It Works
 

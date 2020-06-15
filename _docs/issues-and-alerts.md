@@ -73,6 +73,8 @@ While unhandled errors are automatically reported to Issues. There are a class o
     console.log('All the logs in this request will appear in the Issues page');
   }
   ```
+  
+  In the case of exceptions, Seed will group the ones that have similar stack traces together.
 
 - Custom errors
 
@@ -85,6 +87,44 @@ While unhandled errors are automatically reported to Issues. There are a class o
   console.log({ userObject });
   console.log('All the logs in this request will appear in the Issues page');
   ```
+  
+  In the case of custom errors, Seed uses the error message to group similar issues together.
+
+#### Patterns to Avoid
+
+1. Avoid identifiers or timestamps in error messages
+
+   The above idea of grouping based on the error messages means that you should avoid using unique identifiers in your error messages. For example, if you report an error using:
+   
+   ``` javascript
+   console.error(`Detected a Big Error at ${Date.now()}`);
+   ```
+   
+   Every occurrence of this error will be displayed separately, instead of grouping them together! If you want to log this identifier, use a separate `console.log` like so:
+   
+   ``` javascript
+   console.error('Big Error');
+   console.log(`Detected at ${Date.now()}`);
+   ```
+
+2. Avoid calling `console.error` multiple times for the same error
+
+   Each `console.error` call results in an error being reported. If there are multiple calls for the same error, they get reported as multiple issues.
+   
+   For example, avoid doing the following:
+   
+   ``` javascript
+   try {
+	   // Your code
+   } catch(e) {
+	   // Report the error
+   	console.error('Caught an exception for the loading the user object');
+   	// Reports another error!
+   	console.error(e);
+   }
+   ```
+   
+   Instead use a `console.debug` or `console.log` for the first `console.error` line.
 
 ### Custom Loggers
 

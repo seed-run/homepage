@@ -135,8 +135,8 @@ toc:
         url: /docs/pinning-the-serverless-version.html
       - page: Using Serverless plugins
         url: /docs/using-serverless-plugins.html
-      - page: Integrating with Serverless Enterprise
-        url: /docs/integrating-with-serverless-enterprise.html
+      - page: Integrating with Serverless Pro
+        url: /docs/integrating-with-serverless-pro.html
       - page: Auto-retrying Serverless errors
         url: /docs/auto-retrying-serverless-errors.html
   - title: Common Serverless errors

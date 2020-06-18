@@ -1,5 +1,5 @@
 ---
-layout: build-errors
+layout: common-errors
 title: The AWS Access Key Id needs a subscription for the service
 image: /assets/social-cards/common-errors.png
 description: The AWS Access Key Id needs a subscription for the service

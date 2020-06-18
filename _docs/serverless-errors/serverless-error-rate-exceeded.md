@@ -1,5 +1,5 @@
 ---
-layout: build-errors
+layout: common-errors
 title: "Serverless Error: Rate exceeded"
 image: /assets/social-cards/common-errors.png
 description: "Serverless Error: Rate exceeded"

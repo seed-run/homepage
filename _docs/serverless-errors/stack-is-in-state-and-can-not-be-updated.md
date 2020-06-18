@@ -1,5 +1,5 @@
 ---
-layout: build-errors
+layout: common-errors
 title: Stack is in state and can not be updated
 image: /assets/social-cards/common-errors.png
 description: "Stack:arn:aws:cloudformation:us-xxxx-x:xxxxxxxxx:stack/xxx-xx-prod/xxxx-xxxx-xxxx-xxxx-xxxx is in ROLLBACK_FAILED state and can not be updated."

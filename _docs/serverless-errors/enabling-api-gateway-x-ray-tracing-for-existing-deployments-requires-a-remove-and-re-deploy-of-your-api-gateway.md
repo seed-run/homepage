@@ -1,5 +1,5 @@
 ---
-layout: build-errors
+layout: common-errors
 title: Enabling API Gateway X-Ray Tracing for existing deployments requires a remove and re-deploy of your API Gateway
 image: /assets/social-cards/common-errors.png
 description: "NOTE: Enabling API Gateway X-Ray Tracing for existing deployments requires a remove and re-deploy of your API Gateway."

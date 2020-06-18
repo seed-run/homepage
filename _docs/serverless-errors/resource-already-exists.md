@@ -1,5 +1,5 @@
 ---
-layout: build-errors
+layout: common-errors
 title: Resource already exists
 image: /assets/social-cards/common-errors.png
 description: "Resource - xxxxxx already exists in stack arn:aws:cloudformation:xx-xxxx-x:xxxxxxxx:stack/my-service-staging/xxxxxx-xxxx-xxxx--xxxxxxxxxx."

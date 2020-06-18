@@ -151,7 +151,7 @@ $on-laptop:                 800px;
 @import "blog";
 @import "about";
 @import "pricing";
-@import "build-errors";
+@import "common-errors";
 
 @mixin hero-graphic {
   $width: 785px;

@@ -1,5 +1,5 @@
 ---
-layout: build-errors
+layout: common-errors
 title: The stack service name is not valid
 image: /assets/social-cards/common-errors.png
 description: The stack service name "xxxx-dev" is not valid. A service name should only contain alphanumeric (case sensitive) and hyphens. It should start with an alphabetic character and shouldn't exceed 128 characters.

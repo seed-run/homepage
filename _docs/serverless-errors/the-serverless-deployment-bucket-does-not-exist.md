@@ -1,5 +1,5 @@
 ---
-layout: build-errors
+layout: common-errors
 title: The serverless deployment bucket does not exist
 image: /assets/social-cards/common-errors.png
 description: "Could not locate deployment bucket. Error: The specified bucket does not exist"

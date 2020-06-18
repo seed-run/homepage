@@ -1,5 +1,5 @@
 ---
-layout: build-errors
+layout: common-errors
 title: "API: s3:CreateBucket Access Denied"
 image: /assets/social-cards/common-errors.png
 description: "ServerlessDeploymentBucket - API: s3:CreateBucket Access Denied."

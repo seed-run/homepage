@@ -1,5 +1,5 @@
 ---
-layout: build-errors
+layout: common-errors
 title: Serverless plugin not found
 image: /assets/social-cards/common-errors.png
 description: Serverless plugin not found. Make sure it's installed and listed in the "plugins" section of your serverless config file.

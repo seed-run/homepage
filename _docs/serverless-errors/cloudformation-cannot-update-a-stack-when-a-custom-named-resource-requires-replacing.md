@@ -1,5 +1,5 @@
 ---
-layout: build-errors
+layout: common-errors
 title: CloudFormation cannot update a stack when a custom-named resource requires replacing
 image: /assets/social-cards/common-errors.png
 description: CloudFormation cannot update a stack when a custom-named resource requires replacing. Rename xxxxxx-dev and update the stack again.

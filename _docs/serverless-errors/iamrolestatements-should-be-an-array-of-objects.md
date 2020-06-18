@@ -1,5 +1,5 @@
 ---
-layout: build-errors
+layout: common-errors
 title: iamRoleStatements should be an array of objects
 image: /assets/social-cards/common-errors.png
 description: "iamRoleStatements should be an array of objects, where each object has Effect, Action, Resource fields. Specifically, statement 0 is missing the following properties: Resource"

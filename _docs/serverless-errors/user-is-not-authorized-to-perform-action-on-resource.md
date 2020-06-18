@@ -1,5 +1,5 @@
 ---
-layout: build-errors
+layout: common-errors
 title: User is not authorized to perform action on resource
 image: /assets/social-cards/common-errors.png
 description: "User: arn:aws:iam::xxxxxxxxxxxxx:user/xxxxx-xxxxx is not authorized to perform: cloudformation:DescribeStacks on resource: arn:aws:cloudformation:us-xxxx-x:xxxxxxxxx:stack/my-service-dev/*"

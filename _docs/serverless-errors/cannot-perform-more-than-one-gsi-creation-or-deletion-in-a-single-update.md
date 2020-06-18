@@ -1,5 +1,5 @@
 ---
-layout: build-errors
+layout: common-errors
 title: Cannot perform more than one GSI creation or deletion in a single update
 image: /assets/social-cards/common-errors.png
 description: Cannot perform more than one GSI creation or deletion in a single update.

@@ -14,6 +14,21 @@ title: Issues and Alerts
 
 Issues is currently in private beta. Head over to your app and join the waitlist. And we'll contact you once we are ready for you.
 
+In this chapter here's what we'll be going over:
+
+- [How it works](#how-it-works)
+- [Enabling Issues](#enabling-issues)
+- [Types of Lambda errors](#types-of-lambda-errors)
+- [Native error reporting](#native-error-reporting)
+  - [Patterns to avoid](#patterns-to-avoid)
+- [Custom loggers](#custom-loggers)
+- [Grouping errors](#grouping-errors)
+- [Notifications](#notifications)
+- [Ignoring or resolving issues](#ignoring-or-resolving-issues)
+  - [Reporting ignored issues](#reporting-ignored-issues)
+- [Automatically ignored issues](#automatically-ignored-issues)
+- [Additional IAM permissions](#additional-iam-permissions)
+
 Note that native error reporting is currently supported for Node.js (10.x and above). If you are interested in using it with another runtime, let us know and we'll set it up for you.
 
 ### How It Works
@@ -184,6 +199,24 @@ On the other hand, When an issue is marked as resolved; it will not show up in t
 ![View ignored and resolved Issues](/assets/docs/issues-and-alerts/view-ignored-and-resolved-issues.png)
 
 Note that, you can choose to view all ignored and resolved issues on your feed by hitting the switch on the top right.
+
+<!--
+#### Reporting Ignored Issues
+
+If you find yourself ignoring the same error too many times, you can report it to us.
+
+![Report ignored Issues](/assets/docs/issues-and-alerts/report-ignored-issues.png)
+
+We'll have a look at the reported error and add it to our list of automatically ignored issues.
+-->
+
+### Automatically Ignored Issues
+
+Issues uses the standard console logger to detect errors. However, some libraries or packages log warnings or messages incorrectly as errors. These get reported to Issues and can drown out the real errors in your application.
+
+So some of these issues that are automatically ignored. Currently, all `DeprecationWarning` errors in Node.js are automatically ignored. You can read more about these errors over on the [common Serverless errors page]({% link _docs/serverless-errors/deprecationwarning.md %}).
+
+You can unignore these errors. Or if you think an error is being ignored by mistake, [feel free to let us know](mailto:{{ site.email }}).
 
 ### Additional IAM Permissions
 

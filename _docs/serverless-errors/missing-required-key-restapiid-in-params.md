@@ -1,5 +1,5 @@
 ---
-layout: build-errors
+layout: common-errors
 title: Missing required key 'restApiId' in params
 image: /assets/social-cards/common-errors.png
 description: Missing required key 'restApiId' in params

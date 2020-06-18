@@ -1,5 +1,5 @@
 ---
-layout: build-errors
+layout: common-errors
 title: "Template format error: Number of resources is greater than maximum allowed"
 image: /assets/social-cards/common-errors.png
 description: "The CloudFormation template is invalid: Template format error: Number of resources, 201, is greater than maximum allowed, 200"

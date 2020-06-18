@@ -1,4 +1,6 @@
 toc:
+  - title: DeprecationWarning
+    url: /docs/serverless-errors/deprecationwarning.html
   - title: Profile does not exist
     url: /docs/serverless-errors/profile-does-not-exist.html
   - title: Resource already exists

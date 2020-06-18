@@ -1,5 +1,5 @@
 ---
-layout: build-errors
+layout: common-errors
 title: Profile does not exist
 image: /assets/social-cards/common-errors.png
 description: Profile xxxxx-xxxxxx does not exist

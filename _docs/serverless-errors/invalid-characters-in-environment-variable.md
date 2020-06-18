@@ -1,5 +1,5 @@
 ---
-layout: build-errors
+layout: common-errors
 title: Invalid characters in environment variable
 image: /assets/social-cards/common-errors.png
 description: Invalid characters in environment variable

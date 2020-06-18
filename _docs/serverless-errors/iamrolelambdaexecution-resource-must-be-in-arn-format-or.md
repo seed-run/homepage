@@ -1,5 +1,5 @@
 ---
-layout: build-errors
+layout: common-errors
 title: IamRoleLambdaExecution - Resource must be in ARN format or
 image: /assets/social-cards/common-errors.png
 description: IamRoleLambdaExecution - Resource xxxx-xxxx-xxxx must be in ARN format or "*".

@@ -1,5 +1,5 @@
 ---
-layout: build-errors
+layout: common-errors
 title: Export resource cannot be deleted as it is in use
 image: /assets/social-cards/common-errors.png
 description: "An error occurred: xxxxx-xxxxx-xxxxx-xxxxx-dev - Export dev-xxxxx cannot be deleted as it is in use by xxxxx-xxxxx-xxxxx-xxxxx-dev."

@@ -1,5 +1,5 @@
 ---
-layout: build-errors
+layout: common-errors
 title: You are not currently logged in
 image: /assets/social-cards/common-errors.png
 description: You are not currently logged in

@@ -1,5 +1,5 @@
 ---
-layout: build-errors
+layout: common-errors
 title: Export with name is already exported by stack
 image: /assets/social-cards/common-errors.png
 description: Export with name dev-ApiGatewayRestApiRootResourceId is already exported by stack xxxx-xxxx-xxxx-dev.

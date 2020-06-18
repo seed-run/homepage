@@ -1,5 +1,5 @@
 ---
-layout: build-errors
+layout: common-errors
 title: No matching handler found. Check your service definition.
 image: /assets/social-cards/common-errors.png
 description: No matching handler found for 'xxxx/xxxxxx' in '/xxxx/xxxx/xxxxxx'. Check your service definition.

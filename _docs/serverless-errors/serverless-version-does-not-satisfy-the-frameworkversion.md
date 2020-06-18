@@ -1,5 +1,5 @@
 ---
-layout: build-errors
+layout: common-errors
 title: Serverless version does not satisfy the frameworkVersion
 image: /assets/social-cards/common-errors.png
 description: The Serverless version (1.xx.x) does not satisfy the "frameworkVersion" (=1.xx.x) in serverless.yml

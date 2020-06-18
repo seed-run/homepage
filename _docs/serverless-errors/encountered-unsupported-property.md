@@ -1,5 +1,5 @@
 ---
-layout: build-errors
+layout: common-errors
 title: Encountered unsupported property
 image: /assets/social-cards/common-errors.png
 description: ApiGatewayRestApi - Encountered unsupported property StageName.

@@ -1,5 +1,5 @@
 ---
-layout: build-errors
+layout: common-errors
 title: Property AttributeDefinitions is inconsistent with the KeySchema of the table and the secondary indexes.
 image: /assets/social-cards/common-errors.png
 description: Property AttributeDefinitions is inconsistent with the KeySchema of the table and the secondary indexes.

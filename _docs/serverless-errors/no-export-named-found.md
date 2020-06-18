@@ -1,5 +1,5 @@
 ---
-layout: build-errors
+layout: common-errors
 title: No export named found
 image: /assets/social-cards/common-errors.png
 description: xxx-xxxx-dev - No export named xx-xxx-us-east-1-dev-xxxxArn found.

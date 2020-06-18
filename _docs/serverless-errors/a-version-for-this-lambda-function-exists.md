@@ -1,5 +1,5 @@
 ---
-layout: build-errors
+layout: common-errors
 title: A version for this Lambda function exists
 image: /assets/social-cards/common-errors.png
 description: "An error occurred: xxxxxxxxx - A version for this Lambda function exists ( 1 ). Modify the function to create a new version."

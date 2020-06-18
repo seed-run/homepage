@@ -1,5 +1,5 @@
 ---
-layout: build-errors
+layout: common-errors
 title: You have attempted to create more buckets than allowed
 image: /assets/social-cards/common-errors.png
 description: ServerlessDeploymentBucket - You have attempted to create more buckets than allowed.

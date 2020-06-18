@@ -1,5 +1,5 @@
 ---
-layout: build-errors
+layout: common-errors
 title: Your lockfile needs to be updated
 image: /assets/social-cards/common-errors.png
 description: "yarn install --frozen-lockfile --non-interactive failed with code 1. error Your lockfile needs to be updated, but yarn was run with `--frozen-lockfile`."

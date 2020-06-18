@@ -1,4 +1,4 @@
-.post.build-error {
+.post.common-error {
   margin: 0 auto;
   max-width: 900px;
 }
@@ -6,40 +6,40 @@
 /**
  * Header
  */
-.post.build-error header a.breadcrumb {
+.post.common-error header a.breadcrumb {
   padding: 0 0 3px;
   display: inline-block;
 }
-.post.build-error header a.breadcrumb:after {
+.post.common-error header a.breadcrumb:after {
   padding-left: 4px;
   font-size: 16px;
   color: $grey-color-light;
   content: "/\00a0";
 }
-.post.build-error h1.post-title {
+.post.common-error h1.post-title {
   font-size: 32px;
 }
-.post.build-error blockquote {
+.post.common-error blockquote {
   padding: 5px $spacing-unit / 2 $spacing-unit / 2;
   text-align: left;
 }
-.post.build-error blockquote p:before,
-.post.build-error blockquote p:after {
+.post.common-error blockquote p:before,
+.post.common-error blockquote p:after {
   content: none;
 }
-.post.build-error blockquote p {
+.post.common-error blockquote p {
   font-family: $code-font-family;
 }
 
 // Header Controls
-.post.build-error .build-error-header-controls {
+.post.common-error .common-error-header-controls {
   margin-bottom: $spacing-unit - 5px;
   padding: 5px;
   display: flex;
   background-color: $divider-color;
   border-radius: 6px;
 }
-.post.build-error div.build-error-header-controls .panel {
+.post.common-error div.common-error-header-controls .panel {
   margin-right: 5px;
   flex: 1 1 auto;
   padding: 0 10px;
@@ -52,14 +52,14 @@
   justify-content: center;
   align-items: center;
 }
-.post.build-error div.build-error-header-controls .panel:nth-child(2) {
+.post.common-error div.common-error-header-controls .panel:nth-child(2) {
   border-radius: 0;
 }
-.post.build-error div.build-error-header-controls .panel:last-child {
+.post.common-error div.common-error-header-controls .panel:last-child {
   margin-right: 0;
   border-radius: 0 3px 3px 0;
 }
-.post.build-error div.build-error-header-controls .panel a {
+.post.common-error div.common-error-header-controls .panel a {
   padding: 0 5px;
   display: block;
   height: 44px;
@@ -68,14 +68,14 @@
     padding: 0 7px;
   }
 }
-.post.build-error div.build-error-header-controls .panel i.fa {
+.post.common-error div.common-error-header-controls .panel i.fa {
   font-size: 22px;
   line-height: 44px;
 }
-.post.build-error div.build-error-header-controls .panel i.fa-envelope {
+.post.common-error div.common-error-header-controls .panel i.fa-envelope {
   font-size: 20px;
 }
-.post.build-error div.build-error-header-controls .panel span {
+.post.common-error div.common-error-header-controls .panel span {
   padding-left: 5px;
   vertical-align: 2px;
 
@@ -85,14 +85,14 @@
 }
 
 // Errors List
-.post.build-error ul.build-error-list li {
+.post.common-error ul.common-error-list li {
   margin-bottom: 5px;
 
   &:last-child {
     margin-bottom: 0;
   }
 }
-.post.build-error ul.build-error-list li i {
+.post.common-error ul.common-error-list li i {
   top: 6px;
   opacity: 0.8;
   font-size: 14px;

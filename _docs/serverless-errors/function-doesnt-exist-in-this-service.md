@@ -1,5 +1,5 @@
 ---
-layout: build-errors
+layout: common-errors
 title: Function doesn't exist in this service
 image: /assets/social-cards/common-errors.png
 description: Function "xxxxxx" doesn't exist in this Service

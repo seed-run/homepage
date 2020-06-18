@@ -1,5 +1,5 @@
 ---
-layout: build-errors
+layout: common-errors
 title: "The requested resource exceeds the maximum number allowed. (Service: AmazonCloudWatchEvents)"
 image: /assets/social-cards/common-errors.png
 description: "xxxxxxxx - The requested resource exceeds the maximum number allowed. (Service: AmazonCloudWatchEvents)"

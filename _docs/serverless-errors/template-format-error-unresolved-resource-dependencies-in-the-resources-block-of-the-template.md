@@ -1,5 +1,5 @@
 ---
-layout: build-errors
+layout: common-errors
 title: "Template format error: Unresolved resource dependencies in the Resources block of the template"
 image: /assets/social-cards/common-errors.png
 description: "The CloudFormation template is invalid: Template format error: Unresolved resource dependencies [ApiGatewayRestApi] in the Resources block of the template"

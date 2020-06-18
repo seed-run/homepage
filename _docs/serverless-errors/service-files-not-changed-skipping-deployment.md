@@ -1,5 +1,5 @@
 ---
-layout: build-errors
+layout: common-errors
 title: Service files not changed. Skipping deployment.
 image: /assets/social-cards/common-errors.png
 description: Service files not changed. Skipping deployment...

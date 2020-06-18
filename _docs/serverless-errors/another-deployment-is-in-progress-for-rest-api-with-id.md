@@ -1,5 +1,5 @@
 ---
-layout: build-errors
+layout: common-errors
 title: Another Deployment is in progress for rest api with id
 image: /assets/social-cards/common-errors.png
 description: "An error occurred: ApiGatewayDeploymentxxxxxx - Another Deployment is in progress for rest api with id xxxxxxxx . Please try again later. (Service: AmazonApiGateway; Status Code: 409; Error Code: ConflictException; Request ID: xxxx-xxxx-xxxx-xxxx-xxxx)."

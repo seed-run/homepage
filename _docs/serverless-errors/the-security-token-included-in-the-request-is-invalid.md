@@ -1,5 +1,5 @@
 ---
-layout: build-errors
+layout: common-errors
 title: The security token included in the request is invalid
 image: /assets/social-cards/common-errors.png
 description: The security token included in the request is invalid

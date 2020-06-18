@@ -1,5 +1,5 @@
 ---
-layout: build-errors
+layout: common-errors
 title: Property cannot be empty
 image: /assets/social-cards/common-errors.png
 description: "An error occurred: ApiGatewayStage - Property RestApiId cannot be empty.."

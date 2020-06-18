@@ -1,5 +1,5 @@
 ---
-layout: build-errors
+layout: common-errors
 title: Lambda was unable to configure your environment variables
 image: /assets/social-cards/common-errors.png
 description: "Lambda was unable to configure your environment variables because the environment variables you have provided contains reserved keys that are currently not supported for modification. Reserved keys used in this request: AWS_REGION, AWS_ACCESS_KEY"

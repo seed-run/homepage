@@ -1,5 +1,5 @@
 ---
-layout: build-errors
+layout: common-errors
 title: Missing "handler" property in function
 image: /assets/social-cards/common-errors.png
 description: 'Missing "handler" property in function "events". Please make sure you point to the correct lambda handler. For example: handler.hello. Please check the docs for more info'

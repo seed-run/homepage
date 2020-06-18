@@ -1,5 +1,5 @@
 ---
-layout: build-errors
+layout: common-errors
 title: Code storage limit exceeded
 image: /assets/social-cards/common-errors.png
 description: Code storage limit exceeded.

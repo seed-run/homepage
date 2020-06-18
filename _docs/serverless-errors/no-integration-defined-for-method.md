@@ -1,5 +1,5 @@
 ---
-layout: build-errors
+layout: common-errors
 title: No integration defined for method
 image: /assets/social-cards/common-errors.png
 description: "ApiGatewayDeploymentxxxxxx - No integration defined for method (Service: AmazonApiGateway; Status Code: 400; Error Code: BadRequestException; Request ID: xxxx-xxxx-xxxx-xxxx-xxxx)."

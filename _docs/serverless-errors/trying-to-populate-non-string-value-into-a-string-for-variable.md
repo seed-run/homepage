@@ -1,5 +1,5 @@
 ---
-layout: build-errors
+layout: common-errors
 title: Trying to populate non string value into a string for variable
 image: /assets/social-cards/common-errors.png
 description: "Trying to populate non string value into a string for variable ${opt:stage, self:provider.stage}. Please make sure the value of the property is a string."

@@ -1,5 +1,5 @@
 ---
-layout: build-errors
+layout: common-errors
 title: Stack with id does not exist
 image: /assets/social-cards/common-errors.png
 description: Stack with id xxxxxx does not exist

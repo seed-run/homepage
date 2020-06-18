@@ -200,7 +200,6 @@ On the other hand, When an issue is marked as resolved; it will not show up in t
 
 Note that, you can choose to view all ignored and resolved issues on your feed by hitting the switch on the top right.
 
-<!--
 #### Reporting Ignored Issues
 
 If you find yourself ignoring the same error too many times, you can report it to us.
@@ -208,7 +207,6 @@ If you find yourself ignoring the same error too many times, you can report it t
 ![Report ignored Issues](/assets/docs/issues-and-alerts/report-ignored-issues.png)
 
 We'll have a look at the reported error and add it to our list of automatically ignored issues.
--->
 
 ### Automatically Ignored Issues
 

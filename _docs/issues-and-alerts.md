@@ -25,7 +25,7 @@ In this chapter here's what we'll be going over:
 - [Grouping errors](#grouping-errors)
 - [Notifications](#notifications)
 - [Ignoring or resolving issues](#ignoring-or-resolving-issues)
-  - [Reporting ignored issues](#reporting-ignored-issues)
+  - [Flag ignored issues](#flag-ignored-issues)
 - [Automatically ignored issues](#automatically-ignored-issues)
 - [Additional IAM permissions](#additional-iam-permissions)
 
@@ -200,13 +200,13 @@ On the other hand, When an issue is marked as resolved; it will not show up in t
 
 Note that, you can choose to view all ignored and resolved issues on your feed by hitting the switch on the top right.
 
-#### Reporting Ignored Issues
+#### Flag Ignored Issues
 
-If you find yourself ignoring the same error too many times, you can report it to us.
+If you find yourself ignoring the same error too many times, you can flag it.
 
-![Report ignored Issues](/assets/docs/issues-and-alerts/report-ignored-issues.png)
+![Flag ignored Issues](/assets/docs/issues-and-alerts/flag-ignored-issues.png)
 
-We'll have a look at the reported error and add it to our list of automatically ignored issues.
+We'll have a look at the flagged error and add it to our list of automatically ignored issues.
 
 ### Automatically Ignored Issues
 

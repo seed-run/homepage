@@ -59,7 +59,7 @@ Note that, CloudWatch log groups can only have 1 subscriber. This means that if 
 
 ![Enable issues with exclusive flag](/assets/docs/issues-and-alerts/enable-issues-with-exclusive-flag.png)
 
-This setting tells Seed to remove any existing subscriptions before enabling Issues.
+This setting tells Seed to remove any existing subscriptions before enabling Issues. You can also optionally select a stage that you want to enable it for. This will allow you to try out Issues without having to remove the existing subscriptions from your production environment.
 
 If you are looking for a way to setup Issues while still keeping your existing subscriptions, [get in touch with us](mailto:{{ site.email }}). 
 

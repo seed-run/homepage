@@ -123,6 +123,8 @@ toc:
     subfolderitems:
       - page: Issues and alerts
         url: /docs/issues-and-alerts.html
+      - page: Native error reporting
+        url: /docs/native-error-reporting.html
       - page: Viewing logs
         url: /docs/viewing-logs.html
       - page: Viewing metrics

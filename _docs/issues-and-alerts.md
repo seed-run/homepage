@@ -20,8 +20,6 @@ In this chapter here's what we'll be going over:
 - [Enabling Issues](#enabling-issues)
 - [Types of Lambda errors](#types-of-lambda-errors)
 - [Native error reporting](#native-error-reporting)
-  - [Patterns to avoid](#patterns-to-avoid)
-- [Custom loggers](#custom-loggers)
 - [Grouping errors](#grouping-errors)
 - [Notifications](#notifications)
 - [Ignoring or resolving issues](#ignoring-or-resolving-issues)
@@ -29,7 +27,7 @@ In this chapter here's what we'll be going over:
 - [Automatically ignored issues](#automatically-ignored-issues)
 - [Additional IAM permissions](#additional-iam-permissions)
 
-Note that native error reporting is currently supported for Node.js (10.x and above). If you are interested in using it with another runtime, let us know and we'll set it up for you.
+------
 
 ### How It Works
 
@@ -73,94 +71,9 @@ Issues will autodetect all Lambda errors including:
 
 ### Native Error Reporting
 
-While unhandled errors are automatically reported to Issues. There are a class of errors that you might want to manually report. Issues allows you to report these errors by simply using a `console.error`. You don't need to use any 3rd party SDKs or API calls.
+While unhandled errors are automatically reported to Issues. The errors and exceptions that you are catching in your code need to be manually reported. Issues allows you to do this natively. Without having to install any 3rd party SDKs or libraries. Simply log it as an error to the console!
 
-- Handled exceptions
-  
-  Your code might have an exception, you might not want your Lambda function to fail. But you want to report the error. For example, when handling API requests, you might want to catch the exception and return a JSON response.
-
-  ``` javascript
-  try {
-    // Your code
-  } catch(error) {
-    // Report this error to Issues
-    console.error(error);
-    console.log('All the logs in this request will appear in the Issues page');
-  }
-  ```
-  
-  In the case of exceptions, Seed will group the ones that have similar stack traces together.
-
-- Custom errors
-
-  Similarly, you might want to report errors that happen outside of a try/catch block.
-
-  ``` javascript
-  // Report this error to Issues
-  console.error('Check why the name in the user object is undefined');
-  // Log some debug information to go along with it
-  console.log({ userObject });
-  console.log('All the logs in this request will appear in the Issues page');
-  ```
-  
-  In the case of custom errors, Seed uses the error message to group similar issues together.
-
-#### Patterns to Avoid
-
-1. Avoid identifiers or timestamps in error messages
-
-   The above idea of grouping based on the error messages means that you should avoid using unique identifiers in your error messages. For example, if you report an error using:
-   
-   ``` javascript
-   console.error(`Detected a Big Error at ${Date.now()}`);
-   ```
-   
-   Every occurrence of this error will be displayed separately, instead of grouping them together! If you want to log this identifier, use a separate `console.log` like so:
-   
-   ``` javascript
-   console.error('Big Error');
-   console.log(`Detected at ${Date.now()}`);
-   ```
-
-2. Avoid calling `console.error` multiple times for the same error
-
-   Each `console.error` call results in an error being reported. If there are multiple calls for the same error, they get reported as multiple issues.
-   
-   For example, avoid doing the following:
-   
-   ``` javascript
-   try {
-     // Your code
-   } catch(e) {
-     // Report the error
-     console.error('Caught an exception for the loading the user object');
-     // Reports another error!
-     console.error(e);
-   }
-   ```
-   
-   Instead use a `console.debug` or `console.log` for the first `console.error` line.
-
-### Custom Loggers
-
-Issues also supports the JSON log format out of the box. For example, if you are using the [Winston Logger](https://github.com/winstonjs/winston), you can report errors by doing the following:
-
-```  javascript
-const winston = require('winston');
-
-const logger = winston.createLogger({
-  format: winston.format.combine(
-    winston.format.errors({ stack: true }),
-    winston.format.json()
-  ),
-  transports: [
-    new winston.transports.Console()
-  ]
-});
-
-// Report an error to Issues
-logger.error('Custom error from winston');
-```
+You can [read more about native error reporting here]({% link _docs/native-error-reporting.md %}).
 
 ### Grouping Errors
 

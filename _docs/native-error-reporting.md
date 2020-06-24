@@ -62,7 +62,7 @@ Issues supports Node.js 10.x and above. Let's start by looking at some examples 
   
   In the case of custom errors, Seed uses the error message to group similar issues together.
 
-#### Custom Loggers
+#### Winston Loggers
 
 Issues also supports the JSON log format out of the box. For example, if you are using the [Winston Logger](https://github.com/winstonjs/winston), you can report errors by doing the following:
 
@@ -159,6 +159,10 @@ print('Some more debug info to go with this')
 ```
 
 This will get reported to Issues as the `Could not charge credit card` error. And the issue details will include the debug info in the `print` statement.
+
+--------
+
+### 
 
 --------
 

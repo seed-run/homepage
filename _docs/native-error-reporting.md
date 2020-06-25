@@ -3,7 +3,7 @@ layout: docs
 title: Native Error Reporting
 ---
 
-[Issues]({% link _docs/issues-and-alerts.md %}) can detect most Lambda failures automatically. But errors and exceptions (that you catch in your code) need to be manually reported. To do this, simply log the error to the console and it'll get reported. We call this _Native Error Reporting_.
+[Issues]({% link _docs/issues-and-alerts.md %}) can detect most Lambda failures automatically. But errors and exceptions (the ones you catch in your code) need to be manually reported. To do this, simply log the error to the console and it'll get reported. We call this _Native Error Reporting_.
 
 #### Advantages
 
@@ -62,27 +62,6 @@ Issues supports Node.js 10.x and above. Let's start by looking at some examples 
   
   In the case of custom errors, Seed uses the error message to group similar issues together.
 
-#### Winston Loggers
-
-Issues also supports the JSON log format out of the box. For example, if you are using the [Winston Logger](https://github.com/winstonjs/winston), you can report errors by doing the following:
-
-```  javascript
-const winston = require('winston');
-
-const logger = winston.createLogger({
-  format: winston.format.combine(
-    winston.format.errors({ stack: true }),
-    winston.format.json()
-  ),
-  transports: [
-    new winston.transports.Console()
-  ]
-});
-
-// Report an error to Issues
-logger.error('Custom error from winston');
-```
-
 -----
 
 ### Python
@@ -97,7 +76,6 @@ Issues supports Python 3.7 and 3.8. Let's look at how to report errors in Python
   import logging
 
   logger = logging.getLogger()
-  logger.setLevel(logging.INFO)
 
   try:
     # Your code
@@ -124,21 +102,57 @@ Issues supports Python 3.7 and 3.8. Let's look at how to report errors in Python
 
   In the case of custom errors, Seed uses the error message to group similar issues together.
 
-#### Reporting with custom logging format
+#### Reporting with a custom log format
 
-If you are using a custom logging format, you'll need to add a handler to report the error in JSON. Like so:
+Seed relies on the default log format to detect errors. If you are using a custom log format, it won't be reported. To fix this there are a couple of options:
 
-``` python
-# Install python-json-logger
-from pythonjsonlogger import jsonlogger
+1. Add the new handler without overwriting the default handler
 
-# Crerate a new handler that logs ERROR events in JSON format
-newHandler.setFormatter(jsonlogger.JsonFormatter())
-newHandler.setLevel(logging.ERROR)
+   ``` python
+   # Wrong: don't overwrite default handler
+   defaultHandler = logger.handlers[0]
+   # Your custom log format
+   defaultHandler.setFormatter(logging.Formatter("%(asctime)s %(levelname)s:%(message)s", "%Y-%m-%d %H:%M:%S"))
+   
+   # Correct: create a new handler
+   newHandler = logging.StreamHandler()                                                             
+   # Your custom log format
+   newHandler.setFormatter(logging.Formatter("%(asctime)s %(levelname)s:%(message)s", "%Y-%m-%d %H:%M:%S"))
+   logger.addHandler(newHandler)
+   ```
 
-# Add the handler
-logger.addHandler(newHandler)
-```
+   And then to report the error:
+
+   ``` python
+   # Report an exception to Issues
+   try:
+     # Your code
+   except Exception as e:
+     logger.exception(e)
+   ```
+
+2. Use a child logger at the root and create a new logger instance for reporting
+
+   ```python
+   # Wrong: don't use the root logger
+   myLogger = logging.getLogger()
+   
+   # Correct: create a child logger
+   myLogger = logging.getLogger('my-logger')
+   ```
+
+   And then while reporting an error, create a new logger.
+
+   ``` python
+   # Create a new logger to report issues to Seed
+   errorLogger = logging.getLogger('error-logger')
+   
+   # Report an exception to Issues
+   try:
+     # Your code
+   except Exception as e:
+     errorLogger.exception(e)
+   ```
 
 #### Logger instead of print
 
@@ -159,10 +173,6 @@ print('Some more debug info to go with this')
 ```
 
 This will get reported to Issues as the `Could not charge credit card` error. And the issue details will include the debug info in the `print` statement.
-
---------
-
-### 
 
 --------
 

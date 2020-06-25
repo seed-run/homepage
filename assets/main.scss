@@ -1433,6 +1433,7 @@ main > .header {
     line-height: 1.35;
     color: lighten($text-color, 10%);
     text-align: left;
+    font-weight: 500;
 
     @include media-query($on-palm) {
       font-size: 32px;

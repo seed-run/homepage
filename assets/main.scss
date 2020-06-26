@@ -1457,7 +1457,13 @@ main > .header {
 
   div.controls {
     margin-top: $spacing-unit;
-    text-align: left;
+    display: flex;
+    align-items: flex-start;
+
+    @include media-query($on-palm) {
+      flex-direction: column;
+      align-items: center;
+    }
 
     a.signup {
       @include action-button;
@@ -1470,20 +1476,46 @@ main > .header {
       }
     }
 
-    @include media-query($on-palm) {
-      text-align: center;
+    p {
+      margin-top: 12px;
+      margin-bottom: 0;
+      text-align: left;
+      color: $tertiary-text-color;
+      font-size: 14px;
+
+      @include media-query($on-palm) {
+        text-align: center;
+      }
     }
-  }
 
-  p {
-    margin-top: 12px;
-    margin-bottom: 0;
-    text-align: left;
-    color: $tertiary-text-color;
-    font-size: 14px;
+    a.customers {
+      margin-left: $spacing-unit / 2;
+      font-weight: 500;
+      color: $link-color;
+      line-height: 60px;
 
-    @include media-query($on-palm) {
-      text-align: center;
+      i.fa {
+        margin-left: 1px;
+        font-size: 12px;
+        vertical-align: 1px;
+        opacity: 0.9;
+        transition: 0.3s;
+      }
+
+      &:hover {
+        color: $link-color;
+        i.fa {
+          transform: translateX(2px);
+        }
+      }
+
+      @include media-query($on-palm) {
+        margin-left: 0;
+        margin-bottom: $spacing-unit / 2;
+        order: -1;
+        display: block;
+        line-height: 1.6;
+      }
     }
   }
 
@@ -1882,10 +1914,13 @@ main > .testimonials {
       height: 45px;
       box-sizing: border-box;
 
+      &.kovi { margin-right: 12px; margin-bottom: 29px; }
       &.freelancer { margin-top: 28px; }
       &.kasa { margin-bottom: 28px; }
-      &.shyft { margin-bottom: 26px; }
+      &.mozilla { margin-right: 16px; }
+      &.splunk { margin-right: 14px; }
       &.essensys { margin-bottom: 26px; }
+      &.shyft { margin-bottom: 26px; }
 
       @include media-query($on-palm) {
         &:first-child {

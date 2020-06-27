@@ -18,6 +18,7 @@ In this chapter here's what we'll be going over:
 
 - [How it works](#how-it-works)
 - [Enabling Issues](#enabling-issues)
+  <!--- [Default Stage](#default-stage)-->
 - [Types of Lambda errors](#types-of-lambda-errors)
 - [Native error reporting](#native-error-reporting)
 - [Grouping errors](#grouping-errors)
@@ -60,6 +61,20 @@ Note that, CloudWatch log groups can only have 1 subscriber. This means that if 
 This setting tells Seed to remove any existing subscriptions before enabling Issues. You can also optionally select a stage that you want to enable it for. This will allow you to try out Issues without having to remove the existing subscriptions from your production environment.
 
 If you are looking for a way to setup Issues while still keeping your existing subscriptions, [get in touch with us](mailto:{{ site.email }}). 
+
+<!--
+#### Default Stage
+
+Issues is enabled for all the stages in your app. But it defaults to showing you your _production_ stage first. So if you click on the Issues tab in your app, you'll be shown the issues from your _production_ stage.
+
+However, you might have multiple production stages or you might have not deployed to production yet. In these cases you can change the default stage that's used. To do this, head over to the Issues settings.
+
+![Default stage Issues setting](/assets/docs/issues-and-alerts/default-stage-issues-setting.png)
+
+And select the stage you want.
+
+Note that, this setting has no impact on how the stages are monitored. It simply allows you to view the specified stage by default.
+-->
 
 ### Types of Lambda Errors
 

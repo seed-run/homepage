@@ -190,7 +190,7 @@ $on-laptop:                 800px;
                 0 3px 4px rgba(0, 0, 0, 0.02);
     border-radius: 4px;
     position: absolute;
-    top: 41px;
+    top: 46px;
     left: 123px;
 
     @include media-query($on-palm) {
@@ -206,7 +206,7 @@ $on-laptop:                 800px;
       border: {
         bottom: 1px solid darken($bottom-color, 5%);
       }
-      border-radius: 4px 4px 0 0;
+      border-radius: 5px 5px 0 0;
       display: flex;
       justify-content: flex-start;
       align-items: center;
@@ -242,7 +242,7 @@ $on-laptop:                 800px;
     }
     img {
       box-sizing: border-box;
-      border-radius: 0 0 4px 4px;
+      border-radius: 0 0 5px 5px;
     }
   }
 }

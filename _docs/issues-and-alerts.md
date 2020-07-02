@@ -18,7 +18,7 @@ In this chapter here's what we'll be going over:
 
 - [How it works](#how-it-works)
 - [Enabling Issues](#enabling-issues)
-  <!--- [Default Stage](#default-stage)-->
+  - [Default Stage](#default-stage)
 - [Types of Lambda errors](#types-of-lambda-errors)
 - [Native error reporting](#native-error-reporting)
 - [Grouping errors](#grouping-errors)
@@ -26,6 +26,7 @@ In this chapter here's what we'll be going over:
 - [Ignoring or resolving issues](#ignoring-or-resolving-issues)
   - [Flag ignored issues](#flag-ignored-issues)
 - [Automatically ignored issues](#automatically-ignored-issues)
+- [Usage and limits](#usage-and-limits)
 - [Additional IAM permissions](#additional-iam-permissions)
 
 ------
@@ -62,7 +63,6 @@ This setting tells Seed to remove any existing subscriptions before enabling Iss
 
 If you are looking for a way to setup Issues while still keeping your existing subscriptions, [get in touch with us](mailto:{{ site.email }}). 
 
-<!--
 #### Default Stage
 
 Issues is enabled for all the stages in your app. But it defaults to showing you your _production_ stage first. So if you click on the Issues tab in your app, you'll be shown the issues from your _production_ stage.
@@ -74,7 +74,6 @@ However, you might have multiple production stages or you might have not deploye
 And select the stage you want.
 
 Note that, this setting has no impact on how the stages are monitored. It simply allows you to view the specified stage by default.
--->
 
 ### Types of Lambda Errors
 
@@ -143,6 +142,15 @@ Issues uses the standard console logger to detect errors. However, some librarie
 So some of these issues that are automatically ignored. Currently, all `DeprecationWarning` errors in Node.js are automatically ignored. You can read more about these errors over on the [common Serverless errors page]({% link _docs/serverless-errors/deprecationwarning.md %}).
 
 You can unignore these errors. Or if you think an error is being ignored by mistake, [feel free to let us know](mailto:{{ site.email }}).
+
+### Usage and Limits
+
+Issues is free for all users on Seed. But there are some soft limits to prevent accidental overuse.
+
+- Maximum of 10K errors per hour
+- Error related data is retained for 30 days
+
+If these limits don't work for you or if you have any questions, [feel free to contact us](mailto:{{ site.email }}).
 
 ### Additional IAM Permissions
 

@@ -3,7 +3,7 @@ layout: docs
 title: Viewing Metrics
 ---
 
-[Seed](/) pulls together CloudWatch Metrics to give you an overview of your Lambda and API metrics. This includes the number of requests, number of errors, and latency of your Lambda function or API endpoint over time. Viewing these metrics gives you a view of how your Serverless app is performing and you can use it to debug specific issues.
+[Seed](/) pulls together CloudWatch Metrics to give you an overview of your Lambda and API metrics. This includes the number of requests, and latency of your Lambda function or API endpoint over time. Viewing these metrics gives you a view of how your Serverless app is performing and you can use it to debug specific issues.
 
 A couple of quick notes about the metrics viewer in Seed:
 
@@ -36,11 +36,7 @@ For Lambda, Seed shows you the following metrics:
 
    This is the number of times the Lambda has been invoked.
 
-2. **Error Count**
-
-   This is the number of times the Lambda generated an error.
-
-3. **Duration**
+2. **Duration**
 
    This is the average, P90, P95, and P99 time (in ms) it took to execute the Lambda.
 
@@ -60,40 +56,9 @@ You can view the following API metrics here:
 
    This is the number of requests made to API Gateway.
 
-2. **Error Count**
-
-   This is the number of times the API endpoint responded with a 4xx or 5xx error.
-
-3. **Latency**
+2. **Latency**
 
    This is the average, P90, P95, and P99 time (in ms) it took to respond to a request.
-
-### Inspecting Logs
-
-You can click on a data point on any of the above graphs to inspect it in detail. This is especially useful in debugging errors.
-
-![API Metrics inspect errors](/assets/docs/viewing-metrics/api-metrics-inspect-errors.png)
-
-Clicking through brings up the logs from that period of time. And in the case of errors, Seed will display just the errors.
-
-![API Logs inspect errors](/assets/docs/viewing-metrics/api-logs-inspect-errors.png)
-
-Note that for Lambda functions, the errors logged in the metrics points to errors that take place outside the handler function. Errors like:
-
-- Out of memory
-- Time out
-- Errors before initialization
-  - Before handler
-  - Syntax errors
-  - Handler file/function not found
-
-So inspecting the metrics for errors helps track issues that would otherwise not be reported through services like [Sentry](https://sentry.io). 
-
-A couple of caveats:
-
-- Errors related to IAM permissions might show up in the metrics but not in the logs.
-- Also, we are not displaying any Lambda throttling errors in the metrics.
-- Inspecting the Lambda errors is currently supported for the Node.js and Python runtimes.
 
 ### Additional IAM Permissions
 

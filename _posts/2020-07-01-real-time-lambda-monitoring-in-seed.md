@@ -4,7 +4,7 @@ title: Real-Time Lambda Monitoring in Seed
 categories: news
 author: frank
 image: assets/social-cards/real-time-lambda-monitoring.png
-tweet:
+tweet: https://twitter.com/SEED_run/status/1278671941759574016
 ---
 
 Real-time Lambda monitoring and alerting is now available for all apps in Seed. You can find it in the _Issues_ tab in your console. Oh and we have a small surprise for you below.

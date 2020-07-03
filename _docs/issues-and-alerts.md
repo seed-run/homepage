@@ -111,7 +111,7 @@ Once configured, you'll receieve alerts in Slack when an error is detected.
 ![Issues Slack alert](/assets/docs/issues-and-alerts/issues-slack-alert.jpg)
 *Issues Slack alert*
 
-Note that, you will not be notified again by the same Issue (groups of similar errors) in 30 minutes.
+Note that, you will not be notified again by the same Issue (groups of similar errors) in 30 minutes. And for emails, you won't receive more than one in a 10 minute span.
 
 ### Ignoring or Resolving Issues
 

@@ -15,7 +15,7 @@ A couple of quick notes about the log viewer in Seed:
 
 ### Lambda Logs
 
-To view the Lambda logs for a stage, simply select the stage.
+To view the Lambda logs for a stage, simply select the stage from the **Resources** tab.
 
 ![Select stage](/assets/docs/viewing-logs/select-stage.png)
 

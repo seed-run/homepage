@@ -17,7 +17,7 @@ Push the branch to remote.
 $ git push -u origin new-branch
 ```
 
-Go to the Seed console, select the **Pipeline** tab, and click the **Edit Pipeline** link. You can also head over to your app **Settings** and click **Edit Pipeline** there.
+Go to the Seed console, select the **Pipeline** tab, and click the **Edit Pipeline** link.
 
 ![Click edit pipeline from homepage](/assets/docs/adding-a-stage/click-edit-pipeline-from-homepage.png)
 

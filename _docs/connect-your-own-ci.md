@@ -7,7 +7,7 @@ Seed can optionally allow you to connect to your own CI (continuous integration)
 
 We currently support the _Connect Your CI_ option for **GitHub** and **Bitbucket**. [Contact us](mailto:{{ site.email }}) if you'd like to use it for GitLab.
 
-You can enable this option by heading to your app **Settings** and hitting **Connect Your CI**.
+You can enable this option by heading to your app **Settings** and enable **Connect Your CI**.
 
 ![Connect your CI setting](/assets/docs/connect-your-own-ci/connect-your-ci-setting.png)
 

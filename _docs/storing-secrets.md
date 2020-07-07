@@ -9,11 +9,11 @@ Seed internally encrypts them using [AWS KMS](https://aws.amazon.com/kms/) and s
 
 You can then access them in your Node.js Lambda functions using the `process.env` object.
 
-To add a secret, select the stage you are trying to set it for.
+To add a secret, head over to your app settings.
 
-![Select stage](/assets/docs/storing-secrets/select-stage.png)
+![App Settings](/assets/docs/storing-secrets/app-settings.png)
 
-And hit **Settings**.
+Select the stage you are trying to set it for.
 
 ![Stage Settings](/assets/docs/storing-secrets/stage-settings.png)
 

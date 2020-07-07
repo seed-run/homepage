@@ -9,11 +9,7 @@ As opposed to personal apps, apps in an organization do not have app members. Me
 
 Let's start by adding members.
 
-From the settings screen of your organization, view the members that are a part of it.
-
-![Organization settings](/assets/docs/adding-organization-members/organization-settings.png)
-
-Here you'll be able to add new members.
+From the **Members** tab of your organization, you'll be able to add new members.
 
 ![Organization members](/assets/docs/adding-organization-members/organization-members.png)
 

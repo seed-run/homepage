@@ -9,7 +9,7 @@ However, there are cases where some services in your monorepo app are dependent 
 
 ### Deploy Phases
 
-Seed has a concept of deployment phases. By default, all your services are deployed concurrently in a single phase. But you can configure these by hitting **Manage Deploy Phases** from your app settings.
+Seed has a concept of deployment phases. By default, all your services are deployed concurrently in a single phase. But you can configure these by hitting **Manage Deploy Phases** from the **Pipeline** tab.
 
 ![Click Manage Deploy Phases Button](/assets/docs/configuring-deploy-phases/click-manage-deploy-phases-button.png)
 

@@ -9,9 +9,9 @@ title: Multi-Region Deployments
 
 To start off, let's configure our production stage to deploy to a specific region.
 
-Head over to your prod stage. And hit **Settings**.
+Head over to the app settings and select your prod stage.
 
-![Prod stage](/assets/docs/multi-region-deployments/prod-stage.png)
+![Prod stage](/assets/docs/multi-region-deployments/select-stage.png)
 
 Here, you'll notice the deployed region setting.
 

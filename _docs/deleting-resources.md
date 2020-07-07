@@ -25,13 +25,13 @@ Selecting this checkbox does the following for the respective cases via a set of
 
 ### Removing a Stage
 
-Similar to the app, you can head over the a stage's **Settings**.
+Similar to the app, you can head over to a stage's **Settings**.
 
 ![Removing a stage](/assets/docs/deleting-resources/removing-a-stage.png)
 
 ### Removing a Service
 
-For a service, head over to the service.
+For a service, head over to the service's **Settings**.
 
 ![Removing a service](/assets/docs/deleting-resources/removing-a-serivce.png)
 

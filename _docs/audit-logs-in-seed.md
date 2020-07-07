@@ -9,9 +9,9 @@ Note that, the audit log is available as a part of our [**Enterprise plan**]({% 
 
 You can use the audit log to track down issues, get an overview of your team's activity, and follow good security practices. Audit logs in Seed are retroactive. This means that you'll always be able to access historical records in case there is an issue. Audit logs in Seed are also really comprehensive. You can rest assured knowing that you can always refer back to them if you need to.
 
-View your audit log by heading over to your organization settings and clicking on **View Audit Log**.
+View your audit log by heading over to your organization and select the **Audit Log** tab.
 
-![Click Audit Log in organization settings](/assets/docs/audits-log-in-seed/click-audit-log-in-organization-settings.png)
+![Viewing the Audit Log](/assets/docs/audits-log-in-seed/viewing-the-audit-log.png)
 
 Here you'll notice that Seed logs the:
 
@@ -20,8 +20,6 @@ Here you'll notice that Seed logs the:
 - The name of the action
 - The IP address (if available) of the source
 - And the time of the action
-
-![Viewing the Audit Log](/assets/docs/audits-log-in-seed/viewing-the-audit-log.png)
 
 Let's quickly go over some of the features of the audit logs in Seed.
 

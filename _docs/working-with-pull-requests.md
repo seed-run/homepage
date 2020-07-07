@@ -11,7 +11,11 @@ When a pull request is opened, Seed receives a pull request notification from Gi
 
 ### Enable Auto-Deploy Pull Requests
 
-By default, auto-deploying PRs are disabled. You can enable them by heading to your app, clicking **Settings**, and then hitting **Enable Auto-Deploy PRs**.
+By default, auto-deploying PRs are disabled. You can enable them by heading to your app and select the **Pipeline** tab.
+
+![App Pipeline](/assets/docs/working-with-pull-requests/app-pipeline.png)
+
+Select **Enable Auto-Deploy PRs**.
 
 ![Enable auto deploy pull requests](/assets/docs/working-with-pull-requests/enable-auto-deploy-pr.png)
 

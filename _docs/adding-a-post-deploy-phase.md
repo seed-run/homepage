@@ -11,7 +11,11 @@ A post-deploy phase can also be used to run any database migration scripts or an
 
 > Post-deploy phases are configured on a per stage basis
 
-To configure a post-deploy phase, head over to the settings for the stage you are looking to set it for. And hit **Enable Post-Deploy**.
+To configure a post-deploy phase, head over to the **Pipeline** tab and hit **Manage Deploy Phases**.
+
+![Click Manage Deploy Phases Button](/assets/docs/adding-a-post-deploy-phase/click-manage-deploy-phases-button.png)
+
+Scroll down to the stage you are looking to set it for. And enable **Run a post-deploy phase**.
 
 ![Enable Post-Deploy Phase](/assets/docs/adding-a-post-deploy-phase/enable-post-deploy-phase.png)
 

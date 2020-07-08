@@ -11,15 +11,11 @@ Organization accounts are a way to group the team members and apps that belong t
 
 Let's get started by looking at how to create an organization.
 
-In your [Seed console](https://console.seed.run), you'll notice a dropdown with your username.
+In your [Seed console](https://console.seed.run), you'll see a list of all the organizations that you have access to and will allow you to create one.
 
 ![Seed console home](/assets/docs/creating-an-organization/seed-console-home.png)
 
-This dropdown will list all the organizations that you have access to and will allow you to create one.
-
-![Account dropdown options](/assets/docs/creating-an-organization/account-dropdown-options.png)
-
-Selecting **Create an Organization** allows you to easily create one by just entering the name of the organization.
+Selecting **New Organization** allows you to easily create one by just entering the name of the organization.
 
 ![Create organization form](/assets/docs/creating-an-organization/create-organization-form.png)
 

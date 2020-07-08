@@ -16,10 +16,10 @@ You can see the version of Serverless Framework that was used for a build in the
 
 ![Serverless Framework version in build log](/assets/docs/pinning-the-serverless-version/serverless-framework-version-in-build-log.png)
 
-To tell Seed which version to use (for example `1.40.0`), you can set the `frameworkVersion` in the top of your `serverless.yml`.
+To tell Seed which version to use (for example `1.63.0`), you can set the `frameworkVersion` in the top of your `serverless.yml`.
 
 ``` yml
-frameworkVersion: "1.40.0"
+frameworkVersion: "1.63.0"
 
 service: my-service
 

@@ -7,7 +7,7 @@ Seed can automatically run the tests for your app. This is turned off initially,
 
 ### Enable Unit Tests
 
-To enable running unit tests for your app, head over to your app settings. And hit **Enable Unit Tests**.
+To enable running unit tests for your app, head over to your app settings. And enable **Unit Tests**.
 
 ![Enable unit tests](/assets/docs/running-tests/enable-unit-tests.png)
 

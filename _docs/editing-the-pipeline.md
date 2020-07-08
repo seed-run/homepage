@@ -7,7 +7,7 @@ By default, apps in Seed are configured with a development and production stage.
 
 > Edit your Seed pipeline to add a downstream stage
 
-You can enter the pipeline editor by either clicking the **Edit Pipeline** link from your app's homepage.
+Go to the Seed console, select the **Pipeline** tab, and click the **Edit Pipeline** link.
 
 ![Click edit pipeline from homepage](/assets/docs/editing-the-pipeline/click-edit-pipeline-from-homepage.png)
 

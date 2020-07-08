@@ -63,20 +63,8 @@ The pipeline view of your app is a table where the columns are the various stage
 
 ![App Pipeline view](/assets/docs/mono-repo-apps-in-seed/app-pipeline-view.png)
 
-To get a better sense of this pipeline view let's click around a bit.
+Finally, clicking on a service row (dropdown) for example, gives you the ability to deploy or promote just that service.
 
-1. Clicking on a service row (dropdown) for example, gives you the ability to deploy or promote just that service.
-
-   ![Service Stage](/assets/docs/mono-repo-apps-in-seed/service-dropdown.png)
-
-2. Whereas, clicking on a stage (column header) shows you the various services deployed to that stage. It also shows you the builds that are deployed and the resulting deployment.
-
-   ![App Stage](/assets/docs/mono-repo-apps-in-seed/app-stage.png)
-
-Finally, the app's stage allows you to control the settings for all the services in the stage.
-
-![App Stage settings](/assets/docs/mono-repo-apps-in-seed/app-stage-settings.png)
-
-In the above example, using a set of custom IAM credentials would mean that all the services deployed to this stage will use this setting.
+![Service Stage](/assets/docs/mono-repo-apps-in-seed/service-dropdown.png)
 
 The stages and services in an app allow you to easily control your monorepo serverless apps in Seed.

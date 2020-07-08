@@ -7,11 +7,7 @@ Seed supports two-factor authentication. And organizations on Seed can make it m
 
 Mandatory two-factor auth is available as a part of our [**Enterprise plan**]({% link pricing.html %}).
 
-You can head over to your organization settings and hit **Manage Members**.
-
-![Organization settings on Seed](/assets/docs/enable-mandatory-two-factor-auth/organization-settings-on-seed.png)
-
-And hit **Enable Mandatory 2FA**.
+You can head over to your organization members and hit **Enable Mandatory 2FA**.
 
 ![Enable mandatory 2FA setting](/assets/docs/enable-mandatory-two-factor-auth/enable-mandatory-2fa-setting.png)
 

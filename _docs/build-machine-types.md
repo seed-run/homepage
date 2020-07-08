@@ -15,7 +15,7 @@ Note that, by default your builds are run in a **Standard 1x** build machine.
 
 The Standard build machine should work for most build processes. However, there might be cases where your builds might run out of memory or you might be looking to speed up your builds.
 
-To use a high performance build machine, head over to your app pipeline a select the service that you want to configure.
+To use a high performance build machine, head over to your app settings a select the service that you want to configure.
 
 ![Build machine options in service settings](/assets/docs/build-machine-types/build-machine-options-in-service-settings.png)
 

@@ -15,7 +15,7 @@ To configure a post-deploy phase, head over to the **Pipeline** tab and hit **Ma
 
 ![Click Manage Deploy Phases Button](/assets/docs/adding-a-post-deploy-phase/click-manage-deploy-phases-button.png)
 
-Scroll down to the stage you are looking to set it for. And enable the switch **Run a post-deploy phase**.
+Scroll down to the stage you are looking to set it for. And enable **Run a post-deploy phase**.
 
 ![Enable Post-Deploy Phase](/assets/docs/adding-a-post-deploy-phase/enable-post-deploy-phase.png)
 

@@ -61,12 +61,20 @@ Below is a brief description of when these commands are run.
 
 Apart from the build hooks, there are a couple of other options that can help you customize the Seed build process.
 
-#### Disable checking code changes
+#### Checking code changes
 
-You can also add the following to your `seed.yml` to [deploy all your services without checking if anything has been updated]({% link _docs/deploying-monorepo-apps.md %}).
+Seed by default checks the Git log to see if a service has been updated, before deploying it. You can read more about this in our [Deploying Monorepo Apps]({% link _docs/deploying-monorepo-apps.md %}) chapter.
+
+Add the following to either, disable this check:
 
 ``` yml
 check_code_change: false
+```
+
+Or use the Lerna algorithm instead:
+
+``` yml
+check_code_change: lerna
 ```
 
 #### Customize stage names

@@ -5,13 +5,23 @@ title: Deploying Monorepo Apps
 
 A monorepo Serverless app is one where multiple Serverless services are in the same repo. This means that a commit will trigger a deployment to all the services in [Seed](/). However, this can be a slow process if you are only trying to deploy a change to a single service.
 
-To fix this, Seed will check the Git log to see if the code for a service has been updated. This greatly speeds up your builds and also makes deployments cost-effective.
+To fix this, Seed will check to see if a service has been updated, before deploying it. This greatly speeds up your builds and also makes deployments cost-effective.
 
-Let's look at how this check works in detail.
+There are two algorithms Seed uses to check if a service has been updated:
+
+1. Check the Git log for updates (Default)
+
+   Seed looks at the Git log to see if any files related to the service have been updated. This is done by default for all services deployed through Seed.
+
+2. Use Lerna to check updated packages
+
+   Alternatively, if your project uses [Lerna](https://lerna.js.org) + [Yarn Workspaces](https://classic.yarnpkg.com/en/docs/workspaces/), then Seed can use the Lerna CLI to see a service has been updated. To use this algorithm, you'll need to add `check_code_change: lerna` to your [build spec]({% link _docs/adding-a-build-spec.md %}) — `seed.yml`.
+
+Let's look at these in detail.
 
 ### Check the Git log for updates
 
-Seed uses a simple algorithm to determine if a service in your app needs to be deployed. The algorithm is based on the directory structure of your Serverless app. Let's look at the cases in detail.
+By default, Seed uses a simple algorithm to determine if a service in your app needs to be deployed. The algorithm is based on the directory structure of your Serverless app. Let's look at the cases in detail.
 
 1. Single service per repo
 
@@ -107,4 +117,32 @@ If you are trying to figure out why Seed deployed your service, you can check th
 
 ![Seed found code changes in service](/assets/docs/deploying-monorepo-apps/seed-found-code-changes-in-service.png)
 
-The above check makes it so that Seed will only deploy your services if the relevant parts of your code have been updated. This ensures that the deployments for your monorepo Serverless apps on Seed are fast and cost-effective.
+### Use Lerna to check updated packages
+
+If you are using [Lerna + Yarn Workspaces to manage your monorepo Serverless project](https://serverless-stack.com/chapters/using-lerna-and-yarn-workspaces-with-serverless.html), Seed can use the Lerna CLI to figure out which of your services need to be deployed. To use this algorithm, add the following to your `seed.yml` in your project root.
+
+``` yml
+check_code_change: lerna
+```
+
+Let's look at how this algorithm works.
+
+To begin with:
+
+- If the app only has one service, then we simply deploy it.
+- If the previous deployment had failed, then we skip the check and deploy it.
+- If we are [manually deploying with the force option]({% link _docs/manually-deploying.md %}#force-deploys), then we skip the check and deploy it.
+
+Note that, the above conditions apply to the Git log check algorithm as well.
+
+Next:
+
+1. Seed will run the `lerna ls --since ${prevCommitSHA} -all` to list all packages that have been changed since the last successful deploy. If the current service is in the list, we deploy it.
+2. If there are other file changes in the Git log that don't belong to any packages in your Yarn Workspaces, then we deploy the current service.
+3. If the two above conditions are not met, then we skip deploying this service.
+
+If you are looking to get started with using Lerna + Yarn Workspaces for your Serverless app, we have a starter project for you — [**Serverless Lerna + Yarn Workspaces Monorepo Starter**](https://github.com/AnomalyInnovations/serverless-lerna-yarn-starter)
+
+-------
+
+The above checks makes it so that Seed will only deploy your services if the relevant parts of your code have been updated. This ensures that the deployments for your monorepo Serverless apps on Seed are fast and cost-effective.

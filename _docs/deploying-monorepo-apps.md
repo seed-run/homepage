@@ -125,6 +125,8 @@ If you are using [Lerna + Yarn Workspaces to manage your monorepo Serverless pro
 check_code_change: lerna
 ```
 
+![Lerna check in Seed build log](/assets/docs/deploying-monorepo-apps/lerna-check-in-seed-build-log.png)
+
 Let's look at how this algorithm works.
 
 To begin with:

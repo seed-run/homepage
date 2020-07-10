@@ -8,6 +8,8 @@ image: assets/social-cards/lerna-and-yarn-workspaces.png
 
 Seed can now use [Lerna](https://lerna.js.org) + [Yarn Workspaces](https://classic.yarnpkg.com/en/docs/workspaces/) to only deploy the services that have been updated in your Serverless app.
 
+![Lerna check in Seed build log](/assets/blog/deploy-projects-with-lerna-and-yarn-workspaces/lerna-check-in-seed-build-log.png)
+
 Lerna and Yarn Workspaces allow you to manage packages and dependencies in a monorepo architecture. And since most large Serverless apps are monorepo projects with multiple services; it's a perfect fit!
 
 If you are using this setup, just add the following to your `seed.yml`:

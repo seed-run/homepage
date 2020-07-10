@@ -43,6 +43,8 @@ And you get the complete request log, plus a link to X-Ray (if configured).
 
 ![Issues request logs](/assets/docs/issues-and-alerts/issues-request-logs.png)
 
+Note that, the logs are loaded directly from CloudWatch. This means that if you have a short log retention period, the logs for some older issues might not load anymore. It is recommended that you set your CloudWatch log retention period to at least 30 days, to match how long [the issues are available for](#usage-and-limits).
+
 ### Enabling Issues
 
 Once enabled, Issues will subscribe to the CloudWatch log groups for your Lambda functions. And it'll keep it updated when you deploy your services. Finally, it'll remove these subscriptions when you remove your app or disable Issues.

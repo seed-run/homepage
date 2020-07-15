@@ -83,7 +83,7 @@ The stage name is central to the way Seed manages deployments and resources for 
 
 However, there might be rare cases where you might wish to customize the automatically generated stage names. To do so, specify a bash command using the `stage_name_constructor` option. Note that:
 
-- This only applies to auto-deployed PRs and branches.
+- This only applies to auto-deployed branches.
 - It's only run the first time, while creating the stage.
 - The command needs to print out a string to stdout.
 - It has access to the `$SEED_STAGE_BRANCH` [environment variable](#build-environment-variables).

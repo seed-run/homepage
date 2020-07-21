@@ -42,7 +42,7 @@ This can turn into a huge pain point when you are working on multiple Serverless
 
 To solve the above issues, serverless-bundle encapsulates all the necessary packages and configs with sensible defaults, so you only need to include one plugin.
 
-```
+``` diff
 -    "eslint"
 -    "webpack"
 -    "@babel/core"

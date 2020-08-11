@@ -16,7 +16,6 @@ Since the permissions that Serverless Framework needs depends on the services th
       "Action": [
         "cloudformation:CreateStack",
         "cloudformation:Describe*",
-        "cloudformation:ValidateTemplate",
         "cloudformation:UpdateStack",
         "cloudformation:List*"
       ],
@@ -27,9 +26,19 @@ Since the permissions that Serverless Framework needs depends on the services th
     {
       "Effect": "Allow",
       "Action": [
+        "cloudformation:ValidateTemplate"
+      ],
+      "Resource": [
+        "*"
+      ]
+    },
+    {
+      "Effect": "Allow",
+      "Action": [
         "s3:*"
       ],
       "Resource": [
+        "arn:aws:s3:::<s3_bucket_name>",
         "arn:aws:s3:::<s3_bucket_name>/*"
       ]
     },

@@ -7,6 +7,7 @@ Seed runs your builds inside a virtual machine and it'll use a build image based
 
 [**Active Images**](#build-images)
 - [General Purpose v3.0](#general-purpose-v30)
+- [General Purpose v1.1](#general-purpose-v11)
 - [General Purpose v1.0](#general-purpose-v10)
 - [Python 3.6](#python-36)
 - [Python 2.7](#python-27)
@@ -49,9 +50,32 @@ OS: Ubuntu 18.04
 
 *[Docker and Docker Compose need to be enabled.]({% link _docs/docker-commands-in-your-builds.md %})
 
+### General Purpose v1.1
+
+Lambda runtimes: Node.js 10.x, Python 3.7, Java 8
+
+OS: Ubuntu 18.04
+
+| Includes        | Version  |
+|-----------------|:--------:|
+| Node.js         | 10.21.0  |
+| Python          | 3.7.7    |
+| Ruby            | 2.6.6    |
+| Go              | 1.13.12  |
+| .NET Core       | 3.1.301  |
+| Java            | 11.0.7   |
+| PHP             | 7.3      |
+| NPM             | 6.14.4   |
+| YARN            | 1.22.4   |
+| PIP             | 19.3.1   |
+| Docker*         | 19.03.11 |
+| Docker Compose* | 1.24     |
+
+*[Docker and Docker Compose need to be enabled.]({% link _docs/docker-commands-in-your-builds.md %})
+
 ### General Purpose v1.0
 
-Lambda runtimes: Node.js 10.x, Python 3.7, Java 8, .NET Core 2.1
+Lambda runtimes: .NET Core 2.1
 
 OS: Ubuntu 18.04
 

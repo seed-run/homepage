@@ -8,13 +8,13 @@ Seed runs your builds inside a virtual machine and it'll use a build image based
 [**Active Images**](#build-images)
 - [General Purpose v3.0](#general-purpose-v30)
 - [General Purpose v1.1](#general-purpose-v11)
-- [General Purpose v1.0](#general-purpose-v10)
 - [Python 3.6](#python-36)
 - [Python 2.7](#python-27)
 - [Ruby 2.5](#ruby-25)
 
 [**Deprecated Images**](#deprecated-build-images)
 - [General Purpose v2.0](#general-purpose-v20)
+- [General Purpose v1.0](#general-purpose-v10)
 - [Python 3.7](#python-37)
 - [.NET Core 2.1](#net-core-21)
 
@@ -70,29 +70,6 @@ OS: Ubuntu 18.04
 | PIP             | 19.3.1   |
 | Docker*         | 19.03.11 |
 | Docker Compose* | 1.24     |
-
-*[Docker and Docker Compose need to be enabled.]({% link _docs/docker-commands-in-your-builds.md %})
-
-### General Purpose v1.0
-
-Lambda runtimes: .NET Core 2.1
-
-OS: Ubuntu 18.04
-
-| Includes        | Version |
-|-----------------|:-------:|
-| Node.js         | 10      |
-| Python          | 3.7     |
-| Ruby            | 2.6     |
-| Go              | 1.13    |
-| .NET Core       | 2.2     |
-| Java            | 11      |
-| PHP             | 7.3     |
-| NPM             | 6.13.4  |
-| YARN            | 1.12.3  |
-| PIP             | 19.3.1  |
-| Docker*         | 18.09   |
-| Docker Compose* | 1.24    |
 
 *[Docker and Docker Compose need to be enabled.]({% link _docs/docker-commands-in-your-builds.md %})
 
@@ -162,6 +139,29 @@ OS: Ubuntu 18.04
 | YARN            | 1.12.3  |
 | PIP             | 19.3.1  |
 | Docker*         | 19.03   |
+| Docker Compose* | 1.24    |
+
+*[Docker and Docker Compose need to be enabled.]({% link _docs/docker-commands-in-your-builds.md %})
+
+### General Purpose v1.0
+
+Upgrade to: [General Purpose v1.1](#general-purpose-v11)
+
+OS: Ubuntu 18.04
+
+| Includes        | Version |
+|-----------------|:-------:|
+| Node.js         | 10      |
+| Python          | 3.7     |
+| Ruby            | 2.6     |
+| Go              | 1.13    |
+| .NET Core       | 2.2     |
+| Java            | 11      |
+| PHP             | 7.3     |
+| NPM             | 6.13.4  |
+| YARN            | 1.12.3  |
+| PIP             | 19.3.1  |
+| Docker*         | 18.09   |
 | Docker Compose* | 1.24    |
 
 *[Docker and Docker Compose need to be enabled.]({% link _docs/docker-commands-in-your-builds.md %})

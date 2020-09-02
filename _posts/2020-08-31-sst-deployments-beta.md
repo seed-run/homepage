@@ -4,7 +4,7 @@ title: SST Deployments Beta
 categories: news
 image: assets/social-cards/serverless-stack-toolkit.png
 author: frank
-tweet: 
+tweet: https://twitter.com/SEED_run/status/1301149215083692033
 ---
 
 We've got an exciting announcement. Seed now supports deploying [AWS CDK](https://aws.amazon.com/cdk/) alongside your [Serverless Framework](https://www.serverless.com/) services, thanks to [SST](https://github.com/serverless-stack/serverless-stack).

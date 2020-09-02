@@ -35,19 +35,19 @@ Below is a brief description of when these commands are run.
 
 - `before_compile`
 
-   Seed starts the build process by doing a `npm install` (for Node.js projects), `pip install -r requirements.txt` (for Python projects), or `make` (for Go projects). The `before_compile` step let's you run commands before this. This can be useful for [configuring private npm modules]({% link _docs/private-npm-modules.md %}). This step is not run when a build is promoted to production.
+   Seed starts the build process by doing a `npm install` (for Node.js projects), `pip install -r requirements.txt` (for Python projects), or `make` (for Go projects). The `before_compile` step let's you run commands before this. This can be useful for [configuring private npm modules]({% link _docs/private-npm-modules.md %}).
 
 - `before_build`
 
-   The actual build portion for Seed is the `serverless package` command that creates the build. The `before_build` step let's you run your commands before this happens. This step is not run when a build is promoted to production.
+   The actual build portion for Seed is the `serverless package` command that creates the build. The `before_build` step let's you run your commands before this happens.
 
 - `before_deploy`
 
-   After the build packages are created, Seed deploys these using the `serverless deploy` command. The `before_deploy` let's you run your commands before this happens. This step is run for all builds and also when they are promoted to production. You can distinguish between the cases by using the `$SEED_STAGE_NAME` build environment variable.
+   After the build packages are created, Seed deploys these using the `serverless deploy` command. The `before_deploy` let's you run your commands before this happens. This step is run for all services and also when they are promoted to production. You can distinguish between the cases by using the `$SEED_STAGE_NAME` build environment variable.
 
 - `after_deploy`
 
-   After the deployment is complete you can use the `after_deploy` step to run any post deployment scripts you might have. Again, this step is run for all builds and also when they are promoted to production. You can distinguish between the cases by using the `$SEED_STAGE_NAME` build environment variable.
+   After the deployment is complete you can use the `after_deploy` step to run any post deployment scripts you might have. Again, this step is run for all services and also when they are promoted to production. You can distinguish between the cases by using the `$SEED_STAGE_NAME` build environment variable.
 
 - `before_remove`
 

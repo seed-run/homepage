@@ -7,7 +7,7 @@ Seed makes it easy to configure your stages with email, slack, and custom webhoo
 
 You can configure each stage separately. For example, maybe you only want to be notified for updates to the production stage. Or maybe you want a specific stage to notify a specific member on your team.
 
-To add build notifications, head over to your app settings and select the stage.
+To add build notifications, head over to your app settings and select the stage under **Stage Settings** on the right.
 
 ![Select stage](/assets/docs/adding-build-notifications/select-stage.png)
 

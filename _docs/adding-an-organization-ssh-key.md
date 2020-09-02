@@ -45,7 +45,7 @@ Once it has been added, double check that it has been set correctly by comparing
 If you are looking to check out other repositories as a part of your build process, make sure that you are using the correct SSH URL format:
 
 - GitHub: `git@github.com/...`
-- BitBucket: `git@bitbucket.org/...`
+- Bitbucket: `git@bitbucket.org/...`
 - GitLab: `git@gitlab.com/...`
 
 ### Behind the Scenes

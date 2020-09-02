@@ -53,8 +53,6 @@ We'd like you to give SST a try and to send us your feedback.
 2. Add it to [Seed](https://console.seed.run)
 3. Deploy it
 
-Also, make sure to check out the docs — [github.com/serverless-stack/serverless-stack](https://github.com/serverless-stack/serverless-stack)
-
-And star the repo while you are there!
+Also, make sure to check out the docs and star the SST repo — [**github.com/serverless-stack/serverless-stack**](https://github.com/serverless-stack/serverless-stack)
 
 SST deployments during the beta are free. So try it out and [let us know what you think](mailto:{{ site.email }})!

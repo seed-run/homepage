@@ -21,6 +21,8 @@ If you don't have a `serverless.yml` for the service yet, you can still add the 
 
 ![Service serverless.yml not found](/assets/docs/adding-a-service/service-serverless-yml-path-not-found.png)
 
+The above assumes that you are trying to add a Serverless Framework service. If instead you are adding a [Serverless Stack](https://github.com/serverless-stack/serverless-stack), make sure to select it from the **Service Type** dropdown.
+
 Once you add the service, you'll notice that it's deployed across all the stages that you have configured for your app. This means that a commit to `master` (for example), would trigger a build in the **dev** stage for all the services in the app.
 
 ![Service across all stages](/assets/docs/adding-a-service/service-across-all-stages.png)

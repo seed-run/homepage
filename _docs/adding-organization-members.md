@@ -17,11 +17,33 @@ From the **Members** tab of your organization, you'll be able to add new members
 
 Add a member to the organization using their email address.
 
+![Adding new member to Seed](/assets/docs/adding-organization-members/adding-a-new-member-to-seed.png)
+
+If you are adding a member that doesn't have a Seed account, they'll be asked to create one **with the email address that you specify**.
+
+You can also hit **Edit** to change the role that is assigned to them.
+
 ![Fine-grained rbac in Seed](/assets/docs/adding-organization-members/fine-grained-rbac-in-seed.png)
 
-If you are adding a member that doesn't have a Seed account, they'll be asked to create one with the email address that you specify.
+### App Specific Roles
 
-You can also assign them a role while adding them to the organization.
+By default the member role applies to the entire organization. But you can modify the role for specific apps in your org. Use the **Add a specific role for an app** dropdown to select the app you want.
+
+![Select app for app specific role in Seed](/assets/docs/adding-organization-members/select-app-for-app-specific-role-in-seed.png)
+
+And hit **Add**.
+
+![Click add for app specific role in Seed](/assets/docs/adding-organization-members/click-add-for-app-specific-role-in-seed.png)
+
+Here you can modify the role you'd like to assign for this specific app.
+
+![Select role for app specific role in Seed](/assets/docs/adding-organization-members/select-role-for-app-specific-role-in-seed.png)
+
+Once selected, the app specific role **overrrides** the org role assigned.
+
+![App specific role selected in Seed](/assets/docs/adding-organization-members/app-specific-role-selected-in-seed.png)
+
+So for this example, the **Admin** role applies for the entire org and all the apps, except for the **my-serverless-app** app.
 
 ### Member Roles
 
@@ -54,7 +76,7 @@ And since you cannot promote _to_ development stages, there is no promote role f
 
 ### Changing Roles
 
-Once a member has been invited or added to the organization, you still have the ability to go in and change their roles.
+Once a member has been invited or added to the organization, you still have the ability to go in and change their roles by hitting the **Manage** button.
 
 ![Edit member roles](/assets/docs/adding-organization-members/edit-member-roles.png)
 

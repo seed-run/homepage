@@ -3,7 +3,7 @@ layout: post
 title: Saving build minutes for monorepo apps
 categories: news
 author: jay
-tweet: 
+tweet: https://twitter.com/SEED_run/status/1303680567192551425
 ---
 
 We are making a small but critical update to help save you build minutes while deploying your monorepo Serverless app.

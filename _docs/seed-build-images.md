@@ -35,18 +35,18 @@ OS: Ubuntu 18.04
 
 | Includes        | Version |
 |-----------------|:-------:|
-| Node.js         | 12.16.1 |
-| Python          | 3.8.1   |
-| Ruby            | 2.7.0   |
+| Node.js         | 12      |
+| Python          | 3.8     |
+| Ruby            | 2.7     |
 | Go              | 1.14    |
-| .NET Core       | 3.1.102 |
-| Java            | 11.0.5  |
-| PHP             | 7.4.1   |
-| NPM             | 6.13.4  |
-| YARN            | 1.22.0  |
-| PIP             | 19.3.1  |
-| Docker*         | 19.03.3 |
-| Docker Compose* | 1.24.0  |
+| .NET Core       | 3.1     |
+| Java            | 11      |
+| PHP             | 7.4     |
+| NPM             | 6.14    |
+| YARN            | 1.22    |
+| PIP             | 19.3    |
+| Docker*         | 19.03   |
+| Docker Compose* | 1.24    |
 
 *[Docker and Docker Compose need to be enabled.]({% link _docs/docker-commands-in-your-builds.md %})
 
@@ -56,20 +56,20 @@ Lambda runtimes: Node.js 10.x, Python 3.7, Java 8
 
 OS: Ubuntu 18.04
 
-| Includes        | Version  |
-|-----------------|:--------:|
-| Node.js         | 10.21.0  |
-| Python          | 3.7.7    |
-| Ruby            | 2.6.6    |
-| Go              | 1.13.12  |
-| .NET Core       | 3.1.301  |
-| Java            | 11.0.7   |
-| PHP             | 7.3      |
-| NPM             | 6.14.4   |
-| YARN            | 1.22.4   |
-| PIP             | 19.3.1   |
-| Docker*         | 19.03.11 |
-| Docker Compose* | 1.24     |
+| Includes        | Version |
+|-----------------|:-------:|
+| Node.js         | 10      |
+| Python          | 3.7     |
+| Ruby            | 2.6     |
+| Go              | 1.13    |
+| .NET Core       | 3.1     |
+| Java            | 11      |
+| PHP             | 7.3     |
+| NPM             | 6.14    |
+| YARN            | 1.22    |
+| PIP             | 19.3    |
+| Docker*         | 19.03   |
+| Docker Compose* | 1.24    |
 
 *[Docker and Docker Compose need to be enabled.]({% link _docs/docker-commands-in-your-builds.md %})
 

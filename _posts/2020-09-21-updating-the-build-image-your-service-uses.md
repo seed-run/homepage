@@ -3,7 +3,7 @@ layout: post
 title: Updating the build image your service uses
 categories: news
 author: jack
-tweet: 
+tweet: https://twitter.com/SEED_run/status/1308395386843918336
 ---
 
 We rolled out an update to the [Seed console]({{ site.console_url }}) to allow you to change the build image that your Serverless services use.

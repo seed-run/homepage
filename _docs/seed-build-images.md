@@ -18,8 +18,17 @@ Seed runs your builds inside a virtual machine and it'll use a build image based
 - [Python 3.7](#python-37)
 - [.NET Core 2.1](#net-core-21)
 
+## Changing the Build Image
 
-To check which build image is being used, head over to the build logs for your build.
+By default, Seed will automatically select a build image for your service based on the runtime you have set in your `serverless.yml`. However, Seed will not automatically update this when your runtime is updated. This is done to ensure that any scripts in your [build spec]({% link _docs/adding-a-build-spec.md %}) are not affected by the build image change.
+
+If you want to update the build image that a service in your app is using, head over to the service's settings.
+
+![Build image option in service settings](/assets/docs/seed-build-images/build-image-option-in-service-settings.png)
+
+Note that, if a service has not been deployed yet, Seed will not have picked a build image.
+
+You can also check which image was used for a specific build, by heading over to the logs for that build.
 
 ![Build image info in build logs](/assets/docs/seed-build-images/build-image-info-in-build-logs.png)
 
@@ -196,7 +205,3 @@ OS: Debian 9
 | .NET Core | 2.1     |
 | NPM       | 6.1.0   |
 | YARN      | 1.12.3  |
-
-## Changing the Build Image
-
-Once your service has been successfully deployed, Seed does not change the build image. If you want to use a different build image for a service, you'll need to [contact us](mailto:{{ site.email }}). In the future we'll be making this option configurable.

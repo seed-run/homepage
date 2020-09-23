@@ -3,7 +3,7 @@ layout: post
 title: Update multiple issues in one click
 categories: news
 author: frank
-tweet: 
+tweet: https://twitter.com/SEED_run/status/1308753999420706821?s=20
 ---
 
 You can now select multiple issues to resolve or ignore in the Seed console. You won't have to click through to each issue to do so.

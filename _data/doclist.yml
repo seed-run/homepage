@@ -7,6 +7,8 @@ toc:
         url: /docs/adding-your-iam-credentials.html
       - page: Customizing your IAM Policy
         url: /docs/customizing-your-iam-policy.html
+      - page: Adding a CDK app
+        url: /docs/adding-a-cdk-app.html
       - page: Adding Node.js projects
         url: /docs/adding-nodejs-projects.html
       - page: Adding Python projects

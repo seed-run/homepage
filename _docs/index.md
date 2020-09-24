@@ -9,6 +9,7 @@ Seed is a fully managed CI/CD pipeline for Serverless apps on AWS. Simply add yo
 Seed currently supports the following:
 
 - [Serverless Framework](https://serverless.com/framework/) projects deployed to [AWS](https://aws.amazon.com)
+- [AWS CDK](https://aws.amazon.com/cdk/) apps [deployed with SST]({% link _docs/adding-a-cdk-app.md %})
 - Built with [Node.js]({% link _docs/adding-nodejs-projects.md %}), [Python]({% link _docs/adding-python-projects.md %}), [.NET Core]({% link _docs/adding-dotnet-core-projects.md %}), [Go]({% link _docs/adding-go-projects.md %}), [Ruby]({% link _docs/adding-ruby-projects.md %}), and [Java]({% link _docs/adding-java-projects.md %}).
 - Hosted on [GitHub](https://github.com), [GitHub Enterprise]({% link _docs/enabling-github-enterprise.md %}), [Bitbucket](https://bitbucket.org/), [GitLab](https://gitlab.com), and [GitLab Self-Managed]({% link _docs/enabling-gitlab-self-managed.md %}).
 

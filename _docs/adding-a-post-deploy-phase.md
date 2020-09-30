@@ -34,6 +34,8 @@ Now any deployments to this stage will run your commands as a part of the post-d
 
 ![Post-Deploy Phase in Deployment workflow](/assets/docs/adding-a-post-deploy-phase/post-deploy-phase-in-deployment-workflow.png)
 
+Note that, if the scripts in the post-deploy phase fail, then the build is marked as failed.
+
 ### Post-Deploy phase environment
 
 Seed will pick an environment based on the **first** service that is deployed as a part of your app. This means that if you only have one service then the Post-Deploy phase will have the same environment as your builds.

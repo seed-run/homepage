@@ -4,7 +4,7 @@ title: Free CDK Deployments in Seed
 categories: news
 image: assets/social-cards/cdk-sst-seed-free.png
 author: jay
-tweet: 
+tweet: https://twitter.com/SEED_run/status/1316728032955117576
 ---
 
 We've got some really exciting news to share. CDK deployments in Seed is now out of beta. And it will be **free**!

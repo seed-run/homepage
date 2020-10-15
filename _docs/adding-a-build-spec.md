@@ -49,6 +49,8 @@ Below is a brief description of when these commands are run.
 
    After the deployment is complete you can use the `after_deploy` step to run any post deployment scripts you might have. Again, this step is run for all services and also when they are promoted to production. You can distinguish between the cases by using the `$SEED_STAGE_NAME` build environment variable.
 
+   Note that for [SST apps]({% link _docs/adding-a-cdk-app.md %}), Seed uses an [integrated deployment process]({% link _posts/2020-09-23-fixing-cdk-deployments.md %}) (to make your CDK deployments free). So any script executed after the deployment, is run in a separate build process. It'll also automatically restore the `node_modules/` cache before running your scripts.
+
 - `before_remove`
 
    Seed runs the `serverless remove` command to remove a deployed service. The `before_remove` step let's you run any commands before this happens. Note that, this step is only run when a service is being removed.

@@ -1,6 +1,16 @@
 .blog.post {
   margin: 0 auto;
   max-width: 900px;
+
+  b, strong {
+    font-weight: 500;
+  }
+
+  h1, h2, h3 {
+    &:nth-child(n+2) {
+      margin-top: $spacing-unit / 2 + 10px;
+    }
+  }
 }
 
 .blog.post .categories {

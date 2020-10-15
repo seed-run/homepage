@@ -13,11 +13,15 @@ Aside from allowing you to use CDK alongside your Serverless Framework services,
 
    SST supports concurrently deploying all the stacks in your CDK apps. SST is also natively supported in Seed and features a custom deployment infrastructure that's specifically optimized for it. Making Seed the fastest way to deploy your CDK apps
 
-2. Practically free
+2. Free
 
-   Seed directly plugs into the SST deployment process. So when a CDK app is waiting for CloudFormation to update your stacks, Seed pauses the build process and does this asynchronously. Thereby not charging you any build minutes for it. Thus CDK deployments on Seed are practically free!
+   Seed directly plugs into the SST deployment process. So when a CDK app is waiting for CloudFormation to update your stacks, Seed pauses the build process and does this asynchronously. This allows Seed to make CDK deployments very efficient and offer it to you for free!
 
-You can [read more about this in our post here]({% link _posts/2020-09-23-fixing-cdk-deployments.md %}). Let's look at how to add a new SST app to Seed.
+You can [read more about this in our post here]({% link _posts/2020-09-23-fixing-cdk-deployments.md %}). Note that, there are [a couple of pricing limits that we talk about below](#pricing-limits).
+
+> CDK deployments on Seed are free!
+
+Let's look at how to add a new SST app to Seed.
 
 ### Adding a New App
 
@@ -34,3 +38,10 @@ Pick the SST app you want to add. If you've got multiple SST apps or Serverless 
 ![Adding CDK SST app](/assets/docs/adding-a-cdk-app/adding-cdk-sst-app.png)
 
 Next, you'll be asked to [add the IAM credentials for your dev and prod environments]({% link _docs/adding-your-iam-credentials.md %}).
+
+### Pricing Limits
+
+CDK apps deployed using SST on Seed are free. There are a couple of small limitations to this:
+
+1. If you are running additional scripts as a part of your [build spec]({% link _docs/adding-a-build-spec.md %}), you'll be billed for the build minutes it takes to run those scripts.
+2. Seed installs your npm packages as a part of the build process. If this step takes longer than 180s, you'll be billed for it. For example, if it takes 282s, you'll be billed for 282 - 180 = 102s.

@@ -149,7 +149,7 @@ You can unignore these errors. Or if you think an error is being ignored by mist
 
 Issues is free for all users on Seed. But there are some soft limits to prevent accidental overuse.
 
-- Maximum of 10K errors per hour
+- Maximum of 10K errors per hour per app
 - Error related data is retained for 30 days
 
 If these limits don't work for you or if you have any questions, [feel free to contact us](mailto:{{ site.email }}).

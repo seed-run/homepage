@@ -32,6 +32,25 @@ You can also check which image was used for a specific build, by heading over to
 
 ![Build image info in build logs](/assets/docs/seed-build-images/build-image-info-in-build-logs.png)
 
+## Package Versions
+
+Seed regularly applies security updates to the build images. This means that the minor versions of the packages in a build image can change.
+
+### Node Versions
+
+However for Node.js, the build images also comes with — [n](https://github.com/tj/n). It allows you to select a specific Node.js version if necessary. For example, to select Node.js v10.21.0 you can run this:
+
+``` bash
+$ n 10.21.0
+```
+
+And to use it in your Seed builds, update your [build spec]({% link _docs/adding-a-build-spec.md %}) (`seed.yml`) with something like this:
+
+``` yml
+before_compile:
+  - n 10.21.0
+```
+
 ## Build Images
 
 Below are the build images that are used and the types of services they are used for. A build image is chosen based on the Lambda runtime of the service.

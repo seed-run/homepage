@@ -31,19 +31,19 @@ Note, when this error happens on initial deployments. The CloudFormation stack c
 
 Seed will retry removing a service if the removal (ie. `serverless remove`) fails due to the following errors:
 
-1. [`The serverless deployment bucket does not exist`]({% link _docs/serverless-errors/the-serverless-deployment-bucket-does-not-exist.md %})
-
-   This error usually happens if the deployment S3 bucket that Serverless Framework uses, has already been removed. In this case Seed will retry the process by removing the CloudFormation template for the stack.
-
-2. [`Rate exceeded`]({% link _docs/serverless-errors/serverless-error-rate-exceeded.md %})
+1. [`Rate exceeded`]({% link _docs/serverless-errors/serverless-error-rate-exceeded.md %})
 
    These errors mean that CloudFormation is throttling API calls. This happens as a result of Serverless Framework repeatedly checking the stack removal progress. Specifically, if multiple Serverless services are being removed concurrently.
 
    Serverless Framework makes a series of `describeStackEvents` API requests to CloudFormation to poll for the removal status. And when multiple services are being removed concurrently, multiple of these calls are made at the same time, resulting in the above error as CloudFormation throttles the API requests.
 
-3. [`Too Many Requests`]({% link _docs/serverless-errors/serverlesserror-too-many-requests.md %})
+2. [`Too Many Requests`]({% link _docs/serverless-errors/serverlesserror-too-many-requests.md %})
 
    This is a rate limit error that can be caused by multiple services. For example, API Gateway has a hard limit of removing 1 custom domain per account every 30 seconds. Seed will simply retry removing the service.
+
+3. [`The serverless deployment bucket does not exist`]({% link _docs/serverless-errors/the-serverless-deployment-bucket-does-not-exist.md %})
+
+   This error usually happens if the deployment S3 bucket that Serverless Framework uses, has already been removed. In this case Seed will retry the process by removing the CloudFormation template for the stack.
 
 4. [`Export resource cannot be deleted as it is in use`]({% link _docs/serverless-errors/export-resource-cannot-be-deleted-as-it-is-in-use.md %})
 

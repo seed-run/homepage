@@ -3,7 +3,9 @@ layout: docs
 title: Deleting Resources
 ---
 
-Seed gives you the option to delete an app, a stage, or a service and also to remove the deployed resources using a `serverless remove` command. Let's take a look at how to delete an app.
+Seed gives you the option to delete an app, a stage, or a service and also to remove the deployed resources using a `serverless remove` command.
+
+Let's take a look at how to delete an app.
 
 ### Removing an App
 
@@ -36,6 +38,8 @@ For a service, head over to the service's **Settings**.
 ![Removing a service](/assets/docs/deleting-resources/removing-a-serivce.png)
 
 So if you are looking to delete an app, stage, or service; you need to figure out if you are trying to just remove it from Seed or if you are trying to remove the deployed AWS resources.
+
+Removing the deployed resources from AWS can sometimes take quite long and you might run into some errors. Seed automatically retries the process for certain errors. You can read more about this over on our doc on [Auto-Retrying Serverless Errors]({% link _docs/auto-retrying-serverless-errors.md %}#auto-retrying-on-remove).
 
 ### Removing a monorepo app
 

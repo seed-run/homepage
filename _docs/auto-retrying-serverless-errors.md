@@ -29,15 +29,24 @@ Note, when this error happens on initial deployments. The CloudFormation stack c
 
 ### Auto-Retrying on Remove
 
-Seed will retry removing a service if the removal (ie. `serverless remove`) fails when CloudFormation is throttling API calls. This happens as a result of Serverless Framework repeatedly checking the stack removal progress.
+Seed will retry removing a service if the removal (ie. `serverless remove`) fails due to the following errors:
 
-This error happens when multiple Serverless services are being removed concurrently.
+1. [`The serverless deployment bucket does not exist`]({% link _docs/serverless-errors/the-serverless-deployment-bucket-does-not-exist.md %})
 
-Specifically, it happens because Serverless Framework makes a series of `describeStackEvents` API requests to CloudFormation to poll for the removal status. And when multiple services are being removed concurrently, multiple of these calls are made at the same time, resulting in the above error as CloudFormation throttles the API requests.
+   This error usually happens if the deployment S3 bucket that Serverless Framework uses, has already been removed. In this case Seed will retry the process by removing the CloudFormation template for the stack.
 
-The error message might look like:
+2. [`Rate exceeded`]({% link _docs/serverless-errors/serverless-error-rate-exceeded.md %})
 
-> Serverless Error: Rate exceeded
+   These errors mean that CloudFormation is throttling API calls. This happens as a result of Serverless Framework repeatedly checking the stack removal progress. Specifically, if multiple Serverless services are being removed concurrently.
 
-When Seed detects this error, it'll retry the removal up to 3 times with a 10, 20 and 30 second backoff respectively.
+   Serverless Framework makes a series of `describeStackEvents` API requests to CloudFormation to poll for the removal status. And when multiple services are being removed concurrently, multiple of these calls are made at the same time, resulting in the above error as CloudFormation throttles the API requests.
 
+3. [`Too Many Requests`]({% link _docs/serverless-errors/serverlesserror-too-many-requests.md %})
+
+   This is a rate limit error that can be caused by multiple services. For example, API Gateway has a hard limit of removing 1 custom domain per account every 30 seconds. Seed will simply retry removing the service.
+
+4. [`Export resource cannot be deleted as it is in use`]({% link _docs/serverless-errors/export-resource-cannot-be-deleted-as-it-is-in-use.md %})
+
+   This error can happen when multiple services that depend on each other are being removed. It's usually a timing related issue. Seed will automatically retry the remove process.
+
+Note that, for the above errors Seed will retry the removal process a maximum of 3 times.

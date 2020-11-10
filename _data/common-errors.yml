@@ -27,6 +27,8 @@ toc:
     url: /docs/serverless-errors/the-stack-service-name-is-not-valid.html
   - title: Encountered unsupported property
     url: /docs/serverless-errors/encountered-unsupported-property.html
+  - title: "ServerlessError: Too Many Requests"
+    url: /docs/serverless-errors/serverlesserror-too-many-requests.html
   - title: "API: s3:CreateBucket Access Denied"
     url: /docs/serverless-errors/api-s3-createbucket-access-denied.html
   - title: Function doesn't exist in this service

@@ -49,4 +49,4 @@ Seed will retry removing a service if the removal (ie. `serverless remove`) fail
 
    This error can happen when multiple services that depend on each other are being removed. It's usually a timing related issue. Seed will automatically retry the remove process.
 
-Note that, for the above errors Seed will retry the removal process a maximum of 3 times.
+Note that, for the above errors Seed will retry the removal process a maximum of 3 times. If you find that you are running into some removal related errors repeatedly, [feel free to contact us](mailto:{{ site.email }}) and we'll look into putting in a fix for it.

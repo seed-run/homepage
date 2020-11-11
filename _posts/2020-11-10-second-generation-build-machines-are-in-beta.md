@@ -7,7 +7,7 @@ author: frank
 tweet: 
 ---
 
-The builds in Seed are about to get a lot faster. Today we are rolling out a new generation of build machines in beta. These Second Generation (SG) machines start up nearly 6x faster than our current ones.
+The builds in Seed are about to get a lot faster. Today we are rolling out a new generation of build machines in beta. These Second Generation (SG) machines startup nearly 6x faster than our current ones.
 
 ![Second Generation build machine in build log](/assets/blog/second-generation-build-machines-are-in-beta/second-generation-build-machine-in-build-log.png)
 
@@ -19,7 +19,7 @@ We are now in the process of bringing those changes to your Serverless Framework
 
 ### Second Generation Build Machines
 
-Typically, a build machine takes a little bit of time to provision the resources necessary to start up a new build. This can currently vary from 20s - 40s. While you are not charged for this provisioning time, it can slow down your builds. Especially, if you have [multiple deploy phases]({% link _docs/configuring-deploy-phases.md %}).
+Typically, a build machine takes a little bit of time to provision the resources necessary to startup a new build. This can currently vary from 20s - 40s. While you are not charged for this provisioning time, it can slow down your builds. Especially, if you have [multiple deploy phases]({% link _docs/configuring-deploy-phases.md %}).
 
 The new Second Generation machines reduce this down to 3s - 5s. Making a drastic difference in your overall build times.
 

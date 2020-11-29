@@ -62,10 +62,10 @@ title: Pricing Plans
           </p>
           <div class="numbers">
             <div>
-              <p><span>$</span>300</p>
+              <p><span>$</span>600</p>
               <p>per month</p>
             </div>
-            <p>5 users + $15 per user / mo</p>
+            <p>10 users + $15 per user / mo</p>
           </div>
           <a class="action upgrade" href="{{ site.console_url }}{{ site.upgrade }}">
             Upgrade
@@ -96,7 +96,7 @@ title: Pricing Plans
         <div class="enterprise">
           <h6>Enterprise</h6>
           <div class="cost">
-            <p>$300</p>
+            <p>$600</p>
             <p>per month</p>
           </div>
         </div>
@@ -110,7 +110,7 @@ title: Pricing Plans
           </div>
           <div>1</div>
           <div>3</div>
-          <div>5</div>
+          <div>10</div>
         </div>
         <div class="feature">
           <div class="name">
@@ -141,7 +141,7 @@ title: Pricing Plans
           </div>
           <div>500</div>
           <div>4500</div>
-          <div>15000</div>
+          <div>30000</div>
         </div>
         <div class="feature">
           <div class="name">
@@ -232,7 +232,7 @@ title: Pricing Plans
           </div>
           <div><i class="fa fa-times-circle" aria-hidden="true"></i></div>
           <div><i class="fa fa-times-circle" aria-hidden="true"></i></div>
-          <div><a href="#enterprise-add-ons">Add-on</a></div>
+          <div><a href="#github-enterprise">Add-on</a></div>
         </div>
         <div class="feature">
           <div class="name">
@@ -241,7 +241,7 @@ title: Pricing Plans
           </div>
           <div><i class="fa fa-times-circle" aria-hidden="true"></i></div>
           <div><i class="fa fa-times-circle" aria-hidden="true"></i></div>
-          <div><a href="#enterprise-add-ons">Add-on</a></div>
+          <div><a href="#gitlab-self-managed">Add-on</a></div>
         </div>
       </div>
       <div class="section">
@@ -302,7 +302,7 @@ title: Pricing Plans
           </div>
           <div><i class="fa fa-times-circle" aria-hidden="true"></i></div>
           <div><i class="fa fa-times-circle" aria-hidden="true"></i></div>
-          <div><a href="#enterprise-add-ons">Add-on</a></div>
+          <div><a href="#single-sign-on">Add-on</a></div>
         </div>
         <div class="feature">
           <div class="name">
@@ -358,29 +358,38 @@ title: Pricing Plans
         <div class="feature">
           <div class="name">
             <span class="title expand">Support</span>
-            <p>Community support is available <a href="https://discourse.serverless-stack.com/">via our forums</a>. Standard and priority support options are available over email or chat.</p>
+            <p>Community support is available anytime <a href="https://discourse.serverless-stack.com/">via our forums</a>. Email support is available via <a href="mailto:{{ site.email }}">{{ site.email }}</a>.</p>
           </div>
           <div>Community</div>
-          <div>Standard</div>
-          <div>Priority</div>
+          <div>Email</div>
+          <div>Email</div>
+        </div>
+        <div class="feature">
+          <div class="name">
+            <span class="title expand">Priority support</span>
+            <p>Priority support ensures that your support requests are triaged appropriately by our staff. Available over email and chat.</p>
+          </div>
+          <div><i class="fa fa-times-circle" aria-hidden="true"></i></div>
+          <div><i class="fa fa-times-circle" aria-hidden="true"></i></div>
+          <div><a href="#priority-support">Add-on</a></div>
         </div>
         <div class="feature">
           <div class="name">
             <span class="title expand">Support SLA</span>
-            <p>Support SLA can be added to your plan via an add-on.</p>
+            <p>Get premium support and guaranteed response times by adding a support SLA to your plan.</p>
           </div>
           <div><i class="fa fa-times-circle" aria-hidden="true"></i></div>
           <div><i class="fa fa-times-circle" aria-hidden="true"></i></div>
-          <div><a href="#enterprise-add-ons">Add-on</a></div>
+          <div><a href="#support-sla">Add-on</a></div>
         </div>
         <div class="feature">
           <div class="name">
             <span class="title expand">Uptime SLA</span>
-            <p>Uptime SLA can be added to your plan via an add-on.</p>
+            <p>Get guaranteed performance and stability by adding our uptime SLA to your plan.</p>
           </div>
           <div><i class="fa fa-times-circle" aria-hidden="true"></i></div>
           <div><i class="fa fa-times-circle" aria-hidden="true"></i></div>
-          <div><a href="#enterprise-add-ons">Add-on</a></div>
+          <div><a href="#uptime-sla">Add-on</a></div>
         </div>
       </div>
     </div>
@@ -409,11 +418,11 @@ title: Pricing Plans
   </div>
 
   <div class="addons">
-    <hr id="enterprise-add-ons" />
+    <hr id="add-ons" />
     <h4>Enterprise Add-Ons</h4>
     <p>Upgrade right from <a href="{{ site.console_url }}{{ site.upgrade }}">your console</a>. Or <a href="mailto:{{ site.sales_email }}">contact us</a> if you need any help.</p>
     <div class="list">
-      <div class="addon">
+      <div id="github-enterprise" class="addon">
         <div class="icon">
           <i class="fa fa-git" aria-hidden="true"></i>
         </div>
@@ -443,7 +452,7 @@ title: Pricing Plans
           </p>
         </div>
       </div>
-      <div class="addon">
+      <div id="gitlab-self-managed" class="addon">
         <div class="icon">
           <i class="fa fa-git" aria-hidden="true"></i>
         </div>
@@ -473,7 +482,7 @@ title: Pricing Plans
           </p>
         </div>
       </div>
-      <div class="addon">
+      <div id="single-sign-on" class="addon">
         <div class="icon">
           <i class="fa fa-key" aria-hidden="true"></i>
         </div>
@@ -507,25 +516,25 @@ title: Pricing Plans
           </p>
         </div>
       </div>
-      <div class="addon">
+      <div id="priority-support" class="addon">
         <div class="icon">
-          <i class="fa fa-calendar-check-o" aria-hidden="true"></i>
+          <i class="fa fa-life-ring" aria-hidden="true"></i>
         </div>
-        <h6>Uptime SLA</h6>
-        <p>Seed build servers and web console backed by a 99.99% SLA.</p>
+        <h6>Priority Support</h6>
+        <p>Ensure that your support requests are tended to with higher priority.</p>
         <hr />
         <div class="features">
           <span>
             <i class="fa fa-check-circle" aria-hidden="true"></i>
-            99.99%
+            Email
           </span>
           <span>
             <i class="fa fa-check-circle" aria-hidden="true"></i>
-            Build Servers
+            Live chat
           </span>
           <span>
             <i class="fa fa-check-circle" aria-hidden="true"></i>
-            Web Console
+            Priority response
           </span>
         </div>
         <div class="price">
@@ -541,7 +550,7 @@ title: Pricing Plans
           </p>
         </div>
       </div>
-      <div class="addon">
+      <div id="support-sla" class="addon">
         <div class="icon">
           <i class="fa fa-life-ring" aria-hidden="true"></i>
         </div>
@@ -564,7 +573,7 @@ title: Pricing Plans
         </div>
         <div class="price">
           <div class="numbers">
-            <span><span>$</span>1000</span>
+            <span><span>$</span>4000</span>
             <span>/ month</span>
           </div>
           <a class="action signup" href="{{ site.console_url }}{{ site.upgrade }}">
@@ -575,15 +584,74 @@ title: Pricing Plans
           </p>
         </div>
       </div>
+      <div id="uptime-sla" class="addon">
+        <div class="icon">
+          <i class="fa fa-calendar-check-o" aria-hidden="true"></i>
+        </div>
+        <h6>Uptime SLA</h6>
+        <p>Seed build servers and web console backed by a 99.99% SLA.</p>
+        <hr />
+        <div class="features">
+          <span>
+            <i class="fa fa-check-circle" aria-hidden="true"></i>
+            99.99%
+          </span>
+          <span>
+            <i class="fa fa-check-circle" aria-hidden="true"></i>
+            Build Servers
+          </span>
+          <span>
+            <i class="fa fa-check-circle" aria-hidden="true"></i>
+            Web Console
+          </span>
+        </div>
+        <div class="price">
+          <div class="numbers">
+            <span><span>$</span>2000</span>
+            <span>/ month</span>
+          </div>
+          <a class="action signup" href="{{ site.console_url }}{{ site.upgrade }}">
+            Upgrade
+          </a>
+          <p class="email">
+            <a href="mailto:{{ site.sales_email }}">Contact sales</a>
+          </p>
+        </div>
+      </div>
+      <div id="concierge-onboarding" class="addon">
+        <div class="icon">
+          <i class="fa fa-puzzle-piece" aria-hidden="true"></i>
+        </div>
+        <h6>Concierge Onboarding</h6>
+        <p>Ensure that your projects are configured on Seed the right way.</p>
+        <hr />
+        <div class="features">
+          <span>
+            <i class="fa fa-check-circle" aria-hidden="true"></i>
+            Migration plans
+          </span>
+          <span>
+            <i class="fa fa-check-circle" aria-hidden="true"></i>
+            Connect existing pipelines
+          </span>
+        </div>
+        <div class="price">
+          <a class="action learn" href="{% link concierge-onboarding.md %}">
+            Learn more <i class="fa fa-chevron-right" aria-hidden="true"></i>
+          </a>
+          <p class="email">
+            <a href="mailto:{{ site.sales_email }}">Get a quote</a>
+          </p>
+        </div>
+      </div>
     </div>
   </div>
 
   <div class="contact">
-    <p>Need help transitioning an existing setup?</p>
-    <p>Our engineers can help with that.</p>
+    <p>Need some help putting together the right plan?</p>
     <div class="controls">
-      <a class="action" href="{% link concierge-onboarding.md %}">
-        Learn about Concierge Onboarding
+      <a class="sales" href="mailto:{{ site.sales_email }}">
+        Contact Sales
       </a>
     </div>
   </div>

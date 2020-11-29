@@ -629,6 +629,7 @@ main .pricing {
 
           a.action {
             @include action-button-brand;
+
             margin: 0 $spacing-unit;
             padding: 10px;
             box-shadow: none;
@@ -643,11 +644,26 @@ main .pricing {
             }
           }
 
+          a.action.learn {
+            @include action-button-dark;
+            padding: 10px;
+            box-shadow: none;
+            font-size: 13px;
+
+            i.fa {
+              font-size: 12px;
+            }
+          }
+
           p.email {
             margin: 5px 0 8px;
             font-size: 14px;
             text-align: center;
             color: $tertiary-text-color;
+
+            &:nth-child(2) {
+              margin-bottom: 0;
+            }
 
             @include media-query($on-palm) {
               display: none;
@@ -671,25 +687,19 @@ main .pricing {
       margin-bottom: 0;
       font-size: 22px;
       color: $secondary-text-color;
-
-      &:first-child {
-        margin-bottom: 3px;
-      }
     }
 
     div.controls {
       margin-top: $spacing-unit / 2 + 5px;
-      a.action {
-        @include action-button-dark;
-        padding: 8px 16px;
-        font-size: 16px;
-        line-height: 1.8;
-        border-width: 1px;
-      }
+      a.sales {
+        @include action-button;
+        font-size: 18px;
+        padding: 14px 26px;
+        width: 222px;
 
-      @include media-query($on-palm) {
-        a.action {
-          font-size: 14px;
+        @include media-query($on-palm) {
+        font-size: 18px;
+          padding: 10px 22px;
         }
       }
     }

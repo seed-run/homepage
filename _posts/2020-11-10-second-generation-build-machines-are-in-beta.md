@@ -4,7 +4,7 @@ title: Second Generation build machines are in beta
 categories: news
 image: assets/social-cards/second-generation-build-machines.png
 author: frank
-tweet: 
+tweet: https://twitter.com/SEED_run/status/1326526096456736768
 ---
 
 The builds in Seed are about to get a lot faster. Today we are rolling out a new generation of build machines in beta. These Second Generation (SG) machines startup nearly 6x faster than our current ones.

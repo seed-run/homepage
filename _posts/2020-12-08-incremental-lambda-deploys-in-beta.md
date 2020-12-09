@@ -4,7 +4,7 @@ title: Incremental Lambda Deploys in Beta
 categories: news
 image: assets/social-cards/incremental-deploys.png
 author: frank
-tweet: 
+tweet: https://twitter.com/SEED_run/status/1336672958073479168
 ---
 
 We've got an awesome new update in the works. Seed can now drastically speed up your builds by only deploying the Lambda functions that've been updated.

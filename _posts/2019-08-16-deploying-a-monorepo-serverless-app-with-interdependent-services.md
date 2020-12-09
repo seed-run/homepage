@@ -79,4 +79,4 @@ Say you add a new SNS topic in `serviceA`, and `serviceB` and `serviceC` once ag
 
 #### Summary
 
-And that's all there is to it! The interdependencies are created by services referencing resources that are created in another service. When you first deploy the app, make sure the service that is creating the resource is deployed first. With Seed, we handle this using the concept of [Deploy Phases]({% link _docs/configuring-deploy-phases.md %}) and to keep your builds fast, we [check if a service has been updated]({% link _docs/deploying-monorepo-apps.md %}).
+And that's all there is to it! The interdependencies are created by services referencing resources that are created in another service. When you first deploy the app, make sure the service that is creating the resource is deployed first. With Seed, we handle this using the concept of [Deploy Phases]({% link _docs/configuring-deploy-phases.md %}) and to keep your builds fast, we [check if a service has been updated]({% link _docs/incremental-service-deploys.md %}).

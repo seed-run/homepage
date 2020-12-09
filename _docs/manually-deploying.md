@@ -29,7 +29,7 @@ Just as above, you'll be asked to confirm the branch or to select one.
 
 ### Force Deploys
 
-By default, Seed will only deploy the services that have been updated. You can read more about [how Seed figures out which services need to be deployed here]({% link _docs/deploying-monorepo-apps.md %}). To skip this check and deploy all your services, select the **Force deploy** option.
+By default, Seed will only deploy the services and Lambda functions that have been updated. You can [read more about Incremental Deploys here]({% link _docs/what-are-incremental-deploys.md %}). To skip this check and deploy all your services and Lambdas, select the **Force deploy** option.
 
 ![Select force option](/assets/docs/manually-deploying/select-force-option.png)
 

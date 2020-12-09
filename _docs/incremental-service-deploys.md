@@ -1,11 +1,12 @@
 ---
 layout: docs
-title: Deploying Monorepo Apps
+title: Incremental Service Deploys
+redirect_from: /docs/deploying-monorepo-apps.html
 ---
 
 A monorepo Serverless app is one where multiple Serverless services are in the same repo. This means that a commit will trigger a deployment to all the services in [Seed](/). However, this can be a slow process if you are only trying to deploy a change to a single service.
 
-To fix this, Seed will check to see if a service has been updated, before deploying it. This greatly speeds up your builds and also makes deployments cost-effective.
+To fix this, Seed uses Incremental Service Deploys. It'll check to see if a service has been updated, before deploying it. This greatly speeds up your builds and also makes deployments cost-effective.
 
 There are two algorithms Seed uses to check if a service has been updated:
 

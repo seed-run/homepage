@@ -65,7 +65,7 @@ Apart from the build hooks, there are a couple of other options that can help yo
 
 #### Checking code changes
 
-Seed by default checks the Git log to see if a service has been updated, before deploying it. You can read more about this in our [Deploying Monorepo Apps]({% link _docs/deploying-monorepo-apps.md %}) chapter.
+Seed by default checks the Git log to see if a service has been updated, before deploying it. You can read more about this in our [Deploying Monorepo Apps]({% link _docs/incremental-service-deploys.md %}) chapter.
 
 Add the following to either, disable this check:
 

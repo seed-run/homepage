@@ -18,7 +18,7 @@ However, there might be times when you just need to update a single service. In 
 
 To fix this issue, Seed will check your commit history to see if any of the files (with respect to the current service) has been changed. If there are no changes, Seed will skip the entire build process for that service. This means that your deployments will now be drastically faster (and far more cost-effective).
 
-The algorithm that Seed will use to see if the service has been updated, is fairly straightforward but it's worth taking a look. We have added a detailed chapter on this over on our docs; [Deploying Monorepo Apps]({% link _docs/deploying-monorepo-apps.md %}).
+The algorithm that Seed will use to see if the service has been updated, is fairly straightforward but it's worth taking a look. We have added a detailed chapter on this over on our docs; [Deploying Monorepo Apps]({% link _docs/incremental-service-deploys.md %}).
 
 ### Rollout Plan
 

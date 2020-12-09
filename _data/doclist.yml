@@ -31,8 +31,6 @@ toc:
     subfolderitems:
       - page: Monorepo apps in Seed
         url: /docs/mono-repo-apps-in-seed.html
-      - page: Deploying monorepo apps
-        url: /docs/deploying-monorepo-apps.html
       - page: Configuring deploy phases
         url: /docs/configuring-deploy-phases.html
       - page: Adding a post-deploy phase
@@ -97,6 +95,14 @@ toc:
         url: /docs/manually-deploying.html
       - page: Cancelling builds
         url: /docs/cancelling-builds.html
+  - title: Incremental deploys
+    subfolderitems:
+      - page: What are Incremental Deploys
+        url: /docs/what-are-incremental-deploys.html
+      - page: Incremental Service Deploys
+        url: /docs/incremental-service-deploys.html
+      - page: Incremental Lambda Deploys
+        url: /docs/incremental-lambda-deploys.html
   - title: Promoting and rolling back 
     subfolderitems:
       - page: Generating trusted builds

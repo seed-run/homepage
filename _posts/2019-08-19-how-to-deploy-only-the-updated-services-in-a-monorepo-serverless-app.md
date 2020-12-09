@@ -58,7 +58,7 @@ This will give you a list of files that have changed between the two commits. Wi
 
 Your repo setup can look different, but the general concept holds true. You have to figure out which file change affect an individual service, and which affects all the services. The advantage of this strategy is that you know upfront which services can be skipped. Allowing you to skip the entire build process!
 
-The directory structure laid out in the example above is the monorepo setup Seed recommends. It is simple and scales well as the number of services increase. And if you follow this setup, Seed can automatically figure out the changed services and only deploy those that have been updated. You can [read more about how Seed handles monorepo deployments here]({% link _docs/deploying-monorepo-apps.md %}).
+The directory structure laid out in the example above is the monorepo setup Seed recommends. It is simple and scales well as the number of services increase. And if you follow this setup, Seed can automatically figure out the changed services and only deploy those that have been updated. You can [read more about how Seed handles monorepo deployments here]({% link _docs/incremental-service-deploys.md %}).
 
 #### Conclusion
 

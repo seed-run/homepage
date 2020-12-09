@@ -19,7 +19,7 @@ To configure a stage with a custom domain, Seed will automatically create the SS
 
 > Domains need to be managed by Amazon Route 53 for Seed to configure the custom domain
 
-In addition to Rest API endpoints, Seed also supports WebSocket endpoints. The regional and edge-optimized versions of these are supported as well.
+Seed supports both regional and edge-optimized API endpoints for custom domains.
 
 Let's look at how to add a custom domain for your app.
 

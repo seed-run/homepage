@@ -16,8 +16,10 @@ layout: lander
   <div class="hero-container">
     <div class="hero">
       <div class="copy">
-        <h1>For ambitious startups building with Serverless</h1>
-        <h3>Seed helps your team manage environments, git push to deploy, and sends you error alerts for your Serverless apps.</h3>
+        <h1>How teams use Serverless</h1>
+        <h3>
+          Seed makes it painless for teams to use Serverless. Our custom deployment infrastructure can <b>speed up your deployments 100x</b>. And our dashboard makes it easy to <b>manage your environments</b>.
+        </h3>
         <div class="controls">
           <div class="col1">
             <a class="signup" {% include signup-link.html %}>
@@ -50,32 +52,20 @@ layout: lander
   <hr />
 
   <div class="feature">
-    {% include graphics/environments.html %}
+    {% include graphics/incremental-deploys.html %}
     <div class="body">
       <div class="header">
-        <h2>Manage your environments</h2>
-        <p>Create and manage your team&apos;s dev, staging, and production environments.</p>
+        <div class="icon"><i class="fa fa-bolt" aria-hidden="true"></i></div>
+        <h2>Incremental deploys</h2>
+        <p>Custom infrastructure for up to 100x faster deployments.</p>
       </div>
-      <ul class="points">
-        <li>
-          <div class="icon">
-            <i class="fa fa-th" aria-hidden="true"></i>
-          </div>
-          <div class="copy">
-            <h5>Environments to match the way you work</h5>
-            <p>You are trying to manage a couple of environments for your team. They might be in different AWS accounts. Or they might be deployed to multiple regions. Seed will help you set it up exactly the way you want.</p>
-          </div>
-        </li>
-        <li>
-          <div class="icon">
-            <i class="fa fa-eye" aria-hidden="true"></i>
-          </div>
-          <div class="copy">
-            <h5>Preview environments made easy</h5>
-            <p>Seed can automatically create a new environment when a pull request is created. And when you close that PR, it'll tear down the environment as well. Perfect for testing that new feature you've been working on.</p>
-          </div>
-        </li>
-      </ul>
+      <p class="copy">
+        Do your deployments keep getting slower? Seed's custom infrastructure only deploys the services and Lambdas that've been updated. So you can spend more time developing and less time deploying.
+      </p>
+      <a class="learn" href="{% link _docs/what-are-incremental-deploys.md %}">
+        More about Incremental Deploys
+        <i class="fa fa-chevron-right" aria-hidden="true"></i>
+      </a>
     </div>
   </div>
 
@@ -83,29 +73,35 @@ layout: lander
     {% include graphics/mini-pipeline.html %}
     <div class="body">
       <div class="header">
-        <h2>Git push to deploy</h2>
-        <p>Seed is a fully-configured CI/CD pipeline for Serverless apps.</p>
+        <div class="icon"><i class="fa fa-code-fork" aria-hidden="true"></i></div>
+        <h2>Zero config pipelines</h2>
+        <p>A fully-configured CI/CD pipeline for Serverless apps.</p>
       </div>
-      <ul class="points">
-        <li>
-          <div class="icon">
-            <i class="fa fa-code-fork" aria-hidden="true"></i>
-          </div>
-          <div class="copy">
-            <h5>Ready-to-use Git workflow</h5>
-            <p>Don't spend a whole week trying to set up your CI/CD pipeline. Seed supports all the standard Git-based workflows out-of-the-box. Simply connect your Git repo and you are ready to deploy.</p>
-          </div>
-        </li>
-        <li>
-          <div class="icon">
-            <i class="fa fa-folder" aria-hidden="true"></i>
-          </div>
-          <div class="copy">
-            <h5>Built for monorepo apps</h5>
-            <p>Deploying monorepo apps with a handful of services can be slow and awkward. Not with Seed. It’ll deploy all your services concurrently. While skipping the ones that haven’t been updated.</p>
-          </div>
-        </li>
-      </ul>
+      <p class="copy">
+        Don't waste your time with complicated build scripts. Seed will deploy your app to multiple environments, with different AWS accounts and regions. All completely out-of-the-box.
+      </p>
+      <a class="learn" href="{% link _docs/index.md %}">
+        Deploy without a build script
+        <i class="fa fa-chevron-right" aria-hidden="true"></i>
+      </a>
+    </div>
+  </div>
+
+  <div class="feature">
+    {% include graphics/ci-integration.html %}
+    <div class="body">
+      <div class="header">
+        <div class="icon"><i class="fa fa-plug" aria-hidden="true"></i></div>
+        <h2>Connect to your workflow</h2>
+        <p>Integrate Seed into your CI/CD pipeline.</p>
+      </div>
+      <p class="copy">
+        Do you have an existing pipeline and just want to fix your Serverless deployments? Not to worry, you can set it up so that Seed will only deploy your app once the rest of your pipeline is ready.
+      </p>
+      <a class="learn" href="{% link _docs/connect-your-own-ci.md %}">
+        Connect Seed to your pipeline
+        <i class="fa fa-chevron-right" aria-hidden="true"></i>
+      </a>
     </div>
   </div>
 
@@ -113,29 +109,17 @@ layout: lander
     {% include graphics/issues.html %}
     <div class="body">
       <div class="header">
-        <h2>Real-time Lambda alerts<span>New</span></h2>
-        <p>Get alerts through Slack or email when something goes wrong.</p>
+        <div class="icon"><i class="fa fa-dashboard" aria-hidden="true"></i></div>
+        <h2>Real-time Lambda alerts</h2>
+        <p>Get notified when something goes wrong.</p>
       </div>
-      <ul class="points">
-        <li>
-          <div class="icon">
-            <i class="fa fa-flash" aria-hidden="true"></i>
-          </div>
-          <div class="copy">
-            <h5>Nothing to install</h5>
-            <p>Just `console.error` to report an error! There are no 3rd party SDKs, agents, or libraries to install. It's completely native. And it detects all Lambda failures. Including timeouts and out of memory errors.</p>
-          </div>
-        </li>
-        <li>
-          <div class="icon">
-            <i class="fa fa-usd" aria-hidden="true"></i>
-          </div>
-          <div class="copy">
-            <h5>Free and unlimited</h5>
-            <p>Being able to monitor your Lambda functions is essential to building great Serverless apps. Which is why it's available for free on Seed. You shouldn't have to pay more for monitoring than your entire Serverless infrastructure!</p>
-          </div>
-        </li>
-      </ul>
+      <p class="copy">
+        3rd party monitoring tools can be expensive and complicated. Seed will automatically send you real-time Lambda error alerts. And you can even `console.error` to report an issue.
+      </p>
+      <a class="learn" href="{% link _docs/issues-and-alerts.md %}">
+        Monitor your Lambda functions
+        <i class="fa fa-chevron-right" aria-hidden="true"></i>
+      </a>
     </div>
   </div>
 

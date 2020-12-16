@@ -628,6 +628,15 @@ $on-laptop:                 800px;
         }
       }
     }
+
+    & > .footer {
+      margin-top: 4px;
+      text-align: center;
+      .account {
+        font-size: 12px;
+        color: $quaternary-text-color;
+      }
+    }
   }
 }
 
@@ -763,11 +772,315 @@ $on-laptop:                 800px;
   
 }
 
+@mixin incremental-deploys-graphic {
+  $card-bkg: #FFFCFA;
+
+  & > .container {
+    display: flex;
+    align-items: center;
+  }
+
+  .tag {
+    position: relative;
+    top: 18px;
+
+    hr {
+      margin: 0 0 0 50%;
+      width: 50%;
+      border-width: 4px;
+      border-color: $divider-color;
+    }
+    .separator {
+      margin-left: 50%;
+      position: absolute;
+      top: -3px;
+      left: -6px;
+      width: 10px;
+      height: 10px;
+      background-color: $divider-color;
+      border-radius: 50%;
+    }
+    .copy {
+      padding: 14px 10px 10px;
+      display: inline-block;
+      color: $tertiary-text-color;
+      line-height: 1;
+      font-size: 12px;
+      white-space: nowrap;
+
+      &.commit {
+        font-size: 11px;
+        font-family: $code-font-family;
+      }
+    }
+
+    &.end {
+      hr {
+        margin-left: 0;
+      }
+      .copy {
+        left: auto;
+        right: 0;
+      }
+    }
+  }
+
+  .pointer {
+    flex: 0 0 5px;
+    position: relative;
+
+    hr {
+      margin: 0;
+      border-width: 4px;
+      border-color: $divider-color;
+    }
+
+    &.middle {
+      flex: 0 0 $spacing-unit - 10px;
+    }
+  }
+
+  .phase {
+    margin: 0;
+    padding: $spacing-unit / 2;
+    background-color: $divider-color-light;
+    flex: 0 0 160px;
+    width: 160px;
+    border-radius: 6px;
+
+    .service {
+      margin-bottom: $spacing-unit / 2;
+      background-color: $card-bkg;
+      border-radius: 6px;
+      padding: 6px 10px 8px;
+      box-shadow: 0 1px 2px rgba(46, 45, 51, 0.02),
+                  0 2px 4px rgba(46, 45, 51, 0.03),
+                  0 3px 6px rgba(46, 45, 51, 0.03),
+                  0 4px 8px rgba(46, 45, 51, 0.03);
+
+      &:last-child {
+        margin-bottom: 0;
+      }
+
+      .status {
+        padding-left: 7px;
+        display: flex;
+        align-items: center;
+
+        i.fa {
+          color: $grey-color-light;
+        }
+
+        .content {
+          margin-left: 10px;
+
+          p:first-child {
+            margin-bottom: 1px;
+            white-space: nowrap;
+            font-weight: 500;
+            color: $secondary-text-color;
+          }
+          p:last-child {
+            margin-bottom: 0;
+            font-size: 12px;
+            color: $grey-color-light;
+            white-space: nowrap;
+          }
+        }
+      }
+
+      &.deployed {
+        padding-bottom: 10px;
+        .status {
+          i.fa {
+            color: #6FA492;
+            text-shadow: 0 0 3px rgba(111, 164, 146, 0.4);
+          }
+          .content {
+            p:first-child {
+              color: $text-color;
+            }
+            p:last-child {
+              color: $tertiary-text-color;
+            }
+          }
+        }
+      }
+
+      .lambdas {
+        margin-top: 8px;
+        border-radius: 3px;
+        background-color: darken($card-bkg, 2%);
+
+        hr {
+          margin: 0;
+          border-width: 2px;
+          border-color: $card-bkg;
+        }
+      }
+
+      .lambda {
+        display: flex;
+        align-items: center;
+        padding: 7px 7px 7px 10px;
+
+        b {
+          width: 8px;
+          height: 8px;
+          border-radius: 50%;
+          background-color: $divider-color;
+        }
+
+        .content {
+          margin-left: 14px;
+          margin-bottom: 0;
+          white-space: nowrap;
+          font-size: 14px;
+          color: $grey-color-light;
+        }
+
+        &.deployed {
+          b {
+            background-color: #6FA492;
+            box-shadow: 0 0 3px 0 rgba(111, 164, 146, 0.6);
+            animation: phase-lambda-glow 1.5s infinite alternate;
+
+            @keyframes phase-lambda-glow {
+              from {
+                opacity: 0.4;
+              }
+              to {
+                opacity: 1;
+              }
+            }
+          }
+          .content {
+            color: $text-color;
+          }
+        }
+      }
+    }
+
+  }
+}
+
+@mixin ci-integration-graphic {
+  .github-checks {
+    width: 520px;
+    border-radius: 6px;
+    border: 1px solid #34D058;
+    background-color: white;
+    overflow: hidden;
+    box-shadow: 0 1px 1px rgba(46, 45, 51, 0.01),
+                0 2px 4px rgba(46, 45, 51, 0.01),
+                0 4px 8px rgba(46, 45, 51, 0.03),
+                0 8px 16px rgba(46, 45, 51, 0.05),
+                0 16px 32px rgba(46, 45, 51, 0.07);
+
+    .header {
+      padding: $spacing-unit / 2;
+      display: flex;
+
+      .check-icon {
+        margin-top: 2px;
+        margin-right: 10px;
+        height: 30px;
+        width: 30px;
+        background-color: #2EA44F;
+        color: white;
+        text-align: center;
+        border: 1px solid transparent;
+        border-radius: 50%;
+        box-sizing: border-box;
+
+        svg {
+          margin: 6px auto 0;
+          display: block;
+          fill: currentColor;
+        }
+      }
+
+      .content {
+        p:first-child {
+          margin-bottom: 0;
+          font-size: 16px;
+          font-weight: 500;
+        }
+        p:last-child {
+          margin-bottom: 0;
+          font-size: 14px;
+          color: $secondary-text-color;
+        }
+      }
+    }
+
+    .check {
+      padding: 10px $spacing-unit / 2;
+      border-top: 1px solid $divider-color;
+      background-color: $divider-color-light;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+
+      .content {
+        display: flex;
+        align-items: center;
+      }
+
+      svg {
+        margin: 0 17px 0 7px;
+        color: #22863A;
+        fill: currentColor;
+      }
+
+      img {
+        border-radius: 6px;
+      }
+
+      .name {
+        margin-left: 10px;
+        font-size: 14px;
+        font-weight: 500;
+      }
+      .status {
+        margin-left: 8px;
+        color: $tertiary-text-color;
+        font-size: 13px;
+      }
+
+      .link {
+        font-size: 12px;
+        color: #0366D6;
+        opacity: 0.8;
+      }
+    }
+
+    .footer {
+      border-top: 1px solid $divider-color;
+      padding: $spacing-unit / 2;
+      display: flex;
+      align-items: center;
+
+      svg {
+        margin: 0 17px 0 7px;
+        color: #22863A;
+        fill: currentColor;
+      }
+
+      p {
+        margin-bottom: 0;
+        font-size: 14px;
+        color: $secondary-text-color;
+      }
+    }
+  }
+}
+
 @mixin issues-graphic {
   $body-color: #FCF7F6;
 
   & > .container {
-    width: 600px;
+    width: 540px;
   }
 
   .header {
@@ -797,11 +1110,6 @@ $on-laptop:                 800px;
         flex: 0 0 auto;
         width: 80px;
         text-align: center;
-      }
-      &:nth-child(4) {
-        flex: 0 0 auto;
-        width: 70px;
-        text-align: right;
       }
     }
   }
@@ -931,13 +1239,6 @@ $on-laptop:                 800px;
       text-align: center;
       font-size: 14px;
       color: $tertiary-text-color;
-    }
-    .time {
-      flex: 0 0 auto;
-      width: 70px;
-      color: $quaternary-text-color;
-      font-size: 13px;
-      text-align: right;
     }
   }
   
@@ -1429,11 +1730,12 @@ main > .header {
     padding-top: 1.5 * $spacing-unit;
     letter-spacing: -1px;
     font-family: $base-font-family;
-    font-size: 52px;
-    line-height: 1.35;
-    color: lighten($text-color, 10%);
+    font-size: 64px;
+    line-height: 1.2;
+    color: $text-color;
     text-align: left;
     font-weight: 500;
+    max-width: 450px;
 
     @include media-query($on-palm) {
       font-size: 32px;
@@ -1446,9 +1748,14 @@ main > .header {
   h3 {
     margin: 0;
     font-family: $base-font-family;
-    color: lighten($secondary-text-color, 5%);
-    font-size: 18px;
+    color: $secondary-text-color;
+    font-size: 20px;
     text-align: left;
+
+    b {
+      font-weight: 500;
+      color: $text-color;
+    }
 
     @include media-query($on-palm) {
       text-align: center;
@@ -1456,7 +1763,7 @@ main > .header {
   }
 
   div.controls {
-    margin-top: $spacing-unit;
+    margin-top: $spacing-unit - 5px;
     display: flex;
     align-items: flex-start;
 
@@ -1618,8 +1925,6 @@ main > .action {
 // FEATURES //
 //////////////
 main > .features {
-  padding-bottom: $spacing-unit * 3.5;
-
   @include media-query($on-palm) {
     padding-bottom: $spacing-unit * 2;
   }
@@ -1644,7 +1949,7 @@ main > .features {
   }
 
 
-  hr {
+  & > hr {
     margin: $spacing-unit * 2.5 auto;
     max-width: 800px;
     border-color: darken($hero-bkg-color, 10%);
@@ -1658,8 +1963,8 @@ main > .features {
 
   .feature {
     overflow: hidden;
-
     margin: 0 auto;
+    padding-bottom: 3.5 * $spacing-unit;
     display: flex;
     max-width: $content-width;
     align-items: center;
@@ -1669,17 +1974,13 @@ main > .features {
       justify-content: flex-start;
     }
 
-    &+.feature {
-      margin-top: 3 * $spacing-unit;
-    }
-
     @include media-query($on-palm) {
       display: block;
       padding-bottom: $spacing-unit;
       border-bottom: 1px solid $divider-color;
 
       &+.feature {
-        margin-top: $spacing-unit;
+        padding-top: $spacing-unit;
       }
 
       &:last-child {
@@ -1689,8 +1990,7 @@ main > .features {
     }
 
     & > div.body {
-      margin-right: $spacing-unit;
-      margin-left: 2 * $spacing-unit;
+      margin: 0 2 * $spacing-unit;
       min-width: 400px;
 
       @include media-query($on-palm) {
@@ -1701,8 +2001,26 @@ main > .features {
       & > div.header {
         text-align: left;
 
+        .icon {
+          margin-bottom: 10px;
+          width: 48px;
+          height: 48px;
+          border-radius: 50%;
+          background-color: lighten($brand-color, 50%);
+          text-align: center;
+
+          i.fa {
+            color: $brand-color;
+            font-size: 20px;
+            line-height: 48px;
+
+            &.fa-code-fork { margin-left: 1px; }
+            &.fa-dashboard { margin-top: -1px; }
+          }
+        }
+
         h2 {
-          margin: 0 0 2px;
+          margin: 0;
           font-size: 38px;
 
           @include media-query($on-palm) {
@@ -1725,75 +2043,28 @@ main > .features {
         p {
           margin: 0;
           font-size: 20px;
-          color: $secondary-text-color;
+          color: $tertiary-text-color;
           line-height: 1.8;
         }
       }
 
-      ul.points {
-        margin: $spacing-unit + 5px 0 0;
-        padding: 0;
-        list-style: none;
+      .copy {
+        margin: $spacing-unit / 2 0 10px;
+        color: $secondary-text-color;
+        line-height: 1.7;
+      }
 
-        li {
-          display: flex;
-          align-items: flex-start;
-
-          div.icon {
-            $size: 28px;
-
-            margin-top: 1px;
-            margin-right: 10px;
-            flex: 0 0 auto;
-            width: $size;
-            height: $size;
-            border-radius: 50%;
-            background-color: lighten($brand-color, 20%);
-            text-align: center;
-
-            i {
-              color: white;
-              font-size: 14px;
-              line-height: $size;
-
-              &.fa-code-fork { margin-left: 2px; }
-              &.fa-folder { margin-left: 1px; }
-              &.fa-th { margin-top: 1px; }
-              &.fa-search { margin-top: -1px; }
-              &.fa-link { margin-left: 1px; }
-              &.fa-filter { margin-top: 1px; }
-              &.fa-tachometer { margin-top: -1px; }
-              &.fa-newspaper-o { margin-top: 1px; }
-            }
-
-            img {
-              padding: 20px 0 18px;
-            }
-          }
-
-          h5 {
-            margin: 0 0 5px;
-            font-size: 18px;
-            font-family: $base-font-family;
-            font-weight: 500;
-          }
-          p {
-            margin-bottom: 0;
-            color: $secondary-text-color;
-            line-height: 1.7;
-          }
-
-          &+li {
-            margin-top: $spacing-unit - 5px;
-          }
+      .learn {
+        i.fa {
+          font-size: 13px;
+          opacity: 0.9;
         }
       }
+
     }
 
     &:nth-child(even) > div.body {
       order: -1;
-      margin-left: $spacing-unit;
-      margin-right: 2 * $spacing-unit;
 
       @include media-query($on-palm) {
         margin: 0 $spacing-unit / 2;
@@ -1827,9 +2098,11 @@ main > .features {
       }
     }
 
-    div.graphic.mini-pipeline   { @include mini-pipeline; }
-    div.graphic.issues          { @include issues-graphic; }
-    div.graphic.environments    { @include environments-graphic; }
+    div.graphic.mini-pipeline       { @include mini-pipeline; }
+    div.graphic.issues              { @include issues-graphic; }
+    div.graphic.environments        { @include environments-graphic; }
+    div.graphic.incremental-deploys { @include incremental-deploys-graphic; }
+    div.graphic.ci-integration      { @include ci-integration-graphic; }
   }
 
   div.action {
@@ -2025,7 +2298,6 @@ main > .testimonials {
 // TUTORIAL //
 //////////////
 main > .tutorial {
-  padding: 0 $spacing-unit;
   border-top: 2px solid darken($hero-bkg-color, 5%);
   overflow: hidden;
 
@@ -2048,7 +2320,7 @@ main > .tutorial {
   }
 
   .copy {
-    padding-right: $spacing-unit * 1.5 + 5px;
+    padding: 0 $spacing-unit * 1.5 + 5px 0 $spacing-unit;
     box-sizing: border-box;
     flex: 0 0 55%;
     font-size: 18px;
@@ -2057,7 +2329,7 @@ main > .tutorial {
     @include media-query($on-palm) {
       text-align: center;
       flex: auto;
-      padding-right: 0;
+      padding: 0;
     }
 
     h3 {
@@ -2203,7 +2475,7 @@ main > .closing-action {
     }
     a.plans {
       margin-right: $spacing-unit / 2 + 1px;
-      @include action-button-dark;
+      @include action-button-brand;
       padding: 14px 26px;
       width: 222px;
 

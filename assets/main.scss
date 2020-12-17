@@ -778,6 +778,15 @@ $on-laptop:                 800px;
   & > .container {
     display: flex;
     align-items: center;
+    @include media-query($on-palm) {
+      justify-content: center;
+    }
+  }
+
+  @include media-query($on-palm) {
+    .hide-mobile {
+      display: none;
+    }
   }
 
   .tag {

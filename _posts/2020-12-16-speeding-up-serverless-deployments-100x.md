@@ -4,7 +4,7 @@ title: Speeding up Serverless deployments 100x
 categories: news
 image: assets/social-cards/100x-faster-deploys.png
 author: frank
-tweet: 
+tweet: https://twitter.com/SEED_run/status/1339578757481377793
 ---
 
 In this post we'll be looking at how Seed can speed up the deployment time of your Serverless app by 100x. It'll bring into focus all the improvements that we've rolled out over the past couple of months.

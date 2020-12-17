@@ -98,7 +98,7 @@ We can also kick things up a notch by using a [more powerful machine]({% link _d
 
 Now our incremental deploys should take only 15 seconds!
 
-## Conclusion
+## Summary
 
 The above optimizations are a culmination of efforts over the last couple of months. Seed's custom infrastructure can now deploy your Serverless apps 100x faster. Fixing one of the biggest issues of using Serverless at scale.
 

@@ -96,9 +96,9 @@ Let's look at an example. Say your feature branches have the naming convention `
 
 ``` yml
 stage_name_constructor: >
-  if [ $SEED_STAGE_BRANCH == 'master' ]; then
+  if [ $SEED_STAGE_BRANCH = 'master' ]; then
     echo 'dev'
-  elif [ $SEED_STAGE_BRANCH == 'beta' ]; then
+  elif [ $SEED_STAGE_BRANCH = 'beta' ]; then
     echo 'beta'
   else
     echo $SEED_STAGE_BRANCH | cut -d'/' -f2
@@ -176,6 +176,13 @@ Let's assume your service is called `users`.
 ``` yml
 after_deploy:
   - if [ $SEED_SERVICE_NAME = "users" ]; then echo 'deployed users'; fi
+```
+
+And if you wanted to combine two conditions you can do:
+
+``` yml
+after_deploy:
+  - if [ $SEED_STAGE_NAME = "prod" ] && [ $SEED_SERVICE_NAME != "users" ]; then echo 'deployed users to prod'; fi
 ```
 
 #### Install PostgreSQL

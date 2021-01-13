@@ -57,11 +57,11 @@ This process can take a few minutes.
 
 ![Enable issues in progress](/assets/docs/issues-and-alerts/enable-issues-in-progress.png)
 
-Note that, CloudWatch log groups can only have 1 subscriber. This means that if you are currently using another monitoring service, you'll get an error while trying to enable it. To fix this you'll need to enabled the **Use Seed to exclusively subscribe to all Lambda functions** option.
+Note that, CloudWatch log groups can only have 2 subscribers. This means that if you are currently using a couple of other monitoring services, you'll get an error while trying to enable it. To fix this you'll need to enabled the **Use Seed to exclusively subscribe to all Lambda functions** option.
 
 ![Enable issues with exclusive flag](/assets/docs/issues-and-alerts/enable-issues-with-exclusive-flag.png)
 
-This setting tells Seed to remove any existing subscriptions before enabling Issues. You can also optionally select a stage that you want to enable it for. This will allow you to try out Issues without having to remove the existing subscriptions from your production environment.
+This setting tells Seed to remove an existing subscriptions before enabling Issues. You can also optionally select a stage that you want to enable it for. This will allow you to try out Issues without having to remove the existing subscriptions from your production environment.
 
 If you are looking for a way to setup Issues while still keeping your existing subscriptions, [get in touch with us](mailto:{{ site.email }}). 
 

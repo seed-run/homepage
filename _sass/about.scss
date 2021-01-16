@@ -60,7 +60,11 @@ main > .wrapper > .about {
       a {
         display: inline-block;
       }
-      a:last-child {
+      a:nth-child(1) {
+        margin-right: $spacing-unit;
+        vertical-align: -11px;
+      }
+      a:nth-child(3) {
         margin-left: $spacing-unit;
         img {
           margin-top: 32px;
@@ -71,9 +75,15 @@ main > .wrapper > .about {
         a {
           display: block;
         }
-        a:first-child {
+        a:nth-child(1) {
           margin-right: 0;
-          margin-bottom: $spacing-unit / 2;
+          margin-bottom: $spacing-unit / 2 + 5px;
+        }
+        a:nth-child(2) {
+          margin-bottom: $spacing-unit / 2 + 5px;
+        }
+        a:nth-child(3) {
+          margin-left: 0;
           img {
             margin-top: 0;
           }

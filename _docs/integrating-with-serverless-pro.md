@@ -4,7 +4,8 @@ title: Integrating with Serverless Pro
 redirect_from: /docs/integrating-with-serverless-enterprise.html
 ---
 
-If you are deploying [Serverless Components](https://www.serverless.com/components/) or are looking to integrate with [Serverless Pro](https://www.serverless.com/pro/), there are a couple of quick steps you need to follow to get your app to work with Seed.
+
+[Serverless Pro](https://www.serverless.com/pro/) offers some similar features to Seed, like deployments and viewing logs and metrics. However, most of our users just use Seed. But if you'd like to deploy using Seed while viewing logs or metrics on Serverless Pro, you'll need to follow a couple of quick steps.
 
 1. Create an access key in the Serverless Pro Dashboard
 

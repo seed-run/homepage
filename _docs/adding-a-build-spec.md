@@ -81,7 +81,7 @@ check_code_change: lerna
 
 #### Customize stage names
 
-The stage name is central to the way Seed manages deployments and resources for your Serverless app. It is either [specified manually]({% link _docs/adding-a-stage.md %}). Or Seed automatically generates it based on the [auto-deployed branch]({% link _docs/working-with-branches.md %}). If it's being generated, Seed will sanitize the branch names so it works with Serverless Framework and AWS.
+The stage name is central to the way Seed manages deployments and resources for your Serverless app. It is either [specified manually]({% link _docs/adding-a-stage.md %}) or Seed automatically generates it based on the [auto-deployed branch]({% link _docs/working-with-branches.md %}). If it's being generated, Seed will sanitize the branch names so it works with Serverless Framework and AWS.
 
 However, there might be rare cases where you might wish to customize the automatically generated stage names. To do so, specify a bash command using the `stage_name_constructor` option. Note that:
 

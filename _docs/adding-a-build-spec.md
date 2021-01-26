@@ -97,7 +97,7 @@ Let's look at an example. Say your feature branches have the naming convention `
 ``` yml
 stage_name_constructor: >
   if [ $SEED_STAGE_BRANCH = 'master' ]; then
-    echo 'dev'
+    echo 'master'
   elif [ $SEED_STAGE_BRANCH = 'beta' ]; then
     echo 'beta'
   else

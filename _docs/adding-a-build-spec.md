@@ -213,6 +213,18 @@ after_deploy:
 
 This works because the AWS CLI is available and configured with the IAM credentials of the stage.
 
+#### Reference cross account CloudFormation output
+
+If you want to use a CloudFormation output from a stack from a different region or account as the stage you are deploying into.
+
+``` yml
+before_compile:
+  - echo "export MY_KEY=$(aws cloudformation describe-stacks --stack-name my-stack --query 'Stacks[0].Outputs[?OutputKey==`MY_KEY`].OutputValue | [0]')" >> $BASH_ENV
+  - echo $MY_KEY
+```
+
+This will use the AWS CLI to get the information of `my-stack` from another region/account; parse the output for the value of OutputKey `MY_KEY`; and then export the value as the MY_KEY environment variable. Then you will be able to reference the value in your serverless.yml as `${env:MY_KEY}`.
+
 #### Running Docker commands
 
 You'll need to enable Docker to use it in your build spec. Head over to our [chapter on running Docker commands]({% link _docs/docker-commands-in-your-builds.md %}) for further details. 

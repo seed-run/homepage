@@ -219,7 +219,7 @@ If you want to use a CloudFormation output from a different stack use the follow
 
 ``` yml
 before_compile:
-  - echo "export MY_KEY=$(aws cloudformation describe-stacks --stack-name my-stack --query 'Stacks[0].Outputs[?OutputKey==`MY_KEY`].OutputValue | [0]')" >> $BASH_ENV
+  - echo "export MY_KEY=$(aws cloudformation describe-stacks --stack-name my-stack --query 'Stacks[0].Outputs[?OutputKey==`MY_KEY`].OutputValue | [0]' --output text)" >> $BASH_ENV
   - echo $MY_KEY
 ```
 

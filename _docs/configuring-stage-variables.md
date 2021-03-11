@@ -38,7 +38,7 @@ This ensures that without any additional configuration the value of `process.env
 export function main(event, context, callback) {
 
   // Should output
-  // "This is prod environment" in the production stage
+  // "This is production environment" in the prod stage
   // "This is development environment" in the dev stage
   console.log(process.env.MESSAGE);
 

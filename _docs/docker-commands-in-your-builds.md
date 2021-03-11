@@ -29,4 +29,4 @@ before_compile:
     localstack/localstack
 ```
 
-Read more about [the build spec options here]({ link _docs/adding-a-build-spec.md %}).
+Read more about [the build spec options here]({% link _docs/adding-a-build-spec.md %}).

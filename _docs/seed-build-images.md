@@ -6,6 +6,7 @@ title: Seed Build Images
 Seed runs your builds inside a virtual machine and it'll use a build image based on the Lambda runtime of your service. Below is a list of all the images in use:
 
 [**Active Images**](#build-images)
+- [General Purpose v4.0](#general-purpose-v40)
 - [General Purpose v3.0](#general-purpose-v30)
 - [General Purpose v1.1](#general-purpose-v11)
 - [Python 3.6](#python-36)
@@ -55,9 +56,32 @@ before_compile:
 
 Below are the build images that are used and the types of services they are used for. A build image is chosen based on the Lambda runtime of the service.
 
+### General Purpose v4.0
+
+Lambda runtimes: Node.js 14.x, Go 1.x, Ruby 2.7, Java 11
+
+OS: Ubuntu 20.04
+
+| Includes        | Version |
+|-----------------|:-------:|
+| Node.js         | 14      |
+| Python          | 3.9     |
+| Ruby            | 2.7     |
+| Go              | 1.15    |
+| .NET Core       | 5.0     |
+| Java            | 11      |
+| PHP             | 8.0     |
+| NPM             | 6.14    |
+| YARN            | 1.22    |
+| PIP             | 20.3    |
+| Docker*         | 19.03   |
+| Docker Compose* | 1.27    |
+
+*[Docker and Docker Compose need to be enabled.]({% link _docs/docker-commands-in-your-builds.md %})
+
 ### General Purpose v3.0
 
-Lambda runtimes: Node.js 12.x, Python 3.8, Go 1.x, Ruby 2.7, Java 11, .NET Core 3.1
+Lambda runtimes: Node.js 12.x, Python 3.8, .NET Core 3.1
 
 OS: Ubuntu 18.04
 

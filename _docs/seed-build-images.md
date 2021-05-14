@@ -52,6 +52,13 @@ before_compile:
   - n 10.21.0
 ```
 
+For npm, if you need a different version, you'll need to install it at the start of your build spec.
+
+``` yml
+before_compile:
+  - npm i -g npm@latest
+```
+
 ## Build Images
 
 Below are the build images that are used and the types of services they are used for. A build image is chosen based on the Lambda runtime of the service.

@@ -31,6 +31,10 @@ after_remove:
   - echo "After deploy"
 ```
 
+The build spec commands are run at the root of the repo. So if you want to run a command for a specific service, you'll need to `cd` into it.
+
+> The build spec commands are run at the root of the repo
+
 Below is a brief description of when these commands are run.
 
 - `before_compile`

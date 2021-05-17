@@ -103,8 +103,6 @@ OS: Ubuntu 20.04
 | Docker*         | 19.03   |
 | Docker Compose* | 1.27    |
 
-Docker image
-
 *[Docker and Docker Compose need to be enabled.]({% link _docs/docker-commands-in-your-builds.md %})
 
 ### General Purpose v3.0

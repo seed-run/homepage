@@ -66,7 +66,6 @@ before_compile:
 To start the environment, run:
 ``` bash
 docker run --rm -it --privileged seedrun/build:general-purpose-4.0 bash
-
 ```
 
 The default working directory for builds on Seed is `/tmp/seed/source`. To clone the source code, run:

@@ -24,7 +24,7 @@ provider:
     MESSAGE: ${self:custom.myEnvironment.MESSAGE.${opt:stage}}
 ```
 
-Here the value `${opt:stage}` comes from the `--stage` option in the `serverless deploy` command. Internally, Seed deploys your stages using the `serverless deploy --stage STAGE_NAME` command. Where the `STAGE_NAME` in the name of the stage you set up in the Seed console. The stage name in your Seed console should map to the stage variables you add in your `serverless.yml`. You can read more about this in the [adding a stage]({% link _docs/adding-a-stage.md %}) chapter.
+Here the value `${opt:stage}` comes from the `--stage` option in the `serverless deploy` command. Internally, Seed deploys your stages using the `serverless deploy --stage SEED_STAGE_NAME` command. Where the `SEED_STAGE_NAME` in the name of the stage you set up in the Seed console. The stage name in your Seed console should map to the stage variables you add in your `serverless.yml`. You can read more about this in the [adding a stage]({% link _docs/adding-a-stage.md %}) chapter.
 
 ![Stages](/assets/docs/configuring-stage-variables/stages.png)
 

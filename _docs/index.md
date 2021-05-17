@@ -50,7 +50,7 @@ If the services could not be detected, you can add it manually.
 
 Here we are assuming that you are trying to add a Serverless Framework service. If instead you want to add a [Serverless Stack](https://github.com/serverless-stack/serverless-stack) service, make sure to set it in the **Service Type** dropdown.
 
-Next, Seed will create a **dev** and **prod** stage (or environment) for your app. Note that, you'll need to change the names to match the stage names you are using to deploy your app. This is important because Seed will deploy your app using the `serverless deploy --stage $STAGE_NAME` command. Here `$STAGE_NAME` is the name.
+Next, Seed will create a **dev** and **prod** stage (or environment) for your app. Note that, you'll need to change the names to match the stage names you are using to deploy your app. This is important because Seed will deploy your app using the `serverless deploy --stage $SEED_STAGE_NAME` command. Here `$SEED_STAGE_NAME` is the name.
 
 > Seed deploys to your environments using the stage name.
 

@@ -7,12 +7,16 @@ You can run Docker commands as a part of your build process by adding them to yo
 
 ### Enable Docker
 
+By default, the Docker daemon is disabled in the build machine.
+
 Before enabling Docker, just make sure that:
 
 - You are on one of our [paid plans]({% link pricing.html %}).
 - The service in question is using one of our [General Purpose build images]({% link _docs/seed-build-images.md %}#build-images).
 
 Next, head over to the service's settings; Pipeline > click on the service.
+
+INSERT SCREENSHOT
 
 Here you can toggle the setting to **Enable Docker**.
 

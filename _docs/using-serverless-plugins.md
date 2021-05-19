@@ -16,7 +16,7 @@ However, if you are already using the serverless-domain-manager plugin, you need
 
 1. Set it up locally
 
-   Run the `serverless create_domain --stage STAGE_NAME` command locally where `STAGE_NAME` is the name of the stage that needs to be configured.
+   Run the `serverless create_domain --stage $STAGE_NAME` command locally where `$STAGE_NAME` is the name of the stage that needs to be configured.
 
 2. Or configure it using the `seed.yml`
 

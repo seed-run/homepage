@@ -29,7 +29,7 @@ Here you can pick a stage name. And optionally select if a branch you want to co
 
 ![Select Branch](/assets/docs/adding-a-stage/select-branch.png)
 
-The stage name is used internally while deploying the project via `serverless deploy --stage STAGE_NAME`. The stage name is also used to [configure stage variables]({% link _docs/configuring-stage-variables.md %}). 
+The stage name is used internally while deploying the project via `serverless deploy --stage $STAGE_NAME`. The stage name is also used to [configure stage variables]({% link _docs/configuring-stage-variables.md %}). 
 
 You can also optionally copy the settings from an existing stage by selecting **Inherit settings from an existing stage**.
 

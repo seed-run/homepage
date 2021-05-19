@@ -59,23 +59,28 @@ before_compile:
   - npm i -g npm@latest
 ```
 
-## Running the Build Image Locally
+## Running Locally
 
-[seedrun/build](https://hub.docker.com/r/seedrun/build/tags) is a Docker image created by Seed. This image is very useful for users to setup a Seed-like build environment locally in order to debug build issues.
+The build images used in Seed are hosted on Docker Hub — [**seedrun/build**](https://hub.docker.com/r/seedrun/build/tags)
 
-To start the environment, run:
+These images are useful if you are trying to debug build issues. You can set up a Seed-like build environment locally to test your project.
+
+To start the environment:
+
 ``` bash
-docker run --rm -it --privileged seedrun/build:general-purpose-4.0 bash
+$ docker run --rm -it --privileged seedrun/build:general-purpose-4.0 bash
 ```
 
-The default working directory for builds on Seed is `/tmp/seed/source`. To clone the source code, run:
-``` bash
-mkdir -p /tmp/seed
-cd /tmp/seed
-git clone https://github.com/my/repo source
-cd source
-```
+Make sure to select the build image your service is using.
 
+The default working directory for builds in Seed is `/tmp/seed/source`. To clone the source, run:
+
+``` bash
+$ mkdir -p /tmp/seed
+$ cd /tmp/seed
+$ git clone https://github.com/my/repo source
+$ cd source
+```
 
 ## Build Images
 

@@ -7,12 +7,14 @@ You can run Docker commands as a part of your build process by adding them to yo
 
 ### Enable Docker
 
-To enable Docker:
+Before enabling Docker, just make sure that:
 
-- You'll need to be on one of our [paid plans]({% link pricing.html %}).
-- Your builds need to be using one of our [General Purpose build images]({% link _docs/seed-build-images.md %}#build-images).
+- You are on one of our [paid plans]({% link pricing.html %}).
+- The service in question is using one of our [General Purpose build images]({% link _docs/seed-build-images.md %}#build-images).
 
-[Contact us](mailto:{{ site.email }}) and let us know which service needs to have it enabled.
+Next, head over to the service's settings; Pipeline > click on the service.
+
+Here you can toggle the setting to **Enable Docker**.
 
 ### Running LocalStack on Seed
 

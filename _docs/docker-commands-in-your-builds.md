@@ -16,7 +16,7 @@ Before enabling Docker, just make sure that:
 
 Next, head over to the service's settings; Pipeline > click on the service.
 
-INSERT SCREENSHOT
+![Enable Docker commands in Seed](/assets/docs/docker-commands-in-your-builds/enable-docker-commands-in-seed.png)
 
 Here you can toggle the setting to **Enable Docker**.
 

@@ -25,19 +25,22 @@
         <ul class="contact-list">
           <li class="site-description">Deploy, manage, and monitor Serverless applications.</li>
           <li class="site-author">&copy; 2021 <a href="https://anoma.ly">Anomaly Innovations</a></li>
-          <li><a class="page-link" href="{% link _legal/terms-of-service.md %}">Terms of Service</a></li>
-          <li><a class="page-link" href="{% link _legal/privacy-policy.md %}">Privacy Policy</a></li>
-          <li>
+          <li class="social-links">
             <a class="social-link" href="{{ site.twitter }}">
               <i class="fa fa-twitter-square" aria-hidden="true"></i>
             </a>
-            <a class="social-link" href="https://github.com/AnomalyInnovations">
-              <i class="fa fa-github-square" aria-hidden="true"></i>
+            <a class="social-link" href="{{ site.slack_invite }}">
+              <img class="slack" width="30px" src="assets/lander/slack-square.svg" />
             </a>
             <a class="social-link" href="{{ site.linkedin }}">
               <i class="fa fa-linkedin-square" aria-hidden="true"></i>
             </a>
+            <a class="social-link" href="{{ site.github_org }}">
+              <i class="fa fa-github-square" aria-hidden="true"></i>
+            </a>
           </li>
+          <li><a class="page-link" href="{% link _legal/terms-of-service.md %}">Terms of Service</a></li>
+          <li><a class="page-link" href="{% link _legal/privacy-policy.md %}">Privacy Policy</a></li>
         </ul>
       </div>
 

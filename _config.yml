@@ -30,6 +30,7 @@ request_demo: "/request-demo"
 upgrade: "/upgrade"
 
 # GitHub
+github_org: "https://github.com/seed-run"
 github_repo: "https://github.com/seed-run/homepage"
 github_repo_errors_path: "/tree/master/_docs/serverless-errors"
 github_edit_prefix: "/edit/master/"
@@ -37,6 +38,7 @@ github_edit_prefix: "/edit/master/"
 newsletter_signup_form: "https://emailoctopus.com/lists/14c85084-324e-11ea-be00-06b4694bee2a/forms/subscribe"
 twitter: "https://twitter.com/SEED_run"
 twitter_username: "SEED_run"
+slack_invite: "https://launchpass.com/serverless-stack"
 linkedin: "https://www.linkedin.com/company/seed-run/"
 
 google_analytics: "UA-3536629-12"

@@ -407,10 +407,24 @@
     }
   }
 
+  .social-links {
+    margin-top: 12px;
+  }
+
   a.social-link {
     @extend %a-tertiary;
-    color: lighten($tertiary-text-color, 10%);
+    opacity: 0.4;
     font-size: 34px;
+    color: black;
+    line-height: 1;
+
+    img {
+      vertical-align: -3px;
+    }
+
+    &:hover {
+      opacity: 0.9;
+    }
   }
 
   .site-title {

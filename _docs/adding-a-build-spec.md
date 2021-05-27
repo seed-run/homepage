@@ -31,11 +31,29 @@ after_remove:
   - echo "After deploy"
 ```
 
-The build spec commands are run at the root of the repo. So if you want to run a command for a specific service, you'll need to `cd` into it.
+A couple of things to keep in mind when adding commands to your build spec.
 
-> The build spec commands are run at the root of the repo
+1. The build spec commands are run at the root of the repo. So if you want to run a command for a specific service, you'll need to `cd` into it. [Check out this example](#navigate-to-the-service-path) on how to do this.
 
-Below is a brief description of when these commands are run.
+   > The build spec commands are run at the root of the repo
+
+2. Each command is run in its own shell. This means that if you `cd` into a different directory in one command, it isn't carried over to the next.
+
+   > Each build spec command is run in its own shell
+
+   So for this example.
+
+   ``` yml
+   before_compile:
+     - cd services/posts && echo $PWD
+     - echo $PWD
+   ```
+
+   The two commands will print out different working directories. 
+
+Below is a brief description of the build steps.
+
+#### Build steps
 
 - `before_compile`
 
@@ -117,8 +135,8 @@ Seed also has a couple of build environment variables that you can use to custom
 - `$SEED_STAGE_BRANCH`: The name of the git branch the stage is auto-deployed from. If the stage is not auto-deployed, the value is not defined.
 - `$SEED_APP_NAME`: The app name.
 - `$SEED_SERVICE_NAME`: The name of the service.
-- `$SEED_SERVICE_PATH`: The path of the service as set in the service's settings. For example, `/services/posts`. If the service is located at the root of the repo, this value is empty.
-- `$SEED_SERVICE_FULLPATH`: The absolute path of the service. For example, `/tmp/seed/source/services/posts`.
+- `$SEED_SERVICE_PATH`: The path of the service as set in the service's settings. For example, `/services/posts`. If the service is at the root of the repo, this value is empty.
+- `$SEED_SERVICE_FULLPATH`: The absolute path of the service inside the build container. For example, `/tmp/seed/source/services/posts`. If the service is at the root of the repo, it is `/tmp/seed/source`.
 - `$SEED_BUILD_ID`: The build id.
 - `$SEED_BUILD_SERVICE_SHA`: The commit SHA used to build a given service. For [post-deploy phases]({% link _docs/adding-a-post-deploy-phase.md %}), if the build is using multiple commits, the first commit will be set. If the service is being removed, it is set to the commit used in the last successfully deployed build.
 - `$SEED_BRANCH`: The Git branch used to trigger this build. Does not apply to promotions and rollbacks. For PR stages, this is the branch the PR was submitted to. Note the difference between this and the `$SEED_STAGE_BRANCH` variable. These two variables will differ if you trigger a manual deployment using a branch that's different from the one the stage is set to auto-deploy from.
@@ -165,6 +183,15 @@ The scripts in your build spec are run in an environment that are using your AWS
 ### Build Spec Examples
 
 Here are a couple of examples of what you could do in a build spec.
+
+#### Navigate to the service path
+
+By default, the commands in the build spec are executed at the repo root. To change the working directory to the service, use the `$SEED_SERVICE_FULLPATH` environment variable.
+
+``` yml
+after_deploy:
+  - cd $SEED_SERVICE_FULLPATH && echo 'hello'
+```
 
 #### Run a script after deploy only in prod 
 
@@ -235,4 +262,4 @@ If you are trying to get the outputs for a stack that's in a different region th
 
 #### Running Docker commands
 
-You'll need to enable Docker to use it in your build spec. Head over to our [chapter on running Docker commands]({% link _docs/docker-commands-in-your-builds.md %}) for further details. 
+You'll need to enable Docker to use it in your build spec. Head over to our [chapter on running Docker commands]({% link _docs/docker-commands-in-your-builds.md %}) on how to do this.

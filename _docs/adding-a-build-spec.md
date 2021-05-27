@@ -246,6 +246,8 @@ after_deploy:
 
 This works because the AWS CLI is available and configured with the IAM credentials of the stage.
 
+Note that, we are not using the `serverless invoke` command here. This is because there is a known issue with Serverless Framework; [the command hangs in CI environments](https://github.com/serverless/serverless/issues/6044).
+
 #### Reference CloudFormation output
 
 If you want to use a CloudFormation output from a different stack use the following.

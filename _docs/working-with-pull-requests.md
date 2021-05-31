@@ -5,10 +5,6 @@ title: Working with Pull Requests
 
 When a pull request is opened, Seed receives a pull request notification from GitHub. Seed will then build, test, and deploy the pull request commits automatically into a new stage. The new pull request stage will receive a unique API Gateway endpoint just like any other stage. Seed will also build and deploy to the stage when commits are added to the pull request.
 
-> We currently support pull requests only for GitHub.
-
-[Contact us](mailto:{{ site.email }}) if you'd like to use it for Bitbucket or GitLab.
-
 ### Enable Auto-Deploy Pull Requests
 
 By default, auto-deploying PRs are disabled. You can enable them by heading to your app and select the **Pipeline** tab.

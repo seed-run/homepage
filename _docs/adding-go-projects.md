@@ -26,3 +26,7 @@ If a Makefile is found in addition to the plugin, then Seed will run `make` befo
 We also have a simple starter repo with the [serverless-go-build example here](https://github.com/seed-run/serverless-go-starter-with-plugin).
 
 Once the project has been built (with either of the two approaches), Seed continues the standard Serverless deployment process.
+
+### Updating the Go Versions
+
+If you want to use a different version of Go than the one provided by the [build images]({% link _docs/seed-build-images.md %}), you can [set it using the Seed build spec and goenv]({% link _docs/seed-build-images.md %}#golang-versions).

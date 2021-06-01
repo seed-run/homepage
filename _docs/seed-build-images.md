@@ -52,11 +52,16 @@ before_compile:
   - n 10.21.0
 ```
 
-For npm, if you need a different version, you'll need to install it at the start of your build spec.
+For npm, [Seed will automatically use npm 7 if it detects the new lockfile format]({% link _docs/adding-nodejs-projects.md %}#transition-to-npm-7).
+
+### Golang Versions
+
+Seed uses [goenv](https://github.com/syndbg/goenv) to manage versions internally. So if you want to use a different version of Golang than the one that is on the build image, add the following to your [build spec]({% link _docs/adding-a-build-spec.md %}) (`seed.yml`):
 
 ``` yml
 before_compile:
-  - npm i -g npm@latest
+  - rm -r $HOME/.goenv && git clone https://github.com/syndbg/goenv.git $HOME/.goenv && goenv install 1.16.4 && goenv global 1.16.4
+  - go version
 ```
 
 ## Running Locally

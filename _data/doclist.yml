@@ -93,6 +93,8 @@ toc:
     subfolderitems:
       - page: Manually deploying
         url: /docs/manually-deploying.html
+      - page: Deploying with the Seed CLI
+        url: /docs/deploying-with-the-seed-cli.html
       - page: Cancelling builds
         url: /docs/cancelling-builds.html
   - title: Incremental deploys

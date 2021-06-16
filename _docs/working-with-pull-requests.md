@@ -32,6 +32,8 @@ You also have the option here to remove the PR stage and the deployed resources 
 
 ![Auto-deploy pull request options](/assets/docs/working-with-pull-requests/auto-deploy-pr-options.png)
 
+Seed will also add a comment to the PR with the stack outputs once the PR has been deployed. We'll look at this in detail below. You can disable this by making sure the **Add a PR comment with the stack outputs** option is unchecked.
+
 Next, let's work through the PR workflow.
 
 ### Create a PR
@@ -58,13 +60,13 @@ GitHub will let you know once the PR has been built.
 
 Seed adds some useful info once your PR has been built.
 
-![Seed PR complete info in GitHub](/assets/docs/working-with-pull-requests/seed-pr-complete-info-in-github.png)
+It'll add a comment to the PR with the stack outputs from all the services that've been deployed. You can disable this by making sure the **Add a PR comment with the stack outputs** option is unchecked in the auto-deploy PR settings in Seed.
 
-In the above screenshot:
+![Seed PR stack outputs in GitHub](/assets/docs/working-with-pull-requests/seed-pr-stack-outputs-in-github.png)
 
-1. Seed will add a comment with a list of any deployed API endpoints. This is useful for cases where you have a frontend application that needs to be tested against this endpoint.
+The **View deployment** button in the environments section takes you to the deployed stage in Seed.
 
-2. And the **View deployment** button in the environments section takes you to the deployed stage in Seed.
+![Seed PR deployment environments in GitHub](/assets/docs/working-with-pull-requests/seed-pr-deployment-environments-in-github.png)
 
 Also, if the PR fails to deploy, the **Details** link will take you straight to the build logs on Seed.
 

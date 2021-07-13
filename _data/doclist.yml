@@ -89,6 +89,8 @@ toc:
         url: /docs/connect-your-own-ci.html
       - page: Skipped builds
         url: /docs/skipped-builds.html
+      - page: Deploy badges
+        url: /docs/deploy-badges.html
   - title: Manual deployments
     subfolderitems:
       - page: Manually deploying

@@ -13,3 +13,5 @@ Seed is the best way for teams to deploy and manage their serverless application
 The new funding allows us to expand our team to better serve our community.
 
 You can [**read the full announcement over on the Serverless Stack Blog**](https://serverless-stack.com/blog/serverless-stack-raises-1m-to-make-it-easier-to-build-serverless-apps.html).
+
+If you are passionate about building developer tools, we'd love for you to [join our team]({{ site.jobs_url }}).

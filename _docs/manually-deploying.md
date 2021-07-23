@@ -11,7 +11,11 @@ To manually deploy a stage, head over to the app pipeline. And hit **Deploy** on
 
 ![Select stage](/assets/docs/manually-deploying/select-stage.png)
 
-Here you can confirm the branch you want to deploy with. Or if the stage isn't connected to a branch, you'll be asked to select one.
+Here you can enter a Git branch, tag, or commit that you want to deploy.
+
+![Select Git ref to trigger deploy](/assets/docs/manually-deploying/select-git-ref-to-trigger-deploy.png)
+
+The next time you trigger a deployment, Seed will auto select the last ref that was deployed. 
 
 ![Hit stage trigger deploy](/assets/docs/manually-deploying/hit-stage-deploy.png)
 
@@ -36,4 +40,3 @@ By default, Seed will only deploy the services and Lambda functions that have be
 This option tells Seed to deploy all your services even if there are no changes that've been detected.
 
 A **Force deploy** also clears the [dependency cache]({% link _docs/caching-dependencies.md %}) for the stage you are deploying to.
-

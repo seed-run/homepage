@@ -136,7 +136,7 @@ Seed also has a couple of build environment variables that you can use to custom
 - `$SEED_APP_NAME`: The app name.
 - `$SEED_SERVICE_NAME`: The name of the service.
 - `$SEED_SERVICE_PATH`: The path of the service as set in the service's settings. For example, `/services/posts`. If the service is at the root of the repo, this value is empty.
-- `$SEED_SERVICE_TYPE`: The type of the service. For SST services, the type is `sst`. And for Serverless Framework services, the type is `sls`.
+- `$SEED_SERVICE_TYPE`: Type of the serverless service. For SST services, the type is `sst`. And for Serverless Framework services, it's `sls`.
 - `$SEED_SERVICE_FULLPATH`: The absolute path of the service inside the build container. For example, `/tmp/seed/source/services/posts`. If the service is at the root of the repo, it is `/tmp/seed/source`.
 - `$SEED_BUILD_ID`: The build id.
 - `$SEED_BUILD_SERVICE_SHA`: The commit SHA used to build a given service. For [post-deploy phases]({% link _docs/adding-a-post-deploy-phase.md %}), if the build is using multiple commits, the first commit will be set. If the service is being removed, it is set to the commit used in the last successfully deployed build.

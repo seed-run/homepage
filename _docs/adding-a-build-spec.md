@@ -131,7 +131,7 @@ stage_name_constructor: >
 
 Seed also has a couple of build environment variables that you can use to customize your build process. These should not be confused with the [secret environment variables]({% link _docs/storing-secrets.md %}) that are defined in the console.
 
-- `$CI`: Always set to 'true'. Represents the current environment is a CI environment.
+- `$CI`: Always set to `true`. Represents the current environment is a CI environment.
 - `$SEED_STAGE_NAME`: The name of the stage that is being built. The stage names are exactly as shown in the console.
 - `$SEED_STAGE_BRANCH`: The name of the git branch the stage is auto-deployed from. If the stage is not auto-deployed, the value is not defined.
 - `$SEED_APP_NAME`: The app name.

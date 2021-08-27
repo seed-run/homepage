@@ -3,11 +3,9 @@ layout: docs
 title: Adding a CDK App
 ---
 
-Seed supports deploying AWS CDK apps with SST. [**SST** or Serverless Stack Toolkit](https://github.com/serverless-stack/serverless-stack) makes it possible to deploy CDK apps alongside your Serverless Framework services. It allows you to deploy your CDK app to multiple stages, region, or AWS accounts. Just like you would for your Serverless services.
+Seed supports deploying AWS CDK apps with [Serverless Stack Framework (SST)](https://github.com/serverless-stack/serverless-stack). SST makes it easy to build serverless apps by using CDK constructs to define your infrastructure. And you can use it alongside your Serverless Framework services.
 
-### Advantages of using CDK with SST
-
-Aside from allowing you to use CDK alongside your Serverless Framework services, SST has a couple of other key advantages. SST on Seed is:
+### Advantages of CDK and SST on Seed
 
 1. The fastest way to deploy CDK apps
 
@@ -45,3 +43,5 @@ CDK apps deployed using SST on Seed are free. There are a couple of small limita
 
 1. If you are running additional scripts as a part of your [build spec]({% link _docs/adding-a-build-spec.md %}), you'll be billed for the build minutes it takes to run those scripts.
 2. Seed installs your npm packages as a part of the build process. If this step takes longer than 180s, you'll be billed for it. For example, if it takes 282s, you'll be billed for 282 - 180 = 102s.
+3. Applies to the [Standard build machine]({% link _docs/build-machine-types.md %}).
+4. For all other build machines, you're not charged for the time spent waiting for CloudFormation to update. But you are charged for the time it takes to build your app.

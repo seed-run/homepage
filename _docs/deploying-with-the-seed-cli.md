@@ -32,6 +32,7 @@ You simply need to pass in the:
 - App name `--app`
 - Stage name `--stage`
 - Git commit SHA `--commit`
+- Force deploy even if there are no changes `--force`
 - And a Seed CLI token as an environment variable `SEED_TOKEN`
 
 For example, to deploy a specific commit to the `dev` stage of the `backend-api` app in the `acme` org.

@@ -81,4 +81,4 @@ This is the case when you made only code changes to your services. This is likel
 
 #### Summary
 
-Now that we've covered all the possible rollback scenarios, it should be clear that the best strategy for your Serverless CI/CD pipeline is to **always rollback the services in the order in which they were deployed**. You can apply this regardless of the type of changes that were made, whether you were adding a dependency or removing it!
+Now that we've covered all the possible rollback scenarios, it should be clear that the best strategy for your Serverless CI/CD pipeline is to **always rollback the services in the reverse order in which they were deployed**. You can apply this regardless of the type of changes that were made, whether you were adding a dependency or removing it!

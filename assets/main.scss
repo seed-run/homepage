@@ -2193,16 +2193,15 @@ main > .testimonials {
       margin: $spacing-unit $spacing-unit - 10px;
       display: block;
       flex-shrink: 0;
-      height: 45px;
       box-sizing: border-box;
 
-      &.kovi { margin-right: 12px; margin-bottom: 29px; }
-      &.freelancer { margin-top: 28px; }
-      &.kasa { margin-bottom: 28px; }
+      &.kovi { margin-right: 12px; }
+      &.freelancer {  }
+      &.kasa { }
       &.mozilla { margin-right: 16px; }
       &.splunk { margin-right: 14px; }
-      &.essensys { margin-bottom: 26px; }
-      &.shyft { margin-bottom: 26px; }
+      &.essensys { }
+      &.shyft { }
 
       @include media-query($on-palm) {
         &:first-child {

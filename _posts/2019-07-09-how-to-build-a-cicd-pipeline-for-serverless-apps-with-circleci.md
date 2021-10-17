@@ -43,7 +43,7 @@ As a refresher, a monorepo Serverless app is one where multiple Serverless servi
 3. How to deploy using the pull request workflow
 4. How to clean up unused branches and closed pull requests
 
-Note that, this guide is structured to work in standalone steps. So if you only need to get to be able to deploy to multiple AWS accounts, you can stop after step 2.
+Note that, this guide is structured to work in standalone steps. If you only want to deploy to multiple AWS accounts, you can stop after step 2.
 
 Also, worth mentioning that while this guide is helping you create a fully-functional CI/CD pipeline for Serverless; all of these features are available in [Seed](/) without any configuration or scripting.
 

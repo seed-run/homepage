@@ -127,6 +127,16 @@ stage_name_constructor: >
   fi
 ```
 
+#### Disabling downstream artifacts
+
+Seed by default generates some build artifacts for downstream stages. These artifacts are used to generate CloudFormation change set when promoting. You have the option to disable generating artifacts if you do not promote builds across stages. You can read more about this in our [Promoting to Production]({% link _docs/promoting-to-production.md %}) chapter.
+
+Add the following to disable generating artifacts:
+
+``` yml
+disable_artifacts: true
+```
+
 ### Build Environment Variables
 
 Seed also has a couple of build environment variables that you can use to customize your build process. These should not be confused with the [secret environment variables]({% link _docs/storing-secrets.md %}) that are defined in the console.

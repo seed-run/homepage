@@ -129,9 +129,9 @@ stage_name_constructor: >
 
 #### Disabling downstream artifacts
 
-Seed by default generates some build artifacts for downstream stages. These artifacts are used to generate CloudFormation change set when promoting. You have the option to disable generating artifacts if you do not promote builds across stages. You can read more about this in our [Promoting to Production]({% link _docs/promoting-to-production.md %}) chapter.
+Seed by default generates some build artifacts for downstream stages. These artifacts are used to generate CloudFormation change sets when promoting. You have the option to disable generating these artifacts if you are not promoting builds across stages. You can read more about this in our [Promoting to Production]({% link _docs/promoting-to-production.md %}) chapter.
 
-Add the following to disable generating artifacts:
+Add the following to your `seed.yml` to disable generating artifacts.
 
 ``` yml
 disable_artifacts: true

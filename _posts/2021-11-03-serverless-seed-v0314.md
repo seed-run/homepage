@@ -5,7 +5,7 @@ categories: news
 author: frank
 ---
 
-We just rolled out an update the [serverless-seed](https://www.npmjs.com/package/serverless-seed) plugin to support manually specified artifacts.
+We just rolled out an update to the [serverless-seed](https://www.npmjs.com/package/serverless-seed) plugin to support manually specified artifacts.
 
 The [serverless-seed](https://www.npmjs.com/package/serverless-seed) plugin optimizes Serverless Framework builds in Seed by [incrementally deploying changes]({% link _docs/incremental-lambda-deploys.md %}).
 

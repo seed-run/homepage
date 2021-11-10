@@ -33,7 +33,7 @@ However, if you are already using the serverless-domain-manager plugin, you need
  
    ``` yml
    before_build:
-      - if [ $SEED_SERVICE_NAME = "my-service" ]; then cd my-service/ && serverless create_domain --stage $SEED_STAGE_NAME; fi
+     - if [ $SEED_SERVICE_NAME = "my-service" ]; then cd my-service/ && serverless create_domain --stage $SEED_STAGE_NAME; fi
    ```
  
    Where `my-service/` is the path to the service with the custom domain configured.

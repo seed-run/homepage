@@ -22,8 +22,8 @@ If you are using npm to host your private modules, do the following:
    Add the following to your [build spec]({% link _docs/adding-a-build-spec.md %}) (`seed.yml`).
 
    ``` yml
-    before_compile:
-      - echo //registry.npmjs.org/:_authToken=$NPM_TOKEN >> ~/.npmrc
+   before_compile:
+     - echo //registry.npmjs.org/:_authToken=$NPM_TOKEN >> ~/.npmrc
    ```
 
    This uses the `NPM_TOKEN` environment variable from the previous step to create a `.npmrc` file to reference your private npm modules.
@@ -43,9 +43,9 @@ If you are using GitHub to host your private modules, do the following:
    Add the following to your [build spec]({% link _docs/adding-a-build-spec.md %}) (`seed.yml`).
 
    ``` yml
-    before_compile:
-      - echo @OWNER:registry=https://npm.pkg.github.com >> ~/.npmrc
-      - echo //npm.pkg.github.com/:_authToken=$GITHUB_ACCESS_TOKEN >> ~/.npmrc
+   before_compile:
+     - echo @OWNER:registry=https://npm.pkg.github.com >> ~/.npmrc
+     - echo //npm.pkg.github.com/:_authToken=$GITHUB_ACCESS_TOKEN >> ~/.npmrc
    ```
 
    Replace `OWNER` with your GitHub username or organization name. This uses the `GITHUB_ACCESS_TOKEN` environment variable from the previous step to create a `.npmrc` file to reference your private npm modules.

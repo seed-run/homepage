@@ -5,7 +5,7 @@ title: Storing Secrets
 
 In general it's recommended that you use [AWS SSM](https://docs.aws.amazon.com/systems-manager/latest/userguide/systems-manager-parameter-store.html) to store secrets for your Serverless app. However, there are times when you need some secrets to be involved in the build process. You should avoid storing these in your `serverless.yml`. Seed lets you store them as secret environment variables through the Seed console.
 
-Seed internally encrypts them using [AWS KMS](https://aws.amazon.com/kms/) and stores them. They are then decrypted during the build process. And upon deployment, Seed sets them as Lambda environment variables.
+Seed internally encrypts them using [AWS KMS](https://aws.amazon.com/kms/) and stores them. They are then decrypted and made available in the build process. Additionally for Serverless Framework applications, Seed sets them as Lambda environment variables.
 
 You can then access them in your Node.js Lambda functions using the `process.env` object.
 
@@ -26,6 +26,8 @@ Enter the **Key** and **Value** for the new secret, and click **Add**.
 ![Create Secret Variable](/assets/docs/storing-secrets/create-secret-variable.png)
 
 Note that the newly created secrets will take effect only after the next deployment to this stage. And these secrets will be available to all the services in your application.
+
+### Serverless Framework
 
 Secret variables take precedence over the [other stage variables](% link _docs/configuring-stage-variables.md %}) defined in `serverless.yml`. If you were to define a secret variable, and the same variable is defined in the yaml file; the value defined in `serverless.yml` is overridden.
 
@@ -58,3 +60,15 @@ export function main(event, context, callback) {
 ```
 
 Finally, you can access your secrets just as you would access any other environment variable in Lambda.
+
+### SST
+
+For SST apps, you can grab the secrets from the build environment and set it in your Lambda functions. So for example, if you wanted to set a secret variable for all the functions in your app, you can use the [`addDefaultFunctionEnv`](https://docs.serverless-stack.com/constructs/App#adddefaultfunctionenv) method.
+
+``` javascript
+app.addDefaultFunctionEnv({
+  DB_PASSWORD: procress.env.DB_PASSWORD
+});
+```
+
+And now you can use `process.env.DB_PASSWORD` in your Lambda functions.

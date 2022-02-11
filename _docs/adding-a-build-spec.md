@@ -95,10 +95,16 @@ Add the following to either, disable this check:
 check_code_change: false
 ```
 
-Or use the Lerna algorithm instead:
+Use the Lerna algorithm:
 
 ``` yml
 check_code_change: lerna
+```
+
+Or use the pnpm algorithm instead:
+
+``` yml
+check_code_change: pnpm
 ```
 
 #### Customize stage names

@@ -18,7 +18,7 @@ These two checks allow Incremental Deploys to potentially speed up your Serverle
 
 When you trigger a deployment for your Serverless app, Seed will try to deploy each of your services concurrently (or according to [the Deploy Phases that you've configured]({% link _docs/configuring-deploy-phases.md %})).
 
-To check if a service has been updated, Seed uses the **Git log** (check if the files in a service have been updated) or [**Lerna**](https://lerna.js.org) (check which packages have been updated).
+To check if a service has been updated, Seed uses the **Git log** (check if the files in a service have been updated), [**Lerna**](https://lerna.js.org), or [**pnpm**](https://pnpm.io) (check which packages have been updated).
 
 [Read more about how Seed deploys only the services that've been updated <i class="fa fa-arrow-right" aria-hidden="true"></i>]({% link _docs/incremental-service-deploys.md %})
 

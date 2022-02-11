@@ -8,7 +8,7 @@ A monorepo Serverless app is one where multiple Serverless services are in the s
 
 To fix this, Seed uses Incremental Service Deploys. It'll check to see if a service has been updated, before deploying it. This greatly speeds up your builds and also makes deployments cost-effective.
 
-There are two algorithms Seed uses to check if a service has been updated:
+There are three algorithms Seed uses to check if a service has been updated:
 
 1. Check the Git log for updates (Default)
 
@@ -17,6 +17,10 @@ There are two algorithms Seed uses to check if a service has been updated:
 2. Use Lerna to check updated packages
 
    Alternatively, if your project uses [Lerna](https://lerna.js.org) + [Yarn Workspaces](https://classic.yarnpkg.com/en/docs/workspaces/), then Seed can use the Lerna CLI to see a service has been updated. To use this algorithm, you'll need to add `check_code_change: lerna` to your [build spec]({% link _docs/adding-a-build-spec.md %}) — `seed.yml`.
+
+3. Use pnpm to check updated packages
+
+   Similar to Lerna, if your project uses [pnpm Workspaces](https://pnpm.io/workspaces), then Seed can use the pnpm CLI to see a service has been updated. To use this algorithm, you'll need to add `check_code_change: pnpm` to your [build spec]({% link _docs/adding-a-build-spec.md %}) — `seed.yml`.
 
 Let's look at these in detail.
 
@@ -145,6 +149,14 @@ Next:
 3. If the two above conditions are not met, then we skip deploying this service.
 
 If you are looking to get started with using Lerna + Yarn Workspaces for your Serverless app, we have a starter project for you — [**Serverless Lerna + Yarn Workspaces Monorepo Starter**](https://github.com/AnomalyInnovations/serverless-lerna-yarn-starter)
+
+### Use pnpm to check updated packages
+
+If you are using [pnpm Workspaces](https://pnpm.io/workspaces) to manage your monorepo Serverless project, Seed can use the pnpm CLI to figure out which of your services need to be deployed. The way it works is very similar to the Lerna algorithm. To use this algorithm, add the following to your `seed.yml` in your project root.
+
+``` yml
+check_code_change: pnpm
+```
 
 -------
 

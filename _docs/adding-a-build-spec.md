@@ -15,6 +15,9 @@ To hook into the build process, add a `seed.yml` in the root of your project dir
 before_compile:
   - echo "Before compile"
 
+compile:
+  - echo "Override compile"
+
 before_build:
   - echo "Before build"
 
@@ -58,6 +61,10 @@ Below is a brief description of the build steps.
 - `before_compile`
 
    Seed starts the build process by doing a `npm install` (for Node.js projects), `pip install -r requirements.txt` (for Python projects), or `make` (for Go projects). The `before_compile` step let's you run commands before this. This can be useful for [configuring private npm modules]({% link _docs/private-npm-modules.md %}).
+
+- `compile`
+
+   Override the default compile commands. This can be useful if you are using a custom package manager like [`pnpm`](https://pnpm.io) or [`Nx`](https://nx.dev).
 
 - `before_build`
 

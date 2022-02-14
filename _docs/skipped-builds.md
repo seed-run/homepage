@@ -23,5 +23,18 @@ There are 4 reasons why a build or service might have been skipped.
 
    If your account has reached the build minutes limit, any new commits will result in skipped builds. [Consider upgrading your plan]({% link pricing.html %}) to avoid any disruption.
 
+## Skipping Git Push Deployments
 
+By default if your stages are [configured to auto-deploy]({% link _docs/updating-the-stage-source.md %}), they'll trigger a new deployment for every `git push`. For some commits you might not want to trigger a build. You can do this by including either of these as a part of your commit message.
 
+- `[skip ci]`
+- `[ci skip]`
+
+So for example, pushing a commit like the following will not trigger a build.
+
+``` bash
+$ git commit -a "[skip ci] removing newline character"
+$ git push
+```
+
+Note that, unlike the skipped build cases above, these builds will not be reflected on the Seed console.

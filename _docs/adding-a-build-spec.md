@@ -15,8 +15,8 @@ To hook into the build process, add a `seed.yml` in the root of your project dir
 before_compile:
   - echo "Before compile"
 
-compile:
-  - echo "Override compile"
+#compile:
+#  - echo "Override compile"
 
 before_build:
   - echo "Before build"

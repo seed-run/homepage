@@ -209,6 +209,22 @@ The scripts in your build spec are run in an environment that are using your AWS
 
 Here are a couple of examples of what you could do in a build spec.
 
+#### Customizing Node versions
+
+The Build images come loaded with [n](https://github.com/tj/n). This allows you to select the specific version of Node.js you want.
+
+``` yml
+before_compile:
+  - n 14.17.0
+```
+
+You can install the version of npm you want in the same way. For example, if you wanted to use the latest version of npm, add the following.
+
+``` yml
+before_compile:
+  - npm i -g npm@latest
+```
+
 #### Navigate to the service path
 
 By default, the commands in the build spec are executed at the repo root. To change the working directory to the service, use the `$SEED_SERVICE_FULLPATH` environment variable.

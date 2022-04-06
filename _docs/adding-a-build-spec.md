@@ -166,6 +166,8 @@ Seed also has a couple of build environment variables that you can use to custom
 - `$SEED_BUILD_SERVICE_SHA`: The commit SHA used to build a given service. For [post-deploy phases]({% link _docs/adding-a-post-deploy-phase.md %}), if the build is using multiple commits, the first commit will be set. If the service is being removed, it is set to the commit used in the last successfully deployed build.
 - `$SEED_BRANCH`: The Git branch used to trigger this build. Does not apply to promotions and rollbacks. For PR stages, this is the branch the PR was submitted to. Note the difference between this and the `$SEED_STAGE_BRANCH` variable. These two variables will differ if you trigger a manual deployment using a branch that's different from the one the stage is set to auto-deploy from.
 - `$SEED_PULL_REQUEST_NUMBER`: For PR stages, this is the number of the Pull Request.
+- `$SEED_PULL_REQUEST_SOURCE_BRANCH`: For PR stages, this is the name of the source branch.
+- `$SEED_PULL_REQUEST_TARGET_BRANCH`: For PR stages, this is the number of the target branch.
 
 - Secrets: All your [secrets in the Seed console]({% link _docs/storing-secrets.md %}) are also made available during the build process. For example, a secret environment variable called **TEST_VAR** would be available as `$TEST_VAR` in the build process.
 

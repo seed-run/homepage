@@ -227,6 +227,15 @@ before_compile:
   - npm i -g npm@latest
 ```
 
+#### Customizing Go versions
+
+The Build images come loaded with [goenv](https://github.com/syndbg/goenv). This allows you to select the specific version of Go you want.
+
+``` yml
+before_compile:
+  - cd $HOME/.goenv && git pull && goenv install 1.16.4 && global 1.16.4
+```
+
 #### Navigate to the service path
 
 By default, the commands in the build spec are executed at the repo root. To change the working directory to the service, use the `$SEED_SERVICE_FULLPATH` environment variable.

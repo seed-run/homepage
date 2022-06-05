@@ -236,6 +236,15 @@ before_compile:
   - cd $HOME/.goenv && git pull && goenv install 1.16.4 && global 1.16.4
 ```
 
+#### Customizing .NET versions
+
+The Build images come loaded with [env tool](https://dot.net/v1/dotnet-install.sh) for .NET. This allows you to select the specific version of .NET you want.
+
+``` yml
+before_compile:
+  - /usr/local/bin/dotnet-install.sh -v 6.0.300
+```
+
 #### Navigate to the service path
 
 By default, the commands in the build spec are executed at the repo root. To change the working directory to the service, use the `$SEED_SERVICE_FULLPATH` environment variable.

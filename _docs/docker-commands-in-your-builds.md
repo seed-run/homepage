@@ -7,9 +7,9 @@ You can run Docker commands as a part of your build process by adding them to yo
 
 ### Enable Docker
 
-Docker is always enabled for SST apps for all plans.
+Note that, Docker is enabled by default for SST apps on all our plans.
 
-For Serverless Framework app, the Docker daemon is disabled by default in the build machine.
+For Serverless Framework apps, the Docker daemon is disabled by default in the build machine.
 
 Before enabling Docker, just make sure that:
 

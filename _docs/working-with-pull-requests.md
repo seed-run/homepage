@@ -74,30 +74,11 @@ Also, if the PR fails to deploy, the **Details** link will take you straight to 
 
 ### Environment Variables
 
-Seed also takes care of the environment variables and secrets for your pull requests. The variables defined in the `serverless.yml` for the _default_ stage (selected above in the settings) are made available to the pull request stage. [Secret variables]({% link _docs/storing-secrets.md %}) are also copied from the _default_ stage.
+Seed also takes care of the secrets for your pull requests. The [Secret variables]({% link _docs/storing-secrets.md %}) for the _default_ stage (selected above in the settings) are copied over to the pull request stage.
 
-> Environment variables and secrets of the default stage are automatically available to the pull request build
+> Secrets of the default stage are automatically available to the pull request build
 
-In the example above, the _default_ stage, **dev** is connected to the **master** branch. This means that any pull requests stages will use environment variables set for the **dev** branch. And the secrets for the **dev** stage will also be available to the pull request build.
-
-Say for example your `serverless.yml` looks like:
-
-``` yaml
-service: service-name
-
-custom:
-  myEnvironment:
-    MESSAGE:
-      production: "This is production environment"
-      dev: "This is development environment"
-
-provider:
-  name: aws
-  environment:
-    MESSAGE: ${self:custom.myEnvironment.MESSAGE.${opt:stage}}
-```
-
-Any pull requests, will have the `process.env.MESSAGE` set to `This is development environment`.
+In the example above, the _default_ stage, **dev** is connected to the **master** branch. This means that any pull requests stages will use the secrets for the **dev** branch.
 
 Once the pull request is merged a build is automatically triggered in the upstream stage and an updated build with the merged code is created. Alternatively, you can directly promote a build from the pull request stage without merging the pull request. This is useful when you are deploying a hotfix.
 

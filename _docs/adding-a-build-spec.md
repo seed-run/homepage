@@ -236,6 +236,22 @@ before_compile:
   - cd $HOME/.goenv && git pull && goenv install 1.16.4 && global 1.16.4
 ```
 
+#### Customizing Pip versions
+
+Update Pip to the latest version.
+
+``` yml
+before_compile:
+  - pip install --upgrade pip
+```
+
+Alternatively, you can select the specific version of Pip you want.
+
+``` yml
+before_compile:
+  - pip install --upgrade "pip==21.1.2"
+```
+
 #### Customizing .NET versions
 
 The Build images come loaded with [env tool](https://dot.net/v1/dotnet-install.sh) for .NET. This allows you to select the specific version of .NET you want.

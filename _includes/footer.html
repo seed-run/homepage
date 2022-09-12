@@ -51,11 +51,6 @@
 </footer>
 
 {% if jekyll.environment == 'production' %}
-<!-- Start of HubSpot Embed Code -->
-<!--
-<script type="text/javascript" id="hs-script-loader" async defer src="//js.hs-scripts.com/4154594.js"></script>
--->
-<!-- End of HubSpot Embed Code -->
 <!-- Start of Plain Embed Code -->
 <script async src="https://customer-chat.cdn-plain.com/latest/customerChat.js"></script>
 <script>
@@ -65,6 +60,8 @@
     plain("init", {
       appKey: "appKey_uk_01GCHGM2N7T35FQ23ZNPEP5KWR"
     });
+  
+    plain("set-theme", { brandColor: "#52437D" });
 </script>
 <!-- End of Plain Embed Code -->
 {% endif %}

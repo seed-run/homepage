@@ -114,6 +114,25 @@ Or use the pnpm algorithm instead:
 check_code_change: pnpm
 ```
 
+#### Filter pull request branches
+
+Seed by default deploys all pull requests when [auto-deploy pull requests]({% link _docs/working-with-pull-requests.md %}) is enabled. You have the option to filter the pull requests to deploy by the source branches.
+
+``` yml
+pull_request:
+  source_branches:
+    - feature/**
+    - release/**
+```
+
+Similarly, you can filter by target branches.
+
+``` yml
+pull_request:
+  source_branches:
+    - main
+```
+
 #### Customize stage names
 
 The stage name is central to the way Seed manages deployments and resources for your Serverless app. It is either [specified manually]({% link _docs/adding-a-stage.md %}) or Seed automatically generates it based on the [auto-deployed branch]({% link _docs/working-with-branches.md %}). If it's being generated, Seed will sanitize the branch names so it works with Serverless Framework and AWS.
@@ -167,7 +186,7 @@ Seed also has a couple of build environment variables that you can use to custom
 - `$SEED_BRANCH`: The Git branch used to trigger this build. Does not apply to promotions and rollbacks. For PR stages, this is the branch the PR was submitted to. Note the difference between this and the `$SEED_STAGE_BRANCH` variable. These two variables will differ if you trigger a manual deployment using a branch that's different from the one the stage is set to auto-deploy from.
 - `$SEED_PULL_REQUEST_NUMBER`: For PR stages, this is the number of the Pull Request.
 - `$SEED_PULL_REQUEST_SOURCE_BRANCH`: For PR stages, this is the name of the source branch.
-- `$SEED_PULL_REQUEST_TARGET_BRANCH`: For PR stages, this is the number of the target branch.
+- `$SEED_PULL_REQUEST_TARGET_BRANCH`: For PR stages, this is the name of the target branch.
 
 - Secrets: All your [secrets in the Seed console]({% link _docs/storing-secrets.md %}) are also made available during the build process. For example, a secret environment variable called **TEST_VAR** would be available as `$TEST_VAR` in the build process.
 

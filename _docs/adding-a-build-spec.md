@@ -129,7 +129,7 @@ Similarly, you can filter by target branches.
 
 ``` yml
 pull_request:
-  source_branches:
+  target_branches:
     - main
 ```
 

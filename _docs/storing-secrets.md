@@ -67,7 +67,7 @@ For SST apps, you can grab the secrets from the build environment and set it in 
 
 ``` javascript
 app.addDefaultFunctionEnv({
-  DB_PASSWORD: procress.env.DB_PASSWORD
+  DB_PASSWORD: process.env.DB_PASSWORD
 });
 ```
 

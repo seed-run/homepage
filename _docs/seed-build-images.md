@@ -6,6 +6,8 @@ title: Seed Build Images
 Seed runs your builds inside a virtual machine and it'll use a build image based on the Lambda runtime of your service. Below is a list of all the images in use:
 
 [**Active Images**](#build-images)
+
+- [General Purpose v5.0](#general-purpose-v50)
 - [General Purpose v4.0](#general-purpose-v40)
 - [General Purpose v3.0](#general-purpose-v30)
 - [General Purpose v1.1](#general-purpose-v11)
@@ -14,6 +16,7 @@ Seed runs your builds inside a virtual machine and it'll use a build image based
 - [Ruby 2.5](#ruby-25)
 
 [**Deprecated Images**](#deprecated-build-images)
+
 - [General Purpose v2.0](#general-purpose-v20)
 - [General Purpose v1.0](#general-purpose-v10)
 - [Python 3.7](#python-37)
@@ -41,24 +44,22 @@ Seed regularly applies security updates to the build images. This means that the
 
 However for Node.js, the build images also comes with — [n](https://github.com/tj/n). It allows you to select a specific Node.js version if necessary. For example, to select Node.js v10.21.0 you can run this:
 
-``` bash
-$ n 10.21.0
+```bash
+$ n 18.14.0
 ```
 
 And to use it in your Seed builds, update your [build spec]({% link _docs/adding-a-build-spec.md %}) (`seed.yml`) with something like this:
 
-``` yml
+```yml
 before_compile:
-  - n 10.21.0
+  - n 18.14.0
 ```
-
-For npm, [Seed will automatically use npm 7 if it detects the new lockfile format]({% link _docs/adding-nodejs-projects.md %}#transition-to-npm-7).
 
 ### Golang Versions
 
 Seed uses [goenv](https://github.com/syndbg/goenv) to manage versions internally. So if you want to use a different version of Golang than the one that is on the build image, add the following to your [build spec]({% link _docs/adding-a-build-spec.md %}) (`seed.yml`):
 
-``` yml
+```yml
 before_compile:
   - rm -r $HOME/.goenv && git clone https://github.com/syndbg/goenv.git $HOME/.goenv && goenv install 1.16.4 && goenv global 1.16.4
   - go version
@@ -72,7 +73,7 @@ These images are useful if you are trying to debug build issues. You can set up 
 
 To start the environment:
 
-``` bash
+```bash
 $ docker run --rm -it --privileged seedrun/build:general-purpose-4.0 bash
 ```
 
@@ -80,7 +81,7 @@ Make sure to select the build image your service is using.
 
 The default working directory for builds in Seed is `/tmp/seed/source`. To clone the source, run:
 
-``` bash
+```bash
 $ mkdir -p /tmp/seed
 $ cd /tmp/seed
 $ git clone https://github.com/my/repo source
@@ -91,28 +92,51 @@ $ cd source
 
 Below are the build images that are used and the types of services they are used for. A build image is chosen based on the Lambda runtime of the service.
 
+### General Purpose v5.0
+
+Lambda runtimes: Node.js 18.x, 16.x, Go 1.x
+
+OS: Ubuntu 22.04
+
+| Includes         | Version |
+| ---------------- | :-----: |
+| Node.js          |   16    |
+| Python           |  3.10   |
+| Ruby             |   3.1   |
+| Go               |  1.18   |
+| .NET Core        |   6.0   |
+| Java             |   17    |
+| PHP              |   8.1   |
+| NPM              |  8.11   |
+| YARN             |  1.22   |
+| PIP              |  22.1   |
+| Docker\*         |  20.10  |
+| Docker Compose\* |   2.6   |
+
+\*[Docker and Docker Compose need to be enabled.]({% link _docs/docker-commands-in-your-builds.md %})
+
 ### General Purpose v4.0
 
-Lambda runtimes: Node.js 14.x, Go 1.x, Ruby 2.7, Java 11
+Lambda runtimes: Ruby 2.7, Java 11
 
 OS: Ubuntu 20.04
 
-| Includes        | Version |
-|-----------------|:-------:|
-| Node.js         | 14      |
-| Python          | 3.9     |
-| Ruby            | 2.7     |
-| Go              | 1.15    |
-| .NET Core       | 5.0     |
-| Java            | 11      |
-| PHP             | 8.0     |
-| NPM             | 6.14    |
-| YARN            | 1.22    |
-| PIP             | 20.3    |
-| Docker*         | 19.03   |
-| Docker Compose* | 1.27    |
+| Includes         | Version |
+| ---------------- | :-----: |
+| Node.js          |   14    |
+| Python           |   3.9   |
+| Ruby             |   2.7   |
+| Go               |  1.15   |
+| .NET Core        |   5.0   |
+| Java             |   11    |
+| PHP              |   8.0   |
+| NPM              |  6.14   |
+| YARN             |  1.22   |
+| PIP              |  20.3   |
+| Docker\*         |  19.03  |
+| Docker Compose\* |  1.27   |
 
-*[Docker and Docker Compose need to be enabled.]({% link _docs/docker-commands-in-your-builds.md %})
+\*[Docker and Docker Compose need to be enabled.]({% link _docs/docker-commands-in-your-builds.md %})
 
 ### General Purpose v3.0
 
@@ -120,22 +144,22 @@ Lambda runtimes: Node.js 12.x, Python 3.8, .NET Core 3.1
 
 OS: Ubuntu 18.04
 
-| Includes        | Version |
-|-----------------|:-------:|
-| Node.js         | 12      |
-| Python          | 3.8     |
-| Ruby            | 2.7     |
-| Go              | 1.14    |
-| .NET Core       | 3.1     |
-| Java            | 11      |
-| PHP             | 7.4     |
-| NPM             | 6.14    |
-| YARN            | 1.22    |
-| PIP             | 19.3    |
-| Docker*         | 19.03   |
-| Docker Compose* | 1.24    |
+| Includes         | Version |
+| ---------------- | :-----: |
+| Node.js          |   12    |
+| Python           |   3.8   |
+| Ruby             |   2.7   |
+| Go               |  1.14   |
+| .NET Core        |   3.1   |
+| Java             |   11    |
+| PHP              |   7.4   |
+| NPM              |  6.14   |
+| YARN             |  1.22   |
+| PIP              |  19.3   |
+| Docker\*         |  19.03  |
+| Docker Compose\* |  1.24   |
 
-*[Docker and Docker Compose need to be enabled.]({% link _docs/docker-commands-in-your-builds.md %})
+\*[Docker and Docker Compose need to be enabled.]({% link _docs/docker-commands-in-your-builds.md %})
 
 ### General Purpose v1.1
 
@@ -143,22 +167,22 @@ Lambda runtimes: Node.js 10.x, Python 3.7, Java 8
 
 OS: Ubuntu 18.04
 
-| Includes        | Version |
-|-----------------|:-------:|
-| Node.js         | 10      |
-| Python          | 3.7     |
-| Ruby            | 2.6     |
-| Go              | 1.13    |
-| .NET Core       | 3.1     |
-| Java            | 11      |
-| PHP             | 7.3     |
-| NPM             | 6.14    |
-| YARN            | 1.22    |
-| PIP             | 19.3    |
-| Docker*         | 19.03   |
-| Docker Compose* | 1.24    |
+| Includes         | Version |
+| ---------------- | :-----: |
+| Node.js          |   10    |
+| Python           |   3.7   |
+| Ruby             |   2.6   |
+| Go               |  1.13   |
+| .NET Core        |   3.1   |
+| Java             |   11    |
+| PHP              |   7.3   |
+| NPM              |  6.14   |
+| YARN             |  1.22   |
+| PIP              |  19.3   |
+| Docker\*         |  19.03  |
+| Docker Compose\* |  1.24   |
 
-*[Docker and Docker Compose need to be enabled.]({% link _docs/docker-commands-in-your-builds.md %})
+\*[Docker and Docker Compose need to be enabled.]({% link _docs/docker-commands-in-your-builds.md %})
 
 ### Python 3.6
 
@@ -166,13 +190,13 @@ Lambda runtime: Python 3.6
 
 OS: Debian 9
 
-| Includes        | Version |
-|-----------------|:-------:|
-| Node.js         | 8.15    |
-| Python          | 3.6     |
-| NPM             | 6.1.0   |
-| YARN            | 1.12.3  |
-| PIP             | 9.0.1   |
+| Includes | Version |
+| -------- | :-----: |
+| Node.js  |  8.15   |
+| Python   |   3.6   |
+| NPM      |  6.1.0  |
+| YARN     | 1.12.3  |
+| PIP      |  9.0.1  |
 
 ### Python 2.7
 
@@ -180,13 +204,13 @@ Lambda runtime: Python 2.7
 
 OS: Debian 9
 
-| Includes        | Version |
-|-----------------|:-------:|
-| Node.js         | 8.15    |
-| Python          | 2.7     |
-| NPM             | 6.1.0   |
-| YARN            | 1.12.3  |
-| PIP             | 9.0.1   |
+| Includes | Version |
+| -------- | :-----: |
+| Node.js  |  8.15   |
+| Python   |   2.7   |
+| NPM      |  6.1.0  |
+| YARN     | 1.12.3  |
+| PIP      |  9.0.1  |
 
 ### Ruby 2.5
 
@@ -194,12 +218,12 @@ Lambda runtime: Ruby 2.5
 
 OS: Debian 9
 
-| Includes        | Version |
-|-----------------|:-------:|
-| Node.js         | 8.10    |
-| Ruby            | 2.5     |
-| NPM             | 6.1.0   |
-| YARN            | 1.12.3  |
+| Includes | Version |
+| -------- | :-----: |
+| Node.js  |  8.10   |
+| Ruby     |   2.5   |
+| NPM      |  6.1.0  |
+| YARN     | 1.12.3  |
 
 ---
 
@@ -213,22 +237,22 @@ Upgrade to: [General Purpose v3.0](#general-purpose-v30)
 
 OS: Ubuntu 18.04
 
-| Includes        | Version |
-|-----------------|:-------:|
-| Node.js         | 12      |
-| Python          | 3.8     |
-| Ruby            | 2.6     |
-| Go              | 1.13    |
-| .NET Core       | 3.0     |
-| Java            | 11      |
-| PHP             | 7.3     |
-| NPM             | 6.13.4  |
-| YARN            | 1.12.3  |
-| PIP             | 19.3.1  |
-| Docker*         | 19.03   |
-| Docker Compose* | 1.24    |
+| Includes         | Version |
+| ---------------- | :-----: |
+| Node.js          |   12    |
+| Python           |   3.8   |
+| Ruby             |   2.6   |
+| Go               |  1.13   |
+| .NET Core        |   3.0   |
+| Java             |   11    |
+| PHP              |   7.3   |
+| NPM              | 6.13.4  |
+| YARN             | 1.12.3  |
+| PIP              | 19.3.1  |
+| Docker\*         |  19.03  |
+| Docker Compose\* |  1.24   |
 
-*[Docker and Docker Compose need to be enabled.]({% link _docs/docker-commands-in-your-builds.md %})
+\*[Docker and Docker Compose need to be enabled.]({% link _docs/docker-commands-in-your-builds.md %})
 
 ### General Purpose v1.0
 
@@ -236,22 +260,22 @@ Upgrade to: [General Purpose v1.1](#general-purpose-v11)
 
 OS: Ubuntu 18.04
 
-| Includes        | Version |
-|-----------------|:-------:|
-| Node.js         | 10      |
-| Python          | 3.7     |
-| Ruby            | 2.6     |
-| Go              | 1.13    |
-| .NET Core       | 2.2     |
-| Java            | 11      |
-| PHP             | 7.3     |
-| NPM             | 6.13.4  |
-| YARN            | 1.12.3  |
-| PIP             | 19.3.1  |
-| Docker*         | 18.09   |
-| Docker Compose* | 1.24    |
+| Includes         | Version |
+| ---------------- | :-----: |
+| Node.js          |   10    |
+| Python           |   3.7   |
+| Ruby             |   2.6   |
+| Go               |  1.13   |
+| .NET Core        |   2.2   |
+| Java             |   11    |
+| PHP              |   7.3   |
+| NPM              | 6.13.4  |
+| YARN             | 1.12.3  |
+| PIP              | 19.3.1  |
+| Docker\*         |  18.09  |
+| Docker Compose\* |  1.24   |
 
-*[Docker and Docker Compose need to be enabled.]({% link _docs/docker-commands-in-your-builds.md %})
+\*[Docker and Docker Compose need to be enabled.]({% link _docs/docker-commands-in-your-builds.md %})
 
 ### Python 3.7
 
@@ -261,13 +285,13 @@ Lambda runtime: Python 3.7
 
 OS: Debian 9
 
-| Includes        | Version |
-|-----------------|:-------:|
-| Node.js         | 8.15    |
-| Python          | 3.7     |
-| NPM             | 6.1.0   |
-| YARN            | 1.12.3  |
-| PIP             | 18.1    |
+| Includes | Version |
+| -------- | :-----: |
+| Node.js  |  8.15   |
+| Python   |   3.7   |
+| NPM      |  6.1.0  |
+| YARN     | 1.12.3  |
+| PIP      |  18.1   |
 
 ### .NET Core 2.1
 
@@ -278,8 +302,8 @@ Lambda runtime: .NET Core 2.1
 OS: Debian 9
 
 | Includes  | Version |
-|-----------|:-------:|
-| Node.js   | 8.10    |
-| .NET Core | 2.1     |
-| NPM       | 6.1.0   |
+| --------- | :-----: |
+| Node.js   |  8.10   |
+| .NET Core |   2.1   |
+| NPM       |  6.1.0  |
 | YARN      | 1.12.3  |

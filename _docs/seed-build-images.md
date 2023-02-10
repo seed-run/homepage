@@ -108,6 +108,7 @@ OS: Ubuntu 22.04
 | Java             |   17    |
 | PHP              |   8.1   |
 | NPM              |  8.11   |
+| PNPM             |  7.27   |
 | YARN             |  1.22   |
 | PIP              |  22.1   |
 | Docker\*         |  20.10  |

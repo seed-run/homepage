@@ -337,7 +337,8 @@ after_deploy:
     aws lambda invoke
     --function-name my-function
     --payload '{"name":"Bob"}'
-    /dev/stdout
+    results.txt
+  - cat results.txt
 ```
 
 This works because the AWS CLI is available and configured with the IAM credentials of the stage.

@@ -74,7 +74,7 @@ These images are useful if you are trying to debug build issues. You can set up 
 To start the environment:
 
 ```bash
-$ docker run --rm -it --privileged seedrun/build:general-purpose-4.0 bash
+$ docker run --rm -it --privileged seedrun/build:general-purpose-5.0 bash
 ```
 
 Make sure to select the build image your service is using.

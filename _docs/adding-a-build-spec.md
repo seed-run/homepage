@@ -11,7 +11,7 @@ While [Seed](/) does not need a build spec to configure your pipelines or your p
 
 To hook into the build process, add a `seed.yml` in the root of your project directory. Here is the basic skeleton of our build spec.
 
-``` yml
+```yml
 before_compile:
   - echo "Before compile"
 
@@ -46,13 +46,13 @@ A couple of things to keep in mind when adding commands to your build spec.
 
    So for this example.
 
-   ``` yml
+   ```yml
    before_compile:
      - cd services/posts && echo $PWD
      - echo $PWD
    ```
 
-   The two commands will print out different working directories. 
+   The two commands will print out different working directories.
 
 Below is a brief description of the build steps.
 
@@ -60,33 +60,33 @@ Below is a brief description of the build steps.
 
 - `before_compile`
 
-   Seed starts the build process by doing a `npm install` (for Node.js projects), `pip install -r requirements.txt` (for Python projects), or `make` (for Go projects). The `before_compile` step let's you run commands before this. This can be useful for [configuring private npm modules]({% link _docs/private-npm-modules.md %}).
+  Seed starts the build process by doing a `npm install` (for Node.js projects), `pip install -r requirements.txt` (for Python projects), or `make` (for Go projects). The `before_compile` step let's you run commands before this. This can be useful for [configuring private npm modules]({% link _docs/private-npm-modules.md %}).
 
 - `compile`
 
-   Override the default compile commands. This can be useful if you are using a custom package manager like [`pnpm`](https://pnpm.io) or [`Nx`](https://nx.dev).
+  Override the default compile commands. This can be useful if you are using a custom package manager like [`pnpm`](https://pnpm.io) or [`Nx`](https://nx.dev).
 
 - `before_build`
 
-   The actual build portion for Seed is the `serverless package` command that creates the build. The `before_build` step let's you run your commands before this happens.
+  The actual build portion for Seed is the `serverless package` command that creates the build. The `before_build` step let's you run your commands before this happens.
 
 - `before_deploy`
 
-   After the build packages are created, Seed deploys these using the `serverless deploy` command. The `before_deploy` let's you run your commands before this happens. This step is run for all services and also when they are promoted to production. You can distinguish between the cases by using the `$SEED_STAGE_NAME` build environment variable.
+  After the build packages are created, Seed deploys these using the `serverless deploy` command. The `before_deploy` let's you run your commands before this happens. This step is run for all services and also when they are promoted to production. You can distinguish between the cases by using the `$SEED_STAGE_NAME` build environment variable.
 
 - `after_deploy`
 
-   After the deployment is complete you can use the `after_deploy` step to run any post deployment scripts you might have. Again, this step is run for all services and also when they are promoted to production. You can distinguish between the cases by using the `$SEED_STAGE_NAME` build environment variable.
+  After the deployment is complete you can use the `after_deploy` step to run any post deployment scripts you might have. Again, this step is run for all services and also when they are promoted to production. You can distinguish between the cases by using the `$SEED_STAGE_NAME` build environment variable.
 
-   Note that for [SST apps]({% link _docs/adding-a-cdk-app.md %}), Seed uses an [integrated deployment process]({% link _posts/2020-09-23-fixing-cdk-deployments.md %}) (to make your CDK deployments free). So any script executed after the deployment, is run in a separate build process.
+  Note that for [SST apps]({% link _docs/adding-a-cdk-app.md %}), Seed uses an [integrated deployment process]({% link _posts/2020-09-23-fixing-cdk-deployments.md %}) (to make your CDK deployments free). So any script executed after the deployment, is run in a separate build process.
 
 - `before_remove`
 
-   Seed runs the `serverless remove` command to remove a deployed service. The `before_remove` step let's you run any commands before this happens. Note that, this step is only run when a service is being removed.
+  Seed runs the `serverless remove` command to remove a deployed service. The `before_remove` step let's you run any commands before this happens. Note that, this step is only run when a service is being removed.
 
 - `after_remove`
 
-   Similar to the `before_remove`, the `after_remove` step is run after a service has been removed. This can be used to run any cleanup scripts you might have.
+  Similar to the `before_remove`, the `after_remove` step is run after a service has been removed. This can be used to run any cleanup scripts you might have.
 
 ### Other Options
 
@@ -98,19 +98,19 @@ Seed by default checks the Git log to see if a service has been updated, before 
 
 Add the following to either, disable this check:
 
-``` yml
+```yml
 check_code_change: false
 ```
 
 Use the Lerna algorithm:
 
-``` yml
+```yml
 check_code_change: lerna
 ```
 
 Or use the pnpm algorithm instead:
 
-``` yml
+```yml
 check_code_change: pnpm
 ```
 
@@ -118,7 +118,7 @@ check_code_change: pnpm
 
 Seed by default deploys all pull requests when [auto-deploy pull requests]({% link _docs/working-with-pull-requests.md %}) is enabled. You have the option to filter the pull requests to deploy by the source branches.
 
-``` yml
+```yml
 pull_request:
   source_branches:
     - feature/**
@@ -127,7 +127,7 @@ pull_request:
 
 Similarly, you can filter by target branches.
 
-``` yml
+```yml
 pull_request:
   target_branches:
     - main
@@ -148,7 +148,7 @@ However, there might be rare cases where you might wish to customize the automat
 
 Let's look at an example. Say your feature branches have the naming convention `feature/feature-name`. However, you want the stage names to be `feature-name`. And you don't want to transform some specific branch names. Add the following to your `seed.yml`.
 
-``` yml
+```yml
 stage_name_constructor: >
   if [ $SEED_STAGE_BRANCH = 'master' ]; then
     echo 'master'
@@ -159,14 +159,24 @@ stage_name_constructor: >
   fi
 ```
 
-#### Disabling downstream artifacts
+#### Disable downstream artifacts
 
 Seed by default generates some build artifacts for downstream stages. These artifacts are used to generate CloudFormation change sets when promoting. You have the option to disable generating these artifacts if you are not promoting builds across stages. You can read more about this in our [Promoting to Production]({% link _docs/promoting-to-production.md %}) chapter.
 
 Add the following to your `seed.yml` to disable generating artifacts.
 
-``` yml
+```yml
 disable_artifacts: true
+```
+
+#### Disable setting secrets as Lambda environment variables
+
+For Serverless Framework applications, Seed by default sets [secrets](./storing-secrets.md) as Lambda environment variables. And you can then access them in your Node.js Lambda functions using the `process.env` object.
+
+Add the following to your `seed.yml` to opt out of this behavior.
+
+```yml
+sls_set_secret_envs: false
 ```
 
 ### Build Environment Variables
@@ -202,7 +212,7 @@ Here the `$SEED_APP_NAME` would be `serverless-app`, `$SEED_STAGE_NAME` would be
 
 Environment variables that are set in the build spec do not persist across commands. This means that in the following build spec, `$MY_VAR` will not be printed out.
 
-``` yml
+```yml
 before_compile:
   - export MY_VAR=hello
   - echo $MY_VAR
@@ -212,7 +222,7 @@ To ensure that your custom build environment variables persist across commands; 
 
 So a variation of the above with `$BASH_ENV` looks like this:
 
-``` yml
+```yml
 before_compile:
   - echo 'export MY_VAR=hello' >> $BASH_ENV
   - echo $MY_VAR
@@ -234,14 +244,14 @@ Here are a couple of examples of what you could do in a build spec.
 
 The Build images come loaded with [n](https://github.com/tj/n). This allows you to select the specific version of Node.js you want.
 
-``` yml
+```yml
 before_compile:
   - n 14.17.0
 ```
 
 You can install the version of npm you want in the same way. For example, if you wanted to use the latest version of npm, add the following.
 
-``` yml
+```yml
 before_compile:
   - npm i -g npm@latest
 ```
@@ -250,7 +260,7 @@ before_compile:
 
 The Build images come loaded with [goenv](https://github.com/syndbg/goenv). This allows you to select the specific version of Go you want.
 
-``` yml
+```yml
 before_compile:
   - cd $HOME/.goenv && git pull && goenv install 1.16.4 && global 1.16.4
 ```
@@ -259,14 +269,14 @@ before_compile:
 
 Update Pip to the latest version.
 
-``` yml
+```yml
 before_compile:
   - pip install --upgrade pip
 ```
 
 Alternatively, you can select the specific version of Pip you want.
 
-``` yml
+```yml
 before_compile:
   - pip install --upgrade "pip==21.1.2"
 ```
@@ -275,7 +285,7 @@ before_compile:
 
 The Build images come loaded with [env tool](https://dot.net/v1/dotnet-install.sh) for .NET. This allows you to select the specific version of .NET you want.
 
-``` yml
+```yml
 before_compile:
   - /usr/local/bin/dotnet-install.sh -v 6.0.300
 ```
@@ -284,16 +294,16 @@ before_compile:
 
 By default, the commands in the build spec are executed at the repo root. To change the working directory to the service, use the `$SEED_SERVICE_FULLPATH` environment variable.
 
-``` yml
+```yml
 after_deploy:
   - cd $SEED_SERVICE_FULLPATH && echo 'hello'
 ```
 
-#### Run a script after deploy only in prod 
+#### Run a script after deploy only in prod
 
 Let's assume your production stage is called `prod`.
 
-``` yml
+```yml
 after_deploy:
   - if [ $SEED_STAGE_NAME = "prod" ]; then echo 'deployed prod'; fi
 ```
@@ -302,14 +312,14 @@ after_deploy:
 
 Let's assume your service is called `users`.
 
-``` yml
+```yml
 after_deploy:
   - if [ $SEED_SERVICE_NAME = "users" ]; then echo 'deployed users'; fi
 ```
 
 And if you wanted to combine two conditions you can do:
 
-``` yml
+```yml
 after_deploy:
   - if [ $SEED_STAGE_NAME = "prod" ] && [ $SEED_SERVICE_NAME != "users" ]; then echo 'deployed users to prod'; fi
 ```
@@ -318,7 +328,7 @@ after_deploy:
 
 If you need to start a PostgreSQL server locally for tests.
 
-``` yml
+```yml
 before_compile:
   - apt-get install wget ca-certificates -y
   - wget --quiet -O - https://www.postgresql.org/media/keys/ACCC4CF8.asc | apt-key add -
@@ -331,7 +341,7 @@ before_compile:
 
 If you want to invoke a Lambda function as a part of your build process.
 
-``` yml
+```yml
 after_deploy:
   - >
     aws lambda invoke
@@ -349,7 +359,7 @@ Note that, we are not using the `serverless invoke` command here. This is becaus
 
 If you want to use a CloudFormation output from a different stack use the following.
 
-``` yml
+```yml
 before_compile:
   - echo "export MY_KEY=$(aws cloudformation describe-stacks --stack-name my-stack --query 'Stacks[0].Outputs[?OutputKey==`MY_KEY`].OutputValue | [0]' --output text)" >> $BASH_ENV
   - echo $MY_KEY

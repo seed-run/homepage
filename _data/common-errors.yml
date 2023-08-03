@@ -69,10 +69,10 @@ toc:
     url: /docs/serverless-errors/serverless-version-does-not-satisfy-the-frameworkversion.html
   - title: No matching handler found. Check your service definition.
     url: /docs/serverless-errors/no-matching-handler-found-check-your-service-definition.html
-  - title: The AWS Access Key Id needs a subscription for the service
-    url: /docs/serverless-errors/the-aws-access-key-id-needs-a-subscription-for-the-service.html
   - title: Trying to populate non string value into a string for variable
     url: /docs/serverless-errors/trying-to-populate-non-string-value-into-a-string-for-variable.html
+  - title: The AWS Access Key Id needs a subscription for the service
+    url: /docs/serverless-errors/the-aws-access-key-id-needs-a-subscription-for-the-service.html
   - title: Lambda was unable to configure your environment variables
     url: /docs/serverless-errors/lambda-was-unable-to-configure-your-environment-variables.html
   - title: IamRoleLambdaExecution - Resource must be in ARN format or

@@ -266,6 +266,18 @@ before_compile:
   - cd $HOME/.goenv && git pull && goenv install 1.16.4 && global 1.16.4
 ```
 
+#### Customizing Python versions
+
+Update Python to a specific version.
+
+```yml
+before_compile:
+  - cd /root/.pyenv/plugins/python-build/../.. && git pull
+  - pyenv install 3.11.4
+  - pyenv global 3.11.4
+  - python --version
+```
+
 #### Customizing Pip versions
 
 Update Pip to the latest version.

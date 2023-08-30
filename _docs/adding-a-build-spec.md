@@ -133,6 +133,15 @@ pull_request:
     - main
 ```
 
+#### Disable draft pull requests
+
+Seed by default deploys draft pull requests when [auto-deploy pull requests]({% link _docs/working-with-pull-requests.md %}) is enabled. If you wish to deploy only when the pull request is ready for review, you have the option to turn off this default behavior. Note that this option is currently only supported for GitHub.
+
+```yml
+pull_request:
+  deploy_draft: false
+```
+
 #### Customize stage names
 
 The stage name is central to the way Seed manages deployments and resources for your Serverless app. It is either [specified manually]({% link _docs/adding-a-stage.md %}) or Seed automatically generates it based on the [auto-deployed branch]({% link _docs/working-with-branches.md %}). If it's being generated, Seed will sanitize the branch names so it works with Serverless Framework and AWS.

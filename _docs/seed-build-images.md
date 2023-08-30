@@ -94,7 +94,7 @@ Below are the build images that are used and the types of services they are used
 
 ### General Purpose v5.0
 
-Lambda runtimes: Node.js 18.x, 16.x, Go 1.x
+Lambda runtimes: Node.js 18.x, Python 3.10, 16.x, Go 1.x
 
 OS: Ubuntu 22.04
 
@@ -108,7 +108,7 @@ OS: Ubuntu 22.04
 | Java             |   17    |
 | PHP              |   8.1   |
 | NPM              |  8.11   |
-| PNPM             |  7.27   |
+| PNPM             |  8.6.0  |
 | YARN             |  1.22   |
 | PIP              |  22.1   |
 | Docker\*         |  20.10  |
@@ -118,7 +118,7 @@ OS: Ubuntu 22.04
 
 ### General Purpose v4.0
 
-Lambda runtimes: Ruby 2.7, Java 11
+Lambda runtimes: Python 3.9, Ruby 2.7, Java 11
 
 OS: Ubuntu 20.04
 

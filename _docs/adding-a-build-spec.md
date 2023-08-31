@@ -133,13 +133,22 @@ pull_request:
     - main
 ```
 
-#### Disable draft pull requests
+#### Disable pull request drafts
 
-Seed by default deploys draft pull requests when [auto-deploy pull requests]({% link _docs/working-with-pull-requests.md %}) is enabled. If you wish to deploy only when the pull request is ready for review, you have the option to turn off this default behavior. Note that this option is currently only supported for GitHub.
+While Seed deploys draft pull requests by default, you can modify this behavior to deploy only when the pull request is marked as ready for review. Note that this option is currently only supported for GitHub.
 
 ```yml
 pull_request:
-  deploy_draft: false
+  deploy_drafts: false
+```
+
+#### Disable pull request updates
+
+If you prefer Seed to deploy pull requests only upon creation, and not upon subsequent pushes or commits, you can disable the automatic deployment on pushes.
+
+```yml
+pull_request:
+  deploy_pushes: false
 ```
 
 #### Customize stage names
@@ -202,7 +211,7 @@ Seed also has a couple of build environment variables that you can use to custom
 - `$SEED_SERVICE_FULLPATH`: The absolute path of the service inside the build container. For example, `/tmp/seed/source/services/posts`. If the service is at the root of the repo, it is `/tmp/seed/source`.
 - `$SEED_BUILD_ID`: The build id.
 - `$SEED_BUILD_SERVICE_SHA`: The commit SHA used to build a given service. For [post-deploy phases]({% link _docs/adding-a-post-deploy-phase.md %}), if the build is using multiple commits, the first commit will be set. If the service is being removed, it is set to the commit used in the last successfully deployed build.
-- `$SEED_BUILD_TRIGGER`: Whether the build is triggered by "deploy", "promote", or "rollback". 
+- `$SEED_BUILD_TRIGGER`: Whether the build is triggered by "deploy", "promote", or "rollback".
 - `$SEED_BRANCH`: The Git branch used to trigger this build. Does not apply to promotions and rollbacks. For PR stages, this is the branch the PR was submitted to. Note the difference between this and the `$SEED_STAGE_BRANCH` variable. These two variables will differ if you trigger a manual deployment using a branch that's different from the one the stage is set to auto-deploy from.
 - `$SEED_PULL_REQUEST_NUMBER`: For PR stages, this is the number of the Pull Request.
 - `$SEED_PULL_REQUEST_SOURCE_BRANCH`: For PR stages, this is the name of the source branch.

@@ -42,7 +42,7 @@ Seed regularly applies security updates to the build images. This means that the
 
 ### Node Versions
 
-However for Node.js, the build images also comes with — [n](https://github.com/tj/n). It allows you to select a specific Node.js version if necessary. For example, to select Node.js v10.21.0 you can run this:
+However for Node.js, the build images also comes with — [n](https://github.com/tj/n). It allows you to select a specific Node.js version if necessary. For example, to select Node.js v18.14.0 you can run this:
 
 ```bash
 $ n 18.14.0

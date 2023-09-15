@@ -82,7 +82,7 @@ By default, Seed uses a simple algorithm to determine if a service in your app n
         serverless.yml
         handler.js
    ```
-   
+
    The second is where you simply have a service inside another service's directory.
 
    ```
@@ -124,9 +124,9 @@ If you are trying to figure out why Seed deployed your service, you can check th
 
 ### Use Lerna to check updated packages
 
-If you are using [Lerna + Yarn Workspaces to manage your monorepo Serverless project](https://serverless-stack.com/chapters/using-lerna-and-yarn-workspaces-with-serverless.html), Seed can use the Lerna CLI to figure out which of your services need to be deployed. To use this algorithm, add the following to your `seed.yml` in your project root.
+If you are using [Lerna + Yarn Workspaces to manage your monorepo Serverless project](https://sst.dev/chapters/using-lerna-and-yarn-workspaces-with-serverless.html), Seed can use the Lerna CLI to figure out which of your services need to be deployed. To use this algorithm, add the following to your `seed.yml` in your project root.
 
-``` yml
+```yml
 check_code_change: lerna
 ```
 
@@ -154,10 +154,10 @@ If you are looking to get started with using Lerna + Yarn Workspaces for your Se
 
 If you are using [pnpm Workspaces](https://pnpm.io/workspaces) to manage your monorepo Serverless project, Seed can use the pnpm CLI to figure out which of your services need to be deployed. The way it works is very similar to the Lerna algorithm. To use this algorithm, add the following to your `seed.yml` in your project root.
 
-``` yml
+```yml
 check_code_change: pnpm
 ```
 
--------
+---
 
 The above checks makes it so that Seed will only deploy your services if the relevant parts of your code have been updated. This ensures that the deployments for your monorepo Serverless apps on Seed are fast and cost-effective.

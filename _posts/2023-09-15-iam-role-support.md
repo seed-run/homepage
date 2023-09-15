@@ -2,6 +2,7 @@
 layout: post
 title: IAM role support
 categories: news
+image: assets/social-cards/iam-role-support.png
 author: frank
 ---
 
@@ -11,7 +12,7 @@ Seed now connects to your AWS account through IAM roles. It's far more secure th
 
 Seed can use an IAM role to generate temporary credentials while deploying. These credentials expire and there's less of a security risk with them getting leaked. So we are **recommending that you update** the credentials in your Seed settings to use IAM roles instead.
 
-If you go into your app settings, you'll noticed that we ask you to update to using IAM roles. While your current IAM user credentials will continue to work, you should consider making the upgrade as soon as possible.
+If you go in your app settings, you'll notice that we ask you to update to IAM roles. While your current IAM user credentials will continue to work, you should consider making the upgrade as soon as possible.
 
 ![Seed app IAM role update message](/assets/blog/iam-role-support/seed-app-iam-role-update-message.png)
 

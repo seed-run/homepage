@@ -3,11 +3,11 @@ layout: docs
 title: Customizing your IAM Policy
 ---
 
-Seed manages the serverless project in your AWS account on behalf of the IAM user that you create. This means that you need to specify the permissions Serverless Framework needs to deploy your project.
+Seed manages the serverless project in your AWS account on behalf of the IAM role that you create. This means that you need to specify the permissions Serverless Framework needs to deploy your project.
 
 Since the permissions that Serverless Framework needs depends on the services that are being deployed. Let's take a look at the least amount of permissions that needs to be granted for your project give that you are deploying Lambda and API Gateway.
 
-``` json
+```json
 {
   "Version": "2012-10-17",
   "Statement": [
@@ -25,18 +25,12 @@ Since the permissions that Serverless Framework needs depends on the services th
     },
     {
       "Effect": "Allow",
-      "Action": [
-        "cloudformation:ValidateTemplate"
-      ],
-      "Resource": [
-        "*"
-      ]
+      "Action": ["cloudformation:ValidateTemplate"],
+      "Resource": ["*"]
     },
     {
       "Effect": "Allow",
-      "Action": [
-        "s3:*"
-      ],
+      "Action": ["s3:*"],
       "Resource": [
         "arn:aws:s3:::<s3_bucket_name>",
         "arn:aws:s3:::<s3_bucket_name>/*"
@@ -44,12 +38,8 @@ Since the permissions that Serverless Framework needs depends on the services th
     },
     {
       "Effect": "Allow",
-      "Action": [
-        "logs:DescribeLogGroups"
-      ],
-      "Resource": [
-        "arn:aws:logs:<region>:<account_no>:log-group::log-stream:*"
-      ]
+      "Action": ["logs:DescribeLogGroups"],
+      "Resource": ["arn:aws:logs:<region>:<account_no>:log-group::log-stream:*"]
     },
     {
       "Effect": "Allow",
@@ -77,15 +67,11 @@ Since the permissions that Serverless Framework needs depends on the services th
         "iam:AttachRolePolicy",
         "iam:DeleteRolePolicy"
       ],
-      "Resource": [
-        "arn:aws:iam::<account_no>:role/<service_name>*-lambdaRole"
-      ]
+      "Resource": ["arn:aws:iam::<account_no>:role/<service_name>*-lambdaRole"]
     },
     {
       "Effect": "Allow",
-      "Action": [
-        "apigateway:*"
-      ],
+      "Action": ["apigateway:*"],
       "Resource": [
         "arn:aws:apigateway:<region>::/restapis",
         "arn:aws:apigateway:<region>::/restapis/<api_id>/*"
@@ -109,9 +95,7 @@ Since the permissions that Serverless Framework needs depends on the services th
         "lambda:RemovePermission",
         "lambda:InvokeFunction"
       ],
-      "Resource": [
-        "arn:aws:lambda:*:<account_no>:function:<service_name>*"
-      ]
+      "Resource": ["arn:aws:lambda:*:<account_no>:function:<service_name>*"]
     },
     {
       "Effect": "Allow",
@@ -120,9 +104,7 @@ Since the permissions that Serverless Framework needs depends on the services th
         "ec2:DescribeSubnets",
         "ec2:DescribeVpcs"
       ],
-      "Resource": [
-        "*"
-      ]
+      "Resource": ["*"]
     }
   ]
 }
@@ -136,23 +118,23 @@ Make sure to replace `<region>`, `<account_no>`, `<service_name>`, `<s3_bucket_n
 
 - Also, recall that the `<region>` and `<service_name>` are defined in your `serverless.yml` like so.
 
-  ``` yaml
+  ```yaml
   service: my-service
-  
+
   provider:
     name: aws
     region: us-east-1
     deploymentBucket: sls-deployment-bucket-001
   ```
-  
+
   In the above `serverless.yml`, the `<region>` is `us-east-1`, the `<service_name>` is `my-service`, and the `<s3_bucket_name>` is `sls-deployment-bucket-001`.
-  
+
 - The `<api_id>` is if you have API Gateway deployed as a part of your Serverless project. If you have deployed your project in the past, you can get this by looking at the deployed endpoint. For example, given the following API Gateway endpoint:
 
   ```
   https://n5z17getxh.execute-api.us-east-1.amazonaws.com/dev
   ```
-  
+
   The `<api_id>` in this case is `n5z17getxh`. You can read more about it [here](https://docs.aws.amazon.com/apigateway/latest/developerguide/how-to-call-api.html).
 
 If you need any help setting this up, you can always [contact us](mailto:{{ site.email }}) directly.
@@ -163,7 +145,7 @@ The above provides sufficient permissions for a minimal Serverless project. Howe
 
 If you want to [manage your custom domains in Seed]({% link _docs/configuring-custom-domains.md %}), you'll need to add the following permissions as well:
 
-``` json
+```json
 {
   "Version": "2012-10-17",
   "Statement": [
@@ -184,9 +166,7 @@ If you want to [manage your custom domains in Seed]({% link _docs/configuring-cu
     },
     {
       "Effect": "Allow",
-      "Action": [
-        "apigateway:*"
-      ],
+      "Action": ["apigateway:*"],
       "Resource": [
         "arn:aws:apigateway:*::/domainnames",
         "arn:aws:apigateway:*::/domainnames/*"

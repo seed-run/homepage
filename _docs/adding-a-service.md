@@ -21,7 +21,7 @@ If you don't have a `serverless.yml` for the service yet, you can still add the 
 
 ![Service serverless.yml not found](/assets/docs/adding-a-service/service-serverless-yml-path-not-found.png)
 
-The above assumes that you are trying to add a Serverless Framework service. If instead you are adding a [Serverless Stack](https://github.com/serverless-stack/serverless-stack), make sure to select it from the **Service Type** dropdown.
+The above assumes that you are trying to add a Serverless Framework service. If instead you are adding an [SST](https://github.com/sst/sst) service, make sure to select it from the **Service Type** dropdown.
 
 Once you add the service, you'll notice that it's deployed across all the stages that you have configured for your app. This means that a commit to `master` (for example), would trigger a build in the **dev** stage for all the services in the app.
 
@@ -36,7 +36,7 @@ While working on a new service, you might want to add it to Seed in a specific s
 For these cases, Seed uses the following scheme:
 
 - If deploying a stage that doesn't have the new service (dev in our example), the service is not deployed and it's marked as **Skipped**.
-- The skipped service does not affect the overall status of the build. 
+- The skipped service does not affect the overall status of the build.
 - However, if all services in a build are **Skipped**, the build is marked as **Failed**. This is because nothing was deployed in that build.
 
 ![Skipped service build log](/assets/docs/adding-a-service/skipped-service-build-log.png)

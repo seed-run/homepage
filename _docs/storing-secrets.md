@@ -63,7 +63,7 @@ Finally, you can access your secrets just as you would access any other environm
 
 ### SST
 
-For SST apps, you can grab the secrets from the build environment and set it in your Lambda functions. So for example, if you wanted to set a secret variable for all the functions in your app, you can use the [`addDefaultFunctionEnv`](https://docs.serverless-stack.com/constructs/App#adddefaultfunctionenv) method.
+For SST apps, you can grab the secrets from the build environment and set it in your Lambda functions. So for example, if you wanted to set a secret variable for all the functions in your app, you can use the [`addDefaultFunctionEnv`](https://docs.sst.dev/constructs/App#adddefaultfunctionenv) method.
 
 ```javascript
 app.addDefaultFunctionEnv({

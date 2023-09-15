@@ -8,11 +8,11 @@ title: Adding your IAM Credentials
 The IAM permissions that Seed requires is made up of:
 
 1. The permissions that Seed needs
-2. And the permissions Serverless Framework needs to deploy your app
+2. And the permissions SST or Serverless Framework needs to deploy your app
 
-Seed can help you create an IAM user with the necessary credentials. Hit the **Help me create an IAM user** link.
+Seed can help you create an IAM role with the necessary credentials. Hit the **Help me create an IAM Role** link.
 
-![Click the help me create an IAM user link screenshot](/assets/docs/iam/click-the-help-me-create-an-iam-user-link.png)
+![Click the help me create an IAM role link screenshot](/assets/docs/iam/click-the-help-me-create-an-iam-role-link.png)
 
 Review the permissions that Seed needs.
 
@@ -20,7 +20,7 @@ Review the permissions that Seed needs.
 
 For reference here are the permissions Seed needs.
 
-``` json
+```json
 {
   "Version": "2012-10-17",
   "Statement": [
@@ -124,10 +124,7 @@ For reference here are the permissions Seed needs.
     {
       "Sid": "ManageAPIAccessLogIam",
       "Effect": "Allow",
-      "Action": [
-        "iam:AttachRolePolicy",
-        "iam:PassRole"
-      ],
+      "Action": ["iam:AttachRolePolicy", "iam:PassRole"],
       "Resource": [
         {
           "Fn::Sub": "arn:aws:iam::${AWS::AccountId}:role/APIGatewayLogsRole*"
@@ -138,17 +135,17 @@ For reference here are the permissions Seed needs.
 }
 ```
 
-Next, customize the permissions that Serverless Framework needs to deploy your app. By default these permissions are very broad since this depends specifically on your app. If you are already using a set of IAM permissions to deploy, you can paste them here.
+Next, customize the permissions that SST or Serverless Framework needs to deploy your app. By default these permissions are very broad since this depends specifically on your app. If you are already using a set of IAM permissions to deploy, you can paste them here.
 
-![Customize Serverless Framework IAM permissions screenshot](/assets/docs/iam/customize-serverless-framework-iam-permissions.png)
+![Customize deploy IAM permissions screenshot](/assets/docs/iam/customize-deploy-iam-permissions.png)
 
 Alternatively, you can read the [Customizing your IAM Policy]({% link _docs/customizing-your-iam-policy.md %}) chapter; to get a better idea on how to craft an airtight policy.
 
-Once you are done customizing the permissions, Seed will put the two above sets of permissions together. And will help you create an IAM user using CloudFormation.
+Once you are done customizing the permissions, Seed will put the two above sets of permissions together. And will help you create an IAM role using CloudFormation.
 
-Hit the **Create an IAM User using CloudFormation** button.
+Hit the **Create an IAM role using CloudFormation** button.
 
-![Click Create an IAM user using CloudFormation screenshot](/assets/docs/iam/click-create-an-iam-user-using-cloudformation.png)
+![Click Create an IAM role using CloudFormation screenshot](/assets/docs/iam/click-create-an-iam-role-using-cloudformation.png)
 
 This will redirect you to CloudFormation on your AWS Console.
 
@@ -158,11 +155,11 @@ Scroll down to the bottom of the page, hit the **I acknowledge that AWS CloudFor
 
 ![Click create CloudFormation Seed template screenshot](/assets/docs/iam/click-create-cloudformation-seed-template.png)
 
-CloudFormation will now create a Seed IAM user. This will take a minute or two.
+CloudFormation will now create a Seed IAM role. This will take a minute or two.
 
-![CloudFormation Seed user creating screenshot](/assets/docs/iam/cloudformation-seed-use-creating.png)
+![CloudFormation Seed role creating screenshot](/assets/docs/iam/cloudformation-seed-role-creating.png)
 
-Once complete, expand the **Outputs** section. And copy the **AccessKey** and **SecretKey**.
+Once complete, expand the **Outputs** section. And copy the **RoleArn**.
 
 ![CloudFormation complete output screenshot](/assets/docs/iam/cloudformation-complete-output.png)
 

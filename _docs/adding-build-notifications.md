@@ -61,16 +61,14 @@ And here is an example of the Webhook request body.
 
 ``` json
 {
-  "build": 5,
-  "stage": "dev",
-  "service": "main",
   "status": "deploying",
-  "commit": "5ad6f2d7b44ad77e5cfe925e7c9550b3be36c158",
-  "service_link": "https://console.seed.run/apps/hello-world/services/default",
-  "stage_link": "https://console.seed.run/apps/hello-world/services/default/stages/dev",
-  "build_link": "https://console.seed.run/apps/hello-world/services/default/stages/dev/builds/5",
-  "commit_link": "https://github.com/jayair/hello-world/commits/5ad6f2d7b44ad77e5cfe925e7c9550b3be36c158",
-  "ts": 1530079736
+  "app_id": "6253a1978af24a12973a5049f161f348",
+  "app_link": "https://console.seed.run/seaboard/seaboard-backend-v2",
+  "stage_id": "dev",
+  "stage_link": "https://console.seed.run/seaboard/seaboard-backend-v2/stages/dev",
+  "build_id": 227,
+  "build_link": "https://console.seed.run/seaboard/seaboard-backend-v2/activity/stages/dev/builds/227",
+  "ts": 1693997084.315
 }
 ```
 

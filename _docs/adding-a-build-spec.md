@@ -259,68 +259,6 @@ The scripts in your build spec are run in an environment that are using your AWS
 
 Here are a couple of examples of what you could do in a build spec.
 
-#### Customizing Node versions
-
-The Build images come loaded with [n](https://github.com/tj/n). This allows you to select the specific version of Node.js you want.
-
-```yml
-before_compile:
-  - n 14.17.0
-```
-
-You can install the version of npm you want in the same way. For example, if you wanted to use the latest version of npm, add the following.
-
-```yml
-before_compile:
-  - npm i -g npm@latest
-```
-
-#### Customizing Go versions
-
-The Build images come loaded with [goenv](https://github.com/syndbg/goenv). This allows you to select the specific version of Go you want.
-
-```yml
-before_compile:
-  - cd $HOME/.goenv && git pull && goenv install 1.16.4 && global 1.16.4
-```
-
-#### Customizing Python versions
-
-Update Python to a specific version.
-
-```yml
-before_compile:
-  - cd /root/.pyenv/plugins/python-build/../.. && git pull
-  - pyenv install 3.11.4
-  - pyenv global 3.11.4
-  - python --version
-```
-
-#### Customizing Pip versions
-
-Update Pip to the latest version.
-
-```yml
-before_compile:
-  - pip install --upgrade pip
-```
-
-Alternatively, you can select the specific version of Pip you want.
-
-```yml
-before_compile:
-  - pip install --upgrade "pip==21.1.2"
-```
-
-#### Customizing .NET versions
-
-The Build images come loaded with [env tool](https://dot.net/v1/dotnet-install.sh) for .NET. This allows you to select the specific version of .NET you want.
-
-```yml
-before_compile:
-  - /usr/local/bin/dotnet-install.sh -v 6.0.300
-```
-
 #### Navigate to the service path
 
 By default, the commands in the build spec are executed at the repo root. To change the working directory to the service, use the `$SEED_SERVICE_FULLPATH` environment variable.

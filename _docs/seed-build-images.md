@@ -36,35 +36,6 @@ You can also check which image was used for a specific build, by heading over to
 
 ![Build image info in build logs](/assets/docs/seed-build-images/build-image-info-in-build-logs.png)
 
-## Package Versions
-
-Seed regularly applies security updates to the build images. This means that the minor versions of the packages in a build image can change.
-
-### Node Versions
-
-However for Node.js, the build images also comes with — [n](https://github.com/tj/n). It allows you to select a specific Node.js version if necessary. For example, to select Node.js v18.14.0 you can run this:
-
-```bash
-$ n 18.14.0
-```
-
-And to use it in your Seed builds, update your [build spec]({% link _docs/adding-a-build-spec.md %}) (`seed.yml`) with something like this:
-
-```yml
-before_compile:
-  - n 18.14.0
-```
-
-### Golang Versions
-
-Seed uses [goenv](https://github.com/syndbg/goenv) to manage versions internally. So if you want to use a different version of Golang than the one that is on the build image, add the following to your [build spec]({% link _docs/adding-a-build-spec.md %}) (`seed.yml`):
-
-```yml
-before_compile:
-  - rm -r $HOME/.goenv && git clone https://github.com/syndbg/goenv.git $HOME/.goenv && goenv install 1.16.4 && goenv global 1.16.4
-  - go version
-```
-
 ## Running Locally
 
 The build images used in Seed are hosted on Docker Hub — [**seedrun/build**](https://hub.docker.com/r/seedrun/build/tags)
@@ -117,6 +88,69 @@ OS: Ubuntu 22.04
 | Docker Compose\* |  2.17   |
 
 \*[Docker and Docker Compose need to be enabled.]({% link _docs/docker-commands-in-your-builds.md %})
+
+If you want to use a different version of a package than the one that is on the build image, add the following to your [build spec]({% link _docs/adding-a-build-spec.md %}) (`seed.yml`):
+
+#### Customizing Node Versions
+
+Seed uses [n](https://github.com/tj/n) to manage Node.js versions. To use a different version, update your `seed.yml` with:
+
+```yml
+before_compile:
+  - n 18.14.0
+```
+
+#### Customizing Golang Versions
+
+Seed uses [goenv](https://github.com/syndbg/goenv) to manage Go versions. To use a different version:
+
+```yml
+before_compile:
+  - cd $HOME/.goenv && git pull && goenv install 1.16.4 && global 1.16.4
+```
+
+#### Customizing Python versions
+
+Seed uses [pyenv](https://github.com/pyenv/pyenv) to manage Python versions. To use a different version:
+
+```yml
+before_compile:
+  - cd /root/.pyenv/plugins/python-build/../.. && git pull && pyenv install 3.11.4 && pyenv global 3.11.4
+```
+
+#### Customizing .NET versions
+
+Seed uses [env tool](https://dot.net/v1/dotnet-install.sh) to manage .NET versions. To use a different version:
+
+```yml
+before_compile:
+  - /usr/local/bin/dotnet-install.sh -v 6.0.300
+```
+
+#### Customizing Npm Versions
+
+You can install the version of npm you want in the same way. For example, if you wanted to use the latest version of npm, add the following.
+
+```yml
+before_compile:
+  - npm i -g npm@latest
+```
+
+#### Customizing Pip Versions
+
+Update Pip to the latest version.
+
+```yml
+before_compile:
+  - pip install --upgrade pip
+```
+
+Alternatively, you can select the specific version of Pip you want.
+
+```yml
+before_compile:
+  - pip install --upgrade "pip==21.1.2"
+```
 
 ### General Purpose v4.0
 

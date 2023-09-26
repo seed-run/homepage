@@ -7,7 +7,7 @@ Seed runs your builds inside a virtual machine and it'll use a build image based
 
 [**Active Images**](#build-images)
 
-- [General Purpose v5.0](#general-purpose-v50)
+- [General Purpose Latest](#general-purpose-latest)
 - [General Purpose v4.0](#general-purpose-v40)
 - [General Purpose v3.0](#general-purpose-v30)
 - [General Purpose v1.1](#general-purpose-v11)
@@ -92,7 +92,9 @@ $ cd source
 
 Below are the build images that are used and the types of services they are used for. A build image is chosen based on the Lambda runtime of the service.
 
-### General Purpose v5.0
+### General Purpose Latest
+
+You should use the General Purpose Latest build image. It is regularly updated to the latest security patches and runtimes. The General Purpose Latest image is also pre-cached on our build images.
 
 Lambda runtimes: Node.js 18.x, Node.js 16.x, Python 3.11, Python 3.10, Go 1.x, Ruby 3.2, Java 17
 

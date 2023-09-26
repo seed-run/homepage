@@ -94,25 +94,25 @@ Below are the build images that are used and the types of services they are used
 
 ### General Purpose v5.0
 
-Lambda runtimes: Node.js 18.x, Python 3.10, 16.x, Go 1.x
+Lambda runtimes: Node.js 18.x, Node.js 16.x, Python 3.11, Python 3.10, Go 1.x, Ruby 3.2, Java 17
 
 OS: Ubuntu 22.04
 
 | Includes         | Version |
 | ---------------- | :-----: |
-| Node.js          |   16    |
-| Python           |  3.10   |
-| Ruby             |   3.1   |
-| Go               |  1.18   |
+| Node.js          |  18.16  |
+| Python           |  3.11   |
+| Ruby             |   3.2   |
+| Go               |  1.20   |
 | .NET Core        |   6.0   |
 | Java             |   17    |
-| PHP              |   8.1   |
-| NPM              |  8.11   |
-| PNPM             |  8.6.0  |
+| PHP              |   8.2   |
+| NPM              |   9.5   |
+| PNPM             |   8.7   |
 | YARN             |  1.22   |
-| PIP              |  22.1   |
-| Docker\*         |  20.10  |
-| Docker Compose\* |   2.6   |
+| PIP              |  23.1   |
+| Docker\*         |  23.0   |
+| Docker Compose\* |  2.17   |
 
 \*[Docker and Docker Compose need to be enabled.]({% link _docs/docker-commands-in-your-builds.md %})
 

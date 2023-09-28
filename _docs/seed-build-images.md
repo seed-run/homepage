@@ -65,7 +65,7 @@ Below are the build images that are used and the types of services they are used
 
 ### General Purpose Latest
 
-You should use the General Purpose Latest build image. It is regularly updated to the latest security patches and runtimes. The General Purpose Latest image is also pre-cached on our build images.
+You should use the General Purpose Latest build image. It is regularly updated to the latest security patches and runtimes. The General Purpose Latest image is also pre-cached on our build machines.
 
 Lambda runtimes: Node.js 18.x, Node.js 16.x, Python 3.11, Python 3.10, Go 1.x, Ruby 3.2, Java 17
 

@@ -92,6 +92,16 @@ Below is a brief description of the build steps.
 
 Apart from the build hooks, there are a couple of other options that can help you customize the Seed build process.
 
+#### Ignoring code changes
+
+You can use `ignore_paths` to exclude file path patterns from triggering a deploy. If every path matches what's in `ignore_paths`, the deploy will be skipped. But if there's one or more paths that doesn't match, the deploy will proceed, even if others do match.
+
+```yml
+ignore_paths:
+  - docs/**
+  - README.md
+```
+
 #### Checking code changes
 
 Seed by default checks the Git log to see if a service has been updated, before deploying it. You can read more about this in our [Deploying Monorepo Apps]({% link _docs/incremental-service-deploys.md %}) chapter.

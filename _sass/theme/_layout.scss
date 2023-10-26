@@ -412,14 +412,16 @@
   }
 
   a.social-link {
+    margin-left: 5px;
     @extend %a-tertiary;
-    opacity: 0.4;
     font-size: 34px;
-    color: black;
     line-height: 1;
+    display: inline-block;
 
-    img {
+    svg {
       vertical-align: -3px;
+      height: 30px;
+      width: 30px;
     }
 
     &:hover {

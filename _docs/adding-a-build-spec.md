@@ -88,6 +88,8 @@ Below is a brief description of the build steps.
 
   Similar to the `before_remove`, the `after_remove` step is run after a service has been removed. This can be used to run any cleanup scripts you might have.
 
+  Note that the `after_remove` step is currently only supported for Serverless Framework apps.
+
 ### Other Options
 
 Apart from the build hooks, there are a couple of other options that can help you customize the Seed build process.

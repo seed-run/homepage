@@ -65,11 +65,10 @@ And here is an example of the Webhook request body.
   "stage": "dev",
   "service": "main",
   "status": "deploying",
-  "commit": "5ad6f2d7b44ad77e5cfe925e7c9550b3be36c158",
   "service_link": "https://console.seed.run/apps/hello-world/services/default",
   "stage_link": "https://console.seed.run/apps/hello-world/services/default/stages/dev",
   "build_link": "https://console.seed.run/apps/hello-world/services/default/stages/dev/builds/5",
-  "commit_link": "https://github.com/jayair/hello-world/commits/5ad6f2d7b44ad77e5cfe925e7c9550b3be36c158",
+  "commit_sha": "5ad6f2d7b44ad77e5cfe925e7c9550b3be36c158",
   "ts": 1530079736
 }
 ```

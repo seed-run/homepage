@@ -27,9 +27,9 @@ While adding a new app, pick the repo with your SST app in it.
 
 ![Select repo with CDK SST app](/assets/docs/adding-a-cdk-app/select-repo-with-cdk-sst-app.png)
 
-And Seed will look for any `sst.json` files in your repo.
+And Seed will look for any `sst.config.ts` files in your repo.
 
-![Detected sst.json in repo](/assets/docs/adding-a-cdk-app/detected-sst-json-in-repo.png)
+![Detected sst.config.ts in repo](/assets/docs/adding-a-cdk-app/detected-sst-config-ts-in-repo.png)
 
 Pick the SST app you want to add. If you've got multiple SST apps or Serverless services, you can add them later.
 

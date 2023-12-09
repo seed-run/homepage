@@ -50,21 +50,10 @@
 
 </footer>
 
-{% if jekyll.environment == 'production' %}
-<!-- Start of Plain Embed Code -->
-<script async src="https://customer-chat.cdn-plain.com/latest/customerChat.js"></script>
-<script>
-    window.$plain = window.$plain || [];
-    function plain() { $plain.push(arguments); }
-    
-    plain("init", {
-      appKey: "appKey_uk_01GCHGM2N7T35FQ23ZNPEP5KWR"
-    });
-  
-    plain("set-theme", { brandColor: "#52437D" });
-</script>
-<!-- End of Plain Embed Code -->
-{% endif %}
+<a class="plain-support-button" href="mailto:help@seed.run">
+  <i class="fa fa-envelope-o" aria-hidden="true"></i>
+  <span>Support</span>
+</a>
 
 {% if page.url contains "/docs" or page.url contains "pricing" %}
 <!-- Sidebar ToC include -->

@@ -117,6 +117,12 @@ ignore_paths: >
   fi
 ```
 
+The following environment variables are available for the command:
+
+- `$SEED_APP_NAME`: The app name.
+- `$SEED_STAGE_NAME`: The name of the stage that is being built. The stage names are exactly as shown in the console.
+- `$SEED_SERVICE_NAME`: The name of the service.
+
 #### Checking code changes
 
 Seed by default checks the Git log to see if a service has been updated, before deploying it. You can read more about this in our [Deploying Monorepo Apps]({% link _docs/incremental-service-deploys.md %}) chapter.

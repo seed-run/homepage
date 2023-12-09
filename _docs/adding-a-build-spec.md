@@ -104,6 +104,19 @@ ignore_paths:
   - README.md
 ```
 
+Alternatively, you can specify a bash command to dynamically generate a list of comma-separated paths to ignore.
+
+```yml
+ignore_paths: >
+  if [ $SEED_SERVICE_NAME = 'core' ]; then
+    echo 'README.md,docs/**'
+  elif [ $SEED_SERVICE_NAME = 'docs' ]; then
+    echo 'README.md,core/**'
+  else
+    echo 'README.md,core/**,docs/**'
+  fi
+```
+
 #### Checking code changes
 
 Seed by default checks the Git log to see if a service has been updated, before deploying it. You can read more about this in our [Deploying Monorepo Apps]({% link _docs/incremental-service-deploys.md %}) chapter.

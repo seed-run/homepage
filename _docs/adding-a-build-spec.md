@@ -104,7 +104,7 @@ ignore_paths:
   - README.md
 ```
 
-Alternatively, you can specify a bash command to dynamically generate a list of comma-separated paths to ignore.
+Alternatively, you can specify a bash command to dynamically generate a comma-separated list of paths to ignore.
 
 ```yml
 ignore_paths: >
@@ -115,6 +115,24 @@ ignore_paths: >
   else
     echo 'README.md,core/**,docs/**'
   fi
+```
+
+You can also execute a bash or Node.js script outputting the desired paths.
+
+```yml
+ignore_paths: node ignore-paths.js
+```
+
+The corresponding `ignore-paths.js` script:
+
+```js
+if (process.env.SEED_SERVICE_NAME === "core") {
+  console.log("README.md,docs/**");
+} else if (process.env.SEED_SERVICE_NAME === "docs") {
+  console.log("README.md,core/**");
+} else {
+  console.log("README.md,core/**,docs/**");
+}
 ```
 
 The following environment variables are available for the command:

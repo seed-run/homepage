@@ -5,14 +5,14 @@ title: Issues and Alerts
 
 **Issues** in [Seed](/) makes it very easy to monitor your Serverless app. Issues is a native, real-time Lambda monitoring and alerting service, that:
 
+> We are planning to phase out Issues in the future. [Read more about it here]({% link _posts/2023-12-22-phasing-out-issues.md %}).
+
 - Works out-of-the-box. No code changes or external SDKs needed.
 - Sends Slack or email alerts with a complete log of the failed request.
 - Autodetects all Lambda failures. Including out of memory and timeouts.
 - Supports native error reporting. Use `console.error` to report any exceptions.
 
 ![Issues feed in Seed](/assets/docs/issues-and-alerts/issues-feed-in-seed.png)
-
-Issues is currently in private beta. Head over to your app and join the waitlist. And we'll contact you once we are ready for you.
 
 In this chapter here's what we'll be going over:
 

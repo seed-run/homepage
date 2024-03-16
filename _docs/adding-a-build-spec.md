@@ -96,13 +96,28 @@ Apart from the build hooks, there are a couple of other options that can help yo
 
 #### Ignoring code changes
 
-You can use `ignore_paths` to exclude file path patterns from triggering a deploy. If every path matches what's in `ignore_paths`, the deploy will be skipped. But if there's one or more paths that doesn't match, the deploy will proceed, even if others do match.
+You can use `ignore_paths` and `include_paths` to exclude file path patterns from triggering a deploy.
 
-```yml
-ignore_paths:
-  - docs/**
-  - README.md
-```
+- `include_paths`
+
+  If none of the paths matches what's in `include_paths`, the deploy will be skipped.
+  But if there's one or more paths that matches, the deploy will proceed, even if others
+  do not match.
+
+  ```yml
+  include_paths:
+    - services/**
+  ```
+
+- `ignore_paths`
+
+  If every path matches what's in `ignore_paths`, the deploy will be skipped. But if there's one or more paths that doesn't match, the deploy will proceed, even if others do match.
+
+  ```yml
+  ignore_paths:
+    - docs/**
+    - README.md
+  ```
 
 Alternatively, you can specify a bash command to dynamically generate a comma-separated list of paths to ignore.
 

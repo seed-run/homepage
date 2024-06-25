@@ -307,7 +307,7 @@ So a variation of the above with `$BASH_ENV` looks like this:
 
 ```yml
 before_compile:
-  - echo 'export MY_VAR=hello' >> $BASH_ENV
+  - echo 'export MY_VAR=hello' >> $BASH_ENV && source $BASH_ENV
   - echo $MY_VAR
 ```
 

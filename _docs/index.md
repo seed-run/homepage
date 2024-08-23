@@ -8,12 +8,16 @@ Seed is a fully managed CI/CD pipeline for Serverless apps on AWS. Simply add yo
 
 Seed currently supports the following:
 
+- [SST v2 AWS CDK]({% link _docs/adding-a-cdk-app.md %}) apps.
 - [Serverless Framework](https://serverless.com/framework/) projects deployed to [AWS](https://aws.amazon.com)
-- [AWS CDK](https://aws.amazon.com/cdk/) apps [deployed with SST]({% link _docs/adding-a-cdk-app.md %})
 - Built with [Node.js]({% link _docs/adding-nodejs-projects.md %}), [Python]({% link _docs/adding-python-projects.md %}), [.NET Core]({% link _docs/adding-dotnet-core-projects.md %}), [Go]({% link _docs/adding-go-projects.md %}), [Ruby]({% link _docs/adding-ruby-projects.md %}), and [Java]({% link _docs/adding-java-projects.md %}).
 - Hosted on [GitHub](https://github.com), [GitHub Enterprise]({% link _docs/enabling-github-enterprise.md %}), [Bitbucket](https://bitbucket.org/), [GitLab](https://gitlab.com), and [GitLab Self-Managed]({% link _docs/enabling-gitlab-self-managed.md %}).
 
-Support for other platforms and repositories are coming soon. [Send us an email](mailto: {{ site.email }}) to let us know what you would like us to support next.
+---
+
+[**SST v3**](https://sst.dev/blog/sst-v3) apps are not supported on Seed. You'll need to use the [SST Console](https://sst.dev/docs/console/) for that.
+
+---
 
 ### Prerequisites
 

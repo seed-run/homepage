@@ -3,7 +3,13 @@ layout: docs
 title: Adding a CDK App
 ---
 
-Seed supports deploying AWS CDK apps with [SST](https://github.com/sst/sst). SST makes it easy to build serverless apps by using CDK constructs to define your infrastructure. And you can use it alongside your Serverless Framework services.
+Seed supports deploying AWS CDK apps with [SST v2](https://github.com/sst/sst). SST makes it easy to build serverless apps by using CDK constructs to define your infrastructure. And you can use it alongside your Serverless Framework services.
+
+---
+
+[**SST v3**](https://sst.dev/blog/sst-v3) apps are not supported on Seed. You'll need to use the [SST Console](https://sst.dev/docs/console/) for that.
+
+---
 
 ### Advantages of CDK and SST on Seed
 

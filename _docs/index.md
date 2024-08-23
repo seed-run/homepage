@@ -15,7 +15,8 @@ Seed currently supports the following:
 
 ---
 
-[**SST v3**](https://sst.dev/blog/sst-v3) apps are not supported on Seed. You'll need to use the [SST Console](https://sst.dev/docs/console/) for that.
+[SST v3 apps is supported on Seed]({% link _posts/2024-08-23-seed-and-sst-v3.md %}). You'll need to use the [SST Console](https://sst.dev/docs/console/) instead.
+
 
 ---
 

@@ -106,7 +106,7 @@ Seed uses [goenv](https://github.com/syndbg/goenv) to manage Go versions. To use
 
 ```yml
 before_compile:
-  - cd $HOME/.goenv && git pull && goenv install 1.16.4 && global 1.16.4
+  - cd $HOME/.goenv && git pull && goenv install 1.16.4 && goenv global 1.16.4
 ```
 
 #### Customizing Python versions

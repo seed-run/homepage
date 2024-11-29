@@ -67,25 +67,25 @@ Below are the build images that are used and the types of services they are used
 
 You should use the General Purpose Latest build image. It is regularly updated to the latest security patches and runtimes. The General Purpose Latest image is also pre-cached on our build machines.
 
-Lambda runtimes: Node.js 18.x, Node.js 16.x, Python 3.11, Python 3.10, Go 1.x, Ruby 3.2, Java 17
+Lambda runtimes: Node.js 22.x, Node.js 20.x, Node.js 18.x, Node.js 16.x, Python 3.11, Python 3.10, Go 1.x, Ruby 3.2, Java 17
 
 OS: Ubuntu 22.04
 
-| Includes         | Version |
-| ---------------- | :-----: |
-| Node.js          |  18.16  |
-| Python           |  3.11   |
-| Ruby             |   3.2   |
-| Go               |  1.20   |
-| .NET Core        |   6.0   |
-| Java             |   17    |
-| PHP              |   8.2   |
-| NPM              |   9.5   |
-| PNPM             |   8.7   |
-| YARN             |  1.22   |
-| PIP              |  23.1   |
-| Docker\*         |  23.0   |
-| Docker Compose\* |  2.17   |
+| Includes         | Version  |
+| ---------------- | :------: |
+| Node.js          |  18.120  |
+| Python           |   3.11   |
+| Ruby             |   3.2    |
+| Go               |   1.20   |
+| .NET Core        | 6.0, 8.0 |
+| Java             |    17    |
+| PHP              |   8.2    |
+| NPM              |   10.7   |
+| PNPM             |   9.14   |
+| YARN             |   1.22   |
+| PIP              |   24.0   |
+| Docker\*         |   26.1   |
+| Docker Compose\* |   2.27   |
 
 \*[Docker and Docker Compose need to be enabled.]({% link _docs/docker-commands-in-your-builds.md %})
 
@@ -120,7 +120,16 @@ before_compile:
 
 #### Customizing .NET versions
 
-Seed uses [env tool](https://dot.net/v1/dotnet-install.sh) to manage .NET versions. To use a different version:
+Seed uses [env tool](https://dot.net/v1/dotnet-install.sh) to manage .NET versions. The [General Purpose Latest](#general-purpose-latest) image has both .NET 6.0 and 8.0 preloaded.
+
+To use .NET 8.0:
+
+```yml
+before_compile:
+  - dotnet new globaljson --force --sdk-version 8.0.0 --roll-forward feature
+```
+
+To use a different version:
 
 ```yml
 before_compile:

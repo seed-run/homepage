@@ -73,7 +73,7 @@ OS: Ubuntu 22.04
 
 | Includes         | Version  |
 | ---------------- | :------: |
-| Node.js          |  18.120  |
+| Node.js          |  18.12   |
 | Python           |   3.11   |
 | Ruby             |   3.2    |
 | Go               |   1.20   |

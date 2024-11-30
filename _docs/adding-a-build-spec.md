@@ -261,6 +261,16 @@ Add the following to your `seed.yml` to opt out of this behavior.
 sls_set_secret_envs: false
 ```
 
+#### Disable ignoring dockerizePip
+
+For Serverless Framework applications using the [serverless-python-requirements](https://github.com/UnitedIncome/serverless-python-requirements) plugin, Seed by default ignores the `dockerizePip` option. However, you can choose to override this behavior if you need Docker for packaging your Python modules.
+
+Add the following to your `seed.yml` to opt out of this behavior:
+
+```yml
+sls_ignore_dockerize_pip: false
+```
+
 ### Build Environment Variables
 
 Seed also has a couple of build environment variables that you can use to customize your build process. These should not be confused with the [secret environment variables]({% link _docs/storing-secrets.md %}) that are defined in the console.
